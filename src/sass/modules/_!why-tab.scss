@@ -1,0 +1,18 @@
+.why-tab{
+
+	&__sub{
+		margin-bottom: 2.7rem;
+	}
+
+	&__cell{
+		&_left{
+			width: 497/1336*100%;
+			margin-right: 71/1336*100%;
+			margin-top: 139/1336*100%;
+		}
+
+		&_right{
+			width: 766/1336*100%;
+		}
+	}
+}

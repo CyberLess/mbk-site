@@ -1,0 +1,43 @@
+.tabs{
+	&__nav{
+		margin-top: 7.6rem;
+		display: table;
+		width: 100%;
+		table-layout: fixed;
+		border-bottom: 1px solid rgba($dark, .2);
+
+		&-item{
+			display: table-cell;
+			vertical-align: bottom;
+			padding-bottom: 3.1rem;
+			transition: ease .2s;
+			color: rgba($dark, 0.3);
+			text-align: center;
+			position: relative;
+
+			padding-left: 3rem;
+			padding-right: 3rem;
+
+			cursor: pointer;
+
+			&:before{
+				content: '';
+				background: $red;
+				height: 2px;
+				position: absolute;
+				left: 0;
+				bottom: -1px;
+				width: 100%;
+				visibility: hidden;
+			}
+
+			&.is-active{
+				color: $dark;
+
+				&:before{
+					visibility: visible;
+				}
+			}
+		}
+	}
+}

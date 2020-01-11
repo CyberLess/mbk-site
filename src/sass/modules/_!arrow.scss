@@ -1,0 +1,21 @@
+.arrow{
+	width: 4px;
+	overflow: hidden;
+	transition: inherit;
+	position: relative;
+	fill: $dark;
+	height: 12px;
+
+	
+	display: none;
+
+	svg{
+		width: 1.8rem;
+		max-width: none;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		margin-top: -.3rem;
+		stroke: $red;
+	}
+}

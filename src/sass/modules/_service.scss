@@ -1,0 +1,52 @@
+.service{
+	padding-top: 12rem;
+	padding-bottom: 12rem;
+
+	&__row{
+		margin-left: -26/1336*100%;
+		margin-right: -26/1336*100%;
+	}
+
+	&__item{
+		width: 410/1388*100%;
+		margin: 26/1388*100%;
+		background: #FFFFFF;
+		border-radius: 5px;
+
+		padding-left: 76/1388*100%;
+		padding-right: 64/1388*100%;
+		padding-top: 84/1388*100%;
+		padding-bottom: 62/1388*100%;
+	}
+
+	&__title{
+		margin-bottom: 3.6rem;
+	}
+
+	&__body{
+		margin-top: 66/270*100%;
+		border-top: 1px solid #B3B3B3;
+		padding-top: 66/270*100%;
+	}
+
+	&__list{
+		margin-bottom: 66/270*100%;
+	}
+
+	&__name{
+		font-weight: bold;
+	}
+
+	&__head{
+		&-cell{
+			&_icon{
+				width: 80/270*100%;
+				margin-right: 30/270*100%;
+			}
+
+			&_name{
+				width: 110/270*100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,76 @@
+
+.content p,.p,
+.content li, .li{
+	font-size: 1.6rem;
+	line-height: 120%;
+}
+
+.content ul, .content ol{
+
+}
+
+.content b,.b{
+}
+
+.content a,.a{
+
+}
+
+.h1, .content h1,
+.h2, .content h2,
+.h3, .content h3,
+.h4, .content h4,
+.h5, .content h5,
+.h6, .content h6,{
+	line-height: 120%;
+	font-weight: bold;
+}
+
+.h1, .content h1{
+	font-size: 7.7rem;
+}
+
+.h2, .content h2{
+	font-size: 5.6rem;
+
+}
+
+.h3, .content h3{
+	font-size: 4.6rem;
+}
+
+.h4, .content h4{
+	font-size: 3.6rem;
+	line-height: 110%;
+	font-weight: 500;
+}
+
+.h5, .content h5{
+	font-size: 2.4rem;
+	line-height: 140%;
+	font-weight: 500;
+}
+
+
+.h6, .content h6{
+	font-size: 1.8rem;
+	line-height: 140%;
+	font-weight: 500;
+}	
+
+.small{
+	font-size: 1.4rem;
+}
+
+.is-regular{
+	font-weight: 400 !important;
+}
+
+.is-medium{
+	font-weight: 500 !important;
+}
+
+.is-bold{
+	font-weight: bold !important;
+}
+

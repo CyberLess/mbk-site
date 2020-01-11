@@ -1,0 +1,20 @@
+.link{
+	display: flex;
+	align-items: center;
+	transition: ease .2s;
+
+	&__arrow{
+		margin-left: 1.2rem;
+	}
+
+	&:hover{
+		color: $red;
+
+		.link{
+			&__arrow{
+				fill: $red;
+				width: 1.8rem;
+			}
+		}
+	}
+}

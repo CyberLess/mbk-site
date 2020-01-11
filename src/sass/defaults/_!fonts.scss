@@ -1,0 +1,26 @@
+// @include font-face(Karanikola-Bold, /app/fonts/KaranikolaBold, null, null, woff2 woff);
+
+@font-face {
+    font-family: 'Geometria';
+    src: url('/app/fonts/Geometria-Medium.woff2') format('woff2'),
+        url('/app/fonts/Geometria-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geometria';
+    src: url('/app/fonts/Geometria-Bold.woff2') format('woff2'),
+        url('/app/fonts/Geometria-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geometria';
+    src: url('/app/fonts/Geometria.woff2') format('woff2'),
+        url('/app/fonts/Geometria.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+

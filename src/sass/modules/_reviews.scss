@@ -1,0 +1,39 @@
+.reviews{
+	padding-top: 12rem;
+	padding-bottom: 9rem;
+
+	&__title{
+		margin-bottom: 6rem;
+	}
+
+	&__button{
+		margin-right: 3.6rem;
+	}
+
+	&__cell{
+		&_video{
+			width: 667/1336*100%;
+			margin-right: 60/1336*100%;
+		}
+
+		&_content{
+			width: 586/1336*100%;
+		}
+	}
+
+	&__name{
+		font-weight: bold;
+		margin-bottom: 3px;
+	}
+
+	&__text{
+		font-weight: 400;
+		margin-bottom: 4.3rem;
+	}
+
+	&__who{
+		font-weight: 400;
+		color: #808080;
+		margin-bottom: 2.5rem;
+	}
+}
