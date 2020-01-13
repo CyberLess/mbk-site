@@ -1,1 +1,65 @@
 +b.FOOTER.footer
+	+e.wrap.wrap
+		+e.top.flex._justify
+			+e.logo.logo__.A(href="#")
+				+e.IMG.image(src='/app/img/logo.svg')
+			+e.UL.menu.flex._vertical._justify
+				+e.menu-item.LI
+					+e.menu-link.h6.A(href="#")
+						| О нас
+				+e.menu-item.LI
+					+e.menu-link.h6.A(href="#")
+						| База знаний
+				+e.menu-item.LI
+					+e.menu-link.h6.A(href="#")
+						| Услуги
+				+e.menu-item.LI
+					+e.menu-link.h6.A(href="#")
+						| Контакты
+				+e.menu-item.LI
+					+e.menu-link.h6.A(href="#")
+						| Клиенты
+			+e.phone.phone__.h6.is-bold.A(href="tel:+74993463718") +7 499 346 37 18
+			+e.callback
+				+e.write.flex._vertical
+					+e.text.p Напишите нам
+					+e.messengers.messenger__.flex._vertical
+						+e.item.A(href='#' style="fill: #00C364")
+							+icon('WhatsApp', '0 0 24 24')
+						+e.item.A(href='#' style="fill: #665CAC")
+							+icon('viber', '0 0 25 25')
+						+e.item.A(href='#' style="fill: #1E96C8")
+							+icon('telegram', '0 0 24 21')
+				+e.mail
+					+e.email.email__.p.A(href="#")
+						+e.SPAN.icon
+							+icon('mail', '0 0 15 11')
+						+e.SPAN.text info@mbk-credit.ru
+					+e.text._gray.p
+						| Пишите в любое время дня и ночи
+			+e.contacts
+				+e.text.p 
+					| г. Москва ул. 
+					br
+					| Забелина, д. 1а
+				+e.socials.socials__.flex._vertical._justify
+					+e.item
+						+e.link.A(href='#' style="width: 10px")
+							+icon('fb', '0 0 10 19')
+					+e.item
+						+e.link.A(href='#' style="width: 18px")
+							+icon('insta', '0 0 18 19')
+					+e.item
+						+e.link.A(href='#' style="width: 24px")
+							+icon('vk', '0 0 24 15')
+					+e.item
+						+e.link.A(href='#' style="width: 21px")
+							+icon('yotube', '0 0 21 15')
+		+e.bottom.flex._vertical._justify
+			+e.text.p
+				| © 2020 Все права защищены
+			+e.text.p
+				| mbk-credit.ru
+			+e.text.p.A(href='https://karanikola.ru/' target="_blank")
+				| Создание сайта - 
+				span.b Karanikola

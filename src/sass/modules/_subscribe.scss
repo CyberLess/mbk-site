@@ -1,0 +1,83 @@
+.subscribe{
+	padding-top: 17rem;
+	
+	background: #F3F3F3;
+
+	&__book{
+		width: 1074/713*100%;
+		margin-left: -31.31557%;
+		position: absolute;
+		left: 0;
+		bottom: 100%;
+		margin-bottom: -15%;
+		user-select: none;
+		pointer-events: none;
+	}
+
+	&__box{
+		z-index: 10;
+		position: relative;		
+		&-icon{
+			width: 3.5rem;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			margin-top: -1.5rem;
+			fill: $red;
+		}
+
+		&-sub{
+			position: relative;
+			padding-left: 6.8rem;
+			margin-bottom: 2.1rem;
+		}
+
+		&-text{
+			padding-left: 6.8rem;
+			font-weight: 400;
+		}
+	}
+
+	&__cell{
+		&_left{
+			width: 462/1336*100%;
+			padding-bottom: 12rem;			
+		}
+
+		&_right{
+			width: 713/1336*100%;
+			position: relative;
+			padding-bottom: 113/1336*100%;
+			padding-left: 151/1336*100%;
+			padding-right: 151/1336*100%;
+
+			&:before{
+				content: '';
+				display: block;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				padding-top: 100%;
+				border-radius: 50%;
+				background-color: #fff;
+				width: 100%;
+				margin-bottom: -47/713*100%;
+			}
+		}
+	}
+
+	&__title{
+		margin-bottom: 6rem;
+
+	}
+
+	&__form{
+		margin-top: 7.1rem;
+		padding-right: 5.7rem;
+	}
+
+
+	&__sub{
+		margin-bottom: 2.8rem;
+	}
+}

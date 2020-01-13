@@ -1,0 +1,19 @@
+.input{
+	border: none;
+	background: transparent;
+	color: #0E0E0E;
+	border-bottom: 1px solid #B3B3B3;
+	font-weight: 500;
+	font-family: Geometria;
+	width: 100%;
+
+	&_big{
+		height: 8rem;
+		margin-bottom: 3rem;
+		font-size: 3.6rem;		
+	}
+
+	@include placeholder {
+		color: #B3B3B3;
+	}
+}

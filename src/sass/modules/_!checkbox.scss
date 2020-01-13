@@ -1,0 +1,51 @@
+.checkbox{
+	display: block;
+	user-select: none;
+	cursor: pointer;
+
+	&__input{
+		display: none;
+
+		&:checked{
+			&+.checkbox__text{
+				.checkbox__check{
+					svg{
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+
+	&__check{
+		width: 13px;
+		height: 13px;
+		background: #0E0E0E;
+		position: absolute;
+		left: 0;
+		top: 2px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+
+
+		svg{
+			width: 10px;
+			visibility: hidden;
+			opacity: 0;
+			stroke: #fff;
+			margin-top: -1px;
+			stroke-width: 2;
+			transition: ease .1s;
+		}
+	}
+
+	&__text{
+		display: block;
+		padding-left: 21px;
+		position: relative;
+		font-size: 1.4rem;
+	}
+}

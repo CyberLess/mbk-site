@@ -1,0 +1,62 @@
+.article{
+	display: block;
+	
+	&__preview{
+		padding-top: 21.2rem;
+		border-radius: 5px;
+		overflow: hidden;
+		position: relative;
+		margin-bottom: 1rem;
+	}
+
+	&__nav{
+
+		&-item{
+			display: flex;
+			align-items: center;
+			line-height: 4.4rem;
+			margin-bottom: 5px;
+
+			&_gray{
+				color: #808080;
+
+				svg{
+					fill: #808080;
+				}
+			}
+
+			&:not(:last-child){
+				margin-right: 2rem;
+			}
+		}
+
+		&-icon{
+			margin-right: .8rem;
+			
+			&_clock{
+				width: 1.2rem;
+				height: 1.2rem;
+				margin-right: 1.2rem;
+
+			}
+
+			&_watch{
+				width: 2.1rem;
+				height: 1.3rem;
+				fill: #BFBFBF;
+			}
+			&_heart{
+				width: 1.4rem;
+				height: 1.3rem;
+				fill: $red;
+				margin-top: 2px;
+			}
+			&_comment{
+				width: 1.4rem;
+				height: 1.4rem;
+				fill: #BFBFBF;
+				margin-top: 4px;
+			}
+		}
+	}
+}

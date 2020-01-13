@@ -10,6 +10,7 @@
 }
 
 .content b,.b{
+	font-weight: bold;
 }
 
 .content a,.a{
@@ -28,11 +29,12 @@
 
 .h1, .content h1{
 	font-size: 7.7rem;
+	line-height: 98%;
 }
 
 .h2, .content h2{
 	font-size: 5.6rem;
-
+	line-height: 120%;
 }
 
 .h3, .content h3{

@@ -1,0 +1,21 @@
+.tag{
+	padding: .6rem 2.8rem;
+	border: 1px solid #0E0E0E;
+	border-radius: 5px;
+
+	font-size: 1.6rem;
+	line-height: 1.3em;
+
+	margin-right: 1rem;
+	margin-bottom: 1rem;
+
+	&:last-child{
+		margin-right: 0;
+	}
+
+	&.is-active{
+		background-color: $red;
+		border-color: $red;
+		color: #fff;
+	}
+}

@@ -66,6 +66,28 @@ a{
 	color: inherit;
 }
 
+.is-without-container{
+	margin: 0 -3.3rem;
+	padding: 0 3.3rem;
+}
+.radius-5{
+	border-radius: 5px;
+	box-shadow: 0px 4px 40px rgba(153, 153, 153, 0.1);
+	overflow: hidden;
+}
+
+.group{
+	padding-bottom: 6.6rem;
+}
+
+.white{
+	background-color: #fff;
+}
+
+.gray{
+	background-color: #4F4F4F;
+}
+
 .container{
 	margin: 0 3.3rem;
 }
@@ -112,6 +134,10 @@ a{
 
 	&_start{
 		align-items: flex-start;
+	}
+
+	&_bottom{
+		align-items: flex-end;
 	}
 
 	&_vertical{

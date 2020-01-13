@@ -1,0 +1,51 @@
+.master{
+	padding-top: 13.7rem;
+	
+
+	&__wrap{
+		padding-bottom: 14.5rem;
+	}
+
+	&__man{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 651/1400*100%;
+		padding-top: 867/1400*100%;
+		margin-left: 226/1400*100%;
+		z-index: 15;
+		pointer-events: none;
+	}
+
+	&__cell{
+		width: 822/1336*100%;
+		margin-left: auto;
+	}
+
+	&__box{
+		box-shadow: 0px 4px 40px rgba(153, 153, 153, 0.1);
+		border-radius: 5px;
+		border: 1px solid rgba(#848484, .3);
+		
+		padding-left: 81/822*100%;
+		padding-top: 78/822*100%;
+		padding-bottom: 85/822*100%;
+
+		&-inner{
+			width: 452/740*100%;
+			padding-right: 81/740*100%;
+			margin-left: auto;
+		}
+
+		&-text{
+			margin-bottom: 6rem;
+			font-weight: 400;
+		}
+	}
+
+	&__title{
+		width: 452/822*100%;
+		margin-left: auto;
+		margin-bottom: 5.3rem;
+	}
+}

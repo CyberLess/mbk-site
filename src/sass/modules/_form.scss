@@ -1,0 +1,17 @@
+.form{
+	&__button{
+		padding: 0 3.6rem;
+	}
+
+	&__inline-2{
+		.btn{
+			width: 190/402*100%;
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		.access{
+			width: 186/402*100%;
+		}
+	}
+}
