@@ -1,0 +1,20 @@
+.open{
+	width: 8.5rem;
+	height: 8.5rem;
+	border-radius: 50%;
+	border: 2px solid #DADADA;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+
+	&:before{
+		content: '';
+		display: block;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 9.5px 0 9.5px 11px;
+		border-color: transparent transparent transparent $red;		
+	}
+}

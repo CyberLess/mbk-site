@@ -1,10 +1,31 @@
 .link{
-	display: flex;
+	display: inline-flex;
 	align-items: center;
 	transition: ease .2s;
+	position: relative;
+	padding-right: 3rem;
 
 	&__arrow{
 		margin-left: 1.2rem;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		margin-top: -6px;
+		margin-right: 12px;
+		// transform: translateX(-18px);
+
+		.triangle{
+			
+			transition: ease .2s;
+			stroke-width: 2;
+			stroke: #0E0E0E;
+		}
+
+		.stroke{
+			transition: ease .2s;
+			fill: #0E0E0E;
+			// stroke: none;
+		}
 	}
 
 	&:hover{
@@ -13,7 +34,18 @@
 		.link{
 			&__arrow{
 				fill: $red;
+				margin-right: 0;
 				width: 1.8rem;
+				// transform: translateX(0px);
+
+				.triangle{
+					stroke: $red;
+				}
+
+				.stroke{
+					fill: $red;
+					// stroke: none;
+				}
 			}
 		}
 	}

@@ -46,6 +46,16 @@
 				color: $red;
 			}
 		}
+
+		@include max-screen($large_tablet) {
+			width: auto;
+			display: block;
+			&-item{
+				// width: 100%;
+				width: auto;
+				display: block;
+			}
+		}
 	}
 
 	&__callback{

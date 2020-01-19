@@ -6,12 +6,12 @@
 	font-size: 1.6rem;
 	line-height: 1.3em;
 
-	margin-right: 1rem;
+	// margin-right: 1rem;
 	margin-bottom: 1rem;
 
-	&:last-child{
-		margin-right: 0;
-	}
+	// &:last-child{
+	// 	margin-right: 0;
+	// }
 
 	&.is-active{
 		background-color: $red;

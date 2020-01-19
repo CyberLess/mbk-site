@@ -1,5 +1,50 @@
 .socials{
+	z-index: 200;
+
 	&__link{
 		display: block;
+
+		span{
+			display: block;
+		}
+	}
+
+	&_fluid{
+		background: #F2F4F7;
+		border-radius: 5px;
+		overflow: hidden;
+		.socials{
+			&__link{
+				width: 6.4rem;
+				height: 6.4rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				transition: ease .15s;
+				&:hover{
+					background-color: $pink;
+					fill: #fff;
+				}
+			}
+		}
+
+		@include max-screen($small_tablet) {
+			.socials{
+				&__link{
+					width: 4.4rem;
+					height: 4.4rem;
+
+					svg{
+						max-height: 16px;
+					}
+
+					span{
+						display: inline-block;
+						max-width: 40%;
+						
+					}
+				}
+			}			
+		}
 	}
 }

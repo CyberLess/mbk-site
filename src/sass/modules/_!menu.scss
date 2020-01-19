@@ -5,6 +5,10 @@
 		padding: 4.2rem 0;
 		display: block;
 		position: relative;
+
+		@include max-screen($small_tablet) {
+		    padding: 3.2rem 0;
+		}
 	}
 
 	&__link{

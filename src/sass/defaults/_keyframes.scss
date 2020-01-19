@@ -1,8 +1,38 @@
-@keyframes default {
+@keyframes circleScale {
     from {
-
+    	transform: scale(1);
+    	opacity: 0;
+    }
+    20%, 50%{
+    	opacity: 1;
     }
     to {
-
+    	transform: scale(2.5);
+    	opacity: 0;
+	}
+}
+@keyframes toBottom {
+    100% {
+        transform: translateY(0);
     } 
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }

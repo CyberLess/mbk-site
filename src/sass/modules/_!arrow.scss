@@ -5,9 +5,9 @@
 	position: relative;
 	fill: $dark;
 	height: 12px;
-
 	
-	display: none;
+	
+	// display: none;
 
 	svg{
 		width: 1.8rem;
@@ -16,6 +16,7 @@
 		right: 0;
 		top: 50%;
 		margin-top: -.3rem;
-		stroke: $red;
 	}
+
+
 }

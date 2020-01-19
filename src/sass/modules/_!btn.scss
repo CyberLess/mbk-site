@@ -12,9 +12,37 @@
 	font-weight: 500;
 	border-radius: 5px;
 
+	@include max-screen($large_mobile) {
+		height: 5rem;
+	}
+
 	&_border{
 		background-color: transparent;
 		border: 1px solid $red;
 		color: $red;
+	}
+
+	&__icon{
+
+		// margin-left: 12px;
+
+		&_arrow{
+			// width: 10px;
+			transform: rotate(90deg);	
+
+			svg{
+				width: 11px;
+				max-width: none;				
+			}			
+
+			.triangle{
+				stroke: $red;
+			}
+
+			.stroke{
+				fill: $red;
+				// stroke: none;
+			}		
+		}
 	}
 }

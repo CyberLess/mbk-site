@@ -3,8 +3,16 @@
 	padding-bottom: 12.2rem;
 	color: #fff;
 
+	@include max-screen($large_tablet) {
+		padding: 9rem 0;
+	}
+
 	&__title{
 		margin-bottom: 10rem;
+
+		@include max-screen($large_tablet) {
+			margin-bottom: 8rem;
+		}
 	}
 
 	&__subtitle{
@@ -19,6 +27,7 @@
 		&_left{
 			width: 777/1336*100%;
 			align-items: flex-start;
+			flex-wrap: nowrap;
 		}
 
 		&_right{

@@ -1,13 +1,63 @@
 .master{
 	padding-top: 13.7rem;
-	
+	overflow: hidden;
+
+	@include max-screen($large_tablet) {
+		padding-top: 6rem;
+	}
 
 	&__wrap{
 		padding-bottom: 14.5rem;
+
+		@include max-screen($large_tablet) {
+			padding-bottom: 8rem;
+		}
+	}
+
+	&__tree{
+		position: absolute;
+		left: 0;
+		// bottom: 0;
+		// width: 849/1854*100%;
+		margin-left: -250px;
+		user-select: none;
+		pointer-events: none;
+		bottom: -61px;
+
+		@include max-screen($large_desktop) {
+			bottom: -140px;
+		}
+
+		@include max-screen($large_tablet) {
+			display: none;
+		}
+	}
+
+	&__about{
+		margin-bottom: 85/1336*100%;
+		width: 180px;
+		max-width: 40%;
+		z-index: 20;
+		position: relative;
+
+		@include max-screen($large_desktop) {
+			width: 150px;
+		}
+	}
+
+	&__name{
+		margin-bottom: 1.6rem;
+		font-weight: bold;
+	}
+
+	&__open{
+		margin-bottom: 5.9rem;
+
 	}
 
 	&__man{
 		position: absolute;
+		user-select: none;
 		left: 0;
 		bottom: 0;
 		width: 651/1400*100%;
@@ -15,6 +65,12 @@
 		margin-left: 226/1400*100%;
 		z-index: 15;
 		pointer-events: none;
+
+		@include max-screen($large_tablet) {
+			width: 456/1400*100%;
+			padding-top: 607/1400*100%;
+			margin-left: 21.14286%;
+		}
 	}
 
 	&__cell{
@@ -41,11 +97,23 @@
 			margin-bottom: 6rem;
 			font-weight: 400;
 		}
+
+		@include max-screen($large_tablet) {
+			&-inner{
+				padding-right: 5%;
+				width: 66.08108%;
+			}
+		}
 	}
 
 	&__title{
 		width: 452/822*100%;
 		margin-left: auto;
 		margin-bottom: 5.3rem;
+
+		@include max-screen($large_tablet) {
+			width: auto;
+			text-align: right;
+		}
 	}
 }

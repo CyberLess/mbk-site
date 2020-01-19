@@ -3,6 +3,10 @@
 	
 	background: #F3F3F3;
 
+	@include max-screen($large_tablet) {
+		padding-top: 10rem;
+	}
+
 	&__book{
 		width: 1074/713*100%;
 		margin-left: -31.31557%;
@@ -12,6 +16,10 @@
 		margin-bottom: -15%;
 		user-select: none;
 		pointer-events: none;
+
+		@include max-screen($large_tablet) {
+			margin-bottom: -9%;
+		}
 	}
 
 	&__box{
@@ -62,6 +70,18 @@
 				background-color: #fff;
 				width: 100%;
 				margin-bottom: -47/713*100%;
+			}
+		}
+
+		@include max-screen($large_tablet) {
+			&_left{
+				width: 44.58084%;
+			}
+
+			&_right{
+				padding-bottom: 4.45808%;
+				padding-left: 7.3024%;
+				padding-right: 7.3024%;
 			}
 		}
 	}

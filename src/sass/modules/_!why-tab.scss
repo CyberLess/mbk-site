@@ -1,7 +1,22 @@
 .why-tab{
 
+	@include max-screen($small_tablet) {
+		align-items: flex-end;
+	}
+
+	&__text{
+		@include max-screen($large_mobile) {
+			font-size: 1.2rem;
+		}
+	}
+
 	&__sub{
 		margin-bottom: 2.7rem;
+
+		@include max-screen($large_mobile) {
+			margin-bottom: .9rem;
+			font-size: 1.9rem;
+		}
 	}
 
 	&__cell{
@@ -13,6 +28,24 @@
 
 		&_right{
 			width: 766/1336*100%;
+		}
+
+		@include max-screen($small_tablet) {
+			&_left{
+				margin-top: 0;
+			}
+		}
+
+		@include max-screen($large_mobile) {
+			width: 100%;
+			margin-right: 0;
+			&_left{
+				order: 2;
+			}
+			&_right{
+				order:1;
+				margin-bottom: 3.3rem;
+			}
 		}
 	}
 }

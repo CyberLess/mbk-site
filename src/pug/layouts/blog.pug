@@ -1,6 +1,6 @@
 +b.SECTION.blog
 	+e.wrap.wrap
-		+e.tags.flex._justify._start
+		+e.tags.flex._start
 			+e.tag.tag__.A(href='#')
 				| Все темы
 			+e.tag.tag__.A(href='#')
@@ -177,8 +177,12 @@
 							+e.num.A(href='#') 5
 							+e.num.SPAN ...
 							+e.num.A(href='#') 12
-					+e.button.btn._border.p.A(href='#')
+					+e.button.btn__._border.p.A(href='#')
 						+e.text Загрузить еще статей
+						+e.icon._arrow
+							+e.SVG(viewBox="0 0 18.560659 9.6213207")
+								path(class="triangle" d='M14.5 4.81v-3l3 3-3 3z')
+								path(class="stroke" d='M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z')
 			+e.cell._right._gray
 				+e.string._right.flex._justify._vertical
 					+e.title.h4 

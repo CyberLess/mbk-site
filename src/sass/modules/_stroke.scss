@@ -6,11 +6,18 @@
 		content: '';
 		display: block;
 		background-color: $red;
-		height: 10px;
+		height: 1rem;
 		position: absolute;
 		left: 0;
-		bottom: 9px;
+		bottom: .9rem;
 		right: 0;
 		z-index: -1;
+	}
+
+	@include max-screen($large_mobile) {
+		&:before{
+			height: 3px;
+			bottom: 5px;
+		}
 	}
 }

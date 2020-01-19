@@ -2,12 +2,31 @@
 	padding-top: 12rem;
 	padding-bottom: 9rem;
 
+	@include max-screen($large_tablet) {
+		padding-top: 9rem;
+	}
+
 	&__title{
 		margin-bottom: 6rem;
+
+		@include max-screen($large_tablet) {
+			margin-bottom: 4rem;
+		}
+	}
+
+	&__apply{
+		margin-top: 10px;
+		margin-bottom: 10px;
 	}
 
 	&__button{
 		margin-right: 3.6rem;
+	}
+
+	&__row{
+		@include max-screen($large_tablet) {
+			align-items: flex-start;
+		}
 	}
 
 	&__list{
@@ -15,6 +34,10 @@
 		// margin-right: -1px;
 		margin-top: 8rem;
 		margin-bottom: 9.3rem;
+
+		@include max-screen($large_tablet) {
+			margin-bottom: 6rem;
+		}
 	}
 
 	&__bottom{
@@ -80,6 +103,12 @@
 		&-status{
 			font-weight: 400;
 		}
+
+		&_active{
+			&:before{
+				opacity: .15;
+			}
+		}
 	}
 
 	&__cell{
@@ -90,6 +119,11 @@
 
 		&_content{
 			width: 586/1336*100%;
+		}
+		@include max-screen($large_tablet) {
+			&_video{
+				margin-top: 8px;
+			}
 		}
 	}
 

@@ -1,0 +1,39 @@
+.contacts-nav{
+	&__cell{
+		&_left{
+			padding-top: 42/1336*100%;
+			width: 373/1336*100%;
+		}
+
+		&_center{
+			width: 426/1336*100%;
+			background: #F6F6F6;
+
+			padding-top: 43/1336*100%;
+			padding-left: 34/1336*100%;
+			padding-right: 33/1336*100%;
+			padding-bottom: 25/1336*100%;
+		}
+
+		&_right{
+			width: 456/1336*100%;
+		}
+	}
+
+	&__play{
+		margin-top: 1.5rem;
+	}
+
+	&__text{
+		font-weight: 400;
+		
+		img{
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		&:not(:last-child){
+			margin-bottom: 1.7rem;
+		}
+	}
+}

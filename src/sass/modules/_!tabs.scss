@@ -1,43 +1,159 @@
 .tabs{
-	&__nav{
-		margin-top: 7.6rem;
-		display: table;
-		width: 100%;
-		table-layout: fixed;
-		border-bottom: 1px solid rgba($dark, .2);
+	
+	&__content{
+		overflow: hidden;
+
+		&-list{
+			position: relative;
+			top: 0;
+			display: flex;
+			align-items: flex-start;
+		}
 
 		&-item{
-			display: table-cell;
-			vertical-align: bottom;
-			padding-bottom: 3.1rem;
-			transition: ease .2s;
-			color: rgba($dark, 0.3);
-			text-align: center;
-			position: relative;
+			min-width: 100%;
+		}
+	}
 
-			padding-left: 3rem;
-			padding-right: 3rem;
-
+	&__nav{
+		&-item{
+			transition: ease .15s;
 			cursor: pointer;
+		}
+	}
 
-			&:before{
-				content: '';
-				background: $red;
-				height: 2px;
-				position: absolute;
-				left: 0;
-				bottom: -1px;
-				width: 100%;
-				visibility: hidden;
-			}
+	&_nolist{
+		.tabs{
+			&__content{
+				overflow: visible;
 
-			&.is-active{
-				color: $dark;
+				&-item{
+					display: none;
 
-				&:before{
-					visibility: visible;
+					&.is-active{
+						display: block;
+					}
 				}
 			}
 		}
 	}
+
+	&_default{
+		.tabs{
+			&__content{
+				&-item{
+					padding-top: 2.8rem;
+					padding-left: 60/1336*100%;
+					padding-right: 60/1336*100%;
+					padding-bottom: 7.6rem;
+					background-color: #fff;
+					
+				}
+			}
+			&__nav{
+				padding-left: 58/1336*100%;
+				padding-right: 58/1336*100%;
+				&-item{
+					color: #B3B3B3;
+					line-height: 260.5%;
+					padding-bottom: 23px;
+					position: relative;
+
+					&:before{
+						content: '';
+						width: 0;
+						height: 0;
+						border-style: solid;
+						border-width: 0 17px 24px 17px;
+						border-color: transparent transparent #fff transparent;
+						position: absolute;
+						left: 50%;
+						bottom: 0;
+						margin-left: -17px;	
+						visibility: hidden;
+					}
+
+					&:hover{
+						color: #0E0E0E;
+					}
+
+					&.is-active{
+						color: #0E0E0E;
+
+						&:before{
+							visibility: visible;
+						}
+					}
+				}
+			}
+		}
+	}	
+
+	&_bottom{
+		.tabs{
+			&__nav{
+				margin-top: 7.6rem;
+				display: table;
+				width: 100%;
+				table-layout: fixed;
+				border-bottom: 1px solid rgba($dark, .2);
+
+				&-item{
+					display: table-cell;
+					vertical-align: bottom;
+					padding-bottom: 3.1rem;
+					color: rgba($dark, 0.3);
+					text-align: center;
+					position: relative;
+
+					padding-left: 3rem;
+					padding-right: 3rem;
+
+					
+
+					&:before{
+						content: '';
+						background: $red;
+						height: 2px;
+						position: absolute;
+						left: 0;
+						bottom: -1px;
+						width: 100%;
+						visibility: hidden;
+					}
+
+					&:hover{
+						color: $dark;
+					}
+
+					&.is-active{
+						color: $dark;
+
+						&:before{
+							visibility: visible;
+						}
+					}
+				}
+
+				@include max-screen($small_tablet) {
+
+					margin-top: 5.5rem;
+
+					&-item{
+						padding-left: 1rem;
+						padding-right: 1rem;	
+						padding-bottom: 2rem;					
+					}
+
+				}
+
+				@include max-screen($large_mobile) {
+					display: none;
+				}
+			}
+		}
+	}
+
+
+
 }

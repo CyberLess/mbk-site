@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Главная</title>
-    <link rel="stylesheet" href="/app/css/app.css?v=1578948220749">
+    <link rel="stylesheet" href="/app/css/app.css?v=1579472800310">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
@@ -17,9 +17,10 @@
         <header class="header">
             <div class="header__top">
                 <div class="header__wrap wrap">
-                    <div class="header__row flex flex_justify flex_vertical"><a class="header__email email p" href="#"><span class="email__icon"><svg class="icon icon-mail" viewBox="0 0 15 11"><use xlink:href="/app/icons/sprite.svg#mail"></use></svg></span><span class="email__text">info@mbk-credit.ru</span></a>
-                        <a
-                        class="header__phone phone h6 is-bold" href="tel:+74993463718">+7 499 346 37 18</a>
+                    <div class="header__row flex flex_justify flex_vertical">
+                        <div class="header__part header__part_email"><a class="header__email email p" href="#"><span class="email__icon"><svg class="icon icon-mail" viewBox="0 0 15 11"><use xlink:href="/app/icons/sprite.svg#mail"></use></svg></span><span class="email__text">info@mbk-credit.ru</span></a>
+                        </div>
+                        <div class="header__part header__part_contact flex flex_vertical"><a class="header__phone phone h6 is-bold" href="tel:+74993463718">+7 499 346 37 18</a>
                             <div class="header__messengers messenger flex flex_vertical">
                                 <a class="messenger__item" href="#" style="fill: #00C364">
                                     <svg class="icon icon-WhatsApp" viewBox="0 0 24 24">
@@ -36,8 +37,15 @@
                                         <use xlink:href="/app/icons/sprite.svg#telegram"></use>
                                     </svg>
                                 </a>
-                            </div><a class="header__link link p" href="#">Заказать звонок<span class="link__arrow arrow"><svg class="icon icon-arrow" viewBox="0 0 19 10"><use xlink:href="/app/icons/sprite.svg#arrow"></use></svg></span></a><a class="header__link link p"
-                            href="#">Заказать услугу<span class="link__arrow arrow"><svg class="icon icon-arrow" viewBox="0 0 19 10"><use xlink:href="/app/icons/sprite.svg#arrow"></use></svg></span></a><a class="header__subscribe subscribe-button p" href="#">Подписаться на&nbsp;нашу рассылку<span class="subscribe-button__icon"><svg class="icon icon-sb" viewBox="0 0 11 11"><use xlink:href="/app/icons/sprite.svg#sb"></use></svg></span></a>
+                            </div>
+                        </div>
+                        <div class="header__part header__part_links flex flex_vertical"><a class="header__link link p" href="#">Заказать звонок<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
+                            <a
+                            class="header__link link p" href="#">Заказать услугу<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span>
+                                </a>
+                        </div>
+                        <div class="header__part header__part_subscribe"><a class="header__subscribe subscribe-button p" href="#">Подписаться на&nbsp;нашу рассылку<span class="subscribe-button__icon"><svg class="icon icon-sb" viewBox="0 0 11 11"><use xlink:href="/app/icons/sprite.svg#sb"></use></svg></span></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -48,15 +56,15 @@
                             <img class="logo__image" src="/app/img/logo.svg" alt="" role="presentation" />
                         </a>
                         <ul class="header__menu menu flex">
-                            <li class="menu__item"><a class="menu__link h6" href="#">О нас</a>
+                            <li class="menu__item"><a class="menu__link h6 js-submenu" href="#" data-menu="#about-panel" data-event="click">О нас</a>
                             </li>
-                            <li class="menu__item"><a class="menu__link h6" href="#">Услуги</a>
+                            <li class="menu__item"><a class="menu__link h6 js-submenu" href="#" data-menu="#services-panel" data-event="click">Услуги</a>
                             </li>
-                            <li class="menu__item"><a class="menu__link h6" href="#">Клиенты</a>
+                            <li class="menu__item"><a class="menu__link h6 js-submenu" href="#" data-menu="#clients-panel" data-event="click">Клиенты</a>
                             </li>
-                            <li class="menu__item"><a class="menu__link h6 is-active" href="#">База знаний</a>
+                            <li class="menu__item"><a class="menu__link h6 is-active js-submenu" href="#" data-menu="#db-panel" data-event="click">База знаний</a>
                             </li>
-                            <li class="menu__item"><a class="menu__link h6" href="#">Контакты</a>
+                            <li class="menu__item"><a class="menu__link h6 js-submenu" href="#" data-menu="#contacts-panel" data-event="click">Контакты</a>
                             </li>
                         </ul>
                         <div class="search-button">
@@ -67,11 +75,431 @@
                     </div>
                 </div>
             </div>
+            <div class="header__panel">
+                <div class="header__panel-bg"></div>
+                <div class="header__panel-row">
+                    <div class="header__panel-item header__panel-item_search" id="search-panel">
+                        <div class="header__wrap wrap">
+                            <form class="search is-default-form" action="/">
+                                <button class="search__button">
+                                    <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="17.5986" y="19.0654" width="2" height="11.4074" transform="rotate(-45 17.5986 19.0654)"></rect>
+                                        <circle cx="13.1993" cy="13.1992" r="8.33333" transform="rotate(-45 13.1993 13.1992)"></circle>
+                                    </svg>
+                                </button>
+                                <input class="search__input" type="text" name="s" placeholder="Поиск по&nbsp;сайту" autocomplete="off" />
+                            </form>
+                        </div>
+                    </div>
+                    <div class="header__panel-item header__panel-item_noscope about-nav" id="about-panel">
+                        <div class="about-nav__wrap wrap">
+                            <div class="about-nav__row flex flex_start">
+                                <div class="about-nav__cell about-nav__cell_left">
+                                    <ul class="header__list">
+                                        <li class="header__list-item"><a class="header__list-link h5" href="#">Нам 9 лет</a>
+                                        </li>
+                                        <li class="header__list-item"><a class="header__list-link h5" href="#">Вакансии</a>
+                                        </li>
+                                        <li class="header__list-item"><a class="header__list-link h5" href="#">В лицах</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="about-nav__cell about-nav__cell_center">
+                                    <ul class="header__list">
+                                        <li class="header__list-item"><a class="header__list-link h5" href="#">Наши преимущества</a>
+                                        </li>
+                                        <li class="header__list-item"><a class="header__list-link h5" href="#">Наши сертификаты</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="about-nav__cell about-nav__cell_right">
+                                    <img src="/app/img/about.svg" alt="" role="presentation" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__panel-item header__panel-item_services services-nav" id="services-panel">
+                        <div class="services-nav__wrap wrap">
+                            <div class="services-nav__tabs tabs tabs_default tabs_nolist">
+                                <div class="tabs__nav flex flex_justify flex_vertical">
+                                    <div class="tabs__nav-item h5 is-active js-tab-nav">Получить деньги</div>
+                                    <div class="tabs__nav-item h5 js-tab-nav">Закрыть долги</div>
+                                    <div class="tabs__nav-item h5 js-tab-nav">Продать квартиру</div>
+                                    <div class="tabs__nav-item h5 js-tab-nav">Сделки с&nbsp;недвижимостью</div>
+                                </div>
+                                <div class="tabs__content">
+                                    <div class="tabs__content-item services-tab is-active">
+                                        <div class="services-tab__row flex">
+                                            <div class="services-tab__cell">
+                                                <div class="services-tab__title h6">Займы</div>
+                                                <div class="services-tab__box">
+                                                    <div class="services-tab__label h6">По условиям</div>
+                                                    <div class="services-tab__list list">
+                                                        <div class="list__line"><a class="list__item h6" href="#">Без залога</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Без истории</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Без отказа</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Без поручителей</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Без предоплаты</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Без справок</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">На карту</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Под залог</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Под расписку</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">С плохой ки</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Срочно</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="services-tab__box">
+                                                    <div class="services-tab__label h6">По соцстатусу</div>
+                                                    <div class="services-tab__list list">
+                                                        <div class="list__line"><a class="list__item h6" href="#">Безработным</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Самозанятым</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Госслужащим</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Студентам</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">ИП</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Юридическим лицам</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Пенсионерам</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Работникам по&nbsp;найму</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="services-tab__cell">
+                                                <div class="services-tab__title h6">Кредиты</div>
+                                                <div class="services-tab__box">
+                                                    <div class="services-tab__label h6">По соц статусу</div>
+                                                    <div class="services-tab__list list">
+                                                        <div class="list__line"><a class="list__item h6" href="#">Экспресс кредиты</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Кредит под&nbsp;залог</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Потребительский кредит</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="services-tab__box">
+                                                    <div class="services-tab__label h6">Плохая история</div>
+                                                    <div class="services-tab__list list">
+                                                        <div class="list__line"><a class="list__item h6" href="#">Помощь в&nbsp;получении</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Услуги кредитного брокера</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="services-tab__box">
+                                                    <div class="services-tab__label h6">Другое</div>
+                                                    <div class="services-tab__list list">
+                                                        <div class="list__line"><a class="list__item h6" href="#">Кредитная линия</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Ломбардное кредитование</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="services-tab__cell">
+                                                <div class="services-tab__title h6">Финансирование бизнеса</div>
+                                                <div class="services-tab__box">
+                                                    <div class="services-tab__label h6">Оборотные средства</div>
+                                                    <div class="services-tab__list list">
+                                                        <div class="list__line"><a class="list__item h6" href="#">Кредитование на&nbsp;пополнение оборотных средств без&nbsp;залога</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Кредитование на&nbsp;пополнение оборотных средств под&nbsp;залог имущества</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="services-tab__box">
+                                                    <div class="services-tab__label h6">Ипотека и&nbsp;лизинг</div>
+                                                    <div class="services-tab__list list">
+                                                        <div class="list__line"><a class="list__item h6" href="#">Коммерческая ипотека. Возвратный лизинг недвижимости</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Кредит на&nbsp;покупку автотранспорта и&nbsp;оборудования. Возвратный лизинг автотранспорта</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="services-tab__cell">
+                                                <div class="services-tab__title h6">Ссуды</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabs__content-item services-tab flex">
+                                        <div class="services-tab__row flex">
+                                            <div class="services-tab__cell">
+                                                <div class="services-tab__title h6">Рефинансирование</div>
+                                                <div class="services-tab__box">
+                                                    <div class="services-tab__label h6">Виды услуг</div>
+                                                    <div class="services-tab__list list">
+                                                        <div class="list__line"><a class="list__item h6" href="#">Закрытие текущих просрочек</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Объединение кредитов в&nbsp;один</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Снижение платежа и&nbsp;ставки по&nbsp;кредиту</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabs__content-item services-tab flex">
+                                        <div class="services-tab__row flex">
+                                            <div class="services-tab__cell">
+                                                <div class="services-tab__title h6">Срочная продажа квартиры</div>
+                                                <div class="services-tab__box">
+                                                    <div class="services-tab__label h6">По виду обременения</div>
+                                                    <div class="services-tab__list list">
+                                                        <div class="list__line"><a class="list__item h6" href="#">Под обременением</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Под арестом</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Под залогом</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Под ипотекой</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="services-tab__box">
+                                                    <div class="services-tab__label h6">По количеству комнат</div>
+                                                    <div class="services-tab__list list">
+                                                        <div class="list__line"><a class="list__item h6" href="#">1-комнатную</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">2-комнатную</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">3-комнатную</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">4-комнатную</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tabs__content-item services-tab flex">
+                                        <div class="services-tab__row flex">
+                                            <div class="services-tab__cell">
+                                                <div class="services-tab__title h6">Подготовка документов</div>
+                                                <div class="services-tab__box">
+                                                    <div class="services-tab__label h6">Виды документов</div>
+                                                    <div class="services-tab__list list">
+                                                        <div class="list__line"><a class="list__item h6" href="#">Получение справок и&nbsp;выписок</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Оформление наследства</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="services-tab__cell">
+                                                <div class="services-tab__title h6">Сопровождение</div>
+                                                <div class="services-tab__box">
+                                                    <div class="services-tab__list list">
+                                                        <div class="list__line"><a class="list__item h6" href="#">Приватизация недвижимости</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Сопровождение сделки</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="services-tab__cell">
+                                                <div class="services-tab__title h6">Купить квартиру в&nbsp;ипотеку</div>
+                                                <div class="services-tab__box">
+                                                    <div class="services-tab__label h6">В новостройке</div>
+                                                    <div class="services-tab__list list">
+                                                        <div class="list__line"><a class="list__item h6" href="#">Классическая ипотека на&nbsp;новостройку</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Ипотека по&nbsp;2-м документам на&nbsp;новостройку</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Ипотека на&nbsp;новостройку под&nbsp;залог недвижимости</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="services-tab__box">
+                                                    <div class="services-tab__label h6">На вторичном рынке</div>
+                                                    <div class="services-tab__list list">
+                                                        <div class="list__line"><a class="list__item h6" href="#">Классическая ипотека на&nbsp;вторичном рынке</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Ипотека по&nbsp;2-м документам на&nbsp;вторичном рынке</a>
+                                                        </div>
+                                                        <div class="list__line"><a class="list__item h6" href="#">Ипотека на&nbsp;вторичном рынке под&nbsp;залог недвижимости</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__panel-item header__panel-item_clients clients-nav" id="clients-panel">
+                        <div class="clients-nav__wrap wrap">
+                            <div class="clients-nav__row flex flex_justify">
+                                <div class="clients-nav__cell clients-nav__cell_left">
+                                    <div class="clients-nav__sub h5">Клиенты МБК о&nbsp;нас</div>
+                                    <div class="clients-nav__list flex">
+                                        <a class="clients-nav__list-item" href="#">
+                                            <picture>
+                                                <source type="image/webp" srcset="/app/img/clients_1.webp">
+                                                    <img src="/app/img/clients_1.jpg" class="clients-nav__list-img object-fit" alt="" role="presentation" />
+                                            </picture>
+                                        </a>
+                                        <a class="clients-nav__list-item" href="#">
+                                            <picture>
+                                                <source type="image/webp" srcset="/app/img/clients_1.webp">
+                                                    <img src="/app/img/clients_1.jpg" class="clients-nav__list-img object-fit" alt="" role="presentation" />
+                                            </picture>
+                                        </a>
+                                        <a class="clients-nav__list-item" href="#">
+                                            <picture>
+                                                <source type="image/webp" srcset="/app/img/clients_1.webp">
+                                                    <img src="/app/img/clients_1.jpg" class="clients-nav__list-img object-fit" alt="" role="presentation" />
+                                            </picture>
+                                        </a>
+                                        <a class="clients-nav__list-item" href="#">
+                                            <picture>
+                                                <source type="image/webp" srcset="/app/img/clients_1.webp">
+                                                    <img src="/app/img/clients_1.jpg" class="clients-nav__list-img object-fit" alt="" role="presentation" />
+                                            </picture>
+                                        </a>
+                                        <a class="clients-nav__list-item" href="#">
+                                            <picture>
+                                                <source type="image/webp" srcset="/app/img/clients_1.webp">
+                                                    <img src="/app/img/clients_1.jpg" class="clients-nav__list-img object-fit" alt="" role="presentation" />
+                                            </picture>
+                                        </a>
+                                    </div>
+                                    <div class="clients-nav__row flex flex_justify flex_vertical">
+                                        <div class="clients-nav__text h6">Более 250 отзывов</div><a class="clients-nav__link link h6" href="#">Перейти в&nbsp;отзывы<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
+                                    </div>
+                                </div>
+                                <div class="clients-nav__cell clients-nav__cell_right clients-nav__cell_bg">
+                                    <img class="clients-nav__bg" src="/app/img/clients-nav.svg" alt="" role="presentation" />
+                                    <div class="clients-nav__sub h5">Ответы на&nbsp;вопросы online</div>
+                                    <div class="clients-nav__messengers messenger flex flex_vertical">
+                                        <a class="messenger__item" href="#">
+                                            <svg class="icon icon-WhatsApp" viewBox="0 0 24 24">
+                                                <use xlink:href="/app/icons/sprite.svg#WhatsApp"></use>
+                                            </svg>
+                                        </a>
+                                        <a class="messenger__item" href="#">
+                                            <svg class="icon icon-viber" viewBox="0 0 25 25">
+                                                <use xlink:href="/app/icons/sprite.svg#viber"></use>
+                                            </svg>
+                                        </a>
+                                        <a class="messenger__item" href="#">
+                                            <svg class="icon icon-telegram" viewBox="0 0 24 21">
+                                                <use xlink:href="/app/icons/sprite.svg#telegram"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                    <div class="clients-nav__bottom"><a class="clients-nav__link link h6" href="#">Задать вопрос специалисту<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__panel-item header__panel-item_noscope db-nav" id="db-panel">
+                        <div class="db-nav__wrap wrap">
+                            <div class="db-nav__row flex flex_start">
+                                <div class="db-nav__cell db-nav__cell_left">
+                                    <ul class="header__list">
+                                        <li class="header__list-item"><a class="header__list-link h5" href="#">Советы эксперта</a>
+                                        </li>
+                                        <li class="header__list-item"><a class="header__list-link h5" href="#">Пошаговые руководства</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="db-nav__cell db-nav__cell_center">
+                                    <ul class="header__list">
+                                        <li class="header__list-item"><a class="header__list-link h5" href="#">Вебинары</a>
+                                        </li>
+                                        <li class="header__list-item"><a class="header__list-link h5" href="#">Важные новости рынка</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="db-nav__cell db-nav__cell_right">
+                                    <img src="/app/img/db-nav.svg" alt="" role="presentation" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__panel-item header__panel-item_contacts contacts-nav" id="contacts-panel">
+                        <div class="contacts-nav__wrap wrap">
+                            <div class="contacts-nav__row flex flex_justify">
+                                <div class="contacts-nav__cell contacts-nav__cell_left">
+                                    <div class="contacts-nav__text h6 strong">Как оставить заявку</div>
+                                    <div class="contacts-nav__text h6">Вы можете оставить заявку через&nbsp;наш сайт в&nbsp;любое время или&nbsp;обратиться к&nbsp;нам по&nbsp;телефону +7 (495) 99-888-96 с&nbsp;9:00 до&nbsp;19:00 по&nbsp;МСК в&nbsp;рабочие дни.</div>
+                                    <div class="contacts-nav__text h6">В остальное время Вы можете заполнить заявку у&nbsp;нас на&nbsp;сайте или&nbsp;написать на&nbsp;эл. почту: info@mbk-credit.ru</div><a class="contacts-nav__link link h6" href="#">Связаться с&nbsp;нами<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
+                                </div>
+                                <div class="contacts-nav__cell contacts-nav__cell_center">
+                                    <div class="contacts-nav__text h6"><span class="strong">Москва, ул. Забелина, д. 1а </span>
+                                        <br>(в&nbsp;минуте ходьбы от&nbsp;
+                                        <img src="/app/img/mm.svg">&nbsp;Китай-город)</div>
+                                    <div class="contacts-nav__text h6"><span class="strong">Пн-Пт 10:00–19:00, Сб-Вс – выходные</span>
+                                        <br>По предварительной договоренности возможна встреча с&nbsp;нашим представителем и&nbsp;в другое время.</div>
+                                    <div class="contacts-nav__text h6"><span class="strong">+7 499 346 37 18</span>
+                                        <br>info@mbk-credit.ru</div>
+                                </div>
+                                <div class="contacts-nav__cell contacts-nav__cell_right">
+                                    <div class="contacts-nav__map">
+                                        <picture>
+                                            <source type="image/webp" srcset="/app/img/map.webp">
+                                                <img src="/app/img/map.jpg" alt="" role="presentation" />
+                                        </picture>
+                                    </div>
+                                    <div class="contacts-nav__play red-play h6 is-regular">
+                                        <div class="red-play__circle"></div>Посмотреть видео, как к&nbsp;нам пройти</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
         <section class="offer">
+            <div class="offer__bg">
+                <video class="offer__video" loop="" muted="" autoplay="" poster="">
+                    <source type="video/mp4" src="/video.mp4">
+                </video>
+            </div>
+            <div class="offer__socials socials socials_fluid">
+                <div class="socials__item"><a class="socials__link" href="#"><span style="width: 21px"><svg class="icon icon-yotube" viewBox="0 0 21 15"><use xlink:href="/app/icons/sprite.svg#yotube"></use></svg></span></a>
+                </div>
+                <div class="socials__item"><a class="socials__link" href="#"><span style="width: 18px"><svg class="icon icon-insta" viewBox="0 0 18 19"><use xlink:href="/app/icons/sprite.svg#insta"></use></svg></span></a>
+                </div>
+                <div class="socials__item"><a class="socials__link" href="#"><span style="width: 11px"><svg class="icon icon-fb" viewBox="0 0 10 19"><use xlink:href="/app/icons/sprite.svg#fb"></use></svg></span></a>
+                </div>
+                <div class="socials__item"><a class="socials__link" href="#"><span style="width: 24px"><svg class="icon icon-vk" viewBox="0 0 24 15"><use xlink:href="/app/icons/sprite.svg#vk"></use></svg></span></a>
+                </div>
+            </div>
             <div class="offer__wrap wrap">
-                <div class="offer__box">
-                    <h2 class="offer__title h2">Кредитованиние <span class="stroke">рефинансирование </span>продажа недвижимости в&nbsp;Москве</h2><a class="offer__button btn h6" href="#">Узнать подробнее</a>
+                <div class="offer__row flex flex_vertical flex_justify">
+                    <div class="offer__box">
+                        <h2 class="offer__title h2">Кредитованиние <span class="stroke">рефинансирование </span>и&nbsp;продажа недвижимости в&nbsp;Москве</h2><a class="offer__button btn h6" href="#">Узнать подробнее</a>
+                    </div>
+                    <div class="offer__play play js-modal" data-modal="#video" data-youtube="oRvyulJcBW4">
+                        <div class="play__circle-list">
+                            <div class="play__circle-item"></div>
+                            <div class="play__circle-item"></div>
+                            <div class="play__circle-item"></div>
+                        </div>
+                        <div class="play__inner"></div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -95,7 +523,7 @@
                                 <div class="list__item h6">до&nbsp;7 лет</div>
                                 <div class="list__item h6">от&nbsp;19 % в&nbsp;год</div>
                             </div>
-                            <div class="service__link link h6">Подробнее<span class="link__arrow arrow"><svg class="icon icon-arrow" viewBox="0 0 19 10"><use xlink:href="/app/icons/sprite.svg#arrow"></use></svg></span>
+                            <div class="service__link link h6">Подробнее<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span>
                             </div>
                         </div>
                     </a>
@@ -115,7 +543,7 @@
                                 <div class="list__item h6">до&nbsp;7 лет</div>
                                 <div class="list__item h6">от&nbsp;19 % в&nbsp;год</div>
                             </div>
-                            <div class="service__link link h6">Подробнее<span class="link__arrow arrow"><svg class="icon icon-arrow" viewBox="0 0 19 10"><use xlink:href="/app/icons/sprite.svg#arrow"></use></svg></span>
+                            <div class="service__link link h6">Подробнее<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span>
                             </div>
                         </div>
                     </a>
@@ -135,7 +563,7 @@
                                 <div class="list__item h6">до&nbsp;7 лет</div>
                                 <div class="list__item h6">от&nbsp;19 % в&nbsp;год</div>
                             </div>
-                            <div class="service__link link h6">Подробнее<span class="link__arrow arrow"><svg class="icon icon-arrow" viewBox="0 0 19 10"><use xlink:href="/app/icons/sprite.svg#arrow"></use></svg></span>
+                            <div class="service__link link h6">Подробнее<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span>
                             </div>
                         </div>
                     </a>
@@ -145,28 +573,56 @@
         <section class="who">
             <div class="who__wrap wrap">
                 <h2 class="who__title h3">Кто мы?</h2>
-                <div class="who__tabs tabs">
+                <div class="who__tabs tabs tabs_bottom">
                     <div class="tabs__content">
-                        <div class="tabs__content-item why-tab flex">
-                            <div class="why-tab__cell why-tab__cell_left">
-                                <div class="why-tab__sub h5">45 специалистов в&nbsp;штате</div>
-                                <div class="why-tab__text h6 is-regular">МБК – это профессиональный коллектив Огромный опыт нашего персонала позволяет быстро находить выход из&nbsp;любой ситуации применяя уже отлаженные механизмы решений и&nbsp;успешные прецеденты. При любой комбинации обстоятельств
-                                    и&nbsp;доступных документов, мы сможем предоставить четкий пошаговый алгоритм решения ваших финансовых вопросов.</div>
+                        <div class="tabs__content-list js-to-slider" data-dots="1">
+                            <div class="tabs__content-item why-tab flex is-active">
+                                <div class="why-tab__cell why-tab__cell_left">
+                                    <div class="why-tab__sub h5">45 специалистов в&nbsp;штате</div>
+                                    <div class="why-tab__text h6 is-regular">МБК – это профессиональный коллектив Огромный опыт нашего персонала позволяет быстро находить выход из&nbsp;любой ситуации применяя уже отлаженные механизмы решений и&nbsp;успешные прецеденты. При любой комбинации обстоятельств
+                                        и&nbsp;доступных документов, мы сможем предоставить четкий пошаговый алгоритм решения ваших финансовых вопросов.</div>
+                                </div>
+                                <div class="why-tab__cell why-tab__cell_right">
+                                    <picture>
+                                        <source type="image/webp" srcset="/app/img/team.webp">
+                                            <img src="/app/img/team.jpg" alt="" role="presentation" />
+                                    </picture>
+                                </div>
                             </div>
-                            <div class="why-tab__cell why-tab__cell_right">
-                                <picture>
-                                    <source type="image/webp" srcset="/app/img/team.webp">
-                                        <img src="/app/img/team.jpg" alt="" role="presentation" />
-                                </picture>
+                            <div class="tabs__content-item why-tab flex">
+                                <div class="why-tab__cell why-tab__cell_left">
+                                    <div class="why-tab__sub h5">2 специалистов в&nbsp;штате</div>
+                                    <div class="why-tab__text h6 is-regular">МБК – это профессиональный коллектив Огромный опыт нашего персонала позволяет быстро находить выход из&nbsp;любой ситуации применяя уже отлаженные механизмы решений и&nbsp;успешные прецеденты. При любой комбинации обстоятельств
+                                        и&nbsp;доступных документов, мы сможем предоставить четкий пошаговый алгоритм решения ваших финансовых вопросов.</div>
+                                </div>
+                                <div class="why-tab__cell why-tab__cell_right">
+                                    <picture>
+                                        <source type="image/webp" srcset="/app/img/team.webp">
+                                            <img src="/app/img/team.jpg" alt="" role="presentation" />
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="tabs__content-item why-tab flex">
+                                <div class="why-tab__cell why-tab__cell_left">
+                                    <div class="why-tab__sub h5">3 специалистов в&nbsp;штате</div>
+                                    <div class="why-tab__text h6 is-regular">МБК – это профессиональный коллектив Огромный опыт нашего персонала позволяет быстро находить выход из&nbsp;любой ситуации применяя уже отлаженные механизмы решений и&nbsp;успешные прецеденты. При любой комбинации обстоятельств
+                                        и&nbsp;доступных документов, мы сможем предоставить четкий пошаговый алгоритм решения ваших финансовых вопросов.</div>
+                                </div>
+                                <div class="why-tab__cell why-tab__cell_right">
+                                    <picture>
+                                        <source type="image/webp" srcset="/app/img/team.webp">
+                                            <img src="/app/img/team.jpg" alt="" role="presentation" />
+                                    </picture>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="tabs__nav">
-                        <div class="tabs__nav-item h5 is-active">45 специалистов
+                        <div class="tabs__nav-item h5 is-active js-tab-nav">45 специалистов
                             <br>в&nbsp;штате</div>
-                        <div class="tabs__nav-item h5">Мы работаем в&nbsp;сфере
+                        <div class="tabs__nav-item h5 js-tab-nav">Мы работаем в&nbsp;сфере
                             <br>финансов с&nbsp;2008 года</div>
-                        <div class="tabs__nav-item h5">Выдали более
+                        <div class="tabs__nav-item h5 js-tab-nav">Выдали более
                             <br>10 000 кредитов</div>
                     </div>
                 </div>
@@ -175,22 +631,81 @@
         <section class="reviews">
             <div class="reviews__wrap wrap">
                 <h2 class="reviews__title h3">Клиенты МБК и&nbsp;их история</h2>
-                <div class="reviews__row flex flex_vertical">
-                    <div class="reviews__cell reviews__cell_video">
-                        <div class="video">
-                            <picture>
-                                <source type="image/webp" srcset="/app/img/video.webp">
-                                    <img src="/app/img/video.jpg" class="video__preview object-fit" alt="" role="presentation" />
-                            </picture>
+                <div class="reviews__slider owl-carousel">
+                    <div class="reviews__row flex flex_vertical" id="review-0">
+                        <div class="reviews__cell reviews__cell_video">
+                            <div class="video">
+                                <picture>
+                                    <source type="image/webp" srcset="/app/img/video.webp">
+                                        <img src="/app/img/video.jpg" class="video__preview object-fit" alt="" role="presentation" />
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="reviews__cell reviews__cell_content">
+                            <div class="reviews__name h4">Вера Зорькина</div>
+                            <div class="reviews__who h6">Клиент МБК, 46 лет</div>
+                            <div class="reviews__text h6">Обратилась в&nbsp;компанию МБК совершенно случайно. Купила квартиру в&nbsp;новостройке и&nbsp;получилось так, что денег на&nbsp;ремонт не было достаточно.
+                                <br>
+                                <br>Брать кредит в&nbsp;банке не было возможности, так как в&nbsp;недавнем времени поменяла работу и&nbsp;не хватало стажа (менее 3 месяцев), к&nbsp;тому же большая финансовая нагрузка.</div>
+                            <div class="reviews__nav flex flex_vertical"><a class="reviews__button btn h6" href="#">Читать полностью</a><a class="reviews__apply red-link h6" href="#">Обратиться в&nbsp;мбк</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="reviews__cell reviews__cell_content">
-                        <div class="reviews__name h4">Вера Зорькина</div>
-                        <div class="reviews__who h6">Клиент МБК, 46 лет</div>
-                        <div class="reviews__text h6">Обратилась в&nbsp;компанию МБК совершенно случайно. Купила квартиру в&nbsp;новостройке и&nbsp;получилось так, что денег на&nbsp;ремонт не было достаточно.
-                            <br>
-                            <br>Брать кредит в&nbsp;банке не было возможности, так как в&nbsp;недавнем времени поменяла работу и&nbsp;не хватало стажа (менее 3 месяцев), к&nbsp;тому же большая финансовая нагрузка.</div>
-                        <div class="reviews__nav flex flex_vertical"><a class="reviews__button btn h6" href="#">Читать полностью</a><a class="red-link h6" href="#">Обратиться в&nbsp;мбк</a>
+                    <div class="reviews__row flex flex_vertical" id="review-1">
+                        <div class="reviews__cell reviews__cell_video">
+                            <div class="video">
+                                <picture>
+                                    <source type="image/webp" srcset="/app/img/video.webp">
+                                        <img src="/app/img/video.jpg" class="video__preview object-fit" alt="" role="presentation" />
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="reviews__cell reviews__cell_content">
+                            <div class="reviews__name h4">Вера Зорькина</div>
+                            <div class="reviews__who h6">Клиент МБК, 46 лет</div>
+                            <div class="reviews__text h6">Обратилась в&nbsp;компанию МБК совершенно случайно. Купила квартиру в&nbsp;новостройке и&nbsp;получилось так, что денег на&nbsp;ремонт не было достаточно.
+                                <br>
+                                <br>Брать кредит в&nbsp;банке не было возможности, так как в&nbsp;недавнем времени поменяла работу и&nbsp;не хватало стажа (менее 3 месяцев), к&nbsp;тому же большая финансовая нагрузка.</div>
+                            <div class="reviews__nav flex flex_vertical"><a class="reviews__button btn h6" href="#">Читать полностью</a><a class="reviews__apply red-link h6" href="#">Обратиться в&nbsp;мбк</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__row flex flex_vertical" id="review-2">
+                        <div class="reviews__cell reviews__cell_video">
+                            <div class="video">
+                                <picture>
+                                    <source type="image/webp" srcset="/app/img/video.webp">
+                                        <img src="/app/img/video.jpg" class="video__preview object-fit" alt="" role="presentation" />
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="reviews__cell reviews__cell_content">
+                            <div class="reviews__name h4">Вера Зорькина</div>
+                            <div class="reviews__who h6">Клиент МБК, 46 лет</div>
+                            <div class="reviews__text h6">Обратилась в&nbsp;компанию МБК совершенно случайно. Купила квартиру в&nbsp;новостройке и&nbsp;получилось так, что денег на&nbsp;ремонт не было достаточно.
+                                <br>
+                                <br>Брать кредит в&nbsp;банке не было возможности, так как в&nbsp;недавнем времени поменяла работу и&nbsp;не хватало стажа (менее 3 месяцев), к&nbsp;тому же большая финансовая нагрузка.</div>
+                            <div class="reviews__nav flex flex_vertical"><a class="reviews__button btn h6" href="#">Читать полностью</a><a class="reviews__apply red-link h6" href="#">Обратиться в&nbsp;мбк</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__row flex flex_vertical" id="review-3">
+                        <div class="reviews__cell reviews__cell_video">
+                            <div class="video">
+                                <picture>
+                                    <source type="image/webp" srcset="/app/img/video.webp">
+                                        <img src="/app/img/video.jpg" class="video__preview object-fit" alt="" role="presentation" />
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="reviews__cell reviews__cell_content">
+                            <div class="reviews__name h4">Вера Зорькина</div>
+                            <div class="reviews__who h6">Клиент МБК, 46 лет</div>
+                            <div class="reviews__text h6">Обратилась в&nbsp;компанию МБК совершенно случайно. Купила квартиру в&nbsp;новостройке и&nbsp;получилось так, что денег на&nbsp;ремонт не было достаточно.
+                                <br>
+                                <br>Брать кредит в&nbsp;банке не было возможности, так как в&nbsp;недавнем времени поменяла работу и&nbsp;не хватало стажа (менее 3 месяцев), к&nbsp;тому же большая финансовая нагрузка.</div>
+                            <div class="reviews__nav flex flex_vertical"><a class="reviews__button btn h6" href="#">Читать полностью</a><a class="reviews__apply red-link h6" href="#">Обратиться в&nbsp;мбк</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -208,7 +723,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="reviews__item">
+                    <div class="reviews__item reviews__item_active">
                         <picture>
                             <source type="image/webp" srcset="/app/img/review-1.webp">
                                 <img src="/app/img/review-1.jpg" class="reviews__item-bg object-fit" alt="" role="presentation" />
@@ -248,7 +763,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="reviews__bottom"><a class="reviews__link h6 red-link" href="#">Больше отзывов</a>
+                <div class="reviews__bottom"><a class="reviews__link h6 red-link red-link_arrow" href="#"> Больше отзывов</a>
                 </div>
             </div>
         </section>
@@ -290,7 +805,7 @@
             <section class="white radius-5">
                 <section class="blog">
                     <div class="blog__wrap wrap">
-                        <div class="blog__tags flex flex_justify flex_start"><a class="blog__tag tag" href="#">Все темы</a><a class="blog__tag tag" href="#">Долги</a><a class="blog__tag tag is-active" href="#">Ипотека</a><a class="blog__tag tag" href="#">Коллекторы</a><a class="blog__tag tag" href="#">Юридические тонкости</a>
+                        <div class="blog__tags flex flex_start"><a class="blog__tag tag" href="#">Все темы</a><a class="blog__tag tag" href="#">Долги</a><a class="blog__tag tag is-active" href="#">Ипотека</a><a class="blog__tag tag" href="#">Коллекторы</a><a class="blog__tag tag" href="#">Юридические тонкости</a>
                             <a
                             class="blog__tag tag" href="#">Инвестиции</a><a class="blog__tag tag" href="#">Страхование</a><a class="blog__tag tag" href="#">Налоги</a>
                         </div>
@@ -542,7 +1057,7 @@
                                             <span
                                             class="pagination__num">...</span><a class="pagination__num" href="#">12</a>
                                         </div>
-                                    </div><a class="blog__button btn btn_border p" href="#"><span class="blog__text">Загрузить еще статей</span></a>
+                                    </div><a class="blog__button btn btn_border p" href="#"><span class="btn__text">Загрузить еще статей</span><span class="btn__icon btn__icon_arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
                                 </div>
                             </div>
                             <div class="blog__cell blog__cell_right blog__cell_gray">
@@ -677,18 +1192,32 @@
                 </section>
                 <section class="master">
                     <div class="master__wrap wrap">
+                        <div class="master__tree">
+                            <picture>
+                                <source type="image/webp" srcset="/app/img/tree.webp">
+                                    <img src="/app/img/tree.jpg" alt="" role="presentation" />
+                            </picture>
+                        </div>
                         <div class="master__man">
                             <picture>
                                 <source type="image/webp" srcset="/app/img/man.webp">
                                     <img src="/app/img/man.png" class="master__main-img object-fit" alt="" role="presentation" />
                             </picture>
                         </div>
-                        <div class="master__cell">
-                            <h2 class="master__title h2">Посмотрите<span class="stroke">бесплатный</span>мастер 
+                        <div class="master__row flex flex_justify flex_bottom">
+                            <div class="master__about">
+                                <div class="master__open open"></div>
+                                <div class="master__name h4">Алексей Астафьев
+                                </div>
+                                <div class="master__who h6">Финансовый аналитик МБК</div>
+                            </div>
+                            <div class="master__cell">
+                                <h2 class="master__title h2">Посмотрите <span class="stroke">бесплатный</span>мастер 
 класс</h2>
-                            <div class="master__box">
-                                <div class="master__box-inner">
-                                    <div class="master__box-text h5">«3 способа, как списать долги и&nbsp;снизить стоимость платежей по&nbsp;кредиту»</div><a class="master__box-button btn h6" href="#"><span class="master__text">Записаться на&nbsp;мастер класс</span></a>
+                                <div class="master__box">
+                                    <div class="master__box-inner">
+                                        <div class="master__box-text h5">«3 способа, как списать долги и&nbsp;снизить стоимость платежей по&nbsp;кредиту»</div><a class="master__box-button btn h6" href="#"><span class="master__text">Записаться на&nbsp;мастер класс</span></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -829,7 +1358,7 @@
     </main>
     <div class="modals mfp-hide" id="recall"></div>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/app.js?v=1578948220780"></script>
+    <script src="/app/js/app.js?v=1579472800377"></script>
 </body>
 
 </html>

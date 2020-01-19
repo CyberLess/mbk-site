@@ -3,7 +3,32 @@
 	padding: 12rem 0;
 	border-radius: 10px;
 
+	@include max-screen($large_tablet) {
+		border-radius: 0px;
+		padding: 9rem 0;
+	}
+
+	@include max-screen($small_tablet) {
+		padding: 7rem 0;
+	}
+
+	@include max-screen($large_mobile) {
+		padding-top: 5rem;
+		padding-bottom: 3.4rem;
+	}
+
+	&__title{
+		@include max-screen($large_mobile) {
+			text-align: center;
+			margin-bottom: 2.3rem;
+		}		
+	}
+
 	&__tabs{
 		margin-top: -6.5rem;
+
+		@include max-screen($small_tablet) {
+			margin-top: 2rem;
+		}
 	}
 }	

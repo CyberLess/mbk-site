@@ -1,9 +1,38 @@
 +b.SECTION.offer
+	+e.bg
+		+e.video.VIDEO(loop="" muted="" autoplay="" poster="")
+			source(type="video/mp4" src="/video.mp4")
+	+e.socials.socials__._fluid
+		+e.item
+			+e.link.A(href='#')
+				span(style="width: 21px")
+					+icon('yotube', '0 0 21 15')
+		+e.item
+			+e.link.A(href='#')
+				span(style="width: 18px")
+					+icon('insta', '0 0 18 19')
+		+e.item
+			+e.link.A(href='#')
+				span(style="width: 11px")
+					+icon('fb', '0 0 10 19')
+		+e.item
+			+e.link.A(href='#')
+				span(style="width: 24px")
+					+icon('vk', '0 0 24 15')
 	+e.wrap.wrap
-		+e.box
-			+e.title.h2.H2
-				| Кредитованиние 
-				+b.stroke рефинансирование 
-				| продажа недвижимости в Москве
-			+e.button.btn.h6.A(href='#')
-				| Узнать подробнее
+		+e.row.flex._vertical._justify
+			+e.box
+				+e.title.h2.H2
+					| Кредитованиние 
+					+b.stroke рефинансирование 
+					| и продажа недвижимости в Москве
+				+e.button.btn.h6.A(href='#')
+					| Узнать подробнее
+			+e.play.play__.js-modal(data-modal="#video" data-youtube="oRvyulJcBW4")
+				+e.circle-list
+					+e.circle-item
+					+e.circle-item
+					+e.circle-item
+				//- +e.preview
+				//- 	+e.IFRAME.iframe(data-keepplaying width="1043" height="587" src="https://www.youtube.com/embed/kgaO45SyaO4?autoplay=1&mute=1&vq=medium&loop=1&playlist=kgaO45SyaO4&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+				+e.inner

@@ -1,16 +1,130 @@
 .offer{
 	padding: 16.2rem 0;
 	color: #fff;
+	position: relative;
+	// background: url('/img/offer.jpg') center no-repeat;
+	// background-size: cover;
 
-	background: url('/img/offer.jpg') center no-repeat;
-	background-size: cover;
+	@include max-screen($large_desktop) {
+	    padding: 11.2rem 0;
+	}
+
+	@include max-screen($large_mobile) {
+		height: calc(100vh - 7rem);
+		padding: 5rem 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__bg, &__video{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+
+	&__bg{
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 5;
+			background-color: rgba(0,0,0, .5);
+		}
+	}
+
+	&__row{
+		position: relative;
+		@include max-screen($large_mobile) {
+			align-items: flex-end;
+		}
+	}
+
+	&__video{
+		object-fit: cover;
+	}
+
+	&__button{
+		@include max-screen($large_mobile) {
+			width: 186/290*100%;
+			padding-left: 5px;
+			padding-right: 5px;
+			max-width: 230px;
+		}
+	}
 
 	&__box{
 		width: 711/1336*100%;
+
+		@include max-screen($large_mobile) {
+			width: 100%;
+		}
+	}
+
+	&__play{
+		width: 176/1336*100%;
+		margin-right: 210/1336*100%;
+
+		@include max-screen($large_tablet) {
+			margin-right: 20%;
+		}
+
+		@include max-screen($small_tablet) {
+			margin-right: 14%;
+			width: 15%;
+		}
+
+		@include max-screen($large_mobile) {
+			width: 58/290*100%;
+			margin-right: 5%;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			margin-bottom: -10/290*100%;
+			// margin-bottom: -5px;
+		}
+		@include max-screen($small_mobile) {
+			margin-right: 0;
+			width: 58px;
+			margin-bottom: -5px;
+		}
 	}
 
 
 	&__title{
 		margin-bottom: 6rem;
+
+		@include max-screen($large_mobile) {
+			margin-bottom: 4.5rem;
+			max-width: 80%;
+
+		}
+		@include max-screen($small_mobile) {
+			max-width: 100%;
+		}
+	}
+
+	&__socials{
+		position: absolute;
+		margin-bottom: 3.3rem;
+		margin-right: 3.4rem;
+		bottom: 0;
+		right: 0;
+		
+		@include max-screen($small_tablet) {
+			margin-bottom: 1.5rem;
+			margin-right: 1.5rem;
+		}
+
+		@include max-screen($large_mobile) {
+			display: none;
+		}
 	}
 }

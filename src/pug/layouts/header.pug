@@ -2,30 +2,38 @@
 	+e.top
 		+e.wrap.wrap
 			+e.row.flex._justify._vertical
-				+e.email.email__.p.A(href="#")
-					+e.SPAN.icon
-						+icon('mail', '0 0 15 11')
-					+e.SPAN.text info@mbk-credit.ru
-				+e.phone.phone__.h6.is-bold.A(href="tel:+74993463718") +7 499 346 37 18
-				+e.messengers.messenger__.flex._vertical
-					+e.item.A(href='#' style="fill: #00C364")
-						+icon('WhatsApp', '0 0 24 24')
-					+e.item.A(href='#' style="fill: #665CAC")
-						+icon('viber', '0 0 25 25')
-					+e.item.A(href='#' style="fill: #1E96C8")
-						+icon('telegram', '0 0 24 21')
-				+e.link.link__.p.A(href="#")
-					| Заказать звонок
-					+e.SPAN.arrow.arrow
-						+icon('arrow', '0 0 19 10')
-				+e.link.link__.p.A(href="#")
-					| Заказать услугу
-					+e.SPAN.arrow.arrow
-						+icon('arrow', '0 0 19 10')
-				+e.subscribe.subscribe-button__.p.A(href="#")
-					| Подписаться на нашу рассылку
-					+e.icon
-						+icon('sb', '0 0 11 11')
+				+e.part._email
+					+e.email.email__.p.A(href="#")
+						+e.SPAN.icon
+							+icon('mail', '0 0 15 11')
+						+e.SPAN.text info@mbk-credit.ru
+				+e.part._contact.flex._vertical
+					+e.phone.phone__.h6.is-bold.A(href="tel:+74993463718") +7 499 346 37 18
+					+e.messengers.messenger__.flex._vertical
+						+e.item.A(href='#' style="fill: #00C364")
+							+icon('WhatsApp', '0 0 24 24')
+						+e.item.A(href='#' style="fill: #665CAC")
+							+icon('viber', '0 0 25 25')
+						+e.item.A(href='#' style="fill: #1E96C8")
+							+icon('telegram', '0 0 24 21')
+				+e.part._links.flex._vertical
+					+e.link.link__.p.A(href="#")
+						| Заказать звонок
+						+e.SPAN.arrow.arrow
+							+e.SVG(viewBox="0 0 18.560659 9.6213207")
+								path(class="triangle" d='M14.5 4.81v-3l3 3-3 3z')
+								path(class="stroke" d='M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z')
+					+e.link.link__.p.A(href="#")
+						| Заказать услугу
+						+e.SPAN.arrow.arrow
+							+e.SVG(viewBox="0 0 18.560659 9.6213207")
+								path(class="triangle" d='M14.5 4.81v-3l3 3-3 3z')
+								path(class="stroke" d='M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z')
+				+e.part._subscribe
+					+e.subscribe.subscribe-button__.p.A(href="#")
+						| Подписаться на нашу рассылку
+						+e.icon
+							+icon('sb', '0 0 11 11')
 	+e.bottom
 		+e.wrap.wrap
 			+e.row.flex._vertical._justify
@@ -33,14 +41,329 @@
 					+e.IMG.image(src='/app/img/logo.svg')
 				+e.menu.menu__.flex.UL
 					+e.item.LI
-						+e.A.link.h6(href="#") О нас
+						+e.link.h6.js-submenu.A(href="#" data-menu="#about-panel" data-event="click") О нас
 					+e.item.LI
-						+e.A.link.h6(href="#") Услуги
+						+e.link.h6.js-submenu.A(href="#" data-menu="#services-panel" data-event="click") Услуги
 					+e.item.LI
-						+e.A.link.h6(href="#") Клиенты
+						+e.link.h6.js-submenu.A(href="#" data-menu="#clients-panel" data-event="click") Клиенты
 					+e.item.LI
-						+e.A.link.h6.is-active(href="#") База знаний
+						+e.link.h6.is-active.js-submenu.A(href="#" data-menu="#db-panel" data-event="click") База знаний
 					+e.item.LI
-						+e.A.link.h6(href="#") Контакты
+						+e.link.h6.js-submenu.A(href="#" data-menu="#contacts-panel" data-event="click") Контакты
 				+b.search-button
 					+icon('loupe', '0 0 21 21')
+	+e.panel
+		+e.panel-bg
+		+e.panel-row
+			+e.panel-item._search#search-panel
+				+e.wrap.wrap
+					+b.FORM.search.is-default-form(action="/")
+						+e.BUTTON.button
+							svg(width='33', height='33', viewBox='0 0 33 33', fill='none', xmlns='http://www.w3.org/2000/svg')
+								rect(x='17.5986', y='19.0654', width='2', height='11.4074', transform='rotate(-45 17.5986 19.0654)')
+								circle(cx='13.1993', cy='13.1992', r='8.33333', transform='rotate(-45 13.1993 13.1992)')
+						+e.INPUT.input(type="text" name="s" placeholder="Поиск по сайту" autocomplete="off")
+			+e.panel-item._noscope.about-nav__#about-panel
+				+e.wrap.wrap
+					+e.row.flex._start
+						+e.cell._left
+							ul.header__list
+								li.header__list-item
+									a.header__list-link.h5(href="#") Нам 9 лет
+								li.header__list-item
+									a.header__list-link.h5(href="#") Вакансии
+								li.header__list-item
+									a.header__list-link.h5(href="#") В лицах
+						+e.cell._center
+							ul.header__list
+								li.header__list-item
+									a.header__list-link.h5(href="#") Наши преимущества
+								li.header__list-item
+									a.header__list-link.h5(href="#") Наши сертификаты
+						+e.cell._right
+							+e.IMG(src="/app/img/about.svg")
+			+e.panel-item._services.services-nav__#services-panel
+				+e.wrap.wrap
+					+e.tabs.tabs__._default._nolist
+						+e.nav.flex._justify._vertical
+							+e.nav-item.h5.is-active.js-tab-nav Получить деньги
+							+e.nav-item.h5.js-tab-nav Закрыть долги
+							+e.nav-item.h5.js-tab-nav Продать квартиру
+							+e.nav-item.h5.js-tab-nav Сделки с недвижимостью
+						+e.content
+							+e.content-item.services-tab__.is-active
+								+e.row.flex
+									+e.cell
+										+e.title.h6
+											| Займы
+										+e.box
+											+e.label.h6 По условиям
+											+e.list.list__
+												+e.line
+													+e.item.h6.A(href="#") Без залога
+												+e.line
+													+e.item.h6.A(href="#") Без истории
+												+e.line
+													+e.item.h6.A(href="#") Без отказа
+												+e.line
+													+e.item.h6.A(href="#") Без поручителей
+												+e.line
+													+e.item.h6.A(href="#") Без предоплаты
+												+e.line
+													+e.item.h6.A(href="#") Без справок
+												+e.line
+													+e.item.h6.A(href="#") На карту
+												+e.line
+													+e.item.h6.A(href="#") Под залог
+												+e.line
+													+e.item.h6.A(href="#") Под расписку
+												+e.line
+													+e.item.h6.A(href="#") С плохой ки
+												+e.line
+													+e.item.h6.A(href="#") Срочно
+										+e.box
+											+e.label.h6 По соцстатусу
+											+e.list.list__
+												+e.line
+													+e.item.h6.A(href="#") Безработным
+												+e.line
+													+e.item.h6.A(href="#") Самозанятым
+												+e.line
+													+e.item.h6.A(href="#") Госслужащим
+												+e.line
+													+e.item.h6.A(href="#") Студентам
+												+e.line
+													+e.item.h6.A(href="#") ИП
+												+e.line
+													+e.item.h6.A(href="#") Юридическим лицам
+												+e.line
+													+e.item.h6.A(href="#") Пенсионерам
+												+e.line
+													+e.item.h6.A(href="#") Работникам по найму
+									+e.cell
+										+e.title.h6
+											| Кредиты
+										+e.box
+											+e.label.h6 По соц статусу
+											+e.list.list__
+												+e.line
+													+e.item.h6.A(href="#") Экспресс кредиты
+												+e.line
+													+e.item.h6.A(href="#") Кредит под залог
+												+e.line
+													+e.item.h6.A(href="#") Потребительский кредит
+										+e.box
+											+e.label.h6 Плохая история
+											+e.list.list__
+												+e.line
+													+e.item.h6.A(href="#") Помощь в получении
+												+e.line
+													+e.item.h6.A(href="#") Услуги кредитного брокера
+										+e.box
+											+e.label.h6 Другое
+											+e.list.list__
+												+e.line
+													+e.item.h6.A(href="#") Кредитная линия
+												+e.line
+													+e.item.h6.A(href="#") Ломбардное кредитование
+									+e.cell
+										+e.title.h6
+											| Финансирование бизнеса
+										+e.box
+											+e.label.h6 Оборотные средства
+											+e.list.list__
+												+e.line
+													+e.item.h6.A(href="#") Кредитование на пополнение оборотных средств без залога
+												+e.line
+													+e.item.h6.A(href="#") Кредитование на пополнение оборотных средств под залог имущества
+										+e.box
+											+e.label.h6 Ипотека и лизинг
+											+e.list.list__
+												+e.line
+													+e.item.h6.A(href="#") Коммерческая ипотека. Возвратный лизинг недвижимости
+												+e.line
+													+e.item.h6.A(href="#") Кредит на покупку автотранспорта и оборудования. Возвратный лизинг автотранспорта
+									+e.cell
+										+e.title.h6
+											| Ссуды
+							+e.content-item.services-tab__.flex
+								+e.row.flex
+									+e.cell
+										+e.title.h6
+											| Рефинансирование
+										+e.box
+											+e.label.h6 Виды услуг
+											+e.list.list__
+												+e.line
+													+e.item.h6.A(href="#") Закрытие текущих просрочек
+												+e.line
+													+e.item.h6.A(href="#") Объединение кредитов в один
+												+e.line
+													+e.item.h6.A(href="#") Снижение платежа и ставки по кредиту
+							+e.content-item.services-tab__.flex
+								+e.row.flex
+									+e.cell
+										+e.title.h6
+											| Срочная продажа квартиры
+										+e.box
+											+e.label.h6 По виду обременения
+											+e.list.list__
+												+e.line
+													+e.item.h6.A(href="#") Под обременением
+												+e.line
+													+e.item.h6.A(href="#") Под арестом
+												+e.line
+													+e.item.h6.A(href="#") Под залогом
+												+e.line
+													+e.item.h6.A(href="#") Под ипотекой
+										+e.box
+											+e.label.h6 По количеству комнат
+											+e.list.list__
+												+e.line
+													+e.item.h6.A(href="#") 1-комнатную
+												+e.line
+													+e.item.h6.A(href="#") 2-комнатную
+												+e.line
+													+e.item.h6.A(href="#") 3-комнатную
+												+e.line
+													+e.item.h6.A(href="#") 4-комнатную
+							+e.content-item.services-tab__.flex
+								+e.row.flex
+									+e.cell
+										+e.title.h6
+											| Подготовка документов
+										+e.box
+											+e.label.h6 Виды документов
+											+e.list.list__
+												+e.line
+													+e.item.h6.A(href="#") Получение справок и выписок
+												+e.line
+													+e.item.h6.A(href="#") Оформление наследства
+									+e.cell
+										+e.title.h6
+											| Сопровождение
+										+e.box
+											+e.list.list__
+												+e.line
+													+e.item.h6.A(href="#") Приватизация недвижимости
+												+e.line
+													+e.item.h6.A(href="#") Сопровождение сделки
+									+e.cell
+										+e.title.h6
+											| Купить квартиру в ипотеку
+										+e.box
+											+e.label.h6 В новостройке
+											+e.list.list__
+												+e.line
+													+e.item.h6.A(href="#") Классическая ипотека на новостройку
+												+e.line
+													+e.item.h6.A(href="#") Ипотека по 2-м документам на новостройку
+												+e.line
+													+e.item.h6.A(href="#") Ипотека на новостройку под залог недвижимости
+										+e.box
+											+e.label.h6 На вторичном рынке
+											+e.list.list__
+												+e.line
+													+e.item.h6.A(href="#") Классическая ипотека на вторичном рынке
+												+e.line
+													+e.item.h6.A(href="#") Ипотека по 2-м документам на вторичном рынке
+												+e.line
+													+e.item.h6.A(href="#") Ипотека на вторичном рынке под залог недвижимости
+			+e.panel-item._clients.clients-nav__#clients-panel
+				+e.wrap.wrap
+					+e.row.flex._justify
+						+e.cell._left
+							+e.sub.h5
+								| Клиенты МБК о нас
+							+e.list.flex
+								+e.list-item.A(href='#')
+									+e.IMG.list-img.object-fit(src="/img/clients_1.jpg")
+								+e.list-item.A(href='#')
+									+e.IMG.list-img.object-fit(src="/img/clients_1.jpg")
+								+e.list-item.A(href='#')
+									+e.IMG.list-img.object-fit(src="/img/clients_1.jpg")
+								+e.list-item.A(href='#')
+									+e.IMG.list-img.object-fit(src="/img/clients_1.jpg")
+								+e.list-item.A(href='#')
+									+e.IMG.list-img.object-fit(src="/img/clients_1.jpg")
+							+e.row.flex._justify._vertical
+								+e.text.h6
+									| Более 250 отзывов
+								+e.link.link__.h6.A(href="#")
+									| Перейти в отзывы
+									+e.SPAN.arrow.arrow
+										+e.SVG(viewBox="0 0 18.560659 9.6213207")
+											path(class="triangle" d='M14.5 4.81v-3l3 3-3 3z')
+											path(class="stroke" d='M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z')
+						+e.cell._right._bg
+							+e.bg.IMG(src="/app/img/clients-nav.svg")
+							+e.sub.h5
+								| Ответы на вопросы online
+							+e.messengers.messenger__.flex._vertical
+								+e.item.A(href='#')
+									+icon('WhatsApp', '0 0 24 24')
+								+e.item.A(href='#')
+									+icon('viber', '0 0 25 25')
+								+e.item.A(href='#')
+									+icon('telegram', '0 0 24 21')
+							+e.bottom
+								+e.link.link__.h6.A(href="#")
+									| Задать вопрос специалисту
+									+e.SPAN.arrow.arrow
+										+e.SVG(viewBox="0 0 18.560659 9.6213207")
+											path(class="triangle" d='M14.5 4.81v-3l3 3-3 3z')
+											path(class="stroke" d='M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z')
+			+e.panel-item._noscope.db-nav__#db-panel
+				+e.wrap.wrap
+					+e.row.flex._start
+						+e.cell._left
+							ul.header__list
+								li.header__list-item
+									a.header__list-link.h5(href="#") Советы эксперта
+								li.header__list-item
+									a.header__list-link.h5(href="#") Пошаговые руководства
+						+e.cell._center
+							ul.header__list
+								li.header__list-item
+									a.header__list-link.h5(href="#") Вебинары
+								li.header__list-item
+									a.header__list-link.h5(href="#") Важные новости рынка
+						+e.cell._right
+							+e.IMG(src="/app/img/db-nav.svg")
+			+e.panel-item._contacts.contacts-nav__#contacts-panel
+				+e.wrap.wrap
+					+e.row.flex._justify
+						+e.cell._left
+							+e.text.h6.strong
+								| Как оставить заявку
+							+e.text.h6
+								| Вы можете оставить заявку через наш сайт в любое время или обратиться к нам по телефону +7 (495) 99-888-96 с 9:00 до 19:00 по МСК в рабочие дни.
+							+e.text.h6
+								| В остальное время Вы можете заполнить заявку у нас на сайте или написать на эл. почту: info@mbk-credit.ru
+							+e.link.link__.h6.A(href="#")
+								| Связаться с нами
+								+e.SPAN.arrow.arrow
+									+e.SVG(viewBox="0 0 18.560659 9.6213207")
+										path(class="triangle" d='M14.5 4.81v-3l3 3-3 3z')
+										path(class="stroke" d='M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z')
+						+e.cell._center
+							+e.text.h6
+								span.strong Москва, ул. Забелина, д. 1а 
+								br
+								| (в минуте ходьбы от 
+								img(src="/app/img/mm.svg") 
+								| &nbsp;Китай-город)
+							+e.text.h6
+								span.strong Пн-Пт 10:00–19:00, Сб-Вс – выходные
+								br
+								| По предварительной договоренности возможна встреча с нашим представителем и в другое время.
+							+e.text.h6
+								span.strong +7 499 346 37 18
+								br
+								| info@mbk-credit.ru
+						+e.cell._right
+							+e.map
+								+e.IMG(src='/img/map.jpg')
+							+e.play.red-play__.h6.is-regular
+								+e.circle
+								| Посмотреть видео, как к нам пройти

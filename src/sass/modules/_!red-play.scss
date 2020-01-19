@@ -1,0 +1,34 @@
+.red-play{
+	padding-left: 53px;
+	position: relative;
+	min-height: 37px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	user-select: none;
+
+	&__circle{
+		width: 37px;
+		height: 37px;
+		position: absolute;
+		left: 0;
+		top: 50%;
+		margin-top: -19px;
+		border-radius: 50%;
+		background-color: $red;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&:before{
+			content: '';
+			display: block;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 3.5px 0 3.5px 5px;
+			border-color: transparent transparent transparent #fff;
+		}
+	}
+}
