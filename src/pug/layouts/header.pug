@@ -47,22 +47,95 @@
 					+e.item.LI
 						+e.link.h6.js-submenu.A(href="#" data-menu="#clients-panel" data-event="click") Клиенты
 					+e.item.LI
-						+e.link.h6.is-active.js-submenu.A(href="#" data-menu="#db-panel" data-event="click") База знаний
+						+e.link.h6.js-submenu.A(href="#" data-menu="#db-panel" data-event="click") База знаний
 					+e.item.LI
 						+e.link.h6.js-submenu.A(href="#" data-menu="#contacts-panel" data-event="click") Контакты
-				+b.search-button
-					+icon('loupe', '0 0 21 21')
+				+e.search
+					+b.search.FORM(action="")
+						+e.button.search-button__.js-search-open.BUTTON(type="button")
+							+icon('loupe', '0 0 21 21')
+						+e.inner
+							+e.INPUT.input(type="text" name='s' autocomplete="off" placeholder="Поиск по сайту")
+						+e.close.js-search-close
+							+icon('close', '0 0 18 18')
+				+e.mobile.flex._vertical
+					+e.mobile-item._loupe
+						+e.mobile-search.search-button__.js-search-open.BUTTON
+							+icon('loupe', '0 0 21 21')
+					+e.mobile-item._phone.A(href="tel:+74993463718")
+						+icon('phone', '0 0 18 18')
+					+e.mobile-item._hamburger
+						+e.hamburger.hamburger.hamburger--spin.js-mobile-menu
+							.hamburger-box
+								.hamburger-inner
+	+e.search-bg.js-search-close
+	+e.device
+		+e.device-bg.js-close-mobile-menu
+		+e.device-menu.UL
+			+e.device-li.LI
+				+e.device-link.h6.js-mobile-link.A(href="#" data-menu="#about-panel") 
+					| О нас
+					+icon('next', '0 0 10 14')
+			+e.device-li.LI
+				+e.device-link.h6.js-mobile-link.A(href="#" data-menu="#services-panel") 
+					| Услуги
+					+icon('next', '0 0 10 14')
+			+e.device-li.LI
+				+e.device-link.h6.js-mobile-link.A(href="#" data-menu="#clients-panel") 
+					| Клиенты
+					+icon('next', '0 0 10 14')
+			+e.device-li.LI
+				+e.device-link.h6.js-mobile-link.A(href="#" data-menu="#db-panel") 
+					| База знаний
+					+icon('next', '0 0 10 14')
+			+e.device-li.LI
+				+e.device-link.h6.js-mobile-link.A(href="#" data-menu="#contacts-panel") 
+					| Контакты
+					+icon('next', '0 0 10 14')
+		+e.parts
+			+e.DIV.parts-submenu.js-mobile-submenu( data-submenu="#about-panel" )
+				+e.parts-nav
+					+e.parts-backward.small.js-device-backward
+						+icon('next', '0 0 10 14')
+						| Все разделы
+					+e.parts-title.h4
+						| О нас
+				+e.parts-inner
+			+e.DIV.parts-submenu.js-mobile-submenu( data-submenu="#services-panel" )
+				+e.parts-nav
+					+e.parts-backward.small.js-device-backward
+						+icon('next', '0 0 10 14')
+						| Все разделы
+					+e.parts-title.h4
+						| Услуги
+				+e.parts-inner
+			+e.DIV.parts-submenu.js-mobile-submenu( data-submenu="#clients-panel" )
+				+e.parts-nav
+					+e.parts-backward.small.js-device-backward
+						+icon('next', '0 0 10 14')
+						| Все разделы
+					+e.parts-title.h4
+						| Клиенты
+				+e.parts-inner
+			+e.DIV.parts-submenu.js-mobile-submenu( data-submenu="#db-panel" )
+				+e.parts-nav
+					+e.parts-backward.small.js-device-backward
+						+icon('next', '0 0 10 14')
+						| Все разделы
+					+e.parts-title.h4
+						| База знаний
+				+e.parts-inner
+			+e.DIV.parts-submenu.js-mobile-submenu( data-submenu="#contacts-panel" )
+				+e.parts-nav
+					+e.parts-backward.small.js-device-backward
+						+icon('next', '0 0 10 14')
+						| Все разделы
+					+e.parts-title.h4
+						| Контакты
+				+e.parts-inner
 	+e.panel
 		+e.panel-bg
 		+e.panel-row
-			+e.panel-item._search#search-panel
-				+e.wrap.wrap
-					+b.FORM.search.is-default-form(action="/")
-						+e.BUTTON.button
-							svg(width='33', height='33', viewBox='0 0 33 33', fill='none', xmlns='http://www.w3.org/2000/svg')
-								rect(x='17.5986', y='19.0654', width='2', height='11.4074', transform='rotate(-45 17.5986 19.0654)')
-								circle(cx='13.1993', cy='13.1992', r='8.33333', transform='rotate(-45 13.1993 13.1992)')
-						+e.INPUT.input(type="text" name="s" placeholder="Поиск по сайту" autocomplete="off")
 			+e.panel-item._noscope.about-nav__#about-panel
 				+e.wrap.wrap
 					+e.row.flex._start
@@ -86,194 +159,298 @@
 				+e.wrap.wrap
 					+e.tabs.tabs__._default._nolist
 						+e.nav.flex._justify._vertical
-							+e.nav-item.h5.is-active.js-tab-nav Получить деньги
-							+e.nav-item.h5.js-tab-nav Закрыть долги
-							+e.nav-item.h5.js-tab-nav Продать квартиру
-							+e.nav-item.h5.js-tab-nav Сделки с недвижимостью
+							+e.nav-item.h5.is-active.js-tab-nav.js-mobile-nav-tab 
+								| Получить деньги
+								+icon('next', '0 0 10 14')
+							+e.nav-item.h5.js-tab-nav.js-mobile-nav-tab 
+								| Закрыть долги
+								+icon('next', '0 0 10 14')
+							+e.nav-item.h5.js-tab-nav.js-mobile-nav-tab 
+								| Продать квартиру
+								+icon('next', '0 0 10 14')
+							+e.nav-item.h5.js-tab-nav.js-mobile-nav-tab 
+								| Сделки с недвижимостью
+								+icon('next', '0 0 10 14')
 						+e.content
 							+e.content-item.services-tab__.is-active
+								+e.mobile
+									.header__parts-backward.small.js-service-backward
+										svg.icon.icon-next(viewBox='0 0 10 14')
+											use(xlink:href='/app/icons/sprite.svg#next')
+										| Услуги
+									.header__parts-title.h4 Получить деньги
 								+e.row.flex
 									+e.cell
-										+e.title.h6
+										+e.title.h6.js-mobile-open-inside
 											| Займы
-										+e.box
-											+e.label.h6 По условиям
-											+e.list.list__
-												+e.line
-													+e.item.h6.A(href="#") Без залога
-												+e.line
-													+e.item.h6.A(href="#") Без истории
-												+e.line
-													+e.item.h6.A(href="#") Без отказа
-												+e.line
-													+e.item.h6.A(href="#") Без поручителей
-												+e.line
-													+e.item.h6.A(href="#") Без предоплаты
-												+e.line
-													+e.item.h6.A(href="#") Без справок
-												+e.line
-													+e.item.h6.A(href="#") На карту
-												+e.line
-													+e.item.h6.A(href="#") Под залог
-												+e.line
-													+e.item.h6.A(href="#") Под расписку
-												+e.line
-													+e.item.h6.A(href="#") С плохой ки
-												+e.line
-													+e.item.h6.A(href="#") Срочно
-										+e.box
-											+e.label.h6 По соцстатусу
-											+e.list.list__
-												+e.line
-													+e.item.h6.A(href="#") Безработным
-												+e.line
-													+e.item.h6.A(href="#") Самозанятым
-												+e.line
-													+e.item.h6.A(href="#") Госслужащим
-												+e.line
-													+e.item.h6.A(href="#") Студентам
-												+e.line
-													+e.item.h6.A(href="#") ИП
-												+e.line
-													+e.item.h6.A(href="#") Юридическим лицам
-												+e.line
-													+e.item.h6.A(href="#") Пенсионерам
-												+e.line
-													+e.item.h6.A(href="#") Работникам по найму
+											+icon('next', '0 0 10 14')
+										+e.content
+											+e.content-mobile
+												.header__parts-backward.small.js-mobile-close-inside
+													svg.icon.icon-next(viewBox='0 0 10 14')
+														use(xlink:href='/app/icons/sprite.svg#next')
+													| Получить деньги
+												.header__parts-title.h4 Займы
+											+e.box
+												+e.label.h6 По условиям
+												+e.list.list__
+													+e.line
+														+e.item.h6.A(href="#") Без залога
+													+e.line
+														+e.item.h6.A(href="#") Без истории
+													+e.line
+														+e.item.h6.A(href="#") Без отказа
+													+e.line
+														+e.item.h6.A(href="#") Без поручителей
+													+e.line
+														+e.item.h6.A(href="#") Без предоплаты
+													+e.line
+														+e.item.h6.A(href="#") Без справок
+													+e.line
+														+e.item.h6.A(href="#") На карту
+													+e.line
+														+e.item.h6.A(href="#") Под залог
+													+e.line
+														+e.item.h6.A(href="#") Под расписку
+													+e.line
+														+e.item.h6.A(href="#") С плохой ки
+													+e.line
+														+e.item.h6.A(href="#") Срочно
+											+e.box
+												+e.label.h6 По соцстатусу
+												+e.list.list__
+													+e.line
+														+e.item.h6.A(href="#") Безработным
+													+e.line
+														+e.item.h6.A(href="#") Самозанятым
+													+e.line
+														+e.item.h6.A(href="#") Госслужащим
+													+e.line
+														+e.item.h6.A(href="#") Студентам
+													+e.line
+														+e.item.h6.A(href="#") ИП
+													+e.line
+														+e.item.h6.A(href="#") Юридическим лицам
+													+e.line
+														+e.item.h6.A(href="#") Пенсионерам
+													+e.line
+														+e.item.h6.A(href="#") Работникам по найму
 									+e.cell
-										+e.title.h6
+										+e.title.h6.js-mobile-open-inside
 											| Кредиты
-										+e.box
-											+e.label.h6 По соц статусу
-											+e.list.list__
-												+e.line
-													+e.item.h6.A(href="#") Экспресс кредиты
-												+e.line
-													+e.item.h6.A(href="#") Кредит под залог
-												+e.line
-													+e.item.h6.A(href="#") Потребительский кредит
-										+e.box
-											+e.label.h6 Плохая история
-											+e.list.list__
-												+e.line
-													+e.item.h6.A(href="#") Помощь в получении
-												+e.line
-													+e.item.h6.A(href="#") Услуги кредитного брокера
-										+e.box
-											+e.label.h6 Другое
-											+e.list.list__
-												+e.line
-													+e.item.h6.A(href="#") Кредитная линия
-												+e.line
-													+e.item.h6.A(href="#") Ломбардное кредитование
+											+icon('next', '0 0 10 14')
+										+e.content
+											+e.content-mobile
+												.header__parts-backward.small.js-mobile-close-inside
+													svg.icon.icon-next(viewBox='0 0 10 14')
+														use(xlink:href='/app/icons/sprite.svg#next')
+													| Получить деньги
+												.header__parts-title.h4 Кредиты
+											+e.box
+												+e.label.h6 По соц статусу
+												+e.list.list__
+													+e.line
+														+e.item.h6.A(href="#") Экспресс кредиты
+													+e.line
+														+e.item.h6.A(href="#") Кредит под залог
+													+e.line
+														+e.item.h6.A(href="#") Потребительский кредит
+											+e.box
+												+e.label.h6 Плохая история
+												+e.list.list__
+													+e.line
+														+e.item.h6.A(href="#") Помощь в получении
+													+e.line
+														+e.item.h6.A(href="#") Услуги кредитного брокера
+											+e.box
+												+e.label.h6 Другое
+												+e.list.list__
+													+e.line
+														+e.item.h6.A(href="#") Кредитная линия
+													+e.line
+														+e.item.h6.A(href="#") Ломбардное кредитование
 									+e.cell
-										+e.title.h6
+										+e.title.h6.js-mobile-open-inside
 											| Финансирование бизнеса
-										+e.box
-											+e.label.h6 Оборотные средства
-											+e.list.list__
-												+e.line
-													+e.item.h6.A(href="#") Кредитование на пополнение оборотных средств без залога
-												+e.line
-													+e.item.h6.A(href="#") Кредитование на пополнение оборотных средств под залог имущества
-										+e.box
-											+e.label.h6 Ипотека и лизинг
-											+e.list.list__
-												+e.line
-													+e.item.h6.A(href="#") Коммерческая ипотека. Возвратный лизинг недвижимости
-												+e.line
-													+e.item.h6.A(href="#") Кредит на покупку автотранспорта и оборудования. Возвратный лизинг автотранспорта
+											+icon('next', '0 0 10 14')
+										+e.content
+											+e.content-mobile
+												.header__parts-backward.small.js-mobile-close-inside
+													svg.icon.icon-next(viewBox='0 0 10 14')
+														use(xlink:href='/app/icons/sprite.svg#next')
+													| Получить деньги
+												.header__parts-title.h4 Финансирование бизнеса
+											+e.box
+												+e.label.h6 Оборотные средства
+												+e.list.list__
+													+e.line
+														+e.item.h6.A(href="#") Кредитование на пополнение оборотных средств без залога
+													+e.line
+														+e.item.h6.A(href="#") Кредитование на пополнение оборотных средств под залог имущества
+											+e.box
+												+e.label.h6 Ипотека и лизинг
+												+e.list.list__
+													+e.line
+														+e.item.h6.A(href="#") Коммерческая ипотека. Возвратный лизинг недвижимости
+													+e.line
+														+e.item.h6.A(href="#") Кредит на покупку автотранспорта и оборудования. Возвратный лизинг автотранспорта
 									+e.cell
-										+e.title.h6
+										+e.title.h6.js-mobile-open-inside
 											| Ссуды
+											+icon('next', '0 0 10 14')
+										+e.content
+											+e.content-mobile
+												.header__parts-backward.small.js-mobile-close-inside
+													svg.icon.icon-next(viewBox='0 0 10 14')
+														use(xlink:href='/app/icons/sprite.svg#next')
+													| Получить деньги
+												.header__parts-title.h4 Ссуды
 							+e.content-item.services-tab__.flex
+								+e.mobile
+									.header__parts-backward.small.js-service-backward
+										svg.icon.icon-next(viewBox='0 0 10 14')
+											use(xlink:href='/app/icons/sprite.svg#next')
+										| Услуги
+									.header__parts-title.h4 Закрыть долги
 								+e.row.flex
 									+e.cell
-										+e.title.h6
+										+e.title.h6.js-mobile-open-inside
 											| Рефинансирование
-										+e.box
-											+e.label.h6 Виды услуг
-											+e.list.list__
-												+e.line
-													+e.item.h6.A(href="#") Закрытие текущих просрочек
-												+e.line
-													+e.item.h6.A(href="#") Объединение кредитов в один
-												+e.line
-													+e.item.h6.A(href="#") Снижение платежа и ставки по кредиту
+											+icon('next', '0 0 10 14')
+										+e.content
+											+e.content-mobile
+												.header__parts-backward.small.js-mobile-close-inside
+													svg.icon.icon-next(viewBox='0 0 10 14')
+														use(xlink:href='/app/icons/sprite.svg#next')
+													| Закрыть долги
+												.header__parts-title.h4 Рефинансирование
+											+e.box
+												+e.label.h6 Виды услуг
+												+e.list.list__
+													+e.line
+														+e.item.h6.A(href="#") Закрытие текущих просрочек
+													+e.line
+														+e.item.h6.A(href="#") Объединение кредитов в один
+													+e.line
+														+e.item.h6.A(href="#") Снижение платежа и ставки по кредиту
 							+e.content-item.services-tab__.flex
+								+e.mobile
+									.header__parts-backward.small.js-service-backward
+										svg.icon.icon-next(viewBox='0 0 10 14')
+											use(xlink:href='/app/icons/sprite.svg#next')
+										| Услуги
+									.header__parts-title.h4 Продать квартиру
 								+e.row.flex
 									+e.cell
-										+e.title.h6
+										+e.title.h6.js-mobile-open-inside
 											| Срочная продажа квартиры
-										+e.box
-											+e.label.h6 По виду обременения
-											+e.list.list__
-												+e.line
-													+e.item.h6.A(href="#") Под обременением
-												+e.line
-													+e.item.h6.A(href="#") Под арестом
-												+e.line
-													+e.item.h6.A(href="#") Под залогом
-												+e.line
-													+e.item.h6.A(href="#") Под ипотекой
-										+e.box
-											+e.label.h6 По количеству комнат
-											+e.list.list__
-												+e.line
-													+e.item.h6.A(href="#") 1-комнатную
-												+e.line
-													+e.item.h6.A(href="#") 2-комнатную
-												+e.line
-													+e.item.h6.A(href="#") 3-комнатную
-												+e.line
-													+e.item.h6.A(href="#") 4-комнатную
+											+icon('next', '0 0 10 14')
+										+e.content
+											+e.content-mobile
+												.header__parts-backward.small.js-mobile-close-inside
+													svg.icon.icon-next(viewBox='0 0 10 14')
+														use(xlink:href='/app/icons/sprite.svg#next')
+													| Продать квартиру
+												.header__parts-title.h4 Срочная продажа квартиры
+											+e.box
+												+e.label.h6 По виду обременения
+												+e.list.list__
+													+e.line
+														+e.item.h6.A(href="#") Под обременением
+													+e.line
+														+e.item.h6.A(href="#") Под арестом
+													+e.line
+														+e.item.h6.A(href="#") Под залогом
+													+e.line
+														+e.item.h6.A(href="#") Под ипотекой
+											+e.box
+												+e.label.h6 По количеству комнат
+												+e.list.list__
+													+e.line
+														+e.item.h6.A(href="#") 1-комнатную
+													+e.line
+														+e.item.h6.A(href="#") 2-комнатную
+													+e.line
+														+e.item.h6.A(href="#") 3-комнатную
+													+e.line
+														+e.item.h6.A(href="#") 4-комнатную
 							+e.content-item.services-tab__.flex
+								+e.mobile
+									.header__parts-backward.small.js-service-backward
+										svg.icon.icon-next(viewBox='0 0 10 14')
+											use(xlink:href='/app/icons/sprite.svg#next')
+										| Услуги
+									.header__parts-title.h4 Сделки с недвижимостью
 								+e.row.flex
 									+e.cell
-										+e.title.h6
+										+e.title.h6.js-mobile-open-inside
 											| Подготовка документов
-										+e.box
-											+e.label.h6 Виды документов
-											+e.list.list__
-												+e.line
-													+e.item.h6.A(href="#") Получение справок и выписок
-												+e.line
-													+e.item.h6.A(href="#") Оформление наследства
+											+icon('next', '0 0 10 14')
+										+e.content
+											+e.content-mobile
+												.header__parts-backward.small.js-mobile-close-inside
+													svg.icon.icon-next(viewBox='0 0 10 14')
+														use(xlink:href='/app/icons/sprite.svg#next')
+													| Сделки с недвижимостью
+												.header__parts-title.h4 Подготовка документов
+											+e.box
+												+e.label.h6 Виды документов
+												+e.list.list__
+													+e.line
+														+e.item.h6.A(href="#") Получение справок и выписок
+													+e.line
+														+e.item.h6.A(href="#") Оформление наследства
 									+e.cell
-										+e.title.h6
+										+e.title.h6.js-mobile-open-inside
 											| Сопровождение
-										+e.box
-											+e.list.list__
-												+e.line
-													+e.item.h6.A(href="#") Приватизация недвижимости
-												+e.line
-													+e.item.h6.A(href="#") Сопровождение сделки
+											+icon('next', '0 0 10 14')
+										+e.content
+											+e.content-mobile
+												.header__parts-backward.small.js-mobile-close-inside
+													svg.icon.icon-next(viewBox='0 0 10 14')
+														use(xlink:href='/app/icons/sprite.svg#next')
+													| Сделки с недвижимостью
+												.header__parts-title.h4 Сопровождение
+											+e.box
+												+e.list.list__
+													+e.line
+														+e.item.h6.A(href="#") Приватизация недвижимости
+													+e.line
+														+e.item.h6.A(href="#") Сопровождение сделки
 									+e.cell
-										+e.title.h6
+										+e.title.h6.js-mobile-open-inside
 											| Купить квартиру в ипотеку
-										+e.box
-											+e.label.h6 В новостройке
-											+e.list.list__
-												+e.line
-													+e.item.h6.A(href="#") Классическая ипотека на новостройку
-												+e.line
-													+e.item.h6.A(href="#") Ипотека по 2-м документам на новостройку
-												+e.line
-													+e.item.h6.A(href="#") Ипотека на новостройку под залог недвижимости
-										+e.box
-											+e.label.h6 На вторичном рынке
-											+e.list.list__
-												+e.line
-													+e.item.h6.A(href="#") Классическая ипотека на вторичном рынке
-												+e.line
-													+e.item.h6.A(href="#") Ипотека по 2-м документам на вторичном рынке
-												+e.line
-													+e.item.h6.A(href="#") Ипотека на вторичном рынке под залог недвижимости
+											+icon('next', '0 0 10 14')
+										+e.content
+											+e.content-mobile
+												.header__parts-backward.small.js-mobile-close-inside
+													svg.icon.icon-next(viewBox='0 0 10 14')
+														use(xlink:href='/app/icons/sprite.svg#next')
+													| Сделки с недвижимостью
+												.header__parts-title.h4 Купить квартиру в ипотеку
+											+e.box
+												+e.label.h6 В новостройке
+												+e.list.list__
+													+e.line
+														+e.item.h6.A(href="#") Классическая ипотека на новостройку
+													+e.line
+														+e.item.h6.A(href="#") Ипотека по 2-м документам на новостройку
+													+e.line
+														+e.item.h6.A(href="#") Ипотека на новостройку под залог недвижимости
+											+e.box
+												+e.label.h6 На вторичном рынке
+												+e.list.list__
+													+e.line
+														+e.item.h6.A(href="#") Классическая ипотека на вторичном рынке
+													+e.line
+														+e.item.h6.A(href="#") Ипотека по 2-м документам на вторичном рынке
+													+e.line
+														+e.item.h6.A(href="#") Ипотека на вторичном рынке под залог недвижимости
 			+e.panel-item._clients.clients-nav__#clients-panel
 				+e.wrap.wrap
-					+e.row.flex._justify
+					+e.inside.flex._justify
 						+e.cell._left
-							+e.sub.h5
+							+e.sub.h5.A(href="#")
 								| Клиенты МБК о нас
 							+e.list.flex
 								+e.list-item.A(href='#')
@@ -296,8 +473,7 @@
 											path(class="triangle" d='M14.5 4.81v-3l3 3-3 3z')
 											path(class="stroke" d='M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z')
 						+e.cell._right._bg
-							+e.bg.IMG(src="/app/img/clients-nav.svg")
-							+e.sub.h5
+							+e.sub.h5.A(href="#")
 								| Ответы на вопросы online
 							+e.messengers.messenger__.flex._vertical
 								+e.item.A(href='#')
@@ -313,6 +489,7 @@
 										+e.SVG(viewBox="0 0 18.560659 9.6213207")
 											path(class="triangle" d='M14.5 4.81v-3l3 3-3 3z')
 											path(class="stroke" d='M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z')
+							+e.bg.IMG(src="/app/img/clients-nav.svg")
 			+e.panel-item._noscope.db-nav__#db-panel
 				+e.wrap.wrap
 					+e.row.flex._start

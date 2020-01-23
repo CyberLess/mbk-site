@@ -5,13 +5,17 @@
 		padding: 4.2rem 0;
 		display: block;
 		position: relative;
-
-		@include max-screen($small_tablet) {
+		@include max-screen($hd_plus) {
 		    padding: 3.2rem 0;
 		}
+		// @include max-screen($small_tablet) {
+		//     padding: 3.2rem 0;
+		// }
 	}
 
 	&__link{
+
+		transition: ease .15s;
 
 		&:before{
 			content: '';
@@ -20,8 +24,15 @@
 			height: 3px;
 			bottom: 0;
 			left: 0;
+			transition: ease .2s;
 			visibility: hidden;
 			background-color: $red;
+			opacity: 0;
+			transform: scale(0.2,1);
+		}
+
+		&:hover{
+			color: $red;
 		}
 
 		&.is-active{
@@ -29,6 +40,8 @@
 
 			&:before{
 				visibility: visible;
+				opacity: 1;
+				transform: scale(1,1);
 			}
 		}
 	}

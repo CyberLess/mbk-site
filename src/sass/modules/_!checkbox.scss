@@ -40,6 +40,10 @@
 			stroke-width: 2;
 			transition: ease .1s;
 		}
+
+		@include max-screen($large_mobile) {
+			display: none;
+		}
 	}
 
 	&__text{
@@ -47,5 +51,10 @@
 		padding-left: 21px;
 		position: relative;
 		font-size: 1.4rem;
+
+		@include max-screen($large_mobile) {
+			font-size: 1rem;
+			padding-left: 0;
+		}
 	}
 }

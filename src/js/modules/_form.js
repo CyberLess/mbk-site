@@ -13,7 +13,7 @@ $(()=>{
 	im.mask(selector);
 
 
-	$('.form__input')
+	$('.input__item')
 		.on('focus', (e)=>{
 			let $input = $(e.target)
 			$input.parent().addClass('is-focus')

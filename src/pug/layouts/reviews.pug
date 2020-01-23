@@ -1,14 +1,17 @@
 +b.SECTION.reviews
 	+e.wrap.wrap
 		+e.title.h3.H2 Клиенты МБК и их история
-		+e.slider.owl-carousel
+		+e.slider.owl-carousel(data-action="/reviews.json")
 			+e.row.flex._vertical#review-0
 				+e.cell._video
-					+b.video
+					+e.video.video__
 						+e.IMG.preview.object-fit(src="/img/video.jpg")
 				+e.cell._content
-					+e.name.h4 Вера Зорькина
-					+e.who.h6 Клиент МБК, 46 лет
+					+e.top
+						+e.name.h4
+							span Герасим Борисов
+						+e.who.h6
+							span Клиент МБК, 46 лет
 					+e.text.h6
 						| Обратилась в компанию МБК совершенно случайно. Купила квартиру в новостройке и получилось так, что денег на ремонт не было достаточно.
 						br
@@ -21,11 +24,14 @@
 							| Обратиться в мбк
 			+e.row.flex._vertical#review-1
 				+e.cell._video
-					+b.video
+					+e.video.video__
 						+e.IMG.preview.object-fit(src="/img/video.jpg")
 				+e.cell._content
-					+e.name.h4 Вера Зорькина
-					+e.who.h6 Клиент МБК, 46 лет
+					+e.top
+						+e.name.h4
+							span Вера Зорькина
+						+e.who.h6 
+							span Клиент МБК, 46 лет
 					+e.text.h6
 						| Обратилась в компанию МБК совершенно случайно. Купила квартиру в новостройке и получилось так, что денег на ремонт не было достаточно.
 						br
@@ -38,28 +44,14 @@
 							| Обратиться в мбк
 			+e.row.flex._vertical#review-2
 				+e.cell._video
-					+b.video
+					+e.video.video__
 						+e.IMG.preview.object-fit(src="/img/video.jpg")
 				+e.cell._content
-					+e.name.h4 Вера Зорькина
-					+e.who.h6 Клиент МБК, 46 лет
-					+e.text.h6
-						| Обратилась в компанию МБК совершенно случайно. Купила квартиру в новостройке и получилось так, что денег на ремонт не было достаточно.
-						br
-						br
-						| Брать кредит в банке не было возможности, так как в недавнем времени поменяла работу и не хватало стажа (менее 3 месяцев), к тому же большая финансовая нагрузка.
-					+e.nav.flex._vertical
-						+e.button.btn.h6.A(href='#')
-							| Читать полностью
-						+e.apply.red-link.h6.A(href="#")
-							| Обратиться в мбк
-			+e.row.flex._vertical#review-3
-				+e.cell._video
-					+b.video
-						+e.IMG.preview.object-fit(src="/img/video.jpg")
-				+e.cell._content
-					+e.name.h4 Вера Зорькина
-					+e.who.h6 Клиент МБК, 46 лет
+					+e.top
+						+e.name.h4 
+							span Ольга Цветочная
+						+e.who.h6 
+							span Клиент МБК, 46 лет
 					+e.text.h6
 						| Обратилась в компанию МБК совершенно случайно. Купила квартиру в новостройке и получилось так, что денег на ремонт не было достаточно.
 						br
@@ -71,40 +63,40 @@
 						+e.apply.red-link.h6.A(href="#")
 							| Обратиться в мбк
 		+e.list.flex
-			+e.item
+			+e.item._active(data-review="#review-0")
 				+e.item-bg.object-fit.IMG(src='/img/review-1.jpg')
 				+e.item-inner
 					+e.item-content
 						+e.item-name.h6
-							| Герасим
-							| Борисов
+							span Герасим
+							span Борисов
 						+e.item-status.h6
 							| Клиент МБК
-			+e.item._active
+			+e.item(data-review="#review-1")
 				+e.item-bg.object-fit.IMG(src='/img/review-1.jpg')
 				+e.item-inner
 					+e.item-content
 						+e.item-name.h6
-							| Герасим
-							| Борисов
+							span Вера 
+							span Зорькина
 						+e.item-status.h6
 							| Клиент МБК
-			+e.item
+			+e.item(data-review="#review-2")
 				+e.item-bg.object-fit.IMG(src='/img/review-1.jpg')
 				+e.item-inner
 					+e.item-content
 						+e.item-name.h6
-							| Герасим
-							| Борисов
+							span Ольга
+							span Цветочная
 						+e.item-status.h6
 							| Клиент МБК
-			+e.item
+			+e.item(data-review="#review-3")
 				+e.item-bg.object-fit.IMG(src='/img/review-1.jpg')
 				+e.item-inner
 					+e.item-content
 						+e.item-name.h6
-							| Герасим
-							| Борисов
+							span Виктория
+							span Родко
 						+e.item-status.h6
 							| Клиент МБК
 		+e.bottom

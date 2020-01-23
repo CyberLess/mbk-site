@@ -1,22 +1,30 @@
 +b.SECTION.blog
 	+e.wrap.wrap
 		+e.tags.flex._start
-			+e.tag.tag__.A(href='#')
-				| Все темы
-			+e.tag.tag__.A(href='#')
-				| Долги
-			+e.tag.tag__.is-active.A(href='#')
-				| Ипотека
-			+e.tag.tag__.A(href='#')
-				| Коллекторы
-			+e.tag.tag__.A(href='#')
-				| Юридические тонкости
-			+e.tag.tag__.A(href='#')
-				| Инвестиции
-			+e.tag.tag__.A(href='#')
-				| Страхование
-			+e.tag.tag__.A(href='#')
-				| Налоги
+			+e.tag.tag__.LABEL
+				+e.input.INPUT(type="checkbox" name="cat" value='0')
+				+e.text.SPAN Все темы
+			+e.tag.tag__.LABEL
+				+e.input.INPUT(type="checkbox" name="cat" value='1')
+				+e.text.SPAN Долги
+			+e.tag.tag__.LABEL
+				+e.input.INPUT(type="checkbox" name="cat" value='2')
+				+e.text.SPAN Ипотека
+			+e.tag.tag__.LABEL
+				+e.input.INPUT(type="checkbox" name="cat" value='3')
+				+e.text.SPAN Коллекторы
+			+e.tag.tag__.LABEL
+				+e.input.INPUT(type="checkbox" name="cat" value='4')
+				+e.text.SPAN Юридические тонкости
+			+e.tag.tag__.LABEL
+				+e.input.INPUT(type="checkbox" name="cat" value='5')
+				+e.text.SPAN Инвестиции
+			+e.tag.tag__.LABEL
+				+e.input.INPUT(type="checkbox" name="cat" value='6')
+				+e.text.SPAN Страхование
+			+e.tag.tag__.LABEL
+				+e.input.INPUT(type="checkbox" name="cat" value='7')
+				+e.text.SPAN Налоги
 		+e.row.flex._justify
 			+e.cell._left
 				+e.string._scope.flex._justify._vertical
@@ -26,7 +34,7 @@
 					+e.article._double.article__.A(href='#')
 						+e.preview.DIV
 							+b.IMG.object-fit(src="/img/article_1.jpg")
-						+e.nav.flex._justify.DIV
+						+e.nav.flex._justify._vertical.DIV
 							+e.nav-cell._left.flex._vertical.DIV
 								+e.nav-item.p
 									+e.nav-icon._watch
@@ -50,7 +58,7 @@
 					+e.article._double.article__.A(href='#')
 						+e.preview.DIV
 							+b.IMG.object-fit(src="/img/article_1.jpg")
-						+e.nav.flex._justify.DIV
+						+e.nav.flex._justify._vertical.DIV
 							+e.nav-cell._left.flex._vertical.DIV
 								+e.nav-item.p
 									+e.nav-icon._watch
@@ -74,7 +82,7 @@
 					+e.article._double.article__.A(href='#')
 						+e.preview.DIV
 							+b.IMG.object-fit(src="/img/article_1.jpg")
-						+e.nav.flex._justify.DIV
+						+e.nav.flex._justify._vertical.DIV
 							+e.nav-cell._left.flex._vertical.DIV
 								+e.nav-item.p
 									+e.nav-icon._watch
@@ -98,7 +106,7 @@
 					+e.article._double.article__.A(href='#')
 						+e.preview.DIV
 							+b.IMG.object-fit(src="/img/article_1.jpg")
-						+e.nav.flex._justify.DIV
+						+e.nav.flex._justify._vertical.DIV
 							+e.nav-cell._left.flex._vertical.DIV
 								+e.nav-item.p
 									+e.nav-icon._watch
@@ -122,7 +130,7 @@
 					+e.article._double.article__.A(href='#')
 						+e.preview.DIV
 							+b.IMG.object-fit(src="/img/article_1.jpg")
-						+e.nav.flex._justify.DIV
+						+e.nav.flex._justify._vertical.DIV
 							+e.nav-cell._left.flex._vertical.DIV
 								+e.nav-item.p
 									+e.nav-icon._watch
@@ -146,7 +154,7 @@
 					+e.article._double.article__.A(href='#')
 						+e.preview.DIV
 							+b.IMG.object-fit(src="/img/article_1.jpg")
-						+e.nav.flex._justify.DIV
+						+e.nav.flex._justify._vertical.DIV
 							+e.nav-cell._left.flex._vertical.DIV
 								+e.nav-item.p
 									+e.nav-icon._watch
@@ -192,7 +200,7 @@
 				+e.article.article__.A(href='#')
 					+e.preview.DIV
 						+b.IMG.object-fit(src="/img/article_1.jpg")
-					+e.nav.flex._justify.DIV
+					+e.nav.flex._justify._vertical.DIV
 						+e.nav-cell._left.flex._vertical.DIV
 							+e.nav-item.p
 								+e.nav-icon._watch
@@ -216,7 +224,7 @@
 				+e.article.article__.A(href='#')
 					+e.preview.DIV
 						+b.IMG.object-fit(src="/img/article_1.jpg")
-					+e.nav.flex._justify.DIV
+					+e.nav.flex._justify._vertical.DIV
 						+e.nav-cell._left.flex._vertical.DIV
 							+e.nav-item.p
 								+e.nav-icon._watch
@@ -240,7 +248,7 @@
 				+e.article.article__.A(href='#')
 					+e.preview.DIV
 						+b.IMG.object-fit(src="/img/article_1.jpg")
-					+e.nav.flex._justify.DIV
+					+e.nav.flex._justify._vertical.DIV
 						+e.nav-cell._left.flex._vertical.DIV
 							+e.nav-item.p
 								+e.nav-icon._watch

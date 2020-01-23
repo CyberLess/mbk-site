@@ -57,7 +57,12 @@
 					color: #B3B3B3;
 					line-height: 260.5%;
 					padding-bottom: 23px;
+					transition: ease .2s;
 					position: relative;
+
+					svg{
+						display: none;
+					}
 
 					&:before{
 						content: '';
@@ -119,7 +124,10 @@
 						left: 0;
 						bottom: -1px;
 						width: 100%;
+						transition: ease .2s;
 						visibility: hidden;
+						transform: scale(.2,1);
+						opacity: 0;
 					}
 
 					&:hover{
@@ -130,6 +138,8 @@
 						color: $dark;
 
 						&:before{
+							transform: scale(1,1);
+							opacity: 1;
 							visibility: visible;
 						}
 					}
@@ -149,6 +159,12 @@
 
 				@include max-screen($large_mobile) {
 					display: none;
+				}
+			}
+
+			&__content{
+				@include max-screen($large_mobile) {
+					visibility: visible;
 				}
 			}
 		}

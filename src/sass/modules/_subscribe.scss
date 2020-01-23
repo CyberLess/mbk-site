@@ -7,6 +7,17 @@
 		padding-top: 10rem;
 	}
 
+	@include max-screen($small_tablet) {
+		margin-left: -15px;
+		margin-right: -15px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	@include max-screen($large_mobile) {
+		padding-top: 5.1rem;
+	}
+
 	&__book{
 		width: 1074/713*100%;
 		margin-left: -31.31557%;
@@ -19,6 +30,13 @@
 
 		@include max-screen($large_tablet) {
 			margin-bottom: -9%;
+		}
+
+		@include max-screen($large_mobile) {
+			bottom: 0;
+			width: 146.68167%;
+			margin-left: -30.34084%;
+			margin-bottom: 56.98071%;
 		}
 	}
 
@@ -43,6 +61,61 @@
 		&-text{
 			padding-left: 6.8rem;
 			font-weight: 400;
+		}
+
+		&-mobile{
+			display: none;
+		}
+
+		@include max-screen($large_tablet) {
+			
+			&-text{
+				font-size: 1.4rem;
+			}
+		}
+
+		@include max-screen($large_mobile) {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			margin-bottom: 31.43408%;//48/311*100%;
+			// padding-left: 45/311*100%;
+			// padding-right: 45/311*100%;
+
+			&-text{
+				padding-left: 48px;
+				position: relative;
+				// padding-right: 10%;
+			}
+			&-icon{
+				display: none;
+			}
+
+			&-sub{
+				padding-left: 0;
+				font-size: 1.4rem;
+				margin-bottom: 1.1rem;
+			}
+
+			&-mobile{
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 22px;
+				display: block;
+				fill: $red;
+			}
+		}
+
+		@include max-screen($small_mobile) {
+			margin-bottom: 48/311*100%;
+
+			&-text{
+				width: 201px;
+				max-width: 100%;
+				// padding-right: 15%;
+			}
 		}
 	}
 
@@ -84,20 +157,70 @@
 				padding-right: 7.3024%;
 			}
 		}
+
+		@include max-screen($small_tablet) {
+			&_right{
+				padding-left: 5.3024%;
+				padding-right: 5.3024%;
+				width: 50.36826%;
+			}
+		}
+
+		@include max-screen($large_mobile) {
+			width: 100%;
+			margin-right: 0;
+
+			&_right{
+				padding-left: 0;
+				padding-right: 0;
+				order:1;
+				width: 286px;
+				margin: auto;
+				margin-bottom: 3.9rem;
+				&:before{
+					position: relative;
+					width: 311/230*100%;
+					padding-top: 311/230*100%;
+					margin-left: -(311/8)/230*100%;
+				}
+			}
+			&_left{
+				order: 2;
+				padding-bottom: 4.5rem;
+			}
+		}
 	}
 
 	&__title{
 		margin-bottom: 6rem;
-
+		
+		@include max-screen($large_mobile) {
+			text-align: center;
+			margin-bottom: 8.7rem;
+		}
 	}
 
 	&__form{
 		margin-top: 7.1rem;
 		padding-right: 5.7rem;
+
+		@include max-screen($small_tablet) {
+			padding-right: 0;
+			margin-top: 3.1rem;
+		}
+
+		@include max-screen($large_mobile) {
+			margin-top: 2.4rem;
+		}
 	}
 
 
 	&__sub{
 		margin-bottom: 2.8rem;
+
+		@include max-screen($large_mobile) {
+			font-size: 1.4rem;
+			margin-bottom: 1.1rem;
+		}
 	}
 }

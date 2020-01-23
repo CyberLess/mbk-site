@@ -1,5 +1,7 @@
 import {animationEnd} from '../functions';
 
+var submenu_close;
+
 $(()=>{
 	var $submenu = $('.header__panel');
 	var currentOut = false;
@@ -7,8 +9,8 @@ $(()=>{
 	if(!$submenu.length)
 		return false;
 
-	var submenu_close = () => {
-		$('.js-submenu').removeClass('is-hover')
+	submenu_close = () => {
+		$('.js-submenu').removeClass('is-active')
 		$('html, body').removeClass('js-lock')
 
 		$submenu
@@ -34,14 +36,14 @@ $(()=>{
 
 				$(el).addClass('is-moved')
 
-				$submodal.appendTo($(el).find('.header__mobile-inner'));
+				$submodal.appendTo($(el).find('.header__parts-inner'));
 			})
 
 		}else{
 
 			$('.js-mobile-submenu.is-moved').each((i, el) => {
 				let id = $(el).attr('data-submenu');
-				let $submodal = $(el).find('.header__mobile-inner > *');
+				let $submodal = $(el).find('.header__parts-inner > *');
 
 				$(el).removeClass('is-moved')
 
@@ -85,6 +87,7 @@ $(()=>{
 			$submenu.off(animationEnd).removeClass('is-hide')
 
 			$('.js-toggle-menu').removeClass('is-active')
+			$('.js-submenu').removeClass('is-active')
 			$('.header__mobile').removeClass('is-visible')
 
 			// $('html, body').addClass('js-lock')
@@ -93,20 +96,43 @@ $(()=>{
 				$submenu.addClass(`header__panel_visible ${panelItemClass}`)
 				$('.header__panel-item').removeClass(`header__panel-item_active ${panelItemClass}`)
 				$item.addClass(`header__panel-item_active ${panelItemClass}`)
-				$this.addClass('is-hover')
+				$this.addClass('is-active')
 			}else{
 				// $submenu.toggleClass('header__panel_visible')
 				// $('.header__panel-item').removeClass('header__panel-item_active')
 				// $item.toggleClass('header__panel-item_active')
-				$this.toggleClass('is-hover')
 
-				if(!$this.hasClass('is-hover')){
-					submenu_close()				
+				// ------------------------
+
+				// $this.toggleClass('is-active')
+
+				// if(!$this.hasClass('is-active') && $item.attr('id') == $this.data('menu')){
+				// 	submenu_close()				
+				// }else{
+				// 	$submenu.toggleClass(`header__panel_visible ${panelItemClass}`)
+				// 	$('.header__panel-item').removeClass(`header__panel-item_active ${panelItemClass}`)
+				// 	$item.toggleClass(`header__panel-item_active ${panelItemClass}`)
+				// }
+
+				// ------------------------
+				// if($this.data('menu').indexOf($item.attr('id')) !== -1){
+				// 	console.log('текущий')
+				// }else{
+				// 	console.log('другой')
+				// }
+
+				let $current = $('.header__panel-item_active')
+
+				if($current.length && $this.data('menu').indexOf($current.attr('id')) !== -1){
+					submenu_close()		
 				}else{
-					$submenu.toggleClass(`header__panel_visible ${panelItemClass}`)
+					$submenu.addClass(`header__panel_visible ${panelItemClass}`)
 					$('.header__panel-item').removeClass(`header__panel-item_active ${panelItemClass}`)
-					$item.toggleClass(`header__panel-item_active ${panelItemClass}`)
+					$item.addClass(`header__panel-item_active ${panelItemClass}`)
+					$this.addClass('is-active')
 				}
+
+
 			}
 			
 
@@ -140,3 +166,5 @@ $(()=>{
 		submenu_close()
 	})
 })
+
+export { submenu_close };

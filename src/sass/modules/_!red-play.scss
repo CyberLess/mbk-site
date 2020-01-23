@@ -31,4 +31,24 @@
 			border-color: transparent transparent transparent #fff;
 		}
 	}
+
+	@include max-screen($small_tablet) {
+		padding-left: 0;
+		padding-right: 26px;
+		display: inline-block;
+		min-height: 0;
+
+		.red-play{
+			&__circle{
+				left: auto;
+				right: 0;
+				width: 19px;
+				height: 19px;
+				margin-top: -9px;
+				&:before{
+					border-width: 3px 0 3px 4px;
+				}
+			}
+		}
+	}
 }

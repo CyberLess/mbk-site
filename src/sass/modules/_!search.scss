@@ -1,0 +1,92 @@
+.search{
+	width: 2.1rem;
+	transition: ease .3s;
+ 	// height: 4.8rem;
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	&:before{
+		content: '';
+		display: block;
+		position: absolute;
+		background: #CFCFCF;
+		height: 1px;
+		bottom: 0;
+		width: 100%;
+		right: 0;
+		transform: scale(0,1);
+		transform-origin: 100% 50%;
+		transition: .4s ease 0s;
+	}
+
+
+	&__close{
+		position: absolute;
+		right: 0;
+		width: 16px;
+		top: 50%;
+		margin-top: -8px;
+		z-index: 15;
+		cursor: pointer;
+		stroke: #000;
+		visibility: hidden;
+		opacity: 0;
+		transition: opacity .25s ease .1s,  visibility .25s ease .1s, fill .2s ease 0s;
+		svg{
+			width: 100%;
+		}
+	}
+
+	&__input{
+		width: 100%;
+		display: block;
+		border: none;
+		background: transparent;
+		height: 4.8rem;
+		padding-left: 4.2rem;
+		padding-right: 4.2rem;
+		font-size: 1.8rem;
+		color: $dark;
+		font-family: Geometria;
+
+		@include placeholder {
+			color: #AFAFAF;
+		}
+	}
+
+	&__button{
+		position: absolute;
+		left: 0;
+		top: 50%;
+		margin-top: -1rem;
+	}
+
+	&__inner{
+		// display: none;
+		visibility: hidden;
+	}
+
+	&.is-active{
+		width: 75.8rem;
+
+		.search{
+			&__inner{
+				visibility: visible;
+			}
+
+
+
+			&__close{
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+
+		&:before{
+			// width: inherit;
+			transform: scale(1,1);
+			transition: .4s ease .1s;
+		}
+	}
+}

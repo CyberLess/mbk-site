@@ -1,5 +1,15 @@
 .article{
 	display: block;
+
+	&:hover{
+		.article{
+			&__preview{
+				img{
+					transform: scale(1.15);
+				}
+			}
+		}
+	}
 	
 	&__preview{
 		padding-top: 21.2rem;
@@ -7,6 +17,24 @@
 		overflow: hidden;
 		position: relative;
 		margin-bottom: 1rem;
+
+		img{
+			transition: ease .2s;
+		}
+
+		@include max-screen($small_tablet) {
+			padding-top: 13rem;
+		}
+
+		@include max-screen($large_mobile) {
+			padding-top: 130/231*100%;
+		}
+	}
+
+	&__name{
+		@include max-screen($large_mobile) {
+			font-size: 1.4rem;
+		}
 	}
 
 	&__nav{
@@ -56,6 +84,58 @@
 				height: 1.4rem;
 				fill: #BFBFBF;
 				margin-top: 4px;
+			}
+		}
+
+		@include max-screen($small_tablet) {
+			&-item{
+				font-size: 12px;
+				line-height: 2.4rem;
+				&:not(:last-child){
+					margin-right: 1.5rem;
+				}
+			}
+
+			&-icon{
+				margin-top: 0;
+				&_watch{
+					width: 14px;
+				}
+				&_heart{
+					width: 12px;
+				}
+				&_comment{
+					width: 12px;
+				}
+				&_clock{
+					width: 12px;
+					margin-top: -2px;
+				}
+			}
+		}
+
+		@include max-screen($large_mobile) {
+			&-item{
+				font-size: 10px;
+			}
+
+			&-icon{
+				&_watch{
+					width: 12px;
+					margin-top: 3px;
+				}
+				&_heart{
+					width: 9px;
+					margin-top: 3px;
+				}
+				&_comment{
+					width: 9px;
+					margin-top: 3px;
+				}
+				&_clock{
+					width: 8px;
+					margin-top: 3px;
+				}
 			}
 		}
 	}

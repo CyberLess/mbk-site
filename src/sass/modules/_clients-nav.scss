@@ -12,6 +12,12 @@
 		&_bg{
 			padding-right: 245/1336*100%;
 		}
+
+		@include max-screen($small_tablet) {
+			width: 100%;
+			padding: 0;
+			border: none;
+		}
 	}
 
 	&__bg{
@@ -20,6 +26,16 @@
 		bottom: 0;
 		margin-right: 39/610*100%;
 		width: 205/610*100%;
+
+		@include max-screen($small_tablet) {
+			position: static;
+			display: block;
+			margin-right: auto;
+			width: 205/290*100%;
+			margin-left: auto;
+			margin-top: 5rem;
+
+		}
 	}
 
 	&__link{
@@ -34,16 +50,38 @@
 		}
 	}
 
+	&__inside{
+		@include max-screen($small_tablet) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+
+	&__row{
+		@include max-screen($small_tablet) {
+			display: none;
+		}
+	}
+
 	&__bottom{
 		position: absolute;
 		left: 0;
 		bottom: 0;
 		padding-left: 4rem;
 		padding-bottom: 2rem;
+
+		@include max-screen($small_tablet) {
+			display: none;
+		}
 	}
 
 	&__sub{
 		line-height: 260%;
+
+		@include max-screen($small_tablet) {
+			font-size: 1.9rem;
+			font-weight: 400;
+		}
 	}
 
 	&__link{
@@ -52,6 +90,10 @@
 
 	&__messengers{
 		margin-top: -5px;
+
+		@include max-screen($small_tablet) {
+			display: none;
+		}
 	}
 
 	&__list{
@@ -72,6 +114,10 @@
 			border-radius: 50%;
 			position: relative;
 			overflow: hidden;
+		}
+
+		@include max-screen($small_tablet) {
+			display: none;
 		}
 	}
 }

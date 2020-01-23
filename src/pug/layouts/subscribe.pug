@@ -1,18 +1,21 @@
 +b.SECTION.subscribe
 	+e.wrap.wrap
+		+e.mobile#mobile-title
 		+e.row.flex._justify._bottom
 			+e.cell._left
-				+e.title.h2.H2
-					| Подпишись
-					| на обновления 
-					| нашей базы
+				+e.top#desktop-top
+					+e.title.h2.H2.js-move-item(data-to="#mobile-title" data-from="#desktop-top" data-point="580")
+						| Подпишись
+						| на обновления 
+						| нашей базы
 				+e.sub.h5
 					| Хочешь получать свежие материалы нашей базы на свой почтовый ящик?
 				+e.text.h6.is-regular
 					| Введите свой E-Mail в форму, и как только мы добавим что-то новое, то ты сразу же об этом узнаешь.
 				+e.FORM.form.form__(action="/")
 					+e.INPUT(type="hidden" name="method[subscribe]" value='1')
-					+e.INPUT.email.input__._big(type="text" placeholder="Введите ваш E-mail" name="email")
+					+e.email.input__._big
+						+e.INPUT.item(type="text" placeholder="Введите ваш E-mail" name="email")
 					+e.inline-2.flex._vertical._justify
 						+e.button.btn.h6.BUTTON
 							+e.text Подписаться
@@ -33,6 +36,8 @@
 						| Подарок каждому
 						| подписчику
 					+e.box-text.h6
+						+e.box-mobile
+							+icon('heart', '0 0 14 13')
 						| Подробная инструкция-памятка 
 						br
 						| «Как законно списать все долги»

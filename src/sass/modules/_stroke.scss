@@ -14,6 +14,12 @@
 		z-index: -1;
 	}
 
+	@include max-screen($small_tablet) {
+		&:before{
+			height: 5px;
+			bottom: 7px;
+		}
+	}
 	@include max-screen($large_mobile) {
 		&:before{
 			height: 3px;

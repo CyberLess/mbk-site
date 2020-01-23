@@ -28,5 +28,26 @@
 			width: 424/1336*100%;
 			margin-bottom: 0;
 		}
+
+		@include max-screen($small_tablet) {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+
+			&_right{
+				margin-top: 53px;
+			}
+
+			&:before{
+				display: none;
+			}
+		}
+	}
+
+	&__row{
+		@include max-screen($small_tablet) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
 	}
 }

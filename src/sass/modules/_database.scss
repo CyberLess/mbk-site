@@ -7,11 +7,45 @@
 		padding: 9rem 0;
 	}
 
+	@include max-screen($large_mobile) {
+		padding-top: 5.1rem;
+		padding-bottom: 5.5rem;
+	}
+
+	&__inner{
+		@include max-screen($large_mobile) {
+			display: inline-block;
+			position: relative;
+			&:before{
+				content: '';
+				display: block;
+				background-color: $red;
+				position: absolute;
+				left: 0;
+				height: 3px;
+				bottom: 5px;
+				right: 0;
+				z-index: -1;
+			}
+		}
+	}
+
 	&__title{
 		margin-bottom: 10rem;
 
 		@include max-screen($large_tablet) {
 			margin-bottom: 8rem;
+		}
+
+		@include max-screen($large_mobile) {
+			margin-bottom: 3.8rem;
+			text-align: center;
+
+			.stroke{
+				&:before{
+					display: none;
+				}
+			}
 		}
 	}
 
@@ -21,6 +55,36 @@
 
 	&__middle{
 		margin-bottom: 1.8rem;
+
+		svg{
+			position: absolute;
+			right: 0;
+			top: 50%;
+			width: 59px;
+			margin-top: -30px;
+			display: none;
+			fill: rgba(184, 184, 184, 0.77);
+		}
+
+		@include max-screen($large_mobile) {
+			font-size: 1.9rem;
+			line-height: 110%;
+			position: relative;
+			font-weight: 400;
+			padding-right: 100/290*100%;
+			color: #B8B8B8;
+			margin-bottom: 3.1rem;
+
+			svg{
+				display: block;
+			}
+		}
+	}
+
+	&__text{
+		@include max-screen($large_mobile) {
+			font-size: 1.2rem;
+		}
 	}
 
 	&__cell{
@@ -33,6 +97,31 @@
 		&_right{
 			max-width: 468/1336*100%;
 			margin-top: -5.5rem;
+		}
+
+		@include max-screen($small_tablet) {
+			&_right{
+				max-width: 41.02994%;
+				margin-top: -2.5rem;
+			}
+
+			&_left{
+			    width: 52.15868%;
+			}
+		}
+
+		@include max-screen($large_mobile) {
+			width: 100%;
+			max-width: 100%;
+			&_right{
+				margin-top: 5.2rem;
+			}
+		}
+	}
+
+	&__row{
+		@include max-screen($small_tablet) {
+			align-items: flex-start;
 		}
 	}
 

@@ -1,6 +1,36 @@
 .header{
 	z-index: 500;
 	position: relative;
+
+	&.is-search-open{
+		.header{
+			&__menu{
+				opacity: 0;
+				visibility: hidden;
+			}
+
+			&__search-bg{
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+	&__search-bg{
+		position: fixed;
+		left: 3.3rem;
+		right: 3.3rem;
+		top: 0;
+		height: 100%;
+		// width: 100%;
+		background: rgba(0, 0, 0, 0.8);
+		visibility: hidden;
+		opacity: 0;
+		// pointer-events: none;
+		transition: ease .2s;
+		// z-index: -1;
+	}
+
 	&__top{
 		padding: 2.4rem 0;
 		position: relative;
@@ -12,6 +42,187 @@
 		}
 	}
 
+	&__parts{
+		&-submenu{
+			display: none;
+		}
+
+		&-backward{
+			height: 5.7rem;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			padding-left: 15px;
+			padding-right: 15px;
+			background: #F3F3F3;
+			text-align: left;
+			margin-top: -1px;
+
+			.icon{
+				margin-right: 17px;
+				fill: transparent;
+				width: 10px;
+				stroke: $dark;
+				transform: rotate(-180deg);
+			}
+		}
+
+		&-nav{
+			text-align: center;
+		}
+
+		&-title{
+			margin-top: 4.4rem;
+			margin-bottom: 3.3rem;
+			text-align: center;
+			font-weight: bold;
+			padding-right: 32px;
+			position: relative;
+			display: inline-block;
+
+			&:after{
+				position: absolute;
+				right: 0;
+				top: 50%;
+				margin-top: -3px;
+				content: '';
+				display: inline-block;
+				vertical-align: middle;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 4.5px 0 4.5px 6px;
+				// margin-left: 17px;
+				border-color: transparent transparent transparent $dark;
+
+			}
+		}
+
+		@include max-screen($small_mobile) {
+			&-title{
+				max-width: 80%;
+			}
+		}
+	}
+
+	&__device{
+		position: absolute;
+		left: 0;
+		top: 100%;
+		width: 100%;
+		background: #FFFFFF;
+		// z-index: 100;
+		border-top: 1px solid #C2C2C2;
+
+		// transform: translateY(-10rem);
+		// opacity: 0;
+		// visibility: hidden;
+		display: none;
+
+		&.is-active{
+			display: block;
+			// transform: translateY(0rem);
+			// opacity: 1;
+			// visibility: visible;			
+		}
+		
+
+		&-menu{
+			padding-bottom: 18.3rem;
+			padding-top: 3.2rem;
+		}
+
+		&-link{
+			padding-left: 15px;
+			padding-right: 30px;
+			height: 64px;
+			font-size: 23px;
+			display: flex;
+			align-items: center;
+			font-weight: bold;
+			line-height: 1.3em;
+			position: relative;
+
+			svg{
+				fill: transparent;
+				width: 10px;
+				// height: 10px;
+				position: absolute;
+				right: 15px;
+				top: 50%;
+				margin-top: -7px;
+				stroke-width: 3;
+				stroke: $dark;
+			}
+		}
+
+		&-li{
+			&:not(:last-child){
+				border-bottom: 1px solid #C2C2C2;
+			}
+		}
+
+		&-bg{
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: -80px;
+			bottom: -80px;
+			background: rgba(0, 0, 0, 0.8);
+			z-index: -1;
+		}
+
+		@include max-screen($small_tablet) {
+			.header__list-link{
+				font-size: 1.9rem;
+			}
+		}
+	}
+
+	&__mobile{
+		display: none;
+
+		&-search{
+			width: 19px;
+		}
+		
+		&-item{
+			display: block;
+
+			&_phone{
+				width: 19px;
+				fill: $dark;
+
+			}
+
+			&:not(:last-child){
+				margin-right: 31px;
+			}
+		}
+
+		@include max-screen($small_tablet) {
+			display: flex;
+		}
+	}
+
+	&__search{
+		height: 4.8rem;
+		width: 2.1rem;
+		display: flex;
+		align-items: center;
+		position: relative;
+
+		@include max-screen($small_tablet) {
+			display: none;
+		}
+	}
+
+	&__wrap{
+		@include max-screen($small_tablet) {
+			width: 100%;
+		}
+	}
+
 	&__bottom{
 		background-color: #fff;
 		position: relative;
@@ -20,12 +231,15 @@
 		// padding: 2.1rem 0;
 
 		@include max-screen($small_tablet) {
-			height: 7rem;
+			height: 70px;
+			display: flex;
+			align-items: center;
 		}
 	}
 
 	&__menu{
 		margin-left: 250/1336*100%;
+		transition: ease .2s;
 
 		@include max-screen($large_tablet) {
 			margin-left: 0;
@@ -37,6 +251,10 @@
 
 	&__logo{
 		width: 14.4rem;
+
+		@include max-screen($small_tablet) {
+			width: 95px;
+		}
 	}
 
 	&__link{
@@ -79,6 +297,10 @@
 		&-link{
 			line-height: 260%;
 			font-weight: 400;
+			transition: ease .15s;
+			&:hover{
+				color: $red;
+			}
 		}
 	}
 

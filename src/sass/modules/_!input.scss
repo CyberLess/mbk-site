@@ -1,19 +1,79 @@
 .input{
-	border: none;
-	background: transparent;
-	color: #0E0E0E;
-	border-bottom: 1px solid #B3B3B3;
-	font-weight: 500;
-	font-family: Geometria;
 	width: 100%;
+	position: relative;
 
-	&_big{
-		height: 8rem;
-		margin-bottom: 3rem;
-		font-size: 3.6rem;		
+	&:before{
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		bottom: 0;
+		height: 1px;
+		background-color: #000;
+		transition: ease .2s;
+		transform: scale(0,1);
+		transform-origin: 0% 50%;
 	}
 
-	@include placeholder {
-		color: #B3B3B3;
+	&__item{
+		border: none;
+		background: transparent;
+		color: #0E0E0E;
+		border-bottom: 1px solid #B3B3B3;
+		font-weight: 500;
+		font-family: Geometria;
+		width: 100%;	
+
+
+
+		@include placeholder {
+			color: #B3B3B3;
+		}
+	}
+
+	&_big{
+		margin-bottom: 3rem;
+		.input{
+			&__item{
+				height: 8rem;
+				font-size: 3.6rem;				
+			}
+		}
+	}
+
+	&.is-focus{
+		&:before{
+			transform: scale(1,1);
+		}
+	}
+
+
+
+	@include max-screen($large_tablet) {
+		&_big{
+			.input{
+				&__item{
+					font-size: 2.6rem;
+				}
+			}
+			
+		}
+	}
+
+	@include max-screen($large_mobile) {
+		&_big{
+			.input{
+				margin-bottom: 2.3rem;
+				&__item{
+					height: 3.8rem;
+					text-align: center;
+					
+					font-weight: bold;
+					font-size: 1.9rem;
+				}
+			}
+
+		}
 	}
 }

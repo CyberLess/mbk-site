@@ -1,5 +1,22 @@
 .red-link{
 	color: $red;
+	position: relative;	
+
+	&:before{
+		content: '';
+		background: $red;
+		height: 2px;
+		position: absolute;
+		left: 0;
+		pointer-events: none;
+		bottom: -7px;
+		width: 100%;
+		transition: ease .2s;
+		visibility: hidden;
+		transform: scale(0,1);
+		// opacity: 0;
+	}
+
 
 	&_arrow{
 		padding-right: 2.6rem;
@@ -22,6 +39,9 @@
 	}
 
 	&:hover{
-		
+		&:before{
+			transform: scale(1,1);
+			visibility: visible;
+		}
 	}
 }

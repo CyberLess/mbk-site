@@ -6,17 +6,30 @@
 		padding-top: 9rem;
 	}
 
+	@include max-screen($large_mobile) {
+		padding-top: 5.1rem;
+		padding-bottom: 4.2rem;
+	}
+
 	&__title{
 		margin-bottom: 6rem;
 
 		@include max-screen($large_tablet) {
 			margin-bottom: 4rem;
 		}
+
+		@include max-screen($large_mobile) {
+			margin-bottom: 3.8rem;
+			text-align: center;
+			padding-left: 15%;
+			padding-right: 15%;
+		}
 	}
 
 	&__apply{
 		margin-top: 10px;
 		margin-bottom: 10px;
+		display: inline-block;
 	}
 
 	&__button{
@@ -24,9 +37,32 @@
 	}
 
 	&__row{
+		&.is-loading{
+			pointer-events: none;
+
+			.reviews{
+				&__video{
+					background-color: rgb(187, 187, 187);
+				}
+
+				&__name span, &__who span, &__text, &__apply{
+					background-color: rgb(187, 187, 187);
+					color: transparent;
+				}
+
+				&__button{
+					background-color: rgb(187, 187, 187);
+					color: transparent;
+					
+				}
+			}
+		}
+
 		@include max-screen($large_tablet) {
 			align-items: flex-start;
 		}
+
+
 	}
 
 	&__list{
@@ -38,10 +74,18 @@
 		@include max-screen($large_tablet) {
 			margin-bottom: 6rem;
 		}
+
+		@include max-screen($small_tablet) {
+			display: none;
+		}
 	}
 
 	&__bottom{
 		text-align: center;
+
+		@include max-screen($small_tablet) {
+			display: none;
+		}
 	}
 
 	&__item{
@@ -98,6 +142,30 @@
 		&-name{
 			width: 50%;
 			margin-bottom: 2rem;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+		    align-items: flex-start;
+
+			span{
+				display: inline-block;
+				position: relative;
+
+				&:before{
+					content: '';
+					display: block;
+					z-index: -1;
+					position: absolute;
+					left: 0;
+					bottom: 3px;
+					width: 100%;
+					height: 3px;
+					transition: ease .2s;
+					transform: scale(0,1);
+					transform-origin: 0% 50%;
+					background-color: $red;
+				}
+			}
 		}
 
 		&-status{
@@ -107,6 +175,17 @@
 		&_active{
 			&:before{
 				opacity: .15;
+			}
+		}
+
+		&:hover{
+			.reviews__item-name{
+				span{
+					&:before{
+						transform: scale(1,1);
+					}					
+				}
+
 			}
 		}
 	}
@@ -125,21 +204,64 @@
 				margin-top: 8px;
 			}
 		}
+
+		@include max-screen($large_mobile) {
+			width: 100%;
+			margin-right: 0;
+			&_video{
+				margin-bottom: 2.5rem;
+			}
+		}
 	}
 
 	&__name{
 		font-weight: bold;
 		margin-bottom: 3px;
+
+
+		@include max-screen($large_mobile) {
+			font-size: 1.9rem;
+			margin-bottom: 0;
+		}
 	}
 
 	&__text{
 		font-weight: 400;
-		margin-bottom: 4.3rem;
+		
+		display: inline;
+
+		@include max-screen($large_mobile) {
+			font-size: 1.2rem;
+		}
+	}
+
+	&__nav{
+		margin-top: 4.3rem;
+
+		@include max-screen($large_mobile) {
+			display: none;
+		}
 	}
 
 	&__who{
 		font-weight: 400;
 		color: #808080;
 		margin-bottom: 2.5rem;
+
+		@include max-screen($large_mobile) {
+			margin-bottom: 0;
+			font-size: 1rem;
+		}
+
+
+	}
+
+	&__top{
+		@include max-screen($large_mobile) {
+			display: flex;
+			align-items: flex-end;
+			justify-content: space-between;
+			margin-bottom: 9px;
+		}
 	}
 }

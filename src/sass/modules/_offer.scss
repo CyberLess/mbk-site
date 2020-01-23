@@ -5,6 +5,10 @@
 	// background: url('/img/offer.jpg') center no-repeat;
 	// background-size: cover;
 
+	@include max-screen($hd_plus) {
+	    padding: 12.2rem 0;
+	}
+
 	@include max-screen($large_desktop) {
 	    padding: 11.2rem 0;
 	}

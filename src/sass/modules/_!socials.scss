@@ -2,10 +2,15 @@
 	z-index: 200;
 
 	&__link{
+		transition: ease .1s;
 		display: block;
 
 		span{
 			display: block;
+		}
+
+		&:hover{
+			fill: $red;
 		}
 	}
 

@@ -3,22 +3,105 @@
 	&__top{
 		padding-top: 6.1rem;
 		padding-bottom: 4.8rem;
+
+		@include max-screen($large_mobile) {
+			justify-content: center;
+			padding-top: 5.6rem;
+		}
 	}
 
 	&__write{
 		margin-bottom: 4.1rem;
 		margin-top: -.5rem;
+
+		@include max-screen($large_mobile) {
+			margin: 0;
+			justify-content: space-between;
+			padding-bottom: 2.2rem;
+			position: relative;
+
+			&:before{
+				content: '';
+				display: block;
+				position: absolute;
+				left: -15px;
+				right: -15px;
+				height: 1px;
+				background-color: #C2C2C2;
+				bottom: 0;
+			}
+		}
+	}
+
+	&__logo{
+		@include max-screen($small_tablet) {
+			display: none;
+		}
+	}
+
+	&__phone{
+		@include max-screen($large_mobile) {
+			font-size: 2.6rem;
+			font-weight: bold;
+			margin-bottom: 2.7rem;
+			display: inline-block;
+		}
+	}
+
+	&__mail{
+		@include max-screen($large_mobile) {
+			display: none;
+		}
 	}
 
 	&__messengers{
-		margin-left: 2rem;
+		// margin-left: 2rem;
+
+		@include max-screen($large_mobile) {
+			.messenger__item{
+				margin-right: 0;
+				margin-left: 2.7rem;
+			}
+		}
 	}
 
 	&__text{
 		line-height: 168%;
+
+		&_label{
+			margin-right: 2rem;
+		}
 		
 		&_gray{
 			color: #8D8D8D;
+		}
+
+		&_creator{
+			
+			span{
+				transition: ease .15s;
+			}
+			
+			&:hover{
+				span{
+					color: $red;
+				}
+			}
+		}
+
+		@include max-screen($large_mobile) {
+			font-size: 1rem;
+			&_copyright{
+				display: none;
+			}
+
+			&_label{
+				font-size: 1.2rem;
+			}
+
+			&_addr{
+				display: none;
+			}
 		}
 	}
 
@@ -56,20 +139,57 @@
 				display: block;
 			}
 		}
+
+		@include max-screen($small_tablet) {
+			display: none;
+		}
 	}
 
 	&__callback{
 		width: 275/1336*100%;
+
+		@include max-screen($small_tablet) {
+			width: auto;
+		}
+
+		@include max-screen($large_mobile) {
+			width: 100%;
+		}
 	}
 
 	&__contacts{
 		width: 226/1336*100%;
 		padding-right: 33/1336*100%;
+
+		@include max-screen($small_tablet) {
+			width: 20%;
+			min-width: 140px;
+			padding-right: 0;
+		}
 	}
 
 	&__bottom{
 		padding-top: 1.8rem;
 		padding-bottom: 1rem;
 		border-top: 1px solid rgba(#4F4F4F, .3);
+
+		@include max-screen($large_mobile) {
+			padding-top: 1.4rem;
+			padding-bottom: 1.4rem;
+			border-top: none;
+			position: relative;
+
+			&:before{
+				content: '';
+				display: block;
+				position: absolute;
+				left: -15px;
+				right: -15px;
+				height: 1px;
+				top: 0;
+				background-color: #C2C2C2;
+
+			}
+		}
 	}
 }
