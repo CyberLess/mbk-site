@@ -15,6 +15,12 @@
 
 	&:hover{
 		background-color: #000;
+
+		.btn{
+			&__icon{
+				fill: #fff;
+			}
+		}
 	}
 
 	@include max-screen($small_tablet) {
@@ -28,6 +34,13 @@
 	&__icon{
 
 		// margin-left: 12px;
+
+		&_cats{
+			width: 13px;
+			height: 13px;
+			margin-right: 13px;
+			fill: $dark;
+		}
 
 		&_arrow{
 			// width: 10px;
@@ -74,6 +87,12 @@
 				}
 			}
 		}
+	}
+
+	&_dark{
+		color: $dark;
+		background: transparent;
+		border-color: $dark;
 	}
 
 }

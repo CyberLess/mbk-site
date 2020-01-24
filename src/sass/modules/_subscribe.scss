@@ -1,6 +1,7 @@
 .subscribe{
 	padding-top: 17rem;
-	
+	z-index: 50;
+	position: relative;
 	background: #F3F3F3;
 
 	@include max-screen($large_tablet) {

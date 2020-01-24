@@ -1,11 +1,13 @@
 +b.SECTION.reviews
+	+e.mobile-bg.IMG(src="/img/tree2.png")
 	+e.wrap.wrap
 		+e.title.h3.H2 Клиенты МБК и их история
 		+e.slider.owl-carousel(data-action="/reviews.json")
 			+e.row.flex._vertical#review-0
 				+e.cell._video
-					+e.video.video__
+					+e.video.video__.js-modal(data-modal="#video" data-youtube="suTYbf-FtXg")
 						+e.IMG.preview.object-fit(src="/img/video.jpg")
+						+e.play
 				+e.cell._content
 					+e.top
 						+e.name.h4
@@ -24,8 +26,9 @@
 							| Обратиться в мбк
 			+e.row.flex._vertical#review-1
 				+e.cell._video
-					+e.video.video__
+					+e.video.video__.js-modal(data-modal="#video" data-youtube="suTYbf-FtXg")
 						+e.IMG.preview.object-fit(src="/img/video.jpg")
+						+e.play
 				+e.cell._content
 					+e.top
 						+e.name.h4
@@ -44,8 +47,9 @@
 							| Обратиться в мбк
 			+e.row.flex._vertical#review-2
 				+e.cell._video
-					+e.video.video__
+					+e.video.video__.js-modal(data-modal="#video" data-youtube="suTYbf-FtXg")
 						+e.IMG.preview.object-fit(src="/img/video.jpg")
+						+e.play
 				+e.cell._content
 					+e.top
 						+e.name.h4 
@@ -62,6 +66,10 @@
 							| Читать полностью
 						+e.apply.red-link.h6.A(href="#")
 							| Обратиться в мбк
+		+e.counter
+			+e.SPAN.conter-current 1
+			|  / 
+			+e.SPAN.counter-total n
 		+e.list.flex
 			+e.item._active(data-review="#review-0")
 				+e.item-bg.object-fit.IMG(src='/img/review-1.jpg')

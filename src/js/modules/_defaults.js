@@ -7,6 +7,8 @@
 		$this.toggleClass('is-active')
 		$menu.toggleClass('is-active')
 
+		$('.search, .header, .js-search-toggle').removeClass('is-active is-search-open')
+
 		$('.js-device-backward, .js-service-backward, .js-mobile-close-inside').trigger('click')
 	})
 

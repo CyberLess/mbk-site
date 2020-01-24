@@ -26,7 +26,34 @@
 	}
 
 	&-nav{
-		display: none;
+		// display: none;
+		position: absolute;
+		left: 15px;
+		right: 15px;
+		bottom: 9px;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: vertical;
+
+		.triangle{
+			stroke: $dark;
+		}
+
+		.stroke{
+			fill: $dark;
+		}
+
+		&>*{
+			width: 20px;
+		}
+
+		.owl-prev{
+			svg{
+				transform: rotate(-180deg);
+			}
+		}
+
 	}
 
 	&-dots{

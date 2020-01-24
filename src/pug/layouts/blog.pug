@@ -1,30 +1,52 @@
 +b.SECTION.blog
 	+e.wrap.wrap
-		+e.tags.flex._start
-			+e.tag.tag__.LABEL
-				+e.input.INPUT(type="checkbox" name="cat" value='0')
-				+e.text.SPAN Все темы
-			+e.tag.tag__.LABEL
-				+e.input.INPUT(type="checkbox" name="cat" value='1')
-				+e.text.SPAN Долги
-			+e.tag.tag__.LABEL
-				+e.input.INPUT(type="checkbox" name="cat" value='2')
-				+e.text.SPAN Ипотека
-			+e.tag.tag__.LABEL
-				+e.input.INPUT(type="checkbox" name="cat" value='3')
-				+e.text.SPAN Коллекторы
-			+e.tag.tag__.LABEL
-				+e.input.INPUT(type="checkbox" name="cat" value='4')
-				+e.text.SPAN Юридические тонкости
-			+e.tag.tag__.LABEL
-				+e.input.INPUT(type="checkbox" name="cat" value='5')
-				+e.text.SPAN Инвестиции
-			+e.tag.tag__.LABEL
-				+e.input.INPUT(type="checkbox" name="cat" value='6')
-				+e.text.SPAN Страхование
-			+e.tag.tag__.LABEL
-				+e.input.INPUT(type="checkbox" name="cat" value='7')
-				+e.text.SPAN Налоги
+		+e.filter
+			+e.filter-button.btn__._border._dark.p.js-open-filter.A(href='#')
+				+e.icon._cats
+					+icon('cats', '0 0 13 13')
+				+e.text Категории
+			+e.filter-inside
+				+e.filter-part._static._top.flex._vertical._justify
+					+e.filter-title.h3 Статьи МБК
+					+e.filter-close.js-close-filter
+						+icon('close','0 0 30 30')
+				+e.filter-part._fluid._content
+					+e.filter-list
+						+e.filter-top.flex._justify._vertical
+							+e.filter-select.h6 Выбрать все категории 
+							+e.filter-reset.h6 Сбросить 
+						+e.tags.flex._start
+							+e.tag.tag__.LABEL
+								+e.input.INPUT(type="checkbox" name="cat" value='0')
+								+e.text.SPAN Все темы
+							+e.tag.tag__.LABEL
+								+e.input.INPUT(type="checkbox" name="cat" value='1')
+								+e.text.SPAN Долги
+							+e.tag.tag__.LABEL
+								+e.input.INPUT(type="checkbox" name="cat" value='2')
+								+e.text.SPAN Ипотека
+							+e.tag.tag__.LABEL
+								+e.input.INPUT(type="checkbox" name="cat" value='3')
+								+e.text.SPAN Коллекторы
+							+e.tag.tag__.LABEL
+								+e.input.INPUT(type="checkbox" name="cat" value='4')
+								+e.text.SPAN Юридические тонкости
+							+e.tag.tag__.LABEL
+								+e.input.INPUT(type="checkbox" name="cat" value='5')
+								+e.text.SPAN Инвестиции
+							+e.tag.tag__.LABEL
+								+e.input.INPUT(type="checkbox" name="cat" value='6')
+								+e.text.SPAN Страхование
+							+e.tag.tag__.LABEL
+								+e.input.INPUT(type="checkbox" name="cat" value='7')
+								+e.text.SPAN Налоги
+				+e.filter-part._static._bottom
+					+e.filter-button.btn.h6.A(href='#')
+						| Узнать подробнее
+		+e.mobile
+			+e.mobile-nav.flex._justify
+				+e.mobile-label.is-active(data-selector=".blog__cell_right") Лучшее
+				+e.mobile-label(data-selector=".blog__cell_left") Все статьи
 		+e.row.flex._justify
 			+e.cell._left
 				+e.string._scope.flex._justify._vertical
@@ -175,6 +197,12 @@
 									| 5 минут
 						+e.name.h5.DIV
 							| Битвы с коллекторами: самые громкие суды против них в декабре 2019 года
+					+e.mobile-button.btn__._border.p.A(href='#')
+						+e.text Загрузить еще статей
+						+e.icon._arrow
+							+e.SVG(viewBox="0 0 18.560659 9.6213207")
+								path(class="triangle" d='M14.5 4.81v-3l3 3-3 3z')
+								path(class="stroke" d='M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z')
 				+e.bottom.flex._justify._vertical
 					+e.pagination.pagination__
 						+e.list.flex._vertical.p
@@ -269,3 +297,9 @@
 								| 5 минут
 					+e.name.h5.DIV
 						| Битвы с коллекторами: самые громкие суды против них в декабре 2019 года
+				+e.mobile-button.btn__._border.p.A(href='#')
+					+e.text Загрузить еще статей
+					+e.icon._arrow
+						+e.SVG(viewBox="0 0 18.560659 9.6213207")
+							path(class="triangle" d='M14.5 4.81v-3l3 3-3 3z')
+							path(class="stroke" d='M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z')

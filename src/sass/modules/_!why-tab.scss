@@ -1,5 +1,10 @@
 .why-tab{
 
+	@include max-screen($large_mobile) {
+		padding-left: 15px;
+		padding-right: 15px;		
+	}
+
 	@include max-screen($small_tablet) {
 		align-items: flex-end;
 	}
@@ -7,6 +12,7 @@
 	&__text{
 		@include max-screen($large_mobile) {
 			font-size: 1.2rem;
+
 		}
 	}
 

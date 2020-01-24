@@ -5,8 +5,43 @@
 	transition: ease .15s;
 	background: transparent;
 	border: none;
+	position: relative;
 
-	&:hover{
-		fill: $red;
+
+
+	@include min-screen($small_tablet) {
+		&:hover{
+			fill: $red;
+		}		
+	}
+
+	&__default{
+		transition: ease .2s;
+	}
+
+	&__close{
+		position: absolute;
+		left: 1px;
+		top: 1px;
+		right: 1px;
+		bottom: 1px;
+		transition: ease .2s;
+		stroke: $dark;
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	&.is-active{
+		.search-button{
+			&__default{
+				transform: scale(0);
+				opacity: 0;
+			}
+
+			&__close{
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
 	}
 }

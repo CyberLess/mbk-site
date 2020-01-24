@@ -13,6 +13,10 @@
 	    padding: 11.2rem 0;
 	}
 
+	@include max-screen($small_tablet) {
+		overflow: hidden;
+	}
+
 	@include max-screen($large_mobile) {
 		height: calc(100vh - 7rem);
 		padding: 5rem 0;

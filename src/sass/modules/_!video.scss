@@ -2,4 +2,36 @@
 	padding-top: 398/667*100%;
 	position: relative;
 	border-radius: 5px;
+
+	cursor: pointer;
+
+	&__play{
+		position: absolute;
+		width: 10rem;
+		height: 10rem;
+		border-radius: 50%;
+		border: 2px solid #FFFFFF;
+		top: 50%;
+		left: 50%;
+		margin-left: -5rem;
+		margin-top: -5rem;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 6.5px 0 6.5px 10px;
+			border-color: transparent transparent transparent #ffffff;
+			
+		}
+
+	}
 }

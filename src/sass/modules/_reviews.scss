@@ -2,6 +2,8 @@
 	padding-top: 12rem;
 	padding-bottom: 9rem;
 
+	position: relative;
+
 	@include max-screen($large_tablet) {
 		padding-top: 9rem;
 	}
@@ -9,6 +11,42 @@
 	@include max-screen($large_mobile) {
 		padding-top: 5.1rem;
 		padding-bottom: 4.2rem;
+	}
+
+	&__mobile-bg{
+		display: none;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		@include max-screen($large_mobile) {
+			display: block;
+		}
+	}
+
+	&__slider{
+		@include max-screen($small_tablet) {
+			padding-bottom: 43px;
+		}
+	}
+
+	&__counter{
+		position: absolute;
+		left: 0;
+		width: 100%;
+		bottom: 6px;
+		text-align: center;
+		pointer-events: none;
+		font-size: 12px;
+		font-weight: 500;
+		display: none;
+
+		&-total{
+			color: #797979;
+		}
+
+		@include max-screen($small_tablet) {
+			display: block;
+		}
 	}
 
 	&__title{

@@ -6,6 +6,13 @@
 	right: 0;
 	top: 0;
 
+	@include max-screen($small_tablet) {
+		width: 100%!important;
+		position: relative;
+		right: auto;
+		top: auto;
+	}
+
 	&:before{
 		content: '';
 		display: block;
@@ -36,6 +43,10 @@
 		svg{
 			width: 100%;
 		}
+
+		@include max-screen($small_tablet) {
+			display: none;
+		}
 	}
 
 	&__input{
@@ -52,6 +63,13 @@
 
 		@include placeholder {
 			color: #AFAFAF;
+		}
+
+		@include max-screen($small_tablet) {
+			height: 44px;
+			padding-left: 48px;
+			font-size: 14px;
+			padding-right: 0;
 		}
 	}
 

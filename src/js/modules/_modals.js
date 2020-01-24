@@ -40,7 +40,11 @@ $(() => {
 					$('body').addClass(container_class)
 				},
 				beforeClose: () => {
+					
 					$('body').removeClass(container_class)
+				},
+				close: () => {
+					$('.modals iframe').removeAttr('src')
 				}
 			}
 		}, 0);

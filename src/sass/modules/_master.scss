@@ -41,6 +41,18 @@
 		@include max-screen($large_tablet) {
 			display: none;
 		}
+
+		@include max-screen($large_mobile) {
+			display: block;
+			z-index: -1;
+
+			width: 345px;
+			margin-right: -100px;
+			margin-left: 0;
+			left: auto;
+			right: 0;
+			bottom: -20px;
+		}
 	}
 
 	&__about{

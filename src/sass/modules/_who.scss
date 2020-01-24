@@ -15,6 +15,10 @@
 	@include max-screen($large_mobile) {
 		padding-top: 5rem;
 		padding-bottom: 3.4rem;
+		.owl-nav{
+			margin-left: 15px;
+			margin-right: 15px;
+		}
 	}
 
 	&__title{
@@ -22,6 +26,13 @@
 			text-align: center;
 			margin-bottom: 2.3rem;
 		}		
+	}
+
+	&__wrap{
+		@include max-screen($large_mobile) {
+			padding-left: 0;
+			padding-right: 0;
+		}
 	}
 
 	&__tabs{
