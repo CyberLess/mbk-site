@@ -1,0 +1,31 @@
+.breadcrumbs{
+	&__item{
+		display: block;
+		font-size: 0;
+
+		&:not(:last-child){
+			&:after{
+				content: '–';
+				display: inline-block;
+				vertical-align: middle;
+				margin: 0 1.5rem;
+
+				@extend .p;
+
+
+				line-height: normal;
+
+			}
+		}
+
+	}
+
+	&__link{
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	@include max-screen($large_mobile) {
+		display: none;
+	}
+}

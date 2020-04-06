@@ -1,6 +1,6 @@
 .master{
 	padding-top: 13.7rem;
-	overflow: hidden;
+	// overflow: hidden;
 
 	@include max-screen($large_tablet) {
 		padding-top: 6rem;
@@ -107,6 +107,11 @@
 		margin-left: 226/1400*100%;
 		z-index: 15;
 		pointer-events: none;
+
+		&-img{
+			object-position: center bottom;
+			object-fit: contain;
+		}
 
 		@include max-screen($large_tablet) {
 			width: 456/1400*100%;

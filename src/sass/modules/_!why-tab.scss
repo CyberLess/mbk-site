@@ -1,12 +1,41 @@
 .why-tab{
+	padding-top: 12rem;
+	position: relative;
+	min-height: 65.2rem;
+
+	@include max-screen($large_tablet) {
+		padding-top: 9rem;
+	}
+
+	@include max-screen($small_tablet) {
+		padding-top: 7rem;
+	}
 
 	@include max-screen($large_mobile) {
-		padding-left: 15px;
-		padding-right: 15px;		
+		padding-top: 5rem;
+		min-height: 0;
+		padding-bottom: 1.5rem;
 	}
 
 	@include max-screen($small_tablet) {
 		align-items: flex-end;
+	}
+
+	&__title{
+		margin-bottom: 7rem;
+
+		@include max-screen($large_mobile) {
+			margin-bottom: 3rem;
+		}
+	}
+
+	&__back{
+		user-select: none;
+		pointer-events: none;
+
+		@include max-screen($large_mobile) {
+			display: none !important;
+		}
 	}
 
 	&__text{
@@ -26,32 +55,14 @@
 	}
 
 	&__cell{
-		&_left{
-			width: 497/1336*100%;
-			margin-right: 71/1336*100%;
-			margin-top: 139/1336*100%;
-		}
+		width: 497/1336*100%;
 
-		&_right{
-			width: 766/1336*100%;
-		}
 
-		@include max-screen($small_tablet) {
-			&_left{
-				margin-top: 0;
-			}
-		}
 
 		@include max-screen($large_mobile) {
 			width: 100%;
 			margin-right: 0;
-			&_left{
-				order: 2;
-			}
-			&_right{
-				order:1;
-				margin-bottom: 3.3rem;
-			}
+
 		}
 	}
 }

@@ -1,0 +1,298 @@
++b.SECTION.credit
+	+e.wrap.wrap
+		+breadcrumbs('Главная', 'Услуги', 'Получить деньги')
+		+e.title.h2 Получить деньги
+		+e.form.form.FORM
+			+e.form-row.flex
+				+e.form-cell
+					+e.form-field.range-input__
+						+e.top
+							+e.label.p
+								| Выберите сумму кредита
+						+e.parent
+							+e.INPUT.input(type="text" autocomplete="off" name="calc[price]" placeholder="0 ₽" value="300000")
+							+e.char.h6 ₽
+							+e.bottom
+								+e.line
+								+e.path(data-min="150000" data-step="50000" data-max="15000000")
+						+e.info.flex._vertical._justify
+							+e.label.p
+								| 150 тыс.
+							+e.label.p
+								| 15 млн
+				+e.form-cell
+					+e.form-field.select__.js-select
+						+e.top
+							+e.label.p
+								| Выберите срок кредита
+						+e.item
+							+e.field.SELECT(name="time")
+								option 1 месяц
+								option 2 месяца
+								option 3 месяца
+								option 4 месяца
+
+
+			+e.form-tags.flex._start
+				+e.tag.tag__._dark-active.LABEL
+					+e.input.INPUT(type="checkbox" name="type" value='Популярные')
+					+e.text.SPAN Популярные
+				+e.tag.tag__._dark-active.LABEL
+					+e.input.INPUT(type="checkbox" name="type" value='На авто')
+					+e.text.SPAN На авто
+				+e.tag.tag__._dark-active.LABEL
+					+e.input.INPUT(type="checkbox" checked="" name="type" value='На бизнес')
+					+e.text.SPAN На бизнес
+				+e.tag.tag__._dark-active.LABEL
+					+e.input.INPUT(type="checkbox" name="type" value='На ремонт')
+					+e.text.SPAN На ремонт
+				+e.tag.tag__._dark-active.LABEL
+					+e.input.INPUT(type="checkbox" name="type" value='На отдых')
+					+e.text.SPAN На отдых
+				+e.tag.tag__._dark-active.LABEL
+					+e.input.INPUT(type="checkbox" name="type" value='На учебу')
+					+e.text.SPAN На учебу
+				+e.tag.tag__._dark-active.LABEL
+					+e.input.INPUT(type="checkbox" name="type" value='На лечение')
+					+e.text.SPAN На лечение
+				+e.tag.tag__._dark-active.LABEL
+					+e.input.INPUT(type="checkbox" name="type" value='На личные цели')
+					+e.text.SPAN На личные цели
+			+link(class="_red" href="#test") Открыть все условия
+		+e.list.service__._noscope
+			+e.list-top.flex._vertical
+				+e.type.js-service-type.is-active.h6
+					+icon('tile', '0 0 13 13')
+					| Плиткой
+				+e.type.js-service-type.h6(data-inline="1")
+					+icon('burger', '0 0 14 13')
+					| Списком
+			+e.row.flex
+				+e.item.A(href="#")
+					+e.head.flex.DIV
+						+e.head-bg.object-fit.IMG(src='/img/credit_1.jpg')
+						+e.head-inner
+							+e.name.h5.DIV
+								| Без залога
+					+e.body._noscope.DIV
+						+e.mark-list.flex._vertical
+							+e.mark.mark__ Кредиты
+							+e.mark.mark__ С плохой историей
+						+e.body-inner
+							+e.table
+								+e.table-row.flex._vertical
+									+e.table-cell
+										+e.table-text.h6 Ставка
+									+e.table-cell
+										+e.table-bold.h6 9,9%
+								+e.table-row.flex._vertical
+									+e.table-cell
+										+e.table-text.h6 Сумма
+									+e.table-cell
+										+e.table-bold.h6 до 1 млн
+								+e.table-row.flex._vertical
+									+e.table-cell
+										+e.table-text.h6 Платеж
+									+e.table-cell
+										+e.table-bold.h6 от 300₽/мес
+								+e.table-row.flex._vertical
+									+e.table-cell
+										+e.table-text.h6 Оценили
+									+e.table-cell
+										+e.like.like__.h6
+											+e.icon
+												+icon('heart', '0 0 14 13')
+											| 5623
+							+button(false) Оформить без залога
+							+e.text.small Сегодня оформили 322 человек
+				+e.item.A(href="#")
+					+e.head.flex.DIV
+						+e.head-bg.object-fit.IMG(src='/img/credit_2.jpg')
+						+e.head-top
+							+e.mark.mark__._white._big Популярный выбор
+						+e.head-inner
+							+e.name.h5.DIV
+								| Потребительский кредит без справок и поручителей по двум документам
+					+e.body._noscope.DIV
+						+e.mark-list.flex._vertical
+							+e.mark.mark__ Кредиты
+							+e.mark.mark__ Без справок
+							+e.mark.mark__ Без залога
+						+e.body-inner
+							+e.table
+								+e.table-row.flex._vertical
+									+e.table-cell
+										+e.table-text.h6 Ставка
+									+e.table-cell
+										+e.table-bold.h6 9,9%
+								+e.table-row.flex._vertical
+									+e.table-cell
+										+e.table-text.h6 Сумма
+									+e.table-cell
+										+e.table-bold.h6 до 1 млн
+								+e.table-row.flex._vertical
+									+e.table-cell
+										+e.table-text.h6 Платеж
+									+e.table-cell
+										+e.table-bold.h6 от 300₽/мес
+								+e.table-row.flex._vertical
+									+e.table-cell
+										+e.table-text.h6 Оценили
+									+e.table-cell
+										+e.like.like__.h6
+											+e.icon
+												+icon('heart', '0 0 14 13')
+											| 5623
+							+button(false) Оформить без залога
+							+e.text.small Сегодня оформили 322 человек
+				+e.item.A(href="#")
+					+e.head.flex.DIV
+						+e.head-bg.object-fit.IMG(src='/img/credit_3.jpg')
+						+e.head-inner
+							+e.name.h5.DIV
+								| Потребительский кредит
+					+e.body._noscope.DIV
+						+e.mark-list.flex._vertical
+							+e.mark.mark__ Кредиты
+							+e.mark.mark__ Без поручителей
+						+e.body-inner
+							+e.table
+								+e.table-row.flex._vertical
+									+e.table-cell
+										+e.table-text.h6 Ставка
+									+e.table-cell
+										+e.table-bold.h6 9,9%
+								+e.table-row.flex._vertical
+									+e.table-cell
+										+e.table-text.h6 Сумма
+									+e.table-cell
+										+e.table-bold.h6 до 1 млн
+								+e.table-row.flex._vertical
+									+e.table-cell
+										+e.table-text.h6 Платеж
+									+e.table-cell
+										+e.table-bold.h6 от 300₽/мес
+								+e.table-row.flex._vertical
+									+e.table-cell
+										+e.table-text.h6 Оценили
+									+e.table-cell
+										+e.like.like__.h6
+											+e.icon
+												+icon('heart', '0 0 14 13')
+											| 5623
+							+button(false) Оформить без залога
+							+e.text.small Сегодня оформили 322 человек
+				+e.item.A(href="#")
+					+e.head.flex.DIV
+						+e.head-bg.object-fit.IMG(src='/img/credit_1.jpg')
+						+e.head-inner
+							+e.name.h5.DIV
+								| Без залога
+					+e.body._noscope.DIV
+						+e.mark-list.flex._vertical
+							+e.mark.mark__ Кредиты
+							+e.mark.mark__ С плохой историей
+						+e.body-inner
+							+e.table
+								+e.table-row.flex._vertical
+									+e.table-cell
+										+e.table-text.h6 Ставка
+									+e.table-cell
+										+e.table-bold.h6 9,9%
+								+e.table-row.flex._vertical
+									+e.table-cell
+										+e.table-text.h6 Сумма
+									+e.table-cell
+										+e.table-bold.h6 до 1 млн
+								+e.table-row.flex._vertical
+									+e.table-cell
+										+e.table-text.h6 Платеж
+									+e.table-cell
+										+e.table-bold.h6 от 300₽/мес
+								+e.table-row.flex._vertical
+									+e.table-cell
+										+e.table-text.h6 Оценили
+									+e.table-cell
+										+e.like.like__.h6
+											+e.icon
+												+icon('heart', '0 0 14 13')
+											| 5623
+							+button(false) Оформить без залога
+							+e.text.small Сегодня оформили 322 человек
+				+e.item.A(href="#")
+					+e.head.flex.DIV
+						+e.head-bg.object-fit.IMG(src='/img/credit_2.jpg')
+						+e.head-top
+							+e.mark.mark__._white._big Популярный выбор
+						+e.head-inner
+							+e.name.h5.DIV
+								| Потребительский кредит без справок и поручителей по двум документам
+					+e.body._noscope.DIV
+						+e.mark-list.flex._vertical
+							+e.mark.mark__ Кредиты
+							+e.mark.mark__ Без справок
+							+e.mark.mark__ Без залога
+						+e.body-inner
+							+e.table
+								+e.table-row.flex._vertical
+									+e.table-cell
+										+e.table-text.h6 Ставка
+									+e.table-cell
+										+e.table-bold.h6 9,9%
+								+e.table-row.flex._vertical
+									+e.table-cell
+										+e.table-text.h6 Сумма
+									+e.table-cell
+										+e.table-bold.h6 до 1 млн
+								+e.table-row.flex._vertical
+									+e.table-cell
+										+e.table-text.h6 Платеж
+									+e.table-cell
+										+e.table-bold.h6 от 300₽/мес
+								+e.table-row.flex._vertical
+									+e.table-cell
+										+e.table-text.h6 Оценили
+									+e.table-cell
+										+e.like.like__.h6
+											+e.icon
+												+icon('heart', '0 0 14 13')
+											| 5623
+							+button(false) Оформить без залога
+							+e.text.small Сегодня оформили 322 человек
+				+e.item.A(href="#")
+					+e.head.flex.DIV
+						+e.head-bg.object-fit.IMG(src='/img/credit_3.jpg')
+						+e.head-inner
+							+e.name.h5.DIV
+								| Потребительский кредит
+					+e.body._noscope.DIV
+						+e.mark-list.flex._vertical
+							+e.mark.mark__ Кредиты
+							+e.mark.mark__ Без поручителей
+						+e.body-inner
+							+e.table
+								+e.table-row.flex._vertical
+									+e.table-cell
+										+e.table-text.h6 Ставка
+									+e.table-cell
+										+e.table-bold.h6 9,9%
+								+e.table-row.flex._vertical
+									+e.table-cell
+										+e.table-text.h6 Сумма
+									+e.table-cell
+										+e.table-bold.h6 до 1 млн
+								+e.table-row.flex._vertical
+									+e.table-cell
+										+e.table-text.h6 Платеж
+									+e.table-cell
+										+e.table-bold.h6 от 300₽/мес
+								+e.table-row.flex._vertical
+									+e.table-cell
+										+e.table-text.h6 Оценили
+									+e.table-cell
+										+e.like.like__.h6
+											+e.icon
+												+icon('heart', '0 0 14 13')
+											| 5623
+							+button(false) Оформить без залога
+							+e.text.small Сегодня оформили 322 человек

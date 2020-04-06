@@ -2,6 +2,8 @@
 	color: $red;
 	position: relative;	
 
+	display: inline-flex;
+
 	&:before{
 		content: '';
 		background: $red;
@@ -37,6 +39,34 @@
 
 		}
 	}
+
+	&__icon{
+		display: block;
+		line-height: 1em;
+
+		&_arrow{
+			// width: 10px;
+			transform: rotate(90deg);	
+
+			svg{
+				width: 11px;
+				max-width: none;				
+			}			
+
+			.triangle{
+				stroke: $red;
+				transition: ease .15s;
+			}
+
+			.stroke{
+				fill: $red;
+				transition: ease .15s;
+
+				// stroke: none;
+			}		
+		}
+	}
+
 
 	&:hover{
 		&:before{

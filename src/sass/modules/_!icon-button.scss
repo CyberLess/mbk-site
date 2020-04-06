@@ -1,0 +1,57 @@
+.icon-button{
+	background: #F3F3F3;
+	border-radius: 5px;
+	position: relative;
+	padding-top: 9.4rem;
+	padding-bottom: 1.6rem;
+	padding-left: 2.5rem;
+	padding-right: 2.3rem;
+	display: block;
+	transition: ease .2s;
+
+	&__icon{
+		position: absolute;
+		width: 9rem;
+		height: 9rem;
+		left: 4rem;
+		margin-top: -4.5rem;
+		top: 0;
+		border-radius: 50%;
+		background-color: #fff;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		svg{
+			width: 3.4rem;
+			display: block;
+			fill: transparent;
+			stroke: #0E0E0E;
+			stroke-width: 2;
+			transition: ease .2s;
+		}
+	}
+
+	&__text{
+		display: flex;
+	}
+
+	&__link{
+		display: flex !important;
+	}
+
+	&:hover{
+		background-color: $red;
+		color: #fff;
+		
+		.icon-button{
+			&__icon{
+				svg{
+					stroke: $red;
+				}
+			}			
+		}
+
+	}
+}

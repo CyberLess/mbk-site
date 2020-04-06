@@ -7,4 +7,8 @@ var getRandomInt = (min, max) => {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-export { getRandomInt, requireAll, animationEnd, transitionEnd };
+var numberWithSpaces = (x) => {
+	return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
+
+export { getRandomInt, requireAll, animationEnd, transitionEnd, numberWithSpaces };

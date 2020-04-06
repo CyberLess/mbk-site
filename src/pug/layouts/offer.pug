@@ -2,23 +2,7 @@
 	+e.bg
 		+e.video.VIDEO(loop="" muted="" autoplay="" poster="")
 			source(type="video/mp4" src="/video.mp4")
-	+e.socials.socials__._fluid
-		+e.item
-			+e.link.A(href='#')
-				span(style="width: 21px")
-					+icon('yotube', '0 0 21 15')
-		+e.item
-			+e.link.A(href='#')
-				span(style="width: 18px")
-					+icon('insta', '0 0 18 19')
-		+e.item
-			+e.link.A(href='#')
-				span(style="width: 11px")
-					+icon('fb', '0 0 10 19')
-		+e.item
-			+e.link.A(href='#')
-				span(style="width: 24px")
-					+icon('vk', '0 0 24 15')
+	+socials(class="_default")
 	+e.wrap.wrap
 		+e.row.flex._vertical._justify
 			+e.box
@@ -33,6 +17,8 @@
 					+e.circle-item
 					+e.circle-item
 					+e.circle-item
-				//- +e.preview
+				+e.preview
+					+e.iframe.VIDEO(loop="" muted="" autoplay="" poster="")
+						source(type="video/mp4" src="/video.mp4")
 				//- 	+e.IFRAME.iframe(data-keepplaying width="1043" height="587" src="https://www.youtube.com/embed/kgaO45SyaO4?autoplay=1&mute=1&vq=medium&loop=1&playlist=kgaO45SyaO4&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
 				+e.inner

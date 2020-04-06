@@ -78,6 +78,49 @@
 .is-bold{
 	font-weight: bold !important;
 }
+
+.content{
+
+	li{
+		padding-left: 3.2rem;
+		display: block;
+		position: relative;
+
+		&:before{
+			content: '';
+			display: block;
+			box-sizing: border-box;
+			position: absolute;
+			left: 0;
+			top: 8px;
+			width: 8px;
+			height: 8px;
+			border: 2px solid $red;
+			border-radius: 50%;
+		}
+	}
+
+	&_big{
+		p, li{
+			font-size: 1.8rem;
+			line-height: 140%;		
+			
+			// &:not(:last-child){
+				margin-bottom: 1.9rem;
+			// }	
+		}
+
+		li{
+			margin-bottom: 1.4rem;
+		}
+
+		ul{
+			padding-top: 1.5rem;
+
+		}
+	}
+}
+
 @include max-screen($small_desktop) {
 	.h1, .content h1{
 		font-size: 5.6rem;

@@ -1,0 +1,26 @@
+.mark{
+	background: #F3F3F3;
+	border-radius: 5px;
+	font-size: 1.2rem;
+	line-height: 1em;
+	margin: .8rem 0;
+	padding: 0 1.5rem;
+	height: 2.8rem;
+	color: $dark;
+	display: inline-flex;
+	align-items: center;
+
+	&_white{
+		background-color: #fff;
+
+	}
+
+	&_big{
+		height: 3.2rem;
+	}
+
+
+	&:not(:last-child){
+		margin-right: 1.1rem;
+	}
+}

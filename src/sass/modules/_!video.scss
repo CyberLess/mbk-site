@@ -34,4 +34,17 @@
 		}
 
 	}
+
+	@include max-screen($small_tablet) {
+		&__play{
+			width: 44px;
+			height: 44px;
+			margin-top: -22px;
+			margin-left: -22px;
+			border-width: 1px;
+			&:before{
+				border-width: 3px 0 3px 4px;
+			}
+		}
+	}
 }

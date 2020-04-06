@@ -14,7 +14,7 @@
 		}
 	}
 
-	&_fluid{
+	&_default{
 		background: #F2F4F7;
 		border-radius: 5px;
 		overflow: hidden;
@@ -29,6 +29,61 @@
 				&:hover{
 					background-color: $pink;
 					fill: #fff;
+				}
+			}
+
+			&__item{
+				&_youtube{
+					svg{
+						width: 2.1rem;
+					}
+
+					.socials{
+						&__link{
+							&:hover{
+								background: $red;
+							}
+						}
+					}
+				}
+				&_inst{
+					svg{
+						width: 1.8rem;
+					}
+
+					.socials{
+						&__link{
+							&:hover{
+								background: $pink;
+							}
+						}
+					}
+				}
+				&_fb{
+					svg{
+						width: 1.1rem;
+					}
+
+					.socials{
+						&__link{
+							&:hover{
+								background: #4267B2;
+							}
+						}
+					}
+				}
+				&_vk{
+					svg{
+						width: 2.4rem;
+					}
+
+					.socials{
+						&__link{
+							&:hover{
+								background: #4A76A8;
+							}
+						}
+					}
 				}
 			}
 		}
@@ -51,5 +106,9 @@
 				}
 			}			
 		}
+	}
+
+	&_white{
+		background-color: #fff;
 	}
 }

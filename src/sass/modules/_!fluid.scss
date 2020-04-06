@@ -1,0 +1,12 @@
+.fluid{
+	position: fixed;
+	margin-right: 67/1920*100%;
+	margin-bottom: 67/1920*100%;
+	bottom: 0;
+	right: 0;
+	z-index: 600;
+
+	@include max-screen($large_tablet) {
+		display: none;
+	}
+}

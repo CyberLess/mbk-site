@@ -13,6 +13,36 @@
 	border-radius: 5px;
 	transition: ease .15s;
 
+	&_border{
+		background: transparent;
+		border: 1px solid $red;
+		color: $red;
+
+		&:hover{
+			color: #fff;
+			border-color: #000;
+
+			.btn{
+				&__icon{
+					.triangle{
+						stroke: #fff;
+					}
+
+					.stroke{
+						fill: #fff;
+						// stroke: none;
+					}	
+				}
+			}
+		}
+	}
+
+	&_dark{
+		color: $dark;
+		background: transparent;
+		border-color: $dark;
+	}	
+
 	&:hover{
 		background-color: #000;
 
@@ -65,34 +95,5 @@
 		}
 	}
 
-	&_border{
-		background-color: transparent;
-		border: 1px solid $red;
-		color: $red;
-
-		&:hover{
-			color: #fff;
-			border-color: #000;
-
-			.btn{
-				&__icon{
-					.triangle{
-						stroke: #fff;
-					}
-
-					.stroke{
-						fill: #fff;
-						// stroke: none;
-					}	
-				}
-			}
-		}
-	}
-
-	&_dark{
-		color: $dark;
-		background: transparent;
-		border-color: $dark;
-	}
 
 }

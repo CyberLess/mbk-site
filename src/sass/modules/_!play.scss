@@ -100,7 +100,7 @@
 	}
 
 	&__iframe{
-		transform: scale(3);
+		transform: scale(2);
 		transition: ease .3s;
 		opacity: 0;		
 	}
@@ -119,12 +119,18 @@
 		// }
 
 		.play{
-			&__inner{
-				&:before{
-					border-color: transparent transparent transparent $red;
-				}
+			&__iframe{
+				opacity: 1;
 			}
 		}
+
+		// .play{
+		// 	&__inner{
+		// 		&:before{
+		// 			border-color: transparent transparent transparent $red;
+		// 		}
+		// 	}
+		// }
 
 		// .play__iframe{
 		// 	opacity: 1;

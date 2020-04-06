@@ -3,6 +3,9 @@
 
 	&:hover{
 		.article{
+			&__name{
+				color: $red;
+			}
 			&__preview{
 				img{
 					transform: scale(1.15);
@@ -32,6 +35,7 @@
 	}
 
 	&__name{
+		transition: ease .2s;
 		@include max-screen($large_mobile) {
 			font-size: 1.4rem;
 		}

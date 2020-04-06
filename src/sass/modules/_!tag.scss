@@ -97,4 +97,20 @@
 			}
 		}
 	}
+
+
+	&_dark-active{
+		.tag{
+			&__input{
+				&:checked{
+					&+.tag__text{
+						background-color: $dark;
+						border-color: $dark;
+						color: #fff;
+					}
+				}
+			}			
+		}
+	}
+
 }

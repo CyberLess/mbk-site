@@ -12,6 +12,10 @@
 	margin: auto;
 	position: relative;
 
+	&_small{
+		max-width: 1188px;
+	}
+
 	@include max-screen($large_desktop) {
 		max-width: 1200px;
 	}
@@ -34,7 +38,11 @@ html{
 
 html, body{
 
-	font-size: 62.5%; // 1rem = 10px 
+	font-size: 62.5%; // 1rem = 10px
+
+	@include max-screen($hd_plus) {
+		font-size: 56%;
+	} 
 
 	@include max-screen($large_desktop) {
 		font-size: 52%;
@@ -235,12 +243,12 @@ img, svg{
 
 	/* Track */
 	&::-webkit-scrollbar-track {
-		background: #eaebef;
+		background: transparent;
 	}
 
 	/* Handle */
 	&::-webkit-scrollbar-thumb {
-		background: #eff; 
+		background: $red; 
 	}
 
 	/* Handle on hover */

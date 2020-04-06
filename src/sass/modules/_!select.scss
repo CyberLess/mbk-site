@@ -1,0 +1,180 @@
+.select{
+	&__top{
+		margin-bottom: 1.5rem;
+	}
+
+	&__label{
+		color: rgba(#0E0E0E, .5);
+	}
+
+	.selectric{
+		height: 6.6rem;
+		background: #fff;
+		border: 1px solid rgba(#000000, .2);
+
+		display: flex;
+		align-items: center;
+
+		.label{
+			@extend .h6;
+			color: #010101;
+			margin-left: 2.7rem;
+			margin-right: 6rem;
+			line-height: 1em;
+			height: auto;
+		}
+
+		.button{
+			width: 6rem;
+			height: 100%;
+			position: absolute;
+			right: 0;
+			top: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: transparent;
+			font-size: 0;
+
+
+
+			&:before{
+				content: '';
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 0 4px 4px 4px;
+				border-color: transparent transparent #0e0e0e transparent;
+				transform: rotate(180deg);
+			}
+
+			&:after{
+				display: none;
+			}
+		}
+	}
+
+
+
+	.selectric-items{
+		margin-top: 2.9rem;
+		
+		box-shadow: none;
+		
+		border: 1px solid rgba(0, 0, 0, 0.2);
+
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+			height: 2.4rem;
+			width: 2.4rem;
+			top: 0;
+			position: absolute;
+			left: 50%;
+			margin-left: -1.2rem;
+			margin-top: -1.2rem;
+			border: 1px solid rgba(0, 0, 0, 0.2);
+			box-sizing: border-box;
+			transform: rotate(45deg);
+			background: #FFFFFF;
+		}
+	}
+
+	.selectric-scroll{
+		background: #FFFFFF;
+		padding: 3.4rem 0;
+		z-index: 20;
+		
+		position: relative;
+
+		@extend .css-scrollbar;
+
+		li{
+			@extend .h6;
+			height: 5rem;
+			align-items: center;
+			display: flex;
+			color: #0E0E0E;
+			margin: 0 1rem;
+			padding: 0 6.4rem;
+			position: relative;
+
+			&:before{
+				content: '';
+				display: block;
+				position: absolute;
+				background: url('/img/select_check.svg') center no-repeat;
+				width: 2.4rem;
+				height: 2.4rem;
+				left: 2.4rem;
+				top: 50%;
+				margin-top: -1.2rem;
+				opacity: 0;
+				visibility: hidden;
+				transition: ease .25s;
+
+			}
+
+			&.selected{
+				background: #fff;
+				&:before{
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+
+			&:hover{
+				background: #F3F3F3;
+			}
+		}
+	}
+
+	.selectric-wrapper{
+		&.selectric-open{
+			.selectric .button:before{
+				transform: rotate(0deg);
+				
+			}
+		}
+		&.selectric-above{
+			&.selectric-open{
+				.selectric .button:before{
+					transform: rotate(180deg);
+					
+				}
+			}
+			.selectric-items{
+				margin-top: 0;
+				margin-bottom: 2.9rem;
+
+				&:before{
+					top: auto;
+					bottom: 0;
+					margin-top: 0;
+					margin-bottom: -1.2rem;
+				}
+			}
+		}
+	}
+
+	@include max-screen($large_mobile) {
+		&__label{
+			font-size: 1.2rem;
+			margin-bottom: 1.6rem;
+		}
+
+		.selectric{
+			height: 5rem;
+
+			.label{
+				margin-left: 3.1rem;
+				font-size: 1.4rem;
+			}
+
+			.button{
+				width: 6.5rem;
+			}
+		}
+	}
+}

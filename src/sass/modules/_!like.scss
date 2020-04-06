@@ -1,0 +1,15 @@
+.like{
+	line-height: 4.4rem;
+	color: $red;
+	padding-left: 2.7rem;
+	position: relative;
+
+	&__icon{
+		position: absolute;
+		left: 0;
+		top: 50%;
+		width: 1.6rem;
+		fill: $red;
+		margin-top: -.7rem;
+	}
+}

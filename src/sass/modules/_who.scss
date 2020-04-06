@@ -1,19 +1,22 @@
 .who{
 	background: #fff;
-	padding: 12rem 0;
+	padding-bottom: 12rem;
 	border-radius: 10px;
+	overflow: hidden;
 
 	@include max-screen($large_tablet) {
 		border-radius: 0px;
-		padding: 9rem 0;
+		// padding: 9rem 0;
+		padding-bottom: 9rem;
 	}
 
 	@include max-screen($small_tablet) {
-		padding: 7rem 0;
+		// padding: 7rem 0;
+		padding-bottom: 7rem;
 	}
 
 	@include max-screen($large_mobile) {
-		padding-top: 5rem;
+		// padding-top: 5rem;
 		padding-bottom: 3.4rem;
 		.owl-nav{
 			margin-left: 15px;
@@ -36,10 +39,10 @@
 	}
 
 	&__tabs{
-		margin-top: -6.5rem;
+		// margin-top: -6.5rem;
 
-		@include max-screen($small_tablet) {
-			margin-top: 2rem;
-		}
+		// @include max-screen($small_tablet) {
+		// 	margin-top: 2rem;
+		// }
 	}
 }	

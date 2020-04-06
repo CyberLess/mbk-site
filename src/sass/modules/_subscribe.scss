@@ -135,7 +135,9 @@
 
 			&:before{
 				content: '';
-				display: block;
+				display: inline-block;
+				box-sizing: border-box;
+				height: auto;
 				position: absolute;
 				left: 0;
 				bottom: 0;

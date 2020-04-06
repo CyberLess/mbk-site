@@ -1,6 +1,10 @@
 .footer{
 	background: #F3F3F3;
 
+	&_white{
+		background-color: #fff;
+	}
+
 	@include max-screen($large_mobile) {
 		background: #fff;
 	}
