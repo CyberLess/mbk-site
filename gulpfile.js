@@ -1,17 +1,17 @@
 const projectName = 'mbk-site';//__dirname.replace(/D:\\GULP\\/g, '').toLowerCase();
 const path = require('./path.json');
 
-const ftpData = require('./ftp.json');
+//const ftpData = require('./ftp.json');
 
-const 
+const
     gulp          = require('gulp'),
     sass          = require('gulp-sass'),
     autoprefixer  = require('gulp-autoprefixer'),
-    cssmin        = require('gulp-cssmin'), 
+    cssmin        = require('gulp-cssmin'),
     sassGlob      = require('gulp-sass-glob'),
     cache         = require('gulp-cache'),
     pug           = require('gulp-pug'),
-    del           = require('del'), 
+    del           = require('del'),
     glob          = require('glob'),
     fs            = require('fs'),
     ftp           = require('vinyl-ftp'),
@@ -47,7 +47,7 @@ gulp.task('sass', () => {
 
     return Promise.all([
         new Promise((resolve, reject)=> {
-            gulp.src(path.src.css)   
+            gulp.src(path.src.css)
                 .pipe(sassGlob())
                 .pipe(plumber({errorHandler}))
                 .pipe(sass())
@@ -57,7 +57,7 @@ gulp.task('sass', () => {
 
                     if(replaced.includes('url') && (replaced.includes('background') || replaced.includes('background-image'))){
 
-                        let selector = replaced.substr(0, replaced.indexOf('{')).replace(/}/g, '').trim(); 
+                        let selector = replaced.substr(0, replaced.indexOf('{')).replace(/}/g, '').trim();
 
                         let bg =  replaced.match(/\b(?:background\s*?([^;>]*?)(?=[;">}]);)/g).join(" ").replace('/img/','/app/img/')
 
@@ -66,67 +66,67 @@ gulp.task('sass', () => {
 
                     return replaced;
 
-                }))  
+                }))
                 .on('error', reject)
                 .pipe(gulp.dest(path.build.css))
-                .on('end', resolve)                           
+                .on('end', resolve)
         })
     ]).then(()=>{
 
-        return gulp.src(path.src.css)   
-            .pipe(sassGlob())  
-            .pipe(plumber({}))     
-            .pipe(sass())             
+        return gulp.src(path.src.css)
+            .pipe(sassGlob())
+            .pipe(plumber({}))
+            .pipe(sass())
             .pipe(replace(/[^{]*\{([^}]*)*}/g, match => {
 
                 let replaced = match;
-                
+
                 if(replaced.includes('url') && (replaced.includes('background') || replaced.includes('background-image'))){
-                    let newreplaced = replaced.replace(/\b(?:background\s*?([^;>]*?)(?=[;">}]);)/g, ''); 
+                    let newreplaced = replaced.replace(/\b(?:background\s*?([^;>]*?)(?=[;">}]);)/g, '');
                     replaced = newreplaced
                 }
 
                 return replaced;
 
-            }))              
+            }))
             .pipe(inject.append(injectCss))
-            .pipe(autoprefixer(['last 10 versions', '> 1%', 'ie 8'], { cascade: true })) 
-            .pipe(cssmin())            
-            .pipe(gulp.dest(path.build.css)) 
+            .pipe(autoprefixer(['last 10 versions', '> 1%', 'ie 8'], { cascade: true }))
+            .pipe(cssmin())
+            .pipe(gulp.dest(path.build.css))
             .pipe(browserSync.stream());
 
-    });    
+    });
 })
 
 
 gulp.task('deploy', () => {
- 
-    var conn = ftp.create( {
-        host:     ftpData.host,
-        user:     ftpData.user,
-        password: ftpData.pass,
-        parallel: 10
-    });
 
-    var supPath = `/www/${projectName}.${ftpData.domain}/`;
-
-    var globs = [
-        'dist/**/*.*'
-    ];
-
-    conn.rmdir(supPath, e => {
-        if (e === undefined) {
-            return gulp.src(globs, {base: 'dist', buffer: false})
-                    .pipe(conn.dest(supPath));
-            
-        }
-        return console.log(e);
-    });
+    // var conn = ftp.create( {
+    //     host:     ftpData.host,
+    //     user:     ftpData.user,
+    //     password: ftpData.pass,
+    //     parallel: 10
+    // });
+    //
+    // var supPath = `/www/${projectName}.${ftpData.domain}/`;
+    //
+    // var globs = [
+    //     'dist/**/*.*'
+    // ];
+    //
+    // conn.rmdir(supPath, e => {
+    //     if (e === undefined) {
+    //         return gulp.src(globs, {base: 'dist', buffer: false})
+    //                 .pipe(conn.dest(supPath));
+    //
+    //     }
+    //     return console.log(e);
+    // });
 });
 
 gulp.task('open', () => {
-    gulp.src(__filename)
-        .pipe(open({uri: `http://${projectName}.${ftpData.domain}/`}))
+    // gulp.src(__filename)
+    //     .pipe(open({uri: `http://${projectName}.${ftpData.domain}/`}))
 });
 
 gulp.task('svgSpriteBuild', () => {
@@ -164,11 +164,11 @@ gulp.task('imgToWebp', () => {
                 })
             ],
         });
-     
+
     })();
 })
 
-gulp.task('img', ['imgToWebp'], () => {     
+gulp.task('img', ['imgToWebp'], () => {
 
     (async () => {
         const files = await imgmin([path.src.img, "src/img/*.svg"], path.build.img, {
@@ -182,9 +182,9 @@ gulp.task('img', ['imgToWebp'], () => {
             ],
 
         });
-     
+
     })();
- 
+
 });
 
 gulp.task('list', ()=> {
@@ -274,41 +274,41 @@ gulp.task('pug',  () => {
 
             return sub + match;
 
-        }))   
+        }))
         .pipe(replace(/<img.*?src="(.*?)".*?(>)/g, match => {
-             
+
             var attrs = match.replace(/(<img |<img|>|\/>)/g, '');
             var src, webpSrc, subAttr = [], template;
 
             attrs.match(/(\S+)=(["']?)([^\\\2]*?(?:\\[^\2].*?)*)(\2|$|>)/g).forEach((element) => {
                 if(element.indexOf("src") !== -1){
                     src = element.match(/("|')(.*?)("|').*?/g).toString().replace('/img/','/app/img/');
-                    webpSrc = src.replace(/(gif|jpg|jpeg|tiff|png)/g, 'webp') 
+                    webpSrc = src.replace(/(gif|jpg|jpeg|tiff|png)/g, 'webp')
                 }else{
                     subAttr.push(element.trim());
                 }
-            });         
+            });
 
             template =  `<picture>
                             <source type="image/webp" srcset=${webpSrc}>
                             <img src=${src} ${subAttr.join(" ")} />
-                        </picture>`; 
+                        </picture>`;
 
             if(!webpSrc.includes('svg'))
                 return template;
             else
                 return match;
 
-        })) 
+        }))
         .pipe(replace(/(?:^|[^а-яёА-ЯЁ0-9_])(в|без|а|до|из|к|я|на|по|о|от|перед|при|через|с|у|за|над|об|под|про|для|и|или|со)(?:^|[^а-яёА-ЯЁ0-9_])/g, match => {
 
             var newText = (match.slice(-1) == " ") ? match.substr(0, match.length-1) + '&nbsp;' : match;
 
             return newText;
 
-        }))    
+        }))
         .pipe(prettify({indent_char: ' ', indent_size: 4}))
-        .pipe(gulp.dest(path.build.html)) 
+        .pipe(gulp.dest(path.build.html))
 });
 
 gulp.task('watch', ["concat"] , () => {
@@ -318,35 +318,35 @@ gulp.task('watch', ["concat"] , () => {
 
     gulp.watch(path.watch.css, (event, cb) => {
         setTimeout(()=>{gulp.start('sass');}, 1000);
-    }); 
+    });
 
     gulp.watch(path.watch.js, (event, cb) => {
         gulp.start('js');
-    }); 
+    });
 
     gulp.watch(path.watch.img, (event, cb) => {
         gulp.start('img');
-    }); 
-    
+    });
+
     gulp.watch(path.watch.objects, function(event, cb) {
         gulp.start('objects');
     });
-    
+
     gulp.watch(path.watch.attach, (event, cb) => {
         gulp.start('attach');
-    }); 
+    });
 
     gulp.watch(path.watch.fonts, (event, cb) => {
         gulp.start('fonts');
-    }); 
+    });
 
     gulp.watch(path.watch.html, (event, cb) => {
         gulp.start('pug');
-    }); 
+    });
 
     gulp.watch(path.watch.svg, (event, cb) => {
         gulp.start('svgSpriteBuild');
-    }); 
+    });
 
     gulp.watch(path.build.html + "*.html").on('change', browserSync.reload);
 
@@ -369,7 +369,7 @@ gulp.task('clear', callback => {
 })
 
 gulp.task('clean', ()=> {
-    return del.sync('dist'); 
+    return del.sync('dist');
 });
 
 gulp.task('default', ['watch']);

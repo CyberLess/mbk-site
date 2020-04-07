@@ -1,0 +1,9 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Недвижка';
+
+block content
+	+b.SECTION.group.white
+		include ../layouts/conditions-nedvig
+	include ../layouts/council

@@ -6,4 +6,27 @@
 	&__slider{
 		margin-top: -2.2rem;
 	}
+	&--nedvig{
+		min-height: 845px;
+		padding-top: 11.7rem;
+		padding-bottom: 2rem;
+		& .conditions__slider{
+			min-height: 620px;
+		}
+		& .gallery-slider__cell_slider {
+			margin-top: 10.0rem;
+			margin-bottom: 10.0rem;
+		}
+		& .gallery-slider__cell_info {
+			width: 20.6%;
+			padding-left: 3rem;
+			padding-right: 3rem;
+			padding-top: 5.3rem;
+			padding-bottom: 5.3rem;
+			right: 9.5rem;
+			position: absolute;
+			margin: 0;
+			top: 13.7rem;
+		}
+	}
 }
