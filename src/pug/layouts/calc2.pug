@@ -1,0 +1,122 @@
++b.SECTION.quiz
+	+e.inner
+		+e.wrap.wrap
+			+e.FORM.box.form.js-quiz
+				+e.top.flex._vertical._justify
+					+e.title.h4 Выберите сумму и срок кредита
+					+e.text.h6.is-regular Шаг 1 из 4
+				+e.row.flex._justify
+					+e.column._left
+						+e.slider
+							+e.slide._top.js-slide.is-active
+								+e.row.flex._justify._vertical
+									+e.cell
+										+e.field.input__
+											+e.top
+												+e.label.p
+													| Выберите сумму кредита
+											+e.parent.range-input__
+												+e.INPUT.input(type="text" autocomplete="off" name="calc[price]" placeholder="0 ₽" value="300000")
+												+e.char.h6 ₽
+												+e.bottom
+													+e.line
+													+e.path(data-min="150000" data-step="50000" data-max="15000000")
+											+e.info.flex._vertical._justify
+												+e.label.p
+													| 150 тыс.
+												+e.label.p
+													| 15 млн
+									+e.cell
+										+e.field.input__
+											+e.top
+												+e.label.p
+													| Выберите срок кредита
+											+e.parent.range-input__
+												+e.INPUT.input(type="text" autocomplete="off" name="calc[time]" placeholder="0 ₽" value="72")
+												+e.char.h6 мес.
+												+e.bottom
+													+e.line
+													+e.path(data-min="12" data-step="1" data-max="300")
+											+e.info.flex._vertical._justify
+												+e.label.p
+													| 12 мес.
+												+e.label.p
+													| 25 лет
+									+e.cell._big.css-text-right
+										+e.text.is-regular.h6
+											| Ежемесячный платеж
+									+e.cell._big
+										+e.price.is-bold.h4
+											| 3 323 ₽
+									+e.cell._big
+										+e.field.input__
+											+e.top
+												+e.label.p
+													| Ваше имя
+											+e.field
+												+e.INPUT.item._square.h6(type="text" placeholder="Иванов Иван Иванович" name="name")
+									+e.cell._big
+										+e.field.input__
+											+e.top
+												+e.label.p
+													| Ваш телефон
+											+e.field
+												+e.INPUT.item._square.h6(type="text" placeholder="7 903 123 45 65" name="phone")
+									+e.cell._noscope.css-text-right
+										+e.small.small
+											| Нажимая на кнопку «Продолжить», вы выражаете
+											br
+											| согласие 
+											a.a(href="#") на обработку ваших персональных данных
+									+e.cell._noscope
+										+button(false)(class="js-goto" data-dir="next") Продолжить
+							+e.slide.js-slide
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 52%
+											+e.done
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 52%
+									+e.help.h6 +26% за заполнение второго шага анкеты
+								+e.bold.h6 Подробнее о Вас
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Ваш возраст
+										+e.parent.select__.js-select
+											+e.field.SELECT(name="calc[age]")
+												option 10
+												option 20
+												option 30
+												option 40
+												option 50
+												option 60
+						+e.bottom.flex._vertical._justify
+							+e.bottom-cell._left
+								+e.status.bar__
+									+e.done
+								+e.bottom-row.flex._vertical._justify
+									+e.text.small.strong
+										| Вопрос 
+										span.text-red.is-current 5 
+										| из 
+										span.is-total 7
+									+e.gray.small Опрос займет не более 2 минут
+
+							+e.bottom-cell._right.flex._vertical._justify
+								+e.bottom-part._left
+									+e.back.back-button__.js-goto(data-dir="prev")
+										+e.IMG.arrow(src="/app/img/arrow_vector.svg")
+								+e.bottom-part._right
+									+button(false)(class="js-goto" data-dir="next")  Далее
+					+e.column._right
+						+e.avatar
+							+e.avatar-inner
+								+e.IMG.avatar-image.object-fit(src="/img/avatar_big.jpg")
+						+e.name.h6 Марина Алексеева
+						+e.about.small Ваш персональный менеджер

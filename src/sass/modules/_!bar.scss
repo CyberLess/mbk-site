@@ -1,0 +1,15 @@
+.bar{
+	height: 3px;
+	background: #CCCCCC;
+	margin-bottom: 1.3rem;
+	position: relative;
+	
+	&__done{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 50%;
+		height: 100%;
+		background-color: $red;
+	}
+}

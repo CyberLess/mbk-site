@@ -6,6 +6,7 @@ import './modules/_form';
 import './modules/_accordion';
 import './modules/_gallery-slider';
 import './modules/_range-input';
+import './modules/_quiz';
 import './modules/_select';
 import './modules/_filter';
 import './modules/_services';

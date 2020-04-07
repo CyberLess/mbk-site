@@ -5,12 +5,12 @@
 		+e.form.form.FORM
 			+e.form-row.flex
 				+e.form-cell
-					+e.form-field.range-input__
+					+e.form-field.input__
 						+e.top
 							+e.label.p
 								| Выберите сумму кредита
-						+e.parent
-							+e.INPUT.input(type="text" autocomplete="off" name="calc[price]" placeholder="0 ₽" value="300000")
+						+e.parent.range-input__
+							+e.INPUT.input(type="text" autocomplete="off" name="credit[price]" placeholder="0 ₽" value="300000")
 							+e.char.h6 ₽
 							+e.bottom
 								+e.line
@@ -21,42 +21,40 @@
 							+e.label.p
 								| 15 млн
 				+e.form-cell
-					+e.form-field.select__.js-select
+					+e.form-field.input__
 						+e.top
 							+e.label.p
 								| Выберите срок кредита
-						+e.item
-							+e.field.SELECT(name="time")
+						+e.parent.select__.js-select
+							+e.field.SELECT(name="credit[time]")
 								option 1 месяц
 								option 2 месяца
 								option 3 месяца
 								option 4 месяца
-
-
 			+e.form-tags.flex._start
 				+e.tag.tag__._dark-active.LABEL
-					+e.input.INPUT(type="checkbox" name="type" value='Популярные')
+					+e.input.INPUT(type="checkbox" name="credit[type]" value='Популярные')
 					+e.text.SPAN Популярные
 				+e.tag.tag__._dark-active.LABEL
-					+e.input.INPUT(type="checkbox" name="type" value='На авто')
+					+e.input.INPUT(type="checkbox" name="credit[type]" value='На авто')
 					+e.text.SPAN На авто
 				+e.tag.tag__._dark-active.LABEL
-					+e.input.INPUT(type="checkbox" checked="" name="type" value='На бизнес')
+					+e.input.INPUT(type="checkbox" checked="" name="credit[type]" value='На бизнес')
 					+e.text.SPAN На бизнес
 				+e.tag.tag__._dark-active.LABEL
-					+e.input.INPUT(type="checkbox" name="type" value='На ремонт')
+					+e.input.INPUT(type="checkbox" name="credit[type]" value='На ремонт')
 					+e.text.SPAN На ремонт
 				+e.tag.tag__._dark-active.LABEL
-					+e.input.INPUT(type="checkbox" name="type" value='На отдых')
+					+e.input.INPUT(type="checkbox" name="credit[type]" value='На отдых')
 					+e.text.SPAN На отдых
 				+e.tag.tag__._dark-active.LABEL
-					+e.input.INPUT(type="checkbox" name="type" value='На учебу')
+					+e.input.INPUT(type="checkbox" name="credit[type]" value='На учебу')
 					+e.text.SPAN На учебу
 				+e.tag.tag__._dark-active.LABEL
-					+e.input.INPUT(type="checkbox" name="type" value='На лечение')
+					+e.input.INPUT(type="checkbox" name="credit[type]" value='На лечение')
 					+e.text.SPAN На лечение
 				+e.tag.tag__._dark-active.LABEL
-					+e.input.INPUT(type="checkbox" name="type" value='На личные цели')
+					+e.input.INPUT(type="checkbox" name="credit[type]" value='На личные цели')
 					+e.text.SPAN На личные цели
 			+link(class="_red" href="#test") Открыть все условия
 		+e.list.service__._noscope

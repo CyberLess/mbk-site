@@ -1,0 +1,158 @@
+.quiz{
+	&__box{
+		padding: 6.1rem 8.5rem;
+		background: #FFFFFF;
+	}
+
+	&__inner{
+		padding-bottom: 2rem;
+		padding-top: 9.5rem;
+	}
+
+	&__name{
+		margin-bottom: 3px;
+	}
+
+	&__gray{
+		color: #868686;
+	}
+
+	&__back{
+		
+	}
+
+
+	&__bottom{
+		position: absolute;
+		left: 0;
+		width: 100%;
+		bottom: 0;
+
+		opacity: 0;
+		visibility: hidden;
+		transition: ease .1s;
+
+		&.is-visible{
+			opacity: 1;
+			visibility: visible;
+		}
+
+		&-part{
+			&_left{
+				width: 50/327*100%;
+			}
+			&_right{
+				width: 252/327*100%;
+			}
+		}
+
+		&-cell{
+			&_left{
+				width: 428/817*100%;
+			}
+			&_right{
+				width: 327/817*100%;
+
+				.btn{
+					min-width: 0;
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	&__cell{
+		width: 390/820*100%;
+		margin-bottom: 2.8rem;
+
+		&_noscope{
+			margin-bottom: 0;
+		}
+
+		&_big{
+			margin-bottom: 5.4rem;
+		}
+	}
+
+	&__button{
+		min-width: 25.2rem;
+	}
+
+	&__avatar{
+		width: 13.3rem;
+		margin: auto;
+		margin-bottom: 3.4rem;
+
+		&-inner{
+			position: relative;
+			padding-top: 100%;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+	}
+
+	&__bar{
+		margin-bottom: 5rem;
+	}
+
+	&__bold{
+		margin-bottom: 2.2rem;
+	}
+
+	&__slider{
+		
+	}
+
+	&__slide{
+		display: none;
+		position: relative;
+		padding-bottom: 11.5rem;
+
+		&.is-active{
+			display: block;
+		}
+
+		&_top{
+			padding-bottom: 0;
+			padding-top: 6.4rem;
+		}
+	}
+
+	&__column{
+		position: relative;
+		margin-top: 2.7rem;
+
+		&_left{
+			width: 821/1167*100%;
+		}
+
+		&_right{
+			width: 289/1167*100%;
+
+			padding-top: 7.2rem;
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
+			padding-bottom: 12rem;
+			text-align: center;
+
+			background: #F3F3F3;
+			border-radius: 5px;			
+			position: relative;
+			overflow: hidden;
+
+			&:before{
+				content: '';
+				display: block;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				width: 15.9rem;
+				height: 16.5rem;
+				margin-bottom: -4.9rem;
+				margin-right: -4.5rem;
+				background: url('/img/quiz_pattern.png') center no-repeat;
+				background-size: 100%;
+			}
+		}
+	}
+}

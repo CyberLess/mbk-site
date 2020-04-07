@@ -1,7 +1,7 @@
 extends ../layouts/base
 
 append vars
-	- title = 'Общая страница';
+	- title = 'Общая страница c квизом';
 
 block content
 
@@ -14,7 +14,7 @@ block content
 	include ../layouts/conditions
 	include ../layouts/council
 	+b.SECTION.group
-		include ../layouts/calc
+		include ../layouts/calc2
 		include ../layouts/faq
 
 block footer 
