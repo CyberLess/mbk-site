@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Недвижка</title>
-    <link rel="stylesheet" href="/app/css/app.css?v=1586362628819">
+    <link rel="stylesheet" href="/app/css/app.css?v=1586375660322">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
@@ -725,6 +725,49 @@
                 </div>
             </div>
         </header>
+        <section class="sell-apartment">
+            <div class="sell-apartment__wrap wrap">
+                <ul class="sell-apartment__breadcrumbs breadcrumbs flex flex_vertical">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link p" href="#">Главная</a>
+                    </li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link p" href="#">Услуги</a>
+                    </li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link p" href="#">Продать квартиру срочно</a>
+                    </li>
+                </ul>
+                <h2 class="sell-apartment__title h2">Продать квартиру срочно?</h2>
+                <p class="sell-apartment__slogan p">Оцените спрос на&nbsp;Вашу квартиру в&nbsp;1 клик</p>
+                <p class="sell-apartment__applications sell-apartment__applications_mobile">Принимаем заявки из&nbsp;Москвы и&nbsp;Московской области</p>
+                <form class="sell-apartment__form sell-form" action="/" method="POST">
+                    <label class="sell-form__label sell-form__label_address">Адрес
+                        <input class="sell-form__input" type="text" placeholder="Москва, улица Шаболовка, 10" name="address" required="required" />
+                    </label>
+                    <label class="sell-form__label sell-form__label_price">Цена<span class="sell-form__input-wrap"><input class="sell-form__input" type="text" placeholder="5 000 000" name="price" required="required"/></span>
+                    </label>
+                    <label class="sell-form__label sell-form__label_rooms">Комнат<span class="sell-form__form-field select js-select"><span class="select__item"><select class="select__field" name="howMuchRooms"><option>1</option><option>2</option><option>3</option><option>4</option></select></span></span>
+                    </label>
+                    <label class="sell-form__label sell-form__label_square">Площадь<span class="sell-form__input-wrap"><input class="sell-form__input" type="text" placeholder="100" name="square" required="required"/></span>
+                    </label>
+                    <button class="sell-form__btn btn" type="submit">Получи оценку онлайн</button>
+                </form>
+                <div class="sell-apartment__addition">
+                    <p class="sell-apartment__applications">Принимаем заявки из&nbsp;Москвы и&nbsp;МО</p>
+                    <p class="sell-apartment__assessment">Сегодня получили оценку: 322 человека</p>
+                </div>
+            </div>
+        </section>
+        <div class="fluid">
+            <div class="fluid__socials socials socials_default socials_white">
+                <div class="socials__item socials__item_youtube"><a class="socials__link" href="#"><span><svg class="icon icon-yotube" viewBox="0 0 21 15"><use xlink:href="/app/icons/sprite.svg#yotube"></use></svg></span></a>
+                </div>
+                <div class="socials__item socials__item_inst"><a class="socials__link" href="#"><span><svg class="icon icon-insta" viewBox="0 0 18 19"><use xlink:href="/app/icons/sprite.svg#insta"></use></svg></span></a>
+                </div>
+                <div class="socials__item socials__item_fb"><a class="socials__link" href="#"><span><svg class="icon icon-fb" viewBox="0 0 10 19"><use xlink:href="/app/icons/sprite.svg#fb"></use></svg></span></a>
+                </div>
+                <div class="socials__item socials__item_vk"><a class="socials__link" href="#"><span><svg class="icon icon-vk" viewBox="0 0 24 15"><use xlink:href="/app/icons/sprite.svg#vk"></use></svg></span></a>
+                </div>
+            </div>
+        </div>
         <section class="group white">
             <section class="conditions conditions--nedvig gray">
                 <div class="conditions__wrap wrap">
@@ -960,7 +1003,7 @@
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/app.js?v=1586362628862"></script>
+    <script src="/app/js/app.js?v=1586375660355"></script>
 </body>
 
 </html>

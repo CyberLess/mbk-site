@@ -1,0 +1,111 @@
+.container {
+  section.sell-apartment {
+    @include max-screen($small_tablet) {
+      padding-bottom: 2rem;
+
+      background: none;
+    }
+  }
+}
+
+.sell-apartment__wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.sell-apartment {
+  padding-top: 4.5rem;
+  padding-bottom: 9rem;
+
+  background-image: url("/img/sell-apartment-bg@desk.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+.sell-apartment__breadcrumbs {
+  margin-bottom: 5rem;
+}
+
+.sell-apartment__title {
+  margin-bottom: 1.5rem;
+
+  @include max-screen($small_tablet) {
+    width: 83%;
+  }
+}
+
+.sell-apartment__slogan {
+  margin-bottom: 5.5rem;
+
+  font-family: "Geometria", Arial, sans-serif;
+  font-size: 2.5rem;
+
+  @include max-screen($large_mobile) {
+    font-size: 1.2rem;
+  }
+
+  @include max-screen($small_tablet) {
+    margin-bottom: 3.5rem;
+  }
+}
+
+p.sell-apartment__applications.sell-apartment__applications_mobile {
+  display: none;
+
+  @include max-screen($small_tablet) {
+    display: block;
+    width: 90%;
+    margin-bottom: 4rem;
+    padding-left: 3rem;
+
+    font-size: 1.3rem;
+    line-height: 1.5;
+    font-weight: bold;
+
+    background-size: 1.5rem 1.5rem;
+    background-position: 0 0;
+  }
+}
+
+.sell-apartment__addition {
+  display: flex;
+  margin-bottom: 3rem;
+
+  font-size: 1.8rem;
+
+  @include max-screen($large_mobile) {
+    font-size: 1rem;
+  }
+}
+
+.sell-apartment__applications {
+  width: 22%;
+  margin-right: 20rem;
+  padding-left: 4rem;
+
+  background-image: url("/img/red-star.svg");
+  background-repeat: no-repeat;
+  background-position: 0.2rem 0.7rem;
+  background-size: 1.8rem 1.8rem;
+
+  @include max-screen($large_tablet) {
+    width: 25%;
+  }
+
+  @include max-screen($small_tablet) {
+    display: none;
+  }
+}
+
+.sell-apartment__assessment {
+  width: 39.6%;
+
+  @include max-screen($large_tablet) {
+    width: 33%;
+  }
+
+  @include max-screen($large_mobile) {
+    width: 100%;
+  }
+}
