@@ -8,8 +8,12 @@ $(()=>{
   }
 
   $numberItems.on('input', function () {
+    const lastChar = this.value[this.value.length - 1];
+
+    this.value = this.value.replace(/[A-Za-zА-Яа-яЁё]/, '');
     this.value = this.value.replace (/\D/, '');
-    if (this.value !== '') {
+
+    if (this.value !== '' && $.isNumeric(lastChar)) {
       this.value = numberWithSpaces(Number(this.value.replace(/\s/g, '')));
     }
   });
