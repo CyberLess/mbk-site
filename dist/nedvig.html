@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Недвижка</title>
-    <link rel="stylesheet" href="/app/css/app.css?v=1586378761525">
+    <link rel="stylesheet" href="/app/css/app.css?v=1586385465486">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
@@ -740,13 +740,13 @@
                 <p class="sell-apartment__applications sell-apartment__applications_mobile">Принимаем заявки из&nbsp;Москвы и&nbsp;Московской области</p>
                 <form class="sell-apartment__form sell-form" action="/" method="POST">
                     <label class="sell-form__label sell-form__label_address">Адрес
-                        <input class="sell-form__input" type="text" placeholder="Москва, улица Шаболовка, 10" name="address" required="required" />
+                        <input class="sell-form__input" type="text" placeholder="Москва, улица Шаболовка, 10" name="address" autocomplete="off" required="required" />
                     </label>
-                    <label class="sell-form__label sell-form__label_price">Цена<span class="sell-form__input-wrap"><input class="sell-form__input" type="text" placeholder="5 000 000" name="price" required="required"/></span>
+                    <label class="sell-form__label sell-form__label_price">Цена<span class="sell-form__input-wrap"><input class="sell-form__input" type="text" placeholder="5 000 000" name="price" autocomplete="off" inputmode="numeric" required="required"/></span>
                     </label>
                     <label class="sell-form__label sell-form__label_rooms">Комнат<span class="sell-form__form-field select js-select"><span class="select__item"><select class="select__field" name="howMuchRooms"><option>1</option><option>2</option><option>3</option><option>4</option></select></span></span>
                     </label>
-                    <label class="sell-form__label sell-form__label_square">Площадь<span class="sell-form__input-wrap"><input class="sell-form__input" type="text" placeholder="100" name="square" required="required"/></span>
+                    <label class="sell-form__label sell-form__label_square">Площадь<span class="sell-form__input-wrap"><input class="sell-form__input" type="text" placeholder="100" name="square" autocomplete="off" inputmode="numeric" required="required"/></span>
                     </label>
                     <button class="sell-form__btn btn" type="submit">Получи оценку онлайн</button>
                 </form>
@@ -1003,7 +1003,7 @@
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/app.js?v=1586378761607"></script>
+    <script src="/app/js/app.js?v=1586385465654"></script>
 </body>
 
 </html>
