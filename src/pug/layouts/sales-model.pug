@@ -1,0 +1,17 @@
++b.SECTION.sales-model
+    +e.wrap.wrap
+        +e.container-data
+            +e.title.h3
+                | Получите индивидуальную модель продаж Вашей квартиры
+            +e.FORM.form
+                +e.data
+                    +e.INPUT.input(placeholder='Имя' name='name' required)
+                    +e.INPUT.input(placeholder='Телефон' name='phone' type='tel' required)
+                +e.INPUT.submit.btn(type='submit' value='Получи модель продаж')
+                +e.INPUT.consent(type='checkbox' name='consent' id='consent' value='agreed' checked)
+                +e.LABEL.agreed(for='consent')
+                    | Я согласен с условиями передачи данных
+        +e.container-img
+            +e.IMG.img(src="/img/journal.png")
+            +e.P.region
+                | Принимаем заявки из Москвы и Московской обл.
