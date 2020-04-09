@@ -1,12 +1,14 @@
 .sell-popup {
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: 0;
+  right: -100%;
   z-index: 602;
 
   display: none;
   width: 72%;
+  height: 100vh;
 
+  opacity: 0;
   background-color: #ffffff;
 }
 
@@ -153,7 +155,7 @@
 
 .sell-popup__arrow {
   position: absolute;
-  top: 2.7rem;
+  top: 2.9rem;
   right: 3.7rem;
 
   width: 12px;
