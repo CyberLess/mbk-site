@@ -1,8 +1,8 @@
 .sell-popup {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
-  z-index: 502;
+  z-index: 602;
 
   width: 72%;
 
@@ -13,9 +13,29 @@
   padding-left: 11%;
   padding-right: 13.5%;
 
+  @include max-screen($large_desktop) {
+    padding-left: 8%;
+    padding-right: 9%;
+  }
+
+  @include max-screen($large_tablet) {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
   &_top {
     padding-top: 6.5rem;
     background-color: #f3f3f3;
+  }
+
+  &_bottom {
+    padding-top: 3.6rem;
+    padding-bottom: 7.5rem;
+
+    .sell-popup__container {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 
@@ -46,6 +66,10 @@
   background-color: transparent;
 
   stroke: #FF0400;
+
+  @include max-screen($large_desktop) {
+    right: 9%;
+  }
 
   &:hover,
   &:focus {
@@ -109,11 +133,39 @@
   text-align: center;
 }
 
+.sell-popup__show-more {
+  position: relative;
+
+  width: 305px;
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    .sell-popup__arrow {
+      fill: #ffffff;
+    }
+  }
+}
+
+.sell-popup__arrow {
+  position: absolute;
+  top: 2.7rem;
+  right: 3.7rem;
+
+  width: 12px;
+  height: 8px;
+  transform: rotate(90deg);
+  fill: #ff0500;
+}
+
 .overlay {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 501;
+  z-index: 601;
 
   display: block;
   width: 100%;
