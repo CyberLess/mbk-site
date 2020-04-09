@@ -16,3 +16,4 @@ import './modules/_submenu';
 import './modules/_sliders';
 import './modules/_reviews';
 import './modules/_sell-apartment';
+import './modules/_sell-popup';

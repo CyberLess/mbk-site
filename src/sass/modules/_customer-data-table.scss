@@ -1,0 +1,60 @@
+.customer-data-table {
+  width: 100%;
+  margin-bottom: 4.3rem;
+  border-collapse: collapse;
+
+  font-size: 1.8rem;
+
+  @include max-screen($large_desktop) {
+    font-size: 1.9rem;
+  }
+
+  @include max-screen($large_tablet) {
+      font-size: 1.5rem;
+  }
+}
+
+.customer-data-table__head-row {
+  text-align: left;
+
+  th {
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid #000000;
+  }
+}
+
+.customer-data-table__item {
+  position: relative;
+
+  padding-top: 1.6rem;
+
+  &:not(:last-of-type) {
+    padding-right: 1em;
+  }
+
+  &_buyer {
+    width: 32%;
+  }
+
+  &_district {
+    width: 27%;
+    padding-left: 3rem;
+  }
+
+  &_rooms {
+    width: 23%;
+  }
+}
+
+.customer-data-table__metro-icon {
+  position: absolute;
+  top: 2.3rem;
+  left: 0;
+
+  flex-shrink: 0;
+  display: block;
+  width: 2.5rem;
+  height: 1.3rem;
+
+  fill: #EF7E24;
+}
