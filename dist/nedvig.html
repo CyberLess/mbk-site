@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Недвижка</title>
-    <link rel="stylesheet" href="/app/css/app.css?v=1586375660322">
+    <link rel="stylesheet" href="/app/css/app.css?v=1586427822376">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
@@ -768,6 +768,29 @@
                 </div>
             </div>
         </div>
+        <section class="sales-model">
+            <div class="sales-model__wrap wrap">
+                <div class="sales-model__container-data">
+                    <div class="sales-model__title h3">Получите индивидуальную модель продаж Вашей квартиры</div>
+                    <form class="sales-model__form">
+                        <div class="sales-model__data">
+                            <input class="sales-model__input" placeholder="Имя" name="name" required="required" type="text" />
+                            <input class="sales-model__input" placeholder="Телефон" name="phone" type="tel" required="required" />
+                        </div>
+                        <input class="sales-model__submit btn" type="submit" value="Получи модель продаж" />
+                        <input class="sales-model__consent" type="checkbox" name="consent" id="consent" value="agreed" checked="checked" />
+                        <label class="sales-model__agreed" for="consent">Я согласен с&nbsp;условиями передачи данных</label>
+                    </form>
+                </div>
+                <div class="sales-model__container-img">
+                    <picture>
+                        <source type="image/webp" srcset="/app/img/journal.webp">
+                            <img src="/app/img/journal.png" class="sales-model__img" alt="" role="presentation" />
+                    </picture>
+                    <p class="sales-model__region">Принимаем заявки из&nbsp;Москвы и&nbsp;Московской обл.</p>
+                </div>
+            </div>
+        </section>
         <section class="group white">
             <section class="conditions conditions--nedvig gray">
                 <div class="conditions__wrap wrap">
@@ -819,29 +842,6 @@
                     </div>
                 </div>
             </section>
-        </section>
-        <section class="sales-model">
-            <div class="sales-model__wrap wrap">
-                <div class="sales-model__container-data">
-                    <div class="sales-model__title h3">Получите индивидуальную модель продаж Вашей квартиры</div>
-                    <form class="sales-model__form">
-                        <div class="sales-model__data">
-                            <input class="sales-model__input" placeholder="Имя" name="name" required="required" type="text" />
-                            <input class="sales-model__input" placeholder="Телефон" name="phone" type="tel" required="required" />
-                        </div>
-                        <input class="sales-model__submit btn" type="submit" value="Получи модель продаж" />
-                        <input class="sales-model__consent" type="checkbox" name="consent" id="consent" value="agreed" checked="checked" />
-                        <label class="sales-model__agreed" for="consent">Я согласен с&nbsp;условиями передачи данных</label>
-                    </form>
-                </div>
-                <div class="sales-model__container-img">
-                    <picture>
-                        <source type="image/webp" srcset="/app/img/journal.webp">
-                            <img src="/app/img/journal.png" class="sales-model__img" alt="" role="presentation" />
-                    </picture>
-                    <p class="sales-model__region">Принимаем заявки из&nbsp;Москвы и&nbsp;Московской обл.</p>
-                </div>
-            </div>
         </section>
         <section class="council">
             <div class="council__wrap wrap">
@@ -1003,7 +1003,7 @@
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/app.js?v=1586375660355"></script>
+    <script src="/app/js/app.js?v=1586427822423"></script>
 </body>
 
 </html>
