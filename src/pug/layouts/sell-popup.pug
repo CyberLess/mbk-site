@@ -1,24 +1,65 @@
 +b.sell-popup
     +e.wrap_top
         +e.container
-            +e.h2.H2 Найдено 206 потенциальных покупателей
+            +e.title.h3.H3 Найдено 206 потенциальных покупателей
             +e.description.P Это количество людей в нашей системе, которые прямо сейчас ищут похожую квартиру в вашем районе.
+            +e.close.BUTTON
+                +icon('close', '0 0 25 25')
 
             +e.bottom-wrap
                 +e.apartment-data
-                    +e.data-wrap
-                        +e.data-top.SPAN Адрес
-                        +e.data-bottom.B г. Москва ул. Шаболовка, 10
-                    +e.data-wrap
-                        +e.data-top.SPAN Комнат
-                        +e.data-bottom.B 2 комнаты
-                    +e.data-wrap
-                        +e.data-top.SPAN Цена
-                        +e.data-bottom.B 4 500 000 ₽
+                    +e.apartment-data-item._address
+                        +e.apartment-data-top.SPAN Адрес
+                        +e.apartment-data-bottom.B
+                            | г. Москва 
+                            br
+                            | ул. Шаболовка, 10
+                    +e.apartment-data-item._rooms
+                        +e.apartment-data-top.SPAN Комнат
+                        +e.apartment-data-bottom.B 2 комнаты
+                    +e.apartment-data-item._price
+                        +e.apartment-data-top.SPAN Цена
+                        +e.apartment-data-bottom.B 4 500 000 ₽
 
-                +e.btn.btn.A Связаться с покупателем
+                +e.btn.btn.A(href="#") Связаться с покупателем
 
     +e.wrap_bottom
         +e.container
-            +e.customer-data__.TABLE
-
+            +e.customer-data.customer-data__.TABLE
+                +e.head-row.TR
+                    th Покупатель
+                    th Район
+                    th Комнат в кв.
+                    th Бюджет
+                tr
+                    +e.buyer.TD Покупатель № 23422
+                    +e.district.TD Алексеевская
+                    +e.rooms.TD 2 комнаты
+                    +e.budget.TD 4 960 000
+                        +e.price-char.SPAN ₽
+                tr
+                    +e.buyer.TD Покупатель № 23423
+                    +e.district.TD ВДНХ
+                    +e.rooms.TD 2 комнаты
+                    +e.budget.TD 5 250 000
+                        +e.price-char.SPAN ₽
+                tr
+                    +e.buyer.TD Покупатель № 23424
+                    +e.district.TD Ботанический сад
+                    +e.rooms.TD 2 комнаты
+                    +e.budget.TD 4 950 000
+                        +e.price-char.SPAN ₽
+                tr
+                    +e.buyer.TD Покупатель № 23425
+                    +e.district.TD Сокольники
+                    +e.rooms.TD 2 комнаты
+                    +e.budget.TD 4 950 000
+                        +e.price-char.SPAN ₽
+                tr
+                    +e.buyer.TD Покупатель № 23426
+                    +e.district.TD Беляево
+                    +e.rooms.TD 2 комнаты
+                    +e.budget.TD 4 550 000
+                        +e.price-char.SPAN ₽
+            +e.show-more.A(href="#") Показать еще варианты
++b.overlay

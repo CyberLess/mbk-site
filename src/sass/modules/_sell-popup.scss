@@ -1,0 +1,123 @@
+.sell-popup {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 502;
+
+  width: 72%;
+
+  background-color: #ffffff;
+}
+
+.sell-popup__wrap {
+  padding-left: 11%;
+  padding-right: 13.5%;
+
+  &_top {
+    padding-top: 6.5rem;
+    background-color: #f3f3f3;
+  }
+}
+
+.sell-popup__title {
+  width: 85%;
+  margin-bottom: 1.8rem;
+
+  font-size: 3.6rem;
+}
+
+.sell-popup__description {
+  width: 85%;
+  max-width: 745px;
+  margin-bottom: 5rem;
+
+  font-size: 2.4rem;
+}
+
+.sell-popup__close {
+  position: absolute;
+  top: 8rem;
+  right: 13.5%;
+
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  stroke: #FF0400;
+
+  &:hover,
+  &:focus {
+    stroke: #000000;
+    cursor: pointer;
+  }
+}
+
+.sell-popup__bottom-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sell-popup__apartment-data {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  margin-right: auto;
+}
+
+.sell-popup__apartment-data-item {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+  margin-bottom: 5rem;
+
+  &_address {
+    width: 37.3%;
+    min-width: 170px;
+  }
+
+  &_rooms {
+    width: 24%;
+    min-width: 100px;
+  }
+
+  &_price {
+    width: 24%;
+    min-width: 110px;
+  }
+}
+
+.sell-popup__apartment-data-top {
+  margin-bottom: 1rem;
+
+  font-size: 1.6rem;
+}
+
+.sell-popup__apartment-data-bottom {
+  font-size: 1.8rem;
+}
+
+.sell-popup__btn.btn {
+  width: 29.5%;
+  min-width: 200px;
+  max-width: 305px;
+  margin-top: 1rem;
+  margin-bottom: 6rem;
+
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 501;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
