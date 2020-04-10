@@ -7,11 +7,13 @@
 
         +e.form.sell-form__.FORM(action="/" method="GET")
             +e.label_address.LABEL Адрес
-                +e.input.INPUT(
-                    type="text"
-                    placeholder="Москва, улица Шаболовка, 10"
-                    name="address"
-                    autocomplete="off" required)
+                +e.input-wrap
+                    +e.input.INPUT(
+                        type="text"
+                        placeholder="Москва, улица Шаболовка, 10"
+                        name="address"
+                        autocomplete="off" required)
+
             +e.label_price.LABEL Цена
                 +e.input-wrap
                     +e.input.INPUT(
