@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Недвижка</title>
-    <link rel="stylesheet" href="/app/css/app.css?v=1586453062250">
+    <link rel="stylesheet" href="/app/css/app.css?v=1586528099026">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
@@ -738,9 +738,8 @@
                 <h2 class="sell-apartment__title h2">Продать квартиру срочно?</h2>
                 <p class="sell-apartment__slogan p">Оцените спрос на&nbsp;Вашу квартиру в&nbsp;1 клик</p>
                 <p class="sell-apartment__applications sell-apartment__applications_mobile">Принимаем заявки из&nbsp;Москвы и&nbsp;Московской области</p>
-                <form class="sell-apartment__form sell-form" action="/" method="POST">
-                    <label class="sell-form__label sell-form__label_address">Адрес
-                        <input class="sell-form__input" type="text" placeholder="Москва, улица Шаболовка, 10" name="address" autocomplete="off" required="required" />
+                <form class="sell-apartment__form sell-form" action="/" method="GET">
+                    <label class="sell-form__label sell-form__label_address">Адрес<span class="sell-form__input-wrap"><input class="sell-form__input" type="text" placeholder="Москва, улица Шаболовка, 10" name="address" autocomplete="off" required="required"/></span>
                     </label>
                     <label class="sell-form__label sell-form__label_price">Цена<span class="sell-form__input-wrap"><input class="sell-form__input" type="text" placeholder="5 000 000" name="price" autocomplete="off" inputmode="numeric" required="required"/></span>
                     </label>
@@ -760,7 +759,7 @@
                     <div class="sell-popup__container">
                         <h3 class="sell-popup__title h3">Найдено 206 потенциальных покупателей</h3>
                         <p class="sell-popup__description">Это количество людей в&nbsp;нашей системе, которые прямо сейчас ищут похожую квартиру в&nbsp;вашем районе.</p>
-                        <button class="sell-popup__close">
+                        <button class="sell-popup__close popup-close">
                             <svg class="icon icon-close" viewBox="0 0 25 25">
                                 <use xlink:href="/app/icons/sprite.svg#close"></use>
                             </svg>
@@ -829,6 +828,30 @@
                         </table><a class="sell-popup__show-more btn blog__button btn btn_border p" href="#">Показать еще варианты<svg class="sell-popup__arrow" viewBox="0 0 18.560659 9.6213207" width="20" height="15"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></a>
                     </div>
                 </div>
+            </div>
+            <div class="sell-order-popup">
+                <h2 class="sell-order-popup__title h2">Оформить заявку</h2>
+                <p class="sell-order-popup__description">Оставьте контакты, и&nbsp;мы позвоним вам для&nbsp;уточнения деталей, чтобы связать вас с&nbsp;потенциальными покупателями.</p>
+                <button class="sell-order-popup__close popup-close">
+                    <svg class="icon icon-close" viewBox="0 0 25 25">
+                        <use xlink:href="/app/icons/sprite.svg#close"></use>
+                    </svg>
+                </button>
+                <form class="sell-order-popup__form" action="/">
+                    <input type="hidden" name="method[subscribe]" value="1" />
+                    <div class="sell-order-popup__name input">
+                        <input class="input__item" type="text" placeholder="Ваше имя" name="name" />
+                    </div>
+                    <div class="sell-order-popup__phone input">
+                        <input class="input__item" type="text" placeholder="Телефон" name="name" />
+                    </div>
+                    <button class="sell-order-popup__button btn h6">
+                        <div class="sell-order-popup__text">Оставить заявку</div>
+                    </button>
+                    <label class="sell-order-popup__access access checkbox">
+                        <input class="checkbox__input" type="checkbox" name="access" checked="" /><span class="checkbox__text"><span class="checkbox__check"><svg class="icon icon-check" viewBox="0 0 9 7"><use xlink:href="/app/icons/sprite.svg#check"></use></svg></span>Я согласен с&nbsp;условиями передачи данных</span>
+                    </label>
+                </form>
             </div>
             <div class="overlay"></div>
         </section>
@@ -1165,7 +1188,7 @@
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/app.js?v=1586453062296"></script>
+    <script src="/app/js/app.js?v=1586528099102"></script>
 </body>
 
 </html>

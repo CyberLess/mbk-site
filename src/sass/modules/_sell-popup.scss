@@ -1,13 +1,19 @@
 .sell-popup {
-  position: absolute;
+  position: fixed;
   top: 0;
-  right: 0;
+  right: -100%;
   z-index: 602;
 
   display: none;
   width: 72%;
+  height: 100vh;
 
+  opacity: 0;
   background-color: #ffffff;
+
+  @include max-screen($small_desktop) {
+      width: 90%;
+  }
 }
 
 .sell-popup__wrap {
@@ -56,26 +62,11 @@
 }
 
 .sell-popup__close {
-  position: absolute;
   top: 8rem;
   right: 13.5%;
 
-  width: 25px;
-  height: 25px;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-
-  stroke: #FF0400;
-
   @include max-screen($large_desktop) {
     right: 9%;
-  }
-
-  &:hover,
-  &:focus {
-    stroke: #000000;
-    cursor: pointer;
   }
 }
 
@@ -153,7 +144,7 @@
 
 .sell-popup__arrow {
   position: absolute;
-  top: 2.7rem;
+  top: 2.9rem;
   right: 3.7rem;
 
   width: 12px;

@@ -3,7 +3,7 @@
         +e.container
             +e.title.h3.H3 Найдено 206 потенциальных покупателей
             +e.description.P Это количество людей в нашей системе, которые прямо сейчас ищут похожую квартиру в вашем районе.
-            +e.close.BUTTON
+            +e.close.popup-close.BUTTON
                 +icon('close', '0 0 25 25')
 
             +e.bottom-wrap
@@ -80,5 +80,27 @@
                 +e.arrow.SVG(viewBox="0 0 18.560659 9.6213207" width="20" height="15")
                     path(class="triangle" d='M14.5 4.81v-3l3 3-3 3z')
                     path(class="stroke" d='M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z')
+
++b.sell-order-popup
+    +e.title.h2.H2 Оформить заявку
+    +e.description.P Оставьте контакты, и мы позвоним вам для уточнения деталей, чтобы связать вас с потенциальными покупателями.
+    +e.close.popup-close.BUTTON
+        +icon('close', '0 0 25 25')
+
+    +e.FORM.form(action="/")
+        +e.INPUT(type="hidden" name="method[subscribe]" value='1')
+        +e.name.input__
+            +e.INPUT.item(type="text" placeholder="Ваше имя" name="name")
+        +e.phone.input__
+            +e.INPUT.item(type="text" placeholder="Телефон" name="name")
+        +e.button.btn.h6.BUTTON
+            +e.text Оставить заявку
+        +e.LABEL.access.access.checkbox__
+            +e.INPUT.input(type='checkbox' name='access' checked="")
+            +e.SPAN.text
+                +e.check
+                    +icon('check', '0 0 9 7')
+                | Я согласен с условиями
+                | передачи данных
 
 +b.overlay
