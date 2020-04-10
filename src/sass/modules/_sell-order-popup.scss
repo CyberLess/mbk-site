@@ -1,56 +1,1 @@
-.sell-order-popup {
-  position: absolute;
-  top: 0;
-  right: -100%;
-  z-index: 604;
-
-  display: none;
-  width: 64rem;
-  height: 100vh;
-  padding: 19.3rem 14.2rem 8rem 18.4rem;
-
-  background-color: #ffffff;
-}
-
-.sell-order-popup__title {
-  margin-bottom: 2rem;
-
-  font-size: 2.4rem;
-  font-weight: 500;
-}
-
-.sell-order-popup__description {
-  margin-bottom: 5rem;
-
-  font-size: 1.6rem;
-  line-height: 1.4;
-}
-
-.sell-order-popup__form {
-  .input__item {
-    margin-bottom: 4rem;
-    padding-bottom: 1rem;
-
-    font-size: 1.8rem;
-  }
-}
-
-.sell-order-popup__button {
-  width: 100%;
-}
-
-.sell-order-popup__access {
-  margin-top: 1.3rem;
-
-  .checkbox__text {
-    padding-left: 26px;
-
-    font-size: 1.36rem;
-  }
-}
-
-.sell-order-popup__close {
-  position: absolute;
-  top: 7.7rem;
-  right: 13.2rem;
-}
+.sell-order-popup {  position: absolute;  top: 0;  right: 0;  z-index: 604;  width: 64rem;  height: 100vh;  padding: 19.3rem 14.2rem 8rem 18.4rem;  background-color: #ffffff;}.sell-order-popup__title {  margin-bottom: 2rem;  font-size: 2.4rem;  font-weight: 500;}.sell-order-popup__description {  margin-bottom: 5rem;  font-size: 1.6rem;  line-height: 1.4;}.sell-order-popup__form {  .input__item {    margin-bottom: 4rem;    padding-bottom: 1rem;    font-size: 1.8rem;  }}.sell-order-popup__button {  width: 100%;}.sell-order-popup__access {  margin-top: 1.3rem;  .checkbox__text {    padding-left: 26px;    font-size: 1.36rem;  }}.sell-order-popup__close {  position: absolute;  top: 7.7rem;  right: 13.2rem;  &:active {    top: 7.7rem;  }}

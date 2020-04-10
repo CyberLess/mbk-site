@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Недвижка</title>
-    <link rel="stylesheet" href="/app/css/app.css?v=1586539128095">
+    <link rel="stylesheet" href="/app/css/app.css?v=1586556045680">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
@@ -759,19 +759,19 @@
                     </label>
                     <label class="sell-form__label sell-form__label_square">Площадь<span class="sell-form__input-wrap"><input class="sell-form__input" type="text" placeholder="100" name="square" autocomplete="off" inputmode="numeric" required="required"/></span>
                     </label>
-                    <button class="sell-form__btn btn" type="submit">Получи оценку онлайн</button>
+                    <button class="sell-form__btn btn" type="submit" data-mfp-src="#sell-popup">Получи оценку онлайн</button>
                 </form>
                 <div class="sell-apartment__addition">
                     <p class="sell-apartment__applications">Принимаем заявки из&nbsp;Москвы и&nbsp;МО</p>
                     <p class="sell-apartment__assessment">Сегодня получили оценку: 322 человека</p>
                 </div>
             </div>
-            <div class="sell-popup">
+            <div class="sell-popup mfp-hide" id="sell-popup">
                 <div class="sell-popup__wrap sell-popup__wrap_top">
                     <div class="sell-popup__container">
                         <h3 class="sell-popup__title h3">Найдено 206 потенциальных покупателей</h3>
                         <p class="sell-popup__description">Это количество людей в&nbsp;нашей системе, которые прямо сейчас ищут похожую квартиру в&nbsp;вашем районе.</p>
-                        <button class="sell-popup__close popup-close">
+                        <button class="sell-popup__close mfp-close popup-close" type="button" data-mfp-src="#sell-popup">
                             <svg class="icon icon-close" viewBox="0 0 25 25">
                                 <use xlink:href="/app/icons/sprite.svg#close"></use>
                             </svg>
@@ -784,7 +784,7 @@
                                 </div>
                                 <div class="sell-popup__apartment-data-item sell-popup__apartment-data-item_price"><span class="sell-popup__apartment-data-top">Цена</span><b class="sell-popup__apartment-data-bottom">4 500 000 ₽</b>
                                 </div>
-                            </div><a class="sell-popup__btn btn" href="#">Связаться с&nbsp;покупателем</a>
+                            </div><a class="sell-popup__btn btn" href="#sell-order-popup">Связаться с&nbsp;покупателем</a>
                         </div>
                     </div>
                 </div>
@@ -841,10 +841,10 @@
                     </div>
                 </div>
             </div>
-            <div class="sell-order-popup">
+            <div class="sell-order-popup mfp-hide" id="sell-order-popup">
                 <h2 class="sell-order-popup__title h2">Оформить заявку</h2>
                 <p class="sell-order-popup__description">Оставьте контакты, и&nbsp;мы позвоним вам для&nbsp;уточнения деталей, чтобы связать вас с&nbsp;потенциальными покупателями.</p>
-                <button class="sell-order-popup__close popup-close">
+                <button class="sell-order-popup__close popup-close mfp-close" data-mfp-src="#sell-order-popup">
                     <svg class="icon icon-close" viewBox="0 0 25 25">
                         <use xlink:href="/app/icons/sprite.svg#close"></use>
                     </svg>
@@ -857,7 +857,7 @@
                     <div class="sell-order-popup__phone input">
                         <input class="input__item" type="text" placeholder="Телефон" name="name" />
                     </div>
-                    <button class="sell-order-popup__button btn h6">
+                    <button class="sell-order-popup__button btn h6" type="submit" data-mfp-src="#sell-order-popup">
                         <div class="sell-order-popup__text">Оставить заявку</div>
                     </button>
                     <label class="sell-order-popup__access access checkbox">
@@ -865,7 +865,6 @@
                     </label>
                 </form>
             </div>
-            <div class="overlay"></div>
         </section>
         <section class="we-know white">
             <div class="we-know__wrap wrap">
@@ -1127,7 +1126,7 @@
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/app.js?v=1586539128199"></script>
+    <script src="/app/js/app.js?v=1586556045770"></script>
 </body>
 
 </html>

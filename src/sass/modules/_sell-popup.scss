@@ -1,19 +1,49 @@
 .sell-popup {
   position: fixed;
   top: 0;
-  right: -100%;
+  right: 0;
   z-index: 602;
 
-  display: none;
   width: 72%;
   height: 100vh;
 
-  opacity: 0;
   background-color: #ffffff;
 
   @include max-screen($small_desktop) {
       width: 90%;
   }
+}
+
+@keyframes openPopup {
+  0% {
+    right: -100%;
+  }
+
+  100% {
+    right: 0;
+  }
+}
+
+.sell-popup__open-animation {
+  animation-name: openPopup;
+  animation-duration: .5s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes closePopup {
+  0% {
+    right: 0;
+  }
+
+  100% {
+    right: -100%;
+  }
+}
+
+.sell-popup__close-animation {
+  animation-name: closePopup;
+  animation-duration: .3s;
+  animation-timing-function: ease-in;
 }
 
 .sell-popup__wrap {
@@ -68,6 +98,10 @@
   @include max-screen($large_desktop) {
     right: 9%;
   }
+  &:active {
+    top: 8rem;
+  }
+
 }
 
 .sell-popup__bottom-wrap {

@@ -1,9 +1,9 @@
-+b.sell-popup
++b.sell-popup.mfp-hide(id="sell-popup")
     +e.wrap_top
         +e.container
             +e.title.h3.H3 Найдено 206 потенциальных покупателей
             +e.description.P Это количество людей в нашей системе, которые прямо сейчас ищут похожую квартиру в вашем районе.
-            +e.close.popup-close.BUTTON
+            +e.close.mfp-close.popup-close.BUTTON(type="button" data-mfp-src="#sell-popup")
                 +icon('close', '0 0 25 25')
 
             +e.bottom-wrap
@@ -21,7 +21,7 @@
                         +e.apartment-data-top.SPAN Цена
                         +e.apartment-data-bottom.B 4 500 000 ₽
 
-                +e.btn.btn.A(href="#") Связаться с покупателем
+                +e.btn.btn.A(href="#sell-order-popup") Связаться с покупателем
 
     +e.wrap_bottom
         +e.container
@@ -81,10 +81,10 @@
                     path(class="triangle" d='M14.5 4.81v-3l3 3-3 3z')
                     path(class="stroke" d='M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z')
 
-+b.sell-order-popup
++b.sell-order-popup.mfp-hide(id="sell-order-popup")
     +e.title.h2.H2 Оформить заявку
     +e.description.P Оставьте контакты, и мы позвоним вам для уточнения деталей, чтобы связать вас с потенциальными покупателями.
-    +e.close.popup-close.BUTTON
+    +e.close.popup-close.mfp-close.BUTTON(data-mfp-src="#sell-order-popup")
         +icon('close', '0 0 25 25')
 
     +e.FORM.form(action="/")
@@ -93,7 +93,7 @@
             +e.INPUT.item(type="text" placeholder="Ваше имя" name="name")
         +e.phone.input__
             +e.INPUT.item(type="text" placeholder="Телефон" name="name")
-        +e.button.btn.h6.BUTTON
+        +e.button.btn.h6.BUTTON(type="submit" data-mfp-src="#sell-order-popup")
             +e.text Оставить заявку
         +e.LABEL.access.access.checkbox__
             +e.INPUT.input(type='checkbox' name='access' checked="")
@@ -102,5 +102,3 @@
                     +icon('check', '0 0 9 7')
                 | Я согласен с условиями
                 | передачи данных
-
-+b.overlay
