@@ -25,21 +25,26 @@
     flex-basis: 31.1rem;
     margin: 0;
     padding: 0;
-    border: 1px solid #B3B3B3;
-    border-radius: 5px;
   }
 
   &__link{
     display: block;
     padding: 8rem 3.7rem 4rem;
+    border: 1px solid #B3B3B3;
+    border-radius: 5px;
 
     &:hover{
+      border-color: #F3F3F3;
       background: #F3F3F3;
     }
   }
 
   &__link:hover &__stroke{
     stroke: #FF0400;
+  }
+
+  &__link:hover &__container-icon{
+    border-color: #F3F3F3;
   }
 
   &__container-icon{
