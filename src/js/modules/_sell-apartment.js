@@ -1,4 +1,4 @@
-import { numberWithSpaces } from '../functions';
+import {numberWithSpaces} from '../functions';
 
 $(() => {
   const BACKSPACE_KEYCODE = 8;
@@ -14,7 +14,7 @@ $(() => {
 
     this.value = this.value
       .replace(/[A-Za-zА-Яа-яЁё]/, '')
-      .replace (/\D/, '');
+      .replace(/\D/, '');
 
     if (this.value !== '' && $.isNumeric(lastChar)) {
       prevValue = Number(this.value.replace(/\s/g, ''));
