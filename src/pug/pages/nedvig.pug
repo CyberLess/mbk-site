@@ -1,14 +1,19 @@
 extends ../layouts/base
 
 append vars
-	- title = 'Недвижка';
+		- title = 'Недвижка';
 
 block content
 	+b.fluid
+<<<<<<< HEAD
 			+socials(class="_default _white")
 	include ../layouts/sell-apartment
 	include ../layouts/we-know
+=======
+		+socials(class="_default _white")
+	include ../layouts/sales-model
+>>>>>>> 9b26f6ad8ede31ae7166d7ab05d17ccea44e426e
 	+b.SECTION.group.white
 		include ../layouts/conditions-nedvig
-	include ../layouts/sales-model
+		include ../layouts/difficult-case
 	include ../layouts/council
