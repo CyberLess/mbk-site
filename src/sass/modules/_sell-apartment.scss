@@ -122,3 +122,23 @@ p.sell-apartment__applications.sell-apartment__applications_mobile {
 
   background-color: rgba(0, 0, 0, .749);
 }
+
+.sell-apartment-bottom-wrap {
+  .sell-apartment {
+    padding-top: 6.5rem;
+  }
+
+  .sell-apartment__breadcrumbs {
+    display: none;
+  }
+
+  .sell-apartment__title {
+    display: none;
+  }
+
+  .sell-apartment__slogan {
+    font-size: 4.6rem;
+    font-weight: bold;
+  }
+}
+
