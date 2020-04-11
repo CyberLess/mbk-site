@@ -1,0 +1,203 @@
+.we-sell {
+  padding-top: 12rem;
+}
+
+.we-sell__title {
+  width: 70%;
+  margin-bottom: 6.5rem;
+
+  font-size: 4.5rem;
+}
+
+.we-sell__work-example {
+  position: relative;
+
+  max-width: 1920px;
+  width: 100%;
+  height: 37vw;
+}
+
+.we-sell__inner {
+  width: 7.5rem;
+  height: 7.5rem;
+  margin: -3.95rem 0 0 -3.95rem;
+
+  background-color: #ffffff;
+  background-image: url("/img/we-sell-handle-arrows.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 38px 13px;
+
+  .ba__arrow {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.we-sell__resize-image {
+  border-right: 3px solid #ffffff;
+}
+
+.we-sell__help {
+  position: absolute;
+  top: 2.3rem;
+  z-index: 610;
+
+  padding: 6px 24px;
+  border-radius: 5px;
+
+  background-color: #ffffff;
+
+  &_left {
+    left: 2.5rem;
+  }
+
+  &_right {
+    right: 2.5rem;
+  }
+}
+
+.we-sell__comment-opener {
+  position: absolute;
+  z-index: 611;
+
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+
+  background-color: #FF0600;
+
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 16px;
+    height: 2px;
+    border-radius: 3px;
+
+    background-color: #ffffff;
+
+    transition-property: all;
+    transition-duration: .2s;
+    transition-timing-function: ease-out;
+  }
+
+  &::before {
+    transform: translate(-50%, -50%);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #ffffff;
+
+    &::before,
+    &::after {
+      background-color: #FF0600;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(135deg);
+    }
+
+    .we-sell__comment {
+      opacity: 1;
+
+      width: 28rem;
+      padding: 3.5rem;
+
+      font-size: 1.5rem;
+    }
+  }
+
+  &_first {
+    top: 9rem;
+    left: 61.6rem;
+
+    @include max-screen($large_desktop) {
+      left: 31.6rem;
+    }
+
+    @include max-screen($small_desktop) {
+      left: 23.6rem;
+    }
+
+    @include max-screen($large_tablet) {
+      left: 17.6rem;
+    }
+
+    .we-sell__comment {
+      top: 0;
+      left: 56px;
+    }
+  }
+
+  &_second {
+    right: 71.7rem;
+    bottom: 9.6rem;
+
+    @include max-screen($small_desktop) {
+      right: 63.7rem;
+      bottom: 5.6rem;
+    }
+
+    @include max-screen($large_tablet) {
+      right: 37rem;
+      bottom: 2.6rem;
+    }
+
+    .we-sell__comment {
+      left: 56px;
+      bottom: 0;
+    }
+  }
+
+  &_third {
+    top: 28rem;
+    right: 25rem;
+
+    @include max-screen($small_desktop) {
+      top: 20rem;
+    }
+
+    @include max-screen($large_tablet) {
+      top: 7rem;
+    }
+
+    .we-sell__comment {
+      top: 0;
+      right: 56px;
+    }
+  }
+}
+
+.we-sell__comment {
+  position: absolute;
+
+  width: 0;
+  padding: 0;
+  border-radius: 5px;
+
+  font-size: 0;
+
+  transition-property: opacity;
+  transition-duration: .2s;
+  transition-timing-function: ease-out;
+
+  background-color: #ffffff;
+  opacity: 0;
+}
