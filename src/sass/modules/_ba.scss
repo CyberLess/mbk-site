@@ -137,7 +137,7 @@
 	    // -webkit-clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
 	}
 
-	@include max-screen($large_tablet) {
+	@include max-screen($small_tablet) {
 		&.js-animation-play{
 			.ba{
 				&__resize, &__handle, &__arrow{

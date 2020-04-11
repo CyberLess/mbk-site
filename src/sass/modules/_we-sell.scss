@@ -1,5 +1,9 @@
 .we-sell {
   padding-top: 12rem;
+
+  @include max-screen($large_tablet) {
+    padding-top: 7rem;
+  }
 }
 
 .we-sell__title {
@@ -7,6 +11,10 @@
   margin-bottom: 6.5rem;
 
   font-size: 4.5rem;
+
+  @include max-screen($large_tablet) {
+    font-size: 3.5rem;
+  }
 }
 
 .we-sell__work-example {
@@ -200,4 +208,8 @@
 
   background-color: #ffffff;
   opacity: 0;
+}
+
+.we-sell__wrap {
+  margin-top: 15rem;
 }
