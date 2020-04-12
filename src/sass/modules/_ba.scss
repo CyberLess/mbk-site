@@ -8,7 +8,7 @@
 	height: 100%;
 
 	&:not(.is-moving){
-		
+
 		.ba{
 			&__resize{
 				transition: ease .3s;
@@ -17,7 +17,7 @@
 	}
 
 	&.is-mouseleave{
-		
+
 		.ba{
 
 			&__resize{
@@ -31,7 +31,7 @@
 			&__arrow{
 				transition: transform ease .6s;
 			}
-		}		
+		}
 	}
 
 	&.js-animation-play{
@@ -46,11 +46,11 @@
 			&__arrow{
 				animation-name: baAnimArrow;
 			}
-		}			
+		}
 	}
 
 	&__handle { /* Thin line seperator */
-		position:absolute; 
+		position:absolute;
 		left: 50%;
 		top:0;
 		bottom:0;
@@ -58,13 +58,13 @@
 		width: 0px;
 		// will-change: left;
 		// transition: linear .1s;
-		
+
 	    animation-duration: 6s;
 	    animation-timing-function: ease;
 	    animation-iteration-count: infinite;
 
 	}
-	 
+
 
 	&__inner{
 	    position: absolute;
@@ -77,15 +77,6 @@
 	    display: flex;
 	    align-items: center;
 	    justify-content: center;
-
-	    &:before{
-	    	content: '';
-	    	display: block;
-	    	height: 2rem;
-	    	background-color: #fff;
-	    	width: .3rem;
-	    }
-	 
 	}
 
 	&__arrow{
@@ -109,10 +100,10 @@
 			width: 0;
 			height: 0;
 			border-style: solid;
-			
+
 			border-width: .5rem 0 .5rem .9rem;
-			
-			border-color: transparent transparent transparent #fff;				
+
+			border-color: transparent transparent transparent #fff;
 		}
 	}
 
@@ -124,7 +115,7 @@
 	    // width: 103.3rem;
 	    height: 100%;
 	}
-	 
+
 	&__resize {
 	    position: absolute;
 	    top:0;
@@ -146,13 +137,13 @@
 	    // -webkit-clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
 	}
 
-	@include max-screen($large_tablet) {
+	@include max-screen($small_tablet) {
 		&.js-animation-play{
 			.ba{
 				&__resize, &__handle, &__arrow{
 					animation-name: none!important;
 				}
-			}			
+			}
 		}
 
 	}
@@ -160,7 +151,7 @@
 	@include max-screen($small_tablet) {
 		// pointer-events: none;
 
-		
+
 		// &__resize{
 		// 	animation-name: baAnim;
 		// }
@@ -171,6 +162,6 @@
 		// &__arrow{
 		// 	animation-name: baAnimArrow;
 		// }
-			
+
 	}
 }

@@ -1,0 +1,107 @@
+.we-sell-before-after {
+  display: flex;
+}
+
+.we-sell-before-after__phones-wrap {
+  position: relative;
+
+  display: flex;
+  width: 134rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 5.5rem;
+
+  background: linear-gradient(to bottom, transparent 23rem, #ffffff 23rem);
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    bottom: 36rem;
+    left: 50%;
+
+    width: 44px;
+    height: 24px;
+
+    transform: translateX(-50%);
+
+    background-image: url("/img/arrow.svg");
+    background-size: 44px 24px;
+    background-repeat: no-repeat;
+
+    @include max-screen($large_tablet) {
+      bottom: 45%;
+    }
+  }
+}
+
+.we-sell-before-after__phone-wrap {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+
+  @include max-screen($large_tablet) {
+    width: 30%;
+  }
+
+  &_before {
+    margin-left: auto;
+    margin-right: 23rem;
+
+    .we-sell-before-after__text {
+      background-image: url("/img/we-sell-no-success.svg");
+      background-size: 2.8rem 2.8rem;
+      background-position: -3px 3px;
+    }
+  }
+
+  &_after {
+    margin-right: auto;
+
+    .we-sell-before-after__text {
+      background-image: url("/img/we-sell-success.svg");
+      background-size: 2.8rem 1.7rem;
+      background-position: -3px 5px;
+    }
+  }
+}
+
+.we-sell-before-after__phones-wrap {
+  .we-sell-before-after__phone-wrap {
+    &_before {
+      b.we-sell-before-after__text {
+        @include max-screen($large_tablet) {
+          background-size: 2.3rem 2.3rem;
+          background-position: -3px 0;
+        }
+      }
+    }
+
+    &_after {
+      b.we-sell-before-after__text {
+        @include max-screen($large_tablet) {
+          background-size: 2.3rem 1.4rem;
+          background-position: 0 5px;
+        }
+      }
+    }
+  }
+}
+
+.we-sell-before-after__image-wrap {
+  margin-bottom: 3rem;
+}
+
+.we-sell-before-after__text {
+  padding-left: 4rem;
+
+  font-size: 2.4rem;
+
+  background-repeat: no-repeat;
+
+  @include max-screen($large_tablet) {
+    font-size: 1.9rem;
+  }
+}

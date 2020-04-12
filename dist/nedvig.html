@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Недвижка</title>
-    <link rel="stylesheet" href="/app/css/app.css?v=1586717278803">
+    <link rel="stylesheet" href="/app/css/app.css?v=1586718227378">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
@@ -725,6 +725,18 @@
                 </div>
             </div>
         </header>
+        <div class="fluid">
+            <div class="fluid__socials socials socials_default socials_white">
+                <div class="socials__item socials__item_youtube"><a class="socials__link" href="#"><span><svg class="icon icon-yotube" viewBox="0 0 21 15"><use xlink:href="/app/icons/sprite.svg#yotube"></use></svg></span></a>
+                </div>
+                <div class="socials__item socials__item_inst"><a class="socials__link" href="#"><span><svg class="icon icon-insta" viewBox="0 0 18 19"><use xlink:href="/app/icons/sprite.svg#insta"></use></svg></span></a>
+                </div>
+                <div class="socials__item socials__item_fb"><a class="socials__link" href="#"><span><svg class="icon icon-fb" viewBox="0 0 10 19"><use xlink:href="/app/icons/sprite.svg#fb"></use></svg></span></a>
+                </div>
+                <div class="socials__item socials__item_vk"><a class="socials__link" href="#"><span><svg class="icon icon-vk" viewBox="0 0 24 15"><use xlink:href="/app/icons/sprite.svg#vk"></use></svg></span></a>
+                </div>
+            </div>
+        </div>
         <section class="sell-apartment">
             <div class="sell-apartment__wrap wrap">
                 <ul class="sell-apartment__breadcrumbs breadcrumbs flex flex_vertical">
@@ -738,20 +750,22 @@
                 <h2 class="sell-apartment__title h2">Продать квартиру срочно?</h2>
                 <p class="sell-apartment__slogan p">Оцените спрос на&nbsp;Вашу квартиру в&nbsp;1 клик</p>
                 <p class="sell-apartment__applications sell-apartment__applications_mobile">Принимаем заявки из&nbsp;Москвы и&nbsp;Московской области</p>
-                <form class="sell-apartment__form sell-form" action="/" method="GET">
-                    <label class="sell-form__label sell-form__label_address">Адрес<span class="sell-form__input-wrap"><input class="sell-form__input" type="text" placeholder="Москва, улица Шаболовка, 10" name="address" autocomplete="off" required="required"/></span>
-                    </label>
-                    <label class="sell-form__label sell-form__label_price">Цена<span class="sell-form__input-wrap"><input class="sell-form__input" type="text" placeholder="5 000 000" name="price" autocomplete="off" inputmode="numeric" required="required"/></span>
-                    </label>
-                    <label class="sell-form__label sell-form__label_rooms">Комнат<span class="sell-form__form-field select js-select"><span class="select__item"><select class="select__field" name="howMuchRooms"><option>1</option><option>2</option><option>3</option><option>4</option></select></span></span>
-                    </label>
-                    <label class="sell-form__label sell-form__label_square">Площадь<span class="sell-form__input-wrap"><input class="sell-form__input" type="text" placeholder="100" name="square" autocomplete="off" inputmode="numeric" required="required"/></span>
-                    </label>
-                    <button class="sell-form__btn btn" type="submit">Получи оценку онлайн</button>
-                </form>
-                <div class="sell-apartment__addition">
-                    <p class="sell-apartment__applications">Принимаем заявки из&nbsp;Москвы и&nbsp;МО</p>
-                    <p class="sell-apartment__assessment">Сегодня получили оценку: 322 человека</p>
+                <div class="sell-apartment__form-wrapper">
+                    <form class="sell-apartment__form sell-form" action="/" method="GET">
+                        <label class="sell-form__label sell-form__label_address">Адрес<span class="sell-form__input-wrap"><input class="sell-form__input" type="text" placeholder="Москва, улица Шаболовка, 10" name="address" autocomplete="off" required="required"/></span>
+                        </label>
+                        <label class="sell-form__label sell-form__label_price">Цена<span class="sell-form__input-wrap"><input class="sell-form__input" type="text" placeholder="5 000 000" name="price" autocomplete="off" inputmode="numeric" required="required"/></span>
+                        </label>
+                        <label class="sell-form__label sell-form__label_rooms">Комнат<span class="sell-form__form-field select js-select"><span class="select__item"><select class="select__field" name="howMuchRooms"><option>1</option><option>2</option><option>3</option><option>4</option></select></span></span>
+                        </label>
+                        <label class="sell-form__label sell-form__label_square">Площадь<span class="sell-form__input-wrap"><input class="sell-form__input" type="text" placeholder="100" name="square" autocomplete="off" inputmode="numeric" required="required"/></span>
+                        </label>
+                        <button class="sell-form__btn btn" type="submit" data-mfp-src="#sell-popup">Получи оценку онлайн</button>
+                    </form>
+                    <div class="sell-apartment__addition">
+                        <p class="sell-apartment__applications">Принимаем заявки из&nbsp;Москвы и&nbsp;МО</p>
+                        <p class="sell-apartment__assessment">Сегодня получили оценку: 322 человека</p>
+                    </div>
                 </div>
             </div>
             <div class="sell-popup">
@@ -759,7 +773,7 @@
                     <div class="sell-popup__container">
                         <h3 class="sell-popup__title h3">Найдено 206 потенциальных покупателей</h3>
                         <p class="sell-popup__description">Это количество людей в&nbsp;нашей системе, которые прямо сейчас ищут похожую квартиру в&nbsp;вашем районе.</p>
-                        <button class="sell-popup__close popup-close">
+                        <button class="sell-popup__close popup-close" type="button">
                             <svg class="icon icon-close" viewBox="0 0 25 25">
                                 <use xlink:href="/app/icons/sprite.svg#close"></use>
                             </svg>
@@ -772,7 +786,7 @@
                                 </div>
                                 <div class="sell-popup__apartment-data-item sell-popup__apartment-data-item_price"><span class="sell-popup__apartment-data-top">Цена</span><b class="sell-popup__apartment-data-bottom">4 500 000 ₽</b>
                                 </div>
-                            </div><a class="sell-popup__btn btn" href="#">Связаться с&nbsp;покупателем</a>
+                            </div><a class="sell-popup__btn btn" href="#sell-order-popup">Связаться с&nbsp;покупателем</a>
                         </div>
                     </div>
                 </div>
@@ -829,10 +843,10 @@
                     </div>
                 </div>
             </div>
-            <div class="sell-order-popup">
+            <div class="sell-order-popup mfp-hide" id="sell-order-popup">
                 <h2 class="sell-order-popup__title h2">Оформить заявку</h2>
                 <p class="sell-order-popup__description">Оставьте контакты, и&nbsp;мы позвоним вам для&nbsp;уточнения деталей, чтобы связать вас с&nbsp;потенциальными покупателями.</p>
-                <button class="sell-order-popup__close popup-close">
+                <button class="sell-order-popup__close popup-close mfp-close" data-mfp-src="#sell-order-popup">
                     <svg class="icon icon-close" viewBox="0 0 25 25">
                         <use xlink:href="/app/icons/sprite.svg#close"></use>
                     </svg>
@@ -845,7 +859,7 @@
                     <div class="sell-order-popup__phone input">
                         <input class="input__item" type="text" placeholder="Телефон" name="name" />
                     </div>
-                    <button class="sell-order-popup__button btn h6">
+                    <button class="sell-order-popup__button btn h6" type="submit" data-mfp-src="#sell-order-popup">
                         <div class="sell-order-popup__text">Оставить заявку</div>
                     </button>
                     <label class="sell-order-popup__access access checkbox">
@@ -853,20 +867,115 @@
                     </label>
                 </form>
             </div>
-            <div class="overlay"></div>
+            <div class="sell-apartment__overlay"></div>
         </section>
-        <div class="fluid">
-            <div class="fluid__socials socials socials_default socials_white">
-                <div class="socials__item socials__item_youtube"><a class="socials__link" href="#"><span><svg class="icon icon-yotube" viewBox="0 0 21 15"><use xlink:href="/app/icons/sprite.svg#yotube"></use></svg></span></a>
+        <section class="we-know white">
+            <div class="we-know__wrap wrap">
+                <div class="we-know__text-wrap">
+                    <h2 class="we-know__title h2">Мы знаем, как найти<br>ещё больше покупателей</h2>
+                    <ul class="we-know__actions know-actions">
+                        <li class="know-actions__item know-actions__item_create-ad"><b class="know-actions__action">Создаем <br>продающее объявление</b><span class="know-actions__description">Используем технологии копирайтинга,  от&nbsp;которых клиент начнет облизываться</span>
+                        </li>
+                        <li class="know-actions__item know-actions__item_preparation"><b class="know-actions__action">Делаем <br>предпродажную подготовку</b><span class="know-actions__description">Профессионально отфотографируем  Вашу квартиру в&nbsp;нужных ракурсах</span>
+                        </li>
+                        <li class="know-actions__item know-actions__item_learns-lot"><b class="know-actions__action">О Вашей квартире<br>узнают в&nbsp;10 раз больше людей</b><span class="know-actions__description">Используем 1000 рекламных площадок и&nbsp;дополнительную рекламу на&nbsp;них</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="socials__item socials__item_inst"><a class="socials__link" href="#"><span><svg class="icon icon-insta" viewBox="0 0 18 19"><use xlink:href="/app/icons/sprite.svg#insta"></use></svg></span></a>
-                </div>
-                <div class="socials__item socials__item_fb"><a class="socials__link" href="#"><span><svg class="icon icon-fb" viewBox="0 0 10 19"><use xlink:href="/app/icons/sprite.svg#fb"></use></svg></span></a>
-                </div>
-                <div class="socials__item socials__item_vk"><a class="socials__link" href="#"><span><svg class="icon icon-vk" viewBox="0 0 24 15"><use xlink:href="/app/icons/sprite.svg#vk"></use></svg></span></a>
+                <div class="we-know__image-wrapper">
+                    <picture>
+                        <source type="image/webp" srcset="/app/img/we-know-woman.webp">
+                            <img src="/app/img/we-know-woman.png" class="we-know__img" alt="" role="presentation" />
+                    </picture>
+                    <div class="we-know__inscription"><b class="we-know__specialist-name">Юлия Верховцева</b><span class="we-know__specialist-status">Главный специалист по&nbsp;продаже недвижимости</span>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+        <section class="we-sell">
+            <div class="we-sell__top wrap">
+                <h2 class="we-sell__title h2">Вот, что будет если мы возьмемся  за&nbsp;продажу Вашей квартиры</h2>
+            </div>
+            <div class="we-sell__work-example wrap">
+                <div class="we-sell__comment-opener we-sell__comment-opener_first" tabindex="0">
+                    <div class="we-sell__comment">Тестовый комментарий 1</div>
+                </div>
+                <div class="we-sell__comment-opener we-sell__comment-opener_second" tabindex="0">
+                    <div class="we-sell__comment">Уберем лишние вещи для&nbsp;правильных ракурсов</div>
+                </div>
+                <div class="we-sell__comment-opener we-sell__comment-opener_third" tabindex="0">
+                    <div class="we-sell__comment">Тестовый комментарий 2</div>
+                </div>
+                <div class="we-sell__row flex flex_justify">
+                    <div class="we-sell__cell we-sell__cell_left">
+                        <div class="we-sell__help we-sell__help_left p">До</div>
+                        <div class="we-sell__help we-sell__help_right p">После</div>
+                        <div class="we-sell__slider">
+                            <div class="we-sell__slider-list">
+                                <div class="we-sell__slider-item active">
+                                    <div class="we-sell__preview">
+                                        <div class="ba js-animation-play">
+                                            <picture>
+                                                <source type="image/webp" srcset="/app/img/sell-after.webp">
+                                                    <img src="/app/img/sell-after.jpg" class="ba__image" alt="" role="presentation" />
+                                            </picture>
+                                            <div class="ba__resize">
+                                                <picture>
+                                                    <source type="image/webp" srcset="/app/img/sell-before.webp">
+                                                        <img src="/app/img/sell-before.jpg" class="ba__image we-sell__resize-image" alt="" role="presentation" />
+                                                </picture>
+                                            </div>
+                                            <div class="ba__handle we-sell__handle">
+                                                <div class="ba__inner we-sell__inner">
+                                                    <div class="ba__arrow"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="we-sell__slider-item">
+                                    <div class="we-sell__preview">
+                                        <div class="ba">
+                                            <picture>
+                                                <source type="image/webp" srcset="/app/img/portfolio_3.webp">
+                                                    <img src="/app/img/portfolio_3.jpg" class="ba__image" alt="" role="presentation" />
+                                            </picture>
+                                            <div class="ba__resize">
+                                                <picture>
+                                                    <source type="image/webp" srcset="/app/img/portfolio_3_before.webp">
+                                                        <img src="/app/img/portfolio_3_before.jpg" class="ba__image" alt="" role="presentation" />
+                                                </picture>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="we-sell__circle we-sell__circle_slider"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="we-sell__wrap wrap we-sell-before-after">
+                <div class="we-sell-before-after__phones-wrap">
+                    <div class="we-sell-before-after__phone-wrap we-sell-before-after__phone-wrap_before">
+                        <div class="we-sell-before-after__image-wrap">
+                            <picture>
+                                <source type="image/webp" srcset="/app/img/we-sell-before.webp">
+                                    <img src="/app/img/we-sell-before.png" class="we-sell-before-after__img" alt="" role="presentation" />
+                            </picture>
+                        </div><b class="we-sell-before-after__text">Объявление «До»</b>
+                    </div>
+                    <div class="we-sell-before-after__phone-wrap we-sell-before-after__phone-wrap_after">
+                        <div class="we-sell-before-after__image-wrap">
+                            <picture>
+                                <source type="image/webp" srcset="/app/img/we-sell-after.webp">
+                                    <img src="/app/img/we-sell-after.png" class="we-sell-before-after__img" alt="" role="presentation" />
+                            </picture>
+                        </div><b class="we-sell-before-after__text">Объявление «После»</b>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="sales-model">
             <div class="sales-model__wrap wrap">
                 <div class="sales-model__container-data">
@@ -1048,6 +1157,140 @@
             </div>
             </div>
         </section>
+        <div class="sell-apartment-bottom-wrap">
+            <section class="sell-apartment">
+                <div class="sell-apartment__wrap wrap">
+                    <ul class="sell-apartment__breadcrumbs breadcrumbs flex flex_vertical">
+                        <li class="breadcrumbs__item"><a class="breadcrumbs__link p" href="#">Главная</a>
+                        </li>
+                        <li class="breadcrumbs__item"><a class="breadcrumbs__link p" href="#">Услуги</a>
+                        </li>
+                        <li class="breadcrumbs__item"><a class="breadcrumbs__link p" href="#">Продать квартиру срочно</a>
+                        </li>
+                    </ul>
+                    <h2 class="sell-apartment__title h2">Продать квартиру срочно?</h2>
+                    <p class="sell-apartment__slogan p">Оцените спрос на&nbsp;Вашу квартиру в&nbsp;1 клик</p>
+                    <p class="sell-apartment__applications sell-apartment__applications_mobile">Принимаем заявки из&nbsp;Москвы и&nbsp;Московской области</p>
+                    <div class="sell-apartment__form-wrapper">
+                        <form class="sell-apartment__form sell-form" action="/" method="GET">
+                            <label class="sell-form__label sell-form__label_address">Адрес<span class="sell-form__input-wrap"><input class="sell-form__input" type="text" placeholder="Москва, улица Шаболовка, 10" name="address" autocomplete="off" required="required"/></span>
+                            </label>
+                            <label class="sell-form__label sell-form__label_price">Цена<span class="sell-form__input-wrap"><input class="sell-form__input" type="text" placeholder="5 000 000" name="price" autocomplete="off" inputmode="numeric" required="required"/></span>
+                            </label>
+                            <label class="sell-form__label sell-form__label_rooms">Комнат<span class="sell-form__form-field select js-select"><span class="select__item"><select class="select__field" name="howMuchRooms"><option>1</option><option>2</option><option>3</option><option>4</option></select></span></span>
+                            </label>
+                            <label class="sell-form__label sell-form__label_square">Площадь<span class="sell-form__input-wrap"><input class="sell-form__input" type="text" placeholder="100" name="square" autocomplete="off" inputmode="numeric" required="required"/></span>
+                            </label>
+                            <button class="sell-form__btn btn" type="submit" data-mfp-src="#sell-popup">Получи оценку онлайн</button>
+                        </form>
+                        <div class="sell-apartment__addition">
+                            <p class="sell-apartment__applications">Принимаем заявки из&nbsp;Москвы и&nbsp;МО</p>
+                            <p class="sell-apartment__assessment">Сегодня получили оценку: 322 человека</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sell-popup">
+                    <div class="sell-popup__wrap sell-popup__wrap_top">
+                        <div class="sell-popup__container">
+                            <h3 class="sell-popup__title h3">Найдено 206 потенциальных покупателей</h3>
+                            <p class="sell-popup__description">Это количество людей в&nbsp;нашей системе, которые прямо сейчас ищут похожую квартиру в&nbsp;вашем районе.</p>
+                            <button class="sell-popup__close popup-close" type="button">
+                                <svg class="icon icon-close" viewBox="0 0 25 25">
+                                    <use xlink:href="/app/icons/sprite.svg#close"></use>
+                                </svg>
+                            </button>
+                            <div class="sell-popup__bottom-wrap">
+                                <div class="sell-popup__apartment-data">
+                                    <div class="sell-popup__apartment-data-item sell-popup__apartment-data-item_address"><span class="sell-popup__apartment-data-top">Адрес</span><b class="sell-popup__apartment-data-bottom">г. Москва <br>ул. Шаболовка, 10</b>
+                                    </div>
+                                    <div class="sell-popup__apartment-data-item sell-popup__apartment-data-item_rooms"><span class="sell-popup__apartment-data-top">Комнат</span><b class="sell-popup__apartment-data-bottom">2 комнаты</b>
+                                    </div>
+                                    <div class="sell-popup__apartment-data-item sell-popup__apartment-data-item_price"><span class="sell-popup__apartment-data-top">Цена</span><b class="sell-popup__apartment-data-bottom">4 500 000 ₽</b>
+                                    </div>
+                                </div><a class="sell-popup__btn btn" href="#sell-order-popup">Связаться с&nbsp;покупателем</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sell-popup__wrap sell-popup__wrap_bottom">
+                        <div class="sell-popup__container">
+                            <table class="sell-popup__customer-data customer-data-table">
+                                <tr class="customer-data-table__head-row">
+                                    <th>Покупатель</th>
+                                    <th>Район</th>
+                                    <th>Комнат в&nbsp;кв.</th>
+                                    <th>Бюджет</th>
+                                </tr>
+                                <tr>
+                                    <td class="customer-data-table__item customer-data-table__item_buyer">Покупатель № 23422</td>
+                                    <td class="customer-data-table__item customer-data-table__item_district"><span class="customer-data-table__metro-icon"><svg class="icon icon-metro" viewBox="0 0 25 11"><use xlink:href="/app/icons/sprite.svg#metro"></use></svg></span><span class="customer-data-table__distict-text">Алексеевская</span>
+                                    </td>
+                                    <td class="customer-data-table__item customer-data-table__item_rooms">2 комнаты</td>
+                                    <td class="customer-data-table__item customer-data-table__item_budget">4 960 000<span class="customer-data-table__price-char"> ₽</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="customer-data-table__item customer-data-table__item_buyer">Покупатель № 23423</td>
+                                    <td class="customer-data-table__item customer-data-table__item_district"><span class="customer-data-table__metro-icon"><svg class="icon icon-metro" viewBox="0 0 25 11"><use xlink:href="/app/icons/sprite.svg#metro"></use></svg></span><span class="customer-data-table__distict-text">ВДНХ</span>
+                                    </td>
+                                    <td class="customer-data-table__item customer-data-table__item_rooms">2 комнаты</td>
+                                    <td class="customer-data-table__item customer-data-table__item_budget">5 250 000<span class="customer-data-table__price-char"> ₽</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="customer-data-table__item customer-data-table__item_buyer">Покупатель № 23424</td>
+                                    <td class="customer-data-table__item customer-data-table__item_district"><span class="customer-data-table__metro-icon"><svg class="icon icon-metro" viewBox="0 0 25 11"><use xlink:href="/app/icons/sprite.svg#metro"></use></svg></span><span class="customer-data-table__distict-text">Ботанический сад</span>
+                                    </td>
+                                    <td class="customer-data-table__item customer-data-table__item_rooms">2 комнаты</td>
+                                    <td class="customer-data-table__item customer-data-table__item_budget">4 950 000<span class="customer-data-table__price-char"> ₽</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="customer-data-table__item customer-data-table__item_buyer">Покупатель № 23425</td>
+                                    <td class="customer-data-table__item customer-data-table__item_district"><span class="customer-data-table__metro-icon"><svg class="icon icon-metro" viewBox="0 0 25 11"><use xlink:href="/app/icons/sprite.svg#metro"></use></svg></span><span class="customer-data-table__distict-text">Сокольники</span>
+                                    </td>
+                                    <td class="customer-data-table__item customer-data-table__item_rooms">2 комнаты</td>
+                                    <td class="customer-data-table__item customer-data-table__item_budget">4 950 000<span class="customer-data-table__price-char"> ₽</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="customer-data-table__item customer-data-table__item_buyer">Покупатель № 23426</td>
+                                    <td class="customer-data-table__item customer-data-table__item_district"><span class="customer-data-table__metro-icon"><svg class="icon icon-metro" viewBox="0 0 25 11"><use xlink:href="/app/icons/sprite.svg#metro"></use></svg></span><span class="customer-data-table__distict-text">Беляево</span>
+                                    </td>
+                                    <td class="customer-data-table__item customer-data-table__item_rooms">2 комнаты</td>
+                                    <td class="customer-data-table__item customer-data-table__item_vbudget">4 550 000<span class="customer-data-table__price-char"> ₽</span>
+                                    </td>
+                                </tr>
+                            </table><a class="sell-popup__show-more btn blog__button btn btn_border p" href="#">Показать еще варианты<svg class="sell-popup__arrow" viewBox="0 0 18.560659 9.6213207" width="20" height="15"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sell-order-popup mfp-hide" id="sell-order-popup">
+                    <h2 class="sell-order-popup__title h2">Оформить заявку</h2>
+                    <p class="sell-order-popup__description">Оставьте контакты, и&nbsp;мы позвоним вам для&nbsp;уточнения деталей, чтобы связать вас с&nbsp;потенциальными покупателями.</p>
+                    <button class="sell-order-popup__close popup-close mfp-close" data-mfp-src="#sell-order-popup">
+                        <svg class="icon icon-close" viewBox="0 0 25 25">
+                            <use xlink:href="/app/icons/sprite.svg#close"></use>
+                        </svg>
+                    </button>
+                    <form class="sell-order-popup__form" action="/">
+                        <input type="hidden" name="method[subscribe]" value="1" />
+                        <div class="sell-order-popup__name input">
+                            <input class="input__item" type="text" placeholder="Ваше имя" name="name" />
+                        </div>
+                        <div class="sell-order-popup__phone input">
+                            <input class="input__item" type="text" placeholder="Телефон" name="name" />
+                        </div>
+                        <button class="sell-order-popup__button btn h6" type="submit" data-mfp-src="#sell-order-popup">
+                            <div class="sell-order-popup__text">Оставить заявку</div>
+                        </button>
+                        <label class="sell-order-popup__access access checkbox">
+                            <input class="checkbox__input" type="checkbox" name="access" checked="" /><span class="checkbox__text"><span class="checkbox__check"><svg class="icon icon-check" viewBox="0 0 9 7"><use xlink:href="/app/icons/sprite.svg#check"></use></svg></span>Я согласен с&nbsp;условиями передачи данных</span>
+                        </label>
+                    </form>
+                </div>
+                <div class="sell-apartment__overlay"></div>
+            </section>
+        </div>
         <footer class="footer">
             <div class="footer__wrap wrap">
                 <div class="footer__top flex flex_justify flex_start">
@@ -1155,7 +1398,7 @@
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/app.js?v=1586717278842"></script>
+    <script src="/app/js/app.js?v=1586718227430"></script>
 </body>
 
 </html>

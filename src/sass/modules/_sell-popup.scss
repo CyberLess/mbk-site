@@ -68,6 +68,10 @@
   @include max-screen($large_desktop) {
     right: 9%;
   }
+  &:active {
+    top: 8rem;
+  }
+
 }
 
 .sell-popup__bottom-wrap {
@@ -151,17 +155,4 @@
   height: 8px;
   transform: rotate(90deg);
   fill: #ff0500;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 601;
-
-  display: none;
-  width: 100%;
-  height: 100%;
-
-  background-color: rgba(0, 0, 0, 0.5);
 }

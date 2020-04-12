@@ -1,26 +1,28 @@
 $(() => {
+  const ESC_KEYCODE = 27;
   const ANIMATION_OPEN_TIME = 500;
   const ANIMATION_CLOSE_TIME = 300;
-  const ESC_KEYCODE = 27;
 
   const $body = $('body');
+  const $overlay = $('.sell-apartment__overlay');
   const $sellFormBtn = $('.sell-form__btn');
   const $contactBuyerBtn = $('.sell-popup__btn');
   const $firstPopup = $('.sell-popup');
   const $secondPopup = $('.sell-order-popup');
-  const $overlay = $('.overlay');
+  const $closeSecondBtn = $('.sell-order-popup__close');
   let isFirstOpened = false;
-  let isSecondOpened = false;
 
-  const onFirstPopupClose = function (evt) {
-    if (evt.keyCode === ESC_KEYCODE && !isSecondOpened) {
-      closeFirstPopup();
-    }
+  const removeCloseFirstListeners = () => {
+    const $closeBtn = $('.sell-popup__close');
+
+    $closeBtn.off('click', closeFirstPopup);
+    $overlay.off('click', closeFirstPopup);
+    $(window).off('keydown');
   };
 
-  const onSecondPopupClose = function (evt) {
-    if (evt.keyCode === ESC_KEYCODE && isSecondOpened) {
-      closeSecondPopup();
+  const onFirstPopupClose = function (evt) {
+    if (evt.keyCode === ESC_KEYCODE) {
+      closeFirstPopup();
     }
   };
 
@@ -32,36 +34,16 @@ $(() => {
     $(window).on('keydown', onFirstPopupClose.bind());
   };
 
-  const removeCloseFirstListeners = () => {
-    const $closeBtn = $('.sell-popup__close');
-
-    $closeBtn.off('click', closeFirstPopup);
-    $overlay.off('click', closeFirstPopup);
-    $(window).off('keydown');
-
-    if (isSecondOpened) {
-      $(window).on('keydown', onSecondPopupClose.bind());
-    }
+  const openSecondPop = (popup) => {
+    popup.addClass('sell-order-popup__open-animation');
+    popup.removeClass('sell-order-popup__close-animation');
+    removeCloseFirstListeners();
   };
 
-  const setCloseSecondListeners = () => {
-    const $closeBtn = $('.sell-order-popup__close');
-
-    $closeBtn.click(closeSecondPopup);
-    $overlay.click(closeSecondPopup);
-    $(window).on('keydown', onSecondPopupClose.bind())
-  };
-
-  const removeCloseSecondListeners = () => {
-    const $closeBtn = $('.sell-order-popup__close');
-
-    $closeBtn.off('click', closeSecondPopup);
-    $overlay.off('click', closeSecondPopup);
-    $(window).off('keydown');
-
-    if (isFirstOpened) {
-      $(window).on('keydown', onFirstPopupClose.bind());
-    }
+  const closeSecondPop = (popup) => {
+    popup.addClass('sell-order-popup__close-animation');
+    popup.removeClass('sell-order-popup__open-animation');
+    setCloseFirstListeners();
   };
 
   const openFirstPopup = () => {
@@ -76,7 +58,10 @@ $(() => {
         if (isFirstOpened) {
           setCloseFirstListeners();
         }
-      });
+      })
+      .attr('tabindex', 0)
+      .focus();
+
     $overlay.fadeIn(ANIMATION_OPEN_TIME).css('z-index', '601');
     $body.css({
       position: 'absolute',
@@ -87,27 +72,6 @@ $(() => {
     });
   };
 
-  const openSecondPopup = () => {
-    isSecondOpened = true;
-
-    $secondPopup.css('display', 'block')
-      .animate({
-        right: 0,
-        opacity: 1
-      }, ANIMATION_OPEN_TIME, () => {
-        if (isSecondOpened) {
-          setCloseSecondListeners();
-          removeCloseFirstListeners();
-        }
-      });
-    $overlay.fadeOut(ANIMATION_CLOSE_TIME, function () {
-      $(this).css({
-        zIndex: '603'
-      })
-    })
-      .fadeIn(ANIMATION_OPEN_TIME);
-  };
-
   const closeFirstPopup = () => {
     $firstPopup.animate({
       right: '-100%',
@@ -116,7 +80,8 @@ $(() => {
       $(this).css({
         display: 'none'
       });
-    });
+    }).removeAttr('tabindex');
+
     $overlay.fadeOut(ANIMATION_CLOSE_TIME);
     $body.removeAttr('style');
 
@@ -124,31 +89,25 @@ $(() => {
     isFirstOpened = false;
   };
 
-  const closeSecondPopup = () => {
-    $secondPopup.animate({
-      right: '-100%',
-      opacity: 0
-    }, ANIMATION_CLOSE_TIME, function () {
-      $(this).css({
-        display: 'none'
-      });
-    });
-    $overlay.fadeOut(ANIMATION_CLOSE_TIME, function () {
-      $(this).css({
-        zIndex: '601'
-      }).fadeIn(ANIMATION_CLOSE_TIME);
-      removeCloseSecondListeners();
-      setCloseFirstListeners();
-    });
-
-    isSecondOpened = false;
-  };
-
   $sellFormBtn.click(() => {
     openFirstPopup();
   });
 
-  $contactBuyerBtn.click(() => {
-    openSecondPopup();
-  })
+  $contactBuyerBtn.magnificPopup({
+    type: 'inline',
+    preloader: false,
+    removalDelay: ANIMATION_CLOSE_TIME,
+    callbacks: {
+      open: () => {
+        openSecondPop($secondPopup);
+      },
+      beforeClose: () => {
+        closeSecondPop($secondPopup)
+      }
+    },
+  });
+
+  $closeSecondBtn.click(function () {
+    $.magnificPopup.close();
+  });
 });

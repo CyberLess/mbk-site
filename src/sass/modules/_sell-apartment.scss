@@ -109,3 +109,36 @@ p.sell-apartment__applications.sell-apartment__applications_mobile {
     width: 100%;
   }
 }
+
+.sell-apartment__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 601;
+
+  display: none;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, .749);
+}
+
+.sell-apartment-bottom-wrap {
+  .sell-apartment {
+    padding-top: 6.5rem;
+  }
+
+  .sell-apartment__breadcrumbs {
+    display: none;
+  }
+
+  .sell-apartment__title {
+    display: none;
+  }
+
+  .sell-apartment__slogan {
+    font-size: 4.6rem;
+    font-weight: bold;
+  }
+}
+
