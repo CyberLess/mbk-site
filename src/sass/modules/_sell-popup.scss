@@ -82,8 +82,13 @@
 .sell-popup__apartment-data {
   display: flex;
   flex-wrap: wrap;
-  width: 70%;
+  width: 62%;
   margin-right: auto;
+
+  background-image: url("/img/thin-arrow.svg");
+  background-size: 23px 10px;
+  background-repeat: no-repeat;
+  background-position: right 4rem;
 }
 
 .sell-popup__apartment-data-item {
