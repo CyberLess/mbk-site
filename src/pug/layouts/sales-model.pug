@@ -3,14 +3,22 @@
         +e.container-data
             +e.title.h3
                 | Получите индивидуальную модель продаж Вашей квартиры
-            +e.FORM.form
-                +e.data
-                    +e.INPUT.input(placeholder='Имя' name='name' required)
-                    +e.INPUT.input(placeholder='Телефон' name='phone' type='tel' required)
-                +e.INPUT.submit.btn(type='submit' value='Получи модель продаж')
-                +e.INPUT.consent(type='checkbox' name='consent' id='consent' value='agreed' checked)
-                +e.LABEL.agreed(for='consent')
-                    | Я согласен с условиями передачи данных
+            +e.FORM.form.form__(action="/")
+                +e.INPUT(type="hidden" name="method[subscribe]" value='1')
+                +e.name.input__._normal
+                    +e.INPUT.item(type="text" placeholder="Имя" name="name")
+                +e.phone.input__._normal
+                    +e.INPUT.item(type="tel" placeholder="Телефон" name="phone")
+                +e.button.btn.h6.sales-model__submit.BUTTON
+                    +e.text Получи модель продаж
+                +e.LABEL.access.access.checkbox__
+                    +e.INPUT.input(type='checkbox' name='access' checked="")
+                    +e.SPAN.text
+                        +e.check
+                            +icon('check', '0 0 9 7')
+                        | Я согласен с условиями
+                        <br>
+                        | передачи данных
         +e.container-img
             +e.IMG.img(src="/img/journal.png")
             +e.P.region
