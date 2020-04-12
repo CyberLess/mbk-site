@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
-    <title>Общая страница</title>
-    <link rel="stylesheet" href="/app/css/app.css?v=1586717279414">
+    <title>Статья</title>
+    <link rel="stylesheet" href="/app/css/app.css?v=1586717277214">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
@@ -725,816 +725,227 @@
                 </div>
             </div>
         </header>
-        <div class="fluid">
-            <div class="fluid__socials socials socials_default socials_white">
-                <div class="socials__item socials__item_youtube"><a class="socials__link" href="#"><span><svg class="icon icon-yotube" viewBox="0 0 21 15"><use xlink:href="/app/icons/sprite.svg#yotube"></use></svg></span></a>
+        <section class="article-item">
+            <div class="article-item__wrap wrap">
+                <ul class="article-item__breadcrumbs breadcrumbs flex flex_vertical">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link p" href="#">Блог</a>
+                    </li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link p" href="#">Банкротство</a>
+                    </li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link p" href="#">Что будет</a>
+                    </li>
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link p" href="#">Если не платить микрозайм</a>
+                    </li>
+                </ul>
+                <section class="top article__head">
+                    <picture>
+                        <source type="image/webp" srcset="/app/img/article-top.webp">
+                            <img src="/app/img/article-top.png" class="top__bg object-fit" alt="" role="presentation" />
+                    </picture>
+                    <div class="top__inner"><a class="top__category red-link h6" href="#">Долги</a>
+                        <div class="top__title h3">Что будет, если не платить микрозаймы, взятые через&nbsp;интернет?</div>
+                        <div class="top__author flex flex_vertical">
+                            <div class="top__cell top__cell_avatar">
+                                <div class="top__avatar">
+                                    <picture>
+                                        <source type="image/webp" srcset="/app/img/article-avatar.webp">
+                                            <img src="/app/img/article-avatar.png" class="top__avatar-img object-fit" alt="" role="presentation" />
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="top__cell top__cell_content"><a class="top__link h6 link" href="#">Алексей Астафьев<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
+                                <div
+                                class="top__author-text p">Финансовый аналитик МБК</div>
+                        </div>
+                    </div>
+            </div>
+            </section>
+            <div class="article-item__info flex flex_vertical flex_justify article">
+                <div class="article__nav-item p">
+                    <time class="article__date" datetime="2019-10-10">10 октября 2019</time>
                 </div>
-                <div class="socials__item socials__item_inst"><a class="socials__link" href="#"><span><svg class="icon icon-insta" viewBox="0 0 18 19"><use xlink:href="/app/icons/sprite.svg#insta"></use></svg></span></a>
+                <div class="article__nav flex flex_vertical">
+                    <div class="article__nav-item p">
+                        <div class="article__nav-icon article__nav-icon_watch">
+                            <svg class="icon icon-watch" viewBox="0 0 21 13">
+                                <use xlink:href="/app/icons/sprite.svg#watch"></use>
+                            </svg>
+                        </div>5,500</div><a class="article__nav-item p" href="#"><span class="article__nav-icon article__nav-icon_heart"><svg class="icon icon-heart" viewBox="0 0 14 13"><use xlink:href="/app/icons/sprite.svg#heart"></use></svg></span>70</a>
+                    <a
+                    class="article__nav-item p" href="#"><span class="article__nav-icon article__nav-icon_comment"><svg class="icon icon-comment" viewBox="0 0 14 14"><use xlink:href="/app/icons/sprite.svg#comment"></use></svg></span>15</a>
                 </div>
-                <div class="socials__item socials__item_fb"><a class="socials__link" href="#"><span><svg class="icon icon-fb" viewBox="0 0 10 19"><use xlink:href="/app/icons/sprite.svg#fb"></use></svg></span></a>
+                <div class="article__time flex flex_vertical">
+                    <div class="article__nav-item article__nav-item_gray p">
+                        <div class="article__nav-icon article__nav-icon_clock">
+                            <svg class="icon icon-clock" viewBox="0 0 12 12">
+                                <use xlink:href="/app/icons/sprite.svg#clock"></use>
+                            </svg>
+                        </div>10 минут</div>
+                    <div class="article__nav-item article__nav-item_red p"><a class="article__nav-link red-link" href="#">Некогда читать?</a>
+                    </div>
                 </div>
-                <div class="socials__item socials__item_vk"><a class="socials__link" href="#"><span><svg class="icon icon-vk" viewBox="0 0 24 15"><use xlink:href="/app/icons/sprite.svg#vk"></use></svg></span></a>
+                <div class="article__social flex flex_vertical">
+                    <div class="article__nav-item p">Поделиться статьей</div>
+                    <div class="article__social-list flex flex_vertical social-share">
+                        <div class="social-share__item social-share__item_vk"><a class="social-share__link" href="#"><span><svg class="icon icon-vk" viewBox="0 0 24 15"><use xlink:href="/app/icons/sprite.svg#vk"></use></svg></span></a>
+                        </div>
+                        <div class="social-share__item social-share__item_fb"><a class="social-share__link" href="#"><span><svg class="icon icon-fb" viewBox="0 0 10 19"><use xlink:href="/app/icons/sprite.svg#fb"></use></svg></span></a>
+                        </div>
+                        <div class="social-share__item social-share__item_tw"><a class="social-share__link" href="#"><span><svg class="icon icon-tw" viewBox="0 0 17 15"><use xlink:href="/app/icons/sprite.svg#tw"></use></svg></span></a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <section class="group">
-            <section class="credit">
-                <div class="credit__wrap wrap">
-                    <ul class="credit__breadcrumbs breadcrumbs flex flex_vertical">
-                        <li class="breadcrumbs__item"><a class="breadcrumbs__link p" href="#">Главная</a>
+            <div class="article-item__content content content_big">
+                <div class="article-item__cell article-item__cell_left">
+                    <div class="article-item__padding">
+                        <p>Многие люди пользуются микрозаймами, любезно предоставляемыми интернет-организациями.</p>
+                        <p>Обычно это маленькие суммы 3000-10000 рублей, которые без&nbsp;лишних бюрократических накладок быстро перечисляются на&nbsp;карту заемщику.</p>
+                        <p>Но потом возникают неприятные сюрпризы – долг запросто может вырасти всего за&nbsp;1-2 месяца в&nbsp;несколько раз! Клиенты начинают чувствовать себя обманутыми, и&nbsp;часто принципиально отказываются от&nbsp;оплаты. Что будет,
+                            если не платить микрозаймы, взятые через&nbsp;интернет?</p>
+                        <div class="article-item__title">
+                            <h2>Оглавление</h2>
+                            <ol>
+                                <li><a href="#">С какими рисками сталкиваются должники МФО?</a>
+                                </li>
+                                <li><a href="#">Как не платить микрозаймы законно?</a>
+                                </li>
+                                <li><a href="#">Перекредитование кредитов с&nbsp;плохой кредитной историей при&nbsp;смене основной работы</a>
+                                </li>
+                                <li><a href="#">Рекомендации юристов</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="article-item__row flex flex_justify">
+                    <div class="article-item__cell article-item__cell_left">
+                        <div class="article-item__padding">
+                            <h2>С какими рисками сталкиваются должники МФО?</h2>
+                            <p>МФО может обратить взыскание в&nbsp;судебном порядке, и&nbsp;инициировать работу судебных приставов через&nbsp;получение судебного приказа. Чем это грозит?</p>
+                            <ol>
+                                <li>Блокировкой банковских счетов и&nbsp;принудительным списанием суммы долга с&nbsp;карты</li>
+                                <li>Арестом имущества</li>
+                                <li>Взысканием из&nbsp;заработной платы</li>
+                                <li>Запретом на&nbsp;выезд за&nbsp;границу РФ</li>
+                            </ol>
+                            <p>МФО может продать долг коллекторам. Вам будут названивать, приходить в&nbsp;«гости», постоянно требовать выплату долга. Могут применяться незаконные меры, которые в&nbsp;случае необходимости можно будет оспорить:</p>
+                            <ul>
+                                <li>Распространение информации о&nbsp;долге третьим лицам – родственникам, коллегам, друзьям</li>
+                                <li>Угрозы расправы</li>
+                                <li>Психологическое насилие</li>
+                                <li>Порча мелкого имущества: царапины на&nbsp;авто, порча замков, входной двери, битье окон</li>
+                            </ul>
+                            <p>Ну и, конечно же, пени. Согласно последним изменениям законодательства, МФО не может накрутить долг больше чем в&nbsp;3 раза от&nbsp;выданной суммы. Но отзывы на&nbsp;форумах показывают, что кредиторы применяют обманные схемы:
+                                если вы заплатили хотя бы немного по&nbsp;образовавшемуся долгу, сумма снова будет накручена в&nbsp;3 раза.</p>
+                        </div>
+                        <div class="article-item__accent">
+                            <img class="article-item__accent-icon" src="/app/img/chat.svg" alt="" role="presentation" />
+                            <p>Если хотите получить бесплатную консультацию по&nbsp;банкротству, <a class="red-link" href="#">обращайтесь к&nbsp;нам</a>.
+                                <br>Разберем вашу ситуацию.</p>
+                        </div>
+                        <div class="article-item__padding">
+                            <h2>Как не платить микрозаймы законно?</h2>
+                            <p>Обратиться в&nbsp;суд. Если МФО накручивает долг в&nbsp;несколько раз за&nbsp;короткий период времени, вы можете обратиться с&nbsp;иском в&nbsp;суд. Также это возможно сделать, если вы нашли другие нарушения в&nbsp;работе компании.
+                                Иск позволит списать штрафы и&nbsp;пени, исключить % МФО, и&nbsp;рассчитаться с&nbsp;долгом через&nbsp;ФССП, по&nbsp;% ключевой ставки ЦБ (7,25% годовых).</p>
+                            <p>Дождаться истечения срока давности. Если вы не можете платить, вы можете сменить место проживания, контактные данные и&nbsp;спокойно дождаться истечение 3-х лет с&nbsp;момента взятия кредита. Правда, кредитная история будет
+                                испорчена.</p>
+                            <p>Обратиться в&nbsp;суд за&nbsp;признанием банкротством физического лица. Это законный способ избавления от&nbsp;долгов по&nbsp;кредитам, к&nbsp;которому чаще прибегают жители крупных городов – Москвы, Екатеринбурга и&nbsp;других
+                                мегаполисов. Тем не менее, списание долгов через&nbsp;суд доступно для&nbsp;всех жителей РФ. Достаточно просто обратиться в&nbsp;Арбитражный суд по&nbsp;месту проживания, и&nbsp;начать процедуру!</p>
+                            <p>Обратиться в&nbsp;суд. Если МФО накручивает долг в&nbsp;несколько раз за&nbsp;короткий период времени, вы можете обратиться с&nbsp;иском в&nbsp;суд. Также это возможно сделать, если вы нашли другие нарушения в&nbsp;работе компании.
+                                Иск позволит списать штрафы и&nbsp;пени, исключить % МФО, и&nbsp;рассчитаться с&nbsp;долгом через&nbsp;ФССП, по&nbsp;% ключевой ставки ЦБ (7,25% годовых).</p>
+                            <p>Дождаться истечения срока давности. Если вы не можете платить, вы можете сменить место проживания, контактные данные и&nbsp;спокойно дождаться истечение 3-х лет с&nbsp;момента взятия кредита. Правда, кредитная история будет
+                                испорчена.</p>
+                            <p>Обратиться в&nbsp;суд за&nbsp;признанием банкротством физического лица. Это законный способ избавления от&nbsp;долгов по&nbsp;кредитам, к&nbsp;которому чаще прибегают жители крупных городов – Москвы, Екатеринбурга и&nbsp;других
+                                мегаполисов. Тем не менее, списание долгов через&nbsp;суд доступно для&nbsp;всех жителей РФ. Достаточно просто обратиться в&nbsp;Арбитражный суд по&nbsp;месту проживания, и&nbsp;начать процедуру!</p>
+                            <div class="article-item__copyright p">© «МБК», при&nbsp;полном или&nbsp;частичном копировании материала ссылка на&nbsp;первоисточник обязательна. Нашли ошибку в&nbsp;тексте? Выделите нужный фрагмент и&nbsp;нажмите Ctrl + Enter.</div>
+                        </div>
+                    </div>
+                    <div class="article-item__cell article-item__cell_right">
+                        <h2>Читайте еще</h2>
+                        <section class="other-articles">
+                            <div class="other-articles__item">
+                                <a class="other-articles__link" href="#">
+                                    <picture>
+                                        <source type="image/webp" srcset="/app/img/other-article-1.webp">
+                                            <img src="/app/img/other-article-1.jpg" class="other-articles__bg object-fit" alt="" role="presentation" />
+                                    </picture><span class="other-articles__item-head flex flex_justify"><img class="other-articles__article-logo" src="/app/img/logo-article.svg" alt="" role="presentation"/><span class="other-articles__contacts"><span class="other-articles__tel">+7 499 346 37 18</span>
+                                    <span
+                                    class="other-articles__desc">Горячая линия</span>
+                                        </span>
+                                        </span><span class="other-articles__item-text"><h3>Нет кредитной истории</h3><p>Где взять кредит с&nbsp;нулевой историей?</p><p>Почему в&nbsp;крупные банки обращаться бесполезно?</p></span>
+                                </a>
+                            </div>
+                            <div class="other-articles__item">
+                                <a class="other-articles__link" href="#">
+                                    <picture>
+                                        <source type="image/webp" srcset="/app/img/other-article-2.webp">
+                                            <img src="/app/img/other-article-2.jpg" class="other-articles__bg object-fit" alt="" role="presentation" />
+                                    </picture><span class="other-articles__item-head flex flex_justify"><img class="other-articles__article-logo" src="/app/img/logo-article.svg" alt="" role="presentation"/><span class="other-articles__contacts"><span class="other-articles__tel">+7 499 346 37 18</span>
+                                    <span
+                                    class="other-articles__desc">Горячая линия</span>
+                                        </span>
+                                        </span><span class="other-articles__item-text"><h3>Как продать квартиру дороже на&nbsp;20%</h3><p>Пошаговая инструкция</p></span>
+                                </a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="article-item__info article-item__info_bottom flex flex_vertical article">
+                <div class="article__nav-item p">Вы согласны?</div>
+                <div class="article__social flex flex_vertical">
+                    <div class="article__nav-item p">Поделиться</div>
+                    <div class="article__social-list flex flex_vertical social-share social-share_min">
+                        <div class="social-share__item social-share__item_vk"><a class="social-share__link" href="#"><span><svg class="icon icon-vk" viewBox="0 0 24 15"><use xlink:href="/app/icons/sprite.svg#vk"></use></svg></span></a>
+                        </div>
+                        <div class="social-share__item social-share__item_fb"><a class="social-share__link" href="#"><span><svg class="icon icon-fb" viewBox="0 0 10 19"><use xlink:href="/app/icons/sprite.svg#fb"></use></svg></span></a>
+                        </div>
+                        <div class="social-share__item social-share__item_tw"><a class="social-share__link" href="#"><span><svg class="icon icon-tw" viewBox="0 0 17 15"><use xlink:href="/app/icons/sprite.svg#tw"></use></svg></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="article__nav flex flex_vertical">
+                    <div class="article__nav-item p">
+                        <div class="article__nav-icon article__nav-icon_watch">
+                            <svg class="icon icon-watch" viewBox="0 0 21 13">
+                                <use xlink:href="/app/icons/sprite.svg#watch"></use>
+                            </svg>
+                        </div>5,500</div><a class="article__nav-item p" href="#"><span class="article__nav-icon article__nav-icon_heart"><svg class="icon icon-heart" viewBox="0 0 14 13"><use xlink:href="/app/icons/sprite.svg#heart"></use></svg></span>70</a>
+                    <a
+                    class="article__nav-item p" href="#"><span class="article__nav-icon article__nav-icon_comment"><svg class="icon icon-comment" viewBox="0 0 14 14"><use xlink:href="/app/icons/sprite.svg#comment"></use></svg></span>15</a>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section class="article-author">
+            <div class="article-author__wrap wrap flex flex_vertical">
+                <div class="article-author__avatar">
+                    <picture>
+                        <source type="image/webp" srcset="/app/img/article-author.webp">
+                            <img src="/app/img/article-author.png" class="article-author__avatar-img object-fit" alt="" role="presentation" />
+                    </picture>
+                </div>
+                <div class="article-author__description"><span class="article-author__category p">Автор</span><span class="article-author__name h5">Алексей<br>Астафьев</span><a class="article-author__link h6 link link_red" href="#">Все статьи этого автора<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
+                </div>
+                <div class="article-author__content">
+                    <h2 class="article-author__title">Последние статьи автора</h2>
+                    <ul class="article-author__list">
+                        <li class="article-author__item"><a class="article-author__item-link" href="#">Если признали банкротом, а&nbsp;банк продолжает взыскание</a>
                         </li>
-                        <li class="breadcrumbs__item"><a class="breadcrumbs__link p" href="#">Услуги</a>
+                        <li class="article-author__item"><a class="article-author__item-link" href="#">Ипотека после банкротства физического лица</a>
                         </li>
-                        <li class="breadcrumbs__item"><a class="breadcrumbs__link p" href="#">Получить деньги</a>
+                        <li class="article-author__item"><a class="article-author__item-link" href="#">Что делать, если бывший муж не платит?</a>
                         </li>
                     </ul>
-                    <div class="credit__title h2">Получить деньги</div>
-                    <form class="credit__form form">
-                        <div class="credit__form-row flex">
-                            <div class="credit__form-cell">
-                                <div class="credit__form-field range-input">
-                                    <div class="range-input__top">
-                                        <div class="range-input__label p">Выберите сумму кредита</div>
-                                    </div>
-                                    <div class="range-input__parent">
-                                        <input class="range-input__input" type="text" autocomplete="off" name="calc[price]" placeholder="0 ₽" value="300000" />
-                                        <div class="range-input__char h6">₽</div>
-                                        <div class="range-input__bottom">
-                                            <div class="range-input__line"></div>
-                                            <div class="range-input__path" data-min="150000" data-step="50000" data-max="15000000"></div>
-                                        </div>
-                                    </div>
-                                    <div class="range-input__info flex flex_vertical flex_justify">
-                                        <div class="range-input__label p">150 тыс.</div>
-                                        <div class="range-input__label p">15 млн</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="credit__form-cell">
-                                <div class="credit__form-field select js-select">
-                                    <div class="select__top">
-                                        <div class="select__label p">Выберите срок кредита</div>
-                                    </div>
-                                    <div class="select__item">
-                                        <select class="select__field" name="time">
-                                            <option>1 месяц</option>
-                                            <option>2 месяца</option>
-                                            <option>3 месяца</option>
-                                            <option>4 месяца</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="credit__form-tags flex flex_start">
-                            <label class="credit__tag tag tag_dark-active">
-                                <input class="tag__input" type="checkbox" name="type" value="Популярные" /><span class="tag__text">Популярные</span>
-                            </label>
-                            <label class="credit__tag tag tag_dark-active">
-                                <input class="tag__input" type="checkbox" name="type" value="На авто" /><span class="tag__text">На авто</span>
-                            </label>
-                            <label class="credit__tag tag tag_dark-active">
-                                <input class="tag__input" type="checkbox" checked="" name="type" value="На бизнес" /><span class="tag__text">На бизнес</span>
-                            </label>
-                            <label class="credit__tag tag tag_dark-active">
-                                <input class="tag__input" type="checkbox" name="type" value="На ремонт" /><span class="tag__text">На ремонт</span>
-                            </label>
-                            <label class="credit__tag tag tag_dark-active">
-                                <input class="tag__input" type="checkbox" name="type" value="На отдых" /><span class="tag__text">На отдых</span>
-                            </label>
-                            <label class="credit__tag tag tag_dark-active">
-                                <input class="tag__input" type="checkbox" name="type" value="На учебу" /><span class="tag__text">На учебу</span>
-                            </label>
-                            <label class="credit__tag tag tag_dark-active">
-                                <input class="tag__input" type="checkbox" name="type" value="На лечение" /><span class="tag__text">На лечение</span>
-                            </label>
-                            <label class="credit__tag tag tag_dark-active">
-                                <input class="tag__input" type="checkbox" name="type" value="На личные цели" /><span class="tag__text">На личные цели</span>
-                            </label>
-                        </div><a class="credit__link h6 link link_red" href="#test">Открыть все условия<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
-                    </form>
-                    <div class="credit__list service service_noscope">
-                        <div class="service__list-top flex flex_vertical">
-                            <div class="service__type js-service-type is-active h6">
-                                <svg class="icon icon-tile" viewBox="0 0 13 13">
-                                    <use xlink:href="/app/icons/sprite.svg#tile"></use>
-                                </svg>Плиткой</div>
-                            <div class="service__type js-service-type h6" data-inline="1">
-                                <svg class="icon icon-burger" viewBox="0 0 14 13">
-                                    <use xlink:href="/app/icons/sprite.svg#burger"></use>
-                                </svg>Списком</div>
-                        </div>
-                        <div class="service__row flex">
-                            <a class="service__item" href="#">
-                                <div class="service__head flex">
-                                    <picture>
-                                        <source type="image/webp" srcset="/app/img/credit_1.webp">
-                                            <img src="/app/img/credit_1.jpg" class="service__head-bg object-fit" alt="" role="presentation" />
-                                    </picture>
-                                    <div class="service__head-inner">
-                                        <div class="service__name h5">Без залога</div>
-                                    </div>
-                                </div>
-                                <div class="service__body service__body_noscope">
-                                    <div class="service__mark-list flex flex_vertical">
-                                        <div class="service__mark mark">Кредиты</div>
-                                        <div class="service__mark mark">С плохой историей</div>
-                                    </div>
-                                    <div class="service__body-inner">
-                                        <div class="service__table">
-                                            <div class="service__table-row flex flex_vertical">
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-text h6">Ставка</div>
-                                                </div>
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-bold h6">9,9%</div>
-                                                </div>
-                                            </div>
-                                            <div class="service__table-row flex flex_vertical">
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-text h6">Сумма</div>
-                                                </div>
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-bold h6">до&nbsp;1 млн</div>
-                                                </div>
-                                            </div>
-                                            <div class="service__table-row flex flex_vertical">
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-text h6">Платеж</div>
-                                                </div>
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-bold h6">от&nbsp;300₽/мес</div>
-                                                </div>
-                                            </div>
-                                            <div class="service__table-row flex flex_vertical">
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-text h6">Оценили</div>
-                                                </div>
-                                                <div class="service__table-cell">
-                                                    <div class="service__like like h6">
-                                                        <div class="like__icon">
-                                                            <svg class="icon icon-heart" viewBox="0 0 14 13">
-                                                                <use xlink:href="/app/icons/sprite.svg#heart"></use>
-                                                            </svg>
-                                                        </div>5623</div>
-                                                </div>
-                                            </div>
-                                        </div><span class="service__button h6 btn"><span class="btn__text">Оформить без&nbsp;залога</span></span>
-                                        <div class="service__text small">Сегодня оформили 322 человек</div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="service__item" href="#">
-                                <div class="service__head flex">
-                                    <picture>
-                                        <source type="image/webp" srcset="/app/img/credit_2.webp">
-                                            <img src="/app/img/credit_2.jpg" class="service__head-bg object-fit" alt="" role="presentation" />
-                                    </picture>
-                                    <div class="service__head-top">
-                                        <div class="service__mark mark mark_white mark_big">Популярный выбор</div>
-                                    </div>
-                                    <div class="service__head-inner">
-                                        <div class="service__name h5">Потребительский кредит без&nbsp;справок и&nbsp;поручителей по&nbsp;двум документам</div>
-                                    </div>
-                                </div>
-                                <div class="service__body service__body_noscope">
-                                    <div class="service__mark-list flex flex_vertical">
-                                        <div class="service__mark mark">Кредиты</div>
-                                        <div class="service__mark mark">Без справок</div>
-                                        <div class="service__mark mark">Без залога</div>
-                                    </div>
-                                    <div class="service__body-inner">
-                                        <div class="service__table">
-                                            <div class="service__table-row flex flex_vertical">
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-text h6">Ставка</div>
-                                                </div>
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-bold h6">9,9%</div>
-                                                </div>
-                                            </div>
-                                            <div class="service__table-row flex flex_vertical">
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-text h6">Сумма</div>
-                                                </div>
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-bold h6">до&nbsp;1 млн</div>
-                                                </div>
-                                            </div>
-                                            <div class="service__table-row flex flex_vertical">
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-text h6">Платеж</div>
-                                                </div>
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-bold h6">от&nbsp;300₽/мес</div>
-                                                </div>
-                                            </div>
-                                            <div class="service__table-row flex flex_vertical">
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-text h6">Оценили</div>
-                                                </div>
-                                                <div class="service__table-cell">
-                                                    <div class="service__like like h6">
-                                                        <div class="like__icon">
-                                                            <svg class="icon icon-heart" viewBox="0 0 14 13">
-                                                                <use xlink:href="/app/icons/sprite.svg#heart"></use>
-                                                            </svg>
-                                                        </div>5623</div>
-                                                </div>
-                                            </div>
-                                        </div><span class="service__button h6 btn"><span class="btn__text">Оформить без&nbsp;залога</span></span>
-                                        <div class="service__text small">Сегодня оформили 322 человек</div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="service__item" href="#">
-                                <div class="service__head flex">
-                                    <picture>
-                                        <source type="image/webp" srcset="/app/img/credit_3.webp">
-                                            <img src="/app/img/credit_3.jpg" class="service__head-bg object-fit" alt="" role="presentation" />
-                                    </picture>
-                                    <div class="service__head-inner">
-                                        <div class="service__name h5">Потребительский кредит</div>
-                                    </div>
-                                </div>
-                                <div class="service__body service__body_noscope">
-                                    <div class="service__mark-list flex flex_vertical">
-                                        <div class="service__mark mark">Кредиты</div>
-                                        <div class="service__mark mark">Без поручителей</div>
-                                    </div>
-                                    <div class="service__body-inner">
-                                        <div class="service__table">
-                                            <div class="service__table-row flex flex_vertical">
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-text h6">Ставка</div>
-                                                </div>
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-bold h6">9,9%</div>
-                                                </div>
-                                            </div>
-                                            <div class="service__table-row flex flex_vertical">
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-text h6">Сумма</div>
-                                                </div>
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-bold h6">до&nbsp;1 млн</div>
-                                                </div>
-                                            </div>
-                                            <div class="service__table-row flex flex_vertical">
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-text h6">Платеж</div>
-                                                </div>
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-bold h6">от&nbsp;300₽/мес</div>
-                                                </div>
-                                            </div>
-                                            <div class="service__table-row flex flex_vertical">
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-text h6">Оценили</div>
-                                                </div>
-                                                <div class="service__table-cell">
-                                                    <div class="service__like like h6">
-                                                        <div class="like__icon">
-                                                            <svg class="icon icon-heart" viewBox="0 0 14 13">
-                                                                <use xlink:href="/app/icons/sprite.svg#heart"></use>
-                                                            </svg>
-                                                        </div>5623</div>
-                                                </div>
-                                            </div>
-                                        </div><span class="service__button h6 btn"><span class="btn__text">Оформить без&nbsp;залога</span></span>
-                                        <div class="service__text small">Сегодня оформили 322 человек</div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="service__item" href="#">
-                                <div class="service__head flex">
-                                    <picture>
-                                        <source type="image/webp" srcset="/app/img/credit_1.webp">
-                                            <img src="/app/img/credit_1.jpg" class="service__head-bg object-fit" alt="" role="presentation" />
-                                    </picture>
-                                    <div class="service__head-inner">
-                                        <div class="service__name h5">Без залога</div>
-                                    </div>
-                                </div>
-                                <div class="service__body service__body_noscope">
-                                    <div class="service__mark-list flex flex_vertical">
-                                        <div class="service__mark mark">Кредиты</div>
-                                        <div class="service__mark mark">С плохой историей</div>
-                                    </div>
-                                    <div class="service__body-inner">
-                                        <div class="service__table">
-                                            <div class="service__table-row flex flex_vertical">
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-text h6">Ставка</div>
-                                                </div>
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-bold h6">9,9%</div>
-                                                </div>
-                                            </div>
-                                            <div class="service__table-row flex flex_vertical">
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-text h6">Сумма</div>
-                                                </div>
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-bold h6">до&nbsp;1 млн</div>
-                                                </div>
-                                            </div>
-                                            <div class="service__table-row flex flex_vertical">
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-text h6">Платеж</div>
-                                                </div>
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-bold h6">от&nbsp;300₽/мес</div>
-                                                </div>
-                                            </div>
-                                            <div class="service__table-row flex flex_vertical">
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-text h6">Оценили</div>
-                                                </div>
-                                                <div class="service__table-cell">
-                                                    <div class="service__like like h6">
-                                                        <div class="like__icon">
-                                                            <svg class="icon icon-heart" viewBox="0 0 14 13">
-                                                                <use xlink:href="/app/icons/sprite.svg#heart"></use>
-                                                            </svg>
-                                                        </div>5623</div>
-                                                </div>
-                                            </div>
-                                        </div><span class="service__button h6 btn"><span class="btn__text">Оформить без&nbsp;залога</span></span>
-                                        <div class="service__text small">Сегодня оформили 322 человек</div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="service__item" href="#">
-                                <div class="service__head flex">
-                                    <picture>
-                                        <source type="image/webp" srcset="/app/img/credit_2.webp">
-                                            <img src="/app/img/credit_2.jpg" class="service__head-bg object-fit" alt="" role="presentation" />
-                                    </picture>
-                                    <div class="service__head-top">
-                                        <div class="service__mark mark mark_white mark_big">Популярный выбор</div>
-                                    </div>
-                                    <div class="service__head-inner">
-                                        <div class="service__name h5">Потребительский кредит без&nbsp;справок и&nbsp;поручителей по&nbsp;двум документам</div>
-                                    </div>
-                                </div>
-                                <div class="service__body service__body_noscope">
-                                    <div class="service__mark-list flex flex_vertical">
-                                        <div class="service__mark mark">Кредиты</div>
-                                        <div class="service__mark mark">Без справок</div>
-                                        <div class="service__mark mark">Без залога</div>
-                                    </div>
-                                    <div class="service__body-inner">
-                                        <div class="service__table">
-                                            <div class="service__table-row flex flex_vertical">
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-text h6">Ставка</div>
-                                                </div>
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-bold h6">9,9%</div>
-                                                </div>
-                                            </div>
-                                            <div class="service__table-row flex flex_vertical">
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-text h6">Сумма</div>
-                                                </div>
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-bold h6">до&nbsp;1 млн</div>
-                                                </div>
-                                            </div>
-                                            <div class="service__table-row flex flex_vertical">
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-text h6">Платеж</div>
-                                                </div>
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-bold h6">от&nbsp;300₽/мес</div>
-                                                </div>
-                                            </div>
-                                            <div class="service__table-row flex flex_vertical">
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-text h6">Оценили</div>
-                                                </div>
-                                                <div class="service__table-cell">
-                                                    <div class="service__like like h6">
-                                                        <div class="like__icon">
-                                                            <svg class="icon icon-heart" viewBox="0 0 14 13">
-                                                                <use xlink:href="/app/icons/sprite.svg#heart"></use>
-                                                            </svg>
-                                                        </div>5623</div>
-                                                </div>
-                                            </div>
-                                        </div><span class="service__button h6 btn"><span class="btn__text">Оформить без&nbsp;залога</span></span>
-                                        <div class="service__text small">Сегодня оформили 322 человек</div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="service__item" href="#">
-                                <div class="service__head flex">
-                                    <picture>
-                                        <source type="image/webp" srcset="/app/img/credit_3.webp">
-                                            <img src="/app/img/credit_3.jpg" class="service__head-bg object-fit" alt="" role="presentation" />
-                                    </picture>
-                                    <div class="service__head-inner">
-                                        <div class="service__name h5">Потребительский кредит</div>
-                                    </div>
-                                </div>
-                                <div class="service__body service__body_noscope">
-                                    <div class="service__mark-list flex flex_vertical">
-                                        <div class="service__mark mark">Кредиты</div>
-                                        <div class="service__mark mark">Без поручителей</div>
-                                    </div>
-                                    <div class="service__body-inner">
-                                        <div class="service__table">
-                                            <div class="service__table-row flex flex_vertical">
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-text h6">Ставка</div>
-                                                </div>
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-bold h6">9,9%</div>
-                                                </div>
-                                            </div>
-                                            <div class="service__table-row flex flex_vertical">
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-text h6">Сумма</div>
-                                                </div>
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-bold h6">до&nbsp;1 млн</div>
-                                                </div>
-                                            </div>
-                                            <div class="service__table-row flex flex_vertical">
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-text h6">Платеж</div>
-                                                </div>
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-bold h6">от&nbsp;300₽/мес</div>
-                                                </div>
-                                            </div>
-                                            <div class="service__table-row flex flex_vertical">
-                                                <div class="service__table-cell">
-                                                    <div class="service__table-text h6">Оценили</div>
-                                                </div>
-                                                <div class="service__table-cell">
-                                                    <div class="service__like like h6">
-                                                        <div class="like__icon">
-                                                            <svg class="icon icon-heart" viewBox="0 0 14 13">
-                                                                <use xlink:href="/app/icons/sprite.svg#heart"></use>
-                                                            </svg>
-                                                        </div>5623</div>
-                                                </div>
-                                            </div>
-                                        </div><span class="service__button h6 btn"><span class="btn__text">Оформить без&nbsp;залога</span></span>
-                                        <div class="service__text small">Сегодня оформили 322 человек</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="vantages">
-                <div class="vantages__wrap wrap">
-                    <div class="vantages__row flex">
-                        <div class="vantages__cell">
-                            <div class="vantages__title h2">Преимущества кредита</div>
-                        </div>
-                        <a class="vantages__cell vantages__cell_white" href="#">
-                            <div class="vantages__cell-icon">
-                                <svg class="icon icon-vantages_1" viewBox="0 0 34 34">
-                                    <use xlink:href="/app/icons/sprite.svg#vantages_1"></use>
-                                </svg>
-                            </div>
-                            <div class="vantages__cell-inside"> <span class="vantages__link h6 link link_hidden">Быстрое оформление<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></span>
-                                <div
-                                class="vantages__text h6">Быстрое решение в&nbsp;выдаче кредита в&nbsp;день обращения, дает нашим клиентам возможность получить деньги тогда, когда потребность в&nbsp;них действительно остра.</div>
-                    </div>
-                    </a>
-                    <a class="vantages__cell vantages__cell_white" href="#">
-                        <div class="vantages__cell-icon">
-                            <svg class="icon icon-vantages_2" viewBox="0 0 34 34">
-                                <use xlink:href="/app/icons/sprite.svg#vantages_2"></use>
-                            </svg>
-                        </div>
-                        <div class="vantages__cell-inside"><span class="vantages__link h6 link link_hidden">На любые цели<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></span>
-                            <div
-                            class="vantages__text h6">Взяв кредит наличными, Вы сможете потратить полученные деньги на&nbsp;любые личные нужды. Будь то покупка квартиры, ремонт или&nbsp;отпуск!</div>
-                </div>
-                </a>
-                <a class="vantages__cell vantages__cell_white" href="#">
-                    <div class="vantages__cell-icon">
-                        <svg class="icon icon-vantages_3" viewBox="0 0 34 34">
-                            <use xlink:href="/app/icons/sprite.svg#vantages_3"></use>
-                        </svg>
-                    </div>
-                    <div class="vantages__cell-inside"><span class="vantages__link h6 link link_hidden">Выбор даты платежей<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></span>
-                        <div
-                        class="vantages__text h6">Вы самостоятельно выбираете любую удобную дату для&nbsp;ежемесячного платежа по&nbsp;погашению кредита наличными.</div>
-                    </div>
-                </a>
-                <a class="vantages__cell vantages__cell_white" href="#">
-                    <div class="vantages__cell-icon">
-                        <svg class="icon icon-vantages_4" viewBox="0 0 34 34">
-                            <use xlink:href="/app/icons/sprite.svg#vantages_4"></use>
-                        </svg>
-                    </div>
-                    <div class="vantages__cell-inside"><span class="vantages__link h6 link link_hidden">Без справок и&nbsp;поручителей<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></span>
-                        <div
-                        class="vantages__text h6">Оформить кредит наличными на&nbsp;выгодных условиях возможно даже при&nbsp;отсутствии справок о&nbsp;доходах и&nbsp;поручителей.</div>
-                    </div>
-                </a>
-                <a class="vantages__cell vantages__cell_white" href="#">
-                    <div class="vantages__cell-icon">
-                        <svg class="icon icon-vantages_5" viewBox="0 0 34 34">
-                            <use xlink:href="/app/icons/sprite.svg#vantages_5"></use>
-                        </svg>
-                    </div>
-                    <div class="vantages__cell-inside"><span class="vantages__link h6 link link_hidden">Досрочное погашение<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></span>
-                        <div
-                        class="vantages__text h6">Решили погасить кредит досрочно? Вы сможете выплатить всю сумма займа даже на&nbsp;следующий день без&nbsp;каких-либо штрафных санкций и&nbsp;дополнительных комиссий.</div>
-                    </div>
-                </a>
-                </div>
-                </div>
-            </section>
-        </section>
-        <section class="conditions gray is-without-container">
-            <div class="conditions__wrap wrap">
-                <div class="conditions__title h3">Специальные условия
-                    <br>по&nbsp;получению денег</div>
-                <div class="conditions__slider gallery-slider js-gallery-slider">
-                    <div class="gallery-slider__cell gallery-slider__cell_slider">
-                        <div class="gallery-slider__image is-active">
-                            <picture>
-                                <source type="image/webp" srcset="/app/img/conditions_0.webp">
-                                    <img src="/app/img/conditions_0.jpg" class="gallery-slider__img object-fit" alt="" role="presentation" />
-                            </picture>
-                            <div class="gallery-slider__name h3">Безработным</div>
-                        </div>
-                        <div class="gallery-slider__image">
-                            <picture>
-                                <source type="image/webp" srcset="/app/img/conditions_1.webp">
-                                    <img src="/app/img/conditions_1.jpg" class="gallery-slider__img object-fit" alt="" role="presentation" />
-                            </picture>
-                            <div class="gallery-slider__name h3">Госслужащим</div>
-                        </div>
-                        <div class="gallery-slider__image">
-                            <picture>
-                                <source type="image/webp" srcset="/app/img/conditions_2.webp">
-                                    <img src="/app/img/conditions_2.jpg" class="gallery-slider__img object-fit" alt="" role="presentation" />
-                            </picture>
-                            <div class="gallery-slider__name h3">ИП</div>
-                        </div>
-                        <div class="gallery-slider__image">
-                            <picture>
-                                <source type="image/webp" srcset="/app/img/conditions_3.webp">
-                                    <img src="/app/img/conditions_3.jpg" class="gallery-slider__img object-fit" alt="" role="presentation" />
-                            </picture>
-                            <div class="gallery-slider__name h3">Работникам по&nbsp;найму</div>
-                        </div>
-                        <div class="gallery-slider__image">
-                            <picture>
-                                <source type="image/webp" srcset="/app/img/conditions_4.webp">
-                                    <img src="/app/img/conditions_4.jpg" class="gallery-slider__img object-fit" alt="" role="presentation" />
-                            </picture>
-                            <div class="gallery-slider__name h3">Самозанятым</div>
-                        </div>
-                        <div class="gallery-slider__image">
-                            <picture>
-                                <source type="image/webp" srcset="/app/img/conditions_5.webp">
-                                    <img src="/app/img/conditions_5.jpg" class="gallery-slider__img object-fit" alt="" role="presentation" />
-                            </picture>
-                            <div class="gallery-slider__name h3">Студентам</div>
-                        </div>
-                        <div class="gallery-slider__image">
-                            <picture>
-                                <source type="image/webp" srcset="/app/img/conditions_6.webp">
-                                    <img src="/app/img/conditions_6.jpg" class="gallery-slider__img object-fit" alt="" role="presentation" />
-                            </picture>
-                            <div class="gallery-slider__name h3">Юридическим лицам</div>
-                        </div>
-                        <div class="gallery-slider__image">
-                            <picture>
-                                <source type="image/webp" srcset="/app/img/conditions_7.webp">
-                                    <img src="/app/img/conditions_7.jpg" class="gallery-slider__img object-fit" alt="" role="presentation" />
-                            </picture>
-                            <div class="gallery-slider__name h3">Пенсионерам</div>
-                        </div>
-                    </div>
-                    <div class="gallery-slider__cell gallery-slider__cell_info">
-                        <ul class="gallery-slider__list">
-                            <li class="gallery-slider__item"><a class="gallery-slider__link h6 link link_hidden" href="#">Безработным<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
-                            </li>
-                            <li class="gallery-slider__item"><a class="gallery-slider__link h6 link link_hidden" href="#">Госслужащим<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
-                            </li>
-                            <li class="gallery-slider__item"><a class="gallery-slider__link h6 link link_hidden" href="#">ИП<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
-                            </li>
-                            <li class="gallery-slider__item"><a class="gallery-slider__link h6 link link_hidden" href="#">Работникам по&nbsp;найму<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
-                            </li>
-                            <li class="gallery-slider__item"><a class="gallery-slider__link h6 link link_hidden" href="#">Самозанятым<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
-                            </li>
-                            <li class="gallery-slider__item"><a class="gallery-slider__link h6 link link_hidden" href="#">Студентам<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
-                            </li>
-                            <li class="gallery-slider__item"><a class="gallery-slider__link h6 link link_hidden" href="#">Юридическим лицам<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
-                            </li>
-                            <li class="gallery-slider__item"><a class="gallery-slider__link h6 link link_hidden" href="#">Пенсионерам<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </section>
-        <section class="council">
-            <div class="council__wrap wrap">
-                <div class="council__head">
-                    <picture>
-                        <source type="image/webp" srcset="/app/img/council.webp">
-                            <img src="/app/img/council.jpg" class="council__bg object-fit" alt="" role="presentation" />
-                    </picture>
-                    <div class="council__head-inner">
-                        <div class="council__title h2">Как быстро продать
-                            <br>квартиру?</div>
-                        <div class="council__author flex flex_vertical">
-                            <div class="council__author-cell council__author-cell_avatar">
-                                <div class="council__avatar">
-                                    <picture>
-                                        <source type="image/webp" srcset="/app/img/avatar.webp">
-                                            <img src="/app/img/avatar.jpg" class="council__avatar-img object-fit" alt="" role="presentation" />
-                                    </picture>
-                                </div>
-                            </div>
-                            <div class="council__author-cell council__author-cell_content"><a class="council__link h6 link" href="#">Виктория Нилова<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
-                                <div
-                                class="council__author-text p">Главный специалист департамента розничного кредитования</div>
-                        </div>
-                    </div>
-                </div>
+        <div class="article-tegs">
+            <div class="article-tegs__wrap wrap flex flex_vertical"><a class="article-tegs__link" href="#">Банкротство</a><a class="article-tegs__link" href="#">Взыскание</a><a class="article-tegs__link" href="#">Суд</a>
             </div>
-            <div class="council__row flex flex_justify">
-                <div class="council__cell council__cell_left">
-                    <div class="council__content content content_big">
-                        <p>Чтобы быстро продать квартиру в&nbsp;Москве, необходимо совершить ряд действий, которые повысят ее привлекательность для&nbsp;потенциальных клиентов.</p>
-                        <p>Заниматься продажей можно самостоятельно, но лучше доверить этот процесс опытным риэлторам, которые предлагают услугу срочный выкуп квартир. Они смогут взвешенно оценить недвижимость, найти покупателей, составить договор купли-продажи
-                            с&nbsp;собственником так, чтобы его никто не смог оспорить. Прежде чем продать квартиру, следует проделать следующие шаги:</p>
-                        <ul>
-                            <li>Определение актуальной рыночной стоимости. Цена зависит от&nbsp;расположения недвижимости, площади квартиры, состояния дома, близости к&nbsp;метро, а&nbsp;также других факторов.</li>
-                            <li>Подготовительные работы. Жилплощадь освобождается от&nbsp;лишнего хлама, в&nbsp;ней делается уборка и&nbsp;легкий ремонт. Из нее убирают лишнюю мебель, улучшают освещенность. Также рекомендуется позаботиться о&nbsp;лестничной
-                                площадке, подъезде, входной группе.</li>
-                            <li>Подготовка необходимых документов, включая экспликацию поэтажного плана, справки об&nbsp;отсутствии задолженностей, согласие супругов. При срочной продаже документы следует подготовить заранее.</li>
-                            <li>Размещение объявлений в&nbsp;Интернет, на&nbsp;специальных сайтах, на&nbsp;досках объявлений. Нужно составить детальное описание недвижимости, сделать качественные снимки, решить, за&nbsp;какую цену вы готовы продать жилье.</li>
-                            <li>Встреча с&nbsp;потенциальными клиентами. Будьте готовы к&nbsp;тому, что по&nbsp;объявлению о&nbsp;выкупе квартиры вам будут звонить в&nbsp;любое время: в&nbsp;будни и&nbsp;выходные, днем и&nbsp;ночью. Вам придется встречаться
-                                с&nbsp;незнакомыми людьми, демонстрировать им жилье.</li>
-                            <li>Подписание договора, получение денег. Учтите, что на&nbsp;срочные объявления откликается множество нечистых на&nbsp;руку дельцов и&nbsp;посредников, работающих на&nbsp;московском рынке недвижимости. Чтобы не потерять деньги
-                                и&nbsp;нервы, работайте с&nbsp;профессионалами.</li>
-                        </ul>
-                    </div><a class="council__link h6 red-link flex flex_vertical" href="#">Читайте далее<span class="red-link__icon red-link__icon_arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
-                </div>
-                <div class="council__cell council__cell_right"><a class="council__button icon-button" href="#"><span class="icon-button__icon"><svg class="icon icon-council_1" viewBox="0 0 34 34"><use xlink:href="/app/icons/sprite.svg#council_1"></use></svg></span><span class="icon-button__text h6">Оформить заявку</span></a>
-                    <a
-                    class="council__button icon-button" href="#"><span class="icon-button__icon"><svg class="icon icon-council_2" viewBox="0 0 34 34"><use xlink:href="/app/icons/sprite.svg#council_2"></use></svg></span><span class="icon-button__text h6">Задать вопрос</span>
-                        </a><a class="council__button icon-button" href="#"><span class="icon-button__icon"><svg class="icon icon-council_3" viewBox="0 0 34 34"><use xlink:href="/app/icons/sprite.svg#council_3"></use></svg></span><span class="icon-button__text h6">Все советы</span></a>
-                </div>
-            </div>
-            </div>
-        </section>
-        <section class="group">
-            <section class="faq">
-                <div class="faq__wrap wrap">
-                    <div class="faq__accordion accordion js-accordion">
-                        <div class="accordion__top h5">Условия кредитования
-                            <div class="accordion__arrow">
-                                <svg class="icon icon-down" viewBox="0 0 22 13">
-                                    <use xlink:href="/app/icons/sprite.svg#down"></use>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="accordion__content content content_big">
-                            <div class="accordion__line flex flex_justify">
-                                <div class="accordion__line-cell">
-                                    <div class="accordion__line-item h6">Сумма</div>
-                                </div>
-                                <div class="accordion__line-cell">
-                                    <div class="accordion__line-item h6">от&nbsp;50 000 ₽ до&nbsp;3 000 000 ₽</div>
-                                </div>
-                            </div>
-                            <div class="accordion__line flex flex_justify">
-                                <div class="accordion__line-cell">
-                                    <div class="accordion__line-item h6">Срок</div>
-                                </div>
-                                <div class="accordion__line-cell">
-                                    <div class="accordion__line-item h6">от&nbsp;13 месяцев до&nbsp;7 лет</div>
-                                </div>
-                            </div>
-                            <div class="accordion__line flex flex_justify">
-                                <div class="accordion__line-cell">
-                                    <div class="accordion__line-item h6">Цель</div>
-                                </div>
-                                <div class="accordion__line-cell">
-                                    <div class="accordion__line-item h6">на&nbsp;любые цели</div>
-                                </div>
-                            </div>
-                            <div class="accordion__text">
-                                <p>© 2011 – 2019 ООО«МБК» Адрес юр.: 101000, г. Москва Большой Спасоглинищевский пер., д. 9/1, стр. 16а, офис 1-4 ИНН 7710889274 КПП 770901001 ОГРН 1117746378485 Официальный партнер кредитных организаций, предоставляющих займы
-                                    и&nbsp;кредиты на&nbsp;основании действующего законодательства РФ. Лицензии: ПАО «Совкомбанк» №963, АО «Банк БЖФ» № 3138, ПАО КБ «Восточный» №1460, ПАО «Норвик Банк» № 902.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="faq__accordion accordion js-accordion">
-                        <div class="accordion__top h5">Процентные ставки
-                            <div class="accordion__arrow">
-                                <svg class="icon icon-down" viewBox="0 0 22 13">
-                                    <use xlink:href="/app/icons/sprite.svg#down"></use>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="accordion__content content content_big">
-                            <div class="accordion__line flex flex_justify">
-                                <div class="accordion__line-cell">
-                                    <div class="accordion__line-item h6">Процентная ставка</div>
-                                </div>
-                                <div class="accordion__line-cell">
-                                    <div class="accordion__line-item h6">- со&nbsp;страховкой 9,5%
-                                        <br>- без&nbsp;страховки 14,5%*</div>
-                                </div>
-                            </div>
-                            <div class="accordion__text">
-                                <p>* Процентная ставка устанавливается в&nbsp;зависимости от&nbsp;категории клиента</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="faq__accordion accordion js-accordion">
-                        <div class="accordion__top h5">Требования к&nbsp;заемщику
-                            <div class="accordion__arrow">
-                                <svg class="icon icon-down" viewBox="0 0 22 13">
-                                    <use xlink:href="/app/icons/sprite.svg#down"></use>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="accordion__content content content_big">
-                            <div class="accordion__line flex flex_justify">
-                                <div class="accordion__line-cell">
-                                    <div class="accordion__line-item h6">Гражданство, постоянная регистрация или&nbsp;проживание</div>
-                                </div>
-                                <div class="accordion__line-cell">
-                                    <div class="accordion__line-item h6">РФ</div>
-                                </div>
-                            </div>
-                            <div class="accordion__line flex flex_justify">
-                                <div class="accordion__line-cell">
-                                    <div class="accordion__line-item h6">Возраст на&nbsp;дату получения кредита</div>
-                                </div>
-                                <div class="accordion__line-cell">
-                                    <div class="accordion__line-item h6">не менее 20 лет</div>
-                                </div>
-                            </div>
-                            <div class="accordion__line flex flex_justify">
-                                <div class="accordion__line-cell">
-                                    <div class="accordion__line-item h6">Возраст на&nbsp;дату окончания срока кредита</div>
-                                </div>
-                                <div class="accordion__line-cell">
-                                    <div class="accordion__line-item h6">не более 70 лет</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="faq__accordion accordion js-accordion">
-                        <div class="accordion__top h5">Необходимые документы
-                            <div class="accordion__arrow">
-                                <svg class="icon icon-down" viewBox="0 0 22 13">
-                                    <use xlink:href="/app/icons/sprite.svg#down"></use>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="accordion__content content content_big">
-                            <div class="accordion__line flex flex_justify">
-                                <div class="accordion__line-cell">
-                                    <div class="accordion__line-item h6">Обязательные документы</div>
-                                </div>
-                                <div class="accordion__line-cell">
-                                    <ul class="accordion__line-list">
-                                        <li class="accordion__line-li">Паспорт</li>
-                                        <li class="accordion__line-li">СНИЛС</li>
-                                        <li class="accordion__line-li">Документы на&nbsp;собственность</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="accordion__line accordion__line_big flex flex_justify">
-                                <div class="accordion__line-cell">
-                                    <div class="accordion__line-item h6">Документы, снижающие
-                                        <br>процентную ставку</div>
-                                </div>
-                                <div class="accordion__line-cell">
-                                    <ul class="accordion__line-list">
-                                        <li class="accordion__line-li">Справки с&nbsp;места работы</li>
-                                        <li class="accordion__line-li">Документы на&nbsp;дополнительные
-                                            <br>активы (авто, недвижимость)</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </section>
-        <footer class="footer footer_white">
+        </div>
+        <footer class="footer">
             <div class="footer__wrap wrap">
                 <div class="footer__top flex flex_justify flex_start">
                     <a class="footer__logo logo" href="#">
@@ -1641,7 +1052,7 @@
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/app.js?v=1586717279478"></script>
+    <script src="/app/js/app.js?v=1586717277255"></script>
 </body>
 
 </html>
