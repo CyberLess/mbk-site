@@ -1,0 +1,17 @@
+.popup-close {
+  position: absolute;
+
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  stroke: #FF0400;
+
+  &:hover,
+  &:focus {
+    stroke: #000000;
+    cursor: pointer;
+  }
+}

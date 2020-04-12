@@ -5,18 +5,23 @@
         +e.slogan.p.P Оцените спрос на Вашу квартиру в 1 клик
         +e.applications_mobile.P Принимаем заявки из Москвы и Московской области
 
-        +e.form.sell-form__.FORM(action="/" method="POST")
+        +e.form.sell-form__.FORM(action="/" method="GET")
             +e.label_address.LABEL Адрес
-                +e.input.INPUT(
-                    type="text"
-                    placeholder="Москва, улица Шаболовка, 10"
-                    name="address" required)
+                +e.input-wrap
+                    +e.input.INPUT(
+                        type="text"
+                        placeholder="Москва, улица Шаболовка, 10"
+                        name="address"
+                        autocomplete="off" required)
+
             +e.label_price.LABEL Цена
                 +e.input-wrap
                     +e.input.INPUT(
                         type="text"
                         placeholder="5 000 000"
-                        name="price" required)
+                        name="price"
+                        autocomplete="off"
+                        inputmode="numeric" required)
             +e.label_rooms.LABEL Комнат
                 +e.form-field.select__.js-select
                     +e.item
@@ -31,9 +36,11 @@
                     +e.input.INPUT(
                         type="text"
                         placeholder="100"
-                        name="square" required)
+                        name="square"
+                        autocomplete="off"
+                        inputmode="numeric" required)
             +e.btn.btn.BUTTON(type="submit") Получи оценку онлайн
         +e.addition
             +e.applications.P Принимаем заявки из Москвы и МО
             +e.assessment.P Сегодня получили оценку: 322 человека
-    //- +socials(class="_default")
+    include sell-popup
