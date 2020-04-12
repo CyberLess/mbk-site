@@ -1,0 +1,29 @@
+.article-tegs {
+	background-color: #FFFFFF;
+
+	&__wrap {
+		padding-left: 10.8rem;
+		padding-bottom: 6.3rem;
+	}
+
+	&__link {
+		padding: 0.7rem 1.6rem;
+		margin-right: 1.5rem;
+		margin-bottom: 1.5rem;
+		font-size: 1.8rem;
+		line-height: 140%;
+		color: #000000;
+		background-color:  #F3F3F3;
+		border-radius: 5px;
+		transition: all 0.1s ease;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		&:hover {
+			color: #FFFFFF;
+			background-color: #FF0400;
+		}
+	}
+}

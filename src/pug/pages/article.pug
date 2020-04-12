@@ -1,0 +1,9 @@
+extends ../layouts/base
+
+append vars
+		- title = 'Статья';
+
+block content
+	include ../layouts/article-item
+	include ../layouts/article-author
+	include ../layouts/article-tegs
