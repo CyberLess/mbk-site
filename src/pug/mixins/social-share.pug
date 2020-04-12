@@ -1,0 +1,14 @@
+mixin social-share
+	+e.social-list.flex._vertical.social-share__()&attributes(attributes)
+		+e.item._vk
+			+e.link.A(href="#")
+				span
+					+icon('vk', '0 0 24 15')
+		+e.item._fb
+			+e.link.A(href="#")
+				span
+					+icon('fb', '0 0 10 19')
+		+e.item._tw
+			+e.link.A(href="#")
+				span
+					+icon('tw', '0 0 17 15')
