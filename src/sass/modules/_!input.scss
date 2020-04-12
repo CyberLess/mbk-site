@@ -32,6 +32,16 @@
 		}
 	}
 
+	&_normal{
+		margin-bottom: 2.6rem;
+		.input{
+			&__item{
+				height: 7.4rem;
+				font-size: 2.4rem;
+			}
+		}
+	}
+
 	&_big{
 		margin-bottom: 3rem;
 		.input{

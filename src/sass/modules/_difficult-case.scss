@@ -1,5 +1,5 @@
 .difficult-case{
-  padding-top: 11.6rem;
+  padding-top: 11.5rem;
 
   &__wrap{
     padding: 0 1.1rem;
@@ -39,6 +39,14 @@
     }
   }
 
+  &__link:hover &__icon-decoration{
+    background: #F3F3F3;
+
+    &:after{
+      border-color: #F3F3F3;
+    }
+  }
+
   &__link:hover &__stroke{
     stroke: #FF0400;
   }
@@ -49,19 +57,41 @@
 
   &__container-icon{
     position: absolute;
-    top: -4.6rem;
-    left: 4rem;
+    top: -4.5rem;
+    left: 4.1rem;
     width: 9rem;
     height: 9rem;
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid #B3B3B3;
-    border-radius: 50%;
     background: #FFFFFF;
   }
 
+
+  &__icon-decoration{
+    position: absolute;
+    left: 0;
+    bottom: -0.1rem;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+
+    &:after{
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 98%;
+      height: 200%;
+      border: 0.1rem solid #B3B3B3;
+      border-radius: 50%;
+      background: #FFFFFF;
+    }
+
+  }
+
   &__icon{
-    width: 34px;
+    width: 3.4rem;
+    z-index: 1;
   }
 
   &__stroke{
@@ -78,13 +108,13 @@
     &::after{
       content: "";
       position: absolute;
-      width: 232px;
-      height: 1px;
+      width: 23.2rem;
+      height: 0.1rem;
       left: 0.2rem;
       bottom: -3.4rem;
 
       background: #B3B3B3;
-      border-radius: 1px;
+      border-radius: 0.1rem;
     }
   }
 
@@ -108,7 +138,6 @@
   }
 
   &__review{
-    width: 21rem;
     margin-bottom: 4.3rem;
     font-weight: normal;
     font-size: 18px;
