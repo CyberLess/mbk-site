@@ -8,7 +8,6 @@ $(() => {
   let prevValue = '';
 
 
-  // $sellForm.removeAttr('novalidate');
   $numberInputs.on('input', function () {
     const lastChar = this.value[this.value.length - 1];
 

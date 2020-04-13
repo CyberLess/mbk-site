@@ -7,7 +7,7 @@ $(()=>{
 	var im = new Inputmask({
 		"mask": "+7 (999) 999-99-99",
 		clearMaskOnLostFocus: true,
-		clearIncomplete: true			
+		clearIncomplete: true
 	});
 
 	im.mask(selector);
@@ -30,8 +30,8 @@ $(()=>{
 		var $form = $(el);
 
 		$form.validate({
-			errorPlacement: function(error, element) { 
-				//just nothing, empty  
+			errorPlacement: function(error, element) {
+				//just nothing, empty
 			},
 			highlight: (element, errorClass, validClass) => {
 				$(element).parent().addClass(errorClass).removeClass(validClass);
@@ -52,15 +52,24 @@ $(()=>{
 					}
 				});
 
-			},             
+			},
 			rules: {
 				phone:{
 					required: true,
 					minlength: 10,
-				},  
-			}		
+				},
+				address: {
+					required: true,
+					minlength: 3
+				},
+				price: {
+					required: true
+				},
+				square: {
+					required: true
+				}
+			}
 		})
 
 	})
-
-})
+});
