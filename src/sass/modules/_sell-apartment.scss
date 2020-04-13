@@ -141,5 +141,9 @@ p.sell-apartment__applications.sell-apartment__applications_mobile {
   .sell-apartment__slogan {
     font-size: 4.6rem;
     font-weight: bold;
+
+    @include max-screen($large_tablet) {
+      font-size: 3.6rem;
+    }
   }
 }
