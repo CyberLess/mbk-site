@@ -1,7 +1,7 @@
 .we-sell {
   padding-top: 12rem;
 
-  @include max-screen($large_tablet) {
+  @include max-screen($small_desktop) {
     padding-top: 7rem;
   }
 
@@ -17,6 +17,8 @@
   font-size: 4.5rem;
 
   @include max-screen($large_tablet) {
+    width: 670px;
+
     font-size: 3.5rem;
   }
 }
