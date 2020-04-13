@@ -4,6 +4,10 @@
   @include max-screen($large_tablet) {
     padding-top: 7rem;
   }
+
+  .ba {
+    cursor: auto;
+  }
 }
 
 .we-sell__title {
@@ -25,10 +29,15 @@
   height: 37vw;
 }
 
+.we-sell__handle {
+  width: 4px;
+  background-color: #ffffff;
+}
+
 .we-sell__inner {
   width: 7.5rem;
   height: 7.5rem;
-  margin: -3.95rem 0 0 -3.95rem;
+  margin: -3.56rem 0 0 -3.56rem;
 
   background-color: #ffffff;
   background-image: url("/img/we-sell-handle-arrows.svg");
@@ -41,10 +50,6 @@
       display: none;
     }
   }
-}
-
-.we-sell__resize-image {
-  border-right: 3px solid #ffffff;
 }
 
 .we-sell__help {

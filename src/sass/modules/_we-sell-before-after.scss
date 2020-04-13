@@ -1,12 +1,13 @@
 .we-sell-before-after {
   display: flex;
+  width: 77%;
 }
 
 .we-sell-before-after__phones-wrap {
   position: relative;
 
   display: flex;
-  width: 134rem;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 5.5rem;
@@ -40,6 +41,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 25%;
   margin-bottom: 3rem;
 
   @include max-screen($large_tablet) {
@@ -68,22 +70,24 @@
   }
 }
 
-.we-sell-before-after__phones-wrap {
-  .we-sell-before-after__phone-wrap {
-    &_before {
-      b.we-sell-before-after__text {
-        @include max-screen($large_tablet) {
-          background-size: 2.3rem 2.3rem;
-          background-position: -3px 0;
+.we-sell-before-after {
+  .we-sell-before-after__phones-wrap {
+    .we-sell-before-after__phone-wrap {
+      &_before {
+        .we-sell-before-after__text {
+          @include max-screen($large_desktop) {
+            background-size: 2.3rem 2.3rem;
+            background-position: -3px 0;
+          }
         }
       }
-    }
 
-    &_after {
-      b.we-sell-before-after__text {
-        @include max-screen($large_tablet) {
-          background-size: 2.3rem 1.4rem;
-          background-position: 0 5px;
+      &_after {
+        .we-sell-before-after__text {
+          @include max-screen($large_desktop) {
+            background-size: 2.3rem 1.4rem;
+            background-position: 0 5px;
+          }
         }
       }
     }
@@ -91,7 +95,7 @@
 }
 
 .we-sell-before-after__image-wrap {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .we-sell-before-after__text {
@@ -100,6 +104,14 @@
   font-size: 2.4rem;
 
   background-repeat: no-repeat;
+
+  @include min-screen($large_desktop + 1) {
+    font-size: 375%;
+  }
+
+  @include max-screen($large_desktop) {
+    font-size: 390%;
+  }
 
   @include max-screen($large_tablet) {
     font-size: 1.9rem;

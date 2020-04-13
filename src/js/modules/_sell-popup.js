@@ -5,6 +5,7 @@ $(() => {
 
   const $body = $('body');
   const $overlay = $('.sell-apartment__overlay');
+  const $sellForm = $('.sell-form');
   const $sellFormBtn = $('.sell-form__btn');
   const $contactBuyerBtn = $('.sell-popup__btn');
   const $firstPopup = $('.sell-popup');
@@ -89,8 +90,8 @@ $(() => {
     isFirstOpened = false;
   };
 
-  $sellFormBtn.click(() => {
-    openFirstPopup();
+  $sellForm.on('submit', () => {
+      openFirstPopup();
   });
 
   $contactBuyerBtn.magnificPopup({

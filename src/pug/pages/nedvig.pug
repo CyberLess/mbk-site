@@ -5,8 +5,8 @@ append vars
 
 block content
 	+b.fluid
-
 			+socials(class="_default _white")
+	- var top = true
 	include ../layouts/sell-apartment
 	include ../layouts/we-know
 	include ../layouts/we-sell
@@ -17,4 +17,5 @@ block content
 		include ../layouts/difficult-case
 	include ../layouts/council
 	.sell-apartment-bottom-wrap
+		- var top = false
 		include ../layouts/sell-apartment

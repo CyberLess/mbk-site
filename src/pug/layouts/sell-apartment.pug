@@ -1,12 +1,13 @@
 +b.SECTION.sell-apartment
     +e.wrap.wrap
-        +breadcrumbs('Главная', 'Услуги', 'Продать квартиру срочно')
-        +e.title.h2.H2 Продать квартиру срочно?
+        if top
+            +breadcrumbs('Главная', 'Услуги', 'Продать квартиру срочно')
+            +e.title.h2.H2 Продать квартиру срочно?
         +e.slogan.p.P Оцените спрос на Вашу квартиру в 1 клик
         +e.applications_mobile.P Принимаем заявки из Москвы и Московской области
 
         +e.form-wrapper
-            +e.form.sell-form__.FORM(action="/" method="GET")
+            +e.form.form.sell-form__.FORM(action="/" method="GET")
                 +e.label_address.LABEL Адрес
                     +e.input-wrap
                         +e.input.INPUT(
