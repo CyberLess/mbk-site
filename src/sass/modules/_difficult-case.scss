@@ -43,6 +43,7 @@
     background: #F3F3F3;
 
     &:after{
+      box-sizing: border-box;
       border-color: #F3F3F3;
     }
   }
@@ -138,6 +139,7 @@
   }
 
   &__review{
+    max-width: 21rem;
     margin-bottom: 4.3rem;
     font-weight: normal;
     font-size: 18px;
