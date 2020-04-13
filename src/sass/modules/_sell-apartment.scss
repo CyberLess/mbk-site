@@ -89,8 +89,17 @@ p.sell-apartment__applications.sell-apartment__applications_mobile {
   background-position: 0.2rem 0.7rem;
   background-size: 1.8rem 1.8rem;
 
+  @include max-screen(1147px) {
+    margin-right: 21.5%;
+  }
+
   @include max-screen($large_tablet) {
     width: 25%;
+    margin-right: 19%;
+  }
+
+  @include max-screen($sell-form-tab-breakpoint) {
+    margin-right: 17.2%;
   }
 
   @include max-screen($small_tablet) {
@@ -102,7 +111,7 @@ p.sell-apartment__applications.sell-apartment__applications_mobile {
   width: 39.6%;
 
   @include max-screen($large_tablet) {
-    width: 33%;
+    width: 56%;
   }
 
   @include max-screen($large_mobile) {

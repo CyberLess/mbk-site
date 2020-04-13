@@ -30,16 +30,33 @@
     width: 33%;
     min-width: 310px;
 
+    @include max-screen($sell-form-tab-breakpoint) {
+      width: 29%;
+      min-width: 270px;
+    }
+
     @include max-screen($large_mobile) {
       min-width: 100%;
       width: 100%;
       margin-left: 0;
+    }
+
+    .sell-form__input {
+      @include max-screen($sell-form-tab-breakpoint) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
     }
   }
 
   &_price {
     width: 14%;
     min-width: 160px;
+
+    @include max-screen($sell-form-tab-breakpoint) {
+      width: 11%;
+      min-width: 140px;
+    }
 
     @include max-screen($large_mobile) {
       min-width: 100%;
@@ -50,8 +67,8 @@
     .sell-form__input {
       padding-left: 3.5rem;
 
-      @include max-screen($large_mobile) {
-        padding-left: 3rem;
+      @include max-screen($sell-form-tab-breakpoint) {
+        padding-left: 2rem;
       }
     }
 
@@ -227,6 +244,7 @@
   @include max-screen(1147px) {
     flex-grow: 0;
     width: 30%;
+    min-width: 235px;
   }
 
   @include max-screen($large_mobile) {
