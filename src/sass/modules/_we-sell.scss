@@ -152,6 +152,10 @@
     .we-sell__comment {
       top: 0;
       left: 56px;
+
+      @include min-screen($small_desktop + 1) {
+        max-width: 25rem;
+      }
     }
   }
 
@@ -190,6 +194,10 @@
     .we-sell__comment {
       top: 0;
       right: 56px;
+
+      @include min-screen($small_desktop + 1) {
+        min-width: 30rem;
+      }
     }
   }
 }
