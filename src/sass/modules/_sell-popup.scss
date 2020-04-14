@@ -121,19 +121,23 @@
 }
 
 .sell-popup__apartment-data {
+  position: relative;
+
   display: flex;
   flex-wrap: wrap;
   width: 62%;
   margin-right: auto;
 
-  background-image: url("/img/thin-arrow.svg");
-  background-size: 23px 10px;
-  background-repeat: no-repeat;
-  background-position: right 4rem;
-
   @include max-screen($small_tablet) {
     display: none;
   }
+}
+
+.sell-popup__arrow-icon {
+  position: absolute;
+  right: 0;
+  top: 4rem;
+  width: 29px;
 }
 
 .sell-popup__apartment-data-item {

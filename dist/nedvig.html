@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Недвижка</title>
-    <link rel="stylesheet" href="/app/css/app.css?v=1586862976703">
+    <link rel="stylesheet" href="/app/css/app.css?v=1586873056242">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
@@ -768,7 +768,7 @@
                                 </div>
                             </div>
                         </div>
-                        <label class="sell-form__label sell-form__label_square">Площадь<span class="sell-form__input-wrap"><input class="sell-form__input" type="text" placeholder="100" name="square" autocomplete="off" inputmode="numeric"/></span>
+                        <label class="sell-form__label sell-form__label_square">Площадь<span class="sell-form__input-wrap"><input class="sell-form__input" type="text" placeholder="100" name="square" autocomplete="off" inputmode="numeric"/><span class="sell-form__square-meter">м<sup class="sell-form__index">2</sup></span></span>
                         </label>
                         <button class="sell-form__btn btn" type="submit" data-mfp-src="#sell-popup">Получи оценку онлайн</button>
                     </form>
@@ -795,6 +795,11 @@
                                 <div class="sell-popup__apartment-data-item sell-popup__apartment-data-item_rooms"><span class="sell-popup__apartment-data-top">Комнат</span><b class="sell-popup__apartment-data-bottom">2 комнаты</b>
                                 </div>
                                 <div class="sell-popup__apartment-data-item sell-popup__apartment-data-item_price"><span class="sell-popup__apartment-data-top">Цена</span><b class="sell-popup__apartment-data-bottom">4 500 000 ₽</b>
+                                </div>
+                                <div class="sell-popup__arrow-icon">
+                                    <svg class="icon icon-arrow_2" viewBox="0 0 23 10">
+                                        <use xlink:href="/app/icons/sprite.svg#arrow_2"></use>
+                                    </svg>
                                 </div>
                             </div><a class="sell-popup__btn btn" href="#sell-order-popup">Связаться с&nbsp;покупателем</a>
                         </div>
@@ -865,9 +870,19 @@
                     <input type="hidden" name="method[subscribe]" value="1" />
                     <div class="sell-order-popup__name input">
                         <input class="input__item" type="text" placeholder="Ваше имя" name="name" />
+                        <div class="input__icon-wrap">
+                            <svg class="icon icon-popup-user" viewBox="0 0 24 24">
+                                <use xlink:href="/app/icons/sprite.svg#popup-user"></use>
+                            </svg>
+                        </div>
                     </div>
                     <div class="sell-order-popup__phone input">
                         <input class="input__item" type="text" placeholder="Телефон" name="name" />
+                        <div class="input__icon-wrap">
+                            <svg class="icon icon-popup-phone" viewBox="0 0 24 24">
+                                <use xlink:href="/app/icons/sprite.svg#popup-phone"></use>
+                            </svg>
+                        </div>
                     </div>
                     <button class="sell-order-popup__button btn h6" type="submit" data-mfp-src="#sell-order-popup">
                         <div class="sell-order-popup__text">Оставить заявку</div>
@@ -884,11 +899,17 @@
                 <div class="we-know__text-wrap">
                     <h2 class="we-know__title h2">Мы знаем, как найти<br>ещё больше покупателей</h2>
                     <ul class="we-know__actions know-actions">
-                        <li class="know-actions__item know-actions__item_create-ad"><b class="know-actions__action">Создаем<br>продающее объявление</b><span class="know-actions__description">Используем технологии копирайтинга, от&nbsp;которых клиент начнет облизываться</span>
+                        <li class="know-actions__item know-actions__item_create-ad"><b class="know-actions__action">Создаем<br>продающее объявление<span class="know-actions__icon-wrap"><svg class="icon icon-we-know-pencil" viewBox="0 0 31 31"><use xlink:href="/app/icons/sprite.svg#we-know-pencil"></use></svg></span></b>
+                            <span
+                            class="know-actions__description">Используем технологии копирайтинга, от&nbsp;которых клиент начнет облизываться</span>
                         </li>
-                        <li class="know-actions__item know-actions__item_preparation"><b class="know-actions__action">Делаем<br>предпродажную подготовку</b><span class="know-actions__description">Профессионально отфотографируем Вашу квартиру в&nbsp;нужных ракурсах</span>
+                        <li class="know-actions__item know-actions__item_preparation"><b class="know-actions__action">Делаем<br>предпродажную подготовку<span class="know-actions__icon-wrap"><svg class="icon icon-we-know-camera" viewBox="0 0 34 34"><use xlink:href="/app/icons/sprite.svg#we-know-camera"></use></svg></span></b>
+                            <span
+                            class="know-actions__description">Профессионально отфотографируем Вашу квартиру в&nbsp;нужных ракурсах</span>
                         </li>
-                        <li class="know-actions__item know-actions__item_learns-lot"><b class="know-actions__action">О Вашей квартире<br>узнают в&nbsp;10 раз больше людей</b><span class="know-actions__description">Используем 1000 рекламных площадок и&nbsp;дополнительную рекламу на&nbsp;них</span>
+                        <li class="know-actions__item know-actions__item_learns-lot"><b class="know-actions__action">О Вашей квартире<br>узнают в&nbsp;10 раз больше людей<span class="know-actions__icon-wrap"><svg class="icon icon-we-know-bell" viewBox="0 0 34 34"><use xlink:href="/app/icons/sprite.svg#we-know-bell"></use></svg></span></b>
+                            <span
+                            class="know-actions__description">Используем 1000 рекламных площадок и&nbsp;дополнительную рекламу на&nbsp;них</span>
                         </li>
                     </ul>
                 </div>
@@ -966,6 +987,11 @@
                                     <img src="/app/img/we-sell-after.png" class="we-sell-before-after__img" alt="" role="presentation" />
                             </picture>
                         </div><b class="we-sell-before-after__text">Объявление «После»</b>
+                    </div>
+                    <div class="we-sell-before-after__arrow-wrap">
+                        <svg class="icon icon-thick-arrow" viewBox="0 0 38 25">
+                            <use xlink:href="/app/icons/sprite.svg#thick-arrow"></use>
+                        </svg>
                     </div>
                 </div>
             </div>
@@ -1174,7 +1200,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <label class="sell-form__label sell-form__label_square">Площадь<span class="sell-form__input-wrap"><input class="sell-form__input" type="text" placeholder="100" name="square" autocomplete="off" inputmode="numeric"/></span>
+                            <label class="sell-form__label sell-form__label_square">Площадь<span class="sell-form__input-wrap"><input class="sell-form__input" type="text" placeholder="100" name="square" autocomplete="off" inputmode="numeric"/><span class="sell-form__square-meter">м<sup class="sell-form__index">2</sup></span></span>
                             </label>
                             <button class="sell-form__btn btn" type="submit" data-mfp-src="#sell-popup">Получи оценку онлайн</button>
                         </form>
@@ -1201,6 +1227,11 @@
                                     <div class="sell-popup__apartment-data-item sell-popup__apartment-data-item_rooms"><span class="sell-popup__apartment-data-top">Комнат</span><b class="sell-popup__apartment-data-bottom">2 комнаты</b>
                                     </div>
                                     <div class="sell-popup__apartment-data-item sell-popup__apartment-data-item_price"><span class="sell-popup__apartment-data-top">Цена</span><b class="sell-popup__apartment-data-bottom">4 500 000 ₽</b>
+                                    </div>
+                                    <div class="sell-popup__arrow-icon">
+                                        <svg class="icon icon-arrow_2" viewBox="0 0 23 10">
+                                            <use xlink:href="/app/icons/sprite.svg#arrow_2"></use>
+                                        </svg>
                                     </div>
                                 </div><a class="sell-popup__btn btn" href="#sell-order-popup">Связаться с&nbsp;покупателем</a>
                             </div>
@@ -1271,9 +1302,19 @@
                         <input type="hidden" name="method[subscribe]" value="1" />
                         <div class="sell-order-popup__name input">
                             <input class="input__item" type="text" placeholder="Ваше имя" name="name" />
+                            <div class="input__icon-wrap">
+                                <svg class="icon icon-popup-user" viewBox="0 0 24 24">
+                                    <use xlink:href="/app/icons/sprite.svg#popup-user"></use>
+                                </svg>
+                            </div>
                         </div>
                         <div class="sell-order-popup__phone input">
                             <input class="input__item" type="text" placeholder="Телефон" name="name" />
+                            <div class="input__icon-wrap">
+                                <svg class="icon icon-popup-phone" viewBox="0 0 24 24">
+                                    <use xlink:href="/app/icons/sprite.svg#popup-phone"></use>
+                                </svg>
+                            </div>
                         </div>
                         <button class="sell-order-popup__button btn h6" type="submit" data-mfp-src="#sell-order-popup">
                             <div class="sell-order-popup__text">Оставить заявку</div>
@@ -1393,7 +1434,7 @@
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/app.js?v=1586862976907"></script>
+    <script src="/app/js/app.js?v=1586873056367"></script>
 </body>
 
 </html>

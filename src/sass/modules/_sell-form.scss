@@ -141,46 +141,9 @@
       margin-bottom: 4.5rem;
     }
 
-    .sell-form__input-wrap {
-      &::after {
-        content: "";
-
-        top: 3.9rem;
-        right: 2rem;
-
-        width: 1.7rem;
-        height: 1.7rem;
-
-        background-image: url("/img/square-meter.svg");
-        background-repeat: no-repeat;
-        background-size: 1.7rem 1.7rem;
-
-        @include max-screen($large_mobile) {
-          top: 3.3rem;
-          right: 2.5rem;
-
-          width: 1.4rem;
-          height: 1.4rem;
-
-        }
-      }
-    }
-
     .sell-form__input {
       padding-left: 3rem;
       padding-right: 4rem;
-    }
-  }
-}
-
-.sell-form .sell-form__label {
-  &_square {
-    span.sell-form__input-wrap {
-      &::after {
-        @include max-screen($large_mobile) {
-          background-size: 1.4rem 1.4rem;
-        }
-      }
     }
   }
 }
@@ -194,6 +157,23 @@
     font-size: 1.8rem;
     font-weight: bold;
   }
+}
+
+.sell-form__square-meter {
+  position: absolute;
+  top: 3.65rem;
+  right: 2rem;
+
+  display: inline-block;
+  width: 1.7rem;
+  height: 1.7rem;
+
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.sell-form__index {
+  font-size: 1rem;
 }
 
 .sell-form__input {

@@ -21,6 +21,9 @@
                         +e.apartment-data-top.SPAN Цена
                         +e.apartment-data-bottom.B 4 500 000 ₽
 
+                    +e.arrow-icon
+                        +icon('arrow_2', '0 0 23 10')
+
                 +e.btn.btn.A(href="#sell-order-popup") Связаться с покупателем
 
     +e.wrap_bottom
@@ -91,8 +94,12 @@
         +e.INPUT(type="hidden" name="method[subscribe]" value='1')
         +e.name.input__
             +e.INPUT.item(type="text" placeholder="Ваше имя" name="name")
+            +e.icon-wrap
+                +icon('popup-user', '0 0 24 24')
         +e.phone.input__
             +e.INPUT.item(type="text" placeholder="Телефон" name="name")
+            +e.icon-wrap
+                +icon('popup-phone', '0 0 24 24')
         +e.button.btn.h6.BUTTON(type="submit" data-mfp-src="#sell-order-popup")
             +e.text Оставить заявку
         +e.LABEL.access.access.checkbox__
