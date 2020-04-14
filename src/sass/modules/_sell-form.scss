@@ -170,10 +170,20 @@
 
   font-size: 1.8rem;
   font-weight: 500;
+
+  @include max-screen($small_tablet) {
+    top: 3rem;
+
+    font-size: 1.5rem;
+  }
 }
 
 .sell-form__index {
   font-size: 1rem;
+
+  @include max-screen($small_tablet) {
+    font-size: 0.7rem;
+  }
 }
 
 .sell-form__input {
