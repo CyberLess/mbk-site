@@ -17,6 +17,18 @@
     @include max-screen($small_tablet) {
       display: flex;
       flex-wrap: wrap;
+      padding-bottom: 2.3rem;
+      border-bottom: 1px solid #C2C2C2;
+
+      font-size: 1.2rem;
+
+      &:not(:nth-child(2)) {
+        padding-top: 0.8rem;
+      }
+    }
+
+    .customer-data-table__item_buyer {
+      font-size: 1.4rem;
     }
   }
 }
@@ -39,8 +51,16 @@ tr.customer-data-table__head-row {
 
   padding-top: 1.6rem;
 
+  @include max-screen($small_tablet) {
+    padding-top: 1.2rem;
+  }
+
   &:not(:last-of-type) {
     padding-right: 1em;
+
+    @include max-screen($small_tablet) {
+      padding-right: 0.5em;
+    }
   }
 
   &_buyer {
@@ -56,10 +76,27 @@ tr.customer-data-table__head-row {
   &_district {
     width: 27%;
     padding-left: 3rem;
+
+    @include max-screen($small_tablet) {
+      width: 54%;
+      padding-left: 2rem;
+    }
   }
 
   &_rooms {
     width: 23%;
+
+    @include max-screen($small_tablet) {
+      width: 18%;
+    }
+  }
+
+  &_budget {
+    @include max-screen($small_tablet) {
+      width: 28%;
+
+      text-align: right;
+    }
   }
 }
 
@@ -74,4 +111,11 @@ tr.customer-data-table__head-row {
   height: 1.3rem;
 
   fill: #EF7E24;
+
+  @include max-screen($small_tablet) {
+    top: 1.3rem;
+    left: -.3rem;
+
+    width: 2rem;
+  }
 }

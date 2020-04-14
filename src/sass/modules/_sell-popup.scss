@@ -17,6 +17,7 @@
 
   @include max-screen($small_tablet) {
     width: 100%;
+    overflow-y: scroll;
   }
 }
 
@@ -53,7 +54,7 @@
     padding-bottom: 7.5rem;
 
     @include max-screen($small_tablet) {
-      padding-top: 2.3rem;
+      padding-top: 2.7rem;
     }
 
     .sell-popup__container {
@@ -199,6 +200,11 @@
 
   text-align: center;
 
+  @include max-screen($small_tablet) {
+    width: 100%;
+    max-width: 350px;
+  }
+
   &:hover,
   &:focus {
     .sell-popup__arrow {
@@ -216,4 +222,9 @@
   height: 8px;
   transform: rotate(90deg);
   fill: #ff0500;
+
+  @include max-screen($small_tablet) {
+    top: 2.1rem;
+    right: 15%;
+  }
 }
