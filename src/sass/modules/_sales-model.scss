@@ -3,10 +3,6 @@
   padding-top: 2.1rem;
   padding-bottom: 19.1rem;
 
-  &__wrap{
-    padding: 0 12px;
-  }
-
   &__container-data{
     max-width: 44.6rem;
     padding-top: 16.6rem;
@@ -26,7 +22,7 @@
   &__container-img{
     position: absolute;
     top: 0.5rem;
-    right: -1.8rem;
+    right: -3.5rem;
 
     &::before{
       content: '';
