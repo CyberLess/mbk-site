@@ -4,10 +4,6 @@
   @include max-screen($small_desktop) {
     padding-top: 7rem;
   }
-
-  .ba {
-    cursor: auto;
-  }
 }
 
 .we-sell__title {
@@ -82,8 +78,6 @@
   border-radius: 50%;
 
   background-color: #FF0600;
-
-  cursor: pointer;
 
   &::before,
   &::after {
