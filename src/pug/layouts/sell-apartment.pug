@@ -14,7 +14,7 @@
                             type="text"
                             placeholder="Москва, улица Шаболовка, 10"
                             name="address"
-                            autocomplete="off" required)
+                            autocomplete="off")
 
                 +e.label_price.LABEL Цена
                     +e.input-wrap
@@ -23,8 +23,8 @@
                             placeholder="5 000 000"
                             name="price"
                             autocomplete="off"
-                            inputmode="numeric" required)
-                +e.label_rooms.LABEL Комнат
+                            inputmode="numeric")
+                +e.label_rooms.DIV Комнат
                     +e.form-field.select__.js-select
                         +e.item
                             +e.field.SELECT(name="howMuchRooms")
@@ -40,7 +40,10 @@
                             placeholder="100"
                             name="square"
                             autocomplete="off"
-                            inputmode="numeric" required)
+                            inputmode="numeric")
+                        +e.square-meter.SPAN м
+                            +e.index.SUP 2
+
                 +e.btn.btn.BUTTON(type="submit" data-mfp-src="#sell-popup") Получи оценку онлайн
             +e.addition
                 +e.applications.P Принимаем заявки из Москвы и МО

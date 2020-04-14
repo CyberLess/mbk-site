@@ -12,14 +12,25 @@
   @include max-screen($large_tablet) {
       font-size: 1.5rem;
   }
+
+  tr {
+    @include max-screen($small_tablet) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
 }
 
-.customer-data-table__head-row {
+tr.customer-data-table__head-row {
   text-align: left;
 
   th {
     padding-bottom: 2.5rem;
     border-bottom: 1px solid #000000;
+  }
+
+  @include max-screen($small_tablet) {
+    display: none;
   }
 }
 
@@ -34,6 +45,12 @@
 
   &_buyer {
     width: 32%;
+
+    @include max-screen($small_tablet) {
+      width: 100%;
+
+      font-weight: 500;
+    }
   }
 
   &_district {

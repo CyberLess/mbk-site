@@ -30,16 +30,41 @@
     width: 33%;
     min-width: 310px;
 
+    @include max-screen($sell-form-tab-breakpoint) {
+      width: 29%;
+      min-width: 270px;
+    }
+
+    @include max-screen($small_tablet) {
+      width: 47%;
+    }
+
     @include max-screen($large_mobile) {
       min-width: 100%;
       width: 100%;
       margin-left: 0;
+    }
+
+    .sell-form__input {
+      @include max-screen($sell-form-tab-breakpoint) {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
     }
   }
 
   &_price {
     width: 14%;
     min-width: 160px;
+
+    @include max-screen($sell-form-tab-breakpoint) {
+      width: 11%;
+      min-width: 140px;
+    }
+
+    @include max-screen($small_tablet) {
+      width: 35%;
+    }
 
     @include max-screen($large_mobile) {
       min-width: 100%;
@@ -50,8 +75,8 @@
     .sell-form__input {
       padding-left: 3.5rem;
 
-      @include max-screen($large_mobile) {
-        padding-left: 3rem;
+      @include max-screen($sell-form-tab-breakpoint) {
+        padding-left: 2rem;
       }
     }
 
@@ -116,46 +141,9 @@
       margin-bottom: 4.5rem;
     }
 
-    .sell-form__input-wrap {
-      &::after {
-        content: "";
-
-        top: 3.9rem;
-        right: 2rem;
-
-        width: 1.7rem;
-        height: 1.7rem;
-
-        background-image: url("/img/square-meter.svg");
-        background-repeat: no-repeat;
-        background-size: 1.7rem 1.7rem;
-
-        @include max-screen($large_mobile) {
-          top: 3.3rem;
-          right: 2.5rem;
-
-          width: 1.4rem;
-          height: 1.4rem;
-
-        }
-      }
-    }
-
     .sell-form__input {
       padding-left: 3rem;
       padding-right: 4rem;
-    }
-  }
-}
-
-.sell-form .sell-form__label {
-  &_square {
-    span.sell-form__input-wrap {
-      &::after {
-        @include max-screen($large_mobile) {
-          background-size: 1.4rem 1.4rem;
-        }
-      }
     }
   }
 }
@@ -168,6 +156,33 @@
 
     font-size: 1.8rem;
     font-weight: bold;
+  }
+}
+
+.sell-form__square-meter {
+  position: absolute;
+  top: 3.65rem;
+  right: 2rem;
+
+  display: inline-block;
+  width: 1.7rem;
+  height: 1.7rem;
+
+  font-size: 1.8rem;
+  font-weight: 500;
+
+  @include max-screen($small_tablet) {
+    top: 3rem;
+
+    font-size: 1.5rem;
+  }
+}
+
+.sell-form__index {
+  font-size: 1rem;
+
+  @include max-screen($small_tablet) {
+    font-size: 0.7rem;
   }
 }
 
@@ -227,6 +242,7 @@
   @include max-screen(1147px) {
     flex-grow: 0;
     width: 30%;
+    min-width: 235px;
   }
 
   @include max-screen($large_mobile) {

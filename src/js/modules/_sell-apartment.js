@@ -4,10 +4,10 @@ $(() => {
   const BACKSPACE_KEYCODE = 8;
 
   const $numberInputs = $('.sell-form__input[name=price], .sell-form__input[name=square]');
-  const $sellForm = $('.sell-form');
+  // const $sellForm = $('.sell-form');
   let prevValue = '';
 
-
+  // $sellForm.removeAttr('novalidate');
   $numberInputs.on('input', function () {
     const lastChar = this.value[this.value.length - 1];
 
