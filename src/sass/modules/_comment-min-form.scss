@@ -1,0 +1,74 @@
+.comment-form-min {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(243, 243, 243);
+  padding: 4.5rem 4.5rem 4.1rem;
+
+  &__input {
+    margin-bottom: 4.7rem;
+    font-family: 'Geometria';
+    font-size: 1.8rem;
+    background-color: rgb(255, 255, 255);
+    padding: 2.3rem 2.7rem;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(194, 194, 194, 0.5);
+
+    &::placeholder {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: #010101;
+      opacity: 0.5;
+    }
+  }
+
+  &__textarea {
+    background-color: transparent;
+    font-size: 1.6rem;
+    font-family: 'Geometria';
+    line-height: 140%;
+    border-top-width: initial;
+    border-right-width: initial;
+    border-left-width: initial;
+    border-top-color: initial;
+    border-right-color: initial;
+    border-left-color: initial;
+    resize: none;
+    -webkit-appearance: none;
+    border-style: none none solid;
+    border-image: initial;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+    &::placeholder {
+      font-size: 1.6rem;
+      color: #000000;
+    }
+  }
+
+  &__button {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    font-family: Geometria;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 140%;
+    padding-right: 0px;
+    margin-top: 1.4rem;
+    margin-left: auto;
+    background-color: transparent;
+    cursor: pointer;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+
+    & svg {
+      width: 1.8rem;
+      height: 1rem;
+      margin-left: 1.7rem;
+      fill: rgb(255, 4, 0);
+      stroke: rgb(255, 4, 0);
+    }
+  }
+}
