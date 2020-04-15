@@ -102,9 +102,9 @@
     }
 
     .we-sell-before-after__text {
-      background-image: url("/img/we-sell-no-success.svg");
-      background-size: 2.8rem 2.8rem;
-      background-position: -3px 3px;
+      @include min-screen($large_desktop + 1) {
+        margin-left: 5rem;
+      }
     }
   }
 
@@ -112,19 +112,13 @@
     margin-right: auto;
 
     @include max-screen($small_tablet) {
-      margin-right: 16px;
+      margin-right: 0;
     }
 
     .we-sell-before-after__image-wrap {
       @include max-screen($large_mobile) {
         margin-right: 16px;
       }
-    }
-
-    .we-sell-before-after__text {
-      background-image: url("/img/we-sell-success.svg");
-      background-size: 2.8rem 1.7rem;
-      background-position: -3px 5px;
     }
   }
 }
@@ -142,6 +136,11 @@
   stroke: #0E0E0E;
   stroke-width: 5.78594;
 
+  @include max-screen($small_desktop) {
+    width: 30px;
+    bottom: 28rem;
+  }
+
   @include max-screen($large_tablet) {
     bottom: 45%;
   }
@@ -151,48 +150,19 @@
   }
 }
 
-.we-sell-before-after {
-  .we-sell-before-after__phones-wrap {
-    .we-sell-before-after__phone-wrap {
-      &_before {
-        .we-sell-before-after__text {
-          @include max-screen($large_desktop) {
-            background-size: 2.3rem 2.3rem;
-            background-position: -3px 0;
-          }
-
-          @include max-screen($small_tablet) {
-            background-size: 1.8rem 2rem;
-          }
-        }
-      }
-
-      &_after {
-        .we-sell-before-after__text {
-          @include max-screen($large_desktop) {
-            background-size: 2.3rem 1.4rem;
-            background-position: 0 5px;
-          }
-
-          @include max-screen($small_tablet) {
-            background-size: 1.8rem 1.2rem;
-          }
-        }
-      }
-    }
-  }
-}
-
 .we-sell-before-after__image-wrap {
   margin-bottom: 4rem;
 
   @include max-screen($small_tablet) {
     width: 188px;
-    margin-bottom: 3rem;
+    margin-bottom: 3.8rem;
   }
 }
 
 .we-sell-before-after__text {
+  position: relative;
+
+  width: 100%;
   padding-left: 4rem;
 
   font-size: 2.4rem;
@@ -200,11 +170,19 @@
   background-repeat: no-repeat;
 
   @include min-screen($large_desktop + 1) {
+    margin-left: 3rem;
+
     font-size: 375%;
   }
 
   @include max-screen($large_desktop) {
     font-size: 390%;
+  }
+
+  @include max-screen($small_desktop) {
+    width: auto;
+
+    font-size: 1.5rem;
   }
 
   @include max-screen($large_tablet) {
@@ -216,4 +194,42 @@
 
     font-size: 1.4rem;
   }
+}
+
+.we-sell-before-after__icon-wrap {
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  transform: translateY(-50%);
+}
+
+.icon-before {
+  width: 10%;
+
+  transform: translateY(-40%);
+
+  fill: none;
+  stroke: #FF0600;
+  stroke-width: 3.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  @include max-screen($small_desktop) {
+    width: 13%;
+  }
+
+  @include max-screen($large_mobile) {
+    width: 12%;
+  }
+}
+
+.icon-after {
+  width: 8%;
+
+  fill: none;
+  stroke: #3A955E;
+  stroke-width: 3.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
