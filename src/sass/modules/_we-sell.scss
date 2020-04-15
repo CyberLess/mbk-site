@@ -4,6 +4,10 @@
   @include max-screen($small_desktop) {
     padding-top: 7rem;
   }
+
+  @include max-screen($small_tablet) {
+    padding-top: 5rem;
+  }
 }
 
 .we-sell__title {
@@ -17,6 +21,14 @@
 
     font-size: 3.5rem;
   }
+
+  @include max-screen($small_tablet) {
+    width: 100%;
+    margin-bottom: 3rem;
+
+    font-size: 2.6rem;
+    text-align: center;
+  }
 }
 
 .we-sell__work-example {
@@ -25,11 +37,24 @@
   max-width: 1920px;
   width: 100%;
   height: 37vw;
+
+  @include max-screen($small_tablet) {
+    width: 90%;
+    height: 55vw;
+  }
+
+  @include max-screen($large_mobile) {
+    height: 87vw;
+  }
 }
 
 .we-sell__handle {
   width: 4px;
   background-color: #ffffff;
+
+  @include max-screen($small_tablet) {
+    width: 1px;
+  }
 }
 
 .we-sell__inner {
@@ -43,6 +68,10 @@
   background-position: center;
   background-size: 38px 13px;
 
+  @include max-screen($small_tablet) {
+    display: none;
+  }
+
   .ba__arrow {
     &::before {
       display: none;
@@ -52,7 +81,6 @@
 
 .we-sell__help {
   position: absolute;
-  top: 2.3rem;
   z-index: 610;
 
   padding: 6px 24px;
@@ -60,12 +88,32 @@
 
   background-color: #ffffff;
 
+  @include min-screen($small_tablet + 1) {
+    top: 2.3rem;
+  }
+
+  @include max-screen($small_tablet) {
+    bottom: 1.5rem;
+
+    padding: 5px 13px;
+
+    font-size: 1rem;
+  }
+
   &_left {
     left: 2.5rem;
+
+    @include max-screen($small_tablet) {
+      left: 1rem;
+    }
   }
 
   &_right {
     right: 2.5rem;
+
+    @include max-screen($small_tablet) {
+      right: 1rem;
+    }
   }
 }
 
@@ -79,64 +127,85 @@
 
   background-color: #FF0600;
 
+  @include max-screen($small_tablet) {
+    position: static;
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 2.1rem;
+
+    background: none;
+  }
+
+  @include max-screen($large_mobile) {
+    align-items: flex-start;
+  }
+
   &::before,
   &::after {
-    content: "";
+    @include min-screen($small_tablet + 1) {
+      content: "";
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
 
-    width: 16px;
-    height: 2px;
-    border-radius: 3px;
+      width: 16px;
+      height: 2px;
+      border-radius: 3px;
 
-    background-color: #ffffff;
+      background-color: #ffffff;
 
-    transition-property: all;
-    transition-duration: .2s;
-    transition-timing-function: ease-out;
+      transition-property: all;
+      transition-duration: .2s;
+      transition-timing-function: ease-out;
+    }
   }
 
   &::before {
-    transform: translate(-50%, -50%);
+    @include min-screen($small_tablet + 1) {
+      transform: translate(-50%, -50%);
+    }
   }
 
   &::after {
-    transform: translate(-50%, -50%) rotate(90deg);
+    @include min-screen($small_tablet + 1) {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
   }
 
   &:hover,
   &:focus {
-    background-color: #ffffff;
+    @include min-screen($small_tablet + 1) {
+      background-color: #ffffff;
 
-    &::before,
-    &::after {
-      background-color: #FF0600;
-    }
+      &::before,
+      &::after {
+        background-color: #FF0600;
+      }
 
-    &::before {
-      transform: translate(-50%, -50%) rotate(45deg);
-    }
+      &::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
 
-    &::after {
-      transform: translate(-50%, -50%) rotate(135deg);
-    }
+      &::after {
+        transform: translate(-50%, -50%) rotate(135deg);
+      }
 
-    .we-sell__comment {
-      opacity: 1;
+      .we-sell__comment {
+        opacity: 1;
 
-      width: 28rem;
-      padding: 3.5rem;
+        width: 28rem;
+        padding: 3.5rem;
 
-      font-size: 1.5rem;
+        font-size: 1.5rem;
+      }
     }
   }
 
   &_first {
-    top: 9rem;
-    left: 61.6rem;
-
     @include max-screen($large_desktop) {
       left: 31.6rem;
     }
@@ -149,20 +218,36 @@
       left: 17.6rem;
     }
 
-    .we-sell__comment {
-      top: 0;
-      left: 56px;
+    @include max-screen($small_tablet) {
+      margin-top: 73%;
+    }
 
+    @include max-screen($large_mobile) {
+      margin-top: 115%;
+    }
+
+    @include max-screen(425px) {
+      margin-top: 125%;
+    }
+
+    @include min-screen($small_tablet + 1) {
+      top: 9rem;
+      left: 61.6rem;
+    }
+
+    .we-sell__comment {
       @include min-screen($small_desktop + 1) {
         max-width: 25rem;
+      }
+
+      @include min-screen($small_tablet + 1) {
+        top: 0;
+        left: 56px;
       }
     }
   }
 
   &_second {
-    right: 71.7rem;
-    bottom: 9.6rem;
-
     @include max-screen($small_desktop) {
       right: 63.7rem;
       bottom: 5.6rem;
@@ -173,16 +258,20 @@
       bottom: 2.6rem;
     }
 
+    @include min-screen($small_tablet + 1) {
+      right: 71.7rem;
+      bottom: 9.6rem;
+    }
+
     .we-sell__comment {
-      left: 56px;
-      bottom: 0;
+      @include min-screen($small_tablet + 1) {
+        left: 56px;
+        bottom: 0;
+      }
     }
   }
 
   &_third {
-    top: 28rem;
-    right: 25rem;
-
     @include max-screen($small_desktop) {
       top: 20rem;
     }
@@ -191,14 +280,41 @@
       top: 7rem;
     }
 
-    .we-sell__comment {
-      top: 0;
-      right: 56px;
+    @include min-screen($small_tablet + 1) {
+      top: 28rem;
+      right: 25rem;
+    }
 
+    .we-sell__comment {
       @include min-screen($small_desktop + 1) {
         min-width: 30rem;
       }
+
+      @include min-screen($small_tablet + 1) {
+        top: 0;
+        right: 56px;
+      }
     }
+  }
+}
+
+.we-sell__check-icon {
+  @include min-screen($small_tablet + 1) {
+    display: none;
+  }
+
+  @include max-screen($small_tablet) {
+    width: 16px;
+    margin-left: 1rem;
+    margin-right: 2rem;
+
+    fill: none;
+    stroke: #FF0400;
+    stroke-width: 3;
+  }
+
+  @include max-screen($large_mobile) {
+    margin-top: 3px;
   }
 }
 
@@ -217,8 +333,33 @@
 
   background-color: #ffffff;
   opacity: 0;
+
+  @include max-screen($small_tablet) {
+    position: static;
+
+    width: 100%;
+
+    font-size: 2.4rem;
+
+    opacity: 1;
+    background: none;
+  }
+
+  @include max-screen($large_mobile) {
+    font-size: 1.4rem;
+  }
 }
 
 .we-sell__wrap {
   margin-top: 15rem;
+
+  @include max-screen($large_mobile) {
+    margin-top: 76%;
+  }
+}
+
+.ba__image {
+  @include max-screen($small_tablet) {
+    object-position: 62%;
+  }
 }

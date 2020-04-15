@@ -1,15 +1,8 @@
 +b.SECTION.we-sell
     +e.top.wrap
-        +e.title.h2.H2 Вот, что будет если мы возьмемся за продажу Вашей квартиры
+        +e.title.h2.H2 Вот, что будет если мы возьмемся&nbsp;за&#32;продажу Вашей квартиры
 
     +e.work-example.wrap
-        +e.comment-opener._first(tabindex="0")
-            +e.comment Наведем порядок
-        +e.comment-opener._second(tabindex="0")
-            +e.comment Уберем лишние вещи для правильных ракурсов
-        +e.comment-opener._third(tabindex="0")
-            +e.comment Проведем профессиональную фотосъемку
-
         +e.row.flex._justify
             +e.cell._left
                 +e.help._left.p До
@@ -26,5 +19,18 @@
                                         +e.inner.we-sell__inner
                                             +e.arrow
                     +e.circle._slider
+
+        +e.comment-opener._first(tabindex="0")
+            +e.check-icon
+                +icon('we-sell-check', '0 0 15 13')
+            +e.comment Наведем порядок
+        +e.comment-opener._second(tabindex="0")
+            +e.check-icon
+                +icon('we-sell-check', '0 0 15 13')
+            +e.comment Уберем лишние вещи для правильных ракурсов
+        +e.comment-opener._third(tabindex="0")
+            +e.check-icon
+                +icon('we-sell-check', '0 0 15 13')
+            +e.comment Проведем профессиональную фотосъемку
 
     include we-sell-before-after
