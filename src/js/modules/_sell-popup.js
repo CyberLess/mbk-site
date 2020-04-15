@@ -53,7 +53,7 @@ $(() => {
 
   const openFirstPopup = () => {
     isFirstOpened = true;
-    const bodyOldWidth = $body.width();
+    // const bodyOldWidth = $body.width();
 
     $firstPopup.css('display', 'block')
       .animate({
@@ -69,10 +69,10 @@ $(() => {
 
     $overlay.fadeIn(ANIMATION_OPEN_TIME).css('z-index', '601');
     $body.css({
-      position: 'absolute',
-      width: bodyOldWidth,
-      left: 0,
-      top: 0,
+      // position: 'absolute',
+      // width: bodyOldWidth,
+      // left: 0,
+      // top: 0,
       overflowY: 'hidden'
     });
   };
