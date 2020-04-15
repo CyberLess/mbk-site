@@ -62,7 +62,7 @@
   }
 
   @include max-screen($large_mobile) {
-    min-width: 165%;
+    min-width: 132%;
   }
 }
 
@@ -83,11 +83,12 @@
   }
 
   @include max-screen($small_tablet) {
-    min-width: 188px;
+    width: 188px;
   }
 
   @include max-screen($large_mobile) {
-    width: 35%;
+    min-width: 188px;
+    width: 60vw;
   }
 
   &_before {
@@ -97,11 +98,7 @@
 
     @include max-screen($large_mobile) {
       margin-left: 15px;
-      margin-right: 3rem;
-    }
-
-    @include max-screen($we-sell-mock-mob-breakpoint) {
-      margin-right: 16px;
+      margin-right: 5vw;
     }
 
     .we-sell-before-after__text {
@@ -116,6 +113,12 @@
 
     @include max-screen($small_tablet) {
       margin-right: 16px;
+    }
+
+    .we-sell-before-after__image-wrap {
+      @include max-screen($large_mobile) {
+        margin-right: 16px;
+      }
     }
 
     .we-sell-before-after__text {
