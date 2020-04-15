@@ -5,7 +5,7 @@
 				+e.H2.title.h5 Комментарии
 				+e.SPAN.count.h5 4
 			+e.list.comments-list
-				+e.item.comment.comment__.SECTION
+				+e.item.comment._open.comment__.SECTION
 					+e.content
 						+e.head
 							+e.title-wrapper
@@ -22,10 +22,11 @@
 								+e.nav-icon._heart.SPAN
 									+icon('heart', '0 0 14 13')
 								|2
-						+e.button.link.red-link.flex._vertical.BUTTON(type="button")
-							|Открыть ответ
+						+e.button._open.link.red-link.flex._vertical.BUTTON(type="button")
+							+e.SPAN
+								|Открыть ответ
 							+icon('arrow-down', '0 0 7 12')
-					+e.other
+					+e.other._hidden
 						+e.item.comment.comment__.SECTION
 							+e.content
 								+e.head
@@ -67,10 +68,10 @@
 											|Здравствуйте! Возможно ли оформить кредит с просрочками для погашения микрозаймов?
 										+e.button.link.red-link.flex._vertical.BUTTON(type="button")
 											|Комментировать
-						+e.item.comment.comment__.SECTION
-							+e.content
-								include ../layouts/comment-min-form
-				+e.item.comment.comment__.SECTION
+								+e.item.comment.comment__.SECTION
+									+e.content._no-border
+										include ../layouts/comment-min-form
+				+e.item.comment._open.comment__.SECTION
 					+e.content
 						+e.head
 							+e.title-wrapper
@@ -87,9 +88,13 @@
 								+e.nav-icon._heart.SPAN
 									+icon('heart', '0 0 14 13')
 								|15
-						+e.button.link.red-link.flex._vertical.BUTTON(type="button")
-							|Открыть ответ
+						+e.button._open.link.red-link.flex._vertical.BUTTON(type="button")
+							+e.SPAN
+								|Открыть ответ
 							+icon('arrow-down', '0 0 7 12')
+					+e.other._hidden
+						+e.content._no-border
+							include ../layouts/comment-min-form
 				+e.item.comment.comment__.SECTION
 					+e.content
 						+e.head

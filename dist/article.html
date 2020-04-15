@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Статья</title>
-    <link rel="stylesheet" href="/app/css/app.css?v=1586954950101">
+    <link rel="stylesheet" href="/app/css/app.css?v=1586966023042">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
@@ -952,7 +952,7 @@
                         <h2 class="comments__title h5">Комментарии</h2><span class="comments__count h5">4</span>
                     </div>
                     <div class="comments__list comments-list">
-                        <section class="comments__item comment comment">
+                        <section class="comments__item comment comment_open comment">
                             <div class="comment__content">
                                 <div class="comment__head">
                                     <div class="comment__title-wrapper"><span class="comment__title">Лиза</span>
@@ -964,13 +964,13 @@
                                     <a
                                     class="comment__nav-item p" href="#"><span class="comment__nav-icon comment__nav-icon_heart"><svg class="icon icon-heart" viewBox="0 0 14 13"><use xlink:href="/app/icons/sprite.svg#heart"></use></svg></span>2</a>
                                 </div>
-                                <button class="comment__button link red-link flex flex_vertical" type="button">Открыть ответ
+                                <button class="comment__button comment__button_open link red-link flex flex_vertical" type="button"><span>Открыть ответ</span>
                                     <svg class="icon icon-arrow-down" viewBox="0 0 7 12">
                                         <use xlink:href="/app/icons/sprite.svg#arrow-down"></use>
                                     </svg>
                                 </button>
                             </div>
-                            <div class="comment__other">
+                            <div class="comment__other comment__other_hidden">
                                 <section class="comment__item comment comment">
                                     <div class="comment__content">
                                         <div class="comment__head">
@@ -1005,24 +1005,24 @@
                                         <button class="comment__button link red-link flex flex_vertical" type="button">Комментировать</button>
                                     </div>
                                 </section>
+                                <section class="comment__item comment comment">
+                                    <div class="comment__content comment__content_no-border">
+                                        <form class="comment-form-min form" action="#">
+                                            <input class="comment-form-min__input" type="text" placeholder="Введите ваше имя" name="name" data-label="ваше имя" />
+                                            <textarea class="comment-form-min__textarea" placeholder="Напишите комментарий..." name="comment-min" rows="1"></textarea>
+                                            <button class="comment-form-min__button link red-link flex flex flex_vertical" type="submit">Поделиться мнением
+                                                <svg class="icon icon-arrow" viewBox="0 0 19 10">
+                                                    <use xlink:href="/app/icons/sprite.svg#arrow"></use>
+                                                </svg>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </section>
                             </div>
-                            </section>
-                            <section class="comment__item comment comment">
-                                <div class="comment__content">
-                                    <form class="comment-form-min form" action="#">
-                                        <input class="comment-form-min__input" type="text" placeholder="Введите ваше имя" name="name" data-label="ваше имя" />
-                                        <textarea class="comment-form-min__textarea" placeholder="Напишите комментарий..." name="comment-min" rows="1"></textarea>
-                                        <button class="comment-form-min__button link red-link flex flex flex_vertical" type="submit">Поделиться мнением
-                                            <svg class="icon icon-arrow" viewBox="0 0 19 10">
-                                                <use xlink:href="/app/icons/sprite.svg#arrow"></use>
-                                            </svg>
-                                        </button>
-                                    </form>
-                                </div>
                             </section>
                     </div>
                     </section>
-                    <section class="comments__item comment comment">
+                    <section class="comments__item comment comment_open comment">
                         <div class="comment__content">
                             <div class="comment__head">
                                 <div class="comment__title-wrapper"><span class="comment__title">Валерия</span>
@@ -1034,11 +1034,24 @@
                                 <a
                                 class="comment__nav-item p" href="#"><span class="comment__nav-icon comment__nav-icon_heart"><svg class="icon icon-heart" viewBox="0 0 14 13"><use xlink:href="/app/icons/sprite.svg#heart"></use></svg></span>15</a>
                             </div>
-                            <button class="comment__button link red-link flex flex_vertical" type="button">Открыть ответ
+                            <button class="comment__button comment__button_open link red-link flex flex_vertical" type="button"><span>Открыть ответ</span>
                                 <svg class="icon icon-arrow-down" viewBox="0 0 7 12">
                                     <use xlink:href="/app/icons/sprite.svg#arrow-down"></use>
                                 </svg>
                             </button>
+                        </div>
+                        <div class="comment__other comment__other_hidden">
+                            <div class="comment__content comment__content_no-border">
+                                <form class="comment-form-min form" action="#">
+                                    <input class="comment-form-min__input" type="text" placeholder="Введите ваше имя" name="name" data-label="ваше имя" />
+                                    <textarea class="comment-form-min__textarea" placeholder="Напишите комментарий..." name="comment-min" rows="1"></textarea>
+                                    <button class="comment-form-min__button link red-link flex flex flex_vertical" type="submit">Поделиться мнением
+                                        <svg class="icon icon-arrow" viewBox="0 0 19 10">
+                                            <use xlink:href="/app/icons/sprite.svg#arrow"></use>
+                                        </svg>
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                     </section>
                     <section class="comments__item comment comment">
@@ -1696,7 +1709,7 @@
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/app.js?v=1586954950236"></script>
+    <script src="/app/js/app.js?v=1586966023236"></script>
 </body>
 
 </html>
