@@ -50,15 +50,19 @@
     justify-content: flex-start;
   }
 
-  @include min-screen(425px) {
+  @include min-screen($we-sell-mock-mob-breakpoint) {
     justify-content: center;
   }
 
   @include max-screen($small_tablet) {
     width: 100vw;
-    min-width: 425px;
+    min-width: $we-sell-mock-mob-breakpoint;
 
     background: linear-gradient(to bottom, transparent 14rem, #ffffff 14rem);
+  }
+
+  @include max-screen($large_mobile) {
+    min-width: 165%;
   }
 }
 
@@ -79,7 +83,11 @@
   }
 
   @include max-screen($small_tablet) {
-    width: 188px;
+    min-width: 188px;
+  }
+
+  @include max-screen($large_mobile) {
+    width: 35%;
   }
 
   &_before {
@@ -92,7 +100,7 @@
       margin-right: 3rem;
     }
 
-    @include max-screen(425px) {
+    @include max-screen($we-sell-mock-mob-breakpoint) {
       margin-right: 16px;
     }
 
