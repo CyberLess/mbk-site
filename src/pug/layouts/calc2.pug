@@ -1,14 +1,18 @@
 +b.SECTION.quiz
 	+e.inner
 		+e.wrap.wrap
-			+e.FORM.box.form.js-quiz
+			+e.FORM.box.form.js-quiz(data-redirect="/test/")
 				+e.top.flex._vertical._justify
-					+e.title.h4 Выберите сумму и срок кредита
-					+e.text.h6.is-regular Шаг 1 из 4
+					+e.title.h4.js-title Выберите сумму и срок кредита
+					+e.text.h6.is-regular 
+						| Шаг 
+						span.js-current-step 1
+						| &nbsp;из 
+						span.js-total-step 
 				+e.row.flex._justify
 					+e.column._left
 						+e.slider
-							+e.slide._top.js-slide.is-active
+							+e.slide._top.js-hide-bottom.js-slide.js-submit-slide.js-dont-backward.is-active(data-title="Выберите сумму и срок кредита" data-step="1" data-action="/api/quiz/")
 								+e.row.flex._justify._vertical
 									+e.cell
 										+e.field.input__
@@ -42,12 +46,14 @@
 													| 12 мес.
 												+e.label.p
 													| 25 лет
+								+e.row._price.flex._justify._vertical
 									+e.cell._big.css-text-right
 										+e.text.is-regular.h6
 											| Ежемесячный платеж
 									+e.cell._big
 										+e.price.is-bold.h4
 											| 3 323 ₽
+								+e.row.flex._justify._vertical
 									+e.cell._big
 										+e.field.input__
 											+e.top
@@ -62,22 +68,104 @@
 													| Ваш телефон
 											+e.field
 												+e.INPUT.item._square.h6(type="text" placeholder="7 903 123 45 65" name="phone")
-									+e.cell._noscope.css-text-right
-										+e.small.small
-											| Нажимая на кнопку «Продолжить», вы выражаете
-											br
+								+e.row._nav.flex._justify._vertical
+									+e.cell._info._noscope.css-text-right
+										+e.small.small.text-light
+											| Нажимая на кнопку «Продолжить», вы выражаете 
 											| согласие 
 											a.a(href="#") на обработку ваших персональных данных
-									+e.cell._noscope
+									+e.cell._button._noscope
 										+button(false)(class="js-goto" data-dir="next") Продолжить
-							+e.slide.js-slide
+							+e.slide.js-slide.js-hide-bottom#confirm-slide(data-title="Подтвердите телефон" data-step="1" data-action="/api/confirm/")
+								+e.bar.status-bar__._center
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения &nbsp;
+												span.strong 42%
+											+e.done(style="width: 42%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 42%
+									+e.help.h6 +10% за подтверждение телефона
+								+e.string
+									+e.text._small.p.text-gray
+										| Код подтверждения отправлен вам на номер 
+										span.strong.text-dark +7 (921) 921-21-21
+								+e.phone.phone-confirm__
+									+e.form.flex
+										+e.cell._phone
+											+e.field.input__
+												+e.field
+													+e.INPUT.item._square._dark.h5(type="text" placeholder="XXXXXX" maxlength="6" name="confirm")
+										+e.cell._button
+											+button(false)(class="js-goto" data-dir="next") Продолжить
+									+e.row.flex._vertical._justify
+										+e.column._left
+											+e.string
+												+link(class="_regular _toline") Отправить еще раз
+											+e.string
+												+link(class="_regular _toline") Не приходит код подтверждения?
+											+e.string
+												+link(class="_regular _toline") Изменить номер
+										+e.column._right
+											+link(class="_tobutton js-goto js-without-submit" data-dir="next") Отказаться от подтверждения
+											+e.text.small
+												| Отказ от подтверждения уменьшает вероятность 
+												br 
+												| положительного решения, но не является причиной 
+												br
+												| отказа от выдачи кредита
+							+e.slide.js-slide(data-title="Заполните анкету" data-step="2")
 								+e.bar.status-bar__
 									+e.inner
 										+e.line
 											+e.content._back.h6
 												| Вероятность одобрения&nbsp;
 												span.strong 52%
-											+e.done
+											+e.done(style="width:52%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 52%
+									+e.help.h6 +26% за заполнение второго шага анкеты
+								+e.bold.h6 Подробнее о Вас
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Электронная почта
+										+e.field
+											+e.INPUT.item._square.h6(type="text" placeholder="test@gmail.com" name="email")
+							+e.slide.js-slide(data-step="2")
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 52%
+											+e.done(style="width:52%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 52%
+									+e.help.h6 +26% за заполнение второго шага анкеты
+								+e.bold.h6 Подробнее о Вас
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Ваш пол
+										+e.parent.select__.js-select
+											+e.field.SELECT(name="calc[sex]")
+												option Мужской
+												option Женский
+							+e.slide.js-slide(data-step="2")
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 52%
+											+e.done(style="width:52%")
 												+e.content._front.h6
 													| Вероятность одобрения&nbsp;
 													span.strong 52%
@@ -96,16 +184,530 @@
 												option 40
 												option 50
 												option 60
+							+e.slide.js-slide(data-step="2")
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 52%
+											+e.done(style="width:52%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 52%
+									+e.help.h6 +26% за заполнение второго шага анкеты
+								+e.bold.h6 Подробнее о Вас
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Получаете ли Вы пенсию?
+										+e.parent.select__.js-select
+											+e.field.SELECT(name="calc[pension]")
+												option Да
+												option Нет
+							+e.slide.js-slide(data-step="2")
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 52%
+											+e.done(style="width:52%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 52%
+									+e.help.h6 +26% за заполнение второго шага анкеты
+								+e.bold.h6 Подробнее о Вас
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Семейное положение
+										+e.parent.select__.js-select
+											+e.field.SELECT(name="calc[family]")
+												option Женат / Замужем
+												option Женат
+												option Замужем
+							+e.slide.js-slide(data-step="2")
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 52%
+											+e.done(style="width:52%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 52%
+									+e.help.h6 +26% за заполнение второго шага анкеты
+								+e.bold.h6 Подробнее о Вас
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Образование
+										+e.parent.select__.js-select
+											+e.field.SELECT(name="calc[education]")
+												option Высшее
+												option Среднее
+							+e.slide.js-slide(data-step="2")
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 52%
+											+e.done(style="width:52%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 52%
+									+e.help.h6 +26% за заполнение второго шага анкеты
+								+e.bold.h6 Сведения о работе
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Кем сейчас работаете?
+										+e.field
+											+e.INPUT.item._square.h6(type="text" placeholder="Слесарь" name="calc[work]" data-rule-required="true")
+							+e.slide.js-slide(data-step="2")
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 52%
+											+e.done(style="width:52%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 52%
+									+e.help.h6 +26% за заполнение второго шага анкеты
+								+e.bold.h6 Сведения о работе
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Название организации
+										+e.field
+											+e.INPUT.item._square.h6(type="text" placeholder="ООО «Интроверт»" name="calc[organization]" data-rule-required="true")
+							+e.slide.js-slide(data-step="2")
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 52%
+											+e.done(style="width:52%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 52%
+									+e.help.h6 +26% за заполнение второго шага анкеты
+								+e.bold.h6 Сведения о работе
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Размер заработной платы
+										+e.parent.range-input__
+											+e.INPUT.input(type="text" autocomplete="off" name="calc[time]" placeholder="0 ₽" value="30000")
+											+e.char.h6 ₽
+											+e.bottom
+												+e.line
+												+e.path(data-min="0" data-step="1000" data-max="1000000")
+										+e.info.flex._vertical._justify
+											+e.label.p
+												| 0
+											+e.label.p
+												| 1 млн.
+							+e.slide.js-slide(data-step="2")
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 52%
+											+e.done(style="width:52%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 52%
+									+e.help.h6 +26% за заполнение второго шага анкеты
+								+e.bold.h6 Сведения о работе
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Есть дополнительный доход?
+										+e.parent.range-input__
+											+e.INPUT.input(type="text" autocomplete="off" name="calc[time]" placeholder="0 ₽" value="30000")
+											+e.char.h6 ₽
+											+e.bottom
+												+e.line
+												+e.path(data-min="0" data-step="1000" data-max="1000000")
+										+e.info.flex._vertical._justify
+											+e.label.p
+												| 0
+											+e.label.p
+												| 1 млн.
+
+							+e.slide.js-slide(data-step="3")
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 78%
+											+e.done(style="width:78%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 78%
+									+e.help.h6 +14% за заполнение третьего шага анкеты
+								+e.bold.h6 Паспортные данные
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Ваша фамилия
+										+e.field
+											+e.INPUT.item._square.h6(type="text" data-rule-required="true" placeholder="Иванов" name="calc[last_name]")
+							+e.slide.js-slide(data-step="3")
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 78%
+											+e.done(style="width:78%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 78%
+									+e.help.h6 +14% за заполнение третьего шага анкеты
+								+e.bold.h6 Паспортные данные
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Ваше имя
+										+e.field
+											+e.INPUT.item._square.h6(type="text" data-rule-required="true" placeholder="Иван" name="calc[first_name]")
+							+e.slide.js-slide(data-step="3")
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 78%
+											+e.done(style="width:78%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 78%
+									+e.help.h6 +14% за заполнение третьего шага анкеты
+								+e.bold.h6 Паспортные данные
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Серия и номер паспорта
+										+e.field
+											+e.INPUT.item._square.h6(type="text" data-rule-required="true" placeholder="4611 513480" name="calc[passport]")
+							+e.slide.js-slide(data-step="3")
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 78%
+											+e.done(style="width:78%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 78%
+									+e.help.h6 +14% за заполнение третьего шага анкеты
+								+e.bold.h6 Паспортные данные
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Дата выдачи
+										+e.field
+											+e.INPUT.item._square.h6(type="text" data-rule-required="true" placeholder="15.08.2011" name="calc[date_of_issue]")
+											+e.icon._stroke
+												+icon('calendar', '0 0 24 24')
+							+e.slide.js-slide(data-step="3")
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 78%
+											+e.done(style="width:78%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 78%
+									+e.help.h6 +14% за заполнение третьего шага анкеты
+								+e.bold.h6 Паспортные данные
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Код подразделения
+										+e.field
+											+e.INPUT.item._square.h6(type="text" data-rule-required="true" placeholder="500-175" name="calc[unit_code]")
+							+e.slide.js-slide(data-step="3")
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 78%
+											+e.done(style="width:78%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 78%
+									+e.help.h6 +14% за заполнение третьего шага анкеты
+								+e.bold.h6 Паспортные данные
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Кем выдан
+										+e.field
+											+e.INPUT.item._square.h6(type="text" data-rule-required="true" placeholder="ТП№5 Межрайоного ОУФМС России по МО..." name="calc[issued_by]")
+							+e.slide.js-slide(data-step="3")
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 78%
+											+e.done(style="width:78%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 78%
+									+e.help.h6 +14% за заполнение третьего шага анкеты
+								+e.bold.h6 Паспортные данные
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Дата рождения
+										+e.field
+											+e.INPUT.item._square.h6(type="text" data-rule-required="true" placeholder="29.10.1991" name="calc[date_of_birth]")
+							+e.slide.js-slide(data-step="3")
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 78%
+											+e.done(style="width:78%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 78%
+									+e.help.h6 +14% за заполнение третьего шага анкеты
+								+e.bold.h6 Паспортные данные
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Место выдачи
+										+e.field
+											+e.INPUT.item._square.h6(type="text" data-rule-required="true" placeholder="г. Мытищи" name="calc[place_of_issue]")
+							+e.slide.js-slide(data-step="3")
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 78%
+											+e.done(style="width:78%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 78%
+									+e.help.h6 +14% за заполнение третьего шага анкеты
+								+e.bold.h6 Адрес регистрации
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Город
+										+e.field
+											+e.INPUT.item._square.h6(type="text" data-rule-required="true" placeholder="Москва" name="calc[city]")
+							+e.slide.js-slide(data-step="3")
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 78%
+											+e.done(style="width:78%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 78%
+									+e.help.h6 +14% за заполнение третьего шага анкеты
+								+e.bold.h6 Адрес регистрации
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Улица
+										+e.field
+											+e.INPUT.item._square.h6(type="text" data-rule-required="true" placeholder="Тверская" name="calc[street]")
+							+e.slide.js-slide(data-step="3")
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 78%
+											+e.done(style="width:78%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 78%
+									+e.help.h6 +14% за заполнение третьего шага анкеты
+								+e.bold.h6 Адрес регистрации
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Дом
+										+e.field
+											+e.INPUT.item._square.h6(type="text" data-rule-required="true" placeholder="6" name="calc[home]")
+							+e.slide.js-slide(data-step="3")
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 78%
+											+e.done(style="width:78%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 78%
+									+e.help.h6 +14% за заполнение третьего шага анкеты
+								+e.bold.h6 Адрес регистрации
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Корпус
+										+e.field
+											+e.INPUT.item._square.h6(type="text" data-rule-required="true" placeholder="2" name="calc[housing]")
+							+e.slide.js-slide(data-step="3")
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 78%
+											+e.done(style="width:78%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 78%
+									+e.help.h6 +14% за заполнение третьего шага анкеты
+								+e.bold.h6 Адрес регистрации
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Квартира
+										+e.field
+											+e.INPUT.item._square.h6(type="text" data-rule-required="true" placeholder="12" name="calc[apartament]")
+							+e.slide.js-slide(data-step="3")
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 78%
+											+e.done(style="width:78%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 78%
+									+e.help.h6 +14% за заполнение третьего шага анкеты
+								+e.bold.h6 Адрес регистрации
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Домашний телефон
+										+e.field
+											+e.INPUT.item._square.h6(type="text" data-rule-required="true" placeholder="+7 495 955 55 55 " name="home_phone")
+							
+							+e.slide.js-slide(data-step="4")
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 92%
+											+e.done(style="width:92%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 92%
+									+e.help.h6 +6% за заполнение четвертого шага анкеты
+								+e.bold.h6 Кредиты в других банках
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Есть ли кредиты в других банках
+										+e.parent.select__.js-select
+											+e.field.SELECT(name="calc[another_credit]")
+												option Да
+												option Нет
+							+e.slide.js-slide(data-step="4")
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 92%
+											+e.done(style="width:92%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 92%
+									+e.help.h6 +6% за заполнение четвертого шага анкеты
+								+e.bold.h6 Кредиты в других банках
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Есть ли исторические просрочки
+										+e.parent.select__.js-select
+											+e.field.SELECT(name="calc[history]")
+												option Да
+												option Нет
+							+e.slide.js-slide(data-step="4")
+								+e.bar.status-bar__
+									+e.inner
+										+e.line
+											+e.content._back.h6
+												| Вероятность одобрения&nbsp;
+												span.strong 92%
+											+e.done(style="width:92%")
+												+e.content._front.h6
+													| Вероятность одобрения&nbsp;
+													span.strong 92%
+									+e.help.h6 +6% за заполнение четвертого шага анкеты
+								+e.bold.h6 Отметьте есть ли у Вас собственность?
+								+e.cell
+									+e.field.input__
+										+e.parent.select__.js-select
+											+e.field.SELECT(name="calc[own]")
+												option Нет собственности
+												option Есть своя собственность
+												option Совместная собственность
+												option Долевая собственность
 						+e.bottom.flex._vertical._justify
 							+e.bottom-cell._left
 								+e.status.bar__
-									+e.done
+									+e.done.js-bar-done
 								+e.bottom-row.flex._vertical._justify
-									+e.text.small.strong
+									+e.text._counter.small.strong
 										| Вопрос 
-										span.text-red.is-current 5 
-										| из 
-										span.is-total 7
+										span.text-red.js-bar-current 5 
+										| &nbsp;из 
+										span.js-bar-total 7
 									+e.gray.small Опрос займет не более 2 минут
 
 							+e.bottom-cell._right.flex._vertical._justify
@@ -118,5 +720,6 @@
 						+e.avatar
 							+e.avatar-inner
 								+e.IMG.avatar-image.object-fit(src="/img/avatar_big.jpg")
-						+e.name.h6 Марина Алексеева
-						+e.about.small Ваш персональный менеджер
+						+e.user
+							+e.name.h6 Марина Алексеева
+							+e.about.small Ваш персональный менеджер

@@ -1,0 +1,102 @@
+.phone-confirm{
+	&__form{
+		margin-top: 3rem;
+		margin-bottom: 5.2rem;
+	}
+	&__cell{
+		margin-bottom: 2rem;
+		max-width: 45%;
+
+		&_phone{
+			width: 30.8rem;
+			margin-right: 2.8rem;
+		}
+		&_button{
+			width: 25.8rem;
+		}
+	}
+
+	&__field,
+	&__button{
+		width: 100%;
+	}
+
+	&__row{
+		padding-bottom: 3rem;
+	}
+
+	&__column{
+		max-width: 400/978*100%;
+		margin-bottom: 3rem;
+		&_right{
+			margin-right: 4.9rem;
+		}
+	}
+
+	&__string{
+		&:not(:last-child){
+			margin-bottom: 1.8rem;
+		}
+	}
+
+	&__text{
+		color: #AFAFAF;
+		margin-top: 1.5rem;
+	}
+
+	@include max-screen($small_tablet) {
+		&__cell, &__column{
+			width: 100%;
+			max-width: none;
+			margin-right: 0;
+		}
+	}
+
+	@include max-screen($large_mobile) {
+		&__form{
+			margin-top: 1.6rem;
+			margin-bottom: 3.8rem;
+		}
+
+		&__column{
+
+			margin-bottom: 3.5rem;
+			
+			&_right{
+				margin-bottom: 2rem;
+			}
+
+		}
+
+		&__string{
+			width: 227/290*100%;
+			margin: auto;
+
+			&:not(:last-child){
+				margin-bottom: 0;
+				border-bottom: 1px solid rgba(#000000, .1);
+			}
+		}
+
+		&__link{
+
+		}
+
+		&__row{
+			padding-bottom: 0;
+		}
+
+		&__text{
+			font-size: 1rem;
+			line-height: 140%;
+			text-align: center;
+		}
+
+		&__cell{
+			margin-bottom: 0;
+			&_phone{
+				margin-bottom: 2.7rem;
+			}
+		}
+	}
+}

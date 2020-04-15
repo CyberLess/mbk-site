@@ -203,6 +203,16 @@ a{
 .text-red{
 	color: $red;
 }
+.text-gray{
+	color: #868686;
+}
+.text-light{
+	color: #AFAFAF;
+}
+.text-dark{
+	color: $dark;
+}
+
 
 .row{
 	display: table;

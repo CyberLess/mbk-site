@@ -1,17 +1,16 @@
 +b.SECTION.calc
 	+e.wrap.wrap
 		+e.FORM.box.form.js-quiz(action="")
-
-			+e.top.flex._vertical._justify
-				+e.title.h4
-					| Выберите сумму и срок кредита
-				+e.text.h6.is-regular
-					| Шаг 
-					span.is-curent-calc 1 
-					| из 
-					span.is-total-calc 4
 			+e.slider
 				+e.slide.js-slide.is-active
+					+e.top.flex._vertical._justify
+						+e.title.h4
+							| Выберите сумму и срок кредита
+						+e.text.h6.is-regular
+							| Шаг 
+							span.is-curent-calc 1 
+							| из 
+							span.is-total-calc 4
 					+e.row.flex._justify._vertical
 						+e.cell
 							+e.field.input__
@@ -74,6 +73,59 @@
 						+e.cell
 							+button(false)(class="js-goto" data-dir="next") Продолжить
 				+e.slide.js-slide
+					+e.top.flex._vertical._justify
+						+e.title.h4
+							| Подтвердите телефон
+					+e.bar.status-bar__._center
+						+e.inner
+							+e.line
+								+e.content._back.h6
+									| Вероятность одобрения &nbsp;
+									span.strong 42%
+								+e.done(style="width: 42%")
+									+e.content._front.h6
+										| Вероятность одобрения&nbsp;
+										span.strong 42%
+						+e.help.h6 +10% за подтверждение телефона
+					+e.string
+						+e.text.p.text-gray
+							| Код подтверждения отправлен вам на номер 
+							span.strong.text-dark +7 (921) 921-21-21
+					+e.phone.phone-confirm__
+						+e.form.flex
+							+e.cell._phone
+								+e.field.input__
+									+e.field
+										+e.INPUT.item._square._dark.h5(type="text" placeholder="XXXXXX" maxlength="6" name="confirm")
+							+e.cell._button
+								+button(false)(class="js-goto" data-dir="next") Продолжить
+						+e.row.flex._vertical._justify
+							+e.column._left
+								+e.string
+									+link(class="_regular _toline") Отправить еще раз
+								+e.string
+									+link(class="_regular _toline") Не приходит код подтверждения?
+								+e.string
+									+link(class="_regular _toline") Изменить номер
+							+e.column._right
+								+link(class="_tobutton") Отказаться от подтверждения
+								+e.text.small
+									| Отказ от подтверждения уменьшает вероятность 
+									br 
+									| положительного решения, но не является причиной 
+									br
+									| отказа от выдачи кредита
+
+
+				+e.slide.js-slide
+					+e.top.flex._vertical._justify
+						+e.title.h4
+							| Заполните анкету
+						+e.text.h6.is-regular
+							| Шаг 
+							span.is-curent-calc 2 
+							| из 
+							span.is-total-calc 4
 					+e.bar.status-bar__._center
 						+e.inner
 							+e.line
@@ -200,6 +252,14 @@
 						+e.cell._bigtop
 							+button(false)(class="js-goto" data-dir="next") Продолжить
 				+e.slide.js-slide
+					+e.top.flex._vertical._justify
+						+e.title.h4
+							| Заполните анкету
+						+e.text.h6.is-regular
+							| Шаг 
+							span.is-curent-calc 3 
+							| из 
+							span.is-total-calc 4
 					+e.bar.status-bar__._center
 						+e.inner
 							+e.line
@@ -210,7 +270,7 @@
 									+e.content._front.h6
 										| Вероятность одобрения&nbsp;
 										span.strong 52%
-						+e.help.h6 +26% за заполнение второго шага анкеты
+						+e.help.h6 +14% за заполнение третьего шага анкеты
 					+e.row.flex._vertical._justify
 						+e.label.h6 Паспортные данные
 						+e.cell._middle
@@ -241,6 +301,8 @@
 										| Дата выдачи
 								+e.field
 									+e.INPUT.item._square.h6(type="text" placeholder="15.08.2011" name="calc[date_of_issue]")
+									+e.icon
+										+icon('calendar', '0 0 24 24')
 						+e.cell._middle
 							+e.field.input__
 								+e.top
@@ -321,6 +383,14 @@
 						+e.cell._bigtop
 							+button(false)(class="js-goto" data-dir="next") Продолжить
 				+e.slide.js-slide
+					+e.top.flex._vertical._justify
+						+e.title.h4
+							| Заполните анкету
+						+e.text.h6.is-regular
+							| Шаг 
+							span.is-curent-calc 4 
+							| из 
+							span.is-total-calc 4
 					+e.bar.status-bar__._center
 						+e.inner
 							+e.line

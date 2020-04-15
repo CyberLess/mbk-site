@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Общая страница</title>
-    <link rel="stylesheet" href="/app/css/app.css?v=1586278320382">
+    <link rel="stylesheet" href="/app/css/app.css?v=1586970641295">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
@@ -1411,13 +1411,13 @@
             <section class="calc">
                 <div class="calc__wrap wrap">
                     <form class="calc__box form js-quiz" action="">
-                        <div class="calc__top flex flex_vertical flex_justify">
-                            <div class="calc__title h4">Выберите сумму и&nbsp;срок кредита</div>
-                            <div class="calc__text h6 is-regular">Шаг <span class="is-curent-calc">1 </span>из&nbsp;<span class="is-total-calc">4</span>
-                            </div>
-                        </div>
                         <div class="calc__slider">
                             <div class="calc__slide js-slide is-active">
+                                <div class="calc__top flex flex_vertical flex_justify">
+                                    <div class="calc__title h4">Выберите сумму и&nbsp;срок кредита</div>
+                                    <div class="calc__text h6 is-regular">Шаг <span class="is-curent-calc">1 </span>из&nbsp;<span class="is-total-calc">4</span>
+                                    </div>
+                                </div>
                                 <div class="calc__row flex flex_justify flex_vertical">
                                     <div class="calc__cell">
                                         <div class="calc__field input">
@@ -1495,390 +1495,463 @@
                                 </div>
                             </div>
                             <div class="calc__slide js-slide">
+                                <div class="calc__top flex flex_vertical flex_justify">
+                                    <div class="calc__title h4">Подтвердите телефон</div>
+                                </div>
                                 <div class="calc__bar status-bar status-bar_center">
                                     <div class="status-bar__inner">
                                         <div class="status-bar__line">
-                                            <div class="status-bar__content status-bar__content_back h6">Вероятность одобрения&nbsp;<span class="strong">52%</span>
+                                            <div class="status-bar__content status-bar__content_back h6">Вероятность одобрения &nbsp;<span class="strong">42%</span>
                                             </div>
-                                            <div class="status-bar__done">
-                                                <div class="status-bar__content status-bar__content_front h6">Вероятность одобрения&nbsp;<span class="strong">52%</span>
+                                            <div class="status-bar__done" style="width: 42%">
+                                                <div class="status-bar__content status-bar__content_front h6">Вероятность одобрения&nbsp;<span class="strong">42%</span>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="status-bar__help h6">+26% за&nbsp;заполнение второго шага анкеты</div>
+                                    <div class="status-bar__help h6">+10% за&nbsp;подтверждение телефона</div>
                                 </div>
-                                <div class="calc__row flex flex_vertical flex_justify">
-                                    <div class="calc__label h6">Подробнее о&nbsp;Вас</div>
-                                    <div class="calc__cell calc__cell_middle">
-                                        <div class="calc__field input">
-                                            <div class="input__top">
-                                                <div class="input__label p">Электронная почта</div>
-                                            </div>
-                                            <div class="input__field">
-                                                <input class="input__item input__item_square h6" type="text" placeholder="test@gmail.com" name="email" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="calc__cell calc__cell_middle">
-                                        <div class="calc__field input">
-                                            <div class="input__top">
-                                                <div class="input__label p">Ваш пол</div>
-                                            </div>
-                                            <div class="input__parent select js-select">
-                                                <select class="select__field" name="calc[sex]">
-                                                    <option>Мужской</option>
-                                                    <option>Женский</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="calc__cell calc__cell_middle">
-                                        <div class="calc__field input">
-                                            <div class="input__top">
-                                                <div class="input__label p">Ваш возраст</div>
-                                            </div>
-                                            <div class="input__parent select js-select">
-                                                <select class="select__field" name="calc[age]">
-                                                    <option>10</option>
-                                                    <option>20</option>
-                                                    <option>30</option>
-                                                    <option>40</option>
-                                                    <option>50</option>
-                                                    <option>60</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="calc__cell calc__cell_middle">
-                                        <div class="calc__field input">
-                                            <div class="input__top">
-                                                <div class="input__label p">Получаете ли Вы пенсию?</div>
-                                            </div>
-                                            <div class="input__parent select js-select">
-                                                <select class="select__field" name="calc[pension]">
-                                                    <option>Да</option>
-                                                    <option>Нет</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="calc__cell calc__cell_big">
-                                        <div class="calc__field input">
-                                            <div class="input__top">
-                                                <div class="input__label p">Семейное положение</div>
-                                            </div>
-                                            <div class="input__parent select js-select">
-                                                <select class="select__field" name="calc[family]">
-                                                    <option>Женат / Замужем</option>
-                                                    <option>Женат</option>
-                                                    <option>Замужем</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="calc__cell calc__cell_big">
-                                        <div class="calc__field input">
-                                            <div class="input__top">
-                                                <div class="input__label p">Образование</div>
-                                            </div>
-                                            <div class="input__parent select js-select">
-                                                <select class="select__field" name="calc[education]">
-                                                    <option>Высшее</option>
-                                                    <option>Среднее</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="calc__label calc__label_big h6">Сведения о&nbsp;работе</div>
-                                    <div class="calc__cell calc__cell_middle">
-                                        <div class="calc__field input">
-                                            <div class="input__top">
-                                                <div class="input__label p">Кем сейчас работаете?</div>
-                                            </div>
-                                            <div class="input__field">
-                                                <input class="input__item input__item_square h6" type="text" placeholder="Слесарь" name="calc[work]" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="calc__cell calc__cell_middle">
-                                        <div class="calc__field input">
-                                            <div class="input__top">
-                                                <div class="input__label p">Название организации</div>
-                                            </div>
-                                            <div class="input__field">
-                                                <input class="input__item input__item_square h6" type="text" placeholder="ООО «Интроверт»" name="calc[organization]" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="calc__cell">
-                                        <div class="calc__field input">
-                                            <div class="input__top">
-                                                <div class="input__label p">Размер заработной платы</div>
-                                            </div>
-                                            <div class="input__parent range-input">
-                                                <input class="range-input__input" type="text" autocomplete="off" name="calc[time]" placeholder="0 ₽" value="30000" />
-                                                <div class="range-input__char h6">₽</div>
-                                                <div class="range-input__bottom">
-                                                    <div class="range-input__line"></div>
-                                                    <div class="range-input__path" data-min="0" data-step="1000" data-max="1000000"></div>
-                                                </div>
-                                            </div>
-                                            <div class="input__info flex flex_vertical flex_justify">
-                                                <div class="input__label p">0</div>
-                                                <div class="input__label p">1 млн.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="calc__cell">
-                                        <div class="calc__field input">
-                                            <div class="input__top">
-                                                <div class="input__label p">Есть дополнительный доход?</div>
-                                            </div>
-                                            <div class="input__parent range-input">
-                                                <input class="range-input__input" type="text" autocomplete="off" name="calc[time]" placeholder="0 ₽" value="30000" />
-                                                <div class="range-input__char h6">₽</div>
-                                                <div class="range-input__bottom">
-                                                    <div class="range-input__line"></div>
-                                                    <div class="range-input__path" data-min="0" data-step="1000" data-max="1000000"></div>
-                                                </div>
-                                            </div>
-                                            <div class="input__info flex flex_vertical flex_justify">
-                                                <div class="input__label p">0</div>
-                                                <div class="input__label p">1 млн.</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="calc__cell calc__cell_bigtop css-text-right">
-                                        <div class="calc__small small">Нажимая на&nbsp;кнопку «Продолжить», вы выражаете
-                                            <br>согласие <a class="a" href="#">на&nbsp;обработку ваших персональных данных</a>
-                                        </div>
-                                    </div>
-                                    <div class="calc__cell calc__cell_bigtop">
-                                        <button class="calc__button h6 btn js-goto" data-dir="next"><span class="btn__text">Продолжить</span>
-                                        </button>
+                                <div class="calc__string">
+                                    <div class="calc__text p text-gray">Код подтверждения отправлен вам на&nbsp;номер <span class="strong text-dark">+7 (921) 921-21-21</span>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="calc__slide js-slide">
-                                <div class="calc__bar status-bar status-bar_center">
-                                    <div class="status-bar__inner">
-                                        <div class="status-bar__line">
-                                            <div class="status-bar__content status-bar__content_back h6">Вероятность одобрения&nbsp;<span class="strong">52%</span>
-                                            </div>
-                                            <div class="status-bar__done">
-                                                <div class="status-bar__content status-bar__content_front h6">Вероятность одобрения&nbsp;<span class="strong">52%</span>
+                                <div class="calc__phone phone-confirm">
+                                    <div class="phone-confirm__form flex">
+                                        <div class="phone-confirm__cell phone-confirm__cell_phone">
+                                            <div class="phone-confirm__field input">
+                                                <div class="input__field">
+                                                    <input class="input__item input__item_square input__item_dark h5" type="text" placeholder="XXXXXX" maxlength="6" name="confirm" />
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="status-bar__help h6">+26% за&nbsp;заполнение второго шага анкеты</div>
-                                </div>
-                                <div class="calc__row flex flex_vertical flex_justify">
-                                    <div class="calc__label h6">Паспортные данные</div>
-                                    <div class="calc__cell calc__cell_middle">
-                                        <div class="calc__field input">
-                                            <div class="input__top">
-                                                <div class="input__label p">Ваша фамилия</div>
-                                            </div>
-                                            <div class="input__field">
-                                                <input class="input__item input__item_square h6" type="text" placeholder="Иванов" name="calc[last_name]" />
-                                            </div>
+                                        <div class="phone-confirm__cell phone-confirm__cell_button">
+                                            <button class="phone-confirm__button h6 btn js-goto" data-dir="next"><span class="btn__text">Продолжить</span>
+                                            </button>
                                         </div>
                                     </div>
-                                    <div class="calc__cell calc__cell_middle">
-                                        <div class="calc__field input">
-                                            <div class="input__top">
-                                                <div class="input__label p">Ваше имя</div>
+                                    <div class="phone-confirm__row flex flex_vertical flex_justify">
+                                        <div class="phone-confirm__column phone-confirm__column_left">
+                                            <div class="phone-confirm__string"><a class="phone-confirm__link h6 link link_regular link_toline" href="#">Отправить еще раз<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
                                             </div>
-                                            <div class="input__field">
-                                                <input class="input__item input__item_square h6" type="text" placeholder="Иван" name="calc[first_name]" />
+                                            <div class="phone-confirm__string"><a class="phone-confirm__link h6 link link_regular link_toline" href="#">Не приходит код подтверждения?<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="calc__cell calc__cell_middle">
-                                        <div class="calc__field input">
-                                            <div class="input__top">
-                                                <div class="input__label p">Серия и&nbsp;номер паспорта</div>
-                                            </div>
-                                            <div class="input__field">
-                                                <input class="input__item input__item_square h6" type="text" placeholder="4611 513480" name="calc[passport]" />
+                                            <div class="phone-confirm__string"><a class="phone-confirm__link h6 link link_regular link_toline" href="#">Изменить номер<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
                                             </div>
                                         </div>
+                                        <div class="phone-confirm__column phone-confirm__column_right"><a class="phone-confirm__link h6 link link_tobutton" href="#">Отказаться от&nbsp;подтверждения<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
+                                            <div
+                                            class="phone-confirm__text small">Отказ от&nbsp;подтверждения уменьшает вероятность
+                                                <br>положительного решения, но не является причиной
+                                                <br>отказа от&nbsp;выдачи кредита</div>
                                     </div>
-                                    <div class="calc__cell calc__cell_middle">
-                                        <div class="calc__field input">
-                                            <div class="input__top">
-                                                <div class="input__label p">Дата выдачи</div>
-                                            </div>
-                                            <div class="input__field">
-                                                <input class="input__item input__item_square h6" type="text" placeholder="15.08.2011" name="calc[date_of_issue]" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="calc__cell calc__cell_middle">
-                                        <div class="calc__field input">
-                                            <div class="input__top">
-                                                <div class="input__label p">Код подразделения</div>
-                                            </div>
-                                            <div class="input__field">
-                                                <input class="input__item input__item_square h6" type="text" placeholder="500-175" name="calc[unit_code]" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="calc__cell calc__cell_middle">
-                                        <div class="calc__field input">
-                                            <div class="input__top">
-                                                <div class="input__label p">Кем выдан</div>
-                                            </div>
-                                            <div class="input__field">
-                                                <input class="input__item input__item_square h6" type="text" placeholder="ТП№5 Межрайоного ОУФМС России по&nbsp;МО..." name="calc[issued_by]" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="calc__cell calc__cell_big">
-                                        <div class="calc__field input">
-                                            <div class="input__top">
-                                                <div class="input__label p">Дата рождения</div>
-                                            </div>
-                                            <div class="input__field">
-                                                <input class="input__item input__item_square h6" type="text" placeholder="29.10.1991" name="calc[date_of_birth]" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="calc__cell calc__cell_big">
-                                        <div class="calc__field input">
-                                            <div class="input__top">
-                                                <div class="input__label p">Место выдачи</div>
-                                            </div>
-                                            <div class="input__field">
-                                                <input class="input__item input__item_square h6" type="text" placeholder="г. Мытищи" name="calc[place_of_issue]" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="calc__label calc__label_big h6">Адрес регистрации</div>
-                                    <div class="calc__cell calc__cell_middle">
-                                        <div class="calc__field input">
-                                            <div class="input__top">
-                                                <div class="input__label p">Город</div>
-                                            </div>
-                                            <div class="input__field">
-                                                <input class="input__item input__item_square h6" type="text" placeholder="Москва" name="calc[city]" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="calc__cell calc__cell_middle">
-                                        <div class="calc__field input">
-                                            <div class="input__top">
-                                                <div class="input__label p">Улица</div>
-                                            </div>
-                                            <div class="input__field">
-                                                <input class="input__item input__item_square h6" type="text" placeholder="Тверская" name="calc[street]" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="calc__cell calc__cell_middle">
-                                        <div class="calc__field input">
-                                            <div class="input__top">
-                                                <div class="input__label p">Дом</div>
-                                            </div>
-                                            <div class="input__field">
-                                                <input class="input__item input__item_square h6" type="text" placeholder="6" name="calc[home]" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="calc__cell calc__cell_middle">
-                                        <div class="calc__field input">
-                                            <div class="input__top">
-                                                <div class="input__label p">Корпус</div>
-                                            </div>
-                                            <div class="input__field">
-                                                <input class="input__item input__item_square h6" type="text" placeholder="2" name="calc[housing]" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="calc__cell calc__cell_middle">
-                                        <div class="calc__field input">
-                                            <div class="input__top">
-                                                <div class="input__label p">Квартира</div>
-                                            </div>
-                                            <div class="input__field">
-                                                <input class="input__item input__item_square h6" type="text" placeholder="12" name="calc[apartament]" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="calc__cell calc__cell_middle">
-                                        <div class="calc__field input">
-                                            <div class="input__top">
-                                                <div class="input__label p">Домашний телефон</div>
-                                            </div>
-                                            <div class="input__field">
-                                                <input class="input__item input__item_square h6" type="text" placeholder="+7 495 955 55 55 " name="home_phone" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="calc__cell calc__cell_bigtop css-text-right">
-                                        <div class="calc__small small">Нажимая на&nbsp;кнопку «Продолжить», вы выражаете
-                                            <br>согласие <a class="a" href="#">на&nbsp;обработку ваших персональных данных</a>
-                                        </div>
-                                    </div>
-                                    <div class="calc__cell calc__cell_bigtop">
-                                        <button class="calc__button h6 btn js-goto" data-dir="next"><span class="btn__text">Продолжить</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="calc__slide js-slide">
-                                <div class="calc__bar status-bar status-bar_center">
-                                    <div class="status-bar__inner">
-                                        <div class="status-bar__line">
-                                            <div class="status-bar__content status-bar__content_back h6">Вероятность одобрения&nbsp;<span class="strong">52%</span>
-                                            </div>
-                                            <div class="status-bar__done">
-                                                <div class="status-bar__content status-bar__content_front h6">Вероятность одобрения&nbsp;<span class="strong">52%</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="status-bar__help h6">+26% за&nbsp;заполнение второго шага анкеты</div>
-                                </div>
-                                <div class="calc__row flex flex_vertical flex_justify">
-                                    <div class="calc__label h6">Кредиты в&nbsp;других банках</div>
-                                    <div class="calc__cell calc__cell_big">
-                                        <div class="calc__field input">
-                                            <div class="input__top">
-                                                <div class="input__label p">Есть ли кредиты в&nbsp;других банках</div>
-                                            </div>
-                                            <div class="input__parent select js-select">
-                                                <select class="select__field" name="calc[another_credit]">
-                                                    <option>Да</option>
-                                                    <option>Нет</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="calc__cell calc__cell_big">
-                                        <div class="calc__field input">
-                                            <div class="input__top">
-                                                <div class="input__label p">Есть ли исторические просрочки</div>
-                                            </div>
-                                            <div class="input__parent select js-select">
-                                                <select class="select__field" name="calc[history]">
-                                                    <option>Да</option>
-                                                    <option>Нет</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="calc__label calc__label_big h6">Отметьте есть ли у&nbsp;Вас собственность?</div>
-                                    <div class="calc__cell calc__cell_middle"></div>
-                                    <div class="calc__cell calc__cell_middle"></div>
-                                    <div class="calc__cell calc__cell_middle"></div>
-                                    <div class="calc__cell calc__cell_middle"></div>
                                 </div>
                             </div>
                         </div>
-                    </form>
+                        <div class="calc__slide js-slide">
+                            <div class="calc__top flex flex_vertical flex_justify">
+                                <div class="calc__title h4">Заполните анкету</div>
+                                <div class="calc__text h6 is-regular">Шаг <span class="is-curent-calc">2 </span>из&nbsp;<span class="is-total-calc">4</span>
+                                </div>
+                            </div>
+                            <div class="calc__bar status-bar status-bar_center">
+                                <div class="status-bar__inner">
+                                    <div class="status-bar__line">
+                                        <div class="status-bar__content status-bar__content_back h6">Вероятность одобрения&nbsp;<span class="strong">52%</span>
+                                        </div>
+                                        <div class="status-bar__done">
+                                            <div class="status-bar__content status-bar__content_front h6">Вероятность одобрения&nbsp;<span class="strong">52%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="status-bar__help h6">+26% за&nbsp;заполнение второго шага анкеты</div>
+                            </div>
+                            <div class="calc__row flex flex_vertical flex_justify">
+                                <div class="calc__label h6">Подробнее о&nbsp;Вас</div>
+                                <div class="calc__cell calc__cell_middle">
+                                    <div class="calc__field input">
+                                        <div class="input__top">
+                                            <div class="input__label p">Электронная почта</div>
+                                        </div>
+                                        <div class="input__field">
+                                            <input class="input__item input__item_square h6" type="text" placeholder="test@gmail.com" name="email" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__cell calc__cell_middle">
+                                    <div class="calc__field input">
+                                        <div class="input__top">
+                                            <div class="input__label p">Ваш пол</div>
+                                        </div>
+                                        <div class="input__parent select js-select">
+                                            <select class="select__field" name="calc[sex]">
+                                                <option>Мужской</option>
+                                                <option>Женский</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__cell calc__cell_middle">
+                                    <div class="calc__field input">
+                                        <div class="input__top">
+                                            <div class="input__label p">Ваш возраст</div>
+                                        </div>
+                                        <div class="input__parent select js-select">
+                                            <select class="select__field" name="calc[age]">
+                                                <option>10</option>
+                                                <option>20</option>
+                                                <option>30</option>
+                                                <option>40</option>
+                                                <option>50</option>
+                                                <option>60</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__cell calc__cell_middle">
+                                    <div class="calc__field input">
+                                        <div class="input__top">
+                                            <div class="input__label p">Получаете ли Вы пенсию?</div>
+                                        </div>
+                                        <div class="input__parent select js-select">
+                                            <select class="select__field" name="calc[pension]">
+                                                <option>Да</option>
+                                                <option>Нет</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__cell calc__cell_big">
+                                    <div class="calc__field input">
+                                        <div class="input__top">
+                                            <div class="input__label p">Семейное положение</div>
+                                        </div>
+                                        <div class="input__parent select js-select">
+                                            <select class="select__field" name="calc[family]">
+                                                <option>Женат / Замужем</option>
+                                                <option>Женат</option>
+                                                <option>Замужем</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__cell calc__cell_big">
+                                    <div class="calc__field input">
+                                        <div class="input__top">
+                                            <div class="input__label p">Образование</div>
+                                        </div>
+                                        <div class="input__parent select js-select">
+                                            <select class="select__field" name="calc[education]">
+                                                <option>Высшее</option>
+                                                <option>Среднее</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__label calc__label_big h6">Сведения о&nbsp;работе</div>
+                                <div class="calc__cell calc__cell_middle">
+                                    <div class="calc__field input">
+                                        <div class="input__top">
+                                            <div class="input__label p">Кем сейчас работаете?</div>
+                                        </div>
+                                        <div class="input__field">
+                                            <input class="input__item input__item_square h6" type="text" placeholder="Слесарь" name="calc[work]" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__cell calc__cell_middle">
+                                    <div class="calc__field input">
+                                        <div class="input__top">
+                                            <div class="input__label p">Название организации</div>
+                                        </div>
+                                        <div class="input__field">
+                                            <input class="input__item input__item_square h6" type="text" placeholder="ООО «Интроверт»" name="calc[organization]" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__cell">
+                                    <div class="calc__field input">
+                                        <div class="input__top">
+                                            <div class="input__label p">Размер заработной платы</div>
+                                        </div>
+                                        <div class="input__parent range-input">
+                                            <input class="range-input__input" type="text" autocomplete="off" name="calc[time]" placeholder="0 ₽" value="30000" />
+                                            <div class="range-input__char h6">₽</div>
+                                            <div class="range-input__bottom">
+                                                <div class="range-input__line"></div>
+                                                <div class="range-input__path" data-min="0" data-step="1000" data-max="1000000"></div>
+                                            </div>
+                                        </div>
+                                        <div class="input__info flex flex_vertical flex_justify">
+                                            <div class="input__label p">0</div>
+                                            <div class="input__label p">1 млн.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__cell">
+                                    <div class="calc__field input">
+                                        <div class="input__top">
+                                            <div class="input__label p">Есть дополнительный доход?</div>
+                                        </div>
+                                        <div class="input__parent range-input">
+                                            <input class="range-input__input" type="text" autocomplete="off" name="calc[time]" placeholder="0 ₽" value="30000" />
+                                            <div class="range-input__char h6">₽</div>
+                                            <div class="range-input__bottom">
+                                                <div class="range-input__line"></div>
+                                                <div class="range-input__path" data-min="0" data-step="1000" data-max="1000000"></div>
+                                            </div>
+                                        </div>
+                                        <div class="input__info flex flex_vertical flex_justify">
+                                            <div class="input__label p">0</div>
+                                            <div class="input__label p">1 млн.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__cell calc__cell_bigtop css-text-right">
+                                    <div class="calc__small small">Нажимая на&nbsp;кнопку «Продолжить», вы выражаете
+                                        <br>согласие <a class="a" href="#">на&nbsp;обработку ваших персональных данных</a>
+                                    </div>
+                                </div>
+                                <div class="calc__cell calc__cell_bigtop">
+                                    <button class="calc__button h6 btn js-goto" data-dir="next"><span class="btn__text">Продолжить</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calc__slide js-slide">
+                            <div class="calc__top flex flex_vertical flex_justify">
+                                <div class="calc__title h4">Заполните анкету</div>
+                                <div class="calc__text h6 is-regular">Шаг <span class="is-curent-calc">3 </span>из&nbsp;<span class="is-total-calc">4</span>
+                                </div>
+                            </div>
+                            <div class="calc__bar status-bar status-bar_center">
+                                <div class="status-bar__inner">
+                                    <div class="status-bar__line">
+                                        <div class="status-bar__content status-bar__content_back h6">Вероятность одобрения&nbsp;<span class="strong">52%</span>
+                                        </div>
+                                        <div class="status-bar__done">
+                                            <div class="status-bar__content status-bar__content_front h6">Вероятность одобрения&nbsp;<span class="strong">52%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="status-bar__help h6">+14% за&nbsp;заполнение третьего шага анкеты</div>
+                            </div>
+                            <div class="calc__row flex flex_vertical flex_justify">
+                                <div class="calc__label h6">Паспортные данные</div>
+                                <div class="calc__cell calc__cell_middle">
+                                    <div class="calc__field input">
+                                        <div class="input__top">
+                                            <div class="input__label p">Ваша фамилия</div>
+                                        </div>
+                                        <div class="input__field">
+                                            <input class="input__item input__item_square h6" type="text" placeholder="Иванов" name="calc[last_name]" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__cell calc__cell_middle">
+                                    <div class="calc__field input">
+                                        <div class="input__top">
+                                            <div class="input__label p">Ваше имя</div>
+                                        </div>
+                                        <div class="input__field">
+                                            <input class="input__item input__item_square h6" type="text" placeholder="Иван" name="calc[first_name]" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__cell calc__cell_middle">
+                                    <div class="calc__field input">
+                                        <div class="input__top">
+                                            <div class="input__label p">Серия и&nbsp;номер паспорта</div>
+                                        </div>
+                                        <div class="input__field">
+                                            <input class="input__item input__item_square h6" type="text" placeholder="4611 513480" name="calc[passport]" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__cell calc__cell_middle">
+                                    <div class="calc__field input">
+                                        <div class="input__top">
+                                            <div class="input__label p">Дата выдачи</div>
+                                        </div>
+                                        <div class="input__field">
+                                            <input class="input__item input__item_square h6" type="text" placeholder="15.08.2011" name="calc[date_of_issue]" />
+                                            <div class="input__icon">
+                                                <svg class="icon icon-calendar" viewBox="0 0 24 24">
+                                                    <use xlink:href="/app/icons/sprite.svg#calendar"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__cell calc__cell_middle">
+                                    <div class="calc__field input">
+                                        <div class="input__top">
+                                            <div class="input__label p">Код подразделения</div>
+                                        </div>
+                                        <div class="input__field">
+                                            <input class="input__item input__item_square h6" type="text" placeholder="500-175" name="calc[unit_code]" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__cell calc__cell_middle">
+                                    <div class="calc__field input">
+                                        <div class="input__top">
+                                            <div class="input__label p">Кем выдан</div>
+                                        </div>
+                                        <div class="input__field">
+                                            <input class="input__item input__item_square h6" type="text" placeholder="ТП№5 Межрайоного ОУФМС России по&nbsp;МО..." name="calc[issued_by]" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__cell calc__cell_big">
+                                    <div class="calc__field input">
+                                        <div class="input__top">
+                                            <div class="input__label p">Дата рождения</div>
+                                        </div>
+                                        <div class="input__field">
+                                            <input class="input__item input__item_square h6" type="text" placeholder="29.10.1991" name="calc[date_of_birth]" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__cell calc__cell_big">
+                                    <div class="calc__field input">
+                                        <div class="input__top">
+                                            <div class="input__label p">Место выдачи</div>
+                                        </div>
+                                        <div class="input__field">
+                                            <input class="input__item input__item_square h6" type="text" placeholder="г. Мытищи" name="calc[place_of_issue]" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__label calc__label_big h6">Адрес регистрации</div>
+                                <div class="calc__cell calc__cell_middle">
+                                    <div class="calc__field input">
+                                        <div class="input__top">
+                                            <div class="input__label p">Город</div>
+                                        </div>
+                                        <div class="input__field">
+                                            <input class="input__item input__item_square h6" type="text" placeholder="Москва" name="calc[city]" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__cell calc__cell_middle">
+                                    <div class="calc__field input">
+                                        <div class="input__top">
+                                            <div class="input__label p">Улица</div>
+                                        </div>
+                                        <div class="input__field">
+                                            <input class="input__item input__item_square h6" type="text" placeholder="Тверская" name="calc[street]" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__cell calc__cell_middle">
+                                    <div class="calc__field input">
+                                        <div class="input__top">
+                                            <div class="input__label p">Дом</div>
+                                        </div>
+                                        <div class="input__field">
+                                            <input class="input__item input__item_square h6" type="text" placeholder="6" name="calc[home]" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__cell calc__cell_middle">
+                                    <div class="calc__field input">
+                                        <div class="input__top">
+                                            <div class="input__label p">Корпус</div>
+                                        </div>
+                                        <div class="input__field">
+                                            <input class="input__item input__item_square h6" type="text" placeholder="2" name="calc[housing]" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__cell calc__cell_middle">
+                                    <div class="calc__field input">
+                                        <div class="input__top">
+                                            <div class="input__label p">Квартира</div>
+                                        </div>
+                                        <div class="input__field">
+                                            <input class="input__item input__item_square h6" type="text" placeholder="12" name="calc[apartament]" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__cell calc__cell_middle">
+                                    <div class="calc__field input">
+                                        <div class="input__top">
+                                            <div class="input__label p">Домашний телефон</div>
+                                        </div>
+                                        <div class="input__field">
+                                            <input class="input__item input__item_square h6" type="text" placeholder="+7 495 955 55 55 " name="home_phone" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__cell calc__cell_bigtop css-text-right">
+                                    <div class="calc__small small">Нажимая на&nbsp;кнопку «Продолжить», вы выражаете
+                                        <br>согласие <a class="a" href="#">на&nbsp;обработку ваших персональных данных</a>
+                                    </div>
+                                </div>
+                                <div class="calc__cell calc__cell_bigtop">
+                                    <button class="calc__button h6 btn js-goto" data-dir="next"><span class="btn__text">Продолжить</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calc__slide js-slide">
+                            <div class="calc__top flex flex_vertical flex_justify">
+                                <div class="calc__title h4">Заполните анкету</div>
+                                <div class="calc__text h6 is-regular">Шаг <span class="is-curent-calc">4 </span>из&nbsp;<span class="is-total-calc">4</span>
+                                </div>
+                            </div>
+                            <div class="calc__bar status-bar status-bar_center">
+                                <div class="status-bar__inner">
+                                    <div class="status-bar__line">
+                                        <div class="status-bar__content status-bar__content_back h6">Вероятность одобрения&nbsp;<span class="strong">52%</span>
+                                        </div>
+                                        <div class="status-bar__done">
+                                            <div class="status-bar__content status-bar__content_front h6">Вероятность одобрения&nbsp;<span class="strong">52%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="status-bar__help h6">+26% за&nbsp;заполнение второго шага анкеты</div>
+                            </div>
+                            <div class="calc__row flex flex_vertical flex_justify">
+                                <div class="calc__label h6">Кредиты в&nbsp;других банках</div>
+                                <div class="calc__cell calc__cell_big">
+                                    <div class="calc__field input">
+                                        <div class="input__top">
+                                            <div class="input__label p">Есть ли кредиты в&nbsp;других банках</div>
+                                        </div>
+                                        <div class="input__parent select js-select">
+                                            <select class="select__field" name="calc[another_credit]">
+                                                <option>Да</option>
+                                                <option>Нет</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__cell calc__cell_big">
+                                    <div class="calc__field input">
+                                        <div class="input__top">
+                                            <div class="input__label p">Есть ли исторические просрочки</div>
+                                        </div>
+                                        <div class="input__parent select js-select">
+                                            <select class="select__field" name="calc[history]">
+                                                <option>Да</option>
+                                                <option>Нет</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc__label calc__label_big h6">Отметьте есть ли у&nbsp;Вас собственность?</div>
+                                <div class="calc__cell calc__cell_middle"></div>
+                                <div class="calc__cell calc__cell_middle"></div>
+                                <div class="calc__cell calc__cell_middle"></div>
+                                <div class="calc__cell calc__cell_middle"></div>
+                            </div>
+                        </div>
+                </div>
+                </form>
                 </div>
             </section>
             <section class="faq">
@@ -2126,7 +2199,7 @@
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/app.js?v=1586278320471"></script>
+    <script src="/app/js/app.js?v=1586970641437"></script>
 </body>
 
 </html>

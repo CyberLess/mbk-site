@@ -4,6 +4,16 @@
 
 
 	&__field{
+		position: relative;
+
+		&.is-error{
+			.input{
+				&__item{
+					border-color: $red;
+				}
+			}
+		}
+
 		&_border{
 			&:before{
 				content: '';
@@ -28,16 +38,51 @@
 		border-bottom: 1px solid #B3B3B3;
 		font-weight: 500;
 		font-family: Geometria;
+		transition: ease .15s;
 		width: 100%;	
+
+		@include placeholder {
+			color: #B3B3B3;
+		}
 
 		&_square{
 			height: 6.6rem;
 			padding: 0 2.7rem;
+		    padding-right: 6rem;
 			border: 1px solid rgba(#000000, .2);
 		}
 
-		@include placeholder {
-			color: #B3B3B3;
+		&_dark{
+			text-align: center;
+			letter-spacing: 0.815em;
+
+			
+			&::placeholder {
+				color: $dark;
+			}	
+		}
+
+	}
+
+	&__icon{
+		position: absolute;
+		display: flex;
+		align-items: center;
+		top: 0;
+		height: 100%;
+		right: 0;
+		width: 2.4rem;
+		margin-right: 2.4rem;
+		pointer-events: none;
+		fill: transparent;
+
+		&_fill{
+			fill: #B3B3B3;
+		}
+
+		&_stroke{
+			stroke: #B3B3B3;
+			stroke-width: 2;
 		}
 	}
 
@@ -84,14 +129,25 @@
 		}
 	}
 
+	@include max-screen($small_tablet) {
+		&__item{
+			height: 50px;
+		}
+	}
+
 	@include max-screen($large_mobile) {
 		&__top{
 			margin-bottom: 1.6rem;
+
+			.input__label{
+				color: #0E0E0E;
+			}
 		}
 		&__info{
 			margin-top: 1.1rem;
 		}
 		&__label{
+			
 			font-size: 1.2rem;
 		}
 

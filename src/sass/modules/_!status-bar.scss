@@ -64,4 +64,17 @@
 		z-index: 15;
 		overflow: hidden;
 	}
+
+	@include max-screen($large_mobile) {
+		&__line{
+			height: 5rem;
+		}
+		&__help{
+			margin-top: .7rem;
+			text-align: center;
+		}
+		&__content{
+		    padding: 1rem 2.9rem;
+		}
+	}
 }
