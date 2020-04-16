@@ -1,10 +1,6 @@
 .difficult-case{
   padding-top: 11.5rem;
 
-  &__wrap{
-    padding: 0 1.1rem;
-  }
-
   &__title{
     margin-bottom: 10.9rem;
   }
@@ -14,8 +10,6 @@
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 0;
-    margin-right: 3.9rem;
-    margin-left: 0.3rem;
     padding: 0;
     list-style: none;
   }
@@ -43,6 +37,7 @@
     background: #F3F3F3;
 
     &:after{
+      box-sizing: border-box;
       border-color: #F3F3F3;
     }
   }
@@ -53,6 +48,10 @@
 
   &__link:hover &__container-icon{
     border-color: #F3F3F3;
+  }
+
+  &__link:hover &__arrow{
+    width: 1.8rem;
   }
 
   &__container-icon{
@@ -120,7 +119,7 @@
 
   &__customer-row{
     display: block;
-    margin-bottom: 1.7rem;
+    margin-bottom: 1.8rem;
   }
 
   &__customer-photo{
@@ -138,6 +137,7 @@
   }
 
   &__review{
+    max-width: 21rem;
     margin-bottom: 4.3rem;
     font-weight: normal;
     font-size: 18px;
@@ -153,10 +153,6 @@
     font-size: 18px;
     line-height: 140%;
     color: #FF0400;
-  }
-
-  &__more-details:hover &__arrow{
-    width: 1.8rem;
   }
 
   &__arrow{
