@@ -14,9 +14,6 @@
 }
 
 .sell-apartment {
-  position: relative;
-  z-index: 1000;
-
   padding-top: 4.5rem;
   padding-bottom: 9rem;
 
@@ -26,6 +23,10 @@
   background-position: right top;
 
   -webkit-tap-highlight-color: transparent;
+
+  @include max-screen($small_tablet) {
+    position: relative;
+  }
 }
 
 .sell-apartment__breadcrumbs {

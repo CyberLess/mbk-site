@@ -2,6 +2,9 @@ $(() => {
   const ESC_KEYCODE = 27;
   const ANIMATION_OPEN_TIME = 500;
   const ANIMATION_CLOSE_TIME = 300;
+  const TAB_MIN = 768;
+  const MAX_LENGTH_ROOMS_MOB = 4;
+  const TEMP_ROOMS = 2;
 
   const $body = $('body');
   const $overlay = $('.sell-apartment__overlay');
@@ -11,6 +14,7 @@ $(() => {
   const $firstPopup = $('.sell-popup');
   const $secondPopup = $('.sell-order-popup');
   const $closeSecondBtn = $('.sell-order-popup__close');
+  const $roomsDesignation = $('.customer-data-table__rooms-designation');
   let isFirstOpened = false;
 
   const removeCloseFirstListeners = () => {
@@ -49,7 +53,7 @@ $(() => {
 
   const openFirstPopup = () => {
     isFirstOpened = true;
-    const bodyOldWidth = $body.width();
+    // const bodyOldWidth = $body.width();
 
     $firstPopup.css('display', 'block')
       .animate({
@@ -65,10 +69,10 @@ $(() => {
 
     $overlay.fadeIn(ANIMATION_OPEN_TIME).css('z-index', '601');
     $body.css({
-      position: 'absolute',
-      width: bodyOldWidth,
-      left: 0,
-      top: 0,
+      // position: 'absolute',
+      // width: bodyOldWidth,
+      // left: 0,
+      // top: 0,
       overflowY: 'hidden'
     });
   };
@@ -90,8 +94,32 @@ $(() => {
     isFirstOpened = false;
   };
 
+  const determineEnding = (num) => {
+    switch (true) {
+      case num === 1:
+        return 'комната';
+      case num >= 2 && num <= 4:
+        return 'комнаты';
+      default:
+        return 'комнат';
+    }
+  };
+
+  const cropRoomDesignation = (num) => {
+    const roomsEnding = determineEnding(num);
+    $roomsDesignation.text(`${roomsEnding.substr(0, MAX_LENGTH_ROOMS_MOB)}.`);
+  };
+
   $sellForm.on('submit', () => {
       openFirstPopup();
+
+    if (screen.width <= TAB_MIN) {
+      if ($roomsDesignation.first().text().length > MAX_LENGTH_ROOMS_MOB) {
+        cropRoomDesignation(TEMP_ROOMS);
+      }
+    } else {
+      $roomsDesignation.text(determineEnding(TEMP_ROOMS));
+    }
   });
 
   $contactBuyerBtn.magnificPopup({

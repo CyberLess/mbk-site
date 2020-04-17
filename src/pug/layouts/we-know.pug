@@ -2,31 +2,31 @@
     +e.wrap.wrap
         +e.text-wrap
             +e.title.h2.H2
-                | Мы знаем, как найти
-                br
+                | Мы знаем, как найти&nbsp;
+                +e.br.BR
                 | ещё больше покупателей
 
             +e.actions.know-actions__.UL
                 +e.item._create-ad.LI
                     +e.action.B
-                        | Создаем
-                        br
+                        | Создаем&nbsp;
+                        +e.br.BR
                         | продающее объявление
                         +e.icon-wrap
                             +icon('we-know-pencil', '0 0 31 31')
                     +e.description.SPAN Используем технологии копирайтинга, от которых клиент начнет облизываться
                 +e.item._preparation.LI
                     +e.action.B
-                        |Делаем
-                        br
+                        |Делаем&nbsp;
+                        +e.br.BR
                         |предпродажную подготовку
                         +e.icon-wrap
                             +icon('we-know-camera', '0 0 34 34')
                     +e.description.SPAN Профессионально отфотографируем Вашу квартиру в нужных ракурсах
                 +e.item._learns-lot.LI
                     +e.action.B
-                        |О Вашей квартире
-                        br
+                        |О Вашей квартире&nbsp;
+                        +e.br.BR
                         |узнают в 10 раз больше людей
                         +e.icon-wrap
                             +icon('we-know-bell', '0 0 34 34')
@@ -35,5 +35,9 @@
         +e.image-wrapper
             +e.IMG.img(src="/img/we-know-woman.png")
             +e.inscription
-                +e.specialist-name.B Юлия Верховцева
+                +e.specialist-name.A(href="#") Юлия Верховцева
+                    +e.icon-specialist.arrow
+                        +e.SVG(viewBox="0 0 18.560659 9.6213207")
+                            path(class="triangle" d='M14.5 4.81v-3l3 3-3 3z')
+                            path(class="stroke" d='M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z')
                 +e.specialist-status.SPAN Главный специалист по продаже недвижимости
