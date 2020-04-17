@@ -3,6 +3,23 @@
 	padding-bottom: 11.2rem;
 	color: #fff;
 
+	&__title {
+		@include max-screen($small_tablet) {
+			width: 84%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 4.5rem;
+
+			font-size: 2.5rem;
+			text-align: center;
+			font-weight: 500;
+		}
+
+		br {
+			display: none;
+		}
+	}
+
 	&__slider{
 		margin-top: -2.2rem;
 	}
@@ -10,12 +27,21 @@
 		min-height: 845px;
 		padding-top: 11.7rem;
 		padding-bottom: 2rem;
+
+		@include max-screen($small_tablet) {
+			padding-top: 4.5rem;
+		}
+
 		& .conditions__slider{
 			min-height: 620px;
 		}
 		& .gallery-slider__cell_slider {
 			margin-top: 10.0rem;
 			margin-bottom: 10.0rem;
+
+			@include max-screen($small_tablet) {
+				display: none;
+			}
 		}
 		& .gallery-slider__cell_info {
 			width: 20.6%;
@@ -27,6 +53,50 @@
 			position: absolute;
 			margin: 0;
 			top: 13.7rem;
+
+			@include min-screen($small_tablet +1) {
+				min-width: 235px;
+			}
+
+			@include max-screen($small_tablet) {
+				position: static;
+
+				width: 100%;
+				padding-top: 0;
+				padding-bottom: 0;
+
+				background-color: transparent;
+
+				.gallery-slider__item {
+					padding-left: 0;
+					padding-bottom: 1.1rem;
+
+					&:not(:first-of-type) {
+						padding-top: 1.1rem;
+						border-top: 1px solid #c4c4c4;
+					}
+
+					.link {
+						width: 100%;
+						color: #ffffff;
+
+						&__arrow {
+							width: 1.8rem;
+
+							opacity: 1;
+							fill: #ffffff;
+
+							.triangle {
+								stroke: #ffffff;
+							}
+
+							.stroke {
+								fill: #ffffff;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
