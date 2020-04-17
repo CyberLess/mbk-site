@@ -3,6 +3,10 @@
         +e.container-data
             +e.title.h3
                 | Получите индивидуальную модель продаж Вашей квартиры
+            +e.container-img
+                +e.IMG.img(src="/img/book.png")
+                +e.P.region
+                    | Принимаем заявки из Москвы и Московской обл.
             +e.FORM.form.form__(action="/")
                 +e.INPUT(type="hidden" name="method[subscribe]" value='1')
                 +e.name.input__._normal
@@ -16,10 +20,8 @@
                     +e.SPAN.text
                         +e.check
                             +icon('check', '0 0 9 7')
-                        | Я согласен с условиями
-                        <br>
-                        | передачи данных
-        +e.container-img
+                        | Я согласен с условиями передачи данных
+        //+e.container-img
             +e.IMG.img(src="/img/journal.png")
             +e.P.region
                 | Принимаем заявки из Москвы и Московской обл.

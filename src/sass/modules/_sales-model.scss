@@ -1,15 +1,30 @@
 .sales-model{
   position: relative;
   padding-top: 2.1rem;
-  padding-bottom: 19.1rem;
+  padding-bottom: 20.9rem;
 
   &__container-data{
     max-width: 44.6rem;
     padding-top: 16.6rem;
+
+    @include max-screen($large_tablet){
+      max-width: 100%;
+      padding-top: 3rem;
+    }
   }
 
   &__title{
     margin-bottom: 6.2rem;
+
+    @include max-screen($large_tablet){
+      margin-bottom: 0;
+      text-align: center;
+      line-height: 110%;
+    }
+
+    @include max-screen($small_mobile) {
+      margin-bottom: 3.3rem;
+    }
   }
 
   &__submit{
@@ -17,35 +32,107 @@
     margin-bottom: 3.1rem;
     font-size: 1.8rem;
 
+    @include max-screen($large_tablet){
+      margin-top: 1.4rem;
+      margin-bottom: 1rem;
+      padding: 0 3rem;
+      font-size: 1.4rem;
+    }
+
   }
 
   &__container-img{
     position: absolute;
-    top: 0.5rem;
-    right: -3.5rem;
+    top: -0.9rem;
+    right: -5.4rem;
+    z-index: -1;
+
+    @include max-screen($large_desktop){
+      width: 110rem;
+    }
+
+    @include max-screen($large_tablet){
+      position: relative;
+      top: 0;
+      right: 0;
+      padding-bottom: 70px;
+    }
+
+    @include max-screen($large_tablet){
+      width: auto;
+      padding-bottom: 110px;
+    }
 
     &::before{
       content: '';
       display: block;
       position: absolute;
-      top: 23.8rem;
-      right: 14.9rem;
+      top: 24.9rem;
+      right: 16.5rem;
       width: 64.3rem;
       height: 64.3rem;
       z-index: -1;
       background: #FFFFFF;
       border-radius: 50%;
+
+      @include max-screen($large_tablet){
+        top: 10rem;
+        left: 21rem;
+        width: 75rem;
+        height: 75rem;
+        background: #F3F3F3;
+      }
+
+      @include max-screen($small_tablet){
+        right: 0;
+        left: -1.5rem;
+        top: 2.1rem;
+        width: 32rem;
+        height: 32rem;
+        background: #F3F3F3;
+      }
     }
   }
 
   &__region{
     position: absolute;
-    bottom: 2rem;
-    right: 37.2rem;
+    bottom: 3.9rem;
+    right: 39rem;
     width: 25.3rem;
     padding-left: 8.7rem;
     font-size: 1.8rem;
     line-height: 2.5rem;
-    background: url("/img/kremlin.png") no-repeat 0rem 0.4rem;
+    background-image: url("/img/kremlin.png");
+    background-repeat: no-repeat;
+    background-position: 0 0.4rem;
+
+    @include max-screen($large_tablet){
+      position: static;
+      width: 19.8rem;
+      margin: -10rem auto 0;
+      padding-left: 6.9rem;
+      font-size: 1.4rem;
+      line-height: 140%;
+      background-size: 5rem;
+    }
+
+    @include max-screen($small_mobile){
+      margin: -0.5rem auto 0;
+    }
+  }
+
+  @include max-screen($small_mobile){
+    padding-bottom: 4.7rem;
+    background: #FFFFFF;
+
+    &__form{
+      width: 230px;
+      //width: 530px;
+      margin: 0 auto;
+    }
+
+    &__form .access{
+      text-align: center;
+    }
   }
 }

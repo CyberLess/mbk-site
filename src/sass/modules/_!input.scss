@@ -85,5 +85,18 @@
 			}
 
 		}
+
+		&_normal{
+			margin-bottom: 3.1rem;
+			.input{
+				&__item{
+					height: 3.8rem;
+
+					font-weight: bold;
+					font-size: 1.9rem;
+				}
+			}
+
+		}
 	}
 }
