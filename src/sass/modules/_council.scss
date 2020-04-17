@@ -1,87 +1,170 @@
-.council{
+.council {
 	background: #FFFFFF;
 	padding-top: 12rem;
 	padding-bottom: 12rem;
 
-	&__button{
+	&__button {
 		margin-bottom: 5.3rem;
 	}
 
-	&__head{
+	&__head {
 		color: #fff;
 		position: relative;
 
-
-		&-inner{
-			padding-left: 10.9rem;
-			padding-right: 10.9rem;
-			padding-top: 11.2rem;
-			padding-bottom: 6.8rem;
-
+		&-inner {
+			padding: 11.2rem 10.9rem 6.8rem;
 			display: flex;
 			align-items: flex-start;
 			justify-content: space-between;
 			flex-direction: column;
-			min-height: 62.5rem;			
+			min-height: 62.5rem;
+		}
+		@include max-screen($small_desktop) {
+			& img {
+				//object-fit: contain;
+				height: auto;
+			}
+
+			&-inner {
+				min-height: 55rem;
+			}
+		}
+		@include max-screen($large_tablet) {
+			&-inner {
+				min-height: 50rem;
+			}
+		}
+		@include max-screen($small_tablet) {
+			&-inner {
+				padding-top: 1.5rem;
+				padding-left: 3rem;
+				padding-right: 1rem;
+				min-height: 22.5rem;
+				padding-bottom: 2.5rem;
+			}
 		}
 	}
 
-	&__title{
+	&__title {
 		z-index: 15;
 		position: relative;
-
+		@include max-screen($small_tablet) {
+			font-size: 19px;
+			line-height: 110%;
+			width: 50%;
+		}
 	}
 
-	&__avatar{
+	&__avatar {
 		padding-top: 100%;
 		border-radius: 50%;
 		position: relative;
 		overflow: hidden;
 	}
 
-	&__content{
+	&__content {
 		margin-bottom: 4.8rem;
+
+		& p {
+			@include max-screen($small_tablet) {
+				font-size: 12px;
+				line-height: 140%;
+			}
+		}
+		& ul {
+		& li {
+			@include max-screen($small_tablet) {
+				font-size: 12px;
+				line-height: 140%;
+				padding-left: 2rem;
+				padding-right: 1rem;
+				&::before {
+					width: 5px;
+					height: 5px;
+					border: none;
+					background: #FF0400;
+					left: 3px;
+					top: 4px;
+				}
+			}
+		}
+	}
 	}
 
-	&__cell{
+	&__cell {
 		margin-top: 6.2rem;
-
-		&_left{
-			width: 806/1336*100%;
-			
-			padding-left: 10.9rem;
+		@include max-screen($small_tablet) {
+			margin-top: 0;
 		}
 
-		&_right{
+		&_left {
+			width: 806/1336*100%;
+			padding-left: 10.9rem;
+			@include max-screen($small_tablet) {
+				width: 100%;
+				padding-left: 3rem;
+				padding-right: 3rem;
+			}
+		}
+
+		&_right {
 			width: 289/1336*100%;
+			@include max-screen($small_tablet) {
+				width: 100%;
+			}
 		}
 	}
 
-	&__author{
+	&__author {
 		z-index: 15;
 		position: relative;
 		background: #FFFFFF;
 		border-radius: 5px;
-		padding: 3.1rem 5.5rem;
-		padding-right: 4rem;
+		padding: 3.1rem 4rem 3.1rem 5.5rem;
 		max-width: 100%;
 		width: 49.5rem;
 		color: #0E0E0E;
-
-		&-text{
-			margin-top: .3rem;
-			line-height: 140%;
+		@include max-screen($small-tablet) {
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+			background: transparent;
 		}
 
-		&-cell{
-			&_avatar{
+		&-text {
+			margin-top: 0.3rem;
+			line-height: 140%;
+			@include max-screen($small-tablet) {
+				font-size: 10px;
+				line-height: 140%;
+			}
+		}
+
+		&-cell {
+			&_avatar {
 				width: 71/345*100%;
 				margin-right: 27/345*100%;
+				@include max-screen($small_tablet) {
+					width: 37/250*100%;
+				}
 			}
 
-			&_content{
+			&_content {
 				width: 247/345*100%;
 			}
+		}
+	}
+
+	&__link {
+		@include max-screen($small-tablet) {
+			font-size: 10px;
+			line-height: 140%;
+		}
+	}
+
+	&__row {
+		@include max-screen($small-tablet) {
+			flex-direction: column;
 		}
 	}
 }
