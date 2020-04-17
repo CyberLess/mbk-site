@@ -1,0 +1,33 @@
+.comments {
+	background-color: rgb(255, 255, 255);
+	padding-bottom: 6.5rem;
+
+	&__wrap {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	&__cell {
+		&_left {
+			width: 57.5%;
+		}
+		&_right {
+			width: 20.6429%;
+	}
+	}
+
+	&__head {
+		padding-bottom: 3.9rem;
+		padding-left: 10.9rem;
+		border-bottom: 1px solid rgb(224, 224, 224);
+	}
+
+	&__list {
+		padding-left: 10.9rem;
+	}
+
+	&__count {
+		margin-left: 2rem;
+		color: rgb(191, 191, 191);
+	}
+}

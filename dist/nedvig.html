@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Недвижка</title>
-    <link rel="stylesheet" href="/app/css/app.css?v=1587112746535">
+    <link rel="stylesheet" href="/app/css/app.css?v=1587144129652">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
@@ -1022,6 +1022,13 @@
             <div class="sales-model__wrap wrap">
                 <div class="sales-model__container-data">
                     <div class="sales-model__title h3">Получите индивидуальную модель продаж Вашей квартиры</div>
+                    <div class="sales-model__container-img">
+                        <picture>
+                            <source type="image/webp" srcset="/app/img/book.webp">
+                                <img src="/app/img/book.png" class="sales-model__img" alt="" role="presentation" />
+                        </picture>
+                        <p class="sales-model__region">Принимаем заявки из&nbsp;Москвы и&nbsp;Московской обл.</p>
+                    </div>
                     <form class="sales-model__form form" action="/">
                         <input type="hidden" name="method[subscribe]" value="1" />
                         <div class="form__name input input_normal">
@@ -1034,18 +1041,13 @@
                             <div class="form__text">Получи модель продаж</div>
                         </button>
                         <label class="form__access access checkbox">
-                            <input class="checkbox__input" type="checkbox" name="access" checked="" /><span class="checkbox__text"><span class="checkbox__check"><svg class="icon icon-check" viewBox="0 0 9 7"><use xlink:href="/app/icons/sprite.svg#check"></use></svg></span>Я согласен с&nbsp;условиями
-                            <br>передачи данных</span>
+                            <input class="checkbox__input" type="checkbox" name="access" checked="" /><span class="checkbox__text"><span class="checkbox__check"><svg class="icon icon-check" viewBox="0 0 9 7"><use xlink:href="/app/icons/sprite.svg#check"></use></svg></span>Я согласен с&nbsp;условиями передачи данных</span>
                         </label>
                     </form>
                 </div>
-                <div class="sales-model__container-img">
-                    <picture>
-                        <source type="image/webp" srcset="/app/img/journal.webp">
-                            <img src="/app/img/journal.png" class="sales-model__img" alt="" role="presentation" />
-                    </picture>
-                    <p class="sales-model__region">Принимаем заявки из&nbsp;Москвы и&nbsp;Московской обл.</p>
-                </div>
+                <!--+e.container-img+e.IMG.img(src="/img/journal.png")
++e.P.region
+    | Принимаем заявки из&nbsp;Москвы и&nbsp;Московской обл.-->
             </div>
         </section>
         <section class="group white">
@@ -1461,7 +1463,7 @@
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/app.js?v=1587112746724"></script>
+    <script src="/app/js/app.js?v=1587144129704"></script>
 </body>
 
 </html>

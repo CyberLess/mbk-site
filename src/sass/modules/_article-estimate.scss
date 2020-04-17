@@ -1,0 +1,64 @@
+.article-estimate {
+  color: rgb(255, 255, 255);
+  background-color: rgb(79, 79, 79);
+  padding: 5.5rem 5rem;
+
+  &__title {
+    margin-bottom: 0.8rem;
+    line-height: 126.5%;
+  }
+
+  &__subtitle {
+    margin-bottom: 2.6rem;
+    line-height: 140%;
+  }
+
+  &__rating-area {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 16.5rem;
+    margin-bottom: 1.8rem;
+    overflow: hidden;
+  }
+
+  &__rating-area:not(:checked) > input {
+    display: none;
+  }
+
+  &__rating-area:not(:checked) > label,
+  &__rating-area:not(:checked) > label {
+    background-image: url("/img/star-null.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &__rating-area:not(:checked) > label {
+    flex-shrink: 0;
+    width: 2.1rem;
+    height: 1.9rem;
+    margin-right: 1.2rem;
+    margin-bottom: 0px;
+    cursor: pointer;
+    padding: 0px;
+  }
+
+  &__rating-area > input:checked ~ label {
+    background-image: url("/img/star-full.svg");
+  }
+  
+  &__rating-area:not(:checked) > label:hover,
+  &__rating-area:not(:checked) > label:hover ~ label {
+    background-image: url("/img/star-full.svg");
+  }
+  
+  &__rating-area > input:checked + label:hover,
+  &__rating-area > input:checked + label:hover ~ label,
+  &__rating-area > input:checked ~ label:hover,
+  &__rating-area > input:checked ~ label:hover ~ label,
+  &__rating-area > label:hover ~ input:checked ~ label {
+  
+    background-image: url("/img/star-full.svg");
+  }
+  
+}

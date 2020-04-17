@@ -292,6 +292,11 @@
 			width: 480/1336*100%;
 		}
 
+		&_white {
+			background: rgb(255, 255, 255);
+			border-radius: 5px;
+		}
+
 		@include max-screen($small_tablet) {
 			width: 100%;
 			background-color: #fff;
@@ -306,5 +311,10 @@
 				// display: none;
 			}
 		}
+	}
+
+	&_padding {
+		padding-top: 12rem;
+		padding-bottom: 12rem;
 	}
 }
