@@ -33,12 +33,16 @@
     font-size: 1.8rem;
 
     @include max-screen($large_tablet){
-      margin-top: 1.4rem;
+      display: block;
+      margin: 0 auto;
+      margin-top: 4.4rem;
       margin-bottom: 1rem;
       padding: 0 3rem;
-      font-size: 1.4rem;
     }
 
+    @include max-screen($large_mobile){
+      font-size: 1.4rem;
+    }
   }
 
   &__container-img{
@@ -56,10 +60,10 @@
       top: 0;
       right: 0;
       padding-bottom: 70px;
+      width: auto;
     }
 
-    @include max-screen($large_tablet){
-      width: auto;
+    @include max-screen($large_mobile){
       padding-bottom: 110px;
     }
 
@@ -76,20 +80,36 @@
       border-radius: 50%;
 
       @include max-screen($large_tablet){
+        $size: calc(32rem + 40vw);
         top: 10rem;
-        left: 21rem;
-        width: 75rem;
-        height: 75rem;
+        right: 0;
+        left: calc(50% - #{$size} / 2);
+        width: $size;
+        height: $size;
         background: #F3F3F3;
       }
 
       @include max-screen($small_tablet){
-        right: 0;
-        left: -1.5rem;
+        $size: calc(32rem + 30vw);
+        left: calc(50% - #{$size} / 2);
+        //top: 2.1rem;
+        width: $size;
+        height: $size;
+      }
+
+      @include max-screen($large_mobile){
+        $size: calc(32rem + 15vw);
+        left: calc(50% - #{$size} / 2);
+        width: $size;
+        height: $size;
+      }
+
+      @include max-screen($small_mobile){
+        $size: 32rem;
         top: 2.1rem;
-        width: 32rem;
-        height: 32rem;
-        background: #F3F3F3;
+        left: calc(50% - #{$size} / 2);
+        width: $size;
+        height: $size;
       }
     }
   }
@@ -108,31 +128,43 @@
 
     @include max-screen($large_tablet){
       position: static;
-      width: 19.8rem;
-      margin: -10rem auto 0;
+      margin: -5% auto 0;
       padding-left: 6.9rem;
-      font-size: 1.4rem;
-      line-height: 140%;
       background-size: 5rem;
     }
 
+    @include max-screen($small_tablet){
+      width: 19.8rem;
+      font-size: 1.4rem;
+      line-height: 140%;
+    }
+
+    @include max-screen($large_mobile){
+      margin: -2.5% auto 0;
+    }
+
     @include max-screen($small_mobile){
-      margin: -0.5rem auto 0;
+      margin: -1% auto 0;
     }
   }
 
-  @include max-screen($small_mobile){
-    padding-bottom: 4.7rem;
-    background: #FFFFFF;
+  &__form{
 
-    &__form{
+    @include max-screen($small_mobile){
       width: 230px;
-      //width: 530px;
       margin: 0 auto;
     }
+  }
 
-    &__form .access{
-      text-align: center;
+  &__form .access{
+    @include max-screen($large_tablet) {
+      display: flex;
+      justify-content: center;
     }
+  }
+
+  @include max-screen($large_tablet){
+    padding-bottom: 4.7rem;
+    background: #FFFFFF;
   }
 }
