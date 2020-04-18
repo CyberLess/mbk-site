@@ -1,10 +1,8 @@
 +b.SECTION.difficult-case
     +e.wrap.wrap
         +e.title.h3
-            | Как продать квартиру,
-            <br>
-            | если у Вас сложный случай?
-        +e.UL.case-list
+            | Как продать квартиру, <br> если у Вас сложный случай?
+        +e.UL.case-list.js-to-slider(data-dots="1")
             +e.LI.item
                 +e.A.link(href="#")
                     +e.DIV.container-icon
@@ -16,9 +14,11 @@
                     +e.P.case-title
                         | Под обременением
                     +e.DIV.customer-row
-                        +e.IMG.customer-photo(src="/img/difficult-customer_1.jpg")
+                        +e.container-photo
+                            +e.container-photo
+                                +e.IMG.customer-photo(src="/img/difficult-customer_1.jpg")
                         +e.P.customer-name
-                            | Андрей Васильев
+                            | Андрей <br> Васильев
                     +e.P.review
                         | Ребята закрыли все задолжности за свой счет и дали мне аванс в первый же день!
                     +e.P.more-details
@@ -39,9 +39,10 @@
                     +e.P.case-title
                         | Под арестом
                     +e.DIV.customer-row
-                        +e.IMG.customer-photo(src="/img/difficult-customer_2.jpg")
+                        +e.container-photo
+                            +e.IMG.customer-photo(src="/img/difficult-customer_2.jpg")
                         +e.P.customer-name
-                            | Ольга Егорова
+                            | Ольга <br> Егорова
                     +e.P.review
                         | Срочно понадобился кредит наличными, сумма нужна была довольно крупная.
                     +e.P.more-details
@@ -60,9 +61,10 @@
                     +e.P.case-title
                         | Под залогом
                     +e.DIV.customer-row
-                        +e.IMG.customer-photo(src="/img/difficult-customer_3.jpg")
+                        +e.container-photo
+                            +e.IMG.customer-photo(src="/img/difficult-customer_3.jpg")
                         +e.P.customer-name
-                            | Сергей Приходько
+                            | Сергей <br> Приходько
                     +e.P.review
                         | Если у вас плохая кредитная история, то вам несомнено сюда. Принимают как своего!
                     +e.P.more-details
@@ -82,9 +84,10 @@
                     +e.P.case-title
                         | Под ипотекой
                     +e.DIV.customer-row
-                        +e.IMG.customer-photo(src="/img/difficult-customer_4.jpg")
+                        +e.container-photo
+                            +e.IMG.customer-photo(src="/img/difficult-customer_4.jpg")
                         +e.P.customer-name
-                            | Евгений Караваев
+                            | Евгений <br> Караваев
                     +e.P.review
                         | Не первый раз захожу в данный офис, и каждый раз остается желание вернуться.
                     +e.P.more-details
