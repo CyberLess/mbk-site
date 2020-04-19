@@ -51,14 +51,13 @@
     &_comment {
       width: 1.4rem;
       height: 1.4rem;
-      margin-bottom: 2px;
+      margin-top: 2px;
       fill: rgb(191, 191, 191);
     }
 
     &_heart {
       width: 1.4rem;
       height: 1.2rem;
-      margin-bottom: 4px;
       fill: rgb(255, 6, 0);
     }
   }
@@ -148,5 +147,61 @@
 
   .comment__nav-item:hover .comment__nav-icon {
     fill: rgb(14, 14, 14);
+  }
+
+  @include max-screen($large_mobile) {
+		&__content {
+      padding-top: 3.2rem;
+      padding-bottom: 3rem;
     }
+    &__title {
+      font-size: 12px;
+    }
+    &__time {
+      font-size: 10px;
+    }
+    &__text {
+      font-size: 12px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    &__button {
+      font-size: 12px;
+    }
+    &__nav {
+      top: auto;
+      bottom: 2rem;
+    }
+    &__nav-item {
+      font-size: 10px;
+      line-height: 27px;
+      margin-left: 1.2rem;
+    }
+    &__nav-icon {
+      margin-right: 8px;
+  
+      &_comment {
+        width: 0.85rem;
+        height: 0.85rem;
+      }
+  
+      &_heart {
+        width: 0.87rem;
+        height: 0.76rem;
+      }
+    }
+    &__other {
+      padding-left: 1.2rem;
+    }
+    &__answer {
+      font-size: 10px;
+      & svg {
+        width: 10px;
+        height: 10px;
+      }
+    }
+    &__subtitle {
+      font-size: 10px;
+    }
+	}
 }

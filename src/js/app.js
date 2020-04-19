@@ -19,3 +19,4 @@ import './modules/_sell-apartment';
 import './modules/_ba';
 import './modules/_sell-popup';
 import './modules/_open-comments';
+import './modules/_article-title';

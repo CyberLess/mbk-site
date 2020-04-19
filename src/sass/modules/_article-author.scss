@@ -4,8 +4,13 @@
   background-color: #FFFFFF;
 
   &__wrap {
+    height: 35.6rem;
     padding: 5.6rem 8.5rem 5.6rem 10.8rem;
     background-color: #F3F3F3;
+  }
+
+  &__about {
+    align-self: flex-start;
   }
 
   &__avatar {
@@ -32,9 +37,11 @@
 
   &__content {
     min-width: 574/1336*100%;
+    min-height: 24.3rem;
     margin-left: auto;
     padding: 5.2rem 4.5rem 3.7rem;
     background-color: #FFFFFF;
+    border: 1px solid #B3B3B3;
   }
 
   &__list {
@@ -75,6 +82,73 @@
       &::before {
         border-left: 5px solid #0E0E0E;
       }
+    }
+  }
+
+  @include max-screen($small_desktop) {
+    &__wrap {
+      padding-right: 32px;
+      padding-left: 32px;
+    }
+  }
+
+  @include max-screen($large_tablet) {
+    &__wrap {
+      flex-direction: column;
+      height: auto;
+    }
+    &__content {
+      margin-left: 0;
+    }
+    &__about {
+      margin-bottom: 5rem;
+    }
+  }
+
+  @include max-screen($large_mobile) {
+    padding-bottom: 0;
+    &__wrap {
+      padding: 3.8rem 1.5rem 2rem;
+    }
+
+    &__about {
+      align-self: auto;
+      justify-content: space-between;
+      margin-bottom: 2.7rem;
+    }
+
+    &__avatar {
+      width: 10.8rem;
+      height: 10.8rem;
+      margin-right: auto;
+    }
+
+    &__category {
+      font-size: 12px;
+      margin-bottom: 0.7rem;
+    }
+
+    &__name {
+      line-height: 100%;
+      margin-bottom: 0.8rem;
+    }
+
+    &__link {
+      font-size: 12px;
+    }
+
+    &__content {
+      padding: 4rem 3.1rem 3rem;
+      border: none;
+    }
+
+    &__title {
+      font-size: 12px;
+    }
+
+    &__item-link {
+      font-size: 12px;
+      color: #0E0E0E;
     }
   }
 }

@@ -3,7 +3,7 @@
 	padding-bottom: 6.5rem;
 
 	&__wrap {
-		padding-left: 0px;
+		// padding-left: 0px;
 		padding-right: 0px;
 	}
 
@@ -29,5 +29,49 @@
 	&__count {
 		margin-left: 2rem;
 		color: rgb(191, 191, 191);
+	}
+
+	@include max-screen($small_desktop) {
+		&__cell {
+			&_left {
+				width: 65%;
+			}
+	
+			&_right {
+				width: 22%;
+			}
+		}
+  }
+  
+  @include max-screen($large_tablet) {
+		&__wrap {
+			padding-right: 32px;
+		}
+		&__cell {
+			&_left {
+				width: 100%;
+			}
+	
+			&_right {
+				display: none;
+			}
+		}
+		&__head {
+			padding-left: 0;
+		}
+		&__list {
+			padding-left: 0;
+		}
+	}
+
+	@include max-screen($large_mobile) {
+		&__wrap {
+			padding-right: 15px;
+			padding-top: 5.1rem;
+		}
+		&__head {
+			padding-bottom: 0;
+			border: none;
+		}
 	}
 }
