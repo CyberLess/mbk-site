@@ -53,9 +53,7 @@
 		transition: all 0.1s ease;
 
 		&:hover {
-			& svg {
-				fill: #0E0E0E;
-			}
+			opacity: 0.7;
 		}
 	}
 
@@ -93,12 +91,6 @@
 
 		.social-share__link {
 			background-color: rgba(0, 0, 0, 0);
-
-			&:hover {
-				& svg {
-					fill: #0E0E0E;
-				}
-			}
 		}
 	}
 }

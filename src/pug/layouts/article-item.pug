@@ -1,17 +1,23 @@
--
-	var article = {
-		src: '/img/article-top.png',
-		category: 'Долги',
-		title: 'Что будет, если не платить микрозаймы, взятые через интернет?',
-		avatar: '/img/article-avatar.png',
-		link: 'Алексей Астафьев',
-		text: 'Финансовый аналитик МБК',
-	}
-
 +b.SECTION.article-item
 	+e.wrap.wrap
 		+breadcrumbs('Блог', 'Банкротство', 'Что будет', 'Если не платить микрозайм')
-		+top(article)(class="article__head")
+	+e.head.council__._article
+		+e.wrap.wrap
+			+e.head
+				+e.bg.object-fit.IMG(src="/img/article-top.png")
+				+e.head-inner
+					+e.category.red-link.h6.A(href="#") Долги
+					+e.title.h3 
+						| Что будет, если не платить микрозаймы, взятые через интернет?
+					+e.author.flex._vertical
+						+e.author-cell._avatar
+							+e.avatar
+								+e.IMG.avatar-img.object-fit(src="/img/article-avatar.png")
+						+e.author-cell._content
+							+link Алексей Астафьев
+							+e.author-text.p
+								| Финансовый аналитик МБК
+	+e.wrap.wrap
 		+e.info.flex._vertical._justify.article__
 			+e.nav-item.p
 				+e.date.TIME(datetime="2019-10-10") 10 октября 2019
@@ -33,9 +39,9 @@
 					+e.nav-icon._clock
 						+icon('clock', '0 0 12 12')
 					| 10 минут
-				+e.nav-item._red.p
+				+e.nav-item._red.p.article-item__tablet-hidden
 					+e.nav-link.red-link.A(href='#') Некогда читать?
-			+e.social.flex._vertical
+			+e.social.flex._vertical.article-item__tablet-hidden
 				+e.nav-item.p Поделиться статьей
 				+social-share()
 		+e.content.content._big
@@ -47,25 +53,29 @@
 						|Обычно это маленькие суммы 3000-10000 рублей, которые без лишних бюрократических накладок быстро перечисляются на карту заемщику.
 					p
 						|Но потом возникают неприятные сюрпризы – долг запросто может вырасти всего за 1-2 месяца в несколько раз! Клиенты начинают чувствовать себя обманутыми, и часто принципиально отказываются от оплаты. Что будет, если не платить микрозаймы, взятые через интернет?
-					+b.article-item__title
+					+b.article-item__title(id="title")
 						h2 Оглавление
 						ol
 							li
-								a(href="#")
+								a(href="#section-1")
 									|С какими рисками сталкиваются должники МФО?
 							li
-								a(href="#")
+								a(href="#section-2")
 									|Как не платить микрозаймы законно?
 							li
-								a(href="#")
+								a(href="#section-3")
 									|Перекредитование кредитов с плохой кредитной историей при смене основной работы
 							li
-								a(href="#")
+								a(href="#section-4")
 									|Рекомендации юристов
-			+e.row.flex._justify
+			+e.row.flex._justify.js-title
+				+e.title-link.js-link.A(href="#title")
+					span
+						|Оглавление
+					+icon('burger', '0 0 14 13')
 				+e.cell._left
 					+e.padding
-						h2 С какими рисками сталкиваются должники МФО?
+						h2(id="section-1") С какими рисками сталкиваются должники МФО?
 						p
 							|МФО может обратить взыскание в судебном порядке, и инициировать работу судебных приставов через получение судебного приказа. Чем это грозит?
 						ol
@@ -99,7 +109,7 @@
 							br
 							| Разберем вашу ситуацию.
 					+e.padding
-						h2
+						h2(id="section-2")
 							|Как не платить микрозаймы законно?
 						p
 							|Обратиться в суд. Если МФО накручивает долг в несколько раз за короткий период времени, вы можете обратиться с иском в суд. Также это возможно сделать, если вы нашли другие нарушения в работе компании. Иск позволит списать штрафы и пени, исключить % МФО, и рассчитаться с долгом через ФССП, по % ключевой ставки ЦБ (7,25% годовых).
@@ -120,20 +130,24 @@
 						|Читайте еще
 					include ../layouts/other-articles
 		+e.info._bottom.flex._vertical.article__
-			+e.nav-item.p Вы согласны?
 			+e.social.flex._vertical
-				+e.nav-item.p Поделиться
+				+e.social-desc
+					+e.nav-item.p Вы согласны?
+					+e.nav-item.p Поделиться
 				+social-share(class="_min")
-			+e.nav.flex._vertical
-				+e.nav-item.p
-					+e.nav-icon._watch
-						+icon('watch', '0 0 21 13')
-					| 5,500
-				+e.nav-item.p.A(href="#")
-					+e.nav-icon._heart
-						+icon('heart', '0 0 14 13')
-					| 70
-				+e.nav-item.p.A(href="#")
-					+e.nav-icon._comment
-						+icon('comment', '0 0 14 14')
-					| 15
+			+e.nav.flex._vertical._justify
+				+e.cell._left.flex._vertical
+					+e.nav-item.p.TIME(datetime="2019-10-10") 10 октября 2019
+				+e.cell._right.flex._vertical
+					+e.nav-item.p
+						+e.nav-icon._watch
+							+icon('watch', '0 0 21 13')
+						| 5,500
+					+e.nav-item.p.A(href="#")
+						+e.nav-icon._heart
+							+icon('heart', '0 0 14 13')
+						| 70
+					+e.nav-item.p.A(href="#")
+						+e.nav-icon._comment
+							+icon('comment', '0 0 14 14')
+						| 15
