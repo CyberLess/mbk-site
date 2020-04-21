@@ -31,7 +31,7 @@
     padding: 0;
     padding-top: 38px;
 
-    @include max-screen($large_mobile) {
+    @include max-screen($small_desktop) {
       margin: 0 auto;
       width: 290px;
     }
