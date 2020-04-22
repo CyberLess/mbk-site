@@ -62,13 +62,16 @@
   &__item-link {
     display: flex;
     align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
     font-size: 1.6rem;
     line-height: 140%;
     color: #868686;
     transition: all 0.1s ease;
 
-    &::before {
+    &::after {
       content: "";
+      display: inline-block;
       width: 0;
       height: 0;
       margin-right: 1.7rem;
@@ -93,6 +96,7 @@
   }
 
   @include max-screen($large_tablet) {
+    padding-top: 5.1rem;
     &__wrap {
       flex-direction: column;
       height: auto;
@@ -147,8 +151,16 @@
     }
 
     &__item-link {
+      display: inline-block;
       font-size: 12px;
       color: #0E0E0E;
+      &::after {
+        margin-right: 0;
+        margin-left: 1rem;
+        border-left: 3px solid #0E0E0E;
+        border-top: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+      }
     }
   }
 }

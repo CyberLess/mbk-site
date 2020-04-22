@@ -20,4 +20,26 @@
     }
   });
 
+  let winWidth = $(window).width();
+
+  if (winWidth < 581) {
+    const $toggle = $('.js-toggle-title');
+    window.addEventListener(`scroll`, () => {
+      if (title) {
+        if (isScrolledIntoView(title)) {
+          $toggle.addClass(`active`);
+        } else {
+          $toggle.removeClass(`active`);
+          $('.article-item__title-wrapper').removeClass('opened');
+        }
+      }
+    });
+    $toggle.on('click',  e => {
+      $('.article-item__title-wrapper').addClass('opened');
+    });
+    $('.js-title-close').on('click',  e => {
+      $('.article-item__title-wrapper').removeClass('opened');
+    });
+  }
+
 })($);

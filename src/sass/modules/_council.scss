@@ -180,6 +180,9 @@
 		padding: 0;
 
 		.council__head{
+			& img {
+				height: 100%;
+			}
 			&-inner{
 				padding-top: 7.3rem;
 				justify-content: flex-start;

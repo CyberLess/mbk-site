@@ -61,4 +61,31 @@
     background-image: url("/img/star-full.svg");
   }
   
+  @include max-screen($large_tablet) {
+    padding: 3.9rem 3.2rem;
+		&__subtitle {
+      font-size: 1.4rem;
+      line-height: 140%;
+    }
+
+    &__rating-area:not(:checked) > label {
+      width: 2.15rem;
+      height: 1.9rem;
+      margin-right: 3rem;
+    }
+
+    &__rating-area {
+      width: 25.6rem;
+    }
+  }
+  
+  @include max-screen($large_mobile) {
+    display: none;
+	}
+}
+
+.mobile-wrapper .article-estimate {
+  @include max-screen($large_mobile) {
+    display: block;
+	}
 }

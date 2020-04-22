@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Статья</title>
-    <link rel="stylesheet" href="/app/css/app.css?v=1587371619714">
+    <link rel="stylesheet" href="/app/css/app.css?v=1587581000507">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
@@ -809,18 +809,30 @@
                             <p>Обычно это маленькие суммы 3000-10000 рублей, которые без&nbsp;лишних бюрократических накладок быстро перечисляются на&nbsp;карту заемщику.</p>
                             <p>Но потом возникают неприятные сюрпризы – долг запросто может вырасти всего за&nbsp;1-2 месяца в&nbsp;несколько раз! Клиенты начинают чувствовать себя обманутыми, и&nbsp;часто принципиально отказываются от&nbsp;оплаты. Что будет,
                                 если не платить микрозаймы, взятые через&nbsp;интернет?</p>
-                            <div class="article-item__title" id="title">
-                                <h2>Оглавление</h2>
-                                <ol>
-                                    <li><a href="#section-1">С какими рисками сталкиваются должники МФО?</a>
-                                    </li>
-                                    <li><a href="#section-2">Как не платить микрозаймы законно?</a>
-                                    </li>
-                                    <li><a href="#section-3">Перекредитование кредитов с&nbsp;плохой кредитной историей при&nbsp;смене основной работы</a>
-                                    </li>
-                                    <li><a href="#section-4">Рекомендации юристов</a>
-                                    </li>
-                                </ol>
+                            <div class="article-item__title-wrapper">
+                                <button class="article-item__toggle js-toggle-title" type="button" aria-title="открыть оглавление">
+                                    <svg class="icon icon-burger" viewBox="0 0 14 13">
+                                        <use xlink:href="/app/icons/sprite.svg#burger"></use>
+                                    </svg>
+                                </button>
+                                <button class="article-item__close js-title-close" type="button" aria-title="закрыть оглавление">
+                                    <svg class="icon icon-close" viewBox="0 0 18 18">
+                                        <use xlink:href="/app/icons/sprite.svg#close"></use>
+                                    </svg>
+                                </button>
+                                <div class="article-item__title" id="title">
+                                    <h2>Оглавление</h2>
+                                    <ol>
+                                        <li><a href="#section-1">С какими рисками сталкиваются должники МФО?</a>
+                                        </li>
+                                        <li><a href="#section-2">Как не платить микрозаймы законно?</a>
+                                        </li>
+                                        <li><a href="#section-3">Перекредитование кредитов с&nbsp;плохой кредитной историей при&nbsp;смене основной работы</a>
+                                        </li>
+                                        <li><a href="#section-4">Рекомендации юристов</a>
+                                        </li>
+                                    </ol>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -896,7 +908,7 @@
                             <div class="article__nav-item p">Вы согласны?</div>
                             <div class="article__nav-item p">Поделиться</div>
                         </div>
-                        <div class="article__social-list flex flex_vertical social-share social-share_min">
+                        <div class="article__social-list flex flex_vertical social-share social-share_min social-share_mobile">
                             <div class="social-share__item social-share__item_vk"><a class="social-share__link" href="#"><span><svg class="icon icon-vk" viewBox="0 0 24 15"><use xlink:href="/app/icons/sprite.svg#vk"></use></svg></span></a>
                             </div>
                             <div class="social-share__item social-share__item_fb"><a class="social-share__link" href="#"><span><svg class="icon icon-fb" viewBox="0 0 10 19"><use xlink:href="/app/icons/sprite.svg#fb"></use></svg></span></a>
@@ -923,6 +935,25 @@
                 </div>
             </div>
         </section>
+        <div class="mobile-wrapper wrap">
+            <section class="article-estimate">
+                <h3 class="article-estimate__title h5">Оцените материал</h3>
+                <p class="article-estimate__subtitle p">Ваша оценка помогает
+                    <br>улучшать материалы</p>
+                <form class="article-estimate__rating-area" action="#">
+                    <input class="article-estimate__input" type="radio" id="star-5" name="rating" value="5" />
+                    <label class="article-estimate__label" for="star-5" title="Оценка «5»"></label>
+                    <input class="article-estimate__input" type="radio" id="star-4" name="rating" value="4" />
+                    <label class="article-estimate__label" for="star-4" title="Оценка «4»"></label>
+                    <input class="article-estimate__input" type="radio" id="star-3" name="rating" value="3" checked="checked" />
+                    <label class="article-estimate__label" for="star-3" title="Оценка «3»"></label>
+                    <input class="article-estimate__input" type="radio" id="star-2" name="rating" value="2" />
+                    <label class="article-estimate__label" for="star-2" title="Оценка «2»"></label>
+                    <input class="article-estimate__input" type="radio" id="star-1" name="rating" value="1" />
+                    <label class="article-estimate__label" for="star-1" title="Оценка «1»"></label>
+                </form>
+            </section>
+        </div>
         <section class="article-author">
             <div class="article-author__wrap wrap flex">
                 <div class="article-author__about flex flex_vertical">
@@ -1021,11 +1052,13 @@
                                 <section class="comment__item comment comment">
                                     <div class="comment__content comment__content_no-border">
                                         <form class="comment-form-min form" action="#">
-                                            <div class="comment-form-min__input input input_border">
-                                                <input class="input__item" type="text" placeholder="Введите ваше имя" name="name" />
-                                            </div>
-                                            <div class="comment-form-min__textarea textarea textarea_min">
-                                                <textarea class="textarea__item" placeholder="Напишите комментарий..." name="comment-min"></textarea>
+                                            <div class="comment-form-min__wrap">
+                                                <div class="comment-form-min__input input input_border">
+                                                    <input class="input__item" type="text" placeholder="Введите ваше имя" name="name" />
+                                                </div>
+                                                <div class="comment-form-min__textarea textarea textarea_min">
+                                                    <textarea class="textarea__item" placeholder="Напишите комментарий..." name="comment-min"></textarea>
+                                                </div>
                                             </div>
                                             <button class="comment-form-min__button link red-link flex flex flex_vertical" type="submit">Поделиться мнением
                                                 <svg class="icon icon-arrow" viewBox="0 0 19 10">
@@ -1060,11 +1093,13 @@
                         <div class="comment__other comment__other_hidden">
                             <div class="comment__content comment__content_no-border">
                                 <form class="comment-form-min form" action="#">
-                                    <div class="comment-form-min__input input input_border">
-                                        <input class="input__item" type="text" placeholder="Введите ваше имя" name="name" />
-                                    </div>
-                                    <div class="comment-form-min__textarea textarea textarea_min">
-                                        <textarea class="textarea__item" placeholder="Напишите комментарий..." name="comment-min"></textarea>
+                                    <div class="comment-form-min__wrap">
+                                        <div class="comment-form-min__input input input_border">
+                                            <input class="input__item" type="text" placeholder="Введите ваше имя" name="name" />
+                                        </div>
+                                        <div class="comment-form-min__textarea textarea textarea_min">
+                                            <textarea class="textarea__item" placeholder="Напишите комментарий..." name="comment-min"></textarea>
+                                        </div>
                                     </div>
                                     <button class="comment-form-min__button link red-link flex flex flex_vertical" type="submit">Поделиться мнением
                                         <svg class="icon icon-arrow" viewBox="0 0 19 10">
@@ -1118,19 +1153,33 @@
                     <div class="comment-form__textarea textarea textarea_gray">
                         <textarea class="textarea__item" placeholder="Ваш комментарий" name="comment" rows="4"></textarea>
                     </div>
-                    <div class="comment-form__row flex flex_justify">
-                        <div class="comment-form__input input input_medium">
+                    <div class="comment-form__input input input_medium">
+                        <input class="input__item" type="text" placeholder="Введите ваше имя" name="name" />
+                    </div>
+                    <button class="comment-form__button h6 btn" type="submit"><span class="btn__text">Поделиться мнением</span>
+                    </button>
+                </form>
+                <form class="comment-form-min comment-form-min_mobile form" action="#">
+                    <div class="comment-form-min__wrap">
+                        <div class="comment-form-min__input input input_border">
                             <input class="input__item" type="text" placeholder="Введите ваше имя" name="name" />
                         </div>
-                        <button class="comment-form__button h6 btn" type="submit"><span class="btn__text">Поделиться мнением</span>
-                        </button>
+                        <div class="comment-form-min__textarea textarea textarea_min">
+                            <textarea class="textarea__item" placeholder="Напишите комментарий..." name="comment-min"></textarea>
+                        </div>
                     </div>
+                    <button class="comment-form-min__button link red-link flex flex flex_vertical" type="submit">Поделиться мнением
+                        <svg class="icon icon-arrow" viewBox="0 0 19 10">
+                            <use xlink:href="/app/icons/sprite.svg#arrow"></use>
+                        </svg>
+                    </button>
                 </form>
             </div>
             <div class="comments__cell comments__cell_right">
                 <section class="article-estimate">
                     <h3 class="article-estimate__title h5">Оцените материал</h3>
-                    <p class="article-estimate__subtitle p">Ваша оценка помогает улучшать материалы</p>
+                    <p class="article-estimate__subtitle p">Ваша оценка помогает
+                        <br>улучшать материалы</p>
                     <form class="article-estimate__rating-area" action="#">
                         <input class="article-estimate__input" type="radio" id="star-5" name="rating" value="5" />
                         <label class="article-estimate__label" for="star-5" title="Оценка «5»"></label>
@@ -1147,486 +1196,492 @@
             </div>
             </div>
         </section>
-        <section class="blog blog_padding">
-            <div class="blog__wrap wrap">
-                <div class="blog__mobile">
-                    <div class="blog__mobile-nav flex flex_justify">
-                        <div class="blog__mobile-label is-active" data-selector=".blog__cell_right">Лучшее</div>
-                        <div class="blog__mobile-label" data-selector=".blog__cell_left">Все статьи</div>
-                    </div>
-                </div>
-                <div class="blog__row flex flex_justify">
-                    <div class="blog__cell blog__cell_left">
-                        <div class="blog__string blog__string_scope flex flex_justify flex_vertical">
-                            <div class="blog__title h4">Все статьи</div>
-                            <div class="blog__count h4">120</div>
+        <section class="group group_top gray gray_mobile is-without-container">
+            <section class="white white_mobile radius-5 radius-5_mobile">
+                <section class="blog">
+                    <div class="blog__wrap wrap">
+                        <div class="blog__mobile">
+                            <h2 class="blog__mobile-title">Читайте также</h2>
+                            <div class="blog__mobile-nav flex flex_justify">
+                                <div class="blog__mobile-label is-active" data-selector=".blog__cell_right">Лучшее</div>
+                                <div class="blog__mobile-label" data-selector=".blog__cell_left">Все статьи</div>
+                            </div>
                         </div>
-                        <div class="blog__list flex flex_justify">
-                            <a class="blog__article blog__article_double article" href="#">
-                                <div class="article__preview">
-                                    <picture>
-                                        <source type="image/webp" srcset="/app/img/article_1.webp">
-                                            <img src="/app/img/article_1.jpg" class="object-fit" alt="" role="presentation" />
-                                    </picture>
+                        <div class="blog__row flex flex_justify">
+                            <div class="blog__cell blog__cell_left">
+                                <div class="blog__string blog__string_scope flex flex_justify flex_vertical">
+                                    <div class="blog__title h4">Читайте также</div>
+                                    <div class="blog__count h4">44</div>
                                 </div>
-                                <div class="article__nav flex flex_justify flex_vertical">
-                                    <div class="article__nav-cell article__nav-cell_left flex flex_vertical">
-                                        <div class="article__nav-item p">
-                                            <div class="article__nav-icon article__nav-icon_watch">
-                                                <svg class="icon icon-watch" viewBox="0 0 21 13">
-                                                    <use xlink:href="/app/icons/sprite.svg#watch"></use>
-                                                </svg>
-                                            </div>5,500</div>
-                                        <div class="article__nav-item p">
-                                            <div class="article__nav-icon article__nav-icon_heart">
-                                                <svg class="icon icon-heart" viewBox="0 0 14 13">
-                                                    <use xlink:href="/app/icons/sprite.svg#heart"></use>
-                                                </svg>
-                                            </div>70</div>
-                                        <div class="article__nav-item p">
-                                            <div class="article__nav-icon article__nav-icon_comment">
-                                                <svg class="icon icon-comment" viewBox="0 0 14 14">
-                                                    <use xlink:href="/app/icons/sprite.svg#comment"></use>
-                                                </svg>
-                                            </div>15</div>
-                                    </div>
-                                    <div class="article__nav-cell article__nav-cell_right">
-                                        <div class="article__nav-item article__nav-item_gray p">
-                                            <div class="article__nav-icon article__nav-icon_clock">
-                                                <svg class="icon icon-clock" viewBox="0 0 12 12">
-                                                    <use xlink:href="/app/icons/sprite.svg#clock"></use>
-                                                </svg>
-                                            </div>5 минут</div>
-                                    </div>
+                                <div class="blog__list flex flex_justify">
+                                    <a class="blog__article blog__article_double article" href="#">
+                                        <div class="article__preview">
+                                            <picture>
+                                                <source type="image/webp" srcset="/app/img/article_1.webp">
+                                                    <img src="/app/img/article_1.jpg" class="object-fit" alt="" role="presentation" />
+                                            </picture>
+                                        </div>
+                                        <div class="article__nav flex flex_justify flex_vertical">
+                                            <div class="article__nav-cell article__nav-cell_left flex flex_vertical">
+                                                <div class="article__nav-item p">
+                                                    <div class="article__nav-icon article__nav-icon_watch">
+                                                        <svg class="icon icon-watch" viewBox="0 0 21 13">
+                                                            <use xlink:href="/app/icons/sprite.svg#watch"></use>
+                                                        </svg>
+                                                    </div>5,500</div>
+                                                <div class="article__nav-item p">
+                                                    <div class="article__nav-icon article__nav-icon_heart">
+                                                        <svg class="icon icon-heart" viewBox="0 0 14 13">
+                                                            <use xlink:href="/app/icons/sprite.svg#heart"></use>
+                                                        </svg>
+                                                    </div>70</div>
+                                                <div class="article__nav-item p">
+                                                    <div class="article__nav-icon article__nav-icon_comment">
+                                                        <svg class="icon icon-comment" viewBox="0 0 14 14">
+                                                            <use xlink:href="/app/icons/sprite.svg#comment"></use>
+                                                        </svg>
+                                                    </div>15</div>
+                                            </div>
+                                            <div class="article__nav-cell article__nav-cell_right">
+                                                <div class="article__nav-item article__nav-item_gray p">
+                                                    <div class="article__nav-icon article__nav-icon_clock">
+                                                        <svg class="icon icon-clock" viewBox="0 0 12 12">
+                                                            <use xlink:href="/app/icons/sprite.svg#clock"></use>
+                                                        </svg>
+                                                    </div>5 минут</div>
+                                            </div>
+                                        </div>
+                                        <div class="article__name h5">Законы, которые помогают списать долги</div>
+                                    </a>
+                                    <a class="blog__article blog__article_double article" href="#">
+                                        <div class="article__preview">
+                                            <picture>
+                                                <source type="image/webp" srcset="/app/img/article_1.webp">
+                                                    <img src="/app/img/article_1.jpg" class="object-fit" alt="" role="presentation" />
+                                            </picture>
+                                        </div>
+                                        <div class="article__nav flex flex_justify flex_vertical">
+                                            <div class="article__nav-cell article__nav-cell_left flex flex_vertical">
+                                                <div class="article__nav-item p">
+                                                    <div class="article__nav-icon article__nav-icon_watch">
+                                                        <svg class="icon icon-watch" viewBox="0 0 21 13">
+                                                            <use xlink:href="/app/icons/sprite.svg#watch"></use>
+                                                        </svg>
+                                                    </div>5,500</div>
+                                                <div class="article__nav-item p">
+                                                    <div class="article__nav-icon article__nav-icon_heart">
+                                                        <svg class="icon icon-heart" viewBox="0 0 14 13">
+                                                            <use xlink:href="/app/icons/sprite.svg#heart"></use>
+                                                        </svg>
+                                                    </div>70</div>
+                                                <div class="article__nav-item p">
+                                                    <div class="article__nav-icon article__nav-icon_comment">
+                                                        <svg class="icon icon-comment" viewBox="0 0 14 14">
+                                                            <use xlink:href="/app/icons/sprite.svg#comment"></use>
+                                                        </svg>
+                                                    </div>15</div>
+                                            </div>
+                                            <div class="article__nav-cell article__nav-cell_right">
+                                                <div class="article__nav-item article__nav-item_gray p">
+                                                    <div class="article__nav-icon article__nav-icon_clock">
+                                                        <svg class="icon icon-clock" viewBox="0 0 12 12">
+                                                            <use xlink:href="/app/icons/sprite.svg#clock"></use>
+                                                        </svg>
+                                                    </div>5 минут</div>
+                                            </div>
+                                        </div>
+                                        <div class="article__name h5">Законы, которые помогают списать долги</div>
+                                    </a>
+                                    <a class="blog__article blog__article_double article" href="#">
+                                        <div class="article__preview">
+                                            <picture>
+                                                <source type="image/webp" srcset="/app/img/article_1.webp">
+                                                    <img src="/app/img/article_1.jpg" class="object-fit" alt="" role="presentation" />
+                                            </picture>
+                                        </div>
+                                        <div class="article__nav flex flex_justify flex_vertical">
+                                            <div class="article__nav-cell article__nav-cell_left flex flex_vertical">
+                                                <div class="article__nav-item p">
+                                                    <div class="article__nav-icon article__nav-icon_watch">
+                                                        <svg class="icon icon-watch" viewBox="0 0 21 13">
+                                                            <use xlink:href="/app/icons/sprite.svg#watch"></use>
+                                                        </svg>
+                                                    </div>5,500</div>
+                                                <div class="article__nav-item p">
+                                                    <div class="article__nav-icon article__nav-icon_heart">
+                                                        <svg class="icon icon-heart" viewBox="0 0 14 13">
+                                                            <use xlink:href="/app/icons/sprite.svg#heart"></use>
+                                                        </svg>
+                                                    </div>70</div>
+                                                <div class="article__nav-item p">
+                                                    <div class="article__nav-icon article__nav-icon_comment">
+                                                        <svg class="icon icon-comment" viewBox="0 0 14 14">
+                                                            <use xlink:href="/app/icons/sprite.svg#comment"></use>
+                                                        </svg>
+                                                    </div>15</div>
+                                            </div>
+                                            <div class="article__nav-cell article__nav-cell_right">
+                                                <div class="article__nav-item article__nav-item_gray p">
+                                                    <div class="article__nav-icon article__nav-icon_clock">
+                                                        <svg class="icon icon-clock" viewBox="0 0 12 12">
+                                                            <use xlink:href="/app/icons/sprite.svg#clock"></use>
+                                                        </svg>
+                                                    </div>5 минут</div>
+                                            </div>
+                                        </div>
+                                        <div class="article__name h5">Законы, которые помогают списать долги</div>
+                                    </a>
+                                    <a class="blog__article blog__article_double article" href="#">
+                                        <div class="article__preview">
+                                            <picture>
+                                                <source type="image/webp" srcset="/app/img/article_1.webp">
+                                                    <img src="/app/img/article_1.jpg" class="object-fit" alt="" role="presentation" />
+                                            </picture>
+                                        </div>
+                                        <div class="article__nav flex flex_justify flex_vertical">
+                                            <div class="article__nav-cell article__nav-cell_left flex flex_vertical">
+                                                <div class="article__nav-item p">
+                                                    <div class="article__nav-icon article__nav-icon_watch">
+                                                        <svg class="icon icon-watch" viewBox="0 0 21 13">
+                                                            <use xlink:href="/app/icons/sprite.svg#watch"></use>
+                                                        </svg>
+                                                    </div>5,500</div>
+                                                <div class="article__nav-item p">
+                                                    <div class="article__nav-icon article__nav-icon_heart">
+                                                        <svg class="icon icon-heart" viewBox="0 0 14 13">
+                                                            <use xlink:href="/app/icons/sprite.svg#heart"></use>
+                                                        </svg>
+                                                    </div>70</div>
+                                                <div class="article__nav-item p">
+                                                    <div class="article__nav-icon article__nav-icon_comment">
+                                                        <svg class="icon icon-comment" viewBox="0 0 14 14">
+                                                            <use xlink:href="/app/icons/sprite.svg#comment"></use>
+                                                        </svg>
+                                                    </div>15</div>
+                                            </div>
+                                            <div class="article__nav-cell article__nav-cell_right">
+                                                <div class="article__nav-item article__nav-item_gray p">
+                                                    <div class="article__nav-icon article__nav-icon_clock">
+                                                        <svg class="icon icon-clock" viewBox="0 0 12 12">
+                                                            <use xlink:href="/app/icons/sprite.svg#clock"></use>
+                                                        </svg>
+                                                    </div>5 минут</div>
+                                            </div>
+                                        </div>
+                                        <div class="article__name h5">Законы, которые помогают списать долги</div>
+                                    </a>
+                                    <a class="blog__article blog__article_double article" href="#">
+                                        <div class="article__preview">
+                                            <picture>
+                                                <source type="image/webp" srcset="/app/img/article_1.webp">
+                                                    <img src="/app/img/article_1.jpg" class="object-fit" alt="" role="presentation" />
+                                            </picture>
+                                        </div>
+                                        <div class="article__nav flex flex_justify flex_vertical">
+                                            <div class="article__nav-cell article__nav-cell_left flex flex_vertical">
+                                                <div class="article__nav-item p">
+                                                    <div class="article__nav-icon article__nav-icon_watch">
+                                                        <svg class="icon icon-watch" viewBox="0 0 21 13">
+                                                            <use xlink:href="/app/icons/sprite.svg#watch"></use>
+                                                        </svg>
+                                                    </div>5,500</div>
+                                                <div class="article__nav-item p">
+                                                    <div class="article__nav-icon article__nav-icon_heart">
+                                                        <svg class="icon icon-heart" viewBox="0 0 14 13">
+                                                            <use xlink:href="/app/icons/sprite.svg#heart"></use>
+                                                        </svg>
+                                                    </div>70</div>
+                                                <div class="article__nav-item p">
+                                                    <div class="article__nav-icon article__nav-icon_comment">
+                                                        <svg class="icon icon-comment" viewBox="0 0 14 14">
+                                                            <use xlink:href="/app/icons/sprite.svg#comment"></use>
+                                                        </svg>
+                                                    </div>15</div>
+                                            </div>
+                                            <div class="article__nav-cell article__nav-cell_right">
+                                                <div class="article__nav-item article__nav-item_gray p">
+                                                    <div class="article__nav-icon article__nav-icon_clock">
+                                                        <svg class="icon icon-clock" viewBox="0 0 12 12">
+                                                            <use xlink:href="/app/icons/sprite.svg#clock"></use>
+                                                        </svg>
+                                                    </div>5 минут</div>
+                                            </div>
+                                        </div>
+                                        <div class="article__name h5">Законы, которые помогают списать долги</div>
+                                    </a>
+                                    <a class="blog__article blog__article_double article" href="#">
+                                        <div class="article__preview">
+                                            <picture>
+                                                <source type="image/webp" srcset="/app/img/article_1.webp">
+                                                    <img src="/app/img/article_1.jpg" class="object-fit" alt="" role="presentation" />
+                                            </picture>
+                                        </div>
+                                        <div class="article__nav flex flex_justify flex_vertical">
+                                            <div class="article__nav-cell article__nav-cell_left flex flex_vertical">
+                                                <div class="article__nav-item p">
+                                                    <div class="article__nav-icon article__nav-icon_watch">
+                                                        <svg class="icon icon-watch" viewBox="0 0 21 13">
+                                                            <use xlink:href="/app/icons/sprite.svg#watch"></use>
+                                                        </svg>
+                                                    </div>5,500</div>
+                                                <div class="article__nav-item p">
+                                                    <div class="article__nav-icon article__nav-icon_heart">
+                                                        <svg class="icon icon-heart" viewBox="0 0 14 13">
+                                                            <use xlink:href="/app/icons/sprite.svg#heart"></use>
+                                                        </svg>
+                                                    </div>70</div>
+                                                <div class="article__nav-item p">
+                                                    <div class="article__nav-icon article__nav-icon_comment">
+                                                        <svg class="icon icon-comment" viewBox="0 0 14 14">
+                                                            <use xlink:href="/app/icons/sprite.svg#comment"></use>
+                                                        </svg>
+                                                    </div>15</div>
+                                            </div>
+                                            <div class="article__nav-cell article__nav-cell_right">
+                                                <div class="article__nav-item article__nav-item_gray p">
+                                                    <div class="article__nav-icon article__nav-icon_clock">
+                                                        <svg class="icon icon-clock" viewBox="0 0 12 12">
+                                                            <use xlink:href="/app/icons/sprite.svg#clock"></use>
+                                                        </svg>
+                                                    </div>5 минут</div>
+                                            </div>
+                                        </div>
+                                        <div class="article__name h5">Битвы с&nbsp;коллекторами: самые громкие суды против них в&nbsp;декабре 2019 года</div>
+                                    </a><a class="blog__mobile-button btn btn_border p" href="#"><span class="btn__text">Загрузить еще статей</span><span class="btn__icon btn__icon_arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
                                 </div>
-                                <div class="article__name h5">Законы, которые помогают списать долги</div>
-                            </a>
-                            <a class="blog__article blog__article_double article" href="#">
-                                <div class="article__preview">
-                                    <picture>
-                                        <source type="image/webp" srcset="/app/img/article_1.webp">
-                                            <img src="/app/img/article_1.jpg" class="object-fit" alt="" role="presentation" />
-                                    </picture>
-                                </div>
-                                <div class="article__nav flex flex_justify flex_vertical">
-                                    <div class="article__nav-cell article__nav-cell_left flex flex_vertical">
-                                        <div class="article__nav-item p">
-                                            <div class="article__nav-icon article__nav-icon_watch">
-                                                <svg class="icon icon-watch" viewBox="0 0 21 13">
-                                                    <use xlink:href="/app/icons/sprite.svg#watch"></use>
-                                                </svg>
-                                            </div>5,500</div>
-                                        <div class="article__nav-item p">
-                                            <div class="article__nav-icon article__nav-icon_heart">
-                                                <svg class="icon icon-heart" viewBox="0 0 14 13">
-                                                    <use xlink:href="/app/icons/sprite.svg#heart"></use>
-                                                </svg>
-                                            </div>70</div>
-                                        <div class="article__nav-item p">
-                                            <div class="article__nav-icon article__nav-icon_comment">
-                                                <svg class="icon icon-comment" viewBox="0 0 14 14">
-                                                    <use xlink:href="/app/icons/sprite.svg#comment"></use>
-                                                </svg>
-                                            </div>15</div>
-                                    </div>
-                                    <div class="article__nav-cell article__nav-cell_right">
-                                        <div class="article__nav-item article__nav-item_gray p">
-                                            <div class="article__nav-icon article__nav-icon_clock">
-                                                <svg class="icon icon-clock" viewBox="0 0 12 12">
-                                                    <use xlink:href="/app/icons/sprite.svg#clock"></use>
-                                                </svg>
-                                            </div>5 минут</div>
-                                    </div>
-                                </div>
-                                <div class="article__name h5">Законы, которые помогают списать долги</div>
-                            </a>
-                            <a class="blog__article blog__article_double article" href="#">
-                                <div class="article__preview">
-                                    <picture>
-                                        <source type="image/webp" srcset="/app/img/article_1.webp">
-                                            <img src="/app/img/article_1.jpg" class="object-fit" alt="" role="presentation" />
-                                    </picture>
-                                </div>
-                                <div class="article__nav flex flex_justify flex_vertical">
-                                    <div class="article__nav-cell article__nav-cell_left flex flex_vertical">
-                                        <div class="article__nav-item p">
-                                            <div class="article__nav-icon article__nav-icon_watch">
-                                                <svg class="icon icon-watch" viewBox="0 0 21 13">
-                                                    <use xlink:href="/app/icons/sprite.svg#watch"></use>
-                                                </svg>
-                                            </div>5,500</div>
-                                        <div class="article__nav-item p">
-                                            <div class="article__nav-icon article__nav-icon_heart">
-                                                <svg class="icon icon-heart" viewBox="0 0 14 13">
-                                                    <use xlink:href="/app/icons/sprite.svg#heart"></use>
-                                                </svg>
-                                            </div>70</div>
-                                        <div class="article__nav-item p">
-                                            <div class="article__nav-icon article__nav-icon_comment">
-                                                <svg class="icon icon-comment" viewBox="0 0 14 14">
-                                                    <use xlink:href="/app/icons/sprite.svg#comment"></use>
-                                                </svg>
-                                            </div>15</div>
-                                    </div>
-                                    <div class="article__nav-cell article__nav-cell_right">
-                                        <div class="article__nav-item article__nav-item_gray p">
-                                            <div class="article__nav-icon article__nav-icon_clock">
-                                                <svg class="icon icon-clock" viewBox="0 0 12 12">
-                                                    <use xlink:href="/app/icons/sprite.svg#clock"></use>
-                                                </svg>
-                                            </div>5 минут</div>
-                                    </div>
-                                </div>
-                                <div class="article__name h5">Законы, которые помогают списать долги</div>
-                            </a>
-                            <a class="blog__article blog__article_double article" href="#">
-                                <div class="article__preview">
-                                    <picture>
-                                        <source type="image/webp" srcset="/app/img/article_1.webp">
-                                            <img src="/app/img/article_1.jpg" class="object-fit" alt="" role="presentation" />
-                                    </picture>
-                                </div>
-                                <div class="article__nav flex flex_justify flex_vertical">
-                                    <div class="article__nav-cell article__nav-cell_left flex flex_vertical">
-                                        <div class="article__nav-item p">
-                                            <div class="article__nav-icon article__nav-icon_watch">
-                                                <svg class="icon icon-watch" viewBox="0 0 21 13">
-                                                    <use xlink:href="/app/icons/sprite.svg#watch"></use>
-                                                </svg>
-                                            </div>5,500</div>
-                                        <div class="article__nav-item p">
-                                            <div class="article__nav-icon article__nav-icon_heart">
-                                                <svg class="icon icon-heart" viewBox="0 0 14 13">
-                                                    <use xlink:href="/app/icons/sprite.svg#heart"></use>
-                                                </svg>
-                                            </div>70</div>
-                                        <div class="article__nav-item p">
-                                            <div class="article__nav-icon article__nav-icon_comment">
-                                                <svg class="icon icon-comment" viewBox="0 0 14 14">
-                                                    <use xlink:href="/app/icons/sprite.svg#comment"></use>
-                                                </svg>
-                                            </div>15</div>
-                                    </div>
-                                    <div class="article__nav-cell article__nav-cell_right">
-                                        <div class="article__nav-item article__nav-item_gray p">
-                                            <div class="article__nav-icon article__nav-icon_clock">
-                                                <svg class="icon icon-clock" viewBox="0 0 12 12">
-                                                    <use xlink:href="/app/icons/sprite.svg#clock"></use>
-                                                </svg>
-                                            </div>5 минут</div>
-                                    </div>
-                                </div>
-                                <div class="article__name h5">Законы, которые помогают списать долги</div>
-                            </a>
-                            <a class="blog__article blog__article_double article" href="#">
-                                <div class="article__preview">
-                                    <picture>
-                                        <source type="image/webp" srcset="/app/img/article_1.webp">
-                                            <img src="/app/img/article_1.jpg" class="object-fit" alt="" role="presentation" />
-                                    </picture>
-                                </div>
-                                <div class="article__nav flex flex_justify flex_vertical">
-                                    <div class="article__nav-cell article__nav-cell_left flex flex_vertical">
-                                        <div class="article__nav-item p">
-                                            <div class="article__nav-icon article__nav-icon_watch">
-                                                <svg class="icon icon-watch" viewBox="0 0 21 13">
-                                                    <use xlink:href="/app/icons/sprite.svg#watch"></use>
-                                                </svg>
-                                            </div>5,500</div>
-                                        <div class="article__nav-item p">
-                                            <div class="article__nav-icon article__nav-icon_heart">
-                                                <svg class="icon icon-heart" viewBox="0 0 14 13">
-                                                    <use xlink:href="/app/icons/sprite.svg#heart"></use>
-                                                </svg>
-                                            </div>70</div>
-                                        <div class="article__nav-item p">
-                                            <div class="article__nav-icon article__nav-icon_comment">
-                                                <svg class="icon icon-comment" viewBox="0 0 14 14">
-                                                    <use xlink:href="/app/icons/sprite.svg#comment"></use>
-                                                </svg>
-                                            </div>15</div>
-                                    </div>
-                                    <div class="article__nav-cell article__nav-cell_right">
-                                        <div class="article__nav-item article__nav-item_gray p">
-                                            <div class="article__nav-icon article__nav-icon_clock">
-                                                <svg class="icon icon-clock" viewBox="0 0 12 12">
-                                                    <use xlink:href="/app/icons/sprite.svg#clock"></use>
-                                                </svg>
-                                            </div>5 минут</div>
-                                    </div>
-                                </div>
-                                <div class="article__name h5">Законы, которые помогают списать долги</div>
-                            </a>
-                            <a class="blog__article blog__article_double article" href="#">
-                                <div class="article__preview">
-                                    <picture>
-                                        <source type="image/webp" srcset="/app/img/article_1.webp">
-                                            <img src="/app/img/article_1.jpg" class="object-fit" alt="" role="presentation" />
-                                    </picture>
-                                </div>
-                                <div class="article__nav flex flex_justify flex_vertical">
-                                    <div class="article__nav-cell article__nav-cell_left flex flex_vertical">
-                                        <div class="article__nav-item p">
-                                            <div class="article__nav-icon article__nav-icon_watch">
-                                                <svg class="icon icon-watch" viewBox="0 0 21 13">
-                                                    <use xlink:href="/app/icons/sprite.svg#watch"></use>
-                                                </svg>
-                                            </div>5,500</div>
-                                        <div class="article__nav-item p">
-                                            <div class="article__nav-icon article__nav-icon_heart">
-                                                <svg class="icon icon-heart" viewBox="0 0 14 13">
-                                                    <use xlink:href="/app/icons/sprite.svg#heart"></use>
-                                                </svg>
-                                            </div>70</div>
-                                        <div class="article__nav-item p">
-                                            <div class="article__nav-icon article__nav-icon_comment">
-                                                <svg class="icon icon-comment" viewBox="0 0 14 14">
-                                                    <use xlink:href="/app/icons/sprite.svg#comment"></use>
-                                                </svg>
-                                            </div>15</div>
-                                    </div>
-                                    <div class="article__nav-cell article__nav-cell_right">
-                                        <div class="article__nav-item article__nav-item_gray p">
-                                            <div class="article__nav-icon article__nav-icon_clock">
-                                                <svg class="icon icon-clock" viewBox="0 0 12 12">
-                                                    <use xlink:href="/app/icons/sprite.svg#clock"></use>
-                                                </svg>
-                                            </div>5 минут</div>
-                                    </div>
-                                </div>
-                                <div class="article__name h5">Битвы с&nbsp;коллекторами: самые громкие суды против них в&nbsp;декабре 2019 года</div>
-                            </a><a class="blog__mobile-button btn btn_border p" href="#"><span class="btn__text">Загрузить еще статей</span><span class="btn__icon btn__icon_arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
-                        </div>
-                        <div class="blog__bottom flex flex_justify flex_vertical">
-                            <div class="blog__pagination pagination">
-                                <div class="pagination__list flex flex_vertical p"><a class="pagination__num" href="#">1</a><a class="pagination__num" href="#">2</a><a class="pagination__num is-current" href="#">3</a><a class="pagination__num" href="#">4</a><a class="pagination__num" href="#">5</a>
-                                    <span
-                                    class="pagination__num">...</span><a class="pagination__num" href="#">12</a>
-                                </div>
-                            </div><a class="blog__button btn btn_border p" href="#"><span class="btn__text">Загрузить еще статей</span><span class="btn__icon btn__icon_arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
-                        </div>
-                    </div>
-                    <div class="blog__cell blog__cell_right blog__cell_white">
-                        <div class="blog__string blog__string_right flex flex_justify flex_vertical">
-                            <div class="blog__title h4">Лучшее
-                                <svg class="icon icon-star" viewBox="0 0 26 26">
-                                    <use xlink:href="/app/icons/sprite.svg#star"></use>
-                                </svg>
-                            </div>
-                            <div class="blog__count h4">15</div>
-                        </div>
-                        <a class="blog__article article" href="#">
-                            <div class="article__preview">
-                                <picture>
-                                    <source type="image/webp" srcset="/app/img/article_1.webp">
-                                        <img src="/app/img/article_1.jpg" class="object-fit" alt="" role="presentation" />
-                                </picture>
-                            </div>
-                            <div class="article__nav flex flex_justify flex_vertical">
-                                <div class="article__nav-cell article__nav-cell_left flex flex_vertical">
-                                    <div class="article__nav-item p">
-                                        <div class="article__nav-icon article__nav-icon_watch">
-                                            <svg class="icon icon-watch" viewBox="0 0 21 13">
-                                                <use xlink:href="/app/icons/sprite.svg#watch"></use>
-                                            </svg>
-                                        </div>5,500</div>
-                                    <div class="article__nav-item p">
-                                        <div class="article__nav-icon article__nav-icon_heart">
-                                            <svg class="icon icon-heart" viewBox="0 0 14 13">
-                                                <use xlink:href="/app/icons/sprite.svg#heart"></use>
-                                            </svg>
-                                        </div>70</div>
-                                    <div class="article__nav-item p">
-                                        <div class="article__nav-icon article__nav-icon_comment">
-                                            <svg class="icon icon-comment" viewBox="0 0 14 14">
-                                                <use xlink:href="/app/icons/sprite.svg#comment"></use>
-                                            </svg>
-                                        </div>15</div>
-                                </div>
-                                <div class="article__nav-cell article__nav-cell_right">
-                                    <div class="article__nav-item article__nav-item_gray p">
-                                        <div class="article__nav-icon article__nav-icon_clock">
-                                            <svg class="icon icon-clock" viewBox="0 0 12 12">
-                                                <use xlink:href="/app/icons/sprite.svg#clock"></use>
-                                            </svg>
-                                        </div>5 минут</div>
+                                <div class="blog__bottom flex flex_justify flex_vertical">
+                                    <div class="blog__pagination pagination">
+                                        <div class="pagination__list flex flex_vertical p"><a class="pagination__num" href="#">1</a><a class="pagination__num" href="#">2</a><a class="pagination__num is-current" href="#">3</a><a class="pagination__num" href="#">4</a><a class="pagination__num" href="#">5</a>
+                                            <span
+                                            class="pagination__num">...</span><a class="pagination__num" href="#">12</a>
+                                        </div>
+                                    </div><a class="blog__button btn btn_border p" href="#"><span class="btn__text">Загрузить еще статей</span><span class="btn__icon btn__icon_arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
                                 </div>
                             </div>
-                            <div class="article__name h5">Битвы с&nbsp;коллекторами: самые громкие суды против них в&nbsp;декабре 2019 года</div>
-                        </a>
-                        <a class="blog__article article" href="#">
-                            <div class="article__preview">
-                                <picture>
-                                    <source type="image/webp" srcset="/app/img/article_1.webp">
-                                        <img src="/app/img/article_1.jpg" class="object-fit" alt="" role="presentation" />
-                                </picture>
-                            </div>
-                            <div class="article__nav flex flex_justify flex_vertical">
-                                <div class="article__nav-cell article__nav-cell_left flex flex_vertical">
-                                    <div class="article__nav-item p">
-                                        <div class="article__nav-icon article__nav-icon_watch">
-                                            <svg class="icon icon-watch" viewBox="0 0 21 13">
-                                                <use xlink:href="/app/icons/sprite.svg#watch"></use>
-                                            </svg>
-                                        </div>5,500</div>
-                                    <div class="article__nav-item p">
-                                        <div class="article__nav-icon article__nav-icon_heart">
-                                            <svg class="icon icon-heart" viewBox="0 0 14 13">
-                                                <use xlink:href="/app/icons/sprite.svg#heart"></use>
-                                            </svg>
-                                        </div>70</div>
-                                    <div class="article__nav-item p">
-                                        <div class="article__nav-icon article__nav-icon_comment">
-                                            <svg class="icon icon-comment" viewBox="0 0 14 14">
-                                                <use xlink:href="/app/icons/sprite.svg#comment"></use>
-                                            </svg>
-                                        </div>15</div>
+                            <div class="blog__cell blog__cell_right blog__cell_white">
+                                <div class="blog__string blog__string_right flex flex_justify flex_vertical">
+                                    <div class="blog__title h4">Лучшее
+                                        <svg class="icon icon-star" viewBox="0 0 26 26">
+                                            <use xlink:href="/app/icons/sprite.svg#star"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="blog__count h4">9</div>
                                 </div>
-                                <div class="article__nav-cell article__nav-cell_right">
-                                    <div class="article__nav-item article__nav-item_gray p">
-                                        <div class="article__nav-icon article__nav-icon_clock">
-                                            <svg class="icon icon-clock" viewBox="0 0 12 12">
-                                                <use xlink:href="/app/icons/sprite.svg#clock"></use>
-                                            </svg>
-                                        </div>5 минут</div>
-                                </div>
-                            </div>
-                            <div class="article__name h5">Битвы с&nbsp;коллекторами: самые громкие суды против них в&nbsp;декабре 2019 года</div>
-                        </a>
-                        <a class="blog__article article" href="#">
-                            <div class="article__preview">
-                                <picture>
-                                    <source type="image/webp" srcset="/app/img/article_1.webp">
-                                        <img src="/app/img/article_1.jpg" class="object-fit" alt="" role="presentation" />
-                                </picture>
-                            </div>
-                            <div class="article__nav flex flex_justify flex_vertical">
-                                <div class="article__nav-cell article__nav-cell_left flex flex_vertical">
-                                    <div class="article__nav-item p">
-                                        <div class="article__nav-icon article__nav-icon_watch">
-                                            <svg class="icon icon-watch" viewBox="0 0 21 13">
-                                                <use xlink:href="/app/icons/sprite.svg#watch"></use>
-                                            </svg>
-                                        </div>5,500</div>
-                                    <div class="article__nav-item p">
-                                        <div class="article__nav-icon article__nav-icon_heart">
-                                            <svg class="icon icon-heart" viewBox="0 0 14 13">
-                                                <use xlink:href="/app/icons/sprite.svg#heart"></use>
-                                            </svg>
-                                        </div>70</div>
-                                    <div class="article__nav-item p">
-                                        <div class="article__nav-icon article__nav-icon_comment">
-                                            <svg class="icon icon-comment" viewBox="0 0 14 14">
-                                                <use xlink:href="/app/icons/sprite.svg#comment"></use>
-                                            </svg>
-                                        </div>15</div>
-                                </div>
-                                <div class="article__nav-cell article__nav-cell_right">
-                                    <div class="article__nav-item article__nav-item_gray p">
-                                        <div class="article__nav-icon article__nav-icon_clock">
-                                            <svg class="icon icon-clock" viewBox="0 0 12 12">
-                                                <use xlink:href="/app/icons/sprite.svg#clock"></use>
-                                            </svg>
-                                        </div>5 минут</div>
-                                </div>
-                            </div>
-                            <div class="article__name h5">Битвы с&nbsp;коллекторами: самые громкие суды против них в&nbsp;декабре 2019 года</div>
-                        </a><a class="blog__mobile-button btn btn_border p" href="#"><span class="btn__text">Загрузить еще статей</span><span class="btn__icon btn__icon_arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="master master_white">
-            <div class="master__wrap wrap">
-                <div class="master__tree">
-                    <picture>
-                        <source type="image/webp" srcset="/app/img/tree.webp">
-                            <img src="/app/img/tree.png" alt="" role="presentation" />
-                    </picture>
-                </div>
-                <div class="master__man">
-                    <picture>
-                        <source type="image/webp" srcset="/app/img/man.webp">
-                            <img src="/app/img/man.png" class="master__man-img object-fit" alt="" role="presentation" />
-                    </picture>
-                </div>
-                <div class="master__row flex flex_justify flex_bottom">
-                    <div class="master__about" id="master-about">
-                        <div class="master__inner js-move-item" data-point="580" data-from="#master-about" data-to="#master-mobile">
-                            <div class="master__open open"></div>
-                            <div class="master__info">
-                                <div class="master__name h4">Алексей Астафьев
-                                </div>
-                                <div class="master__who h6">Финансовый аналитик МБК</div>
+                                <a class="blog__article article" href="#">
+                                    <div class="article__preview">
+                                        <picture>
+                                            <source type="image/webp" srcset="/app/img/article_1.webp">
+                                                <img src="/app/img/article_1.jpg" class="object-fit" alt="" role="presentation" />
+                                        </picture>
+                                    </div>
+                                    <div class="article__nav flex flex_justify flex_vertical">
+                                        <div class="article__nav-cell article__nav-cell_left flex flex_vertical">
+                                            <div class="article__nav-item p">
+                                                <div class="article__nav-icon article__nav-icon_watch">
+                                                    <svg class="icon icon-watch" viewBox="0 0 21 13">
+                                                        <use xlink:href="/app/icons/sprite.svg#watch"></use>
+                                                    </svg>
+                                                </div>5,500</div>
+                                            <div class="article__nav-item p">
+                                                <div class="article__nav-icon article__nav-icon_heart">
+                                                    <svg class="icon icon-heart" viewBox="0 0 14 13">
+                                                        <use xlink:href="/app/icons/sprite.svg#heart"></use>
+                                                    </svg>
+                                                </div>70</div>
+                                            <div class="article__nav-item p">
+                                                <div class="article__nav-icon article__nav-icon_comment">
+                                                    <svg class="icon icon-comment" viewBox="0 0 14 14">
+                                                        <use xlink:href="/app/icons/sprite.svg#comment"></use>
+                                                    </svg>
+                                                </div>15</div>
+                                        </div>
+                                        <div class="article__nav-cell article__nav-cell_right">
+                                            <div class="article__nav-item article__nav-item_gray p">
+                                                <div class="article__nav-icon article__nav-icon_clock">
+                                                    <svg class="icon icon-clock" viewBox="0 0 12 12">
+                                                        <use xlink:href="/app/icons/sprite.svg#clock"></use>
+                                                    </svg>
+                                                </div>5 минут</div>
+                                        </div>
+                                    </div>
+                                    <div class="article__name h5">Битвы с&nbsp;коллекторами: самые громкие суды против них в&nbsp;декабре 2019 года</div>
+                                </a>
+                                <a class="blog__article article" href="#">
+                                    <div class="article__preview">
+                                        <picture>
+                                            <source type="image/webp" srcset="/app/img/article_1.webp">
+                                                <img src="/app/img/article_1.jpg" class="object-fit" alt="" role="presentation" />
+                                        </picture>
+                                    </div>
+                                    <div class="article__nav flex flex_justify flex_vertical">
+                                        <div class="article__nav-cell article__nav-cell_left flex flex_vertical">
+                                            <div class="article__nav-item p">
+                                                <div class="article__nav-icon article__nav-icon_watch">
+                                                    <svg class="icon icon-watch" viewBox="0 0 21 13">
+                                                        <use xlink:href="/app/icons/sprite.svg#watch"></use>
+                                                    </svg>
+                                                </div>5,500</div>
+                                            <div class="article__nav-item p">
+                                                <div class="article__nav-icon article__nav-icon_heart">
+                                                    <svg class="icon icon-heart" viewBox="0 0 14 13">
+                                                        <use xlink:href="/app/icons/sprite.svg#heart"></use>
+                                                    </svg>
+                                                </div>70</div>
+                                            <div class="article__nav-item p">
+                                                <div class="article__nav-icon article__nav-icon_comment">
+                                                    <svg class="icon icon-comment" viewBox="0 0 14 14">
+                                                        <use xlink:href="/app/icons/sprite.svg#comment"></use>
+                                                    </svg>
+                                                </div>15</div>
+                                        </div>
+                                        <div class="article__nav-cell article__nav-cell_right">
+                                            <div class="article__nav-item article__nav-item_gray p">
+                                                <div class="article__nav-icon article__nav-icon_clock">
+                                                    <svg class="icon icon-clock" viewBox="0 0 12 12">
+                                                        <use xlink:href="/app/icons/sprite.svg#clock"></use>
+                                                    </svg>
+                                                </div>5 минут</div>
+                                        </div>
+                                    </div>
+                                    <div class="article__name h5">Битвы с&nbsp;коллекторами: самые громкие суды против них в&nbsp;декабре 2019 года</div>
+                                </a>
+                                <a class="blog__article article" href="#">
+                                    <div class="article__preview">
+                                        <picture>
+                                            <source type="image/webp" srcset="/app/img/article_1.webp">
+                                                <img src="/app/img/article_1.jpg" class="object-fit" alt="" role="presentation" />
+                                        </picture>
+                                    </div>
+                                    <div class="article__nav flex flex_justify flex_vertical">
+                                        <div class="article__nav-cell article__nav-cell_left flex flex_vertical">
+                                            <div class="article__nav-item p">
+                                                <div class="article__nav-icon article__nav-icon_watch">
+                                                    <svg class="icon icon-watch" viewBox="0 0 21 13">
+                                                        <use xlink:href="/app/icons/sprite.svg#watch"></use>
+                                                    </svg>
+                                                </div>5,500</div>
+                                            <div class="article__nav-item p">
+                                                <div class="article__nav-icon article__nav-icon_heart">
+                                                    <svg class="icon icon-heart" viewBox="0 0 14 13">
+                                                        <use xlink:href="/app/icons/sprite.svg#heart"></use>
+                                                    </svg>
+                                                </div>70</div>
+                                            <div class="article__nav-item p">
+                                                <div class="article__nav-icon article__nav-icon_comment">
+                                                    <svg class="icon icon-comment" viewBox="0 0 14 14">
+                                                        <use xlink:href="/app/icons/sprite.svg#comment"></use>
+                                                    </svg>
+                                                </div>15</div>
+                                        </div>
+                                        <div class="article__nav-cell article__nav-cell_right">
+                                            <div class="article__nav-item article__nav-item_gray p">
+                                                <div class="article__nav-icon article__nav-icon_clock">
+                                                    <svg class="icon icon-clock" viewBox="0 0 12 12">
+                                                        <use xlink:href="/app/icons/sprite.svg#clock"></use>
+                                                    </svg>
+                                                </div>5 минут</div>
+                                        </div>
+                                    </div>
+                                    <div class="article__name h5">Битвы с&nbsp;коллекторами: самые громкие суды против них в&nbsp;декабре 2019 года</div>
+                                </a><a class="blog__mobile-button btn btn_border p" href="#"><span class="btn__text">Загрузить еще статей</span><span class="btn__icon btn__icon_arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
                             </div>
                         </div>
                     </div>
-                    <div class="master__cell">
-                        <h2 class="master__title h2">Посмотрите <span class="stroke">бесплатный</span> мастер 
-класс</h2>
-                        <div class="master__box">
-                            <div class="master__box-inner">
-                                <div class="master__box-text h5">«3 способа, как списать долги и&nbsp;снизить стоимость платежей по&nbsp;кредиту»</div>
-                                <div class="master__mobile" id="master-mobile"></div><a class="master__box-button btn h6" href="#"><span class="master__text">Записаться на&nbsp;мастер класс</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="subscribe">
-            <div class="subscribe__wrap wrap">
-                <div class="subscribe__mobile" id="mobile-title"></div>
-                <div class="subscribe__row flex flex_justify flex_bottom">
-                    <div class="subscribe__cell subscribe__cell_left">
-                        <div class="subscribe__top" id="desktop-top">
-                            <h2 class="subscribe__title h2 js-move-item" data-to="#mobile-title" data-from="#desktop-top" data-point="580">Подпишись
-на&nbsp;обновления 
-нашей базы</h2>
-                        </div>
-                        <div class="subscribe__sub h5">Хочешь получать свежие материалы нашей базы на&nbsp;свой почтовый ящик?</div>
-                        <div class="subscribe__text h6 is-regular">Введите свой E-Mail в&nbsp;форму, и&nbsp;как только мы добавим что-то новое, то ты сразу же об&nbsp;этом узнаешь.</div>
-                        <form class="subscribe__form form" action="/">
-                            <input type="hidden" name="method[subscribe]" value="1" />
-                            <div class="form__email input input_big">
-                                <input class="input__item" type="text" placeholder="Введите ваш E-mail" name="email" />
-                            </div>
-                            <div class="form__inline-2 flex flex_vertical flex_justify">
-                                <button class="form__button btn h6">
-                                    <div class="form__text">Подписаться</div>
-                                </button>
-                                <label class="form__access access checkbox">
-                                    <input class="checkbox__input" type="checkbox" name="access" checked="" /><span class="checkbox__text"><span class="checkbox__check"><svg class="icon icon-check" viewBox="0 0 9 7"><use xlink:href="/app/icons/sprite.svg#check"></use></svg></span>Я согласен с&nbsp;условиями передачи данных</span>
-                                </label>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="subscribe__cell subscribe__cell_right">
-                        <div class="subscribe__book">
+                </section>
+                <section class="master master_white">
+                    <div class="master__wrap wrap">
+                        <div class="master__tree">
                             <picture>
-                                <source type="image/webp" srcset="/app/img/book.webp">
-                                    <img src="/app/img/book.png" class="subscribe__book-img" alt="" role="presentation" />
+                                <source type="image/webp" srcset="/app/img/tree.webp">
+                                    <img src="/app/img/tree.jpg" alt="" role="presentation" />
                             </picture>
                         </div>
-                        <div class="subscribe__box">
-                            <div class="subscribe__box-sub h5">
-                                <div class="subscribe__box-icon">
-                                    <svg class="icon icon-heart" viewBox="0 0 14 13">
-                                        <use xlink:href="/app/icons/sprite.svg#heart"></use>
-                                    </svg>
-                                </div>Подарок каждому
-                                <br>подписчику</div>
-                            <div class="subscribe__box-text h6">
-                                <div class="subscribe__box-mobile">
-                                    <svg class="icon icon-heart" viewBox="0 0 14 13">
-                                        <use xlink:href="/app/icons/sprite.svg#heart"></use>
-                                    </svg>
-                                </div>Подробная инструкция-памятка
-                                <br>«Как законно списать все долги»</div>
+                        <div class="master__man">
+                            <picture>
+                                <source type="image/webp" srcset="/app/img/man.webp">
+                                    <img src="/app/img/man.png" class="master__man-img object-fit" alt="" role="presentation" />
+                            </picture>
+                        </div>
+                        <div class="master__row flex flex_justify flex_bottom">
+                            <div class="master__about" id="master-about">
+                                <div class="master__inner js-move-item" data-point="580" data-from="#master-about" data-to="#master-mobile">
+                                    <div class="master__open open"></div>
+                                    <div class="master__info">
+                                        <div class="master__name h4">Алексей Астафьев
+                                        </div>
+                                        <div class="master__who h6">Финансовый аналитик МБК</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="master__cell">
+                                <h2 class="master__title h2">Посмотрите <span class="stroke">бесплатный</span> мастер 
+класс</h2>
+                                <div class="master__box">
+                                    <div class="master__box-inner">
+                                        <div class="master__box-text h5">«3 способа, как списать долги и&nbsp;снизить стоимость платежей по&nbsp;кредиту»</div>
+                                        <div class="master__mobile" id="master-mobile"></div><a class="master__box-button btn h6" href="#"><span class="master__text">Записаться на&nbsp;мастер класс</span></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </section>
+                <section class="subscribe">
+                    <div class="subscribe__wrap wrap">
+                        <div class="subscribe__mobile" id="mobile-title"></div>
+                        <div class="subscribe__row flex flex_justify flex_bottom">
+                            <div class="subscribe__cell subscribe__cell_left">
+                                <div class="subscribe__top" id="desktop-top">
+                                    <h2 class="subscribe__title h2 js-move-item" data-to="#mobile-title" data-from="#desktop-top" data-point="580">Подпишись
+на&nbsp;обновления 
+нашей базы</h2>
+                                </div>
+                                <div class="subscribe__sub h5">Хочешь получать свежие материалы нашей базы на&nbsp;свой почтовый ящик?</div>
+                                <div class="subscribe__text h6 is-regular">Введите свой E-Mail в&nbsp;форму, и&nbsp;как только мы добавим что-то новое, то ты сразу же об&nbsp;этом узнаешь.</div>
+                                <form class="subscribe__form form" action="/">
+                                    <input type="hidden" name="method[subscribe]" value="1" />
+                                    <div class="form__email input input_big">
+                                        <input class="input__item" type="text" placeholder="Введите ваш E-mail" name="email" />
+                                    </div>
+                                    <div class="form__inline-2 flex flex_vertical flex_justify">
+                                        <button class="form__button btn h6">
+                                            <div class="form__text">Подписаться</div>
+                                        </button>
+                                        <label class="form__access access checkbox">
+                                            <input class="checkbox__input" type="checkbox" name="access" checked="" /><span class="checkbox__text"><span class="checkbox__check"><svg class="icon icon-check" viewBox="0 0 9 7"><use xlink:href="/app/icons/sprite.svg#check"></use></svg></span>Я согласен с&nbsp;условиями передачи
+                                            данных</span>
+                                        </label>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="subscribe__cell subscribe__cell_right">
+                                <div class="subscribe__book">
+                                    <picture>
+                                        <source type="image/webp" srcset="/app/img/book.webp">
+                                            <img src="/app/img/book.png" class="subscribe__book-img" alt="" role="presentation" />
+                                    </picture>
+                                </div>
+                                <div class="subscribe__box">
+                                    <div class="subscribe__box-sub h5">
+                                        <div class="subscribe__box-icon">
+                                            <svg class="icon icon-heart" viewBox="0 0 14 13">
+                                                <use xlink:href="/app/icons/sprite.svg#heart"></use>
+                                            </svg>
+                                        </div>Подарок каждому
+                                        <br>подписчику</div>
+                                    <div class="subscribe__box-text h6">
+                                        <div class="subscribe__box-mobile">
+                                            <svg class="icon icon-heart" viewBox="0 0 14 13">
+                                                <use xlink:href="/app/icons/sprite.svg#heart"></use>
+                                            </svg>
+                                        </div>Подробная инструкция-памятка
+                                        <br>«Как законно списать все долги»</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
         </section>
         <footer class="footer footer_white">
             <div class="footer__wrap wrap">
@@ -1735,7 +1790,7 @@
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/app.js?v=1587371619775"></script>
+    <script src="/app/js/app.js?v=1587581000644"></script>
 </body>
 
 </html>

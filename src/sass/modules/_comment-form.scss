@@ -1,18 +1,44 @@
 .comment-form {
+  display: flex;
+  flex-wrap: wrap;
   padding-left: 10.9rem;
   padding-top: 5.5rem;
   padding-bottom: 5.5rem;
-
-  &__row {
-    margin-top: 3.5rem;
-  }
 
   &__input {
     width: 44.3478%;
   }
 
+  &__button {
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+
+  @include max-screen($large_tablet) {
+    padding-left: 0;
+  }
+
   @include max-screen($large_mobile) {
-    padding-left: 3.2rem;
-    padding-right: 3.2rem;
+    display: none;
+    // flex-direction: column;
+    // &__input {
+    //   order: 1;
+    //   width: 100%;
+    //   .input{
+    //     &__item{
+    //       padding: 1.3rem 2.1rem;
+    //       font-size: 12px;
+    //       border: 1px solid #C2C2C2;
+    //       background-color: #FFFFFF;
+    //     }
+    //   }
+    // }
+    // &__textarea {
+    //   order: 2;
+    // }
+    // &__button {
+    //   order: 3;
+    //   margin-left: 0;
+    // }
   }
 }

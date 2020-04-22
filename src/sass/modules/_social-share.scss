@@ -93,4 +93,50 @@
 			background-color: rgba(0, 0, 0, 0);
 		}
 	}
+
+	&_mobile {
+		@include max-screen($large_mobile) {
+			.social-share__item {
+				width: 3.28rem;
+				height: 3.28rem;
+				margin-right: 1.6rem;
+				&:last-of-type {
+					margin-right: 0;
+				}
+				& svg {
+					fill: #FFFFFF;
+				}
+				
+				&_vk {
+					.social-share__link {
+						background-color: #5181B8;
+					}
+					& svg {
+						width: 1.5rem;
+						height: 0.8rem;
+					}
+				}
+	
+				&_fb {
+					.social-share__link {
+						background-color: #5FA8DD;
+					}
+					& svg {
+						width: 0.6rem;
+						height: 1.2rem;
+					}
+				}
+	
+				&_tw {
+					.social-share__link {
+						background-color: #5FA8DD;
+					}
+					& svg {
+						width: 1.2rem;
+						height: 1rem;
+					}
+				}
+			}
+		}
+	}
 }

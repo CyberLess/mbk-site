@@ -125,5 +125,15 @@
 			}
 
 		}
+
+		&_border {
+			margin-bottom: 3.4rem;
+			.input {
+				&__item {
+					padding: 1.3rem 2.1rem;
+					font-size: 1.2rem;
+				}
+			}
+		}
 	}
 }

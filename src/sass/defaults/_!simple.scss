@@ -104,7 +104,9 @@ a{
 		margin-right: 15px;
 		padding-right: 15px;
 	}
-
+	&_mobile {
+		box-shadow: none;
+	}
 
 }
 
@@ -114,14 +116,47 @@ a{
 	@include max-screen($large_mobile) {
 		padding-bottom: 3rem;
 	}
+
+	&_top {
+		padding-top: 2rem;
+		padding-bottom: 0;
+		
+		@include max-screen($small_tablet) {
+			padding-top: 3rem;
+		}
+	}
+}
+
+.mobile-wrapper {
+	display: none;
+	background-color: #FFFFFF;
+
+	@include max-screen($large_mobile) {
+		display: block;
+	}
 }
 
 .white{
 	background-color: #fff;
+
+	&_mobile {
+		background-color: transparent;
+		@include max-screen($small_tablet) {
+			background-color: #fff;
+		}
+	}
 }
 
 .gray{
 	background-color: #4F4F4F;
+
+	&_mobile {
+		background-color: #F3F3F3;
+
+		@include max-screen($small_tablet) {
+			background-color: #4F4F4F;
+		}
+	}
 }
 
 .container{
