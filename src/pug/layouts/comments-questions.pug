@@ -1,0 +1,144 @@
++b.SECTION.comments.comments--questions
+  +e.wrap.wrap.flex._justify
+    +e.cell._left
+      include ../layouts/comments-form-questions
+      +b.FORM.comment-form-min._mobile.form(action="#")
+        +e.wrap
+          +e.input.input__._border
+            +e.INPUT.item(type="text" placeholder="Введите ваше имя" name="name")
+          +e.textarea.textarea__._min
+            +e.item.TEXTAREA(placeholder="Напишите комментарий..." name="comment-min")
+          +e.button.link.red-link.flex.flex_vertical.BUTTON(type="submit")
+            |Поделиться мнением
+          +icon('arrow', '0 0 19 10')
+      +e.list.comments-list
+        +e.item.comment._open.comment__.SECTION
+          +e.content
+            +e.head
+              +e.title-wrapper
+                +e.title.SPAN Лиза
+            +e.time.TIME Сегодня в 12:45
+            +e.text.p.P
+              |Здравствуйте, Возможно сделать рефинансирование, и взять еще деньги на личные нужды?? Белая ЗП маленькая!
+            +e.nav
+              +e.nav-item.p.A(href="#")
+                +e.nav-icon._comment.SPAN
+                  +icon('comment', '0 0 14 14')
+                |2
+              +e.nav-item.p.A(href="#")
+                +e.nav-icon._heart.SPAN
+                  +icon('heart', '0 0 14 13')
+                |2
+            +e.button._open.link.red-link.flex._vertical.BUTTON(type="button")
+              +e.SPAN
+                |Открыть ответ
+              +icon('arrow-down', '0 0 7 12')
+          +e.other._hidden
+            +e.item.comment.comment__.SECTION
+              +e.content
+                +e.head
+                  +e.avatar
+                    IMG(src="/app/img/comment-avatar.jpg")
+                  +e.title-wrapper
+                    +e.title.SPAN Астафьев Алексей
+                      +e.answer.small
+                        +icon('corner-up-left', '0 0 14 14')
+                        |Лиза
+                    +e.subtitle Финансовый аналитик МБК
+                +e.time.TIME Сегодня в 08:30
+                +e.text.p.P
+                  |Доброго дня, Лиза!
+                  br
+                  |Наша компания специализируется на рефинансировании кредитов. Мы объединяем все кредиты в 1 и снижаем платежи на 70%, при этом официальная зарплата - не самое главное,можно учесть и дополнительные "серые" доходы. Стоит отметить, что кредиты, которые вы захотите закрыть, не будут влиять на расчет вашей платежеспособности (банк сразу считает, что они уже закрыты и не берет их в расчет), что позволяет получить большую сумму и меньшую ставку.
+                +e.nav
+                  +e.nav-item.p.A(href="#")
+                    +e.nav-icon._comment.SPAN
+                      +icon('comment', '0 0 14 14')
+                    |1
+                  +e.nav-item.p.A(href="#")
+                    +e.nav-icon._heart.SPAN
+                      +icon('heart', '0 0 14 13')
+                    |2
+                +e.button.link.red-link.flex._vertical.BUTTON(type="button")
+                  |Комментировать
+              +e.other
+                +e.item.comment.comment__.SECTION
+                  +e.content
+                    +e.head
+                      +e.title-wrapper
+                        +e.title.SPAN Михаил
+                          +e.answer.small
+                            +icon('corner-up-left', '0 0 14 14')
+                            |Астафьев Алексей
+                    +e.time.TIME Сегодня в 08:30
+                    +e.text.p.P
+                      |Здравствуйте! Возможно ли оформить кредит с просрочками для погашения микрозаймов?
+                    +e.button.link.red-link.flex._vertical.BUTTON(type="button")
+                      |Комментировать
+                +e.item.comment.comment__.SECTION
+                  +e.content._no-border
+                    include ../layouts/comment-min-form
+        +e.item.comment._open.comment__.SECTION
+          +e.content
+            +e.head
+              +e.title-wrapper
+                +e.title.SPAN Валерия
+            +e.time.TIME Сегодня в 08:30
+            +e.text.p.P
+              |Здравствуйте! Возможно ли оформить кредит с просрочками для погашения микрозаймов?
+            +e.nav
+              +e.nav-item.p.A(href="#")
+                +e.nav-icon._comment.SPAN
+                  +icon('comment', '0 0 14 14')
+                |7
+              +e.nav-item.p.A(href="#")
+                +e.nav-icon._heart.SPAN
+                  +icon('heart', '0 0 14 13')
+                |15
+            +e.button._open.link.red-link.flex._vertical.BUTTON(type="button")
+              +e.SPAN
+                |Открыть ответ
+              +icon('arrow-down', '0 0 7 12')
+          +e.other._hidden
+            +e.content._no-border
+              include ../layouts/comment-min-form
+        +e.item.comment.comment__.SECTION
+          +e.content
+            +e.head
+              +e.title-wrapper
+                +e.title.SPAN Анфиса
+            +e.time.TIME 15.01.2020
+            +e.text.p.P
+              |Смогу ли я получить кредит на бизнес если работаю более полугода в подмосковье а прописан в г. Кисловодск,?
+            +e.nav
+              +e.nav-item.p.A(href="#")
+                +e.nav-icon._comment.SPAN
+                  +icon('comment', '0 0 14 14')
+                |9
+              +e.nav-item.p.A(href="#")
+                +e.nav-icon._heart.SPAN
+                  +icon('heart', '0 0 14 13')
+                |11
+            +e.button.link.red-link.flex._vertical.BUTTON(type="button")
+              |Открыть ответ
+              +icon('arrow-down', '0 0 7 12')
+        +e.item.comment.comment__.SECTION
+          +e.content
+            +e.head
+              +e.title-wrapper
+                +e.title.SPAN Валерия
+            +e.time.TIME 10.01.2020
+            +e.text.p.P
+              |Здравствуйте! Возможно ли оформить кредит с просрочками для погашения микрозаймов?
+            +e.nav
+              +e.nav-item.p.A(href="#")
+                +e.nav-icon._comment.SPAN
+                  +icon('comment', '0 0 14 14')
+                |7
+              +e.nav-item.p.A(href="#")
+                +e.nav-icon._heart.SPAN
+                  +icon('heart', '0 0 14 13')
+                |15
+            +e.button.link.red-link.flex._vertical.BUTTON(type="button")
+              |Открыть ответ
+              +icon('arrow-down', '0 0 7 12')

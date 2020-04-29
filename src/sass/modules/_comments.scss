@@ -30,19 +30,28 @@
 		margin-left: 2rem;
 		color: rgb(191, 191, 191);
 	}
+	&--questions {
+		padding-top: 2.1rem;
+		padding-bottom: 7rem;
+		& .comments__cell {
+			&_left {
+				width: 59%;
+			}
+		}
+	}
 
 	@include max-screen($small_desktop) {
 		&__cell {
 			&_left {
 				width: 65%;
 			}
-	
+
 			&_right {
 				width: 22%;
 			}
 		}
   }
-  
+
   @include max-screen($large_tablet) {
 		&__wrap {
 			padding-right: 32px;
@@ -51,7 +60,7 @@
 			&_left {
 				width: 100%;
 			}
-	
+
 			&_right {
 				display: none;
 			}
