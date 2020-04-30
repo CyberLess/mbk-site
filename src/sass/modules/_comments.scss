@@ -36,6 +36,9 @@
 		& .comments__cell {
 			&_left {
 				width: 59%;
+				@include max-screen($small_tablet) {
+					width: 100%;
+				}
 			}
 		}
 	}
