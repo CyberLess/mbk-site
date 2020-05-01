@@ -233,5 +233,9 @@
 	&_white {
 		background-color: #FFFFFF;
 		padding-top: 19.6rem;
+
+		@include max-screen($small_tablet) {
+			padding-top: 5.1rem;
+		}
 	}
 }

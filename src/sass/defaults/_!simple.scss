@@ -124,6 +124,9 @@ a{
 		@include max-screen($small_tablet) {
 			padding-top: 3rem;
 		}
+		@include max-screen($large_mobile) {
+			padding-bottom: 3rem;
+		}
 	}
 }
 
