@@ -24,4 +24,23 @@
       margin-top: 4rem;
     }
   }
+
+  &__desc {
+    max-width: 48.6rem;
+    margin-top: 2.9rem;
+    font-weight: 400;
+  }
+
+  &_dark {
+    color: #0E0E0E;
+    background-image: url("/img/news-bg.jpg");
+
+    @include max-screen($large_mobile) {
+      background-image: url("/img/news-bg-mobile.jpg")!important;
+    }
+
+    .header-arrow__breadcrumbs {
+      color: #0E0E0E;
+    }
+  }
 }

@@ -1,0 +1,37 @@
+.news-page {
+	padding-top: 8rem;
+	padding-bottom: 9.5rem;
+
+	&__wrap {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__content {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+	}
+
+	&__title {
+		font-weight: 700;
+	}
+
+	&__column {
+		&_left {
+			width: 872/1336*100%;
+		}
+
+		&_right {
+			width: 288/1336*100%;
+		}
+	}
+}
