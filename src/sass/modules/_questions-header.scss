@@ -55,8 +55,8 @@
 
 		&__title {
 			display: block;
-			width: 95%;
 			margin-bottom: 5.2rem;
+			padding-right: 5%;
 		}
 
 		&__categories-btn {
@@ -123,17 +123,25 @@
 
 			&-title {
 				display: block;
-				margin-bottom: 4rem;
+				max-width: 600px;
+				margin: 0 auto 4rem;
 				padding-left: 1.5rem;
 				padding-right: 5rem;
 			}
 
 			&-header {
 				display: flex;
+				max-width: 600px;
+				margin: 0 auto;
 				padding: 2rem 1.7rem 2.1rem;
 				border: 1px solid rgba(0, 0, 0, 0.1);
 
 				background-color: #ffffff;
+			}
+
+			&-tags {
+				max-width: 600px;
+				margin: 0 auto;
 			}
 
 			&-select-all,
@@ -172,7 +180,7 @@
 
 			&-submit {
 				display: block;
-				//width: 100%;
+				width: 100%;
 				max-width: 50rem;
 				margin: 3rem auto 0;
 			}

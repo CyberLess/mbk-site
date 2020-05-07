@@ -31,14 +31,23 @@ $(() => {
     $formCheckbox.prop('checked', true);
   };
 
+  const removeHideClass = () => {
+    if ($(window).width() > 768) {
+      $questionForm.removeClass('mfp-hide');
+    }
+  };
+
   const checkIsMobile = () => {
-    if ($(window).width() <= 768) {
+    if ($(window).width() <= 768 && !$questionForm.hasClass('question-animation-open')) {
       $questionForm.addClass('mfp-hide');
 
       $showAllBtn.click(checkAllCategories);
-    } else {
-      $questionForm.removeClass('mfp-hide');
-      $showAllBtn.off()
+    } else if ($(window).width() > 768) {
+      if ($questionForm.hasClass('question-animation-open')) {
+        $.magnificPopup.close();
+      }
+      removeHideClass();
+      $showAllBtn.off();
     }
   };
 
@@ -47,7 +56,8 @@ $(() => {
     removalDelay: 300,
     callbacks: {
       open: openPopup,
-      beforeClose: closePopup
+      beforeClose: closePopup,
+      afterClose: removeHideClass
     }
   });
   checkIsMobile();
