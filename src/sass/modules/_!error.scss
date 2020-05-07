@@ -10,4 +10,9 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	@extend .small;
+
+	@include max-screen($large_mobile) {
+		font-size: .9rem;
+		margin-top: .3rem;
+	}
 }

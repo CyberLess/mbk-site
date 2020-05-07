@@ -1,7 +1,7 @@
 +b.SECTION.credit
 	+e.wrap.wrap
 		+breadcrumbs('Главная', 'Услуги', 'Получить деньги')
-		+e.title.h2 Получить деньги
+		+e.title.h2.H2 Получить деньги
 		+e.form.form.FORM
 			+e.form-row.flex
 				+e.form-cell
@@ -31,32 +31,55 @@
 								option 2 месяца
 								option 3 месяца
 								option 4 месяца
-			+e.form-tags.flex._start
-				+e.tag.tag__._dark-active.LABEL
-					+e.input.INPUT(type="checkbox" name="credit[type]" value='Популярные')
-					+e.text.SPAN Популярные
-				+e.tag.tag__._dark-active.LABEL
-					+e.input.INPUT(type="checkbox" name="credit[type]" value='На авто')
-					+e.text.SPAN На авто
-				+e.tag.tag__._dark-active.LABEL
-					+e.input.INPUT(type="checkbox" checked="" name="credit[type]" value='На бизнес')
-					+e.text.SPAN На бизнес
-				+e.tag.tag__._dark-active.LABEL
-					+e.input.INPUT(type="checkbox" name="credit[type]" value='На ремонт')
-					+e.text.SPAN На ремонт
-				+e.tag.tag__._dark-active.LABEL
-					+e.input.INPUT(type="checkbox" name="credit[type]" value='На отдых')
-					+e.text.SPAN На отдых
-				+e.tag.tag__._dark-active.LABEL
-					+e.input.INPUT(type="checkbox" name="credit[type]" value='На учебу')
-					+e.text.SPAN На учебу
-				+e.tag.tag__._dark-active.LABEL
-					+e.input.INPUT(type="checkbox" name="credit[type]" value='На лечение')
-					+e.text.SPAN На лечение
-				+e.tag.tag__._dark-active.LABEL
-					+e.input.INPUT(type="checkbox" name="credit[type]" value='На личные цели')
-					+e.text.SPAN На личные цели
-			+link(class="_red" href="#test") Открыть все условия
+			+e.modal
+				+e.modal-part._top._fixed
+					+e.modal-head.flex._vertical._center
+						+e.modal-title.h2 Получить деньги
+						+e.modal-close.close__.js-close-filter-tags
+							+icon('close', '0 0 18 18')
+				+e.modal-part._center._fluid
+					+e.modal-inner
+						+e.modal-part._fixed
+							+e.modal-top.flex._justify._vertical
+								+e.select-all.small.is-medium.text-red
+									| Выбрать все категории 
+								+e.reset.small
+									| Сбросить	
+						+e.modal-part._fluid
+							+e.modal-inner._scroll
+								+e.form-tags.flex._start
+									+e.tag.tag__._dark-active.LABEL
+										+e.input.INPUT(type="checkbox" name="credit[type]" value='Популярные')
+										+e.text.SPAN Популярные
+									+e.tag.tag__._dark-active.LABEL
+										+e.input.INPUT(type="checkbox" name="credit[type]" value='На авто')
+										+e.text.SPAN На авто
+									+e.tag.tag__._dark-active.LABEL
+										+e.input.INPUT(type="checkbox" checked="" name="credit[type]" value='На бизнес')
+										+e.text.SPAN На бизнес
+									+e.tag.tag__._dark-active.LABEL
+										+e.input.INPUT(type="checkbox" name="credit[type]" value='На ремонт')
+										+e.text.SPAN На ремонт
+									+e.tag.tag__._dark-active.LABEL
+										+e.input.INPUT(type="checkbox" name="credit[type]" value='На отдых')
+										+e.text.SPAN На отдых
+									+e.tag.tag__._dark-active.LABEL
+										+e.input.INPUT(type="checkbox" name="credit[type]" value='На учебу')
+										+e.text.SPAN На учебу
+									+e.tag.tag__._dark-active.LABEL
+										+e.input.INPUT(type="checkbox" name="credit[type]" value='На лечение')
+										+e.text.SPAN На лечение
+									+e.tag.tag__._dark-active.LABEL
+										+e.input.INPUT(type="checkbox" name="credit[type]" value='На личные цели')
+										+e.text.SPAN На личные цели
+				+e.modal-part._bottom._fixed.js-close-filter-tags
+					+button(false) Подобрать
+			+e.bottom
+				+e.cats.border-button__.js-open-filter-tags
+					+e.SPAN.icon
+						+icon('cats', '0 0 13 13')
+					+e.SPAN.text Категории
+				+link(class="_red" href="#test") Открыть все условия
 		+e.list.service__._noscope
 			+e.list-top.flex._vertical
 				+e.type.js-service-type.is-active.h6

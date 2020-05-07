@@ -23,6 +23,7 @@
 		// padding-left: 3.6rem;
 		margin-top: 1.8rem;
 		font-weight: normal;
+		min-height: 2.2rem;
 		color: $red;
 	}
 
@@ -62,6 +63,7 @@
 		width: 28%;
 		height: 100%;
 		z-index: 15;
+		transition: ease-out .3s;
 		overflow: hidden;
 	}
 

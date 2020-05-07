@@ -313,6 +313,12 @@
 			padding-top: 1.5rem;
 			padding-bottom: .8rem;
 
+			display: none;
+
+			&.is-visible{
+				display: flex;
+			}
+
 			&-cell{
 				width: 100%;
 				&_left{

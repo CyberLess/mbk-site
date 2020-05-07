@@ -1,0 +1,38 @@
+.check-list{
+	&__item{
+		display: block;
+		padding-left: 5.1rem;
+		position: relative;
+
+		&:not(:last-child){
+			margin-bottom: 3.3rem;
+		}
+	}
+
+	&__icon{
+		width: 1.8rem;
+		position: absolute;
+		left: 0;
+		top: 0;
+		margin-top: 0.6rem;
+		stroke: $red;
+		fill: transparent;
+		stroke-width: 2;
+	}
+
+	@include max-screen($large_mobile) {
+		&__item{
+			padding-left: 3.1rem;
+			font-weight: normal;
+
+			&:not(:last-child){
+				margin-bottom: 2rem;
+			}			
+		}
+
+		&__icon{
+			width: 14px;
+			margin-top: 0.4rem;
+		}
+	}
+}

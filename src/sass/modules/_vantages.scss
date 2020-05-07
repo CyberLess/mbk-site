@@ -1,92 +1,87 @@
-.vantages{
+.vantages {
 	padding-top: 6.4rem;
 	padding-bottom: 2.8rem;
 
-	&__title{
-		padding-top: 106/410*100%;
+	&__title {
+		padding-top: 106/410 * 100%;
 	}
 
-	&__row{
-		margin-left: -26/1336*100%;
-		margin-right: -26/1336*100%;
+	&__row {
+		margin-left: -26/1336 * 100%;
+		margin-right: -26/1336 * 100%;
 	}
 
-	&__text{
+	&__text {
 		font-weight: 400;
 		margin-top: 3.7rem;
 	}
 
-	&__cell{
-		width: 410/1388*100%;
-		margin: 26/1388*100%;
+	&__cell {
+		width: 410/1388 * 100%;
+		margin: 26/1388 * 100%;
 		position: relative;
 
-		&-icon{
+		&-icon {
 			width: 9rem;
 			height: 9rem;
 			border-radius: 50%;
 			position: absolute;
 			left: 5rem;
 			top: 0;
-			background-color: #F3F3F3;
+			background-color: #f3f3f3;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			margin-top: -4.5rem;
 
-			svg{
+			svg {
 				display: block;
 				width: 3.4rem;
 				fill: transparent;
-				transition: ease .15s;
+				transition: ease 0.15s;
 				stroke-width: 2;
-				stroke: #0E0E0E;
-
+				stroke: #0e0e0e;
 			}
 		}
 
-		&-inside{
-			padding-left: 49/410*100%;
-			padding-right: 30/410*100%;
-			padding-top: 122/410*100%;
-			padding-bottom: 54/410*100%;			
+		&-inside {
+			padding-left: 49/410 * 100%;
+			padding-right: 30/410 * 100%;
+			padding-top: 122/410 * 100%;
+			padding-bottom: 54/410 * 100%;
 		}
 
-		&_white{
-			background: #FFFFFF;
+		&_white {
+			background: #ffffff;
 			border-radius: 5px;
-
-
 		}
 
-		&:hover{
-			.vantages{
-				&__link{
-					
-
+		&:hover {
+			.vantages {
+				&__link {
 				}
-				&__cell{
-					&-icon{
-						svg{
+				&__cell {
+					&-icon {
+						svg {
 							stroke: $red;
 						}
 					}
 				}
 			}
-			.link{
+			.link {
 				color: $red;
-				&__arrow{
+				&__arrow {
 					opacity: 1;
 					fill: $red;
 					margin-right: 0;
 					width: 1.8rem;
 					// transform: translateX(0px);
 
-					.triangle{
+					.triangle {
 						stroke: $red;
 					}
 
-					.stroke{
+					.stroke {
 						fill: $red;
 						// stroke: none;
 					}
@@ -95,4 +90,11 @@
 		}
 	}
 
+	@include max-screen($small_desktop) {
+		padding-top: 3.4rem;
+
+		&__cell {
+			margin: 2.5% 1.8732%;
+		}
+	}
 }

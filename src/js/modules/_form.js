@@ -2,15 +2,39 @@ import Inputmask from "inputmask";
 
 $(()=>{
 
-	var selector = document.querySelectorAll("input[name='phone']");
 
-	var im = new Inputmask({
-		"mask": "+7 (999) 999-99-99",
-		clearMaskOnLostFocus: true,
-		clearIncomplete: true			
+	var selector = ["input[name='phone']", ".js-passport-mask", ".js-date-mask", ".js-code-mask"];
+
+	selector.forEach(element => {
+
+		let mask;
+
+		let item = document.querySelectorAll(element);
+
+		switch (element) {
+			case "input[name='phone']":
+				mask = "+7 (999) 999-99-99";
+			break;
+			case ".js-passport-mask":
+				mask = "9999 999999";
+			break;
+			case ".js-date-mask":
+				mask = "99.99.9999";
+			break;
+			case ".js-code-mask":
+				mask = "999-999";
+			break;
+		}
+
+		let im = new Inputmask({
+			"mask": mask,
+			clearMaskOnLostFocus: true,
+			clearIncomplete: true			
+		});		
+
+		im.mask(item);
+
 	});
-
-	im.mask(selector);
 
 
 	$('.input__item')

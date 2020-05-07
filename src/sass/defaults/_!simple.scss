@@ -16,6 +16,8 @@
 		max-width: 1188px;
 	}
 
+
+
 	@include max-screen($large_desktop) {
 		max-width: 1200px;
 	}
@@ -61,6 +63,10 @@ body{
 	&.js-lock{
 		overflow-x: hidden;
 		overflow-y: scroll;
+	}
+
+	&.is-white{
+		background: #fff;
 	}
 }
 
@@ -161,6 +167,10 @@ a{
 
 	&_center{
 		justify-content: center;
+	}
+
+	&_right{
+		justify-content: flex-end;
 	}
 
 	&_inline{
