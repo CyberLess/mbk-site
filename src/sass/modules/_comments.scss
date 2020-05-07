@@ -76,10 +76,16 @@
 		}
 	}
 
+	@include max-screen($small_tablet) {
+		&__wrap {
+			padding-top: 3.1rem;
+		}
+	}
+
 	@include max-screen($large_mobile) {
 		&__wrap {
 			padding-right: 15px;
-			padding-top: 5.1rem;
+			//padding-top: 5.1rem;
 		}
 		&__head {
 			padding-bottom: 0;

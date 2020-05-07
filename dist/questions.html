@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Отвечаем на&nbsp;вопросы</title>
-    <link rel="stylesheet" href="/app/css/app.css?v=1588244025224">
+    <link rel="stylesheet" href="/app/css/app.css?v=1588811335224">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
@@ -748,8 +748,14 @@
                         <li class="breadcrumbs__item"><a class="breadcrumbs__link p" href="#">Получить деньги</a>
                         </li>
                     </ul>
-                    <div class="questions-header__title h2">Отвечаем на&nbsp;вопросы</div>
-                    <form class="questions-header__form form">
+                    <div class="questions-header__title h2">Отвечаем на&nbsp;вопросы</div><a class="questions-header__categories-btn" href="#categories-popup-mobile"><span class="questions-header__categories-btn-icon"><svg class="icon icon-bailer" viewBox="0 0 13 13"><use xlink:href="/app/icons/sprite.svg#bailer"></use></svg></span><span class="questions-header__categories-btn-text">Категории</span></a>
+                    <form
+                    class="questions-header__form form" id="categories-popup-mobile">
+                        <div class="questions-header__form-title h2">Отвечаем на&nbsp;вопросы</div>
+                        <div class="questions-header__form-header">
+                            <button class="questions-header__form-select-all" type="button">Выбрать все категории</button>
+                            <button class="questions-header__form-reset" type="reset">Сбросить</button>
+                        </div>
                         <div class="questions-header__form-tags flex flex_start">
                             <label class="questions-header__tag tag tag_dark-active">
                                 <input class="tag__input" type="checkbox" name="type" value="Долги" /><span class="tag__text">Долги</span>
@@ -769,8 +775,9 @@
                             <label class="questions-header__tag tag tag_dark-active">
                                 <input class="tag__input" type="checkbox" name="type" value="Рефинансирование" /><span class="tag__text">Рефинансирование</span>
                             </label>
+                            <button class="questions-header__form-submit btn" type="submit">Подобрать</button>
                         </div>
-                    </form>
+                        </form>
                 </div>
             </section>
             <section class="comments comments--questions">
@@ -1062,7 +1069,7 @@
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/app.js?v=1588244025264"></script>
+    <script src="/app/js/app.js?v=1588811335307"></script>
 </body>
 
 </html>

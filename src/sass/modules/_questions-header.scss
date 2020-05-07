@@ -1,4 +1,7 @@
 .questions-header{
+	position: relative;
+	z-index: 500;
+
 	padding-top: 4.5rem;
 	padding-bottom: 7rem;
 
@@ -11,11 +14,18 @@
 
 	}
 
+	&__categories-btn {
+		display: none;
+	}
+
 	&__tag{
 		margin-right: 2rem;
 	}
 
 	&__form{
+		&-title {
+			display: none;
+		}
 
 		&-tags{
 			margin-bottom: 1rem;
@@ -28,11 +38,81 @@
 			margin-bottom: 4rem;
 		}
 
+		&-header {
+			display: none;
+		}
+
+		&-submit {
+			display: none;
+		}
 	}
 
 
 	@include max-screen($small_tablet) {
+		padding-bottom: 0;
+
+		background-color: #ffffff;
+
+		&__title {
+			display: block;
+			width: 95%;
+			margin-bottom: 5.2rem;
+		}
+
+		&__categories-btn {
+			display: flex;
+			justify-content: center;
+			min-width: 23rem;
+			width: 97%;
+			padding: 1.3rem 1rem 1rem;
+			border: 1px solid #0E0E0E;
+			border-radius: 5px;
+
+			font-family: 'Geometria';
+			font-size: 1.6rem;
+			color: #0E0E0E;
+			text-align: center;
+
+			background-color: transparent;
+			cursor: pointer;
+
+			transition: ease .2s;
+
+			&:hover,
+			&:focus {
+				border-color: rgba(14, 14, 14, 0.5);
+
+				color: rgba(14, 14, 14, 0.5);
+
+				.questions-header__categories-btn-icon {
+					opacity: .5;
+				}
+			}
+		}
+
+		&__categories-btn-icon {
+			width: 1.3rem;
+			margin-right: 1.2rem;
+
+			transition: ease .2s;
+		}
+
+		&__categories-btn-text {
+			margin-top: -.4rem;
+		}
+
 		&__form{
+			position: fixed;
+			top: 0;
+			left: 0;
+
+			overflow-y: scroll;
+			width: 100vw;
+			height: 100vh;
+			padding: 4.3rem 1rem 3rem;
+
+			background-color: #F3F3F3;
+
 			&-row{
 				justify-content: space-between;
 			}
@@ -41,22 +121,153 @@
 				margin-right: 0;
 			}
 
+			&-title {
+				display: block;
+				margin-bottom: 4rem;
+				padding-left: 1.5rem;
+				padding-right: 5rem;
+			}
+
+			&-header {
+				display: flex;
+				padding: 2rem 1.7rem 2.1rem;
+				border: 1px solid rgba(0, 0, 0, 0.1);
+
+				background-color: #ffffff;
+			}
+
+			&-select-all,
+			&-reset {
+				flex-shrink: 0;
+				border: none;
+
+				font-family: 'Geometria';
+				font-size: 1.4rem;
+
+				background-color: transparent;
+				cursor: pointer;
+
+				transition: ease .2s;
+
+				&:hover,
+				&:focus {
+				    color: #000000;
+				}
+
+				&:active {
+					opacity: .6;
+				}
+			}
+
+			&-select-all {
+				margin-right: 3.5rem;
+
+				font-weight: 500;
+				color: #FF0600;
+			}
+
+			&-reset {
+				color: rgba(14, 14, 14, 0.19);
+			}
+
+			&-submit {
+				display: block;
+				//width: 100%;
+				max-width: 50rem;
+				margin: 3rem auto 0;
+			}
+		}
+
+		&__tag {
+			margin-top: 0 !important;
+			margin-right: 0;
+			margin-bottom: 0;
+
+			.tag__text {
+				height: 5.9rem;
+				border-top: none !important;
+
+				font-size: 1.4rem;
+			}
 		}
 	}
 
 	@include max-screen($large_mobile) {
 		padding-top: 5.1rem;
-		&__form{
 
+		&__categories-btn {
+			width: 80%;
+			margin: 0 auto;
+			padding: .9rem 1rem .7rem;
+
+			font-size: 1.4rem;
+		}
+
+		&__categories-btn-text {
+			margin-top: -.2rem;
+		}
+
+		&__form{
 			&-cell{
 				width: 100%;
 				margin-right: 0;
 				margin-bottom: 2.4rem;
 			}
-
 		}
-		&__title{
-			margin-bottom: 2.2rem;
+	}
+}
+
+@keyframes questionAnimationOpen {
+	0% {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.question-animation-open {
+	animation-name: questionAnimationOpen;
+	animation-duration: .3s;
+	animation-timing-function: ease-in;
+}
+
+@keyframes questionAnimationClose {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+.question-animation-close {
+	animation-name: questionAnimationClose;
+	animation-duration: .3s;
+	animation-timing-function: ease-out;
+}
+
+.mfp-close-btn-in {
+	.questions-header__form {
+		button.mfp-close {
+			right: 1.6rem;
+			top: 3.6rem;
+
+			font-size: 4rem;
+			font-weight: normal;
+			font-family: 'Geometria';
+			color: #FF0600;
+
+			transition: ease .2s;
+
+			&:hover,
+			&:focus {
+			    color: #000000;
+			}
 		}
 	}
 }

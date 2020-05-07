@@ -133,7 +133,7 @@ $(() => {
       beforeClose: () => {
         closeSecondPop($secondPopup)
       }
-    },
+    }
   });
 
   $closeSecondBtn.click(function () {
