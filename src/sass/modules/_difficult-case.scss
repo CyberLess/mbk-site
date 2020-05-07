@@ -1,6 +1,10 @@
 .difficult-case{
   padding-top: 11.5rem;
 
+  @include max-screen($small_tablet) {
+    padding-top: 5.5rem;
+  }
+
   &__title{
     margin-bottom: 7.2rem;
 

@@ -29,11 +29,17 @@
 		padding-bottom: 2rem;
 
 		@include max-screen($small_tablet) {
+			min-height: 0;
 			padding-top: 4.5rem;
+			padding-bottom: 3rem;
 		}
 
 		& .conditions__slider{
 			min-height: 620px;
+
+			@include max-screen($small_tablet) {
+				min-height: 0;
+			}
 		}
 		& .gallery-slider__cell_slider {
 			margin-top: 10.0rem;

@@ -48,6 +48,7 @@
 
   @include min-screen($small_tablet + 1) {
     justify-content: flex-start;
+    padding-bottom: 3.5rem;
   }
 
   @include min-screen($we-sell-mock-mob-breakpoint) {

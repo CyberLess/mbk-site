@@ -62,15 +62,15 @@ p.sell-apartment__applications.sell-apartment__applications_mobile {
   @include max-screen($small_tablet) {
     display: block;
     width: 90%;
-    margin-bottom: 4rem;
+    margin-bottom: 3.5rem;
     padding-left: 3rem;
 
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     line-height: 1.5;
     font-weight: bold;
 
     background-size: 1.5rem 1.5rem;
-    background-position: 0 0;
+    background-position: 0 2px;
   }
 
   @include min-screen($large_mobile + 1) {
@@ -143,9 +143,17 @@ p.sell-apartment__applications.sell-apartment__applications_mobile {
   opacity: .5;
 }
 
+.sell-apartment__brake-header-bottom {
+  display: none;
+}
+
 .sell-apartment-bottom-wrap {
   .sell-apartment {
-    padding-top: 6.5rem;
+    padding-top: 12.5rem;
+
+    @include max-screen($large_mobile) {
+      padding-top: 5rem;
+    }
   }
 
   .sell-apartment__slogan {
@@ -153,7 +161,21 @@ p.sell-apartment__applications.sell-apartment__applications_mobile {
     font-weight: bold;
 
     @include max-screen($large_tablet) {
+      margin-bottom: 2.5rem;
+      
       font-size: 3.6rem;
+    }
+
+    @include max-screen($large_mobile) {
+      font-size: 2.6rem;
+      text-align: center;
+    }
+
+  }
+
+  .sell-apartment__brake-header-bottom {
+    @include max-screen($large_mobile) {
+      display: inline;
     }
   }
 }
