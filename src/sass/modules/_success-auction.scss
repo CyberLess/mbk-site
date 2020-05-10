@@ -1,0 +1,349 @@
+.success-auction {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  &__wrap {
+    max-width: 1420px;
+    padding: 1rem 0 0;
+  }
+
+  &__top-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem 4.5rem;
+    padding: 1.9rem 2rem;
+
+    background-color: rgba(196, 196, 196, 0.1);
+  }
+
+  &__success-icon-wrap {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1.1rem;
+
+    .circle {
+      fill: #19C13E;
+    }
+
+    .check {
+      stroke: white;
+      stroke-width: 2;
+    }
+  }
+
+  &__top-text {
+    font-size: 1.4rem;
+  }
+
+  &__middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    margin-bottom: .9rem;
+  }
+
+  &__slogan {
+    margin-bottom: 3.8rem;
+  }
+
+  &__form {
+    display: flex;
+    align-items: flex-start;
+
+    .form__email {
+      flex-shrink: 0;
+      width: 32rem;
+      margin-right: 4rem;
+    }
+
+    .form__button {
+      flex-shrink: 0;
+      width: 31.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .checkbox__check {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+    }
+  }
+
+  &__bottom {
+    position: relative;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 1.2rem;
+      left: 47%;
+      z-index: 1;
+
+      width: .4rem;
+      height: 36.3rem;
+
+      background-color: #FF0400;
+    }
+  }
+
+  &__prompt {
+    position: absolute;
+    top: -4rem;
+    right: 3rem;
+
+    display: flex;
+
+    font-size: 1.4rem;
+    color: rgba(14, 14, 14, 0.5);
+  }
+
+  &__prompt-star {
+    position: absolute;
+    top: -1.4rem;
+    left: -1.4rem;
+
+    font-size: 2.2rem;
+  }
+
+  &__prompt-text {
+    width: 17rem;
+  }
+
+  &__carusel-wrap {
+    overflow: hidden;
+  }
+
+  &__carusel {
+    position: relative;
+    right: 54.7rem;
+
+    display: flex;
+    padding-top: 3rem;
+
+    list-style: none;
+
+    cursor: w-resize
+  }
+
+  &__item {
+    position: relative;
+
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    width: 24.8rem;
+    height: 32.5rem;
+    margin-right: .8rem;
+    margin-bottom: 2rem;
+    padding: 5.4rem 2.3rem 2.4rem 3rem;
+
+    &:hover,
+    &:focus {
+      color: #0E0E0E;
+
+      background-color: #F3F3F3;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+      .icon-button__icon svg {
+        stroke: #0E0E0E;
+      }
+    }
+
+    &::selection {
+      background: transparent;
+    }
+
+    &::-moz-selection {
+      background: transparent;
+    }
+
+    .icon-button__icon {
+      left: 3rem;
+
+      width: 6rem;
+      height: 6rem;
+      margin-top: 0;
+
+      transform: translateY(-50%);
+
+      svg {
+        width: 2.7rem;
+
+        stroke-linecap: round;
+      }
+    }
+
+    .icon-button__text {
+      position: relative;
+      z-index: 1;
+
+      &::selection {
+        background: transparent;
+      }
+
+      &::-moz-selection {
+        background: transparent;
+      }
+
+      br {
+        &::selection {
+          background: transparent;
+        }
+
+        &::-moz-selection {
+          background: transparent;
+        }
+      }
+    }
+
+    .icon-button__prize-fire-wrap {
+      display: block;
+      width: 2rem;
+    }
+
+    .icon-button__prize-wrap {
+      position: relative;
+      z-index: 1;
+
+      display: flex;
+      flex-direction: column;
+
+      margin-top: auto;
+
+      &::selection {
+        background: transparent;
+      }
+
+      &::-moz-selection {
+        background: transparent;
+      }
+    }
+
+    .icon-button__prize-text {
+      font-size: 1.2rem;
+
+      &::selection {
+        background: transparent;
+      }
+
+      &::-moz-selection {
+        background: transparent;
+      }
+    }
+
+    .icon-button__prize-amount {
+      display: flex;
+      flex-wrap: wrap;
+
+      font-size: 1.9rem;
+      font-weight: bold;
+      color: #FF0600;
+
+      &::selection {
+        background: transparent;
+      }
+
+      &::-moz-selection {
+        background: transparent;
+      }
+    }
+
+    .icon-button__prize-fire-wrap {
+      margin-left: 1rem;
+    }
+
+    .icon-button__image-wrapper {
+      position: absolute;
+
+      img {
+        &::selection {
+          background: transparent;
+        }
+
+        &::-moz-selection {
+          background: transparent;
+        }
+      }
+    }
+  }
+}
+
+.icon-button {
+  &_advertising {
+    .icon-button__image-wrapper {
+      right: 1rem;
+      bottom: 0;
+
+      width: 110px;
+    }
+  }
+
+  &_encumbrances {
+    .icon-button__image-wrapper {
+      left: 0;
+      bottom: 0;
+
+      width: 100%;
+    }
+  }
+
+  &_ad {
+    .icon-button__image-wrapper {
+      right: 0;
+      bottom: 0;
+
+      width: 140px;
+    }
+  }
+
+  &_consultation {
+    .icon-button__image-wrapper {
+      right: 0;
+      bottom: 0;
+
+      width: 200px;
+    }
+  }
+
+  &_photo {
+    .icon-button__image-wrapper {
+      right: 0;
+      bottom: 0;
+
+      width: 160px;
+    }
+  }
+
+  &_relocation {
+    .icon-button__image-wrapper {
+      right: 0;
+      bottom: 0;
+
+      width: 210px;
+    }
+  }
+
+  &_docs {
+    .icon-button__image-wrapper {
+      right: 0;
+      bottom: 0;
+
+      width: 200px;
+    }
+  }
+
+  &_cleaning {
+    .icon-button__image-wrapper {
+      right: 0;
+      bottom: 0;
+
+      width: 200px;
+    }
+  }
+}
