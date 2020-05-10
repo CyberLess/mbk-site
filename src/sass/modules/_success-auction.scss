@@ -101,6 +101,11 @@
 
     font-size: 1.4rem;
     color: rgba(14, 14, 14, 0.5);
+
+    @include max-screen($large_tablet) {
+      top: -24rem;
+      right: -1rem;
+    }
   }
 
   &__prompt-star {
