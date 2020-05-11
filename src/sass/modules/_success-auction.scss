@@ -279,10 +279,16 @@
       top: 50%;
       left: 50%;
 
+      margin: 0;
+
       transform: translate(-50%, -50%) scale(1.4);
       transition: ease .2s;
 
       background: radial-gradient(circle at 60px 0,transparent calc(30px - 1px),#fff 30px) !important;
+
+      animation-name: openWinnerItem;
+      animation-duration: .4s;
+      animation-timing-function: ease;
 
       @include max-screen($small_tablet) {
         background: radial-gradient(circle at 37px 0,transparent calc(20px - 1px),#fff 20px)!important;
@@ -546,5 +552,17 @@
     @include placeholder() {
       color: #FF0400;
     }
+  }
+}
+
+@keyframes openWinnerItem {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -47%) scale(1.4);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.4);
   }
 }
