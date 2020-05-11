@@ -155,6 +155,7 @@
 
 	@include max-screen($large_mobile) {
 		padding-top: 5.1rem;
+		padding-bottom: 2.5rem;
 
 		&__form {
 			margin-bottom: 2.1rem;

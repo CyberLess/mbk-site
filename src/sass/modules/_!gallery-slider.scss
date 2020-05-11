@@ -1,12 +1,11 @@
-.gallery-slider{
-
+.gallery-slider {
 	position: relative;
-	
-	&__list{
+
+	&__list {
 		counter-reset: list;
 	}
 
-	&__image{
+	&__image {
 		position: absolute;
 		left: 0;
 		top: 0;
@@ -16,16 +15,15 @@
 		opacity: 0;
 		visibility: hidden;
 
-		transition: .25s ease;
+		transition: 0.25s ease;
 
-		&.is-active{
+		&.is-active {
 			opacity: 1;
 			visibility: visible;
-
 		}
 	}
 
-	&__name{
+	&__name {
 		position: absolute;
 		left: 0;
 		bottom: 0;
@@ -34,11 +32,11 @@
 		font-weight: bold;
 	}
 
-	&__item{
+	&__item {
 		display: block;
 		padding-left: 3.4rem;
 		position: relative;
-		&:before{
+		&:before {
 			counter-increment: list;
 			content: counter(list);
 			color: #868686;
@@ -48,35 +46,32 @@
 			position: absolute;
 			left: 0;
 			top: 0;
-
 		}
 	}
 
-	&__link{
+	&__link {
 		color: #868686;
-		line-height: 325.5%!important;
-
+		line-height: 325.5% !important;
 	}
 
-	&__cell{
-		&_info{
+	&__cell {
+		&_info {
 			margin-left: auto;
 			margin-right: 8.5rem;
 			padding-top: 8.4rem;
 			padding-left: 7rem;
 			padding-bottom: 8.1rem;
 			padding-right: 4rem;
-			width: 378/1336*100%;
-			background: #FFFFFF;
+			width: 378/1336 * 100%;
+			background: #ffffff;
 			border-radius: 5px;
 			z-index: 15;
 			position: relative;
 			min-height: 250px;
-			color: #0E0E0E;
-
+			color: #0e0e0e;
 		}
 
-		&_slider{
+		&_slider {
 			position: absolute;
 			top: 0;
 			bottom: 0;
@@ -86,6 +81,100 @@
 			margin-bottom: 10.6rem;
 			border-radius: 5px;
 			overflow: hidden;
+		}
+	}
+
+	@include max-screen($small_desktop) {
+		&__cell {
+			&_info {
+				width: 34.29341%;
+				padding: 5.4rem 3rem 4.1rem 5rem;
+				margin-right: 5.5rem;
+			}
+			&_slider {
+				margin-top: 8.6rem;
+				margin-bottom: 8.6rem;
+			}
+		}
+	}
+
+	@include max-screen($large_tablet) {
+		&__cell {
+			&_info {
+				width: 41.29341%;
+			}
+			&_slider {
+				margin-top: 3rem;
+				margin-bottom: 3rem;
+			}
+		}
+
+		&__name {
+			font-size: 2.6rem;
+		}
+	}
+
+	@include max-screen($small_tablet) {
+		&__cell {
+			&_info {
+				width: 50%;
+				margin-right: 0;
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+				padding: 1.5rem 1rem 1.5rem 3rem;
+			}
+			&_slider {
+				width: 50%;
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+		}
+
+		&__name {
+			margin-left: 3rem;
+			margin-right: 3rem;
+			margin-bottom: 3rem;
+		}
+	}
+
+	@include max-screen($large_mobile) {
+		&__link {
+			color: #fff !important;
+			display: block;
+			width: 100%;
+			height: 6.8rem;
+
+			.arrow {
+				margin-right: 0;
+				width: 1.8rem;
+				opacity: 1 !important;
+
+				.triangle {
+					stroke: #fff !important;
+				}
+				.stroke {
+					fill: #fff !important;
+				}
+			}
+		}
+		&__item {
+			padding-left: 0;
+			&:before {
+				display: none;
+			}
+
+			&:not(:last-child) {
+				border-bottom: 1px solid rgba(#c4c4c4, 0.3);
+			}
+		}
+		&__cell {
+			width: 100%;
+			padding: 0;
+			background: transparent;
+			color: #fff;
+			&_slider {
+				display: none;
+			}
 		}
 	}
 }

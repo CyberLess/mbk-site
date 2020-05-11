@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Общая страница</title>
-    <link rel="stylesheet" href="/app/css/app.css?v=1587815418517">
+    <link rel="stylesheet" href="/app/css/app.css?v=1589221814006">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
@@ -847,7 +847,7 @@
                             </div><a class="credit__link h6 link link_red" href="#test">Открыть все условия<span class="link__arrow arrow"><svg viewBox="0 0 18.560659 9.6213207"><path class="triangle" d="M14.5 4.81v-3l3 3-3 3z"></path><path class="stroke" d="M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z"></path></svg></span></a>
                         </div>
                     </form>
-                    <div class="credit__list service service_noscope">
+                    <div class="credit__list service service_noscope js-mobile-list-hide">
                         <div class="service__list-top flex flex_vertical">
                             <div class="service__type js-service-type is-active h6">
                                 <svg class="icon icon-tile" viewBox="0 0 13 13">
@@ -859,7 +859,7 @@
                                 </svg>Списком</div>
                         </div>
                         <div class="service__row flex">
-                            <a class="service__item" href="#">
+                            <a class="service__item js-mobile-list-item" href="#">
                                 <div class="service__head flex">
                                     <picture>
                                         <source type="image/webp" srcset="/app/img/credit_1.webp">
@@ -920,7 +920,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a class="service__item" href="#">
+                            <a class="service__item js-mobile-list-item" href="#">
                                 <div class="service__head flex">
                                     <picture>
                                         <source type="image/webp" srcset="/app/img/credit_2.webp">
@@ -985,7 +985,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a class="service__item" href="#">
+                            <a class="service__item js-mobile-list-item" href="#">
                                 <div class="service__head flex">
                                     <picture>
                                         <source type="image/webp" srcset="/app/img/credit_3.webp">
@@ -1046,7 +1046,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a class="service__item" href="#">
+                            <a class="service__item js-mobile-list-item" href="#">
                                 <div class="service__head flex">
                                     <picture>
                                         <source type="image/webp" srcset="/app/img/credit_1.webp">
@@ -1107,7 +1107,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a class="service__item" href="#">
+                            <a class="service__item js-mobile-list-item" href="#">
                                 <div class="service__head flex">
                                     <picture>
                                         <source type="image/webp" srcset="/app/img/credit_2.webp">
@@ -1172,7 +1172,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a class="service__item" href="#">
+                            <a class="service__item js-mobile-list-item" href="#">
                                 <div class="service__head flex">
                                     <picture>
                                         <source type="image/webp" srcset="/app/img/credit_3.webp">
@@ -1234,13 +1234,24 @@
                                 </div>
                             </a>
                         </div>
+                        <div class="service__list-more">
+                            <button class="service__more square-button js-mobile-list-more">
+                                <div class="square-button__text">Загрузить еще условия</div>
+                                <div class="square-button__icon square-button__icon_arrow">
+                                    <svg class="icon icon-down-arrow" viewBox="0 0 6.3057 11.139">
+                                        <use xlink:href="/app/icons/sprite.svg#down-arrow"></use>
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </section>
             <section class="vantages">
                 <div class="vantages__wrap wrap">
-                    <div class="vantages__row flex">
-                        <div class="vantages__cell">
+                    <div class="vantages__mobile" id="vantages-title-mobile"></div>
+                    <div class="vantages__row flex js-to-slider" id="vantages-row" data-dots="1">
+                        <div class="vantages__cell js-move-item" data-point="580" data-method="prepend" data-from="#vantages-row" data-to="#vantages-title-mobile">
                             <div class="vantages__title h2">Преиму&shy;щества кредита</div>
                         </div>
                         <a class="vantages__cell vantages__cell_white" href="#">
@@ -1396,8 +1407,11 @@
                             <img src="/app/img/council.jpg" class="council__bg object-fit" alt="" role="presentation" />
                     </picture>
                     <div class="council__head-inner">
-                        <div class="council__title h2">Как быстро продать
-                            <br>квартиру?</div>
+                        <div class="council__head-top">
+                            <div class="council__label small">Совет эксперта</div>
+                            <div class="council__title h3">Как быстро продать
+                                <br>квартиру?</div>
+                        </div>
                         <div class="council__author flex flex_vertical">
                             <div class="council__author-cell council__author-cell_avatar">
                                 <div class="council__avatar">
@@ -2233,7 +2247,7 @@
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/app.js?v=1587815418622"></script>
+    <script src="/app/js/app.js?v=1589221814140"></script>
 </body>
 
 </html>

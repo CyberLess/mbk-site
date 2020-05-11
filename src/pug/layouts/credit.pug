@@ -80,7 +80,7 @@
 						+icon('cats', '0 0 13 13')
 					+e.SPAN.text Категории
 				+link(class="_red" href="#test") Открыть все условия
-		+e.list.service__._noscope
+		+e.list.service__._noscope.js-mobile-list-hide
 			+e.list-top.flex._vertical
 				+e.type.js-service-type.is-active.h6
 					+icon('tile', '0 0 13 13')
@@ -89,7 +89,7 @@
 					+icon('burger', '0 0 14 13')
 					| Списком
 			+e.row.flex
-				+e.item.A(href="#")
+				+e.item.js-mobile-list-item.A(href="#")
 					+e.head.flex.DIV
 						+e.head-bg.object-fit.IMG(src='/img/credit_1.jpg')
 						+e.head-inner
@@ -126,7 +126,7 @@
 											| 5623
 							+button(false) Оформить без залога
 							+e.text.small Сегодня оформили 322 человек
-				+e.item.A(href="#")
+				+e.item.js-mobile-list-item.A(href="#")
 					+e.head.flex.DIV
 						+e.head-bg.object-fit.IMG(src='/img/credit_2.jpg')
 						+e.head-top
@@ -166,7 +166,7 @@
 											| 5623
 							+button(false) Оформить без залога
 							+e.text.small Сегодня оформили 322 человек
-				+e.item.A(href="#")
+				+e.item.js-mobile-list-item.A(href="#")
 					+e.head.flex.DIV
 						+e.head-bg.object-fit.IMG(src='/img/credit_3.jpg')
 						+e.head-inner
@@ -203,7 +203,7 @@
 											| 5623
 							+button(false) Оформить без залога
 							+e.text.small Сегодня оформили 322 человек
-				+e.item.A(href="#")
+				+e.item.js-mobile-list-item.A(href="#")
 					+e.head.flex.DIV
 						+e.head-bg.object-fit.IMG(src='/img/credit_1.jpg')
 						+e.head-inner
@@ -240,7 +240,7 @@
 											| 5623
 							+button(false) Оформить без залога
 							+e.text.small Сегодня оформили 322 человек
-				+e.item.A(href="#")
+				+e.item.js-mobile-list-item.A(href="#")
 					+e.head.flex.DIV
 						+e.head-bg.object-fit.IMG(src='/img/credit_2.jpg')
 						+e.head-top
@@ -280,7 +280,7 @@
 											| 5623
 							+button(false) Оформить без залога
 							+e.text.small Сегодня оформили 322 человек
-				+e.item.A(href="#")
+				+e.item.js-mobile-list-item.A(href="#")
 					+e.head.flex.DIV
 						+e.head-bg.object-fit.IMG(src='/img/credit_3.jpg')
 						+e.head-inner
@@ -317,3 +317,8 @@
 											| 5623
 							+button(false) Оформить без залога
 							+e.text.small Сегодня оформили 322 человек
+			+e.list-more
+				+e.BUTTON.more.square-button__.js-mobile-list-more
+					+e.text Загрузить еще условия
+					+e.icon._arrow
+						+icon('down-arrow', '0 0 6.3057 11.139')

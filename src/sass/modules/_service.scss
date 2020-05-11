@@ -19,6 +19,10 @@
 		display: none;
 	}
 
+	&__more {
+		width: 100%;
+	}
+
 	&__row {
 		margin-left: -26/1336 * 100%;
 		margin-right: -26/1336 * 100%;
@@ -303,6 +307,14 @@
 			margin-bottom: 6.3rem;
 		}
 
+		&-more {
+			width: 380px;
+			max-width: 100%;
+			margin: auto;
+			padding-top: 2rem;
+			display: none;
+		}
+
 		.list__item {
 			&:before {
 				top: 1.5rem;
@@ -318,6 +330,10 @@
 
 		@include max-screen($large_mobile) {
 			margin-bottom: 2.6rem;
+
+			&-more {
+				display: block;
+			}
 		}
 	}
 
