@@ -26,7 +26,7 @@
             +e.FORM.form.form__(action="/")
                 +e.INPUT(type="hidden" name="method[subscribe]" value='1')
                 +e.email.input__._medium
-                    +e.INPUT.item(type="text" placeholder="Введите ваш E-mail" name="email")
+                    +e.INPUT.item(type="text" placeholder="Введите ваш E-mail" name="auctionEmail")
                 +e.submit-wrap
                     +e.button.btn.h6.BUTTON(type="submit")
                         +e.text Получить подарок
@@ -39,6 +39,7 @@
                             | передачи данных
 
         +e.bottom
+            +e.indicator
             +e.SPAN.prompt
                 +e.SPAN.prompt-star *
                 +e.SPAN.prompt-text Вращать барабан можно только 1 раз

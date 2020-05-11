@@ -67,6 +67,10 @@ $(()=>{
 				},
 				square: {
 					required: true
+				},
+				auctionEmail: {
+					required: true,
+					email: true
 				}
 			}
 		})
