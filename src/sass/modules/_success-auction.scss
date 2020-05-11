@@ -2,12 +2,23 @@
   padding-top: 5rem;
   padding-bottom: 5rem;
 
+  @include max-screen($small_tablet) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
   &__wrap {
     max-width: 1420px;
     padding: 1rem 0 0;
+
+    @include max-screen($small_tablet) {
+      padding: 1.5rem 0 7rem;
+    }
   }
 
   &__top-content {
+    position: relative;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,12 +26,29 @@
     padding: 1.9rem 2rem;
 
     background-color: rgba(196, 196, 196, 0.1);
+
+    @include max-screen($small_tablet) {
+      margin: 0 1.5rem 2.5rem;
+      padding: 1.2rem 2rem;
+    }
   }
 
   &__success-icon-wrap {
     width: 2rem;
     height: 2rem;
     margin-right: 1.1rem;
+
+    @include max-screen($small_tablet) {
+      position: absolute;
+      top: 0;
+      left: 50%;
+
+      width: 1.4rem;
+      height: 1.4rem;
+      margin-right: 0;
+
+      transform: translate(-50%, -50%);
+    }
 
     .circle {
       fill: #19C13E;
@@ -32,8 +60,20 @@
     }
   }
 
+  &__icon-succes {
+    @include max-screen($small_tablet) {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+  }
+
   &__top-text {
     font-size: 1.4rem;
+
+    @include max-screen($small_tablet) {
+      font-size: 1rem;
+      text-align: center;
+    }
   }
 
   &__middle {
@@ -45,26 +85,74 @@
 
   &__title {
     margin-bottom: .9rem;
+
+    @include max-screen($small_tablet) {
+      width: 90%;
+      margin-bottom: 1.5rem;
+
+      text-align: center;
+    }
   }
 
   &__slogan {
     margin-bottom: 3.8rem;
+
+    @include max-screen($small_tablet) {
+      margin-bottom: 3rem;
+
+      font-size: 1.4rem;
+      text-align: center;
+    }
+  }
+
+  &__slogan-brake {
+    @include min-screen($small_tablet + 1) {
+      display: none;
+    }
   }
 
   &__form {
     display: flex;
     align-items: flex-start;
 
+    @include max-screen($small_tablet) {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .form__email {
       flex-shrink: 0;
       width: 32rem;
       margin-right: 4rem;
+
+      @include max-screen($small_tablet) {
+        width: 92%;
+        max-width: 50rem;
+        margin: 0 auto 2rem;
+
+        .input__item {
+          height: 3.4rem;
+
+          font-size: 1.9rem;
+          text-align: center;
+        }
+      }
+    }
+
+    .form__submit-wrap {
+      @include max-screen($small_tablet) {
+        width: 92%;
+      }
     }
 
     .form__button {
       flex-shrink: 0;
       width: 31.5rem;
       margin-bottom: 1rem;
+
+      @include max-screen($small_tablet) {
+        width: 100%;
+      }
     }
 
     .checkbox__check {
@@ -89,6 +177,14 @@
       height: 36.3rem;
 
       background-color: #FF0400;
+
+      @include max-screen($small_tablet) {
+        top: 2rem;
+        left: 52%;
+
+        width: .3rem;
+        height: 23.5rem;
+      }
     }
   }
 
@@ -106,6 +202,19 @@
       top: -24rem;
       right: -1rem;
     }
+
+    @include max-screen($small_tablet) {
+      top: 27rem;
+      left: 50%;
+
+      display: flex;
+      justify-content: center;
+      width: 15.5rem;
+
+      font-size: 1rem;
+
+      transform: translateX(-50%);
+    }
   }
 
   &__prompt-star {
@@ -114,10 +223,22 @@
     left: -1.4rem;
 
     font-size: 2.2rem;
+
+    @include max-screen($small_tablet) {
+      top: 0;
+
+      font-size: 1rem;
+    }
   }
 
   &__prompt-text {
     width: 17rem;
+
+    @include max-screen($small_tablet) {
+      flex-shrink: 0;
+
+      white-space: nowrap;
+    }
   }
 
   &__carusel-wrap {
@@ -148,6 +269,12 @@
     margin-bottom: 2rem;
     padding: 5.4rem 2.3rem 2.4rem 3rem;
 
+    @include max-screen($small_tablet) {
+      width: 16rem;
+      height: 22rem;
+      padding: 3.4rem 2.3rem 2rem .8rem;
+    }
+
     &:hover,
     &:focus {
       color: #0E0E0E;
@@ -177,10 +304,21 @@
 
       transform: translateY(-50%);
 
+      @include max-screen($small_tablet) {
+        left: 1rem;
+
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+
       svg {
         width: 2.7rem;
 
         stroke-linecap: round;
+
+        @include max-screen($small_tablet) {
+          width: 1.5rem;
+        }
       }
     }
 
@@ -233,6 +371,10 @@
     .icon-button__prize-text {
       font-size: 1.2rem;
 
+      @include max-screen($small_tablet) {
+        font-size: .7rem;
+      }
+
       &::selection {
         background: transparent;
       }
@@ -249,6 +391,10 @@
       font-size: 1.9rem;
       font-weight: bold;
       color: #FF0600;
+
+      @include max-screen($small_tablet) {
+        font-size: 1.2rem;
+      }
 
       &::selection {
         background: transparent;
@@ -285,7 +431,7 @@
       right: 1rem;
       bottom: 0;
 
-      width: 110px;
+      width: 45%;
     }
   }
 
@@ -303,7 +449,7 @@
       right: 0;
       bottom: 0;
 
-      width: 140px;
+      width: 55%;
     }
   }
 
@@ -312,7 +458,7 @@
       right: 0;
       bottom: 0;
 
-      width: 200px;
+      width: 80%;
     }
   }
 
@@ -321,7 +467,7 @@
       right: 0;
       bottom: 0;
 
-      width: 160px;
+      width: 63%;
     }
   }
 
@@ -330,7 +476,7 @@
       right: 0;
       bottom: 0;
 
-      width: 210px;
+      width: 86%;
     }
   }
 
@@ -339,7 +485,7 @@
       right: 0;
       bottom: 0;
 
-      width: 200px;
+      width: 76%;
     }
   }
 
@@ -348,7 +494,7 @@
       right: 0;
       bottom: 0;
 
-      width: 200px;
+      width: 78%;
     }
   }
 }
