@@ -24,7 +24,26 @@
 
       activeContent.classList.remove('active');
       content.classList.add('active');
+
+      let winWidth = $(window).width();
+
+      if (winWidth < 1025) {
+        $('.news-page__column_left').addClass('active');
+      }
     });
   });
+
+  let winWidth = $(window).width();
+
+  if (winWidth < 1025) {
+    const btnClose = container.querySelector('.js-news-close');
+
+    if (btnClose) {
+      btnClose.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        $('.news-page__column_left').removeClass('active');
+      });
+    }
+  }
 
 })($);

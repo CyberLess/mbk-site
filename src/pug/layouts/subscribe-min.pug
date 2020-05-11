@@ -1,0 +1,43 @@
++b.SECTION.subscribe._min
+	+e
+		+e.mobile#mobile-title
+		+e.row.flex._justify._bottom
+			+e.cell._left
+				+e.top#desktop-top
+					+e.title.h4.H2.js-move-item(data-to="#mobile-title" data-from="#desktop-top" data-point="1024")
+						| Подпишись
+						| на свежие новости
+				+e.sub.h5
+					| Хочешь получать свежие новости мира финансов и недвижимости на свой почтовый ящик?
+				+e.text.h6.is-regular
+					| Введите свой E-Mail в форму, и как только мы добавим что-то новое, то ты сразу же об этом узнаешь.
+				+e.FORM.form.form__(action="/")
+					+e.INPUT(type="hidden" name="method[subscribe]" value='1')
+					+e.email.input__._big
+						+e.INPUT.item(type="text" placeholder="Введите ваш E-mail" name="email")
+					+e.inline-2.flex._vertical._justify
+						+e.button.btn.h6.BUTTON
+							+e.text Подписаться
+						+e.LABEL.access.access.checkbox__
+							+e.INPUT.input(type='checkbox' name='access' checked="")
+							+e.SPAN.text
+								+e.check
+									+icon('check', '0 0 9 7')
+								| Я согласен с условиями
+								| передачи данных
+			+e.cell._right
+				+e.book
+					+e.IMG.book-img(src="/img/book-2.png")
+				+e.box
+					+e.box-sub.p
+						+e.box-icon
+							+icon('heart', '0 0 14 13')
+						| Подарок каждому
+						br
+						| подписчику
+					+e.box-text.small
+						+e.box-mobile
+							+icon('heart', '0 0 14 13')
+						| Подробная инструкция-памятка
+						br
+						|«Как рефинансировать кредит и сбросить ежемесячный платеж на 70%»

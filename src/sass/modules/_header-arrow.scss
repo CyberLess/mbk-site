@@ -29,6 +29,12 @@
     max-width: 48.6rem;
     margin-top: 2.9rem;
     font-weight: 400;
+
+    @include max-screen($large_mobile) {
+			font-size: 1.4rem;
+      line-height: 2rem;
+      margin-top: 1.5rem;
+		}
   }
 
   &_dark {

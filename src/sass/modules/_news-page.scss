@@ -1,6 +1,13 @@
 .news-page {
+	position: relative;
 	padding-top: 8rem;
 	padding-bottom: 9.5rem;
+	z-index: 100;
+
+	@include max-screen($large_tablet) {
+		padding-top: 2.9rem;
+		padding-bottom: 0.3rem;
+	}
 
 	&__wrap {
 		display: flex;
@@ -19,19 +26,89 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: baseline;
+
+		@include max-screen($large_tablet) {
+			flex-direction: column;
+			justify-content: flex-start;
+			padding-right: 30px;
+			margin-bottom: 1.1rem;
+		}
 	}
 
 	&__title {
 		font-weight: 700;
+
+		@include max-screen($large_tablet) {
+			margin-bottom: 1.5rem;
+			font-size: 2.6rem;
+			line-height: 2.9rem;
+		}
 	}
 
 	&__column {
 		&_left {
 			width: 872/1336*100%;
+
+			@include max-screen($large_tablet) {
+				position: fixed;
+				top: 0;
+				right: 0;
+				z-index: 15;
+				width: 1024px;
+				height: 100%;
+				padding: 80px 1.5rem 3rem;
+				background-color: #FFFFFF;
+				transform: translateX(1050px);
+				transition: transform 0.3s ease;
+
+				&.active {
+					width: 100%;
+					transform: translateX(0);
+					overflow-y: auto;
+				}
+			}
 		}
 
 		&_right {
 			width: 288/1336*100%;
+
+			@include max-screen($large_tablet) {
+				width: 100%;
+			}
+		}
+	}
+
+	&__close {
+		display: none;
+		@include max-screen($large_tablet) {
+			position: absolute;
+			top: 90px;
+			right: 1.5rem;
+			z-index: 60;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: none;
+			background-color: transparent;
+			& svg {
+				width: 1.5rem;
+				height: 1.5rem;
+				stroke: #FF0400;
+				stroke-width: 2px;
+			}
+		}
+	}
+
+	&__pagination {
+		@include max-screen($large_tablet) {
+			display: none;
+		}
+	}
+
+	&__button {
+		@include max-screen($large_tablet) {
+			width: 100%;
+			margin-top: 3.4rem;
 		}
 	}
 }

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Новости</title>
-    <link rel="stylesheet" href="/app/css/app.css?v=1588789624938">
+    <link rel="stylesheet" href="/app/css/app.css?v=1589201539612">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
@@ -756,11 +756,16 @@
         <section class="news-page">
             <div class="news-page__wrap wrap">
                 <div class="news-page__column news-page__column_left">
+                    <button class="news-page__close js-news-close" type="button" aria-title="закрыть">
+                        <svg class="icon icon-close" viewBox="0 0 18 18">
+                            <use xlink:href="/app/icons/sprite.svg#close"></use>
+                        </svg>
+                    </button>
                     <div class="news-page__content active" id="new">
                         <div class="news-page__top">
                             <h2 class="news-page__title h4">Свежие новости рынка финансов</h2>
                             <div class="select-min">
-                                <select>
+                                <select data-label="Выберите год публикации">
                                     <option value="2020">За 2020 год</option>
                                     <option value="2019">За 2019 год</option>
                                 </select>
@@ -786,17 +791,16 @@
                         </div>
                     </div>
                     <div class="news-page__content" id="subscribe">
-                        <section class="subscribe">
-                            <div class="subscribe__wrap wrap">
+                        <section class="subscribe subscribe_min">
+                            <div>
                                 <div class="subscribe__mobile" id="mobile-title"></div>
                                 <div class="subscribe__row flex flex_justify flex_bottom">
                                     <div class="subscribe__cell subscribe__cell_left">
                                         <div class="subscribe__top" id="desktop-top">
-                                            <h2 class="subscribe__title h2 js-move-item" data-to="#mobile-title" data-from="#desktop-top" data-point="580">Подпишись
-на&nbsp;обновления 
-нашей базы</h2>
+                                            <h2 class="subscribe__title h4 js-move-item" data-to="#mobile-title" data-from="#desktop-top" data-point="1024">Подпишись
+на&nbsp;свежие новости</h2>
                                         </div>
-                                        <div class="subscribe__sub h5">Хочешь получать свежие материалы нашей базы на&nbsp;свой почтовый ящик?</div>
+                                        <div class="subscribe__sub h5">Хочешь получать свежие новости мира финансов и&nbsp;недвижимости на&nbsp;свой почтовый ящик?</div>
                                         <div class="subscribe__text h6 is-regular">Введите свой E-Mail в&nbsp;форму, и&nbsp;как только мы добавим что-то новое, то ты сразу же об&nbsp;этом узнаешь.</div>
                                         <form class="subscribe__form form" action="/">
                                             <input type="hidden" name="method[subscribe]" value="1" />
@@ -817,25 +821,25 @@
                                     <div class="subscribe__cell subscribe__cell_right">
                                         <div class="subscribe__book">
                                             <picture>
-                                                <source type="image/webp" srcset="/app/img/book.webp">
-                                                    <img src="/app/img/book.png" class="subscribe__book-img" alt="" role="presentation" />
+                                                <source type="image/webp" srcset="/app/img/book-2.webp">
+                                                    <img src="/app/img/book-2.png" class="subscribe__book-img" alt="" role="presentation" />
                                             </picture>
                                         </div>
                                         <div class="subscribe__box">
-                                            <div class="subscribe__box-sub h5">
+                                            <div class="subscribe__box-sub p">
                                                 <div class="subscribe__box-icon">
                                                     <svg class="icon icon-heart" viewBox="0 0 14 13">
                                                         <use xlink:href="/app/icons/sprite.svg#heart"></use>
                                                     </svg>
                                                 </div>Подарок каждому
                                                 <br>подписчику</div>
-                                            <div class="subscribe__box-text h6">
+                                            <div class="subscribe__box-text small">
                                                 <div class="subscribe__box-mobile">
                                                     <svg class="icon icon-heart" viewBox="0 0 14 13">
                                                         <use xlink:href="/app/icons/sprite.svg#heart"></use>
                                                     </svg>
                                                 </div>Подробная инструкция-памятка
-                                                <br>«Как законно списать все долги»</div>
+                                                <br>«Как рефинансировать кредит и&nbsp;сбросить ежемесячный платеж на&nbsp;70%»</div>
                                         </div>
                                     </div>
                                 </div>
@@ -969,7 +973,7 @@
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/app.js?v=1588789625030"></script>
+    <script src="/app/js/app.js?v=1589201539687"></script>
 </body>
 
 </html>
