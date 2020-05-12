@@ -1,76 +1,76 @@
-.calc{
+.calc {
 	padding-bottom: 2rem;
 	padding-top: 12rem;
 	z-index: 100;
 	position: relative;
 
-	&__box{
-		padding-left: 178/1336*100%;
-		padding-right: 178/1336*100%;
-		padding-bottom: 33/1336*100%;
-		padding-top: 49/1336*100%;
+	&__box {
+		padding-left: 178/1336 * 100%;
+		padding-right: 178/1336 * 100%;
+		padding-bottom: 33/1336 * 100%;
+		padding-top: 49/1336 * 100%;
 
-		background-color: #fff;		
-		margin-top: 8rem;
+		background-color: #fff;
+		// margin-top: 8rem;
 	}
 
-	&__top{
+	&__top {
 		margin-bottom: 3.3rem;
 	}
 
-	&__row{
+	&__row {
 		padding-top: 2.3rem;
 	}
 
-	&__string{
+	&__string {
 		padding-top: 1.1rem;
 	}
 
-	&__title{
+	&__title {
 		// margin-bottom: 3.5rem;
 	}
 
-	&__bar{
+	&__bar {
 		margin-bottom: 5.1rem;
 		// margin-bottom: 7.4rem;
 		// margin-top: 3.3rem;
 	}
 
-	&__cell{
-		width: 472/980*100%;
+	&__cell {
+		width: 472/980 * 100%;
 		margin-bottom: 2.8rem;
 
-		&_middle{
+		&_middle {
 			margin-bottom: 3.7rem;
 		}
 
-		&_big{
+		&_big {
 			margin-bottom: 5.3rem;
 		}
 
-		&_bigtop{
+		&_bigtop {
 			padding-top: 6.6rem;
 		}
 	}
 
-	&__small{
+	&__small {
 		line-height: 140%;
-		color: #AFAFAF;
+		color: #afafaf;
 	}
 
-	&__button{
+	&__button {
 		min-width: 25.2rem;
 	}
 
-	&__slide{
+	&__slide {
 		display: none;
 
-		&.is-active{
+		&.is-active {
 			display: block;
 		}
 	}
 
-	&__label{
+	&__label {
 		// padding-top: 4.2rem;
 		padding-top: 1.8rem;
 		padding-bottom: 3.3rem;
@@ -78,36 +78,54 @@
 		display: block;
 		width: 100%;
 
-		&_big{
+		&_big {
 			padding-top: 3rem;
 		}
 	}
 
-	&__nav{
+	&__nav {
 		margin-bottom: 4.8rem;
 		margin-top: 4.3rem;
 
-		&-item{
+		&-item {
 			width: 4rem;
-			fill: #F3F3F3;
+			fill: #f3f3f3;
 			position: relative;
 			color: #868686;
 
-			&.is-active{
+			&.is-active {
 				fill: $red;
 				color: #ffff;
 			}
-		}	
+		}
 
-		&-text{
+		&-text {
 			left: 0;
 			top: 0;
 			width: 100%;
-			padding-top: .8rem;
+			padding-top: 0.8rem;
 			text-align: center;
 			position: absolute;
-			
+
 			z-index: 15;
 		}
+	}
+
+	@include max-screen($large_tablet) {
+		&__box {
+			padding-left: 5.5rem;
+			padding-right: 5.5rem;
+		}
+	}
+	@include max-screen($small_tablet) {
+		padding-top: 8rem;
+		&__box {
+			padding-left: 3rem;
+			padding-right: 3rem;
+		}
+	}
+
+	@include max-screen($large_mobile) {
+		padding-top: 5.1rem;
 	}
 }

@@ -1,6 +1,6 @@
 .council {
 	background: #ffffff;
-	padding-top: 7rem;
+	padding-top: 12rem;
 	padding-bottom: 6.8rem;
 
 	&__button {
@@ -57,15 +57,14 @@
 	}
 
 	&__cell {
-		margin-top: 6.2rem;
-
 		&_left {
 			width: 806/1336 * 100%;
-
+			margin-top: 6.2rem;
 			padding-left: 10.9rem;
 		}
 
 		&_right {
+			margin-top: 6.6rem;
 			width: 289/1336 * 100%;
 		}
 	}
@@ -94,6 +93,156 @@
 
 			&_content {
 				width: 247/345 * 100%;
+			}
+		}
+	}
+
+	@include max-screen($large_tablet) {
+		&__head {
+			&-inner {
+				padding-left: 5.5rem;
+				padding-right: 5.5rem;
+				padding-top: 8rem;
+			}
+		}
+		&__cell {
+			&_left {
+				padding-left: 5.5rem;
+			}
+			&_right {
+				width: 29.63174%;
+			}
+		}
+	}
+
+	@include max-screen($small_tablet) {
+		padding-top: 8rem;
+		&__author {
+			padding: 2.1rem 4rem 2.1rem 4.5rem;
+		}
+		&__head {
+			&-inner {
+				min-height: 48rem;
+				padding: 6rem 3rem;
+			}
+		}
+		&__cell {
+			&_right {
+				width: 36.63174%;
+			}
+			&_left {
+				width: 55.32934%;
+				padding-left: 3rem;
+			}
+		}
+	}
+
+	@include max-screen($large_mobile) {
+		padding-top: 5.1rem;
+		padding-bottom: 3.7rem;
+
+		&__head {
+			&-inner {
+				padding-left: 3.2rem;
+				padding-right: 3rem;
+				padding-top: 2.1rem;
+				padding-bottom: 1.9rem;
+				min-height: 0;
+			}
+		}
+
+		&__button {
+			margin-bottom: 1.4rem;
+		}
+
+		&__author {
+			background-color: transparent;
+			color: #fff;
+			padding: 0;
+			flex-wrap: nowrap;
+			// align-items: flex-start;
+
+			&-text {
+				font-size: 1rem;
+				margin-top: 0;
+				line-height: 1.4rem;
+			}
+
+			.link {
+				font-size: 1rem;
+				line-height: 1.4rem;
+				margin-bottom: 1px;
+				color: #fff;
+
+				&__arrow {
+					width: 4px;
+					.triangle {
+						stroke: #fff !important;
+					}
+
+					.stroke {
+						fill: #fff !important;
+					}
+					svg {
+						width: 13px;
+						margin-top: -3px;
+					}
+				}
+
+				&:hover {
+					.link {
+						&__arrow {
+							width: 13px;
+						}
+					}
+				}
+			}
+
+			&-cell {
+				width: auto;
+				max-width: 100%;
+
+				&_avatar {
+					flex-shrink: 0;
+					flex-grow: 0;
+					width: 3.7rem;
+					margin-right: 1.3rem;
+				}
+				&_content {
+					min-width: 0;
+					flex-shrink: 1;
+					flex-grow: 1;
+				}
+			}
+		}
+		&__title {
+			font-size: 1.9rem;
+			line-height: 2.1rem;
+		}
+		&__more {
+			text-align: center;
+			padding-top: 6px;
+		}
+		&__label {
+			margin-bottom: 1.9rem;
+			font-size: 1rem;
+			line-height: 1.4rem;
+			padding: 0.4rem 1.1rem;
+		}
+		&__content {
+			margin-bottom: 0;
+		}
+		&__cell {
+			width: 100%;
+			padding-left: 3.2rem;
+			padding-right: 3.2rem;
+
+			&_right {
+				margin-top: 4.4rem;
+			}
+
+			&_left {
+				margin-top: 3.7rem;
 			}
 		}
 	}

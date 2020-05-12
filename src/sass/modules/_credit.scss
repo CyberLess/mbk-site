@@ -84,16 +84,17 @@
 			height: 100%;
 			z-index: 500;
 			background: $gray;
-			display: flex;
+			display: none;
 			flex-direction: column;
 
-			opacity: 0;
-			visibility: hidden;
-			transition: ease 0.3s;
+			// opacity: 0;
+			// visibility: hidden;
+			// transition: ease 0.3s;
 
 			&.is-active {
-				opacity: 1;
-				visibility: visible;
+				// opacity: 1;
+				// visibility: visible;
+				display: flex;
 			}
 
 			&-title {
