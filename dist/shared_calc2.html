@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Общая страница c квизом</title>
-    <link rel="stylesheet" href="/app/css/app.css?v=1589310136744">
+    <link rel="stylesheet" href="/app/css/app.css?v=1589314400241">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
@@ -1457,7 +1457,7 @@
             </div>
             </div>
         </section>
-        <section class="group js-target-form">
+        <section class="group group_noscope-mobile js-target-form">
             <section class="quiz">
                 <div class="quiz__inner">
                     <div class="quiz__wrap wrap">
@@ -1981,7 +1981,8 @@
                                     <div class="accordion__line-item h6">Сумма</div>
                                 </div>
                                 <div class="accordion__line-cell">
-                                    <div class="accordion__line-item h6">от&nbsp;50 000 ₽ до&nbsp;3 000 000 ₽</div>
+                                    <div class="accordion__line-item h6"> <span>от&nbsp;50 000 ₽ </span><span>до&nbsp;3 000 000 ₽</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="accordion__line flex flex_justify">
@@ -1989,7 +1990,8 @@
                                     <div class="accordion__line-item h6">Срок</div>
                                 </div>
                                 <div class="accordion__line-cell">
-                                    <div class="accordion__line-item h6">от&nbsp;13 месяцев до&nbsp;7 лет</div>
+                                    <div class="accordion__line-item h6"> <span>от&nbsp;13 месяцев </span><span>до&nbsp;7 лет</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="accordion__line flex flex_justify">
@@ -1997,7 +1999,8 @@
                                     <div class="accordion__line-item h6">Цель</div>
                                 </div>
                                 <div class="accordion__line-cell">
-                                    <div class="accordion__line-item h6">на&nbsp;любые цели</div>
+                                    <div class="accordion__line-item h6"> <span>на&nbsp;любые цели</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="accordion__text">
@@ -2016,12 +2019,13 @@
                         </div>
                         <div class="accordion__content content content_big">
                             <div class="accordion__line flex flex_justify">
-                                <div class="accordion__line-cell">
+                                <div class="accordion__line-cell css-hide-mobile">
                                     <div class="accordion__line-item h6">Процентная ставка</div>
                                 </div>
-                                <div class="accordion__line-cell">
-                                    <div class="accordion__line-item h6">- со&nbsp;страховкой 9,5%
-                                        <br>- без&nbsp;страховки 14,5%*</div>
+                                <div class="accordion__line-cell css-full-mobile">
+                                    <div class="accordion__line-item h6"> <span>- со&nbsp;страховкой 9,5%</span>
+                                        <br><span>- без&nbsp;страховки 14,5%*</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="accordion__text">
@@ -2043,7 +2047,8 @@
                                     <div class="accordion__line-item h6">Гражданство, постоянная регистрация или&nbsp;проживание</div>
                                 </div>
                                 <div class="accordion__line-cell">
-                                    <div class="accordion__line-item h6">РФ</div>
+                                    <div class="accordion__line-item h6"> <span>РФ</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="accordion__line flex flex_justify">
@@ -2051,7 +2056,8 @@
                                     <div class="accordion__line-item h6">Возраст на&nbsp;дату получения кредита</div>
                                 </div>
                                 <div class="accordion__line-cell">
-                                    <div class="accordion__line-item h6">не менее 20 лет</div>
+                                    <div class="accordion__line-item h6"> <span>не менее 20 лет</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="accordion__line flex flex_justify">
@@ -2059,7 +2065,8 @@
                                     <div class="accordion__line-item h6">Возраст на&nbsp;дату окончания срока кредита</div>
                                 </div>
                                 <div class="accordion__line-cell">
-                                    <div class="accordion__line-item h6">не более 70 лет</div>
+                                    <div class="accordion__line-item h6"> <span>не более 70 лет</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -2074,10 +2081,10 @@
                         </div>
                         <div class="accordion__content content content_big">
                             <div class="accordion__line flex flex_justify">
-                                <div class="accordion__line-cell">
-                                    <div class="accordion__line-item h6">Обязательные документы</div>
+                                <div class="accordion__line-cell css-full-mobile">
+                                    <div class="accordion__line-item h6 css-to-middle css-to-red">Обязательные документы</div>
                                 </div>
-                                <div class="accordion__line-cell">
+                                <div class="accordion__line-cell css-full-mobile">
                                     <ul class="accordion__line-list">
                                         <li class="accordion__line-li">Паспорт</li>
                                         <li class="accordion__line-li">СНИЛС</li>
@@ -2086,11 +2093,11 @@
                                 </div>
                             </div>
                             <div class="accordion__line accordion__line_big flex flex_justify">
-                                <div class="accordion__line-cell">
-                                    <div class="accordion__line-item h6">Документы, снижающие
+                                <div class="accordion__line-cell css-full-mobile">
+                                    <div class="accordion__line-item h6 css-to-middle">Документы, снижающие
                                         <br>процентную ставку</div>
                                 </div>
-                                <div class="accordion__line-cell">
+                                <div class="accordion__line-cell css-full-mobile">
                                     <ul class="accordion__line-list">
                                         <li class="accordion__line-li">Справки с&nbsp;места работы</li>
                                         <li class="accordion__line-li">Документы на&nbsp;дополнительные
@@ -2210,7 +2217,7 @@
         </div>
     </div>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/app/js/app.js?v=1589310136897"></script>
+    <script src="/app/js/app.js?v=1589314400356"></script>
 </body>
 
 </html>

@@ -26,10 +26,6 @@
 		padding-top: 1.1rem;
 	}
 
-	&__title {
-		// margin-bottom: 3.5rem;
-	}
-
 	&__bar {
 		margin-bottom: 5.1rem;
 		// margin-bottom: 7.4rem;
@@ -127,5 +123,61 @@
 
 	@include max-screen($large_mobile) {
 		padding-top: 5.1rem;
+		&__cell {
+			width: 100%;
+			margin-bottom: 2.3rem;
+
+			&_button {
+				order: 1;
+				margin-bottom: 1.5rem;
+				.btn {
+					width: 100%;
+				}
+			}
+			&_info {
+				order: 2;
+				text-align: center;
+			}
+		}
+		&__wrap {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		&__title {
+			margin-bottom: 1rem;
+			font-size: 1.9rem;
+			line-height: 2.1rem;
+		}
+		&__small {
+			font-size: 1rem;
+			line-height: 140%;
+		}
+		&__row {
+			padding-top: 0;
+			&_price {
+				justify-content: center;
+				.calc {
+					&__cell {
+						margin: 0 7px;
+						width: auto;
+						margin-bottom: 45px;
+					}
+				}
+			}
+		}
+
+		&__top {
+			display: block;
+			text-align: center;
+			margin-bottom: 4.4rem;
+		}
+
+		&__box {
+			padding: 5.1rem 1.4rem 0rem;
+		}
+	}
+
+	@include max-screen($large_mobile) {
+		padding-bottom: 0;
 	}
 }

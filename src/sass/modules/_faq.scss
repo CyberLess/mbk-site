@@ -1,4 +1,10 @@
-.faq{
+.faq {
 	padding-top: 6rem;
 	padding-bottom: 1.6rem;
+
+	@include max-screen($large_mobile) {
+		padding-top: 5.1rem;
+		background-color: #fff;
+		padding-bottom: 0;
+	}
 }

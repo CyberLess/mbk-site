@@ -47,12 +47,14 @@
 										| 12 мес.
 									+e.label.p
 										| 25 лет
+					+e.row._price.flex._justify._vertical
 						+e.cell._big.css-text-right
 							+e.text.is-regular.h6
 								| Ежемесячный платеж
 						+e.cell._big
 							+e.price.is-bold.h4
 								| 3 323 ₽
+					+e.row.flex._justify._vertical
 						+e.cell._big
 							+e.field.input__
 								+e.top
@@ -67,13 +69,14 @@
 										| Ваш телефон
 								+e.field
 									+e.INPUT.item._square.h6(type="text" placeholder="7 903 123 45 65" name="phone")
-						+e.cell.css-text-right
+					+e.row.flex._justify._vertical
+						+e.cell._info.css-text-right
 							+e.small.small
 								| Нажимая на кнопку «Продолжить», вы выражаете
 								br
 								| согласие 
 								a.a(href="#") на обработку ваших персональных данных
-						+e.cell
+						+e.cell._button
 							+button(false)(class="js-goto" data-dir="next") Продолжить
 				+e.slide.js-slide
 					+e.top.flex._vertical._justify
