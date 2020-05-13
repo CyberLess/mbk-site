@@ -1,0 +1,10 @@
+extends ../layouts/base
+append vars
+  - title = 'Сертификаты';
+block content
+  +b.fluid
+    +socials(class="_default _white")
+  include ../layouts/header-arrow
+  include ../layouts/sertificates
+block footer
+  +footer(class="_white")

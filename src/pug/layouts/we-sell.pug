@@ -1,0 +1,36 @@
++b.SECTION.we-sell
+    +e.top.wrap
+        +e.title.h2.H2 Вот, что будет если мы возьмемся&nbsp;за&#32;продажу Вашей квартиры
+
+    +e.work-example.wrap
+        +e.row.flex._justify
+            +e.cell._left
+                +e.help._left.p До
+                +e.help._right.p После
+                +e.slider
+                    +e.slider-list
+                        +e.slider-item.active
+                            +e.preview
+                                +b.ba.js-animation-play
+                                    +e.IMG.image(src='/img/sell-after.jpg', alt='')
+                                    +e.resize
+                                        +e.IMG.image.we-sell__resize-image(src='/img/sell-before.jpg', alt='')
+                                    +e.handle.we-sell__handle
+                                        +e.inner.we-sell__inner
+                                            +e.arrow
+                    +e.circle._slider
+
+        +e.comment-opener._first(tabindex="0")
+            +e.check-icon
+                +icon('we-sell-check', '0 0 15 13')
+            +e.comment Наведем порядок
+        +e.comment-opener._second(tabindex="0")
+            +e.check-icon
+                +icon('we-sell-check', '0 0 15 13')
+            +e.comment Уберем лишние вещи для правильных ракурсов
+        +e.comment-opener._third(tabindex="0")
+            +e.check-icon
+                +icon('we-sell-check', '0 0 15 13')
+            +e.comment Проведем профессиональную фотосъемку
+
+    include we-sell-before-after

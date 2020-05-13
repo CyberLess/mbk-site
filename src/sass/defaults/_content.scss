@@ -95,7 +95,7 @@
 }
 
 .content {
-	li {
+	ul li {
 		padding-left: 3.2rem;
 		display: block;
 		position: relative;
@@ -131,6 +131,27 @@
 
 		ul {
 			padding-top: 1.5rem;
+		}
+
+		& ol {
+			list-style-type: none;
+			counter-reset: num;
+
+			& li {
+				position: relative;
+				padding-left: 3.5rem;
+
+				&:before {
+					content: counter(num) ".";
+					counter-increment: num;
+					display: inline-block;
+					position: absolute;
+					top: 0px;
+					left: 0;
+					width: 2rem;
+					color: #ff0400;
+				}
+			}
 		}
 	}
 }

@@ -1,0 +1,56 @@
+.textarea{
+	width: 100%;
+
+	&__item{
+		border: none;
+		background: transparent;
+		color: #0E0E0E;
+		font-family: Geometria;
+		width: 100%;
+		resize: none;
+
+		@include placeholder {
+			color: #000000;
+			opacity: 0.5;
+		}
+	}
+
+	&_gray{
+		.textarea{
+			&__item{
+				padding: 2.7rem 3rem;
+				margin-bottom: 3.5rem;
+				background-color: rgb(243, 243, 243);
+				font-size: 2.4rem;
+			}
+		}
+	}
+
+	&_min{
+		.textarea{
+			&__item{
+				padding: 0;
+				font-size: 1.6rem;
+				line-height: 140%;
+				border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+				@include placeholder {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	@include max-screen($large_tablet) {
+		&_min{
+			.textarea{
+				&__item{
+					font-size: 1.2rem;
+				}
+			}
+		}
+	}
+
+	@include max-screen($large_mobile) {
+	}
+}

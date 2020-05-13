@@ -1,0 +1,116 @@
++b.sell-popup
+    +e.wrap_top
+        +e.container
+            +e.title.h3.H3 Найдено 206 потенциальных покупателей
+            +e.description.P Это количество людей в нашей системе, которые прямо сейчас ищут похожую квартиру в вашем районе.
+            +e.close.popup-close.BUTTON(type="button")
+                +icon('close', '0 0 25 25')
+
+            +e.bottom-wrap
+                +e.apartment-data
+                    +e.apartment-data-item._address
+                        +e.apartment-data-top.SPAN Адрес
+                        +e.apartment-data-bottom.B
+                            |г. Москва
+                            br
+                            |ул. Шаболовка, 10
+                    +e.apartment-data-item._rooms
+                        +e.apartment-data-top.SPAN Комнат
+                        +e.apartment-data-bottom.B 2 комнаты
+                    +e.apartment-data-item._price
+                        +e.apartment-data-top.SPAN Цена
+                        +e.apartment-data-bottom.B 4 500 000 ₽
+
+                    +e.arrow-icon
+                        +icon('arrow_2', '0 0 23 10')
+
+                +e.btn.btn.A(href="#sell-order-popup") Связаться с покупателем
+
+    +e.wrap_bottom
+        +e.container
+            +e.customer-data.customer-data-table__.TABLE
+                +e.head-row.TR
+                    th Покупатель
+                    th Район
+                    th Комнат в кв.
+                    th Бюджет
+                tr
+                    +e.item._buyer.TD Покупатель № 23422
+                    +e.item._district.TD
+                        +e.metro-icon.SPAN
+                            +icon('metro', '0 0 25 11')
+                        +e.distict-text.SPAN Алексеевская
+                    +e.item._rooms.TD 2&nbsp;
+                        +e.rooms-designation.SPAN комнаты
+                    +e.item._budget.TD 4 960 000
+                        +e.price-char.SPAN  ₽
+                tr
+                    +e.item._buyer.TD Покупатель № 23423
+                    +e.item._district.TD
+                        +e.metro-icon.SPAN
+                            +icon('metro', '0 0 25 11')
+                        +e.distict-text.SPAN ВДНХ
+                    +e.item._rooms.TD 2&nbsp;
+                        +e.rooms-designation.SPAN комнаты
+                    +e.item._budget.TD 5 250 000
+                        +e.price-char.SPAN  ₽
+                tr
+                    +e.item._buyer.TD Покупатель № 23424
+                    +e.item._district.TD
+                        +e.metro-icon.SPAN
+                            +icon('metro', '0 0 25 11')
+                        +e.distict-text.SPAN Ботанический сад
+                    +e.item._rooms.TD 2&nbsp;
+                        +e.rooms-designation.SPAN комнаты
+                    +e.item._budget.TD 4 950 000
+                        +e.price-char.SPAN  ₽
+                tr
+                    +e.item._buyer.TD Покупатель № 23425
+                    +e.item._district.TD
+                        +e.metro-icon.SPAN
+                            +icon('metro', '0 0 25 11')
+                        +e.distict-text.SPAN Сокольники
+                    +e.item._rooms.TD 2&nbsp;
+                        +e.rooms-designation.SPAN комнаты
+                    +e.item._budget.TD 4 950 000
+                        +e.price-char.SPAN  ₽
+                tr
+                    +e.item._buyer.TD Покупатель № 23426
+                    +e.item._district.TD
+                        +e.metro-icon.SPAN
+                            +icon('metro', '0 0 25 11')
+                        +e.distict-text.SPAN Беляево
+                    +e.item._rooms.TD 2&nbsp;
+                        +e.rooms-designation.SPAN комнаты
+                    +e.item._budget.TD 4 550 000
+                        +e.price-char.SPAN  ₽
+            +e.show-more.btn.blog__button.btn_border.p.A(href="#") Показать еще варианты
+                +e.arrow.SVG(viewBox="0 0 18.560659 9.6213207" width="20" height="15")
+                    path(class="triangle" d='M14.5 4.81v-3l3 3-3 3z')
+                    path(class="stroke" d='M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z')
+
++b.sell-order-popup.mfp-hide(id="sell-order-popup")
+    +e.title.h2.H2 Оформить заявку
+    +e.description.P Оставьте контакты, и мы позвоним вам для уточнения деталей, чтобы связать&nbsp;вас с потенциальными покупателями.
+    +e.close.popup-close.mfp-close.BUTTON(data-mfp-src="#sell-order-popup")
+        +icon('close', '0 0 25 25')
+
+    +e.FORM.form(action="/")
+        +e.INPUT(type="hidden" name="method[subscribe]" value='1')
+        +e.name.input__
+            +e.INPUT.item(type="text" placeholder="Ваше имя" name="name")
+            +e.icon-wrap
+                +icon('popup-user', '0 0 24 24')
+        +e.phone.input__
+            +e.INPUT.item(type="text" placeholder="Телефон" name="name")
+            +e.icon-wrap
+                +icon('popup-phone', '0 0 24 24')
+        +e.button.btn.h6.BUTTON(type="submit" data-mfp-src="#sell-order-popup")
+            +e.text Оставить заявку
+        +e.LABEL.access.access.checkbox__
+            +e.INPUT.input(type='checkbox' name='access' checked="")
+            +e.SPAN.text
+                +e.check
+                    +icon('check', '0 0 9 7')
+                | Я согласен с условиями
+                | передачи данных

@@ -1,0 +1,45 @@
+(() => {
+  function isScrolledIntoView(el) {
+    const rect = el.getBoundingClientRect();
+    const elemTop = rect.top;
+    const elemBottom = rect.bottom;
+    const isVisible = elemTop < window.innerHeight && elemBottom >= el.clientHeight / 2;
+    return isVisible;
+  }
+
+  const title = document.querySelector(`.js-title`);
+  const link = document.querySelector(`.js-link`);
+
+  window.addEventListener(`scroll`, () => {
+    if (title && link) {
+      if (isScrolledIntoView(title)) {
+        link.classList.add(`is-active`);
+      } else {
+        link.classList.remove(`is-active`);
+      }
+    }
+  });
+
+  let winWidth = $(window).width();
+
+  if (winWidth < 581) {
+    const $toggle = $('.js-toggle-title');
+    window.addEventListener(`scroll`, () => {
+      if (title) {
+        if (isScrolledIntoView(title)) {
+          $toggle.addClass(`active`);
+        } else {
+          $toggle.removeClass(`active`);
+          $('.article-item__title-wrapper').removeClass('opened');
+        }
+      }
+    });
+    $toggle.on('click',  e => {
+      $('.article-item__title-wrapper').addClass('opened');
+    });
+    $('.js-title-close').on('click',  e => {
+      $('.article-item__title-wrapper').removeClass('opened');
+    });
+  }
+
+})($);

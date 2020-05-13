@@ -1,0 +1,57 @@
++b.SECTION.sell-apartment
+    +e.wrap.wrap
+        if top
+            +breadcrumbs('Главная', 'Услуги', 'Продать квартиру срочно')
+            +e.title.h2.H2 Продать квартиру срочно?
+        +e.slogan.p.P Оцените спрос на
+            +e.BR.brake-header-bottom
+            | Вашу квартиру
+            +e.BR.brake-header-bottom
+            | в 1 клик
+        +e.applications_mobile.P Принимаем заявки из Москвы и Московской области
+
+        +e.form-wrapper
+            +e.form.form.sell-form__.FORM(action="/" method="GET")
+                +e.label_address.LABEL Адрес
+                    +e.input-wrap
+                        +e.input.INPUT(
+                            type="text"
+                            placeholder="Москва, улица Шаболовка, 10"
+                            name="address"
+                            autocomplete="off")
+
+                +e.label_price.LABEL Цена
+                    +e.input-wrap
+                        +e.input.INPUT(
+                            type="text"
+                            placeholder="5 000 000"
+                            name="price"
+                            autocomplete="off"
+                            inputmode="numeric")
+                +e.label_rooms.DIV Комнат
+                    +e.form-field.select__.js-select
+                        +e.item
+                            +e.field.SELECT(name="howMuchRooms")
+                                option 1
+                                option 2
+                                option 3
+                                option 4
+
+                +e.label_square.LABEL Площадь
+                    +e.input-wrap
+                        +e.input.INPUT(
+                            type="text"
+                            placeholder="100"
+                            name="square"
+                            autocomplete="off"
+                            inputmode="numeric")
+                        +e.square-meter.SPAN м
+                            +e.index.SUP 2
+
+                +e.btn.btn.BUTTON(type="submit" data-mfp-src="#sell-popup") Получи оценку онлайн
+            +e.addition
+                +e.applications.P Принимаем заявки из Москвы и МО
+                +e.assessment.P Сегодня получили оценку: 322 человека
+    include sell-popup
+
+    +e.overlay

@@ -47,6 +47,11 @@
 			left: 0;
 			top: 0;
 		}
+		&--nonumber {
+			&::before {
+				content: none;
+			}
+		}
 	}
 
 	&__link {

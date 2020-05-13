@@ -1,0 +1,24 @@
+.popup-close {
+  position: absolute;
+
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  stroke: #FF0400;
+
+  @include max-screen($small_tablet) {
+    width: 18px;
+    height: 18px;
+
+    stroke-width: 2;
+  }
+
+  &:hover,
+  &:focus {
+    stroke: #000000;
+    cursor: pointer;
+  }
+}

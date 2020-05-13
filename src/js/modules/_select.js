@@ -11,7 +11,8 @@ import 'selectric';
 	$select.each((i, el) => {
 
 		$(el).find('.select__field').selectric({
-			maxHeight: 180
+			maxHeight: 180,
+			nativeOnMobile: false
 		});
 
 	})

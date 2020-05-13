@@ -1,0 +1,23 @@
+extends ../layouts/base
+
+append vars
+		- title = 'Недвижка';
+
+block content
+	+b.fluid
+			+socials(class="_default _white")
+	- var top = true
+	include ../layouts/sell-apartment
+	include ../layouts/we-know
+	include ../layouts/we-sell
+	include ../layouts/sales-model
+
+	+b.SECTION.group.white
+		include ../layouts/conditions-nedvig
+		include ../layouts/difficult-case
+	include ../layouts/council
+	.sell-apartment-bottom-wrap
+		- var top = false
+		include ../layouts/sell-apartment
+block footer 
+	+footer(class="_white")

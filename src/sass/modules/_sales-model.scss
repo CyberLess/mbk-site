@@ -1,0 +1,174 @@
+.sales-model{
+  position: relative;
+  padding-top: 2.1rem;
+  padding-bottom: 20.9rem;
+
+  @include max-screen($small_tablet + 1) {
+    margin-top: -63px;
+  }
+
+  &__container-data{
+    max-width: 44.6rem;
+    padding-top: 16.6rem;
+
+    @include max-screen($large_tablet){
+      max-width: 100%;
+      padding-top: 3rem;
+    }
+  }
+
+  &__title{
+    margin-bottom: 6.2rem;
+
+    @include max-screen($large_tablet){
+      margin-bottom: 0;
+      text-align: center;
+      line-height: 110%;
+    }
+
+    @include max-screen($small_mobile) {
+      margin-bottom: 3.3rem;
+    }
+  }
+
+  &__submit{
+    margin-top: 3.3rem;
+    margin-bottom: 3.1rem;
+    font-size: 1.8rem;
+
+    @include max-screen($large_tablet){
+      display: block;
+      margin: 0 auto;
+      margin-top: 4.4rem;
+      margin-bottom: 1rem;
+      padding: 0 3rem;
+    }
+
+    @include max-screen($large_mobile){
+      font-size: 1.4rem;
+    }
+  }
+
+  &__container-img{
+    position: absolute;
+    top: -0.9rem;
+    right: -5.4rem;
+    z-index: -1;
+
+    @include max-screen($large_desktop){
+      width: 110rem;
+    }
+
+    @include max-screen($large_tablet){
+      position: relative;
+      top: 0;
+      right: 0;
+      padding-bottom: 70px;
+      width: auto;
+    }
+
+    @include max-screen($large_mobile){
+      padding-bottom: 110px;
+    }
+
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      top: 24.9rem;
+      right: 16.5rem;
+      width: 64.3rem;
+      height: 64.3rem;
+      z-index: -1;
+      background: #FFFFFF;
+      border-radius: 50%;
+
+      @include max-screen($large_tablet){
+        $size: calc(32rem + 40vw);
+        top: 10rem;
+        right: 0;
+        left: calc(50% - #{$size} / 2);
+        width: $size;
+        height: $size;
+        background: #F3F3F3;
+      }
+
+      @include max-screen($small_tablet){
+        $size: calc(32rem + 30vw);
+        left: calc(50% - #{$size} / 2);
+        //top: 2.1rem;
+        width: $size;
+        height: $size;
+      }
+
+      @include max-screen($large_mobile){
+        $size: calc(32rem + 15vw);
+        left: calc(50% - #{$size} / 2);
+        width: $size;
+        height: $size;
+      }
+
+      @include max-screen($small_mobile){
+        $size: 32rem;
+        top: 2.1rem;
+        left: calc(50% - #{$size} / 2);
+        width: $size;
+        height: $size;
+      }
+    }
+  }
+
+  &__region{
+    position: absolute;
+    bottom: 3.9rem;
+    right: 39rem;
+    width: 25.3rem;
+    padding-left: 8.7rem;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    background-image: url("/img/kremlin.png");
+    background-repeat: no-repeat;
+    background-position: 0 0.4rem;
+
+    @include max-screen($large_tablet){
+      position: static;
+      margin: -5% auto 0;
+      padding-left: 6.9rem;
+      background-size: 5rem;
+    }
+
+    @include max-screen($small_tablet){
+      width: 19.8rem;
+      font-size: 1.4rem;
+      line-height: 140%;
+    }
+
+    @include max-screen($large_mobile){
+      margin: -2.5% auto 0;
+    }
+
+    @include max-screen($small_mobile){
+      margin: -1% auto 0;
+    }
+  }
+
+  &__form{
+
+    @include max-screen($small_mobile){
+      width: 230px;
+      margin: 0 auto;
+    }
+  }
+
+  &__form .access{
+    @include max-screen($large_tablet) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  @include max-screen($large_tablet){
+    padding-bottom: 4.7rem;
+    background: #FFFFFF;
+  }
+}

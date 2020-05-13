@@ -1,0 +1,238 @@
+.sell-popup {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  z-index: 602;
+
+  display: none;
+  width: 72%;
+  height: 100vh;
+  overflow-y: scroll;
+
+  opacity: 0;
+  background-color: #ffffff;
+
+  @include max-screen($small_desktop) {
+      width: 90%;
+  }
+
+  @include max-screen($small_tablet) {
+    width: 100%;
+  }
+}
+
+.sell-popup__wrap {
+  padding-left: 11%;
+  padding-right: 13.5%;
+
+  @include max-screen($large_desktop) {
+    padding-left: 8%;
+    padding-right: 9%;
+  }
+
+  @include max-screen($large_tablet) {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  @include max-screen($small_tablet) {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  &_top {
+    padding-top: 6.5rem;
+    background-color: #f3f3f3;
+
+    @include max-screen($small_tablet) {
+      padding-top: 4.7rem;
+    }
+  }
+
+  &_bottom {
+    padding-top: 3.6rem;
+    padding-bottom: 7.5rem;
+
+    @include max-screen($small_tablet) {
+      padding-top: 2.7rem;
+    }
+
+    .sell-popup__container {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.sell-popup__title {
+  width: 85%;
+  margin-bottom: 1.8rem;
+
+  font-size: 3.6rem;
+
+  @include max-screen($small_tablet) {
+    width: 100%;
+    margin-bottom: 1.1rem;
+
+    font-size: 2.6rem;
+  }
+}
+
+.sell-popup__description {
+  width: 85%;
+  max-width: 745px;
+  margin-bottom: 5rem;
+
+  font-size: 2.4rem;
+
+  @include max-screen($small_tablet) {
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+    font-size: 1.4rem;
+  }
+}
+
+.sell-popup__close {
+  top: 8rem;
+  right: 13.5%;
+
+  @include max-screen($large_desktop) {
+    right: 9%;
+  }
+
+  @include max-screen($small_tablet) {
+    top: 5.6rem;
+    right: 4%;
+  }
+
+  &:active {
+    top: 8rem;
+
+    @include max-screen($small_tablet) {
+      top: 5.6rem;
+    }
+  }
+
+}
+
+.sell-popup__bottom-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sell-popup__apartment-data {
+  position: relative;
+
+  display: flex;
+  width: 67%;
+  flex-wrap: wrap;
+  margin-right: auto;
+
+  @include min-screen(1700px) {
+    width: 62%;
+  }
+
+  @include max-screen($small_tablet) {
+    display: none;
+  }
+}
+
+.sell-popup__arrow-icon {
+  position: absolute;
+  right: 0;
+  top: 4rem;
+  width: 29px;
+
+  @include max-screen($large_tablet) {
+    display: none;
+  }
+}
+
+.sell-popup__apartment-data-item {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+  margin-bottom: 5rem;
+
+  &_address {
+    width: 37.3%;
+    min-width: 170px;
+  }
+
+  &_rooms {
+    width: 24%;
+    min-width: 100px;
+  }
+
+  &_price {
+    width: 24%;
+    min-width: 110px;
+  }
+}
+
+.sell-popup__apartment-data-top {
+  margin-bottom: 1rem;
+
+  font-size: 1.6rem;
+}
+
+.sell-popup__apartment-data-bottom {
+  font-size: 1.8rem;
+}
+
+.sell-popup__btn.btn {
+  width: 29.5%;
+  min-width: 200px;
+  max-width: 305px;
+  margin-top: 1rem;
+  margin-bottom: 6rem;
+
+  font-size: 1.8rem;
+  text-align: center;
+
+  @include max-screen($small_tablet) {
+    width: 100%;
+    margin-bottom: 3rem;
+
+    font-size: 1.4rem;
+  }
+}
+
+.sell-popup__show-more {
+  position: relative;
+
+  width: 305px;
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+
+  @include max-screen($small_tablet) {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  &:hover,
+  &:focus {
+    .sell-popup__arrow {
+      fill: #ffffff;
+    }
+  }
+}
+
+.sell-popup__arrow {
+  position: absolute;
+  top: 2.9rem;
+  right: 3.7rem;
+
+  width: 12px;
+  height: 8px;
+  transform: rotate(90deg);
+  fill: #ff0500;
+
+  @include max-screen($small_tablet) {
+    top: 2.1rem;
+    right: 15%;
+  }
+}

@@ -6,7 +6,104 @@
 	&__slider {
 		margin-top: -2.2rem;
 	}
+	&__title {
+		@include max-screen($small_tablet) {
+			width: 84%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 4.5rem;
 
+			font-size: 2.5rem;
+			text-align: center;
+			font-weight: 500;
+		}
+
+		br {
+			display: none;
+		}
+	}
+	&--nedvig {
+		min-height: 845px;
+		padding-top: 11.7rem;
+		padding-bottom: 2rem;
+
+		@include max-screen($small_tablet) {
+			min-height: 0;
+			padding-top: 4.5rem;
+			padding-bottom: 3rem;
+		}
+
+		& .conditions__slider {
+			min-height: 620px;
+
+			@include max-screen($small_tablet) {
+				min-height: 0;
+			}
+		}
+		& .gallery-slider__cell_slider {
+			margin-top: 10rem;
+			margin-bottom: 10rem;
+
+			@include max-screen($small_tablet) {
+				display: none;
+			}
+		}
+		& .gallery-slider__cell_info {
+			width: 20.6%;
+			padding-left: 3rem;
+			padding-right: 3rem;
+			padding-top: 5.3rem;
+			padding-bottom: 5.3rem;
+			right: 9.5rem;
+			position: absolute;
+			margin: 0;
+			top: 13.7rem;
+
+			@include min-screen($small_tablet + 1) {
+				min-width: 235px;
+			}
+
+			@include max-screen($small_tablet) {
+				position: static;
+
+				width: 100%;
+				padding-top: 0;
+				padding-bottom: 0;
+
+				background-color: transparent;
+
+				.gallery-slider__item {
+					padding-left: 0;
+					padding-bottom: 1.1rem;
+
+					&:not(:first-of-type) {
+						padding-top: 1.1rem;
+						border-top: 1px solid #c4c4c4;
+					}
+
+					.link {
+						width: 100%;
+						color: #ffffff;
+
+						&__arrow {
+							width: 1.8rem;
+
+							opacity: 1;
+							fill: #ffffff;
+
+							.triangle {
+								stroke: #ffffff;
+							}
+
+							.stroke {
+								fill: #ffffff;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 	@include max-screen($large_tablet) {
 		&__slider {
 			margin-top: 2.2rem;

@@ -1,0 +1,8 @@
+extends ../layouts/base
+append vars
+  - title = '404';
+  
+block content
+  include ../layouts/not-found
+block footer 
+  +footer(class="_white")
