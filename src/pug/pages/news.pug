@@ -1,0 +1,54 @@
+extends ../layouts/base
+append vars
+	- title = 'Новости';
+block content
+
+	+b.fluid
+		+socials(class="_default _white")
+	include ../layouts/header-arrow-dark
+	+b.SECTION.news-page
+		+e.wrap.wrap
+			+e.column._left
+				+e.close.js-news-close.BUTTON(type="button" aria-title="закрыть")
+							+icon('close', '0 0 18 18')
+				+e.content.active(id="new")
+					+e.top
+						+e.H2.title.h4 Свежие новости рынка финансов
+						include ../layouts/select-min
+					include ../layouts/news-list
+					+e.bottom.flex._justify._vertical
+						+e.pagination.pagination__
+							+e.list.flex._vertical.p
+								+e.num.A(href='#') 1
+								+e.num.A(href='#') 2
+								+e.num.is-current.A(href='#') 3
+								+e.num.A(href='#') 4
+								+e.num.A(href='#') 5
+								+e.num.SPAN ...
+								+e.num.A(href='#') 12
+						+e.button.btn__._border.p.A(href='#')
+							+e.text Загрузить еще новостей
+							+e.icon._arrow
+								+e.SVG(viewBox="0 0 18.560659 9.6213207")
+									path(class="triangle" d='M14.5 4.81v-3l3 3-3 3z')
+									path(class="stroke" d='M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z')
+
+				+e.content(id="subscribe")
+					include ../layouts/subscribe-min
+
+			+e.column._right
+				+b.SECTION.news-aside
+					+e.title.h4 Разделы
+					+e.list
+						+e.link._active.h5.A(href="#" data-toggle="news-tab" data-target="#new")
+							|Свежие новости
+						+e.link.h5.A(href="#" data-toggle="news-tab" data-target="#subscribe")
+							|Подписка на рассылки
+					+b.SECTION.other-articles
+						+e.item
+							+e.link.A(href="#")
+								+e.bg.object-fit.IMG(src="/img/doc_3.jpg")
+
+
+block footer
+	+footer(class="_white")

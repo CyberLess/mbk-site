@@ -23,3 +23,4 @@ import "./modules/_sell-popup";
 import "./modules/_open-comments";
 import "./modules/_article-title";
 import "./modules/_questions-mobile-popup";
+import "./modules/_news-tab";

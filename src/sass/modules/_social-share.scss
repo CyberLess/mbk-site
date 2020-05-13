@@ -9,12 +9,12 @@
 		}
 
 		& svg {
-			fill: #FFFFFF;
+			fill: #ffffff;
 		}
 
 		&_vk {
 			.social-share__link {
-				background-color: #5181B8;
+				background-color: #5181b8;
 			}
 			& svg {
 				width: 2.1rem;
@@ -24,7 +24,7 @@
 
 		&_fb {
 			.social-share__link {
-				background-color: #3B5998;
+				background-color: #3b5998;
 			}
 			& svg {
 				width: 0.9rem;
@@ -34,7 +34,7 @@
 
 		&_tw {
 			.social-share__link {
-				background-color: #5FA8DD;
+				background-color: #5fa8dd;
 			}
 			& svg {
 				width: 1.45rem;
@@ -60,15 +60,15 @@
 	&_min {
 		.social-share__item {
 			width: auto;
-		  height: auto;
+			height: auto;
 			margin-right: 2.2rem;
 			margin-bottom: 5px;
-			
+
 			&_vk {
 				& svg {
 					width: 2.4rem;
 					height: 1.4rem;
-					fill: #5181B8;
+					fill: #5181b8;
 				}
 			}
 
@@ -76,7 +76,7 @@
 				& svg {
 					width: 1rem;
 					height: 1.9rem;
-					fill: #3B5998;
+					fill: #3b5998;
 				}
 			}
 
@@ -84,7 +84,7 @@
 				& svg {
 					width: 1.6rem;
 					height: 1.4rem;
-					fill: #5FA8DD;
+					fill: #5fa8dd;
 				}
 			}
 		}
@@ -104,32 +104,32 @@
 					margin-right: 0;
 				}
 				& svg {
-					fill: #FFFFFF;
+					fill: #ffffff;
 				}
-				
+
 				&_vk {
 					.social-share__link {
-						background-color: #5181B8;
+						background-color: #5181b8;
 					}
 					& svg {
 						width: 1.5rem;
 						height: 0.8rem;
 					}
 				}
-	
+
 				&_fb {
 					.social-share__link {
-						background-color: #5FA8DD;
+						background-color: #5fa8dd;
 					}
 					& svg {
 						width: 0.6rem;
 						height: 1.2rem;
 					}
 				}
-	
+
 				&_tw {
 					.social-share__link {
-						background-color: #5FA8DD;
+						background-color: #5fa8dd;
 					}
 					& svg {
 						width: 1.2rem;

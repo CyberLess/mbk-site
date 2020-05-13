@@ -139,6 +139,27 @@ a {
 	@include max-screen($large_mobile) {
 		display: block;
 	}
+
+	&_top {
+		padding-top: 2rem;
+		padding-bottom: 0;
+
+		@include max-screen($small_tablet) {
+			padding-top: 3rem;
+		}
+		@include max-screen($large_mobile) {
+			padding-bottom: 3rem;
+		}
+	}
+}
+
+.mobile-wrapper {
+	display: none;
+	background-color: #ffffff;
+
+	@include max-screen($large_mobile) {
+		display: block;
+	}
 }
 
 .white {

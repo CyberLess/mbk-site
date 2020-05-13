@@ -1,236 +1,240 @@
 .we-sell-before-after {
-  display: flex;
-  width: 77%;
+	display: flex;
+	width: 77%;
 
-  @include max-screen($large_tablet) {
-    width: 85%;
-    min-width: 750px;
-  }
+	@include max-screen($large_tablet) {
+		width: 85%;
+		min-width: 750px;
+	}
 
-  @include max-screen($small_tablet) {
-    width: 100%;
-    min-width: 100%;
-    margin: 0 -3.3rem;
-    padding: 0 3.3rem;
-    overflow-x: scroll;
+	@include max-screen($small_tablet) {
+		width: 100%;
+		min-width: 100%;
+		margin: 0 -3.3rem;
+		padding: 0 3.3rem;
+		overflow-x: scroll;
 
-    @include max-screen($large_tablet) {
-      padding:0;
-      margin: 0;
-    }
-  }
+		@include max-screen($large_tablet) {
+			padding: 0;
+			margin: 0;
+		}
+	}
 
-  &.we-sell__wrap {
-    @include max-screen($small_tablet) {
-      margin-top: 35rem;
-    }
+	&.we-sell__wrap {
+		@include max-screen($small_tablet) {
+			margin-top: 35rem;
+		}
 
-    @include max-screen($large_mobile) {
-      margin-top: 26rem;
-    }
+		@include max-screen($large_mobile) {
+			margin-top: 26rem;
+		}
 
-    @include max-screen(510px) {
-      margin-top: 24rem;
-    }
-  }
+		@include max-screen(510px) {
+			margin-top: 24rem;
+		}
+	}
 }
 
 .we-sell-before-after__phones-wrap {
-  position: relative;
+	position: relative;
 
-  display: flex;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 5.5rem;
+	display: flex;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 5.5rem;
 
-  background: linear-gradient(to bottom, transparent 23rem, #ffffff 23rem);
+	background: linear-gradient(to bottom, transparent 23rem, #ffffff 23rem);
 
-  @include min-screen($small_tablet + 1) {
-    justify-content: flex-start;
-    padding-bottom: 3.5rem;
-  }
+	@include min-screen($small_tablet + 1) {
+		justify-content: flex-start;
+		padding-bottom: 3.5rem;
+	}
 
-  @include min-screen($we-sell-mock-mob-breakpoint) {
-    justify-content: center;
-  }
+	@include min-screen($we-sell-mock-mob-breakpoint) {
+		justify-content: center;
+	}
 
-  @include max-screen($small_tablet) {
-    width: 100vw;
-    min-width: $we-sell-mock-mob-breakpoint;
+	@include max-screen($small_tablet) {
+		width: 100vw;
+		min-width: $we-sell-mock-mob-breakpoint;
 
-    background: linear-gradient(to bottom, transparent 14rem, #ffffff 14rem);
-  }
+		background: linear-gradient(
+			to bottom,
+			transparent 14rem,
+			#ffffff 14rem
+		);
+	}
 
-  @include max-screen($large_mobile) {
-    min-width: 132%;
-  }
+	@include max-screen($large_mobile) {
+		min-width: 132%;
+	}
 }
 
 .we-sell-before-after__phone-wrap {
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 25%;
-  margin-bottom: 3rem;
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 25%;
+	margin-bottom: 3rem;
 
-  @include min-screen($small_tablet + 1) {
-    margin-left: auto;
-  }
+	@include min-screen($small_tablet + 1) {
+		margin-left: auto;
+	}
 
-  @include max-screen($large_tablet) {
-    width: 30%;
-  }
+	@include max-screen($large_tablet) {
+		width: 30%;
+	}
 
-  @include max-screen($small_tablet) {
-    width: 188px;
-  }
+	@include max-screen($small_tablet) {
+		width: 188px;
+	}
 
-  @include max-screen($large_mobile) {
-    min-width: 188px;
-    width: 60vw;
-  }
+	@include max-screen($large_mobile) {
+		min-width: 188px;
+		width: 60vw;
+	}
 
-  &_before {
-    @include max-screen($small_tablet) {
-      margin-right: 10%;
-    }
+	&_before {
+		@include max-screen($small_tablet) {
+			margin-right: 10%;
+		}
 
-    @include max-screen($large_mobile) {
-      margin-left: 15px;
-      margin-right: 5vw;
-    }
+		@include max-screen($large_mobile) {
+			margin-left: 15px;
+			margin-right: 5vw;
+		}
 
-    .we-sell-before-after__text {
-      @include min-screen($large_desktop + 1) {
-        margin-left: 5rem;
-      }
-    }
-  }
+		.we-sell-before-after__text {
+			@include min-screen($large_desktop + 1) {
+				margin-left: 5rem;
+			}
+		}
+	}
 
-  &_after {
-    margin-right: auto;
+	&_after {
+		margin-right: auto;
 
-    @include max-screen($small_tablet) {
-      margin-right: 0;
-    }
+		@include max-screen($small_tablet) {
+			margin-right: 0;
+		}
 
-    .we-sell-before-after__image-wrap {
-      @include max-screen($large_mobile) {
-        margin-right: 16px;
-      }
-    }
-  }
+		.we-sell-before-after__image-wrap {
+			@include max-screen($large_mobile) {
+				margin-right: 16px;
+			}
+		}
+	}
 }
 
 .we-sell-before-after__arrow-wrap {
-  position: absolute;
-  bottom: 36rem;
-  left: 50%;
+	position: absolute;
+	bottom: 36rem;
+	left: 50%;
 
-  width: 44px;
-  height: 24px;
+	width: 44px;
+	height: 24px;
 
-  transform: translateX(-50%);
+	transform: translateX(-50%);
 
-  stroke: #0E0E0E;
-  stroke-width: 5.78594;
+	stroke: #0e0e0e;
+	stroke-width: 5.78594;
 
-  @include max-screen($small_desktop) {
-    width: 30px;
-    bottom: 28rem;
-  }
+	@include max-screen($small_desktop) {
+		width: 30px;
+		bottom: 28rem;
+	}
 
-  @include max-screen($large_tablet) {
-    bottom: 45%;
-  }
+	@include max-screen($large_tablet) {
+		bottom: 45%;
+	}
 
-  @include max-screen($small_tablet) {
-    display: none;
-  }
+	@include max-screen($small_tablet) {
+		display: none;
+	}
 }
 
 .we-sell-before-after__image-wrap {
-  margin-bottom: 4rem;
+	margin-bottom: 4rem;
 
-  @include max-screen($small_tablet) {
-    width: 188px;
-    margin-bottom: 3.8rem;
-  }
+	@include max-screen($small_tablet) {
+		width: 188px;
+		margin-bottom: 3.8rem;
+	}
 }
 
 .we-sell-before-after__text {
-  position: relative;
+	position: relative;
 
-  width: 100%;
-  padding-left: 4rem;
+	width: 100%;
+	padding-left: 4rem;
 
-  font-size: 2.4rem;
+	font-size: 2.4rem;
 
-  background-repeat: no-repeat;
+	background-repeat: no-repeat;
 
-  @include min-screen($large_desktop + 1) {
-    margin-left: 3rem;
+	@include min-screen($large_desktop + 1) {
+		margin-left: 3rem;
 
-    font-size: 375%;
-  }
+		font-size: 375%;
+	}
 
-  @include max-screen($large_desktop) {
-    font-size: 390%;
-  }
+	@include max-screen($large_desktop) {
+		font-size: 390%;
+	}
 
-  @include max-screen($small_desktop) {
-    width: auto;
+	@include max-screen($small_desktop) {
+		width: auto;
 
-    font-size: 1.5rem;
-  }
+		font-size: 1.5rem;
+	}
 
-  @include max-screen($large_tablet) {
-    font-size: 1.9rem;
-  }
+	@include max-screen($large_tablet) {
+		font-size: 1.9rem;
+	}
 
-  @include max-screen($small_tablet) {
-    padding-left: 2.5rem;
+	@include max-screen($small_tablet) {
+		padding-left: 2.5rem;
 
-    font-size: 1.4rem;
-  }
+		font-size: 1.4rem;
+	}
 }
 
 .we-sell-before-after__icon-wrap {
-  position: absolute;
-  top: 50%;
-  left: 0;
+	position: absolute;
+	top: 50%;
+	left: 0;
 
-  transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 
 .icon-before {
-  width: 10%;
+	width: 10%;
 
-  transform: translateY(-40%);
+	transform: translateY(-40%);
 
-  fill: none;
-  stroke: #FF0600;
-  stroke-width: 3.7;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+	fill: none;
+	stroke: #ff0600;
+	stroke-width: 3.7;
+	stroke-linecap: round;
+	stroke-linejoin: round;
 
-  @include max-screen($small_desktop) {
-    width: 13%;
-  }
+	@include max-screen($small_desktop) {
+		width: 13%;
+	}
 
-  @include max-screen($large_mobile) {
-    width: 12%;
-  }
+	@include max-screen($large_mobile) {
+		width: 12%;
+	}
 }
 
 .icon-after {
-  width: 8%;
+	width: 8%;
 
-  fill: none;
-  stroke: #3A955E;
-  stroke-width: 3.7;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+	fill: none;
+	stroke: #3a955e;
+	stroke-width: 3.7;
+	stroke-linecap: round;
+	stroke-linejoin: round;
 }

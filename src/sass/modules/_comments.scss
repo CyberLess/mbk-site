@@ -13,7 +13,7 @@
 		}
 		&_right {
 			width: 20.6429%;
-	}
+		}
 	}
 
 	&__head {
@@ -53,9 +53,9 @@
 				width: 22%;
 			}
 		}
-  }
+	}
 
-  @include max-screen($large_tablet) {
+	@include max-screen($large_tablet) {
 		&__wrap {
 			padding-right: 32px;
 		}
