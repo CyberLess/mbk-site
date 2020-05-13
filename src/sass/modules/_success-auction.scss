@@ -97,11 +97,18 @@
   &__slogan {
     margin-bottom: 3.8rem;
 
+    text-align: center;
+
     @include max-screen($small_tablet) {
       margin-bottom: 3rem;
 
       font-size: 1.4rem;
-      text-align: center;
+    }
+
+    .slogan-brake {
+      @include min-screen($small_tablet + 1) {
+        display: none;
+      }
     }
   }
 
@@ -251,8 +258,6 @@
     padding-top: 3rem;
 
     list-style: none;
-
-    cursor: w-resize
   }
 
   &__item {
