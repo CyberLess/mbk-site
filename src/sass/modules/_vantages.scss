@@ -2,6 +2,11 @@
 	padding-top: 6.4rem;
 	padding-bottom: 2.8rem;
 
+	&_big-margin {
+		padding-top: 11.1rem;
+		padding-bottom: 9.4rem;
+	}
+
 	&__title {
 		padding-top: 106/410 * 100%;
 	}
@@ -101,6 +106,9 @@
 
 	@include max-screen($small_tablet) {
 		padding-top: 0;
+		&_big-margin {
+			padding-bottom: 4rem;
+		}
 		&__cell {
 			margin: 20px 1.8732%;
 			width: 46.2536%;
@@ -109,6 +117,7 @@
 
 	@include max-screen($large_mobile) {
 		padding-top: 2.5rem;
+
 		&__title {
 			text-align: center;
 			padding-top: 0;

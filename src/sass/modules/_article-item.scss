@@ -2,6 +2,17 @@
 	background-color: #ffffff;
 	padding-top: 4.5rem;
 
+	&_noscope {
+		padding-top: 0;
+		padding-bottom: 7.8rem;
+		margin-top: -1.8rem;
+		.article-item {
+			&__accent {
+				margin-top: 7.1rem;
+			}
+		}
+	}
+
 	&__breadcrumbs {
 		margin-bottom: 2.5rem;
 	}
@@ -216,7 +227,20 @@
 	&__close {
 		display: none;
 	}
+	&__bottom {
+		background-color: #fff;
+		padding-left: 3rem;
+		padding-right: 3rem;
+		width: 100%;
+		padding-top: 7px;
+		padding-bottom: 5.1rem;
 
+		&-button {
+			&:not(:last-child) {
+				margin-bottom: 1.4rem;
+			}
+		}
+	}
 	&__prev-link {
 		position: relative;
 		display: flex;
@@ -280,11 +304,11 @@
 			padding-left: 0;
 		}
 		&__cell {
-			&_left {
-				width: 100%;
-			}
+			width: 100%;
 			&_right {
-				display: none;
+				&:not(.article-item__cell_no-hide) {
+					display: none;
+				}
 			}
 		}
 		&__title-link {
@@ -320,6 +344,23 @@
 
 	@include max-screen($large_mobile) {
 		padding-top: 0;
+		&_noscope {
+			padding-top: 0;
+			padding-bottom: 2.5rem;
+			background-color: transparent;
+			margin-top: 0;
+			.article-item {
+				&__row {
+					background-color: #fff;
+					padding-left: 3rem;
+					padding-right: 3rem;
+				}
+				&__accent {
+					margin-top: 3.7rem;
+					margin-bottom: 3.7rem;
+				}
+			}
+		}
 		&__info {
 			.article {
 				&__nav-item:not(:last-child) {

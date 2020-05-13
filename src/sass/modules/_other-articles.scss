@@ -1,5 +1,6 @@
 .other-articles {
 	padding-top: 0.9rem;
+	margin-top: 3.2rem;
 
 	&__item {
 		width: 100%;
@@ -19,6 +20,41 @@
 
 		&:hover {
 			box-shadow: 0px 3.73234px 70px rgba(0, 0, 0, 0.08);
+		}
+	}
+
+	@include max-screen($large_tablet) {
+		display: flex;
+		flex-wrap: wrap;
+		&__item {
+			width: auto;
+			margin-right: 4rem;
+		}
+		&__link {
+			width: 27.8rem;
+			max-width: none;
+		}
+	}
+
+	@include max-screen($large_mobile) {
+		margin-top: 2.8rem;
+		justify-content: space-between;
+		&__item {
+			height: auto;
+			width: 48%;
+			margin-right: 0;
+			margin-bottom: 3.6rem;
+		}
+		&__link {
+			width: 100%;
+			// padding-top: 139%;
+			padding-top: 423/288 * 100%;
+		}
+	}
+
+	@include max-screen($large_mobile) {
+		&__item {
+			width: 100%;
 		}
 	}
 }

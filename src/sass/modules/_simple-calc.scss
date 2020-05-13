@@ -1,0 +1,103 @@
+.simple-calc {
+	&__inner {
+		background-color: #fff;
+		padding: 12rem 0;
+	}
+
+	&__title {
+		margin-bottom: 6rem;
+		line-height: 120%;
+	}
+
+	&__field {
+		&:not(:last-child) {
+			margin-bottom: 3.7rem;
+		}
+	}
+
+	&__price {
+		margin-bottom: 4rem;
+
+		&-item {
+			margin-bottom: 6px;
+		}
+	}
+
+	&__button {
+		margin-bottom: 4rem;
+		width: 100%;
+	}
+
+	&__small {
+		color: rgba($dark, 0.5);
+	}
+
+	&__cell {
+		&_left {
+			width: 815/1336 * 100%;
+			border-right: 1px solid #cccccc;
+			padding-top: 8px;
+			padding-bottom: 8.1rem;
+			padding-right: 100/1336 * 100%;
+		}
+		&_right {
+			width: 521/1336 * 100%;
+			padding-left: 88/1336 * 100%;
+		}
+	}
+
+	@include max-screen($small_tablet) {
+		&__inner {
+			padding: 9rem 0;
+		}
+	}
+
+	@include max-screen($large_mobile) {
+		&__inner {
+			background: transparent;
+			padding-top: 3.9rem;
+			padding-bottom: 2.6rem;
+		}
+		&__title {
+			text-align: center;
+			margin-bottom: 2.2rem;
+		}
+		&__cell {
+			width: 100%;
+			border: none;
+			padding: 0;
+			&_left {
+				margin-bottom: 2.4rem;
+			}
+			&_right {
+				text-align: center;
+			}
+		}
+		&__field {
+			&:not(:last-child) {
+				margin-bottom: 2.4rem;
+			}
+		}
+		&__price {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: flex-end;
+			margin-bottom: 1.2rem;
+			flex-direction: row-reverse;
+
+			&-item {
+				margin-bottom: 0;
+				margin-left: 1.4rem;
+			}
+		}
+		&__small {
+			font-size: 1rem;
+			line-height: 140%;
+			color: $dark;
+		}
+		&__button {
+			display: none;
+		}
+	}
+}

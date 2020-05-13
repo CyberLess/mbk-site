@@ -249,7 +249,9 @@
 
 	.content {
 		li {
-			padding-left: 18px;
+			padding-left: 18px !important;
+		}
+		ul li {
 			&:before {
 				width: 5px;
 				height: 5px;

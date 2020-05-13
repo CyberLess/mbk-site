@@ -2,6 +2,26 @@
 	padding-top: 4.5rem;
 	padding-bottom: 6.4rem;
 
+	&_simple {
+		padding-top: 12rem;
+		padding-bottom: 0;
+
+		& + .group {
+			margin-top: -1.8732%;
+		}
+
+		.credit {
+			&__title {
+				margin-bottom: 6.5rem;
+			}
+		}
+
+		.service__list-top {
+			margin-top: 6.6rem;
+			margin-bottom: 3.7rem;
+		}
+	}
+
 	&__breadcrumbs {
 		margin-bottom: 5rem;
 	}
@@ -157,6 +177,22 @@
 	@include max-screen($large_mobile) {
 		padding-top: 5.1rem;
 		padding-bottom: 2.5rem;
+
+		&_simple {
+			padding-top: 2.5rem;
+			padding-bottom: 0;
+
+			& + .group {
+				margin-top: -20px;
+			}
+
+			.credit {
+				&__title {
+					text-align: center;
+					margin-bottom: 4px;
+				}
+			}
+		}
 
 		&__form {
 			margin-bottom: 2.1rem;

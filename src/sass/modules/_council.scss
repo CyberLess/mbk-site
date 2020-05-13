@@ -3,6 +3,15 @@
 	padding-top: 12rem;
 	padding-bottom: 6.8rem;
 
+	&_nobottom {
+		padding-bottom: 0 !important;
+		.council {
+			&__content {
+				margin-bottom: 0;
+			}
+		}
+	}
+
 	&__button {
 		margin-bottom: 5.3rem;
 	}
@@ -202,6 +211,11 @@
 	@include max-screen($large_mobile) {
 		padding-top: 5.1rem;
 		padding-bottom: 3.7rem;
+		background: transparent;
+
+		&__row {
+			background: #fff;
+		}
 
 		&__head {
 			&-inner {

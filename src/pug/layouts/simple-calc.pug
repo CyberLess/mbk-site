@@ -1,0 +1,46 @@
++b.SECTION.simple-calc
+	+e.inner
+		+e.wrap.wrap
+			+e.title.h3.H3 Калькулятор кредита без справок
+			+e.FORM.form.flex._vertical
+				+e.cell._left
+					+e.field.input__._big-margin
+						+e.top
+							+e.label.text-dark.p
+								| Сумма кредита, ₽
+						+e.parent.range-input__._big
+							+e.INPUT.input.js-payment.js-price(type="text" autocomplete="off" name="calc[price]" placeholder="0 ₽" value="300000")
+							+e.char._fixed.h6 ₽
+							+e.bottom
+								+e.line
+								+e.path(data-min="150000" data-step="50000" data-max="15000000")
+						+e.info.flex._vertical._justify
+							+e.label.text-dark.p
+								| 150 тыс.
+							+e.label.text-dark.p
+								| 15 млн
+					+e.field.input__._big-margin
+						+e.top
+							+e.label.text-dark.p
+								| Выберите срок кредита
+						+e.parent.range-input__._big
+							+e.INPUT.input.js-payment.js-time(type="text" autocomplete="off" name="calc[time]" placeholder="0 ₽" value="72")
+							+e.char._fixed.h6 мес.
+							+e.bottom
+								+e.line
+								+e.path(data-min="12" data-step="1" data-max="300")
+						+e.info.flex._vertical._justify
+							+e.label.text-dark.p
+								| 12 мес.
+							+e.label.text-dark.p
+								| 25 лет
+				+e.cell._right
+					+e.price
+						+e.price-item.h4
+							span.is-bold.js-total-payment
+							span.is-bold  ₽
+						+e.price-text.is-regular.h6 Ежемесячный платеж
+					+button Оформить заявку
+					+e.small.small
+						| Пример расчета условий по кредиту носит исключительно 
+						| информационный характер и не является публичной офертой.

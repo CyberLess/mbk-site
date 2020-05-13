@@ -269,13 +269,13 @@ a {
 	color: $red;
 }
 .text-gray {
-	color: #868686;
+	color: #868686 !important;
 }
 .text-light {
-	color: #afafaf;
+	color: #afafaf !important;
 }
 .text-dark {
-	color: $dark;
+	color: $dark !important;
 }
 
 .row {
@@ -334,8 +334,14 @@ svg {
 	// }
 }
 
+.css-show-mobile {
+	display: none;
+	@include max-screen($large_mobile) {
+		display: block;
+	}
+}
 .css-hide-mobile {
-	@include max-screen($large_tablet) {
+	@include max-screen($large_mobile) {
 		display: none;
 	}
 }
