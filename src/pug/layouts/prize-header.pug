@@ -1,0 +1,71 @@
+if topIsWhite
+    +e.top.white
+        +e.wrap.wrap
+            +e.top-content
+                +e.success-icon-wrap
+                    +e.SVG.icon-succes(
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg")
+                        CIRCLE(class="circle" cx="10" cy="10" r="10" fill="#19C13E")
+                        PATH(
+                            class="check"
+                            d="M6.5 9.74902L9 12.499L14 6.99902"
+                            stroke="white"
+                            stroke-width="2")
+                +e.SPAN.top-text.h6 Ваша почта подтверждена!
+else
+    +e.top
+        +e.wrap.wrap
+            +e.top-content
+                +e.success-icon-wrap
+                    +e.SVG.icon-succes(
+                        width="20"
+                        height="20"
+                        viewBox="0 0 20 20"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg")
+                        CIRCLE(class="circle" cx="10" cy="10" r="10" fill="#19C13E")
+                        PATH(
+                            class="check"
+                            d="M6.5 9.74902L9 12.499L14 6.99902"
+                            stroke="white"
+                            stroke-width="2")
+                +e.SPAN.top-text.h6 Ваша почта подтверждена!
+
++e(class="content_" +pageModificator)
+    +e.content-wrap.wrap
+        +e.content-text-wrap(class='' +contentColor)
+            +e.P.slogan.p.small Поздравляем! Вы выиграли подарок от МБК!
+            +e.H1.title.h3= mainTitle
+
+            +e.UL.benefits-list
+                each benefit in benefits
+                    +e.LI.benefit-item.h6
+                        +e.benefit-icon-wrap
+                            +icon('benefit', '0 0 19 16')
+                        | #{benefit}
+
+            +e.prices
+                +e.price-wrap
+                    +e.SPAN.price-text._start Цена для всех
+                    +e.SPAN.price._start.h4.is-bold= startPrice
+                +e.arrow-wrap
+                    +icon('priceArrow', '0 0 43 20')
+                +e.price-wrap
+                    +e.SPAN.price-text._for-you Цена для Вас
+                    +e.SPAN.price._for-you.h4.is-bold 0 ₽
+
+    case pageModificator
+        when 'consultation'
+            +e.DIV.image-wrapper
+                +e.IMG.img(src="/img/alexandr-bodin@desktop.jpg")
+                +e.inscription.specialist-inscription__
+                    +e.specialist-name.A(href="#") Бодин Александр
+                        +e.icon-specialist.arrow
+                            +e.SVG(viewBox="0 0 18.560659 9.6213207")
+                                path(class="triangle" d='M14.5 4.81v-3l3 3-3 3z')
+                                path(class="stroke" d='M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z')
+                    +e.specialist-status.SPAN Юрист по вопросам недвижимости

@@ -61,7 +61,7 @@
 	font-size: 1.8rem;
 	line-height: 140%;
 	font-weight: 500;
-}	
+}
 
 .small{
 	font-size: 1.4rem;
@@ -77,6 +77,10 @@
 
 .is-bold{
 	font-weight: bold !important;
+}
+
+.is-white {
+	color: #ffffff;
 }
 
 .content{
@@ -103,11 +107,11 @@
 	&_big{
 		p, li{
 			font-size: 1.8rem;
-			line-height: 140%;		
-			
+			line-height: 140%;
+
 			// &:not(:last-child){
 				margin-bottom: 1.9rem;
-			// }	
+			// }
 		}
 
 		li{
@@ -120,7 +124,7 @@
 		}
 
 		& ol {
-			list-style-type: none; 
+			list-style-type: none;
 			counter-reset: num;
 
 			& li {
@@ -128,7 +132,7 @@
 				padding-left: 3.5rem;
 
 				&:before {
-					content: counter(num) '.'; 
+					content: counter(num) '.';
 					counter-increment: num;
 					display: inline-block;
 					position: absolute;
@@ -171,7 +175,7 @@
 	}
 	.h2, .content h2{
 		font-size: 3.9rem;
-	}	
+	}
 
 	.h4, .content h4{
 		font-size: 2.4rem;
@@ -184,7 +188,7 @@
 	}
 	.h2, .content h2{
 		font-size: 2.6rem;
-	}	
+	}
 	.h3, .content h3{
 		font-size: 2.6rem;
 	}
@@ -193,5 +197,5 @@
 	}
 	.h6, .content h6{
 		font-size: 1.4rem;
-	}	
+	}
 }

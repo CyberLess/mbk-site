@@ -1,0 +1,146 @@
+.prize-header {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+
+  &__top-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3.6rem;
+    padding-bottom: 3.6rem;
+  }
+
+  &__icon-succes {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &__top-text {
+    margin-left: 2rem;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__content-wrap {
+    position: relative;
+    z-index: 1;
+
+    padding-top: 11.5rem;
+  }
+
+  &__content-text-wrap {
+    width: 50%;
+  }
+
+  &__slogan {
+    display: inline-block;
+    margin-bottom: 2.2rem;
+    padding: .8rem 1.6rem;
+    border-radius: 5px;
+
+    color: #0E0E0E;
+
+    background-color: #ffffff;
+  }
+
+  &__title {
+    margin-bottom: 4.5rem;
+  }
+
+  &__benefits-list {
+    width: 60%;
+    margin-bottom: 9.7rem;
+
+    list-style: none;
+  }
+
+  &__benefit-item {
+    position: relative;
+
+    margin-bottom: 2.1rem;
+    padding-left: 5rem;
+  }
+
+  &__benefit-icon-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .icon-benefit {
+      width: 1.8rem;
+      height: 1.8rem;
+
+      fill: none;
+      stroke: #FF0400;
+      stroke-width: 4;
+    }
+  }
+
+  &__prices {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  &__price-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__price-text {
+    font-size: 1.4rem;
+  }
+
+  &__price {
+    &_start {
+      text-decoration: line-through;
+    }
+  }
+
+  &__arrow-wrap {
+    width: 3.9rem;
+    align-self: flex-end;
+    margin: 0 4.5rem .5rem;
+
+    svg {
+      fill: none;
+      stroke: #ffffff;
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+  }
+
+  &__image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+  }
+
+  &__img {
+    max-width: 1920px;
+    width: 100%;
+  }
+
+  &__inscription {
+    right: 14%;
+    bottom: 7.5rem;
+
+    width: 27.4rem;
+    padding: 3rem 5rem 4.5rem;
+
+    &::before {
+      left: 6rem !important;
+    }
+
+    .specialist-inscription__specialist-name {
+      margin-bottom: .8rem;
+    }
+  }
+}
