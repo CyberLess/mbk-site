@@ -23,6 +23,12 @@
 
   &__content {
     position: relative;
+
+    &_consultation {
+      background-image: url("/img/alexandr-bodin@desktop.jpg");
+      background-size: cover;
+      background-position: center center;
+    }
   }
 
   &__content-wrap {
@@ -30,6 +36,7 @@
     z-index: 1;
 
     padding-top: 11.5rem;
+    padding-bottom: 12.4rem;
   }
 
   &__content-text-wrap {
@@ -56,6 +63,14 @@
     margin-bottom: 9.7rem;
 
     list-style: none;
+
+    @include max-screen($small_desktop) {
+      width: 70%;
+    }
+
+    @include max-screen($large_tablet) {
+      width: 91%;
+    }
   }
 
   &__benefit-item {
@@ -83,7 +98,6 @@
   &__prices {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
   }
 
   &__price-wrap {
@@ -92,10 +106,14 @@
   }
 
   &__price-text {
+    max-width: 14rem;
+
     font-size: 1.4rem;
   }
 
   &__price {
+    margin-top: auto;
+
     &_start {
       text-decoration: line-through;
     }
