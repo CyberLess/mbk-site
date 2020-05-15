@@ -41,6 +41,12 @@
   }
 }
 
+.sell-apartment__question-mark {
+  @include max-screen($small_tablet) {
+    display: none;
+  }
+}
+
 .sell-apartment__slogan {
   margin-bottom: 5.5rem;
 
@@ -162,7 +168,7 @@ p.sell-apartment__applications.sell-apartment__applications_mobile {
 
     @include max-screen($large_tablet) {
       margin-bottom: 2.5rem;
-      
+
       font-size: 3.6rem;
     }
 

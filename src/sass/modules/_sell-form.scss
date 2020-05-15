@@ -47,7 +47,7 @@
 
     .sell-form__input {
       @include max-screen($sell-form-tab-breakpoint) {
-        padding-left: 2rem;
+        padding-left: 3rem;
         padding-right: 2rem;
       }
     }
@@ -77,7 +77,7 @@
       padding-right: 5.5rem;
 
       @include max-screen($sell-form-tab-breakpoint) {
-        padding-left: 2rem;
+        padding-left: 3rem;
         padding-right: 3.5rem;
       }
     }
@@ -122,10 +122,16 @@
 
       .label {
         margin-left: 3.5rem;
+
+        @include max-screen($sell-form-tab-breakpoint) {
+          margin-left: 3rem;
+        }
       }
 
       .button {
-        padding-right: 1.3rem;
+        @include min-screen($small_tablet) {
+          padding-right: 1.3rem;
+        }
       }
     }
 
@@ -184,7 +190,7 @@
 
   @include max-screen($small_tablet) {
     top: 3rem;
-    right: 2rem;
+    right: 2.8rem;
 
     font-size: 1.5rem;
   }
