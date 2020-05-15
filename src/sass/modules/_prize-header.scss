@@ -18,7 +18,10 @@
   }
 
   &__top-text {
+    max-width: calc(100% - 5rem);
     margin-left: 2rem;
+
+    word-break: break-word;
   }
 
   &__content {
@@ -50,6 +53,7 @@
     border-radius: 5px;
 
     color: #0E0E0E;
+    word-break: break-word;
 
     background-color: #ffffff;
   }

@@ -1,0 +1,98 @@
+.what-you-get {
+  padding-top: 13.5rem;
+
+  &__content-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% + 5.3rem);
+    margin-left: -4%;
+  }
+
+  &__title,
+  &__item {
+    width: 29.5%;
+    margin-left: 3.8%;
+    margin-bottom: 4.2rem;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1.4rem;
+
+    line-height: 1.2;
+    word-break: break-word;
+  }
+
+  &__item {
+    position: relative;
+
+    min-height: 36rem;
+    padding: 10.3rem 3.6% 5rem;
+    border-radius: 5px;
+
+    background-color: #ffffff;
+
+    @include max-screen($small_desktop) {
+      .what-break {
+        display: none;
+      }
+    }
+
+    @include max-screen($large_tablet) {
+      min-height: 30rem;
+      padding: 7.3rem 3.6% 3rem;
+    }
+  }
+
+  &__item-icon-wrap {
+    position: absolute;
+    top: 0;
+    left: 5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+
+    transform: translateY(-50%);
+
+    background-image:
+            linear-gradient(to bottom, transparent 0%, transparent 50%, #F3F3F3 50%);
+
+    svg {
+      fill: none;
+      stroke: #0E0E0E;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .icon-shield {
+      width: 29%;
+    }
+
+    .icon-flag {
+      width: 36%;
+    }
+
+    .icon-key {
+      width: 36%;
+      margin-left: 8%;
+    }
+
+    .icon-copy {
+      width: 37%;
+    }
+
+    .icon-userСheck {
+      width: 39%;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 2.5rem;
+  }
+}

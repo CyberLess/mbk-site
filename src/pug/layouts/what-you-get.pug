@@ -1,0 +1,11 @@
++b.SECTION.what-you-get
+    +e.wrap.wrap
+        +e.content-wrap
+            +e.H2.title.h4.is-bold !{whatYouGetTitile}
+
+            each item in whatYouGetItems
+                +e.DIV.item
+                    +e.item-icon-wrap
+                        +icon(item.icon, item.viewBox)
+                    +e.H3.item-title.h6 !{item.title}
+                    +e.P.item-text.is-regular.h6 !{item.text}
