@@ -141,10 +141,8 @@
     position: relative;
     width: 43.5%;
 
-    @include max-screen($large_tablet) {
-      display: flex;
-      align-items: flex-end;
-    }
+    display: flex;
+    align-items: flex-end;
   }
 
   &__manager-img {
