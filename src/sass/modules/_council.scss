@@ -322,4 +322,75 @@
 			}
 		}
 	}
+
+	&_article {
+		@include max-screen($small_tablet - 1) {
+			padding-top: 0;
+			.council__wrap {
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+			.council__author {
+				padding: 1.8rem 0;
+				background-color: transparent;
+			}
+	
+			.council__category {
+				margin-bottom: 1rem;
+			}
+	
+			.council__head{
+				&-inner{
+					padding: 5.1rem 1.5rem;
+				}
+			}
+			.council__title{
+				// width: 100%;
+				// max-width: 21.2rem;
+				// font-size: 2.6rem;
+			}
+		}
+		@include max-screen($large_mobile) {
+			padding-bottom: 0;
+			.council__head{
+				&-inner{
+					min-height: 34.7rem;
+				}
+			}
+			.council__author {
+				color: $dark;
+				&-cell{
+					&_avatar{
+						width: 3.7rem;
+						margin-right: 1.8rem;
+					}
+				}
+				&-text{
+					font-size: 1rem;
+					color: $dark;
+				}
+			}
+			.council__link {
+				font-size: 1rem;
+				color: $dark;
+				& svg {
+					margin-top: -0.4rem;
+				}
+				.link {
+					color: $dark;
+	
+					&__arrow {
+						.triangle {
+							stroke: $dark !important;
+						}
+	
+						.stroke {
+							fill: $dark !important;
+						}
+					}
+				}
+			}
+		}
+	}
 }

@@ -151,6 +151,27 @@ a {
 			padding-bottom: 3rem;
 		}
 	}
+
+	&_top {
+		padding-top: 2rem;
+		padding-bottom: 0;
+		
+		@include max-screen($small_tablet) {
+			padding-top: 3rem;
+		}
+		@include max-screen($large_mobile) {
+			padding-bottom: 3rem;
+		}
+	}
+}
+
+.mobile-wrapper {
+	display: none;
+	background-color: #FFFFFF;
+
+	@include max-screen($large_mobile) {
+		display: block;
+	}
 }
 
 .mobile-wrapper {
@@ -362,5 +383,12 @@ svg {
 .css-to-middle {
 	@include max-screen($large_tablet) {
 		font-weight: 500 !important;
+	}
+}
+.border-top {
+	border-top: 1px solid  #B3B3B3;
+
+	@include max-screen($large_mobile) {
+		border-top: none;
 	}
 }

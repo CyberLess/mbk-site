@@ -178,7 +178,8 @@
 
 	&__title-link {
 		position: fixed;
-		right: 610/1920 * 100%;
+		// right: 610/1920*100%;
+		margin-left: 80rem;
 		top: 50%;
 		z-index: 20;
 		display: flex;
@@ -241,6 +242,7 @@
 			}
 		}
 	}
+
 	&__prev-link {
 		position: relative;
 		display: flex;
@@ -284,6 +286,7 @@
 			&_left {
 				width: 65%;
 			}
+	
 			&_right {
 				width: 22%;
 			}
@@ -313,6 +316,7 @@
 		}
 		&__title-link {
 			right: 0;
+			margin-left: 0;
 		}
 
 		&__white {
@@ -556,7 +560,6 @@
 		&__news-social {
 			margin-top: 3.4rem;
 			justify-content: space-between;
-
 			.article-item__social-desc {
 				margin-right: 0;
 			}
@@ -580,14 +583,14 @@
 						height: 0.8rem;
 					}
 				}
-
+	
 				&_fb {
 					& svg {
 						width: 0.6rem;
 						height: 1.2rem;
 					}
 				}
-
+	
 				&_tw {
 					& svg {
 						width: 1.2rem;

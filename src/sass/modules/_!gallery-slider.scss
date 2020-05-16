@@ -57,6 +57,11 @@
 				content: none;
 			}
 		}
+		&--nonumber{
+			&::before{
+				content: none;
+			}
+		}
 	}
 
 	&__link {

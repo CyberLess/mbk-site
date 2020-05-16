@@ -114,17 +114,27 @@
 		}
 	}
 
-	&_medium {
+	&_normal{
+		margin-bottom: 2.6rem;
+		.input{
+			&__item{
+				height: 7.4rem;
+				font-size: 2.4rem;
+			}
+		}
+	}
+
+	&_medium{
 		margin-bottom: 0;
-		.input {
-			&__item {
+		.input{
+			&__item{
 				height: 6.4rem;
 				font-size: 2.4rem;
 			}
 		}
 	}
 
-	&_big {
+	&_big{
 		margin-bottom: 3rem;
 		.input {
 			&__item {
@@ -241,6 +251,29 @@
 					font-size: 1.9rem;
 				}
 			}
+		}
+
+		&_border {
+			margin-bottom: 3.4rem;
+			.input {
+				&__item {
+					padding: 1.3rem 2.1rem;
+					font-size: 1.2rem;
+				}
+			}
+		}
+
+		&_normal{
+			margin-bottom: 3.1rem;
+			.input{
+				&__item{
+					height: 3.8rem;
+
+					font-weight: bold;
+					font-size: 1.9rem;
+				}
+			}
+
 		}
 
 		&_border {

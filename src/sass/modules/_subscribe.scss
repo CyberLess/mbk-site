@@ -302,9 +302,10 @@
 
 		.subscribe__title {
 			@include max-screen($large_mobile) {
+				font-size: 2.6rem;
 				text-align: left;
-				margin-bottom: 8.7rem;
-				padding-right: 50px;
+				margin-bottom: 10rem;
+				padding-right: 40px;
 			}
 		}
 
