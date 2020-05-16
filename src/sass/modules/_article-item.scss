@@ -145,6 +145,7 @@
 
 	&__cell {
 		&_left {
+			position: relative;
 			width: 805/1336*100%;
 			padding-bottom: 3.1rem;
 
@@ -166,7 +167,8 @@
 
 	&__title-link {
 		position: fixed;
-		right: 610/1920*100%;
+		// right: 610/1920*100%;
+		margin-left: 80rem;
 		top: 50%;
 		z-index: 20;
 		display: flex;
@@ -289,6 +291,7 @@
 		}
 		&__title-link {
 			right: 0;
+			margin-left: 0;
 		}
 
 		&__white {

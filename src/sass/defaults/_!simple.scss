@@ -296,4 +296,10 @@ img, svg{
 	// }	
 }
 
+.border-top {
+	border-top: 1px solid  #B3B3B3;
 
+	@include max-screen($large_mobile) {
+		border-top: none;
+	}
+}
