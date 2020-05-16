@@ -4,12 +4,13 @@ append vars
 		- title = 'Статья';
 
 block content
-	include ../layouts/article-item
-	+b.mobile-wrapper.wrap
-		include ../layouts/article-estimate
-	include ../layouts/article-author
-	include ../layouts/article-tegs
-	include ../layouts/comments
+	+b.js-article
+		include ../layouts/article-item
+		+b.mobile-wrapper.wrap
+			include ../layouts/article-estimate
+		include ../layouts/article-author
+		include ../layouts/article-tegs
+		include ../layouts/comments
 	+b.SECTION.group._top.gray._mobile.is-without-container
 		+b.SECTION.white._mobile.radius-5._mobile
 			include ../layouts/blog-with-title

@@ -7,6 +7,7 @@
     return isVisible;
   }
 
+  const cont = document.querySelector(`.js-article`);
   const title = document.querySelector(`.js-title`);
   const link = document.querySelector(`.js-link`);
 
@@ -25,10 +26,10 @@
   if (winWidth < 581) {
     const $toggle = $('.js-toggle-title');
     window.addEventListener(`scroll`, () => {
-      if (title) {
+      if (title && cont) {
         if (isScrolledIntoView(title)) {
           $toggle.addClass(`active`);
-        } else {
+        } else if (!isScrolledIntoView(cont)) {
           $toggle.removeClass(`active`);
           $('.article-item__title-wrapper').removeClass('opened');
         }
