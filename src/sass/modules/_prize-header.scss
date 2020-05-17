@@ -41,17 +41,31 @@
       background-position: center center;
     }
 
-    &_advertising {
-      background-image: url("/img/advertising-bg@desktop.png");
-      background-size: contain;
-      background-position: right bottom;
+    &_advertising,
+    &_ad {
+      background-size: cover;
+      background-position: right 66% bottom;
     }
 
     &_advertising {
+      background-image: url("/img/advertising-bg@desktop.png");
+
       .prize-header__benefit-item {
         position: relative;
         margin-bottom: 1.6rem;
         padding-left: 5rem;
+      }
+    }
+
+    &_ad {
+      background-image: url("/img/ad-bg@desktop.png");
+
+      .prize-header__benefits-list {
+        width: 61%;
+      }
+
+      .prize-header__benefit-item {
+        margin-bottom: 2.9rem;
       }
     }
   }

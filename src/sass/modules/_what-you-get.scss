@@ -2,7 +2,8 @@
   padding-top: 13.5rem;
   padding-bottom: 7.5rem;
 
-  &_advertising {
+  &_advertising,
+  &_ad {
     .what-you-get__title {
       padding-bottom: 5.4rem;
     }
@@ -35,7 +36,7 @@
     position: relative;
 
     min-height: 36rem;
-    padding: 10.3rem 3.6% 5rem;
+    padding: 10.3rem 3.3% 5rem;
     border-radius: 5px;
 
     background-color: #ffffff;

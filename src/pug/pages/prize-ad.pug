@@ -1,0 +1,22 @@
+extends ../layouts/base
+
+append vars
+    - var title = 'Разместим объявление на 100 площадок'
+    - var mainTitle = 'Разместим объявление на 100 площадок'
+    - var topBg = 'light-gray'
+    - var contentColor = 'is-dark'
+    - var pageModificator = 'ad'
+    - var benefits = ['Сделаем профессиональную фотосессию Вашей квартиры', 'Создадим продающее объявление', 'Разместим на 100 рекламных площадках по продаже недвижимости'];
+    - var startPrice = '20 000 ₽'
+    - var whatYouGetTitile = 'Что даст размещение <br class="what-break"> на 100 площадках?'
+    - var whatYouGetItems = [{icon: 'starStroke', viewBox: '0 0 32 30', title: 'Подадим квартиру <br class="what-break"> в лучшем свете', text: 'Выберем лучшие ракурсы, уберем лишние вещи, чтобы квартира казалась привлекательнее'}, {icon: 'curveArrow', viewBox: '0 0 34 34', title: 'Увеличим количество <br class="what-break"> просмотров объявления', text: 'Объявление увидят более <br class="what-break"> 50 000 человек в течение нескольких дней'}, {icon: 'share', viewBox: '0 0 28 28', title: 'Обеспечим самые <br class="what-break"> видные места', text: 'Для топовых площадок оплатим премиум размещение объявления на самых просматриваемых местах'}, {icon: 'phoneIn', viewBox: '0 0 34 34', title: 'Телефон начнёт <br class="what-break"> плавиться от звонков', text: 'В среднем каждый десятый человек, который прочитал объявление, звонит'}, {icon: 'users', viewBox: '0 0 34 34', title: 'Утроим количество <br class="what-break"> встреч с клиентами', text: 'Пропишем объявление так, <br class="what-break"> чтобы люди хотели увидеть квартиру в живую'}]
+
+block header
+    +b.HEADER.prize-header.white
+        include ../layouts/prize-header
+
+block content
+    include ../layouts/what-you-get
+
+block footer
+    include ../layouts/receive-gift
