@@ -244,6 +244,43 @@
         }
       }
     }
+
+    &_encumbrances {
+      background-image: url("/img/encumbrances-bg@desktop.webp");
+      background-position: center bottom;
+      background-size: cover;
+
+      @include max-screen($large_tablet) {
+        background-position: 40% bottom;
+      }
+
+      .prize-header {
+        &__content-wrap {
+          padding-bottom: 12rem;
+        }
+
+        &__title {
+          margin-bottom: 5.5rem;
+        }
+
+        &__benefits-list {
+          padding-bottom: 4.9rem;
+        }
+
+        &__benefit-item {
+          margin-bottom: 2.5rem;
+        }
+
+        &__price-text {
+          min-width: 100%;
+        }
+
+        &__price {
+          text-decoration: none;
+        }
+      }
+
+    }
   }
 
   &__content-wrap {

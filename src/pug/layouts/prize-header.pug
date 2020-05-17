@@ -31,14 +31,19 @@
                         | !{benefit}
 
             +e.prices
-                +e.price-wrap
-                    +e.SPAN.price-text._start Цена для всех
-                    +e.SPAN.price._start.h4.is-bold= startPrice
-                +e.arrow-wrap
-                    +icon('priceArrow', '0 0 43 20')
-                +e.price-wrap
-                    +e.SPAN.price-text._for-you Цена для Вас
-                    +e.SPAN.price._for-you.h4.is-bold 0 ₽
+                if pageModificator === 'encumbrances'
+                    +e.price-wrap
+                        +e.SPAN.price-text._start Максимальная экономия
+                        +e.SPAN.price._start.h4.is-bold= startPrice
+                else
+                    +e.price-wrap
+                        +e.SPAN.price-text._start Цена для всех
+                        +e.SPAN.price._start.h4.is-bold= startPrice
+                    +e.arrow-wrap
+                        +icon('priceArrow', '0 0 43 20')
+                    +e.price-wrap
+                        +e.SPAN.price-text._for-you Цена для Вас
+                        +e.SPAN.price._for-you.h4.is-bold 0 ₽
 
     case pageModificator
         when 'consultation'

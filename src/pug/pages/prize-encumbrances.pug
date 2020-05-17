@@ -1,0 +1,19 @@
+extends ../layouts/base
+
+append vars
+    - var title = 'Снимаем все обременения за свой счёт'
+    - var mainTitle = 'Снимаем все обременения за свой счёт'
+    - var topBg = 'white'
+    - var contentColor = 'is-dark'
+    - var pageModificator = 'encumbrances'
+    - var benefits = ['Изучим Вашу ситуацию', 'Определяем причину <br class="what-break"> обременения недвижимости', 'Закроем все обременения и поможем продать по рыночной цене'];
+    - var startPrice = 'до 3 000 000 ₽'
+
+block header
+    +b.HEADER.prize-header
+        include ../layouts/prize-header
+
+block content
+
+block footer
+    include ../layouts/receive-gift
