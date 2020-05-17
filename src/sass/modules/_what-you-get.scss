@@ -9,6 +9,16 @@
     }
   }
 
+  &_cleaning {
+    .what-you-get__title {
+      padding-bottom: 5.5rem;
+    }
+
+    .what-you-get__item {
+      padding: 12.9rem 2.8% 5rem 3.5%;
+    }
+  }
+
   &__content-wrap {
     display: flex;
     flex-wrap: wrap;

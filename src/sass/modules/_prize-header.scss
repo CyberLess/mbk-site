@@ -36,7 +36,7 @@
     background-repeat: no-repeat;
 
     &_consultation {
-      background-image: url("/img/alexandr-bodin@desktop.jpg");
+      background-image: url("/img/alexandr-bodin@desktop.webp");
       background-size: cover;
       background-position: center center;
     }
@@ -48,7 +48,7 @@
     }
 
     &_advertising {
-      background-image: url("/img/advertising-bg@desktop.png");
+      background-image: url("/img/advertising-bg@desktop.webp");
 
       .prize-header__benefit-item {
         position: relative;
@@ -58,7 +58,7 @@
     }
 
     &_ad {
-      background-image: url("/img/ad-bg@desktop.png");
+      background-image: url("/img/ad-bg@desktop.webp");
 
       .prize-header__benefits-list {
         width: 61%;
@@ -66,6 +66,48 @@
 
       .prize-header__benefit-item {
         margin-bottom: 2.9rem;
+      }
+    }
+
+    &_cleaning {
+      background-image: url("/img/clean-bg@desktop.webp");
+      background-size: cover;
+      background-position: bottom -1.5rem left -6rem;
+
+      @include max-screen($small_desktop) {
+        background-position: bottom -1.5rem left -25rem !important;
+      }
+
+      @include max-screen($large_tablet) {
+        background-position: bottom -1.5rem left -27rem !important;
+      }
+
+      .prize-header__content-wrap {
+        padding-top: 11rem;
+        padding-bottom: 12.3rem;
+      }
+
+      .prize-header__title {
+        margin-bottom: 8rem;
+
+        .what-break {
+          @include max-screen($large_tablet) {
+            display: none;
+          }
+        }
+      }
+
+      .prize-header__benefits-list {
+        width: 55%;
+        padding-bottom: 8rem;
+
+        @include max-screen($large_tablet - 124) {
+          width: 90%;
+        }
+      }
+
+      .prize-header__benefit-item {
+        margin-bottom: 3.5rem;
       }
     }
   }
