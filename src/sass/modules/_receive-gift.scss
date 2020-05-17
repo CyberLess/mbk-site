@@ -150,14 +150,30 @@
   &__manager-img {
     max-width: 119%;
     width: 119%;
-    margin-bottom: -43.8%;
+    margin-bottom: -50.8%;
     margin-left: -10%;
 
     @include max-screen($small_desktop) {
       width: 100%;
       max-width: 100%;
       margin-left: -3%;
+    }
+
+    @include max-screen($large_tablet) {
       margin-bottom: -15%;
+    }
+  }
+
+  &__maneger-inscription {
+    @extend .prize-header__inscription;
+
+    left: 12%;
+    bottom: 15%;
+    width: 59%;
+    padding-bottom: 4rem;
+
+    @include max-screen($large_tablet) {
+      width: 75%;
     }
   }
 
