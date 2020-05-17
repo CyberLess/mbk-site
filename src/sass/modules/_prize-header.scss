@@ -215,6 +215,35 @@
         }
       }
     }
+
+    &_relocation {
+      background-image: url("/img/relocation-bg@desktop.webp");
+      background-position: center bottom;
+      background-size: cover;
+
+      @include max-screen($large_tablet) {
+        background-position: 40% bottom;
+      }
+
+      .prize-header {
+        &__content-wrap {
+          padding-bottom: 12rem;
+        }
+
+        &__benefits-list {
+          width: 66%;
+          padding-bottom: 5rem;
+
+          @include max-screen($large_tablet) {
+            width: 90%;
+          }
+        }
+
+        &__benefit-item {
+          margin-bottom: 1.9rem;
+        }
+      }
+    }
   }
 
   &__content-wrap {
