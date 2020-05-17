@@ -1,0 +1,19 @@
+extends ../layouts/base
+
+append vars
+    - var title = 'Профессиональная фотосессия бесплатно'
+    - var mainTitle = 'Профессиональная <br class="header-break"> фотосессия бесплатно'
+    - var topBg = 'light-gray'
+    - var contentColor = 'is-dark'
+    - var pageModificator = 'photo'
+    - var benefits = ['Выберем удобные ракурсы', 'Поставим профессиональное освещение', 'Сделаем фотосессию Вашей квартиры'];
+    - var startPrice = '3 000 ₽'
+
+block header
+    +b.HEADER.prize-header
+        include ../layouts/prize-header
+
+block content
+
+block footer
+    include ../layouts/receive-gift

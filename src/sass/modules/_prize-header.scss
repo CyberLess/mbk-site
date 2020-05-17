@@ -186,6 +186,35 @@
         }
       }
     }
+
+    &_photo {
+      background-image: url("/img/photo-bg@desktop.webp");
+      background-position: center bottom;
+      background-size: cover;
+
+      @include max-screen($large_tablet) {
+        background-position: 40% bottom;
+      }
+
+      .prize-header {
+        &__title {
+          margin-bottom: 7rem;
+        }
+
+        &__benefits-list {
+          width: 66%;
+          padding-bottom: 6rem;
+
+          @include max-screen($large_tablet) {
+            width: 77%;
+          }
+        }
+
+        &__benefit-item {
+          margin-bottom: 3.3rem;
+        }
+      }
+    }
   }
 
   &__content-wrap {
