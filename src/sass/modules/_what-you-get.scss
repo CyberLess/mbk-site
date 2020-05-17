@@ -2,6 +2,12 @@
   padding-top: 13.5rem;
   padding-bottom: 7.5rem;
 
+  &_advertising {
+    .what-you-get__title {
+      padding-bottom: 5.4rem;
+    }
+  }
+
   &__content-wrap {
     display: flex;
     flex-wrap: wrap;
@@ -93,6 +99,27 @@
     .icon-userСheck {
       width: 39%;
       margin-left: 5%;
+    }
+
+    .icon-starStroke {
+      width: 36%;
+    }
+
+    .icon-curveArrow {
+      width: 39%;
+      margin-top: 5%;
+    }
+
+    .icon-share {
+      width: 38%;
+    }
+
+    .icon-phoneIn {
+      width: 39%;
+    }
+
+    .icon-users {
+      width: 36%;
     }
   }
 

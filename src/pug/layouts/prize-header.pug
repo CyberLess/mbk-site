@@ -1,5 +1,4 @@
-if topIsWhite
-    +e.top.white
++e.top(class="" +topBg)
         +e.wrap.wrap
             +e.top-content
                 +e.success-icon-wrap
@@ -16,24 +15,7 @@ if topIsWhite
                             stroke="white"
                             stroke-width="2")
                 +e.SPAN.top-text.h6 Ваша почта подтверждена!
-else
-    +e.top
-        +e.wrap.wrap
-            +e.top-content
-                +e.success-icon-wrap
-                    +e.SVG.icon-succes(
-                        width="20"
-                        height="20"
-                        viewBox="0 0 20 20"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg")
-                        CIRCLE(class="circle" cx="10" cy="10" r="10" fill="#19C13E")
-                        PATH(
-                            class="check"
-                            d="M6.5 9.74902L9 12.499L14 6.99902"
-                            stroke="white"
-                            stroke-width="2")
-                +e.SPAN.top-text.h6 Ваша почта подтверждена!
+
 
 +e(class="content_" +pageModificator)
     +e.content-wrap.wrap
@@ -46,7 +28,7 @@ else
                     +e.LI.benefit-item.h6
                         +e.benefit-icon-wrap
                             +icon('benefit', '0 0 19 16')
-                        | #{benefit}
+                        | !{benefit}
 
             +e.prices
                 +e.price-wrap
