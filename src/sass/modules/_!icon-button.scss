@@ -1,5 +1,5 @@
-.icon-button{
-	background: #F3F3F3;
+.icon-button {
+	background: #f3f3f3;
 	border-radius: 5px;
 	position: relative;
 	padding-top: 9.4rem;
@@ -7,9 +7,9 @@
 	padding-left: 2.5rem;
 	padding-right: 2.3rem;
 	display: block;
-	transition: ease .2s;
+	transition: ease 0.2s;
 
-	&__icon{
+	&__icon {
 		position: absolute;
 		width: 9rem;
 		height: 9rem;
@@ -23,35 +23,95 @@
 		align-items: center;
 		justify-content: center;
 
-		svg{
+		svg {
 			width: 3.4rem;
 			display: block;
 			fill: transparent;
-			stroke: #0E0E0E;
+			stroke: #0e0e0e;
 			stroke-width: 2;
-			transition: ease .2s;
+			transition: ease 0.2s;
 		}
 	}
 
-	&__text{
+	&__arrow {
+		position: absolute;
+		right: 0;
+		top: 0px;
 		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		width: 5px;
+		fill: $dark;
+		overflow: hidden;
+		height: 100%;
+		transition: ease 0.2s;
+
+		svg {
+			width: 18px;
+			flex: 0 0 auto;
+			// position: absolute;
+			// right: 0;
+			// top: 0;
+			// display: block;
+			// position: relative;
+			// margin-left: auto;
+			max-width: none;
+		}
 	}
 
-	&__link{
+	&__text {
+		position: relative;
+		// display: flex;
+		display: block;
+		padding-right: 22px;
+	}
+
+	&__link {
 		display: flex !important;
 	}
 
-	&:hover{
+	&:hover {
 		background-color: $red;
 		color: #fff;
-		
-		.icon-button{
-			&__icon{
-				svg{
+
+		.icon-button {
+			&__arrow {
+				fill: #fff;
+				width: 18px;
+			}
+			&__icon {
+				svg {
 					stroke: $red;
 				}
-			}			
+			}
 		}
+	}
 
+	@include max-screen($large_mobile) {
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+		padding-left: 1.8rem;
+		padding-right: 3rem;
+
+		.icon-button {
+			&__arrow {
+				display: none;
+			}
+			&__icon {
+				right: 0;
+				top: 50%;
+				left: auto;
+				margin-right: 2rem;
+				background: transparent;
+				margin-top: -0.9rem;
+				border-radius: 0;
+				width: 1.8rem;
+				height: 1.8rem;
+
+				svg {
+					stroke-width: 3px;
+				}
+			}
+		}
 	}
 }

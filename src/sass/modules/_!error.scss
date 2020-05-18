@@ -1,0 +1,18 @@
+.error{
+	position: absolute;
+	left: 0;
+	top: 100%;
+	width: 100%;
+	color: $red;
+	margin-top: .8rem;
+	line-height: 140%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	@extend .small;
+
+	@include max-screen($large_mobile) {
+		font-size: .9rem;
+		margin-top: .3rem;
+	}
+}

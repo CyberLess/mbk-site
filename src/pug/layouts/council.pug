@@ -3,10 +3,12 @@
 		+e.head
 			+e.bg.object-fit.IMG(src="/img/council.jpg")
 			+e.head-inner
-				+e.title.h2 
-					| Как быстро продать 
-					br
-					| квартиру?
+				+e.head-top
+					+e.label.small Совет эксперта
+					+e.title.h3
+						| Как быстро продать 
+						br
+						| квартиру?
 				+e.author.flex._vertical
 					+e.author-cell._avatar
 						+e.avatar
@@ -35,26 +37,32 @@
 							| Встреча с потенциальными клиентами. Будьте готовы к тому, что по объявлению о выкупе квартиры вам будут звонить в любое время: в будни и выходные, днем и ночью. Вам придется встречаться с незнакомыми людьми, демонстрировать им жилье.
 						li
 							| Подписание договора, получение денег. Учтите, что на срочные объявления откликается множество нечистых на руку дельцов и посредников, работающих на московском рынке недвижимости.  Чтобы не потерять деньги и нервы, работайте с профессионалами.
-				+e.A.link.h6.red-link__.flex._vertical(href='#')
-					| Читайте далее
-					+e.icon._arrow
-						+e.SVG(viewBox="0 0 18.560659 9.6213207")
-							path(class="triangle" d='M14.5 4.81v-3l3 3-3 3z')
-							path(class="stroke" d='M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z')
+				+e.more
+					+e.A.link.h6.red-link__.flex._vertical(href='#')
+						| Читайте далее
+						+e.icon._arrow
+							+e.SVG(viewBox="0 0 18.560659 9.6213207")
+								path(class="triangle" d='M14.5 4.81v-3l3 3-3 3z')
+								path(class="stroke" d='M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z')
 			+e.cell._right
 				+e.button.icon-button__.A(href="#")
 					+e.SPAN.icon
 						+icon('council_1','0 0 34 34')
 					+e.SPAN.text.h6
 						| Оформить заявку
-					//- +link(false) Оформить заявку
+						+e.SPAN.arrow
+							+icon('arrow', '0 0 18.561 9.6213')
 				+e.button.icon-button__.A(href="#")
 					+e.SPAN.icon
 						+icon('council_2','0 0 34 34')
 					+e.SPAN.text.h6
 						| Задать вопрос
+						+e.SPAN.arrow
+							+icon('arrow', '0 0 18.561 9.6213')
 				+e.button.icon-button__.A(href="#")
 					+e.SPAN.icon
 						+icon('council_3','0 0 34 34')
 					+e.SPAN.text.h6
 						| Все советы
+						+e.SPAN.arrow
+							+icon('arrow', '0 0 18.561 9.6213')

@@ -1,0 +1,23 @@
+.back-button{
+	cursor: pointer;
+	border: none;
+	width: 100%;
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	img{
+		width: 17px;
+	}
+
+	@include max-screen($large_mobile) {
+		width: 5rem;
+		height: 5rem;
+		background: #F3F3F3;
+		border-radius: 5px;
+		img{
+			width: 16px;
+		}
+	}
+}

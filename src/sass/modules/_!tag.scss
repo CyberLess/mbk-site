@@ -1,13 +1,13 @@
-.tag{
+.tag {
 	cursor: pointer;
 	margin-bottom: 1rem;
 	user-select: none;
 
-	&__input{
+	&__input {
 		display: none;
 
-		&:checked{
-			&+.tag__text{
+		&:checked {
+			& + .tag__text {
 				background-color: $red;
 				border-color: $red;
 				color: #fff;
@@ -15,35 +15,31 @@
 		}
 
 		@include max-screen($small_tablet) {
-
-			&:checked{
-				&+.tag__text{
-					&:after{
+			&:checked {
+				& + .tag__text {
+					&:after {
 						opacity: 1;
 						transform: scale(1);
 					}
 				}
 			}
-
 		}
 	}
 
-	&__text{
+	&__text {
 		display: block;
-		padding: .6rem 2.8rem;
-		border: 1px solid #0E0E0E;
+		padding: 0.6rem 2.8rem;
+		border: 1px solid #0e0e0e;
 		border-radius: 5px;
 		font-size: 1.6rem;
 		line-height: 1.3em;
-		transition: ease .15s;
-
-
+		transition: ease 0.15s;
 
 		@include min-screen($small_tablet) {
-			&:hover{
+			&:hover {
 				color: #fff;
 				background-color: #000;
-			}			
+			}
 		}
 	}
 
@@ -52,7 +48,7 @@
 		width: 100%;
 		margin-top: -1px !important;
 
-		&__text{
+		&__text {
 			height: 6rem;
 			padding: 0;
 			padding-left: 69px;
@@ -60,13 +56,13 @@
 			align-items: center;
 			border: none;
 			border-radius: 0px;
-			border: 1px solid rgba(0, 0, 0, 0.1)!important;
-			background-color: #fff!important;
+			border: 1px solid rgba(0, 0, 0, 0.1) !important;
+			background-color: #fff !important;
 			position: relative;
-			color: $dark!important;
+			color: $dark !important;
 
-			&:before{
-				content: '';
+			&:before {
+				content: "";
 				display: block;
 				position: absolute;
 				left: 18px;
@@ -74,12 +70,12 @@
 				height: 25px;
 				top: 50%;
 				margin-top: -12px;
-				border: 1px solid #E6E6E6;
+				border: 1px solid #e6e6e6;
 				box-sizing: border-box;
 			}
 
-			&:after{
-				content: '';
+			&:after {
+				content: "";
 				display: block;
 				position: absolute;
 				left: 18px;
@@ -88,29 +84,30 @@
 				top: 50%;
 				margin-top: -12px;
 
-				background: url('/img/check.svg') center no-repeat;
+				background: url("/img/check.svg") center no-repeat;
 				background-size: 12px;
 
 				transform: scale(0);
 				opacity: 0;
-				transition: ease .2s;
+				transition: ease 0.2s;
 			}
 		}
 	}
 
-
-	&_dark-active{
-		.tag{
-			&__input{
-				&:checked{
-					&+.tag__text{
+	&_dark-active {
+		.tag {
+			&__text {
+				font-size: 1.4rem;
+			}
+			&__input {
+				&:checked {
+					& + .tag__text {
 						background-color: $dark;
 						border-color: $dark;
 						color: #fff;
 					}
 				}
-			}			
+			}
 		}
 	}
-
 }

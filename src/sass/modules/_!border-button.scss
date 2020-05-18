@@ -1,0 +1,25 @@
+.border-button {
+	border: 1px solid #0e0e0e;
+	border-radius: 5px;
+	height: 3.7rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	background: transparent;
+	font-size: 1.4rem;
+	line-height: 140%;
+	padding: 0 3rem;
+
+	&__icon {
+		display: block;
+		margin-top: 4px;
+		margin-right: 1.3rem;
+		width: 1.3rem;
+		fill: #0e0e0e;
+	}
+
+	&__text {
+		display: block;
+	}
+}

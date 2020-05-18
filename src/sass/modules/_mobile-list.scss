@@ -1,0 +1,7 @@
+.js-mobile-list-item {
+	@include max-screen($large_mobile) {
+		&:not(.is-visible) {
+			display: none;
+		}
+	}
+}

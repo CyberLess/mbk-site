@@ -1,7 +1,16 @@
 .council {
-	background: #FFFFFF;
+	background: #ffffff;
 	padding-top: 12rem;
-	padding-bottom: 12rem;
+	padding-bottom: 6.8rem;
+
+	&_nobottom {
+		padding-bottom: 0 !important;
+		.council {
+			&__content {
+				margin-bottom: 0;
+			}
+		}
+	}
 
 	&__button {
 		margin-bottom: 5.3rem;
@@ -10,49 +19,39 @@
 	&__head {
 		color: #fff;
 		position: relative;
+		&-top {
+			margin-bottom: 2.8rem;
+		}
 
 		&-inner {
-			padding: 11.2rem 10.9rem 6.8rem;
+			padding-left: 10.9rem;
+			padding-right: 10.9rem;
+			padding-top: 11.2rem;
+			padding-bottom: 6.8rem;
+
 			display: flex;
 			align-items: flex-start;
 			justify-content: space-between;
 			flex-direction: column;
 			min-height: 62.5rem;
 		}
-		@include max-screen($small_desktop) {
-			& img {
-				//object-fit: contain;
-				height: auto;
-			}
+	}
 
-			&-inner {
-				min-height: 55rem;
-			}
-		}
-		@include max-screen($large_tablet) {
-			&-inner {
-				min-height: 50rem;
-			}
-		}
-		@include max-screen($small_tablet) {
-			&-inner {
-				padding-top: 1.5rem;
-				padding-left: 3rem;
-				padding-right: 1rem;
-				min-height: 22.5rem;
-				padding-bottom: 2.5rem;
-			}
-		}
+	&__label {
+		margin-bottom: 2.8rem;
+		background: #ffffff;
+		border-radius: 5px;
+		z-index: 500;
+		position: relative;
+		display: inline-block;
+		color: $dark;
+		line-height: 3.2rem;
+		padding: 0 1.6rem;
 	}
 
 	&__title {
 		z-index: 15;
 		position: relative;
-		@include max-screen($small_tablet) {
-			font-size: 19px;
-			line-height: 110%;
-			width: 50%;
-		}
 	}
 
 	&__avatar {
@@ -72,33 +71,29 @@
 			}
 		}
 		& ul {
-		& li {
-			@include max-screen($small_tablet) {
-				font-size: 12px;
-				line-height: 140%;
-				padding-left: 2rem;
-				padding-right: 1rem;
-				&::before {
-					width: 5px;
-					height: 5px;
-					border: none;
-					background: #FF0400;
-					left: 3px;
-					top: 4px;
+			& li {
+				@include max-screen($small_tablet) {
+					font-size: 12px;
+					line-height: 140%;
+					padding-left: 2rem;
+					padding-right: 1rem;
+					&::before {
+						width: 5px;
+						height: 5px;
+						border: none;
+						background: #ff0400;
+						left: 3px;
+						top: 4px;
+					}
 				}
 			}
 		}
 	}
-	}
 
 	&__cell {
-		margin-top: 6.2rem;
-		@include max-screen($small_tablet) {
-			margin-top: 0;
-		}
-
 		&_left {
-			width: 806/1336*100%;
+			width: 806/1336 * 100%;
+			margin-top: 6.2rem;
 			padding-left: 10.9rem;
 			@include max-screen($small_tablet) {
 				width: 100%;
@@ -108,28 +103,20 @@
 		}
 
 		&_right {
-			width: 289/1336*100%;
-			@include max-screen($small_tablet) {
-				width: 100%;
-			}
+			margin-top: 6.6rem;
+			width: 289/1336 * 100%;
 		}
 	}
 
 	&__author {
 		z-index: 15;
 		position: relative;
-		background: #FFFFFF;
+		background: #ffffff;
 		border-radius: 5px;
 		padding: 3.1rem 4rem 3.1rem 5.5rem;
 		max-width: 100%;
 		width: 49.5rem;
-		color: #0E0E0E;
-		@include max-screen($small-tablet) {
-			width: 100%;
-			padding-left: 0;
-			padding-right: 0;
-			background: transparent;
-		}
+		color: #0e0e0e;
 
 		&-text {
 			margin-top: 0.3rem;
@@ -142,32 +129,15 @@
 
 		&-cell {
 			&_avatar {
-				width: 71/345*100%;
-				margin-right: 27/345*100%;
-				@include max-screen($small_tablet) {
-					width: 37/250*100%;
-				}
+				width: 71/345 * 100%;
+				margin-right: 27/345 * 100%;
 			}
 
 			&_content {
-				width: 247/345*100%;
+				width: 247/345 * 100%;
 			}
 		}
 	}
-
-	&__link {
-		@include max-screen($small-tablet) {
-			font-size: 10px;
-			line-height: 140%;
-		}
-	}
-
-	&__row {
-		@include max-screen($small-tablet) {
-			flex-direction: column;
-		}
-	}
-
 	&__category {
 		position: relative;
 		z-index: 15;
@@ -179,81 +149,248 @@
 	&_article {
 		padding: 0;
 
-		.council__head{
+		.council__head {
 			& img {
 				height: 100%;
 			}
-			&-inner{
+			&-inner {
 				padding-top: 7.3rem;
 				justify-content: flex-start;
 			}
 		}
 
-		.council__title{
+		.council__title {
 			max-width: 57.3rem;
-			color: #0E0E0E;
+			color: #0e0e0e;
 		}
 
-		.council__author{
+		.council__author {
 			margin-top: auto;
 		}
 	}
-
-	@include max-screen($small_tablet - 1) {
-		&__head{
-			&-inner{
-				padding: 5.1rem 1.5rem;
+	@include max-screen($large_tablet) {
+		&__head {
+			&-inner {
+				padding-left: 5.5rem;
+				padding-right: 5.5rem;
+				padding-top: 8rem;
 			}
 		}
+		&__cell {
+			&_left {
+				padding-left: 5.5rem;
+			}
+			&_right {
+				width: 29.63174%;
+			}
+		}
+	}
+
+	@include max-screen($small_tablet) {
+		padding-top: 8rem;
 		&__author {
-			padding: 1.8rem 0;
-			background-color: transparent;
+			padding: 2.1rem 4rem 2.1rem 4.5rem;
 		}
-
-		&__category {
-			margin-bottom: 1rem;
-		}
-
-		&_article {
-			.council__head{
-				&-inner{
-					padding-top: 5.1rem;
-				}
+		&__head {
+			&-inner {
+				min-height: 48rem;
+				padding: 6rem 3rem;
 			}
-			.council__title{
-				max-width: 212/320*100%;
+		}
+		&__cell {
+			&_right {
+				width: 36.63174%;
+			}
+			&_left {
+				width: 55.32934%;
+				padding-left: 3rem;
 			}
 		}
 	}
 
 	@include max-screen($large_mobile) {
-		&__wrap {
-			padding-left: 0;
-			padding-right: 0;
+		padding-top: 5.1rem;
+		padding-bottom: 3.7rem;
+		background: transparent;
+
+		&__row {
+			background: #fff;
 		}
-		&__head{
-			&-inner{
-				min-height: 34.7rem;
+
+		&__head {
+			&-inner {
+				padding-left: 3.2rem;
+				padding-right: 3rem;
+				padding-top: 2.1rem;
+				padding-bottom: 1.9rem;
+				min-height: 0;
 			}
 		}
+
+		&__button {
+			margin-bottom: 1.4rem;
+		}
+
 		&__author {
-			&-cell{
-				&_avatar{
-					width: 3.7rem;
-					margin-right: 1.8rem;
-				}
-			}
-			&-text{
+			background-color: transparent;
+			color: #fff;
+			padding: 0;
+			flex-wrap: nowrap;
+			// align-items: flex-start;
+
+			&-text {
 				font-size: 1rem;
+				margin-top: 0;
+				line-height: 1.4rem;
 			}
-		}
-		&__link {
-			font-size: 1rem;
-				.arrow {
-					& svg {
-						margin-top: -0.5rem;
+
+			.link {
+				font-size: 1rem;
+				line-height: 1.4rem;
+				margin-bottom: 1px;
+				color: #fff;
+
+				&__arrow {
+					width: 4px;
+					.triangle {
+						stroke: #fff !important;
+					}
+
+					.stroke {
+						fill: #fff !important;
+					}
+					svg {
+						width: 13px;
+						margin-top: -3px;
 					}
 				}
+
+				&:hover {
+					.link {
+						&__arrow {
+							width: 13px;
+						}
+					}
+				}
+			}
+
+			&-cell {
+				width: auto;
+				max-width: 100%;
+
+				&_avatar {
+					flex-shrink: 0;
+					flex-grow: 0;
+					width: 3.7rem;
+					margin-right: 1.3rem;
+				}
+				&_content {
+					min-width: 0;
+					flex-shrink: 1;
+					flex-grow: 1;
+				}
+			}
+		}
+		&__title {
+			font-size: 1.9rem;
+			line-height: 2.1rem;
+		}
+		&__more {
+			text-align: center;
+			padding-top: 6px;
+		}
+		&__label {
+			margin-bottom: 1.9rem;
+			font-size: 1rem;
+			line-height: 1.4rem;
+			padding: 0.4rem 1.1rem;
+		}
+		&__content {
+			margin-bottom: 0;
+		}
+		&__cell {
+			width: 100%;
+			padding-left: 3.2rem;
+			padding-right: 3.2rem;
+
+			&_right {
+				margin-top: 4.4rem;
+			}
+
+			&_left {
+				margin-top: 3.7rem;
+			}
+		}
+	}
+
+	&_article {
+		@include max-screen($small_tablet - 1) {
+			padding-top: 0;
+			.council__wrap {
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+			.council__author {
+				padding: 1.8rem 0;
+				background-color: transparent;
+			}
+	
+			.council__category {
+				margin-bottom: 1rem;
+			}
+	
+			.council__head{
+				&-inner{
+					padding: 5.1rem 1.5rem;
+				}
+			}
+			.council__title{
+				// width: 100%;
+				// max-width: 21.2rem;
+				// font-size: 2.6rem;
+			}
+		}
+		@include max-screen($large_mobile) {
+			padding-bottom: 0;
+			.council__head{
+				&-inner{
+					min-height: 34.7rem;
+				}
+			}
+			.council__author {
+				color: $dark;
+				&-cell{
+					&_avatar{
+						width: 3.7rem;
+						margin-right: 1.8rem;
+					}
+				}
+				&-text{
+					font-size: 1rem;
+					color: $dark;
+				}
+			}
+			.council__link {
+				font-size: 1rem;
+				color: $dark;
+				& svg {
+					margin-top: -0.4rem;
+				}
+				.link {
+					color: $dark;
+	
+					&__arrow {
+						.triangle {
+							stroke: $dark !important;
+						}
+	
+						.stroke {
+							fill: $dark !important;
+						}
+					}
+				}
+			}
 		}
 	}
 }

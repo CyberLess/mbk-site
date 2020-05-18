@@ -1,4 +1,5 @@
 import 'jquery-ui/ui/widgets/slider';
+require('jquery-ui-touch-punch');
 import { numberWithSpaces } from '../functions';
 
 (() => {

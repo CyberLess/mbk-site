@@ -1,4 +1,4 @@
-.master{
+.master {
 	padding-top: 13.7rem;
 	// overflow: hidden;
 
@@ -12,7 +12,7 @@
 	@include max-screen($large_mobile) {
 		overflow: visible;
 	}
-	&__wrap{
+	&__wrap {
 		padding-bottom: 14.5rem;
 
 		@include max-screen($large_tablet) {
@@ -24,7 +24,7 @@
 		}
 	}
 
-	&__tree{
+	&__tree {
 		position: absolute;
 		left: 0;
 		// bottom: 0;
@@ -55,8 +55,8 @@
 		}
 	}
 
-	&__about{
-		margin-bottom: 85/1336*100%;
+	&__about {
+		margin-bottom: 85/1336 * 100%;
 		width: 180px;
 		max-width: 40%;
 		z-index: 20;
@@ -71,7 +71,7 @@
 		}
 	}
 
-	&__name{
+	&__name {
 		margin-bottom: 1.6rem;
 		font-weight: bold;
 
@@ -81,41 +81,41 @@
 		}
 	}
 
-	&__who{
+	&__who {
 		@include max-screen($large_mobile) {
 			font-size: 1rem;
 		}
 	}
 
-	&__open{
+	&__open {
 		margin-bottom: 5.9rem;
-		
+
 		@include max-screen($large_mobile) {
 			order: 2;
 			margin-bottom: 0;
-			margin-right: 30/232*100%;
+			margin-right: 30/232 * 100%;
 		}
 	}
 
-	&__man{
+	&__man {
 		position: absolute;
 		user-select: none;
 		left: 0;
 		bottom: 0;
-		width: 651/1400*100%;
-		padding-top: 867/1400*100%;
-		margin-left: 226/1400*100%;
+		width: 651/1400 * 100%;
+		padding-top: 867/1400 * 100%;
+		margin-left: 226/1400 * 100%;
 		z-index: 15;
 		pointer-events: none;
 
-		&-img{
+		&-img {
 			object-position: center bottom;
 			object-fit: contain;
 		}
 
 		@include max-screen($large_tablet) {
-			width: 456/1400*100%;
-			padding-top: 607/1400*100%;
+			width: 456/1400 * 100%;
+			padding-top: 607/1400 * 100%;
 			margin-left: 21.14286%;
 		}
 
@@ -129,8 +129,8 @@
 		}
 	}
 
-	&__cell{
-		width: 822/1336*100%;
+	&__cell {
+		width: 822/1336 * 100%;
 		margin-left: auto;
 
 		@include max-screen($large_mobile) {
@@ -138,7 +138,7 @@
 		}
 	}
 
-	&__inner{
+	&__inner {
 		@include max-screen($large_mobile) {
 			display: flex;
 			align-items: flex-start;
@@ -147,45 +147,45 @@
 		}
 	}
 
-	&__info{
+	&__info {
 		@include max-screen($large_mobile) {
 			width: 75px;
 			order: 1;
 		}
 	}
 
-	&__box{
+	&__box {
 		box-shadow: 0px 4px 40px rgba(153, 153, 153, 0.1);
 		border-radius: 5px;
-		border: 1px solid rgba(#848484, .3);
-		
-		padding-left: 81/822*100%;
-		padding-top: 78/822*100%;
-		padding-bottom: 85/822*100%;
+		border: 1px solid rgba(#848484, 0.3);
 
-		&-inner{
-			width: 452/740*100%;
-			padding-right: 81/740*100%;
+		padding-left: 81/822 * 100%;
+		padding-top: 78/822 * 100%;
+		padding-bottom: 85/822 * 100%;
+
+		&-inner {
+			width: 452/740 * 100%;
+			padding-right: 81/740 * 100%;
 			margin-left: auto;
 		}
 
-		&-text{
+		&-text {
 			margin-bottom: 6rem;
 			font-weight: 400;
 		}
 
 		@include max-screen($large_tablet) {
-			&-inner{
+			&-inner {
 				padding-right: 5%;
 				width: 66.08108%;
 			}
 		}
 		@include max-screen($small_tablet) {
-			&-inner{
-			    width: 79.08108%;
+			&-inner {
+				width: 79.08108%;
 			}
 
-			&-text{
+			&-text {
 				width: 165px;
 				margin-bottom: 3rem;
 			}
@@ -198,25 +198,25 @@
 			padding: 0;
 			position: relative;
 			z-index: 15;
-			&-inner{
+			&-inner {
 				width: 100%;
 			}
 
-			&-button{
+			&-button {
 				padding-left: 1rem;
 				padding-right: 1rem;
 				width: 232px;
 			}
 
-			&-text{
+			&-text {
 				font-size: 1.2rem;
 				margin-bottom: 6.6rem;
 			}
 		}
 	}
 
-	&__title{
-		width: 452/822*100%;
+	&__title {
+		width: 452/822 * 100%;
 		margin-left: auto;
 		margin-bottom: 5.3rem;
 
@@ -231,7 +231,11 @@
 	}
 
 	&_white {
-		background-color: #FFFFFF;
+		background-color: #ffffff;
 		padding-top: 19.6rem;
+
+		@include max-screen($small_tablet) {
+			padding-top: 5.1rem;
+		}
 	}
 }

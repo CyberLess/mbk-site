@@ -1,0 +1,27 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Внутренняя страница';
+
+block content
+
+	+b.fluid
+		+socials(class="_default _white")
+	
+	+b.mobile-button.css-show-mobile
+		+button(true)(href="#form") Оформить онлайн
+ 
+	include ../layouts/page-head
+	include ../layouts/conditions-block
+	include ../layouts/simple-calc
+	include ../layouts/vantages_big
+	include ../layouts/conditions
+	include ../layouts/council_big
+	include ../layouts/credit_small
+	+b.SECTION.group._noscope-mobile.js-target-form#form
+		include ../layouts/calc
+		include ../layouts/faq
+
+
+block footer 
+	+footer(class="_white")

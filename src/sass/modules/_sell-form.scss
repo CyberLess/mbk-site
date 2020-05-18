@@ -1,282 +1,281 @@
 .sell-form {
-  display: flex;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  margin-left: -3rem;
+	display: flex;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	margin-left: -3rem;
 
-  @include max-screen($large_mobile) {
-    margin-left: 0;
-  }
+	@include max-screen($large_mobile) {
+		margin-left: 0;
+	}
 }
 
 .sell-form__label {
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-  flex-grow: 1;
-  margin-bottom: 4rem;
-  margin-left: 3rem;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	flex-shrink: 0;
+	margin-bottom: 4rem;
+	margin-left: 3rem;
 
-  font-size: 1.55rem;
-  line-height: 1.4;
+	font-size: 1.55rem;
+	line-height: 1.4;
 
-  @include max-screen($large_mobile) {
-    margin-bottom: 2.4rem;
+	@include max-screen($large_mobile) {
+		margin-bottom: 2.4rem;
 
-    font-size: 1.2rem;
-  }
+		font-size: 1.2rem;
+	}
 
-  &_address {
-    width: 32.4%;
-    min-width: 310px;
+	&_address {
+		width: 32.4%;
+		min-width: 310px;
 
-    @include max-screen($sell-form-tab-breakpoint) {
-      width: 29%;
-      min-width: 270px;
-    }
+		@include max-screen($sell-form-tab-breakpoint) {
+			width: 29%;
+			min-width: 270px;
+		}
 
-    @include max-screen($small_tablet) {
-      width: 47%;
-    }
+		@include max-screen($small_tablet) {
+			width: 47%;
+		}
 
-    @include max-screen($large_mobile) {
-      min-width: 100%;
-      width: 100%;
-      margin-left: 0;
-    }
+		@include max-screen($large_mobile) {
+			width: 100%;
+			min-width: 100%;
+			margin-left: 0;
+		}
 
-    .sell-form__input {
-      @include max-screen($sell-form-tab-breakpoint) {
-        padding-left: 3rem;
-        padding-right: 2rem;
-      }
-    }
-  }
+		.sell-form__input {
+			@include max-screen($sell-form-tab-breakpoint) {
+				padding-right: 2rem;
+				padding-left: 3rem;
+			}
+		}
+	}
 
-  &_price {
-    width: 14%;
-    min-width: 160px;
+	&_price {
+		width: 14%;
+		min-width: 160px;
 
-    @include max-screen($sell-form-tab-breakpoint) {
-      width: 11%;
-      min-width: 140px;
-    }
+		@include max-screen($sell-form-tab-breakpoint) {
+			width: 11%;
+			min-width: 140px;
+		}
 
-    @include max-screen($small_tablet) {
-      width: 35%;
-    }
+		@include max-screen($small_tablet) {
+			width: 35%;
+		}
 
-    @include max-screen($large_mobile) {
-      min-width: 100%;
-      width: 100%;
-      margin-left: 0;
-    }
+		@include max-screen($large_mobile) {
+			width: 100%;
+			min-width: 100%;
+			margin-left: 0;
+		}
 
-    .sell-form__input {
-      padding-left: 3.5rem;
-      padding-right: 5.5rem;
+		.sell-form__input {
+			padding-right: 5.5rem;
+			padding-left: 3.5rem;
 
-      @include max-screen($sell-form-tab-breakpoint) {
-        padding-left: 3rem;
-        padding-right: 3.5rem;
-      }
-    }
+			@include max-screen($sell-form-tab-breakpoint) {
+				padding-right: 3.5rem;
+				padding-left: 3rem;
+			}
+		}
 
-    .sell-form__input-wrap {
-      &::after {
-        content: "₽";
+		.sell-form__input-wrap {
+			&::after {
+				content: "₽";
 
-        top: 3.6rem;
-        right: 3.7rem;
+				top: 3.6rem;
+				right: 3.7rem;
 
-        @include max-screen($sell-form-tab-breakpoint) {
-          right: 2.7rem;
-        }
+				@include max-screen($sell-form-tab-breakpoint) {
+					right: 2.7rem;
+				}
 
-        @include max-screen($large_mobile) {
-          top: 3.1rem;
-          right: 3rem;
+				@include max-screen($large_mobile) {
+					top: 3.1rem;
+					right: 3rem;
 
-          font-size: 1.4rem;
-        }
-      }
-    }
-  }
+					font-size: 1.4rem;
+				}
+			}
+		}
+	}
 
-  &_rooms {
-    width: 8.4%;
-    min-width: 100px;
+	&_rooms {
+		width: 8.4%;
+		min-width: 100px;
 
-    @include max-screen($large_tablet) {
-      max-width: 260px;
-    }
+		@include max-screen($large_tablet) {
+			max-width: 260px;
+		}
 
-    @include max-screen($large_mobile) {
-      width: 44%;
-      margin-left: 0;
-      margin-bottom: 4.5rem;
-    }
+		@include max-screen($large_mobile) {
+			width: 44%;
+			margin-bottom: 4.5rem;
+			margin-left: 0;
+		}
 
-    .selectric {
-      margin-top: 1.7rem;
+		.selectric {
+			margin-top: 1.7rem;
 
-      .label {
-        margin-left: 3.5rem;
+			.label {
+				margin-left: 3.5rem;
 
-        @include max-screen($sell-form-tab-breakpoint) {
-          margin-left: 3rem;
-        }
-      }
+				@include max-screen($sell-form-tab-breakpoint) {
+					margin-left: 3rem;
+				}
+			}
 
-      .button {
-        @include min-screen($small_tablet) {
-          padding-right: 1.3rem;
-        }
-      }
-    }
+			.button {
+				@include min-screen($small_tablet) {
+					padding-right: 1.3rem;
+				}
+			}
+		}
 
-    .selectric-scroll li {
-      padding: 0 5.5rem;
+		.selectric-scroll li {
+			padding: 0 5.5rem;
 
-      &::before {
-        left: 1rem;
-      }
-    }
-  }
+			&::before {
+				left: 1rem;
+			}
+		}
+	}
 
-  &_square {
-    width: 8.5%;
+	&_square {
+		width: 8.5%;
+		min-width: 110px;
 
-    min-width: 110px;
+		@include max-screen($large_tablet) {
+			max-width: 260px;
+		}
 
-    @include max-screen($large_tablet) {
-      max-width: 260px;
-    }
+		@include max-screen($large_mobile) {
+			width: 44%;
+			margin-bottom: 4.5rem;
+		}
 
-    @include max-screen($large_mobile) {
-      width: 44%;
-      margin-bottom: 4.5rem;
-    }
-
-    .sell-form__input {
-      padding-left: 3rem;
-      padding-right: 6rem;
-    }
-  }
+		.sell-form__input {
+			padding-right: 6rem;
+			padding-left: 3rem;
+		}
+	}
 }
 
 .sell-form__input-wrap {
-  position: relative;
+	position: relative;
 
-  &::after {
-    position: absolute;
+	&::after {
+		position: absolute;
 
-    font-size: 1.8rem;
-    font-weight: bold;
-  }
+		font-size: 1.8rem;
+		font-weight: bold;
+	}
 }
 
 .sell-form__square-meter {
-  position: absolute;
-  top: 3.65rem;
-  right: 4rem;
+	position: absolute;
+	top: 3.65rem;
+	right: 4rem;
 
-  display: inline-block;
-  width: 1.7rem;
-  height: 1.7rem;
+	display: inline-block;
+	width: 1.7rem;
+	height: 1.7rem;
 
-  font-size: 1.8rem;
-  font-weight: 500;
+	font-size: 1.8rem;
+	font-weight: 500;
 
-  @include max-screen($small_tablet) {
-    top: 3rem;
-    right: 2.8rem;
+	@include max-screen($small_tablet) {
+		top: 3rem;
+		right: 2.8rem;
 
-    font-size: 1.5rem;
-  }
+		font-size: 1.5rem;
+	}
 
-  @include min-screen($large_mobile + 1) {
-    top: 3.7rem;
-    font-size: 1.8rem;
-  }
+	@include min-screen($large_mobile + 1) {
+		top: 3.7rem;
+		font-size: 1.8rem;
+	}
 
-  @include min-screen($small_tablet + 1) {
-    top: 3.65rem;
-  }
+	@include min-screen($small_tablet + 1) {
+		top: 3.65rem;
+	}
 }
 
 .sell-form__index {
-  font-size: 1rem;
+	font-size: 1rem;
 
-  @include max-screen($small_tablet) {
-    font-size: 0.7rem;
-  }
+	@include max-screen($small_tablet) {
+		font-size: 0.7rem;
+	}
 }
 
 .sell-form__input {
-  width: 100%;
-  margin-top: 1.7rem;
-  padding: 2rem 4rem;
-  border: 1px solid #C2C2C2;
+	width: 100%;
+	margin-top: 1.7rem;
+	padding: 2rem 4rem;
+	border: 1px solid #C2C2C2;
 
-  font-family: "Geometria", Arial, sans-serif;
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: 1.3;
+	font-family: "Geometria", Arial, sans-serif;
+	font-size: 1.8rem;
+	font-weight: 500;
+	line-height: 1.3;
 
-  background-color: #FFFFFF;
-  background-repeat: no-repeat;
+	background-color: #FFFFFF;
+	background-repeat: no-repeat;
 
-  @include max-screen($large_mobile) {
-    padding: 1.5rem 3rem;
-    font-size: 1.4rem;
-  }
+	@include max-screen($large_mobile) {
+		padding: 1.5rem 3rem;
+		font-size: 1.4rem;
+	}
 
-  &::-ms-input-placeholder {
-    color: #B7B7B7;
-  }
+	&::-ms-input-placeholder {
+		color: #B7B7B7;
+	}
 
-  &::-moz-placeholder {
-    color: #B7B7B7;
-  }
+	&::-moz-placeholder {
+		color: #B7B7B7;
+	}
 
-  &:-ms-input-placeholder {
-    color: #B7B7B7;
-  }
+	&:-ms-input-placeholder {
+		color: #B7B7B7;
+	}
 
-  &:-moz-placeholder {
-    color: #B7B7B7;
-  }
+	&:-moz-placeholder {
+		color: #B7B7B7;
+	}
 
-  &::-moz-placeholder {
-    color: #B7B7B7;
-  }
+	&::-moz-placeholder {
+		color: #B7B7B7;
+	}
 
-  &::-webkit-input-placeholder {
-    color: #B7B7B7;
-  }
+	&::-webkit-input-placeholder {
+		color: #B7B7B7;
+	}
 }
 
 .sell-form__btn {
-  flex-grow: 1;
-  width: 20%;
-  min-width: 175px;
-  margin-left: 3rem;
-  margin-bottom: 4rem;
+	flex-grow: 1;
+	width: 20%;
+	min-width: 175px;
+	margin-bottom: 4rem;
+	margin-left: 3rem;
 
-  font-size: 1.76rem;
+	font-size: 1.76rem;
 
-  @include max-screen(1147px) {
-    flex-grow: 0;
-    width: 30%;
-    min-width: 235px;
-  }
+	@include max-screen(1147px) {
+		flex-grow: 0;
+		width: 30%;
+		min-width: 235px;
+	}
 
-  @include max-screen($large_mobile) {
-    width: 100%;
-    margin-left: 0;
-    margin-bottom: 2rem;
+	@include max-screen($large_mobile) {
+		width: 100%;
+		margin-bottom: 2rem;
+		margin-left: 0;
 
-    font-size: 1.4rem;
-  }
+		font-size: 1.4rem;
+	}
 }

@@ -1,0 +1,15 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Поздравляем!  Вы выиграли подарок от МБК!';
+
+block header
+
+block content
+
+	+success Ваша почта подтверждена!
+
+	include ../layouts/gift-preview
+	include ../layouts/gift-steps
+
+block footer

@@ -58,6 +58,7 @@
     "hamburgers": "^1.1.3",
     "inputmask": "^4.0.9",
     "jquery-ui": "^1.12.1",
+    "jquery-ui-touch-punch": "^0.2.3",
     "jquery-validation": "^1.19.1",
     "magnific-popup": "^1.1.0",
     "owl.carousel": "^2.3.4",
