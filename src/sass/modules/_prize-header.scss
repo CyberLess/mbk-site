@@ -1,432 +1,817 @@
 .prize-header {
-  position: relative;
-  width: 100%;
-  max-width: 1920px;
-
-  &.white {
-    .prize-header__slogan {
-      background-color: #f3f3f3;
-    }
-  }
-
-  &__top-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding-top: 3.6rem;
-    padding-bottom: 3.6rem;
-  }
-
-  &__icon-succes {
-    width: 3rem;
-    height: 3rem;
-  }
-
-  &__top-text {
-    max-width: calc(100% - 5rem);
-    margin-left: 2rem;
-
-    word-break: break-word;
-  }
-
-  &__content {
-    position: relative;
-
-    background-repeat: no-repeat;
-
-    &_consultation {
-      background-image: url("/img/alexandr-bodin@desktop.webp");
-      background-size: cover;
-      background-position: center center;
-    }
-
-    &_advertising,
-    &_ad {
-      background-size: cover;
-      background-position: right 66% bottom;
-    }
-
-    &_advertising {
-      background-image: url("/img/advertising-bg@desktop.webp");
-
-      .prize-header__benefit-item {
-        position: relative;
-        margin-bottom: 1.6rem;
-        padding-left: 5rem;
-      }
-    }
-
-    &_ad {
-      background-image: url("/img/ad-bg@desktop.webp");
-
-      .prize-header__benefits-list {
-        width: 61%;
-      }
-
-      .prize-header__benefit-item {
-        margin-bottom: 2.9rem;
-      }
-    }
-
-    &_cleaning {
-      background-image: url("/img/clean-bg@desktop.webp");
-      background-size: cover;
-      background-position: bottom -1.5rem left -6rem;
-
-      @include max-screen($small_desktop) {
-        background-position: bottom -1.5rem left -25rem !important;
-      }
-
-      @include max-screen($large_tablet) {
-        background-position: bottom -1.5rem left -27rem !important;
-      }
-
-      .prize-header__content-wrap {
-        padding-top: 11rem;
-        padding-bottom: 12.3rem;
-      }
-
-      .prize-header__title {
-        margin-bottom: 8rem;
-
-        .what-break {
-          @include max-screen($large_tablet) {
-            display: none;
-          }
-        }
-      }
-
-      .prize-header__benefits-list {
-        width: 55%;
-        padding-bottom: 8rem;
-
-        @include max-screen($large_tablet - 124) {
-          width: 90%;
-        }
-      }
-
-      .prize-header__benefit-item {
-        margin-bottom: 3.5rem;
-      }
-    }
-
-    &_docs {
-      background-image: url("/img/docs-bg@desktop.webp");
-      background-position: right bottom;
-      background-size: cover, contain;
-
-      @include max-screen($small_desktop) {
-        background-position: right 50% bottom !important;
-        background-size: cover, 90% !important;
-      }
-
-      @include max-screen($large_tablet) {
-        background-position: right 70% bottom !important;
-      }
-
-      .prize-header {
-        &__content-wrap {
-          padding-bottom: 11.9rem;
-        }
-
-        &__title {
-          margin-bottom: 3.1rem;
-        }
-
-        &__benefits-list {
-          width: 70%;
-          padding-bottom: 3.3rem;
-
-          @include max-screen($large_tablet) {
-            width: 90%;
-          }
-        }
-
-        &__benefit-item {
-          margin-bottom: 1.3rem;
-        }
-
-        &__prize-wrap {
-          position: absolute;
-          right: 14%;
-          bottom: 6.7rem;
-
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          width: 21.2rem;
-          height: 21.2rem;
-          border-radius: 50%;
-
-          background-color: #F7F7F7;
-
-          @include max-screen($large_tablet) {
-            right: 8%;
-          }
-        }
-
-        &__prize-icon-wrap {
-          width: 3.7rem;
-          height: 3.7rem;
-
-          .icon-prize {
-            fill: none;
-
-            stroke: #FF0400;
-            stroke-width: 1.3;
-          }
-        }
-
-        &__prize-text {
-          margin-top: 1.5rem;
-
-          text-align: center;
-        }
-      }
-    }
-
-    &_photo {
-      background-image: url("/img/photo-bg@desktop.webp");
-      background-position: center bottom;
-      background-size: cover;
-
-      @include max-screen($large_tablet) {
-        background-position: 40% bottom;
-      }
-
-      .prize-header {
-        &__title {
-          margin-bottom: 7rem;
-        }
-
-        &__benefits-list {
-          width: 66%;
-          padding-bottom: 6rem;
-
-          @include max-screen($large_tablet) {
-            width: 77%;
-          }
-        }
-
-        &__benefit-item {
-          margin-bottom: 3.3rem;
-        }
-      }
-    }
-
-    &_relocation {
-      background-image: url("/img/relocation-bg@desktop.webp");
-      background-position: center bottom;
-      background-size: cover;
-
-      @include max-screen($large_tablet) {
-        background-position: 40% bottom;
-      }
-
-      .prize-header {
-        &__content-wrap {
-          padding-bottom: 12rem;
-        }
-
-        &__benefits-list {
-          width: 66%;
-          padding-bottom: 5rem;
-
-          @include max-screen($large_tablet) {
-            width: 90%;
-          }
-        }
-
-        &__benefit-item {
-          margin-bottom: 1.9rem;
-        }
-      }
-    }
-
-    &_encumbrances {
-      background-image: url("/img/encumbrances-bg@desktop.webp");
-      background-position: center bottom;
-      background-size: cover;
-
-      @include max-screen($large_tablet) {
-        background-position: 40% bottom;
-      }
-
-      .prize-header {
-        &__content-wrap {
-          padding-bottom: 12rem;
-        }
-
-        &__title {
-          margin-bottom: 5.5rem;
-        }
-
-        &__benefits-list {
-          padding-bottom: 4.9rem;
-        }
-
-        &__benefit-item {
-          margin-bottom: 2.5rem;
-        }
-
-        &__price-text {
-          min-width: 100%;
-        }
-
-        &__price {
-          text-decoration: none;
-        }
-      }
-
-    }
-  }
-
-  &__content-wrap {
-    position: relative;
-    z-index: 1;
-
-    padding-top: 11.5rem;
-    padding-bottom: 12.4rem;
-  }
-
-  &__content-text-wrap {
-    width: 50%;
-
-    &.is-dark {
-      .prize-header__price-text {
-        opacity: .7;
-      }
-
-      .icon-priceArrow {
-        stroke: #0e0e0e;
-      }
-    }
-  }
-
-  &__slogan {
-    display: inline-block;
-    margin-bottom: 2.2rem;
-    padding: .8rem 1.6rem;
-    border-radius: 5px;
-
-    color: #0E0E0E;
-    word-break: break-word;
-
-    background-color: #ffffff;
-  }
-
-  &__title {
-    margin-bottom: 4.5rem;
-  }
-
-  &__benefits-list {
-    width: 60%;
-    padding-bottom: 4.7rem;
-    margin-bottom: 3rem;
-    border-bottom: 1px solid;
-
-    list-style: none;
-
-    @include max-screen($small_desktop) {
-      width: 70%;
-    }
-
-    @include max-screen($large_tablet) {
-      width: 91%;
-    }
-  }
-
-  &__benefit-item {
-    position: relative;
-
-    margin-bottom: 2.1rem;
-    padding-left: 5rem;
-  }
-
-  &__benefit-icon-wrap {
-    position: absolute;
-    top: 3px;
-    left: 0;
-
-    .icon-benefit {
-      width: 1.8rem;
-      height: 1.8rem;
-
-      fill: none;
-      stroke: #FF0400;
-      stroke-width: 4;
-    }
-  }
-
-  &__prices {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  &__price-wrap {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__price-text {
-    max-width: 14rem;
-    margin-bottom: .3rem;
-
-
-    font-size: 1.4rem;
-  }
-
-  &__price {
-    margin-top: auto;
-
-    &_start {
-      text-decoration: line-through;
-    }
-  }
-
-  &__arrow-wrap {
-    width: 3.9rem;
-    align-self: flex-end;
-    margin: 0 4.5rem .8rem;
-
-    svg {
-      fill: none;
-      stroke: #ffffff;
-      stroke-width: 3;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-  }
-
-  &__image-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-  }
-
-  &__img {
-    max-width: 1920px;
-    width: 100%;
-  }
-
-  &__inscription {
-    z-index: 3;
-    right: 14%;
-    bottom: 7.5rem;
-
-    width: 27.4rem;
-    padding: 3rem 5rem 4.5rem;
-
-    &::before {
-      left: 6rem !important;
-    }
-
-    .specialist-inscription__specialist-name {
-      margin-bottom: .8rem;
-    }
-  }
+	position: relative;
+	width: 100%;
+	max-width: 1920px;
+
+	@include max-screen($small_tablet) {
+		padding-bottom: 2rem;
+
+		background-color: #f3f3f3;
+	}
+
+	&.white {
+		.prize-header__slogan {
+			background-color: #f3f3f3;
+		}
+	}
+
+	&__wrap {
+		@include max-screen($small_tablet) {
+			padding: 0;
+		}
+	}
+
+	&__top-content {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding-top: 3.6rem;
+		padding-bottom: 3.6rem;
+
+		@include max-screen($small_tablet) {
+			padding-top: 1rem;
+			padding-bottom: .8rem;
+
+			background-color: #ffffff;
+		}
+	}
+
+	&__icon-succes {
+		width: 3rem;
+		height: 3rem;
+
+		@include max-screen($small_tablet) {
+			width: 1.4rem;
+			height: 1.4rem;
+
+			margin-left: .5rem;
+		}
+	}
+
+	&__top-text {
+		max-width: calc(100% - 5rem);
+		margin-left: 2rem;
+
+		word-break: break-word;
+
+		@include max-screen($small_tablet) {
+			margin-right: 1rem;
+			margin-left: 1rem;
+
+			font-size: 1rem;
+		}
+	}
+
+	&__bg-image-mobile {
+		display: none;
+
+		@include max-screen($small_tablet) {
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			display: block;
+			width: 100%;
+			height: 34.8rem;
+
+			background-repeat: no-repeat;
+		}
+	}
+
+	&__content {
+		position: relative;
+
+		background-repeat: no-repeat;
+
+		@include max-screen($small_tablet) {
+			background: none !important;
+		}
+
+		&_consultation {
+			background-image: url("/img/alexandr-bodin@desktop.webp");
+			background-position: center center;
+			background-size: cover;
+
+			.prize-header {
+				&__bg-image-mobile {
+					background-image: url("/img/alexandr-bodin@mobile.webp");
+
+					@include max-screen($small_tablet) {
+						background-position: right bottom;
+					}
+
+					@include max-screen($large_mobile) {
+						background-position: right -11.6rem bottom -1rem;
+					}
+				}
+
+				&__slogan {
+					@include max-screen($small_tablet) {
+						margin-left: 0;
+						margin-right: auto;
+
+						background-color: #f3f3f3 !important;
+					}
+				}
+
+				&__title {
+					@include max-screen($small_tablet) {
+						width: 90%;
+						margin-left: 0;
+						margin-right: auto;
+
+						text-align: left;
+					}
+				}
+			}
+		}
+
+		&_advertising,
+		&_ad {
+			background-position: right 66% bottom;
+			background-size: cover;
+
+			.prize-header {
+				&__bg-image-mobile {
+					@include max-screen($small_tablet) {
+						height: 44.5rem;
+
+						background-position: center bottom;
+					}
+
+					@include max-screen($large_mobile) {
+						height: 40.5rem;
+					}
+				}
+
+				&__title {
+					@include max-screen($small_tablet) {
+						margin-bottom: 26.3rem!important;
+					}
+
+					@include max-screen($large_mobile) {
+						margin-bottom: 23.3rem !important;
+					}
+				}
+			}
+		}
+
+		&_advertising {
+			background-image: url("/img/advertising-bg@desktop.webp");
+
+			.prize-header {
+				&__bg-image-mobile {
+					background-image: url("/img/advertising-bg@mobile.webp");
+				}
+
+				&__benefit-item {
+					position: relative;
+					margin-bottom: 1.6rem;
+					padding-left: 5rem;
+				}
+			}
+		}
+
+		&_ad {
+			background-image: url("/img/ad-bg@desktop.webp");
+
+			.prize-header {
+				&__bg-image-mobile {
+					background-image: url("/img/ad-bg@mobile.webp");
+				}
+
+				&__benefits-list {
+					width: 61%;
+				}
+
+				&__benefit-item {
+					margin-bottom: 2.9rem;
+				}
+			}
+		}
+
+		&_cleaning {
+			background-image: url("/img/clean-bg@desktop.webp");
+			background-position: bottom -1.5rem left -6rem;
+			background-size: cover;
+
+			@include max-screen($small_desktop) {
+				background-position: bottom -1.5rem left -25rem !important;
+			}
+
+			@include max-screen($large_tablet) {
+				background-position: bottom -1.5rem left -27rem !important;
+			}
+
+			.prize-header {
+				&__bg-image-mobile {
+					background-image: url("/img/clean-bg@mobile.webp");
+					background-position: center bottom;
+
+					@include max-screen($small_tablet) {
+						height: 41.8rem;
+					}
+
+					@include max-screen($large_mobile) {
+						height: 37.5rem;
+					}
+				}
+
+				&__content-wrap {
+					padding-top: 11rem;
+					padding-bottom: 12.3rem;
+
+					@include max-screen($small_tablet) {
+						padding-top: 3.8rem;
+					}
+				}
+
+				&__title {
+					margin-bottom: 8rem;
+
+					@include max-screen($small_tablet) {
+						margin-bottom: 24.6rem !important;
+					}
+
+					@include max-screen($large_mobile) {
+						margin-bottom: 20.6rem !important;
+					}
+
+					.what-break {
+						@include max-screen($large_tablet) {
+							display: none;
+						}
+					}
+				}
+
+				&__benefits-list {
+					width: 55%;
+					padding-bottom: 8rem;
+
+					@include max-screen($large_tablet - 124) {
+						width: 90%;
+					}
+				}
+
+				&__benefit-item {
+					margin-bottom: 3.5rem;
+				}
+			}
+		}
+
+		&_docs {
+			background-image: url("/img/docs-bg@desktop.webp");
+			background-position: right bottom;
+			background-size: cover, contain;
+
+			@include max-screen($small_desktop) {
+				background-position: right 50% bottom !important;
+				background-size: cover, 90% !important;
+			}
+
+			@include max-screen($large_tablet) {
+				background-position: right 70% bottom !important;
+			}
+
+			.prize-header {
+				&__bg-image-mobile {
+					background-image: url("/img/docs-bg@mobile.webp");
+					background-position: right 15px bottom;
+
+					@include max-screen($small_tablet) {
+						height: 40.5rem;
+					}
+				}
+
+				&__content-wrap {
+					padding-bottom: 11.9rem;
+				}
+
+				&__title {
+					margin-bottom: 3.1rem;
+
+					@include max-screen($small_tablet) {
+						min-height: 9.3rem;
+					}
+
+					@include max-screen($small_tablet) {
+						margin-bottom: 23.5rem !important;
+					}
+				}
+
+				&__benefits-list {
+					width: 70%;
+					padding-bottom: 3.3rem;
+
+					@include max-screen($large_tablet) {
+						width: 90%;
+					}
+				}
+
+				&__benefit-item {
+					margin-bottom: 1.3rem;
+				}
+
+				&__prize-wrap {
+					position: absolute;
+					right: 14%;
+
+					display: flex;
+					align-items: center;
+					flex-direction: column;
+					justify-content: center;
+					width: 21.2rem;
+					height: 21.2rem;
+					border-radius: 50%;
+
+					background-color: #F7F7F7;
+
+					@include min-screen($small_tablet + 1) {
+						bottom: 6.7rem;
+					}
+
+					@include max-screen($large_tablet) {
+						right: 8%;
+					}
+
+					@include max-screen($small_tablet) {
+						z-index: 5;
+						top: 33.4rem;
+						right: 4rem !important;
+
+						width: 10.2rem;
+						height: 10.2rem;
+						border: .5px solid rgba(14, 14, 14, 0.5);
+					}
+				}
+
+				&__prize-icon-wrap {
+					width: 3.7rem;
+					height: 3.7rem;
+
+					@include max-screen($small_tablet) {
+						width: 1.2rem;
+						height: 1.2rem;
+						margin-top: -.1rem;
+					}
+
+					.icon-prize {
+						fill: none;
+
+						stroke: #FF0400;
+						stroke-width: 1.3;
+					}
+				}
+
+				&__prize-text {
+					margin-top: 1.5rem;
+
+					text-align: center;
+
+					@include max-screen($small_tablet) {
+						margin-top: .4rem;
+
+						font-size: 1.2rem;
+					}
+				}
+			}
+		}
+
+		&_photo,
+		&_relocation {
+			.prize-header {
+				&__bg-image-mobile {
+					background-position: right bottom;
+					background-size: cover;
+
+					@include max-screen($small_tablet) {
+						height: 40.5rem;
+					}
+				}
+
+				&__title {
+					margin-bottom: 7rem;
+
+					@include max-screen($small_tablet) {
+						margin-bottom: 23.7rem !important;
+					}
+
+					@include max-screen($large_mobile) {
+						margin-bottom: 23.6rem !important;
+					}
+				}
+			}
+		}
+
+		&_photo {
+			background-image: url("/img/photo-bg@desktop.webp");
+			background-position: center bottom;
+			background-size: cover;
+
+			@include max-screen($large_tablet) {
+				background-position: 40% bottom;
+			}
+
+			.prize-header {
+				&__bg-image-mobile {
+					background-image: url("/img/photo-bg@mobile.webp");
+				}
+
+				&__title {
+					margin-bottom: 7rem;
+				}
+
+				&__benefits-list {
+					width: 66%;
+					padding-bottom: 6rem;
+
+					@include max-screen($large_tablet) {
+						width: 77%;
+					}
+				}
+
+				&__benefit-item {
+					margin-bottom: 3.3rem;
+				}
+			}
+		}
+
+		&_relocation {
+			background-image: url("/img/relocation-bg@desktop.webp");
+			background-position: center bottom;
+			background-size: cover;
+
+			@include max-screen($large_tablet) {
+				background-position: 40% bottom;
+			}
+
+			.prize-header {
+				&__bg-image-mobile {
+					background-image: url("/img/relocation-bg@mobile.webp");
+				}
+
+				&__content-wrap {
+					padding-bottom: 12rem;
+				}
+
+				&__benefits-list {
+					width: 66%;
+					padding-bottom: 5rem;
+
+					@include max-screen($large_tablet) {
+						width: 90%;
+					}
+				}
+
+				&__benefit-item {
+					margin-bottom: 1.9rem;
+				}
+			}
+		}
+
+		&_encumbrances {
+			background-image: url("/img/encumbrances-bg@desktop.webp");
+			background-position: center bottom;
+			background-size: cover;
+
+			@include max-screen($large_tablet) {
+				background-position: 40% bottom;
+			}
+
+			.prize-header {
+				&__bg-image-mobile {
+					background-image: url("/img/encumbrances-bg@mobile.webp");
+
+					@include max-screen($small_tablet) {
+						background-position: right bottom -1rem;
+					}
+
+					@include max-screen($large_mobile) {
+						background-position: right -3rem bottom -1rem;
+					}
+				}
+
+				&__content-wrap {
+					padding-bottom: 12rem;
+				}
+
+				&__title {
+					margin-bottom: 5.5rem;
+				}
+
+				&__benefits-list {
+					padding-bottom: 4.9rem;
+				}
+
+				&__benefit-item {
+					margin-bottom: 2.5rem;
+				}
+
+				&__price-text {
+					min-width: 100%;
+				}
+
+				&__price {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	&__content-wrap {
+		position: relative;
+		z-index: 1;
+
+		padding-top: 11.5rem;
+		padding-bottom: 12.4rem;
+
+		@include max-screen($small_tablet) {
+			padding-top: 3.8rem;
+			padding-bottom: 0 !important;
+		}
+	}
+
+	&__content-text-wrap {
+		width: 50%;
+
+		@include max-screen($small_tablet) {
+			width: 100%;
+		}
+
+		&.is-dark {
+			.prize-header__price-text {
+				opacity: .7;
+			}
+
+			.icon-priceArrow {
+				stroke: #0e0e0e;
+			}
+		}
+	}
+
+	&__slogan {
+		display: inline-block;
+		margin-bottom: 2.2rem;
+		padding: .8rem 1.6rem;
+		border-radius: 5px;
+
+		color: #0E0E0E;
+		word-break: break-word;
+
+		background-color: #ffffff;
+
+		@include max-screen($small_tablet) {
+			display: block;
+			width: 25rem;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 1.6rem;
+			padding: .5rem 1rem;
+
+			font-size: 1rem;
+
+			background-color: #ffffff !important;
+		}
+	}
+
+	&__title {
+		margin-bottom: 4.5rem;
+
+		@include max-screen($small_tablet) {
+			width: 100%;
+			max-width: 46.5rem;
+			height: 9.4rem;
+			margin-right: auto;
+			margin-left: auto;
+			margin-bottom: 17.9rem !important;
+
+			text-align: center;
+		}
+
+		@include max-screen($large_mobile) {
+			height: 9.3rem;
+		}
+	}
+
+	&__benefits-price-wrap {
+		@include max-screen($small_tablet) {
+			padding: 4rem 0 5rem 2.5rem;
+
+			color: #0E0E0E;
+
+			background-color: #ffffff;
+		}
+	}
+
+	&__benefits-list {
+		width: 60%;
+		margin-bottom: 3rem;
+		padding-bottom: 4.7rem;
+		border-bottom: 1px solid;
+
+		list-style: none;
+
+		@include max-screen($small_desktop) {
+			width: 70%;
+			border-bottom: none;
+			margin-bottom: 0 !important;
+			padding-bottom: 2.6rem !important;
+		}
+
+		@include max-screen($large_tablet) {
+			width: 91% !important;
+		}
+	}
+
+	&__benefit-item {
+		position: relative;
+
+		margin-bottom: 2.1rem;
+		padding-left: 5rem;
+
+		@include max-screen($small_tablet) {
+			margin-bottom: 2.1rem !important;
+			padding-left: 3rem !important;
+
+			font-weight: normal;
+		}
+	}
+
+	&__benefit-icon-wrap {
+		position: absolute;
+		top: 3px;
+		left: 0;
+
+		.icon-benefit {
+			width: 1.8rem;
+			height: 1.8rem;
+
+			fill: none;
+			stroke: #FF0400;
+			stroke-width: 4;
+
+			@include max-screen($small_tablet) {
+				width: 1.4rem;
+				height: 1.4rem;
+			}
+		}
+	}
+
+	&__prices {
+		display: flex;
+		flex-wrap: wrap;
+
+		@include max-screen($small_tablet) {
+			flex-direction: column;
+			align-items: center;
+			margin-left: -2.5rem;
+
+			text-align: center;
+		}
+	}
+
+	&__price-wrap {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__price-text {
+		max-width: 14rem;
+		margin-bottom: .3rem;
+
+		font-size: 1.4rem;
+
+		@include max-screen($small_tablet) {
+			font-size: 1rem;
+
+			opacity: .7;
+		}
+	}
+
+	&__price {
+		margin-top: auto;
+
+		@include max-screen($small_tablet) {
+			font-size: 2.6rem;
+		}
+
+		&_start {
+			text-decoration: line-through;
+		}
+	}
+
+	&__arrow-wrap {
+		align-self: flex-end;
+		width: 3.9rem;
+		margin: 0 4.5rem .8rem;
+
+		@include max-screen($small_tablet) {
+			align-self: center;
+			width: 1.5rem;
+			margin: 1.5rem 0;
+
+			transform: rotate(90deg);
+		}
+
+		svg {
+			fill: none;
+			stroke: #ffffff;
+			stroke-width: 3;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+
+			@include max-screen($small_tablet) {
+				stroke: #0e0e0e;
+				stroke-width: 5;
+			}
+		}
+	}
+
+	&__image-wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		width: 100%;
+	}
+
+	&__img {
+		width: 100%;
+		max-width: 1920px;
+	}
+
+	&__inscription {
+		z-index: 3;
+
+		width: 27.4rem;
+		padding: 3rem 5rem 4.5rem;
+
+		@include min-screen($small_tablet + 1) {
+			right: 14%;
+			bottom: 7.5rem;
+		}
+
+		@include max-screen($small_tablet) {
+			right: 30.5rem;
+			top: 21.3rem;
+
+			width: 17rem;
+			padding: 1.5rem 2.1rem 2.7rem;
+
+			color: #ffffff;
+
+			background-color: transparent !important;
+
+			.specialist-inscription__specialist-name {
+				padding: 0;
+
+				font-size: 1.4rem;
+			}
+
+			.specialist-inscription__specialist-status {
+				font-size: 1.2rem;
+			}
+		}
+
+		@include max-screen($large_mobile) {
+			right: 13.5rem;
+		}
+
+		&::before {
+			@include min-screen($small_tablet + 1) {
+				left: 6rem !important;
+			}
+		}
+
+		.specialist-inscription__specialist-name {
+			margin-bottom: .8rem;
+		}
+
+		.specialist-inscription__border-wrap {
+			display: none;
+
+			@include max-screen($small_tablet) {
+				position: absolute;
+				top: 0;
+				left: 0;
+
+				display: block;
+				width: 17.8rem;
+				height: 10.2rem;
+
+				svg {
+					fill: none;
+					stroke: #ffffff;
+					stroke-width: 0.852507;
+				}
+			}
+		}
+	}
+
+	.title-br-mob {
+		@include min-screen($small_tablet + 1) {
+			display: none;
+		}
+	}
 }

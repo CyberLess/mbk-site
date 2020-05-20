@@ -23,37 +23,38 @@
             +e.P.slogan.p.small Поздравляем! Вы выиграли подарок от МБК!
             +e.H1.title.h3 !{mainTitle}
 
-            +e.UL.benefits-list
-                each benefit in benefits
-                    +e.LI.benefit-item.h6
-                        +e.benefit-icon-wrap
-                            +icon('benefit', '0 0 19 16')
-                        | !{benefit}
+            +e.benefits-price-wrap
+                +e.UL.benefits-list
+                    each benefit in benefits
+                        +e.LI.benefit-item.h6
+                            +e.benefit-icon-wrap
+                                +icon('benefit', '0 0 19 16')
+                            | !{benefit}
 
-            +e.prices
-                if pageModificator === 'encumbrances'
-                    +e.price-wrap
-                        +e.SPAN.price-text._start Максимальная экономия
-                        +e.SPAN.price._start.h4.is-bold= startPrice
-                else
-                    +e.price-wrap
-                        +e.SPAN.price-text._start Цена для всех
-                        +e.SPAN.price._start.h4.is-bold= startPrice
-                    +e.arrow-wrap
-                        +icon('priceArrow', '0 0 43 20')
-                    +e.price-wrap
-                        +e.SPAN.price-text._for-you Цена для Вас
-                        +e.SPAN.price._for-you.h4.is-bold 0 ₽
+                +e.prices
+                    if pageModificator === 'encumbrances'
+                        +e.price-wrap
+                            +e.SPAN.price-text._start Максимальная экономия
+                            +e.SPAN.price._start.h4.is-bold= startPrice
+                    else
+                        +e.price-wrap
+                            +e.SPAN.price-text._start Цена для всех
+                            +e.SPAN.price._start.h4.is-bold= startPrice
+                        +e.arrow-wrap
+                            +icon('priceArrow', '0 0 43 20')
+                        +e.price-wrap
+                            +e.SPAN.price-text._for-you Цена для Вас
+                            +e.SPAN.price._for-you.h4.is-bold 0 ₽
+
+    +e.bg-image-mobile
 
     case pageModificator
         when 'consultation'
             +e.inscription.specialist-inscription__
                 +e.specialist-name.A(href="#") Бодин Александр
-                    +e.icon-specialist.arrow
-                        +e.SVG(viewBox="0 0 18.560659 9.6213207")
-                            path(class="triangle" d='M14.5 4.81v-3l3 3-3 3z')
-                            path(class="stroke" d='M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z')
                 +e.specialist-status.SPAN Юрист по вопросам недвижимости
+                +e.border-wrap
+                    +icon('inscription', '0 0 178 102')
         when 'docs'
             +e.prize-wrap
                 +e.prize-icon-wrap
