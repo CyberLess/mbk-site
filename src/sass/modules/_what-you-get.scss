@@ -24,6 +24,16 @@
 		}
 	}
 
+	&_history {
+		.what-you-get__title {
+			.what-break {
+				@include max-screen($large_mobile) {
+					display: inline !important;
+				}
+			}
+		}
+	}
+
 	&__content-wrap {
 		display: flex;
 		flex-wrap: wrap;
@@ -123,7 +133,7 @@
 
 		transform: translateY(-50%);
 
-		background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, #F3F3F3 50%);
+		background-image: linear-gradient(to bottom, transparent 0%, transparent 35%, #F3F3F3 35%);
 
 		@include max-screen($small_tablet) {
 			left: 3.3rem;

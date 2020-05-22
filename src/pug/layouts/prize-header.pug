@@ -56,7 +56,17 @@
                 +e.border-wrap
                     +icon('inscription', '0 0 178 102')
         when 'docs'
-            +e.prize-wrap
+            +e.prize-wrap.prize-wrap__
+                +e.prize-icon-wrap
+                    +icon('prize', '0 0 39 39')
+                +e.prize-text.h6.is-regular
+                    | Получи
+                    br
+                    | подарок
+        when 'history'
+            +e.image-wrap-desktop
+                +e.IMG.image-bg-desk(src="/img/history-bg@desktop.png")
+            +e.prize-wrap.prize-wrap__
                 +e.prize-icon-wrap
                     +icon('prize', '0 0 39 39')
                 +e.prize-text.h6.is-regular

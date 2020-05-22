@@ -313,57 +313,6 @@
 					margin-bottom: 1.3rem;
 				}
 
-				&__prize-wrap {
-					position: absolute;
-					right: 14%;
-
-					display: flex;
-					align-items: center;
-					flex-direction: column;
-					justify-content: center;
-					width: 21.2rem;
-					height: 21.2rem;
-					border-radius: 50%;
-
-					background-color: #F7F7F7;
-
-					@include min-screen($small_tablet + 1) {
-						bottom: 6.7rem;
-					}
-
-					@include max-screen($large_tablet) {
-						right: 8%;
-					}
-
-					@include max-screen($small_tablet) {
-						z-index: 5;
-						top: 33.4rem;
-						right: 4rem !important;
-
-						width: 10.2rem;
-						height: 10.2rem;
-						border: .5px solid rgba(14, 14, 14, 0.5);
-					}
-				}
-
-				&__prize-icon-wrap {
-					width: 3.7rem;
-					height: 3.7rem;
-
-					@include max-screen($small_tablet) {
-						width: 1.2rem;
-						height: 1.2rem;
-						margin-top: -.1rem;
-					}
-
-					.icon-prize {
-						fill: none;
-
-						stroke: #FF0400;
-						stroke-width: 1.3;
-					}
-				}
-
 				&__prize-text {
 					margin-top: 1.5rem;
 
@@ -514,6 +463,159 @@
 
 				&__price {
 					text-decoration: none;
+				}
+			}
+		}
+
+		&_history {
+			.prize-header {
+				&__image-wrap-desktop {
+					position: absolute;
+					z-index: 6;
+					right: -3.3rem;
+
+					width: 74%;
+
+					@include min-screen($large_desktop + 1) {
+						bottom: -34%;
+					}
+
+					@include max-screen($large_desktop) {
+						bottom: -30%;
+					}
+
+					@include max-screen($large_desktop - 80) {
+						bottom: -20%;
+					}
+
+					@include max-screen($large_tablet - 124) {
+						bottom: -10%;
+					}
+
+					@include max-screen($small_tablet + 52) {
+						bottom: 10%;
+					}
+
+					@include max-screen($small_tablet) {
+						display: none;
+					}
+				}
+
+				&__content-wrap {
+					padding-bottom: 16.9rem;
+
+					@include max-screen($small_tablet) {
+						padding-top: 0;
+					}
+				}
+
+				&__slogan {
+					@include max-screen($small_tablet) {
+						background-color: #f3f3f3 !important;
+					}
+				}
+
+				&__content-text-wrap {
+					@include max-screen($small_tablet) {
+						padding-top: 3.8rem;
+						background-color: #ffffff;
+					}
+				}
+
+				&__title {
+					@include max-screen($small_tablet) {
+						margin-bottom: 23.3rem!important;
+					}
+
+					@include min-screen($large_mobile + 1) {
+						.title-br-mob {
+							display: none;
+						}
+					}
+				}
+
+				&__bg-image-mobile {
+					z-index: 1;
+
+					height: 41.8rem;
+
+					background-image: url("/img/history-bg@desktop.webp");
+
+					@include max-screen($small_tablet) {
+						background-position: right bottom -15rem;
+						background-size: 54rem;
+					}
+
+					@include max-screen($large_mobile) {
+						background-position: right bottom -10rem;
+						background-size: 37rem;
+					}
+				}
+
+				&__prize-wrap {
+					@include min-screen($small_tablet + 1) {
+						bottom: 7rem;
+						right: 3.5vw;
+
+						width: 31.5vw;
+						height: 31.5vw;
+						flex-direction: row;
+						padding-top: 35rem;
+					}
+
+					@include max-screen($large_desktop) {
+						bottom: 6rem;
+
+						padding-top: 29rem;
+					}
+
+					@include max-screen($small_desktop) {
+						padding-top: 16vw;
+					}
+
+					@include max-screen($large_tablet) {
+						padding-top: 19vw;
+					}
+
+					@include max-screen($small_tablet + 151) {
+						bottom: 6rem;
+
+						padding-top: 18vw;
+					}
+
+					@include max-screen($small_tablet + 131) {
+						bottom: 10vw;
+					}
+
+					@include max-screen($small_tablet + 52) {
+						bottom: 28%;
+					}
+
+					@include max-screen($small_tablet) {
+						bottom: auto;
+						top: 29.5rem;
+						right: 3rem !important;
+
+						background-color: #ffffff;
+					}
+
+					.prize-wrap__prize-icon-wrap {
+						@include min-screen($small_tablet + 1) {
+							width: 4rem;
+							height: 4rem;
+						}
+
+						@include max-screen($large_tablet) {
+							margin-left: -4rem;
+						}
+					}
+
+					.prize-wrap__prize-text {
+						@include min-screen($small_tablet + 1) {
+							margin-left: 3rem;
+							margin-right: -8rem;
+						}
+					}
 				}
 			}
 		}
@@ -812,6 +914,69 @@
 	.title-br-mob {
 		@include min-screen($small_tablet + 1) {
 			display: none;
+		}
+	}
+}
+
+.prize-wrap {
+	position: absolute;
+	right: 14%;
+
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	width: 21.2rem;
+	height: 21.2rem;
+	border-radius: 50%;
+
+	background-color: #F7F7F7;
+
+	@include min-screen($small_tablet + 1) {
+		bottom: 6.7rem;
+	}
+
+	@include max-screen($large_tablet) {
+		right: 8%;
+	}
+
+	@include max-screen($small_tablet) {
+		z-index: 5;
+		top: 33.4rem;
+		right: 4rem !important;
+
+		width: 10.2rem;
+		height: 10.2rem;
+		border: .5px solid rgba(14, 14, 14, 0.5);
+		padding-top: 0 !important;
+	}
+
+	&__prize-text {
+		@include max-screen($small_tablet) {
+			margin-top: .4rem;
+
+			font-size: 1.2rem;
+			text-align: center;
+		}
+
+	}
+
+	&__prize-icon-wrap {
+		width: 3.7rem;
+		height: 3.7rem;
+
+		@include max-screen($small_tablet) {
+			width: 1.2rem;
+			height: 1.2rem;
+			margin-top: -.1rem;
+			margin-left: 0 !important;
+		}
+
+		.icon-prize {
+			fill: none;
+
+			stroke: #FF0400;
+			stroke-width: 1.3;
 		}
 	}
 }

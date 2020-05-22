@@ -1,0 +1,22 @@
+extends ../layouts/base
+
+append vars
+    - var title = 'Бесплатная проверка кредитной истории'
+    - var mainTitle = 'Бесплатная<br class="title-br-mob"> проверка<br class="title-br-mob"> кредитной<br class="title-br-mob"> истории'
+    - var topBg = 'light-gray'
+    - var contentColor = 'is-dark'
+    - var pageModificator = 'history'
+    - var benefits = ['Проверка по базе ФССП', 'Проверка по базе кронос', 'Скоринг анализ по бюро кредитных историй'];
+    - var startPrice = '10 000 ₽'
+    - var whatYouGetTitile = 'Что вы избежите,<br class="what-break"> если проверите<br class="what-break"> свою кредитную<br class="what-break"> историю?'
+    - var whatYouGetItems = [{icon: 'shield', viewBox: '0 0 26 32', title: 'Не получите <br class="what-break"> автоматический отказ', text: 'Если откажут более 3-х раз дальше все будут отказывают'}, {icon: 'flag', viewBox: '0 0 34 34', title: 'Миновать отказ <br class="what-break"> из-за низкого скоринга', text: 'Нужно знать свой скорринговый балл и уровень балла, который требует банк иначе будет отказ'}, {icon: 'grid', viewBox: '0 0 34 34', title: 'Избежите отказ <br class="what-break"> из-за правонарушений', text: 'Судимости, правонарушения и даже административные штрафы могут быть поводом для отказа'}, {icon: 'userСheck', viewBox: '0 0 34 34', title: 'Не будет отказа <br class="what-break"> по просрочкам', text: 'Многие банки не работают с открытыми просрочками. <br class="what-break">100 рублей, не оплаченные по кредиту, могут помешать Вам.'}, {icon: 'unlock', viewBox: '0 0 28 28', title: 'Спасётесь от отказа <br class="what-break"> по микрокредитам', text: 'Есть допустимая норма по задолжностям, если она привысит хотя бы на 1 рубль - получите отказ'}]
+
+block header
+    +b.HEADER.prize-header.white(class="prize-header_" +pageModificator)
+        include ../layouts/prize-header
+
+block content
+    include ../layouts/what-you-get
+
+block footer
+    include ../layouts/gift-steps
