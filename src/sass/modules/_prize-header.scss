@@ -467,12 +467,13 @@
 			}
 		}
 
-		&_history {
+		&_history,
+		&_banking-terms {
 			.prize-header {
 				&__image-wrap-desktop {
 					position: absolute;
 					z-index: 6;
-					right: -3.3rem;
+					right: 0;
 
 					width: 74%;
 
@@ -504,6 +505,10 @@
 				&__content-wrap {
 					padding-bottom: 16.9rem;
 
+					@include min-screen($small_tablet + 1) {
+						z-index: 7;
+					}
+
 					@include max-screen($small_tablet) {
 						padding-top: 0;
 					}
@@ -523,10 +528,6 @@
 				}
 
 				&__title {
-					@include max-screen($small_tablet) {
-						margin-bottom: 23.3rem!important;
-					}
-
 					@include min-screen($large_mobile + 1) {
 						.title-br-mob {
 							display: none;
@@ -537,18 +538,14 @@
 				&__bg-image-mobile {
 					z-index: 1;
 
-					height: 41.8rem;
-
-					background-image: url("/img/history-bg@desktop.webp");
-
 					@include max-screen($small_tablet) {
-						background-position: right bottom -15rem;
+						background-position: right bottom -9rem;
 						background-size: 54rem;
 					}
 
 					@include max-screen($large_mobile) {
-						background-position: right bottom -10rem;
-						background-size: 37rem;
+						background-position: right bottom -3rem;
+						background-size: 31rem;
 					}
 				}
 
@@ -615,6 +612,87 @@
 							margin-left: 3rem;
 							margin-right: -8rem;
 						}
+					}
+				}
+			}
+		}
+
+		&_history {
+			.prize-header {
+				&__title {
+					@include max-screen($small_tablet) {
+						margin-bottom: 28.3rem !important;
+					}
+
+					@include max-screen($large_mobile) {
+						margin-bottom: 23.3rem !important;
+					}
+				}
+
+				&__bg-image-mobile {
+					background-image: url("/img/history-bg@mobile.webp");
+
+					@include max-screen($small_tablet) {
+						height: 46.8rem;
+					}
+
+					@include max-screen($large_mobile) {
+						height: 41.8rem;
+					}
+				}
+			}
+		}
+
+		&_banking-terms {
+			.prize-header {
+				&__content-wrap {
+					@include min-screen($small_tablet + 1) {
+						padding-bottom: 11.9rem;
+					}
+				}
+
+				&__title {
+					margin-bottom: 7rem;
+
+					@include max-screen($small_tablet) {
+						margin-bottom: 29.3rem !important;
+					}
+
+					@include max-screen($large_mobile) {
+						margin-bottom: 24.3rem !important;
+					}
+				}
+
+				&__benefits-list {
+					padding-bottom: 5.7rem;
+				}
+
+				&__benefit-item {
+					margin-bottom: 3.4rem;
+				}
+
+				&__bg-image-mobile {
+					background-image: url("/img/banking-terms-bg@mobile.webp");
+
+					@include max-screen($small_tablet) {
+						height: 47.8rem;
+					}
+
+					@include max-screen($large_mobile) {
+						height: 42.8rem;
+					}
+				}
+
+				&__benefits-list {
+					@include min-screen($large_desktop) {
+						width: 75%;
+						min-height: 21.1rem;
+					}
+				}
+
+				.mobile-br {
+					@include min-screen($small_tablet + 1) {
+						display: none;
 					}
 				}
 			}

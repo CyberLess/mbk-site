@@ -1,0 +1,22 @@
+extends ../layouts/base
+
+append vars
+    - var title = 'Таблица с лучшими условиями по банкам'
+    - var mainTitle = 'Таблица<br class="title-br-mob"> с лучшими<br class="title-br-mob"> условиями<br class="title-br-mob"> по банкам'
+    - var topBg = 'light-gray'
+    - var contentColor = 'is-dark'
+    - var pageModificator = 'banking-terms'
+    - var benefits = ['В таблице более<br class="mobile-br"> 150 условий по кредитам', 'Собраны 30 банков Москвы', 'Прописаны все условия для получения кредита'];
+    - var startPrice = '2 000 ₽'
+    - var whatYouGetTitile = 'Что вы узнаете<br class="what-break"> из таблицы?'
+    - var whatYouGetItems = [{icon: 'fileText', viewBox: '0 0 34 34', title: 'Список требований', text: 'В таблице указаны требования, для получения кредита (возраст, стаж по работе и т.д.)'}, {icon: 'percent', viewBox: '0 0 34 34', title: 'Список ставок', text: 'Мы собрали ставки по 150 кредитам, которые можно получить на любые цели'}, {icon: 'calendar', viewBox: '0 0 34 34', title: 'Сроки кредита', text: 'В таблице собраны сроки от 2 месяцев до 25 лет!'}, {icon: 'rouble', viewBox: '0 0 25 28', title: 'Суммы по кредитам', text: 'В таблице внесены максимальные и минимальные суммы по каждому кредиту.'}, {icon: 'gridWindows', viewBox: '0 0 34 34', title: 'Список документов', text: 'По каждому кредиту указаны документы, которые требуются для его получения'}]
+
+block header
+    +b.HEADER.prize-header.white(class="prize-header_" +pageModificator)
+        include ../layouts/prize-header
+
+block content
+    include ../layouts/what-you-get
+
+block footer
+    include ../layouts/gift-steps
