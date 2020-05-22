@@ -9,6 +9,15 @@
 		background-color: #f3f3f3;
 	}
 
+	&_history,
+	&_banking-terms {
+		.prize-header__top-content {
+			@include max-screen($small_tablet) {
+				background-color: #f3f3f3;
+			}
+		}
+	}
+
 	&.white {
 		.prize-header__slogan {
 			background-color: #f3f3f3;
