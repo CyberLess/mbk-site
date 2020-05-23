@@ -449,7 +449,8 @@
 			}
 		}
 
-		&_encumbrances {
+		&_encumbrances,
+		&_month-credit {
 			background-image: url("/img/encumbrances-bg@desktop.webp");
 			background-position: center bottom;
 			background-size: cover;
@@ -493,6 +494,14 @@
 
 				&__price {
 					text-decoration: none;
+				}
+			}
+		}
+
+		&_month-credit {
+			.prize-header {
+				&__benefits-list {
+					width: 70%;
 				}
 			}
 		}

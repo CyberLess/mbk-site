@@ -32,7 +32,7 @@
                             | !{benefit}
 
                 +e.prices
-                    if pageModificator === 'encumbrances'
+                    if pageModificator === 'encumbrances' || pageModificator === 'month-credit'
                         +e.price-wrap
                             +e.SPAN.price-text._start Максимальная экономия
                             +e.SPAN.price._start.h4.is-bold= startPrice
