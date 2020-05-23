@@ -477,7 +477,8 @@
 		}
 
 		&_history,
-		&_banking-terms {
+		&_banking-terms,
+		&_free-scoring {
 			.prize-header {
 				&__image-wrap-desktop {
 					position: absolute;
@@ -721,6 +722,61 @@
 				}
 			}
 		}
+
+		&_free-scoring {
+			.prize-header {
+				&__prize-wrap {
+					@include max-screen($small_tablet) {
+						top: 26.8rem !important;
+					}
+				}
+
+				&__content-wrap {
+					@include min-screen($small_tablet + 1) {
+						padding-bottom: 11.9rem;
+					}
+				}
+
+				&__title {
+					margin-bottom: 7rem;
+
+					@include max-screen($small_tablet) {
+						margin-bottom: 26.3rem !important;
+					}
+
+					@include max-screen($large_mobile) {
+						margin-bottom: 21rem!important;
+					}
+				}
+
+				&__benefits-list {
+					padding-bottom: 5.7rem;
+				}
+
+				&__benefit-item {
+					margin-bottom: 3.4rem;
+				}
+
+				&__bg-image-mobile {
+					background-image: url("/img/free-scoring-bg@mobile.webp");
+
+					@include max-screen($small_tablet) {
+						height: 42.8rem;
+					}
+
+					@include max-screen($large_mobile) {
+						height: 39.8rem;
+					}
+				}
+
+				&__benefits-list {
+					@include min-screen($large_desktop) {
+						width: 75%;
+						min-height: 21.1rem;
+					}
+				}
+			}
+		}
 	}
 
 	&__content-wrap {
@@ -795,6 +851,12 @@
 
 		@include max-screen($large_mobile) {
 			height: 9.3rem;
+		}
+
+		.title-br {
+			@include max-screen($small_tablet) {
+				display: none;
+			}
 		}
 	}
 
@@ -1014,6 +1076,12 @@
 	}
 
 	.title-br-mob {
+		@include min-screen($small_tablet + 1) {
+			display: none;
+		}
+	}
+
+	.mobile-br {
 		@include min-screen($small_tablet + 1) {
 			display: none;
 		}
