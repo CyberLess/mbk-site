@@ -27,6 +27,15 @@
 	&_history {
 		.what-you-get__title {
 			.what-break {
+				@include min-screen($small_tablet + 1) {
+					display: none;
+				}
+			}
+			.what-break-mobile {
+				@include min-screen($small_tablet + 1) {
+					display: none;
+				}
+
 				@include max-screen($large_mobile) {
 					display: inline !important;
 				}
@@ -48,6 +57,10 @@
 
 				@include min-screen($small_tablet + 1) {
 					min-height: 5rem;
+				}
+
+				@include max-screen($small_tablet) {
+					min-height: 3.8rem;
 				}
 			}
 		}
