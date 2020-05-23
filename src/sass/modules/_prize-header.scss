@@ -97,7 +97,8 @@
 			background: none !important;
 		}
 
-		&_consultation {
+		&_consultation,
+		&_consultation-expert {
 			background-image: url("/img/alexandr-bodin@desktop.webp");
 			background-position: center center;
 			background-size: cover;
@@ -131,6 +132,26 @@
 						margin-right: auto;
 
 						text-align: left;
+					}
+				}
+			}
+		}
+
+		&_consultation-expert {
+			.prize-header {
+				&__benefits-list {
+					width: 81%;
+				}
+
+				&__inscription {
+					@include min-screen($small_tablet + 1) {
+						right: 19%;
+
+						width: 33.9rem;
+
+						@include max-screen($large_tablet) {
+							right: 10%;
+						}
 					}
 				}
 			}
