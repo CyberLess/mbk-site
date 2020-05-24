@@ -12,6 +12,83 @@
 		padding-bottom: 5.5rem;
 	}
 
+	&_blog {
+		padding-top: 15rem;
+
+		.database {
+			&__doc {
+				width: 39%;
+				padding-top: 56.74646%;
+			}
+
+			&__cell_right {
+				padding-left: 1rem;
+
+				color: #0e0e0e;
+			}
+
+			&__subtitle-wrap {
+				margin-bottom: 2rem;
+			}
+
+			&__subtitle,
+			&__subtext {
+				display: block;
+			}
+
+			&__desk-br {
+				@include min-screen($large_tablet) {
+					display: none;
+				}
+			}
+
+			&__subtitle {
+				margin-top: -2rem;
+				margin-bottom: 0;
+
+				font-size: 13rem;
+			}
+
+			&__subtext {
+				margin-top: -4.5rem;
+
+				font-size: 6.5rem;
+			}
+
+			&__text {
+				margin-bottom: 4.1rem;
+			}
+
+			&__middle {
+				position: relative;
+				left: -15%;
+
+				overflow: hidden;
+				width: 114%;
+				padding: 4.9rem 2.8rem 5.5rem 6.9rem;
+
+				background-color: #ffffff;
+			}
+
+			&__bg-icon-wrap {
+				position: absolute;
+				right: 3rem;
+				bottom: 33%;
+				width: 40%;
+
+				svg {
+					top: 0;
+
+					display: block;
+					width: auto;
+					margin-top: 0;
+
+					fill: #f3f3f3;
+				}
+			}
+		}
+	}
+
 	&__inner{
 		@include max-screen($large_mobile) {
 			display: inline-block;

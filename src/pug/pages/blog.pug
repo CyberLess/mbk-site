@@ -1,0 +1,11 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Блог';
+
+block content
+	H1.visually-hidden МБК - Блог
+	include ../layouts/database-blog
+
+block footer
+	+footer(class="_white")
