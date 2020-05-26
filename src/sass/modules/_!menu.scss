@@ -1,47 +1,42 @@
-.menu{
-
-	&__item{
+.menu {
+	&__item {
 		margin: 0 2rem;
 		padding: 4.2rem 0;
 		display: block;
 		position: relative;
 		@include max-screen($hd_plus) {
-		    padding: 3.2rem 0;
+			padding: 3.2rem 0;
 		}
 		// @include max-screen($small_tablet) {
 		//     padding: 3.2rem 0;
 		// }
 	}
 
-	&__link{
+	&__link {
+		transition: ease 0.15s;
 
-		transition: ease .15s;
-
-		&:before{
-			content: '';
+		&:before {
+			content: "";
 			position: absolute;
 			width: 100%;
 			height: 3px;
 			bottom: 0;
 			left: 0;
-			transition: ease .2s;
+			transition: ease 0.2s;
 			visibility: hidden;
 			background-color: $red;
 			opacity: 0;
-			transform: scale(0.2,1);
+			transform: scale(0.2, 1);
 		}
 
-		&:hover{
-			color: $red;
-		}
-
-		&.is-active{
+		&.is-active,
+		&:hover {
 			color: $red;
 
-			&:before{
+			&:before {
 				visibility: visible;
 				opacity: 1;
-				transform: scale(1,1);
+				transform: scale(1, 1);
 			}
 		}
 	}

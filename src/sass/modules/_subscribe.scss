@@ -1,8 +1,8 @@
-.subscribe{
+.subscribe {
 	padding-top: 17rem;
 	z-index: 50;
 	position: relative;
-	background: #F3F3F3;
+	background: #f3f3f3;
 
 	@include max-screen($large_tablet) {
 		padding-top: 10rem;
@@ -19,13 +19,16 @@
 		padding-top: 5.1rem;
 	}
 
-	&__book{
-		width: 1074/713*100%;
-		margin-left: -31.31557%;
+	&__book {
+		width: 932/713 * 100%;
+		// margin-left: -31.31557%;
+		margin-left: -466/713 * 100%;
 		position: absolute;
-		left: 0;
+		left: 50%;
+		// bottom: 100%;
+		// margin-bottom: -15%;
 		bottom: 100%;
-		margin-bottom: -15%;
+		margin-bottom: -60/713 * 100%;
 		user-select: none;
 		pointer-events: none;
 
@@ -41,10 +44,10 @@
 		}
 	}
 
-	&__box{
+	&__box {
 		z-index: 10;
-		position: relative;		
-		&-icon{
+		position: relative;
+		&-icon {
 			width: 3.5rem;
 			position: absolute;
 			left: 0;
@@ -53,24 +56,23 @@
 			fill: $red;
 		}
 
-		&-sub{
+		&-sub {
 			position: relative;
 			padding-left: 6.8rem;
 			margin-bottom: 2.1rem;
 		}
 
-		&-text{
+		&-text {
 			padding-left: 6.8rem;
 			font-weight: 400;
 		}
 
-		&-mobile{
+		&-mobile {
 			display: none;
 		}
 
 		@include max-screen($large_tablet) {
-			
-			&-text{
+			&-text {
 				font-size: 1.4rem;
 			}
 		}
@@ -80,26 +82,26 @@
 			bottom: 0;
 			left: 0;
 			width: 100%;
-			margin-bottom: 31.43408%;//48/311*100%;
+			margin-bottom: 31.43408%; //48/311*100%;
 			// padding-left: 45/311*100%;
 			// padding-right: 45/311*100%;
 
-			&-text{
+			&-text {
 				padding-left: 48px;
 				position: relative;
 				// padding-right: 10%;
 			}
-			&-icon{
+			&-icon {
 				display: none;
 			}
 
-			&-sub{
+			&-sub {
 				padding-left: 0;
 				font-size: 1.4rem;
 				margin-bottom: 1.1rem;
 			}
 
-			&-mobile{
+			&-mobile {
 				position: absolute;
 				left: 0;
 				top: 0;
@@ -110,9 +112,9 @@
 		}
 
 		@include max-screen($small_mobile) {
-			margin-bottom: 48/311*100%;
+			margin-bottom: 48/311 * 100%;
 
-			&-text{
+			&-text {
 				width: 201px;
 				max-width: 100%;
 				// padding-right: 15%;
@@ -120,21 +122,21 @@
 		}
 	}
 
-	&__cell{
-		&_left{
-			width: 462/1336*100%;
-			padding-bottom: 12rem;			
+	&__cell {
+		&_left {
+			width: 462/1336 * 100%;
+			padding-bottom: 12rem;
 		}
 
-		&_right{
-			width: 713/1336*100%;
+		&_right {
+			width: 713/1336 * 100%;
 			position: relative;
-			padding-bottom: 113/1336*100%;
-			padding-left: 151/1336*100%;
-			padding-right: 151/1336*100%;
+			padding-bottom: 113/1336 * 100%;
+			padding-left: 151/1336 * 100%;
+			padding-right: 151/1336 * 100%;
 
-			&:before{
-				content: '';
+			&:before {
+				content: "";
 				display: inline-block;
 				box-sizing: border-box;
 				height: auto;
@@ -145,16 +147,16 @@
 				border-radius: 50%;
 				background-color: #fff;
 				width: 100%;
-				margin-bottom: -47/713*100%;
+				margin-bottom: -47/713 * 100%;
 			}
 		}
 
 		@include max-screen($large_tablet) {
-			&_left{
+			&_left {
 				width: 44.58084%;
 			}
 
-			&_right{
+			&_right {
 				padding-bottom: 4.45808%;
 				padding-left: 7.3024%;
 				padding-right: 7.3024%;
@@ -162,7 +164,7 @@
 		}
 
 		@include max-screen($small_tablet) {
-			&_right{
+			&_right {
 				padding-left: 5.3024%;
 				padding-right: 5.3024%;
 				width: 50.36826%;
@@ -173,37 +175,37 @@
 			width: 100%;
 			margin-right: 0;
 
-			&_right{
+			&_right {
 				padding-left: 0;
 				padding-right: 0;
-				order:1;
+				order: 1;
 				width: 286px;
 				margin: auto;
 				margin-bottom: 3.9rem;
-				&:before{
+				&:before {
 					position: relative;
-					width: 311/230*100%;
-					padding-top: 311/230*100%;
-					margin-left: -(311/8)/230*100%;
+					width: 311/230 * 100%;
+					padding-top: 311/230 * 100%;
+					margin-left: -(311/8)/230 * 100%;
 				}
 			}
-			&_left{
+			&_left {
 				order: 2;
 				padding-bottom: 4.5rem;
 			}
 		}
 	}
 
-	&__title{
+	&__title {
 		margin-bottom: 6rem;
-		
+
 		@include max-screen($large_mobile) {
 			text-align: center;
 			margin-bottom: 8.7rem;
 		}
 	}
 
-	&__form{
+	&__form {
 		margin-top: 7.1rem;
 		padding-right: 5.7rem;
 
@@ -217,8 +219,7 @@
 		}
 	}
 
-
-	&__sub{
+	&__sub {
 		margin-bottom: 2.8rem;
 
 		@include max-screen($large_mobile) {
@@ -230,12 +231,12 @@
 	&_min {
 		@media (min-width: $large_tablet + 1) {
 			padding-top: 0;
-	
+
 			.subscribe__book {
 				margin-left: -10%;
 				margin-bottom: -5%;
 			}
-	
+
 			.subscribe__box {
 				&-sub {
 					font-weight: 500;
@@ -248,30 +249,30 @@
 					padding-left: 3.1rem;
 				}
 			}
-	
+
 			.subscribe__cell {
-				&_left{
-					width: 416/872*100%;
+				&_left {
+					width: 416/872 * 100%;
 					padding-bottom: 5.7rem;
 				}
-	
+
 				&_right {
-					width: 439/872*100%;
-					padding-left: 148/1336*100%;
-					padding-right: 88/1336*100%;
+					width: 439/872 * 100%;
+					padding-left: 148/1336 * 100%;
+					padding-right: 88/1336 * 100%;
 					padding-bottom: 6.2rem;
-	
+
 					&::before {
 						margin-left: 3rem;
 					}
 				}
 			}
-	
+
 			.subscribe__title {
 				font-weight: 700;
 				margin-bottom: 5.6rem;
 			}
-	
+
 			.input_big .input__item {
 				font-size: 2.4rem;
 			}
@@ -282,14 +283,14 @@
 
 		@include max-screen($large_tablet) {
 			padding-top: 0;
-			background-color: #FFFFFF
+			background-color: #ffffff;
 		}
 
 		.subscribe__cell {
 			&_right {
 				&::before {
 					@include max-screen($large_tablet) {
-						background-color: #F3F3F3;
+						background-color: #f3f3f3;
 					}
 					@include max-screen($large_mobile) {
 						width: 31.1rem;
@@ -333,17 +334,17 @@
 				padding-left: 2rem;
 				padding-bottom: 3.2rem;
 				padding-right: 3.3rem;
-	
-				&-text{
+
+				&-text {
 					width: 227.5px;
 					padding-left: 0;
 					position: relative;
 				}
-				&-icon{
+				&-icon {
 					display: none;
 				}
-	
-				&-sub{
+
+				&-sub {
 					padding-left: 0;
 					font-size: 1.4rem;
 					margin-bottom: 0.3rem;
@@ -352,8 +353,8 @@
 						display: none;
 					}
 				}
-	
-				&-mobile{
+
+				&-mobile {
 					position: absolute;
 					left: 0;
 					top: -64%;
@@ -364,5 +365,4 @@
 			}
 		}
 	}
-		
 }

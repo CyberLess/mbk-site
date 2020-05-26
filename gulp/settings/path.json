@@ -6,15 +6,13 @@
         "img": "dist/app/img/",
         "attach": "dist/",
         "svg": "dist/app/icons/",
-        "fonts": "dist/app/fonts/",
-        "objects": "dist/app/objects/"
+        "fonts": "dist/app/fonts/"
     },
     "src": {
         "html": "src/pug/pages/**/*.pug",
         "js": "src/js/app.js",
-        "css": "src/sass/**/*.scss",
+        "css": "src/sass/app.scss",
         "img": "src/img/*.{jpg,png}",
-        "objects": "src/objects/*.*",
         "attach": ["src/attach/**/.*", "src/attach/**/*.*"],
         "svg": "src/icons/**/*.svg",
         "fonts": "src/fonts/*.*"
@@ -22,7 +20,6 @@
     "watch": {
         "html": "src/pug/**/*.pug",
         "js": "src/js/**/*.js",
-        "objects": "src/objects/**/*.*",
         "css": "src/sass/**/*.scss",
         "img": "src/img/**/*.*",
         "svg": "src/icons/*.svg",
