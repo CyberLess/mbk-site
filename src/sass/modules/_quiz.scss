@@ -1,28 +1,27 @@
-.quiz{
-	&__box{
+.quiz {
+	&__box {
 		padding: 6.1rem 8.5rem;
-		background: #FFFFFF;
+		background: #ffffff;
 	}
 
-	&__inner{
+	&__inner {
 		padding-bottom: 2rem;
 		padding-top: 9.5rem;
 	}
 
-	&__name{
+	&__name {
 		margin-bottom: 3px;
 	}
 
-	&__gray{
+	&__gray {
 		color: #868686;
 	}
 
-	&__small{
-		padding-left: 5rem;
-	}
+	// &__small{
+	// 	padding-left: 5rem;
+	// }
 
-
-	&__bottom{
+	&__bottom {
 		position: absolute;
 		left: 0;
 		width: 100%;
@@ -30,11 +29,10 @@
 
 		opacity: 0;
 		visibility: hidden;
-		
 
-		&.is-visible{
+		&.is-visible {
 			opacity: 1;
-			transition: ease .3s;
+			transition: ease 0.3s;
 			visibility: visible;
 
 			// .bar__done{
@@ -42,23 +40,23 @@
 			// }
 		}
 
-		&-part{
-			&_left{
-				width: 50/327*100%;
+		&-part {
+			&_left {
+				width: 50/327 * 100%;
 			}
-			&_right{
-				width: 252/327*100%;
+			&_right {
+				width: 252/327 * 100%;
 			}
 		}
 
-		&-cell{
-			&_left{
-				width: 428/817*100%;
+		&-cell {
+			&_left {
+				width: 428/817 * 100%;
 			}
-			&_right{
-				width: 327/817*100%;
+			&_right {
+				width: 327/817 * 100%;
 
-				.btn{
+				.btn {
 					min-width: 0;
 					width: 100%;
 				}
@@ -66,30 +64,30 @@
 		}
 	}
 
-	&__cell{
-		width: 390/820*100%;
+	&__cell {
+		width: 390/820 * 100%;
 		margin-bottom: 2.8rem;
 
-		&_noscope{
+		&_noscope {
 			margin-bottom: 0;
 		}
 
-		&_big{
+		&_big {
 			margin-bottom: 5.4rem;
 		}
 	}
 
-	&__button{
+	&__button {
 		min-width: 25.2rem;
 	}
 
-	&__avatar{
+	&__avatar {
 		width: 13.3rem;
 		max-width: 100%;
 		margin: auto;
 		margin-bottom: 3.4rem;
 
-		&-inner{
+		&-inner {
 			position: relative;
 			padding-top: 100%;
 			border-radius: 50%;
@@ -97,43 +95,42 @@
 		}
 	}
 
-	&__bar{
+	&__bar {
 		margin-bottom: 4.7rem;
 	}
 
-	&__bold{
+	&__bold {
 		margin-bottom: 2.6rem;
 	}
 
-	&__slider{
-		
+	&__slider {
 	}
 
-	&__slide{
+	&__slide {
 		display: none;
 		position: relative;
 		padding-bottom: 11.5rem;
 
-		&.is-active{
+		&.is-active {
 			display: block;
 		}
 
-		&_top{
+		&_top {
 			padding-bottom: 0;
 			padding-top: 6.4rem;
 		}
 	}
 
-	&__column{
+	&__column {
 		position: relative;
 		margin-top: 2.7rem;
 
-		&_left{
-			width: 821/1167*100%;
+		&_left {
+			width: 821/1167 * 100%;
 		}
 
-		&_right{
-			width: 289/1167*100%;
+		&_right {
+			width: 289/1167 * 100%;
 
 			padding-top: 7.2rem;
 			padding-left: 1.5rem;
@@ -141,13 +138,13 @@
 			padding-bottom: 12rem;
 			text-align: center;
 
-			background: #F3F3F3;
-			border-radius: 5px;			
+			background: #f3f3f3;
+			border-radius: 5px;
 			position: relative;
 			overflow: hidden;
 
-			&:before{
-				content: '';
+			&:before {
+				content: "";
 				display: block;
 				position: absolute;
 				right: 0;
@@ -156,121 +153,120 @@
 				height: 16.5rem;
 				margin-bottom: -4.9rem;
 				margin-right: -4.5rem;
-				background: url('/img/quiz_pattern.png') center no-repeat;
+				background: url("/img/quiz_pattern.png") center no-repeat;
 				background-size: 100%;
 			}
 		}
 	}
 
 	@include max-screen($large_tablet) {
-		&__box{
-		    padding: 5.1rem 3.5rem;
+		&__box {
+			padding: 5.1rem 3.5rem;
 		}
-		&__small{
+		&__small {
 			padding-left: 0;
 		}
-
 	}
 
 	@include max-screen($small_tablet) {
-		&__column{
-			&_left{
+		&__column {
+			&_left {
 				width: 60.35133%;
 			}
-			&_right{
-			    width: 32.76435%;
-			    border: 1px solid #C2C2C2;
-			    background: transparent;
-			    padding: 1.6rem 3.2rem;
-			    border-radius: 0;
-			    display: flex;
-			    align-items: center;
-			    overflow: visible;
+			&_right {
+				width: 32.76435%;
+				border: 1px solid #c2c2c2;
+				background: transparent;
+				padding: 1.6rem 3.2rem;
+				border-radius: 0;
+				display: flex;
+				align-items: center;
+				overflow: visible;
 
-			    &:after{
-			    	content: '';
-			    	display: block;
-			    	position: absolute;
-			    	left: 0;
-			    	top: 0;
-			    	width: 1.4rem;
-			    	height: 1.4rem;
-			    	margin-top: -.8rem;
-			    	margin-left: 4rem;
-			    	background-color: #fff;
-			    	border: 1px solid #C2C2C2;
-			    	box-sizing: border-box;
-			    	border-bottom: none;
-			    	border-left: none;
-			    	transform: rotate(-45deg);
-			    }
-			    &:before{
-			    	display: none;
-			    }
+				&:after {
+					content: "";
+					display: block;
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 1.4rem;
+					height: 1.4rem;
+					margin-top: -0.8rem;
+					margin-left: 4rem;
+					background-color: #fff;
+					border: 1px solid #c2c2c2;
+					box-sizing: border-box;
+					border-bottom: none;
+					border-left: none;
+					transform: rotate(-45deg);
+				}
+				&:before {
+					display: none;
+				}
 			}
 		}
-		&__name{
+		&__name {
 			font-size: 1rem;
 			line-height: 140%;
 			margin-bottom: 0;
 		}
-		&__about{
+		&__about {
 			font-size: 1rem;
-			line-height: 140%;			
+			line-height: 140%;
 		}
-		&__avatar{
+		&__avatar {
 			flex-shrink: 0;
 			flex-grow: 0;
 			margin-right: 1.8rem;
-		    max-width: 100%;
-		    width: 3.7rem;
-		    margin-bottom: 0;
-		    margin-top: 0;
+			max-width: 100%;
+			width: 3.7rem;
+			margin-bottom: 0;
+			margin-top: 0;
 		}
-		&__user{
+		&__user {
 			text-align: left;
 			flex-shrink: 1;
 			flex-grow: 1;
-		    max-width: 100%;
-	        min-width: 0;
+			max-width: 100%;
+			min-width: 0;
 		}
-		&__slide{
-			&_top{
+		&__slide {
+			&_top {
 				padding-top: 0;
 			}
 		}
-		&__cell{
+		&__cell {
 			width: 100%;
 
-			&_button{
+			&_button {
 				order: 1;
 				margin-bottom: 1.5rem;
-				.btn{
+				.btn {
 					width: 100%;
 				}
 			}
-			&_info{
+			&_info {
 				order: 2;
 				text-align: center;
 			}
 		}
 
-		&__bottom{
-			&-cell{
-				&_left{
+		&__bottom {
+			&-cell {
+				&_left {
 					width: 34.38678%;
 				}
-				&_right{
+				&_right {
 					width: 55.02448%;
 				}
 			}
 		}
 
-		&__row{
-			&_price{
+		&__row {
+			&_price {
 				justify-content: center;
-				.quiz{
-					&__cell{
+				.quiz {
+					&__cell {
 						margin: 0 7px;
 						width: auto;
 						margin-bottom: 45px;
@@ -280,126 +276,123 @@
 		}
 	}
 
-
 	@include max-screen($large_mobile) {
-		&__column{
+		&__column {
 			width: 100%;
 		}
-		&__wrap{
+		&__wrap {
 			padding-left: 0;
 			padding-right: 0;
 		}
-		&__price{
+		&__price {
 			font-weight: 500 !important;
 			font-size: 1.9rem;
 			line-height: 110%;
 		}
-		&__bold{
+		&__bold {
 			text-align: center;
 			margin-bottom: 3.3rem;
 		}
-		&__gray{
+		&__gray {
 			font-size: 1rem;
 			line-height: 140%;
-
 		}
 
-		&__back{
+		&__back {
 			margin-right: 1.5rem;
 		}
 
-		&__bottom{
+		&__bottom {
 			position: static;
 			padding-top: 1.5rem;
-			padding-bottom: .8rem;
+			padding-bottom: 0.8rem;
 
 			display: none;
 
-			&.is-visible{
+			&.is-visible {
 				display: flex;
 			}
 
-			&-cell{
+			&-cell {
 				width: 100%;
-				&_left{
+				&_left {
 					order: 2;
 				}
-				&_right{
+				&_right {
 					margin-bottom: 2.1rem;
 					order: 1;
 				}
 			}
 
-			&-part{
+			&-part {
 				// width: 100%;
 				width: auto;
 				max-width: 100%;
 
-				&_left{
+				&_left {
 					flex-grow: 0;
 					flex-shrink: 0;
 				}
 
-				&_right{
+				&_right {
 					flex-grow: 1;
 					flex-shrink: 1;
-				    min-width: 0;
+					min-width: 0;
 				}
 			}
-
 		}
-		&__slide{
+		&__slide {
 			padding-bottom: 0;
 		}
-		&__bar{
+		&__bar {
 			margin-bottom: 4.2rem;
 		}
-		&__box{
+		&__box {
 			padding: 5.1rem 1.4rem;
 		}
-		&__title{
+		&__title {
 			font-size: 1.9rem;
 			line-height: 110%;
 			margin-bottom: 1rem;
 			text-align: center;
 			width: 100%;
 		}
-		&__cell{
+		&__cell {
 			margin-bottom: 2.3rem;
-			&_button{
+			&_button {
 				margin-bottom: 1.5rem;
 			}
 		}
-		&__row{
-			&_nav{
+		&__row {
+			&_nav {
 				padding-top: 1.5rem;
 			}
 		}
-		&__text{
+		&__text {
 			width: 100%;
 			text-align: center;
 
-			&_counter{
+			&_counter {
 				font-size: 1.2rem;
 				line-height: 2rem;
 				width: auto;
-
 			}
 
-			&_small{
+			&_small {
 				font-size: 1.2rem;
 				line-height: 140%;
-				width: 217/290*100%;
+				width: 217/290 * 100%;
 				margin-left: auto;
 				margin-right: auto;
 			}
 		}
-		&__small{
+		&__small {
 			font-size: 1rem;
 			line-height: 140%;
+		}
 
+		&__inner {
+			padding-top: 1.4rem;
 		}
 	}
-
-	
 }

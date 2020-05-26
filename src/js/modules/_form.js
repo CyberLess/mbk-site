@@ -98,9 +98,13 @@ $(() => {
 			submitHandler: (form) => {
 				var data = $(form).serialize();
 
+				var action = $(form).attr("action")
+					? $(form).attr("action")
+					: "/app/api/";
+
 				$.ajax({
 					type: "POST",
-					url: "/app/mail/",
+					url: action,
 					data: data,
 					success: function (data) {
 						$(form)[0].reset();
@@ -150,11 +154,11 @@ $(() => {
 				},
 
 				square: {
-					required: true
+					required: true,
 				},
 				auctionEmail: {
 					required: true,
-					email: true
+					email: true,
 				},
 
 				confirm: {
@@ -162,7 +166,7 @@ $(() => {
 					onkeyup: false,
 					onfocusout: false,
 				},
-			}
+			},
 		});
 	});
 });

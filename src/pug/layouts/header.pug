@@ -12,7 +12,7 @@
 					+e.messengers.messenger__.flex._vertical
 						+e.item.A(href='#' style="fill: #00C364")
 							+icon('WhatsApp', '0 0 24 24')
-						+e.item.A(href='#' style="fill: #665CAC")
+						+e.item._viber.A(href='#' style="fill: #665CAC")
 							+icon('viber', '0 0 25 25')
 						+e.item.A(href='#' style="fill: #1E96C8")
 							+icon('telegram', '0 0 24 21')
@@ -481,7 +481,7 @@
 							+e.messengers.messenger__.flex._vertical
 								+e.item.A(href='#')
 									+icon('WhatsApp', '0 0 24 24')
-								+e.item.A(href='#')
+								+e.item._viber.A(href='#')
 									+icon('viber', '0 0 25 25')
 								+e.item.A(href='#')
 									+icon('telegram', '0 0 24 21')
@@ -519,7 +519,8 @@
 							+e.text.h6
 								| Вы можете оставить заявку через наш сайт в любое время или обратиться к нам по телефону +7 (495) 99-888-96 с 9:00 до 19:00 по МСК в рабочие дни.
 							+e.text.h6
-								| В остальное время Вы можете заполнить заявку у нас на сайте или написать на эл. почту: info@mbk-credit.ru
+								| В остальное время Вы можете заполнить заявку у нас на сайте или написать на эл. почту: 
+								a(href="mailto:info@mbk-credit.ru") info@mbk-credit.ru
 							+e.link.link__.h6.A(href="#")
 								| Связаться с нами
 								+e.SPAN.arrow.arrow
@@ -530,17 +531,17 @@
 							+e.text.h6
 								span.strong Москва, ул. Забелина, д. 1а 
 								br
-								| (в минуте ходьбы от 
-								img(src="/app/img/mm.svg") 
-								| &nbsp;Китай-город)
+								| (в минуте ходьбы от
+								img(src="/app/img/mm.svg" class="mm")
+								| Китай-город)
 							+e.text.h6
 								span.strong Пн-Пт 10:00–19:00, Сб-Вс – выходные
 								br
-								| По предварительной договоренности возможна встреча с нашим представителем и в другое время.
+								| По предварительной договоренности возможна встреча с нашим представителем и в&nbsp;другое время.
 							+e.text.h6
 								span.strong +7 499 346 37 18
 								br
-								| info@mbk-credit.ru
+								a(href="mailto:info@mbk-credit.ru") info@mbk-credit.ru
 						+e.cell._right
 							+e.map
 								+e.IMG(src='/img/map.jpg')

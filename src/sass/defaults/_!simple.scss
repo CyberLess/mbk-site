@@ -34,7 +34,7 @@ html {
 	&.js-lock {
 		overflow: hidden;
 	}
-	scroll-behavior: smooth;
+	// scroll-behavior: smooth;
 }
 
 html,
@@ -167,7 +167,7 @@ a {
 
 .mobile-wrapper {
 	display: none;
-	background-color: #FFFFFF;
+	background-color: #ffffff;
 
 	@include max-screen($large_mobile) {
 		display: block;
@@ -198,8 +198,8 @@ a {
 	background-color: #f3f3f3;
 }
 
-.gray{
-	background-color: #4F4F4F;
+.gray {
+	background-color: #4f4f4f;
 
 	&_mobile {
 		background-color: #f3f3f3;
@@ -390,7 +390,7 @@ svg {
 	}
 }
 .border-top {
-	border-top: 1px solid  #B3B3B3;
+	border-top: 1px solid #b3b3b3;
 
 	@include max-screen($large_mobile) {
 		border-top: none;

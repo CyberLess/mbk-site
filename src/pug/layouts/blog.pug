@@ -5,7 +5,7 @@
 				+e.icon._cats
 					+icon('cats', '0 0 13 13')
 				+e.text Категории
-			+e.filter-inside
+			+e.filter-inside.js-checkbox-list
 				+e.filter-part._static._top.flex._vertical._justify
 					+e.filter-title.h3 Статьи МБК
 					+e.filter-close.js-close-filter
@@ -13,12 +13,9 @@
 				+e.filter-part._fluid._content
 					+e.filter-list
 						+e.filter-top.flex._justify._vertical
-							+e.filter-select.h6 Выбрать все категории 
-							+e.filter-reset.h6 Сбросить 
+							+e.filter-select.h6.js-all Выбрать все категории 
+							+e.filter-reset.h6.js-reset Сбросить 
 						+e.tags.flex._start
-							+e.tag.tag__.LABEL
-								+e.input.INPUT(type="checkbox" name="cat" value='0')
-								+e.text.SPAN Все темы
 							+e.tag.tag__.LABEL
 								+e.input.INPUT(type="checkbox" name="cat" value='1')
 								+e.text.SPAN Долги
@@ -41,8 +38,8 @@
 								+e.input.INPUT(type="checkbox" name="cat" value='7')
 								+e.text.SPAN Налоги
 				+e.filter-part._static._bottom
-					+e.filter-button.btn.h6.A(href='#')
-						| Узнать подробнее
+					+e.filter-button.btn.h6.js-close-filter.A(href='#')
+						| Подобрать
 		+e.mobile
 			+e.mobile-nav.flex._justify
 				+e.mobile-label.is-active(data-selector=".blog__cell_right") Лучшее

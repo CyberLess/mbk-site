@@ -1,4 +1,4 @@
-.red-play{
+.red-play {
 	padding-left: 53px;
 	position: relative;
 	min-height: 37px;
@@ -7,7 +7,7 @@
 	cursor: pointer;
 	user-select: none;
 
-	&__circle{
+	&__circle {
 		width: 37px;
 		height: 37px;
 		position: absolute;
@@ -21,12 +21,13 @@
 		align-items: center;
 		justify-content: center;
 
-		&:before{
-			content: '';
+		&:before {
+			content: "";
 			display: block;
 			width: 0;
 			height: 0;
 			border-style: solid;
+			margin-right: -1px;
 			border-width: 3.5px 0 3.5px 5px;
 			border-color: transparent transparent transparent #fff;
 		}
@@ -38,14 +39,14 @@
 		display: inline-block;
 		min-height: 0;
 
-		.red-play{
-			&__circle{
+		.red-play {
+			&__circle {
 				left: auto;
 				right: 0;
 				width: 19px;
 				height: 19px;
 				margin-top: -9px;
-				&:before{
+				&:before {
 					border-width: 3px 0 3px 4px;
 				}
 			}

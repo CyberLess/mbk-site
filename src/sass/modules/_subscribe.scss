@@ -28,7 +28,7 @@
 		// bottom: 100%;
 		// margin-bottom: -15%;
 		bottom: 100%;
-		margin-bottom: -60/713 * 100%;
+		margin-bottom: -44/713 * 100%;
 		user-select: none;
 		pointer-events: none;
 
@@ -37,10 +37,18 @@
 		}
 
 		@include max-screen($large_mobile) {
-			bottom: 0;
-			width: 146.68167%;
-			margin-left: -30.34084%;
-			margin-bottom: 56.98071%;
+			// bottom: 0;
+			// width: 146.68167%;
+			// margin-left: -30.34084%;
+			// margin-bottom: 56.98071%;
+			bottom: auto;
+			top: 0;
+			margin-bottom: 0;
+			margin-top: -115/230 * 100%;
+
+			width: 297/230 * 100%;
+			margin-left: -37/230 * 100%;
+			left: 0;
 		}
 	}
 
@@ -87,12 +95,15 @@
 			// padding-right: 45/311*100%;
 
 			&-text {
-				padding-left: 48px;
-				position: relative;
+				padding-left: 0;
 				// padding-right: 10%;
 			}
 			&-icon {
-				display: none;
+				// display: none;
+				display: block;
+				width: 2.2rem;
+				margin-bottom: 1.4rem;
+				position: relative;
 			}
 
 			&-sub {
@@ -113,12 +124,6 @@
 
 		@include max-screen($small_mobile) {
 			margin-bottom: 48/311 * 100%;
-
-			&-text {
-				width: 201px;
-				max-width: 100%;
-				// padding-right: 15%;
-			}
 		}
 	}
 
@@ -129,6 +134,7 @@
 		}
 
 		&_right {
+			margin-bottom: -38/1336 * 100%;
 			width: 713/1336 * 100%;
 			position: relative;
 			padding-bottom: 113/1336 * 100%;
@@ -159,6 +165,7 @@
 			&_right {
 				padding-bottom: 4.45808%;
 				padding-left: 7.3024%;
+				margin-bottom: 0;
 				padding-right: 7.3024%;
 			}
 		}
@@ -181,12 +188,17 @@
 				order: 1;
 				width: 286px;
 				margin: auto;
-				margin-bottom: 3.9rem;
+				// margin-bottom: 3.9rem;
+				// margin-bottom: 7.8rem;
+				margin-bottom: 78/230 * 100%;
 				&:before {
 					position: relative;
 					width: 311/230 * 100%;
 					padding-top: 311/230 * 100%;
-					margin-left: -(311/8)/230 * 100%;
+					// margin-left: -(311/8)/230 * 100%;
+					margin-left: -22.90217%;
+
+					margin-bottom: -21.59187%;
 				}
 			}
 			&_left {
@@ -201,7 +213,8 @@
 
 		@include max-screen($large_mobile) {
 			text-align: center;
-			margin-bottom: 8.7rem;
+			// margin-bottom: 12rem;
+			margin-bottom: 120/230 * 100%;
 		}
 	}
 
