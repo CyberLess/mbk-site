@@ -97,11 +97,15 @@
 		let $modal = $(".credit__modal");
 		$modal.addClass("is-active");
 		$("html, body").addClass("js-lock");
+
+		$(".mobile-button").hide();
 	});
 
 	$(".js-close-filter-tags").on("click", (e) => {
 		let $modal = $(".credit__modal");
 		$modal.removeClass("is-active");
 		$("html, body").removeClass("js-lock");
+
+		$(".mobile-button").show();
 	});
 })($);

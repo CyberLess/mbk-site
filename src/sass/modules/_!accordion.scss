@@ -1,11 +1,12 @@
 .accordion {
 	padding-left: 106/1336 * 100%;
 	padding-right: 106/1336 * 100%;
-
+	position: relative;
 	transition: background-color ease 0.4s;
 
 	&.is-active {
 		background-color: #fff;
+		z-index: 50;
 
 		.accordion {
 			&__top {

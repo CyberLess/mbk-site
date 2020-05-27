@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
     <title>Внутренняя страница</title>
-    <link rel="stylesheet" href="/app/css/app.css?v=1590511506282">
+    <link rel="stylesheet" href="/app/css/app.css?v=1590565862300">
     <script>
         function canUseWebP(){var e=document.createElement("canvas");return!(!e.getContext||!e.getContext("2d"))&&0==e.toDataURL("image/webp").indexOf("data:image/webp")}var root=document.getElementsByTagName("html")[0];canUseWebP()?root.classList.add("ws"):root.classList.add("wn");
     </script>
@@ -745,8 +745,12 @@
             <div class="head-preview__inner">
                 <div class="head-preview__bg">
                     <picture>
-                        <source type="image/webp" srcset="/app/img/head-preview_1.webp">
-                            <img src="/app/img/head-preview_1.jpg" class="head-preview__bg-img object-fit" alt="" role="presentation" />
+                        <source type="image/webp" srcset="/app/img/offer_1.webp">
+                            <img src="/app/img/offer_1.jpg" class="head-preview__bg-img head-preview__bg-img_desktop object-fit" alt="" role="presentation" />
+                    </picture>
+                    <picture>
+                        <source type="image/webp" srcset="/app/img/offer_1_mobile.webp">
+                            <img src="/app/img/offer_1_mobile.jpg" class="head-preview__bg-img head-preview__bg-img_mobile object-fit" alt="" role="presentation" />
                     </picture>
                 </div>
                 <div class="head-preview__wrap wrap">
@@ -875,7 +879,7 @@
                 <div class="vantages__mobile" id="vantages-title-mobile"></div>
                 <div class="vantages__row flex js-to-slider" id="vantages-row" data-dots="1">
                     <div class="vantages__cell js-move-item" data-point="580" data-method="prepend" data-from="#vantages-row" data-to="#vantages-title-mobile">
-                        <div class="vantages__title h2">Преиму&shy;щества кредита</div>
+                        <div class="vantages__title h3">Преиму&shy;щества кредита</div>
                     </div>
                     <a class="vantages__cell vantages__cell_white" href="#">
                         <div class="vantages__cell-icon">
@@ -1136,7 +1140,7 @@
             <div class="credit__wrap wrap">
                 <h2 class="credit__title h3">Самые популярные условия</h2>
                 <form class="credit__form form">
-                    <div class="credit__modal">
+                    <div class="credit__modal js-checkbox-list">
                         <div class="credit__modal-part credit__modal-part_top credit__modal-part_fixed">
                             <div class="credit__modal-head flex flex_vertical flex_center">
                                 <div class="credit__modal-title h2">Получить деньги</div>
@@ -1151,8 +1155,8 @@
                             <div class="credit__modal-inner">
                                 <div class="credit__modal-part credit__modal-part_fixed">
                                     <div class="credit__modal-top flex flex_justify flex_vertical">
-                                        <div class="credit__select-all small is-medium text-red">Выбрать все категории</div>
-                                        <div class="credit__reset small">Сбросить</div>
+                                        <div class="credit__select-all small is-medium text-red js-all">Выбрать все категории</div>
+                                        <div class="credit__reset small js-reset">Сбросить</div>
                                     </div>
                                 </div>
                                 <div class="credit__modal-part credit__modal-part_fluid">
@@ -1187,8 +1191,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="credit__modal-part credit__modal-part_bottom credit__modal-part_fixed js-close-filter-tags">
-                            <button class="credit__button h6 btn"><span class="btn__text">Подобрать</span>
+                        <div class="credit__modal-part credit__modal-part_bottom credit__modal-part_fixed">
+                            <button class="credit__button h6 btn js-close-filter-tags"><span class="btn__text">Подобрать</span>
                             </button>
                         </div>
                     </div>
@@ -1500,7 +1504,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="calc__row calc__row_price flex flex_justify flex_vertical">
+                                <div class="calc__row calc__row_price flex flex_justify flex_bottom">
                                     <div class="calc__cell calc__cell_big css-text-right">
                                         <div class="calc__text is-regular h6">Ежемесячный платеж</div>
                                     </div>
@@ -2255,7 +2259,7 @@
     </div>
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <script src="/app/js/app.js?v=1590511506398"></script>
+    <script src="/app/js/app.js?v=1590565862423"></script>
 </body>
 
 </html>

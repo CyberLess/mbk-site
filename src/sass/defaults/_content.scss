@@ -8,6 +8,9 @@
 
 .content ul,
 .content ol {
+	& + p {
+		padding-top: 3rem;
+	}
 }
 .content strong,
 .strong {
@@ -98,9 +101,8 @@
 	color: #ffffff;
 }
 
-.content{
-
-	ul li{
+.content {
+	ul li {
 		padding-left: 3.2rem;
 		display: block;
 		position: relative;
@@ -189,14 +191,14 @@
 				padding-left: 3.5rem;
 
 				&:before {
-					content: counter(num) '.';
+					content: counter(num) ".";
 					counter-increment: num;
 					display: inline-block;
 					position: absolute;
 					top: 0px;
 					left: 0;
-					width: 2.0rem;
-					color: #FF0400;
+					width: 2rem;
+					color: #ff0400;
 				}
 			}
 		}

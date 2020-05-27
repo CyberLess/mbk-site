@@ -42,7 +42,7 @@
 		}
 		&_right {
 			width: 521/1336 * 100%;
-			padding-left: 88/1336 * 100%;
+			padding-left: 82/1336 * 100%;
 		}
 	}
 
@@ -95,6 +95,8 @@
 			font-size: 1rem;
 			line-height: 140%;
 			color: $dark;
+			width: 80%;
+			margin: auto;
 		}
 		&__button {
 			display: none;

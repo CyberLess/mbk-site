@@ -97,6 +97,13 @@
 						}
 					}
 
+					&__like {
+						.like__icon {
+							width: 2.1rem;
+							margin-top: -1rem;
+						}
+					}
+
 					&__button {
 						display: flex;
 						width: 270/865 * 100%;
