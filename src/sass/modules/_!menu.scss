@@ -29,8 +29,11 @@
 			transform: scale(0.2, 1);
 		}
 
-		&.is-active,
 		&:hover {
+			color: $red;
+		}
+
+		&.is-active {
 			color: $red;
 
 			&:before {

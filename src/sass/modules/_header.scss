@@ -1,37 +1,52 @@
-.header{
+.header {
 	z-index: 500;
 	position: relative;
 
-	&.is-search-open{
-		.header{
-			&__menu{
+	&.is-search-open {
+		.header {
+			&__menu {
 				opacity: 0;
 				visibility: hidden;
 			}
 
-			&__search-bg{
+			&__search-bg {
 				opacity: 1;
 				visibility: visible;
 			}
 		}
-
-
 	}
+
+	&:not(.is-submenu-open) {
+		.header {
+			&__menu {
+				.menu__link {
+					&:hover {
+						&:before {
+							visibility: visible;
+							opacity: 1;
+							transform: scale(1, 1);
+						}
+					}
+				}
+			}
+		}
+	}
+
 	@include max-screen($large_tablet) {
-		&.is-search-open{
-			.header{
-				&__search{
+		&.is-search-open {
+			.header {
+				&__search {
 					display: block;
 				}
-			}			
+			}
 		}
-		.header{
-			&__search{
+		.header {
+			&__search {
 				display: none;
 			}
 		}
 	}
-	&__search-bg{
+	&__search-bg {
 		position: fixed;
 		left: 3.3rem;
 		right: 3.3rem;
@@ -42,7 +57,7 @@
 		visibility: hidden;
 		opacity: 0;
 		// pointer-events: none;
-		transition: ease .2s;
+		transition: ease 0.2s;
 		// z-index: -1;
 
 		@include max-screen($large_tablet) {
@@ -51,34 +66,34 @@
 		}
 	}
 
-	&__top{
+	&__top {
 		padding: 2.4rem 0;
 		position: relative;
 		z-index: 20;
-		background: #F3F3F3;
+		background: #f3f3f3;
 
 		@include max-screen($large_tablet) {
 			display: none;
 		}
 	}
 
-	&__parts{
-		&-submenu{
+	&__parts {
+		&-submenu {
 			display: none;
 		}
 
-		&-backward{
+		&-backward {
 			height: 5.7rem;
 			display: flex;
 			align-items: center;
 			justify-content: flex-start;
 			padding-left: 15px;
 			padding-right: 15px;
-			background: #F3F3F3;
+			background: #f3f3f3;
 			text-align: left;
 			margin-top: -1px;
 
-			.icon{
+			.icon {
 				margin-right: 17px;
 				fill: transparent;
 				width: 10px;
@@ -87,11 +102,11 @@
 			}
 		}
 
-		&-nav{
+		&-nav {
 			text-align: center;
 		}
 
-		&-title{
+		&-title {
 			margin-top: 4.4rem;
 			margin-bottom: 3.3rem;
 			text-align: center;
@@ -100,12 +115,12 @@
 			position: relative;
 			display: inline-block;
 
-			&:after{
+			&:after {
 				position: absolute;
 				right: 0;
 				top: 50%;
 				margin-top: -3px;
-				content: '';
+				content: "";
 				display: inline-block;
 				vertical-align: middle;
 				width: 0;
@@ -114,45 +129,43 @@
 				border-width: 4.5px 0 4.5px 6px;
 				// margin-left: 17px;
 				border-color: transparent transparent transparent $dark;
-
 			}
 		}
 
 		@include max-screen($small_mobile) {
-			&-title{
+			&-title {
 				max-width: 80%;
 			}
 		}
 	}
 
-	&__device{
+	&__device {
 		position: absolute;
 		left: 0;
 		top: 100%;
 		width: 100%;
-		background: #FFFFFF;
+		background: #ffffff;
 		// z-index: 100;
-		border-top: 1px solid #C2C2C2;
+		border-top: 1px solid #c2c2c2;
 
 		// transform: translateY(-10rem);
 		// opacity: 0;
 		// visibility: hidden;
 		display: none;
 
-		&.is-active{
+		&.is-active {
 			display: block;
 			// transform: translateY(0rem);
 			// opacity: 1;
-			// visibility: visible;			
+			// visibility: visible;
 		}
-		
 
-		&-menu{
+		&-menu {
 			padding-bottom: 18.3rem;
 			padding-top: 3.2rem;
 		}
 
-		&-link{
+		&-link {
 			padding-left: 15px;
 			padding-right: 30px;
 			height: 64px;
@@ -163,7 +176,7 @@
 			line-height: 1.3em;
 			position: relative;
 
-			svg{
+			svg {
 				fill: transparent;
 				width: 10px;
 				// height: 10px;
@@ -176,13 +189,13 @@
 			}
 		}
 
-		&-li{
-			&:not(:last-child){
-				border-bottom: 1px solid #C2C2C2;
+		&-li {
+			&:not(:last-child) {
+				border-bottom: 1px solid #c2c2c2;
 			}
 		}
 
-		&-bg{
+		&-bg {
 			position: fixed;
 			left: 0;
 			right: 0;
@@ -193,29 +206,28 @@
 		}
 
 		@include max-screen($small_tablet) {
-			.header__list-link{
+			.header__list-link {
 				font-size: 1.9rem;
 			}
 		}
 	}
 
-	&__mobile{
+	&__mobile {
 		display: none;
 
-		&-search{
+		&-search {
 			width: 19px;
 		}
-		
-		&-item{
+
+		&-item {
 			display: block;
 
-			&_phone{
+			&_phone {
 				width: 19px;
 				fill: $dark;
-
 			}
 
-			&:not(:last-child){
+			&:not(:last-child) {
 				margin-right: 31px;
 			}
 		}
@@ -225,7 +237,7 @@
 		}
 	}
 
-	&__search{
+	&__search {
 		height: 4.8rem;
 		width: 2.1rem;
 		display: flex;
@@ -245,18 +257,17 @@
 			padding-right: 15px;
 			padding-bottom: 23px;
 			background-color: #fff;
-			border-top: 1px solid #C2C2C2;
-
+			border-top: 1px solid #c2c2c2;
 		}
 	}
 
-	&__wrap{
+	&__wrap {
 		@include max-screen($small_tablet) {
 			width: 100%;
 		}
 	}
 
-	&__bottom{
+	&__bottom {
 		background-color: #fff;
 		position: relative;
 		z-index: 20;
@@ -270,9 +281,9 @@
 		}
 	}
 
-	&__menu{
-		margin-left: 250/1336*100%;
-		transition: ease .2s;
+	&__menu {
+		margin-left: 250/1336 * 100%;
+		transition: ease 0.2s;
 
 		@include max-screen($large_tablet) {
 			margin-left: 0;
@@ -282,7 +293,7 @@
 		}
 	}
 
-	&__logo{
+	&__logo {
 		width: 14.4rem;
 
 		@include max-screen($small_tablet) {
@@ -290,20 +301,19 @@
 		}
 	}
 
-	&__link{
-		&:not(:last-child){
+	&__link {
+		&:not(:last-child) {
 			margin-right: 4rem;
 		}
 
 		@include max-screen($small_desktop) {
-			&:not(:last-child){
+			&:not(:last-child) {
 				margin-right: 2rem;
 			}
-
 		}
 	}
 
-	&__phone{
+	&__phone {
 		margin-right: 3rem;
 
 		@include max-screen($small_desktop) {
@@ -311,41 +321,40 @@
 		}
 	}
 
-	&__part{
-		&_subscribe{
+	&__part {
+		&_subscribe {
 			margin-left: 9%;
 		}
 
 		@include max-screen($large_desktop) {
-			&_subscribe{
+			&_subscribe {
 				margin-left: 0%;
 			}
 		}
 	}
 
-	&__list{
-		&-item{
+	&__list {
+		&-item {
 			display: block;
 		}
-		&-link{
+		&-link {
 			line-height: 260%;
 			font-weight: 400;
-			transition: ease .15s;
-			&:hover{
+			transition: ease 0.15s;
+			&:hover {
 				color: $red;
 			}
 		}
 	}
 
-	&__panel{
-
+	&__panel {
 		position: absolute;
 		left: 0;
 		top: 100%;
 		// height: 100%;
 		width: 100%;
 		// padding-top: 8.5rem;
-		
+
 		display: none;
 		opacity: 0;
 		animation-fill-mode: forwards;
@@ -354,33 +363,31 @@
 		animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 		animation-iteration-count: 1;
 
-
-
-		&.is-hide{
+		&.is-hide {
 			animation-duration: 0.1s;
 			animation-name: fadeIn;
 			// animation-delay: .2s;
 		}
 
-		&-row{
+		&-row {
 			position: relative;
-			
-			z-index: 5;			
+
+			z-index: 5;
 		}
 
-		&_visible{
+		&_visible {
 			display: block;
 			animation-name: fadeOut;
-			animation-duration: .5s;
+			animation-duration: 0.5s;
 
-			&.css-another{
-				.header__panel-row{
-					background: #F5F7FA;
+			&.css-another {
+				.header__panel-row {
+					background: #f5f7fa;
 				}
 			}
 		}
 
-		&-bg{
+		&-bg {
 			position: fixed;
 			left: 3.3rem;
 			right: 3.3rem;
@@ -390,33 +397,32 @@
 			background: rgba(0, 0, 0, 0.8);
 		}
 
-		&-label{
+		&-label {
 			margin-bottom: 4.2rem;
 			font-weight: 900;
 			color: $dark;
 		}
 
-		&-string{
+		&-string {
 			display: block;
-			&:not(:last-child){
+			&:not(:last-child) {
 				margin-bottom: 2.5rem;
 			}
 		}
 
-		&-link{
+		&-link {
 			line-height: 1.8rem;
 			color: $dark;
-			transition: ease .1s;
+			transition: ease 0.1s;
 			font-weight: 500;
 			letter-spacing: -0.0015em;
 
-			&:hover{
+			&:hover {
 				color: $red;
-
 			}
 		}
 
-		&-item{
+		&-item {
 			padding-top: 8rem;
 			border-top: 1px solid #d9d9d9;
 			background: #fff;
@@ -430,28 +436,27 @@
 			animation-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
 			animation-iteration-count: 1;
 
-
-			&_active{
+			&_active {
 				display: block;
 
-				&:not(.css-another){
-					animation-name: toBottom;	
+				&:not(.css-another) {
+					animation-name: toBottom;
 				}
-				
-				&.css-another{
+
+				&.css-another {
 					z-index: 500;
 					transform: none;
-					animation-duration: .6s;
+					animation-duration: 0.6s;
 					// animation-delay: 1s;
 					animation-name: fadeOut;
-				}			
+				}
 			}
 
-			&_noscope{
+			&_noscope {
 				padding-bottom: 0rem;
 			}
 
-			&_services{
+			&_services {
 				background: transparent;
 				padding-bottom: 0;
 				border-top: none;
@@ -459,32 +464,31 @@
 				position: relative;
 				min-height: 400px;
 
-				&:before{
-					content: '';
+				&:before {
+					content: "";
 					display: block;
 					top: -1px;
 					bottom: 18.8rem;
 					width: 100%;
 					left: 0;
-					background: #F3F3F3;
+					background: #f3f3f3;
 					position: absolute;
 				}
 			}
 
-			&_contacts{
+			&_contacts {
 				padding-bottom: 8rem;
 				padding-top: 3rem;
 			}
 
-			&_clients{
+			&_clients {
 				padding-bottom: 12.5rem;
 			}
 
 			@include max-screen($large_tablet) {
-
-				&-bg{
+				&-bg {
 					left: 0;
-					right: 0;					
+					right: 0;
 				}
 			}
 		}

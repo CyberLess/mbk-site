@@ -11,6 +11,12 @@
 
 	if (!$container.length) return false;
 
+	$container.each((i, el) => {
+		let $checked = $(el).find("input:checked");
+
+		if ($checked.length) $(el).find(reset).addClass(active);
+	});
+
 	$inputs.on("change", (e) => {
 		let $parent = $(e.currentTarget).closest(container);
 

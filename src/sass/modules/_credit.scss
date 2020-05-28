@@ -22,6 +22,14 @@
 		}
 	}
 
+	&__reset {
+		color: rgba(14, 14, 14, 0.19);
+
+		&.is-active {
+			color: $dark;
+		}
+	}
+
 	&__breadcrumbs {
 		margin-bottom: 5rem;
 	}

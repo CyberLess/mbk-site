@@ -3,10 +3,10 @@
 		+e.wrap.wrap
 			+e.row.flex._justify._vertical
 				+e.part._email
-					+e.email.email__.p.A(href="#")
+					+e.email.email__.p.A(href="mailto:info@mbk.ru")
 						+e.SPAN.icon
 							+icon('mail', '0 0 15 11')
-						+e.SPAN.text info@mbk-credit.ru
+						+e.SPAN.text info@mbk.ru
 				+e.part._contact.flex._vertical
 					+e.phone.phone__.h6.is-bold.A(href="tel:+74993463718") +7 499 346 37 18
 					+e.messengers.messenger__.flex._vertical
@@ -520,7 +520,7 @@
 								| Вы можете оставить заявку через наш сайт в любое время или обратиться к нам по телефону +7 (495) 99-888-96 с 9:00 до 19:00 по МСК в рабочие дни.
 							+e.text.h6
 								| В остальное время Вы можете заполнить заявку у нас на сайте или написать на эл. почту: 
-								a(href="mailto:info@mbk-credit.ru") info@mbk-credit.ru
+								a(href="mailto:info@mbk.ru") info@mbk.ru
 							+e.link.link__.h6.A(href="#")
 								| Связаться с нами
 								+e.SPAN.arrow.arrow
@@ -535,13 +535,13 @@
 								img(src="/app/img/mm.svg" class="mm")
 								| Китай-город)
 							+e.text.h6
-								span.strong Пн-Пт 10:00–19:00, Сб-Вс – выходные
+								+e.work-time.strong.SPAN Пн-Пт 10:00–19:00, Сб-Вс – выходные
 								br
 								| По предварительной договоренности возможна встреча с нашим представителем и в&nbsp;другое время.
 							+e.text.h6
 								span.strong +7 499 346 37 18
 								br
-								a(href="mailto:info@mbk-credit.ru") info@mbk-credit.ru
+								a(href="mailto:info@mbk.ru") info@mbk.ru
 						+e.cell._right
 							+e.map
 								+e.IMG(src='/img/map.jpg')

@@ -85,9 +85,17 @@
 
 		@include max-screen($large_mobile) {
 			font-size: 1.2rem;
-			.mm {
-				display: none;
-			}
+			// .mm {
+			// 	display: none;
+			// }
+		}
+	}
+
+	&__work-time {
+		@include max-screen($large_mobile) {
+			width: 217px;
+			max-width: 100%;
+			display: block;
 		}
 	}
 }
