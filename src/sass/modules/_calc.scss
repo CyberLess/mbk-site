@@ -123,9 +123,12 @@
 
 	@include max-screen($large_mobile) {
 		padding-top: 5.1rem;
+		&__label {
+			padding-top: 0;
+		}
 		&__cell {
 			width: 100%;
-			margin-bottom: 2.3rem;
+			margin-bottom: 3.3rem;
 
 			&_button {
 				order: 1;
@@ -137,7 +140,39 @@
 			&_info {
 				order: 2;
 				text-align: center;
+				margin-bottom: 0;
 			}
+
+			&_tosmall {
+				margin-bottom: 1.9rem;
+
+				&:last-child {
+					margin-bottom: 3.2rem;
+				}
+			}
+
+			&_desc {
+				padding-top: 0rem;
+				order: 2;
+				margin-bottom: 0;
+				text-align: center;
+			}
+			&_next {
+				order: 1;
+				padding-top: 6px;
+				margin-bottom: 1.5rem;
+			}
+		}
+		&__text {
+			font-size: 1.2rem;
+			line-height: 140%;
+		}
+		&__string {
+			width: 217/290 * 100%;
+			text-align: center;
+			margin-left: auto;
+			padding-top: 0;
+			margin-right: auto;
 		}
 		&__wrap {
 			padding-left: 0;
@@ -147,13 +182,16 @@
 			margin-bottom: 1rem;
 			font-size: 1.9rem;
 			line-height: 2.1rem;
-			width: 70%;
+			width: 73%;
 			margin-left: auto;
 			margin-right: auto;
 		}
 		&__small {
 			font-size: 1rem;
 			line-height: 140%;
+		}
+		&__bar {
+			margin-bottom: 4.2rem;
 		}
 		&__row {
 			padding-top: 0;
@@ -172,15 +210,38 @@
 		&__top {
 			display: block;
 			text-align: center;
-			margin-bottom: 4.4rem;
+			// margin-bottom: 4.4rem;
+			margin-bottom: 1.9rem;
+		}
+
+		&__row {
+			&_totop {
+				padding-top: 2.5rem;
+			}
 		}
 
 		&__box {
 			padding: 5.1rem 1.4rem 0rem;
 		}
+
+		&__button {
+			width: 100%;
+		}
+
+		.phone-confirm__column_right {
+			margin-bottom: 0;
+		}
 	}
 
 	@include max-screen($large_mobile) {
 		padding-bottom: 0;
+	}
+}
+
+.is-moved {
+	@include max-screen($large_mobile) {
+		.calc {
+			padding-top: 0;
+		}
 	}
 }

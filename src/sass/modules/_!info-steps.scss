@@ -137,3 +137,17 @@
 		}
 	}
 }
+
+.is-moved {
+	@include max-screen($large_mobile) {
+		.info-steps {
+			display: none;
+		}
+
+		.quiz {
+			&__inner {
+				padding-top: 0;
+			}
+		}
+	}
+}

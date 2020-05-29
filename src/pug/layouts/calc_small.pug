@@ -120,7 +120,7 @@
 												| Отказ от подтверждения уменьшает вероятность 
 												| положительного решения, но не является причиной 
 												| отказа от выдачи кредита
-							+e.slide.js-slide(data-title="Заполните анкету" data-step="2" data-progress="1")
+							+e.slide.js-slide(data-title="Заполните анкету" data-step="2" data-progress="6")
 								+e.bold.h6 Подробнее о Вас
 								+e.cell
 									+e.field.input__
@@ -129,127 +129,8 @@
 												| Электронная почта
 										+e.field
 											+e.INPUT.item._square.h6(type="text" placeholder="test@gmail.com" name="email")
-							+e.slide.js-slide(data-step="2" data-progress="1")
-								+e.bold.h6 Подробнее о Вас
-								+e.cell
-									+e.field.input__
-										+e.top
-											+e.label.p
-												| Ваш пол
-										+e.parent.select__.js-select
-											+e.field.SELECT(name="calc[sex]")
-												option Мужской
-												option Женский
-							+e.slide.js-slide(data-step="2" data-progress="1")
-								+e.bold.h6 Подробнее о Вас
-								+e.cell
-									+e.field.input__
-										+e.top
-											+e.label.p
-												| Ваш возраст
-										+e.parent.range-input__
-											+e.INPUT.input.js-payment.js-price(type="text" autocomplete="off" name="calc[age]" placeholder="25" value="25")
-											+e.char.h6 лет
-											+e.bottom
-												+e.line
-												+e.path(data-min="18" data-step="1" data-max="90")
-										+e.info.flex._vertical._justify
-											+e.label.p
-												| 18
-											+e.label.p
-												| 90
-							+e.slide.js-slide(data-step="2" data-progress="1")
-								+e.bold.h6 Подробнее о Вас
-								+e.cell
-									+e.field.input__
-										+e.top
-											+e.label.p
-												| Получаете ли Вы пенсию?
-										+e.parent.select__.js-select
-											+e.field.SELECT(name="calc[pension]")
-												option Да
-												option Нет
-							+e.slide.js-slide(data-step="2" data-progress="1")
-								+e.bold.h6 Подробнее о Вас
-								+e.cell
-									+e.field.input__
-										+e.top
-											+e.label.p
-												| Семейное положение
-										+e.parent.select__.js-select
-											+e.field.SELECT(name="calc[family]")
-												option Не замужем / Не женат
-												option Разведен / разведена
-												option Замужем / Женат
-												option Состою в гражданском браке
-												option Не состою в отношениях
-							+e.slide.js-slide(data-step="2" data-progress="1")
-								+e.bold.h6 Подробнее о Вас
-								+e.cell
-									+e.field.input__
-										+e.top
-											+e.label.p
-												| Образование
-										+e.parent.select__.js-select
-											+e.field.SELECT(name="calc[education]")
-												option Высшее
-												option Среднее
-												option Отсутствует
-							+e.slide.js-slide(data-step="2" data-progress="1")
-								+e.bold.h6 Сведения о работе
-								+e.cell
-									+e.field.input__
-										+e.top
-											+e.label.p
-												| Кем сейчас работаете?
-										+e.field
-											+e.INPUT.item._square.h6(type="text" placeholder="Слесарь" name="calc[work]" data-rule-required="true")
-							+e.slide.js-slide(data-step="2" data-progress="1")
-								+e.bold.h6 Сведения о работе
-								+e.cell
-									+e.field.input__
-										+e.top
-											+e.label.p
-												| Название организации
-										+e.field
-											+e.INPUT.item._square.h6(type="text" placeholder="ООО «Интроверт»" name="calc[organization]" data-rule-required="true")
-							+e.slide.js-slide(data-step="2" data-progress="1")
-								+e.bold.h6 Сведения о работе
-								+e.cell
-									+e.field.input__
-										+e.top
-											+e.label.p
-												| Размер заработной платы
-										+e.parent.range-input__
-											+e.INPUT.input(type="text" autocomplete="off" name="calc[time]" placeholder="0 ₽" value="30000")
-											+e.char.h6 ₽
-											+e.bottom
-												+e.line
-												+e.path(data-min="0" data-step="1000" data-max="1000000")
-										+e.info.flex._vertical._justify
-											+e.label.p
-												| 0
-											+e.label.p
-												| 1 млн.
-							+e.slide.js-slide(data-step="2" data-progress="1")
-								+e.bold.h6 Сведения о работе
-								+e.cell
-									+e.field.input__
-										+e.top
-											+e.label.p
-												| Есть дополнительный доход?
-										+e.parent.range-input__
-											+e.INPUT.input(type="text" autocomplete="off" name="calc[time]" placeholder="0 ₽" value="30000")
-											+e.char.h6 ₽
-											+e.bottom
-												+e.line
-												+e.path(data-min="0" data-step="1000" data-max="1000000")
-										+e.info.flex._vertical._justify
-											+e.label.p
-												| 0
-											+e.label.p
-												| 1 млн.
-							+e.slide.js-slide(data-step="3" data-progress="3")
+			
+							+e.slide.js-slide(data-step="3" data-progress="6")
 								+e.bold.h6 Паспортные данные
 								+e.cell
 									+e.field.input__
@@ -258,7 +139,7 @@
 												| Серия и номер паспорта
 										+e.field
 											+e.INPUT.item._square.js-passport-mask.h6(type="text" data-rule-required="true" placeholder="4611 513480" name="calc[passport]")
-							+e.slide.js-slide(data-step="3" data-progress="3")
+							+e.slide.js-slide(data-step="3" data-progress="6")
 								+e.bold.h6 Паспортные данные
 								+e.cell
 									+e.field.input__
@@ -269,7 +150,7 @@
 											+e.INPUT.item._square.js-date-mask.h6(type="text" data-rule-required="true" placeholder="15.08.2011" name="calc[date_of_issue]")
 											+e.icon._stroke
 												+icon('calendar', '0 0 24 24')
-							+e.slide.js-slide(data-step="3" data-progress="3")
+							+e.slide.js-slide(data-step="3" data-progress="6")
 								+e.bold.h6 Паспортные данные
 								+e.cell
 									+e.field.input__
@@ -278,7 +159,7 @@
 												| Код подразделения
 										+e.field
 											+e.INPUT.item._square.js-code-mask.h6(type="text" data-rule-required="true" placeholder="500-175" name="calc[unit_code]")
-							+e.slide.js-slide(data-step="3" data-progress="3")
+							+e.slide.js-slide(data-step="3" data-progress="6")
 								+e.bold.h6 Паспортные данные
 								+e.cell
 									+e.field.input__
@@ -287,7 +168,7 @@
 												| Кем выдан
 										+e.field
 											+e.INPUT.item._square.h6(type="text" data-rule-required="true" placeholder="ТП№5 Межрайоного ОУФМС России по МО..." name="calc[issued_by]")
-							+e.slide.js-slide(data-step="3" data-progress="3")
+							+e.slide.js-slide(data-step="3" data-progress="6")
 								+e.bold.h6 Паспортные данные
 								+e.cell
 									+e.field.input__
@@ -296,7 +177,7 @@
 												| Дата рождения
 										+e.field
 											+e.INPUT.item._square.js-date-mask.h6(type="text" data-rule-required="true" placeholder="29.10.1991" name="calc[date_of_birth]")
-							+e.slide.js-slide(data-step="3" data-progress="3")
+							+e.slide.js-slide(data-step="3" data-progress="6")
 								+e.bold.h6 Паспортные данные
 								+e.cell
 									+e.field.input__
@@ -305,7 +186,7 @@
 												| Место выдачи
 										+e.field
 											+e.INPUT.item._square.h6(type="text" data-rule-required="true" placeholder="г. Мытищи" name="calc[place_of_issue]")
-							+e.slide.js-slide(data-step="3" data-progress="3")
+							+e.slide.js-slide(data-step="3" data-progress="6")
 								+e.bold.h6 Паспортные данные
 								+e.cell
 									+e.field.input__
@@ -314,41 +195,6 @@
 												| Адрес регистрации
 										+e.field
 											+e.INPUT.item._square.h6(type="text" data-rule-required="true" placeholder="Москва" name="calc[reg_addr]")
-							+e.slide.js-slide(data-step="4" data-progress="1")
-								+e.bold.h6 Кредиты в других банках
-								+e.cell
-									+e.field.input__
-										+e.top
-											+e.label.p
-												| Есть ли кредиты в других банках
-										+e.parent.select__.js-select
-											+e.field.SELECT(name="calc[another_credit]")
-												option Да
-												option Нет
-							+e.slide.js-slide(data-step="4" data-progress="1")
-								+e.bold.h6 Кредиты в других банках
-								+e.cell
-									+e.field.input__
-										+e.top
-											+e.label.p
-												| Есть ли исторические просрочки
-										+e.parent.select__.js-select
-											+e.field.SELECT(name="calc[history]")
-												option Да
-												option Нет
-							+e.slide.js-slide(data-step="4" data-progress="1")
-								+e.bold.h6 Собственность
-								+e.cell
-									+e.field.input__
-										+e.top
-											+e.label.p
-												| Отметьте есть ли у Вас собственность?
-										+e.parent.select__.js-select
-											+e.field.SELECT(name="calc[own]")
-												option Нет собственности
-												option Есть своя собственность
-												option Совместная собственность
-												option Долевая собственность
 						+e.bottom.flex._vertical._justify
 							+e.bottom-cell._left
 								+e.status.bar__

@@ -1,4 +1,4 @@
-import Inputmask from "inputmask";
+import "jquery-mask-plugin";
 
 $(() => {
 	var selector = [
@@ -15,7 +15,7 @@ $(() => {
 
 		switch (element) {
 			case "input[name='phone']":
-				mask = "+7 (999) 999-99-99";
+				mask = "+7 000 000 00 00";
 				break;
 			case ".js-passport-mask":
 				mask = "9999 999999";
@@ -28,13 +28,16 @@ $(() => {
 				break;
 		}
 
-		let im = new Inputmask({
-			mask: mask,
-			clearMaskOnLostFocus: true,
-			clearIncomplete: true,
-		});
+		$(item).mask(mask);
+	});
 
-		im.mask(item);
+	$("input[name='phone']").keyup(function (e) {
+		var this_val = $(this).val();
+		var val_length = this_val.length;
+
+		if (val_length == 4 && this_val[3] === "8") {
+			$(this).val(this_val.slice(0, 2));
+		}
 	});
 
 	$(".input__item")

@@ -117,7 +117,7 @@
 					}
 				}
 
-				@include max-screen($small_tablet) {
+				@include max-screen($large_tablet) {
 					&-item {
 						span {
 							border-bottom: none;
@@ -177,7 +177,7 @@
 					}
 				}
 
-				@include max-screen($small_tablet) {
+				@include max-screen($large_tablet) {
 					margin-top: 5.5rem;
 
 					&-item {

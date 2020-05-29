@@ -1,5 +1,5 @@
 .header {
-	z-index: 500;
+	z-index: 900;
 	position: relative;
 
 	&.is-search-open {
@@ -205,6 +205,10 @@
 			z-index: -1;
 		}
 
+		@include min-screen($large_tablet + 1) {
+			display: none !important;
+		}
+
 		@include max-screen($small_tablet) {
 			.header__list-link {
 				font-size: 1.9rem;
@@ -232,7 +236,7 @@
 			}
 		}
 
-		@include max-screen($small_tablet) {
+		@include max-screen($large_tablet) {
 			display: flex;
 		}
 	}
@@ -262,7 +266,7 @@
 	}
 
 	&__wrap {
-		@include max-screen($small_tablet) {
+		@include max-screen($large_tablet) {
 			width: 100%;
 		}
 	}
@@ -274,7 +278,7 @@
 
 		// padding: 2.1rem 0;
 
-		@include max-screen($small_tablet) {
+		@include max-screen($large_tablet) {
 			height: 70px;
 			display: flex;
 			align-items: center;
@@ -287,8 +291,6 @@
 
 		@include max-screen($large_tablet) {
 			margin-left: 0;
-		}
-		@include max-screen($small_tablet) {
 			display: none;
 		}
 	}
@@ -296,7 +298,7 @@
 	&__logo {
 		width: 14.4rem;
 
-		@include max-screen($small_tablet) {
+		@include max-screen($large_tablet) {
 			width: 95px;
 		}
 	}
@@ -491,6 +493,10 @@
 					right: 0;
 				}
 			}
+		}
+
+		@include max-screen($large_tablet) {
+			display: none;
 		}
 	}
 }

@@ -1,0 +1,86 @@
+.border-checkbox {
+	display: block;
+	cursor: pointer;
+	user-select: none;
+
+	&__input {
+		display: none;
+
+		&:checked {
+			& + .border-checkbox {
+				&__text {
+					border-color: $dark;
+					color: #010101;
+					.border-checkbox {
+						&__check {
+							background-color: $red;
+							border-color: transparent;
+
+							.icon {
+								opacity: 1;
+								visibility: visible;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__text {
+		border: 1px solid #cccccc;
+		color: rgba($dark, 0.5);
+		height: 6.6rem;
+		display: flex;
+		align-items: center;
+		padding-left: 7.1rem;
+		position: relative;
+		transition: ease 0.1s;
+		padding-right: 2rem;
+	}
+
+	&__check {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		margin-left: 2.7rem;
+		margin-top: -1.25rem;
+		width: 2.5rem;
+		height: 2.5rem;
+		display: block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid #cccccc;
+		transition: ease 0.1s;
+
+		.icon {
+			width: 1.5rem;
+			display: block;
+			opacity: 0;
+			stroke: #fff;
+			fill: transparent;
+			transition: ease 0.1s;
+			visibility: hidden;
+		}
+	}
+
+	@include max-screen($large_mobile) {
+		&__text {
+			height: 4.9rem;
+			padding-left: 6.4rem;
+			font-size: 1.4rem;
+		}
+
+		&__check {
+			width: 1.9rem;
+			height: 1.9rem;
+			margin-left: 3.2rem;
+			margin-top: -1rem;
+
+			.icon {
+				width: 1.2rem;
+			}
+		}
+	}
+}

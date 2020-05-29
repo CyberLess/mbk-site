@@ -1,51 +1,51 @@
-.db-nav{
-	&__cell{
+.db-nav {
+	&__cell {
 		margin-bottom: 2rem;
 
-		&_left{
-			width: 355/1336*100%;
-			padding-right: 50/1336*100%;
+		&_left {
+			width: 355/1336 * 100%;
+			padding-right: 50/1336 * 100%;
 			position: relative;
-			&:before{
-				content: '';
+			&:before {
+				content: "";
 				position: absolute;
 				right: 0;
 				top: 21px;
 				bottom: 21px;
-				background-color: rgba(#B3B3B3, .5);
+				background-color: rgba(#b3b3b3, 0.5);
 				width: 1px;
 			}
-		} 
-
-		&_center{
-			width: 295/1336*100%;
-			margin-left: 61/1336*100%;
-			margin-right: 201/1336*100%;
 		}
 
-		&_right{
+		&_center {
+			width: 295/1336 * 100%;
+			margin-left: 61/1336 * 100%;
+			margin-right: 201/1336 * 100%;
+		}
+
+		&_right {
 			align-self: flex-end;
-			width: 424/1336*100%;
+			width: 424/1336 * 100%;
 			margin-bottom: 0;
 		}
 
-		@include max-screen($small_tablet) {
+		@include max-screen($large_tablet) {
 			width: 100%;
 			margin: 0;
 			padding: 0;
 
-			&_right{
+			&_right {
 				margin-top: 53px;
 			}
 
-			&:before{
+			&:before {
 				display: none;
 			}
 		}
 	}
 
-	&__row{
-		@include max-screen($small_tablet) {
+	&__row {
+		@include max-screen($large_tablet) {
 			padding-left: 15px;
 			padding-right: 15px;
 		}

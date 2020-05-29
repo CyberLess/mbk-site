@@ -348,7 +348,7 @@
 			margin-bottom: 4.2rem;
 		}
 		&__box {
-			padding: 5.1rem 1.4rem;
+			padding: 5.1rem 1.4rem 0;
 		}
 		&__title {
 			font-size: 1.9rem;
@@ -392,7 +392,8 @@
 		}
 
 		&__inner {
-			padding-top: 1.4rem;
+			padding-bottom: 0;
+			padding-top: 5.1rem;
 		}
 	}
 }

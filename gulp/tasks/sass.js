@@ -12,11 +12,11 @@ module.exports = (gulp, plugins, browserSync) => {
 			new Promise((resolve, reject) => {
 				gulp.src(path.src.css)
 					.pipe(plugins.sassGlob())
-					// .pipe(
-					// 	plugins.plumber({
-					// 		errorHandler,
-					// 	})
-					// )
+					.pipe(
+						plugins.plumber({
+							errorHandler,
+						})
+					)
 					.pipe(plugins.sass())
 					.pipe(
 						plugins.replace(/[^{]*\{([^}]*)*}/g, (match) => {
@@ -84,44 +84,39 @@ module.exports = (gulp, plugins, browserSync) => {
 					.on("end", resolve);
 			}),
 		]).then(() => {
-			return (
-				gulp
-					.src(path.src.css)
-					.pipe(plugins.sassGlob())
-					// .pipe(plugins.plumber({}))
-					.pipe(plugins.sass())
-					.pipe(
-						plugins.replace(/[^{]*\{([^}]*)*}/g, (match) => {
-							let replaced = match;
+			return gulp
+				.src(path.src.css)
+				.pipe(plugins.sassGlob())
+				.pipe(plugins.plumber({}))
+				.pipe(plugins.sass())
+				.pipe(
+					plugins.replace(/[^{]*\{([^}]*)*}/g, (match) => {
+						let replaced = match;
 
-							if (
-								replaced.includes("url") &&
-								(replaced.includes("background") ||
-									replaced.includes("background-image"))
-							) {
-								let newreplaced = replaced.replace(
-									/\b(?:background\s*?([^;>]*?)(?=[;">}]);)/g,
-									""
-								);
-								replaced = newreplaced;
-							}
+						if (
+							replaced.includes("url") &&
+							(replaced.includes("background") ||
+								replaced.includes("background-image"))
+						) {
+							let newreplaced = replaced.replace(
+								/\b(?:background\s*?([^;>]*?)(?=[;">}]);)/g,
+								""
+							);
+							replaced = newreplaced;
+						}
 
-							return replaced;
-						})
-					)
-					.pipe(plugins.injectString.append(input))
-					.pipe(
-						plugins.autoprefixer(
-							["last 2 versions", "> 1%", "ie 8"],
-							{
-								cascade: true,
-							}
-						)
-					)
-					.pipe(plugins.cssmin())
-					.pipe(gulp.dest(path.build.css))
-					.pipe(browserSync.stream())
-			);
+						return replaced;
+					})
+				)
+				.pipe(plugins.injectString.append(input))
+				.pipe(
+					plugins.autoprefixer(["last 2 versions", "> 1%", "ie 8"], {
+						cascade: true,
+					})
+				)
+				.pipe(plugins.cssmin())
+				.pipe(gulp.dest(path.build.css))
+				.pipe(browserSync.stream());
 		});
 	};
 };

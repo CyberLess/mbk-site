@@ -1,7 +1,7 @@
 extends ../layouts/base
 
 append vars
-	- title = 'Общая страница c квизом (полный)';
+	- title = 'Общая страница c квизом (урезанный)';
 
 block content
 
@@ -14,7 +14,7 @@ block content
 	include ../layouts/conditions
 	include ../layouts/council
 	+b.SECTION.group._noscope-mobile.js-target-form
-		include ../layouts/calc2
+		include ../layouts/calc_small
 		include ../layouts/faq
 
 block footer 
