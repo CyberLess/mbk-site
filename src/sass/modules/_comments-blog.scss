@@ -1,0 +1,277 @@
+.comments-blog {
+	overflow: hidden;
+	padding-top: 11.5rem;
+	padding-bottom: 6rem;
+
+	background-color: #ffffff;
+
+	@include max-screen($small_tablet) {
+		background-color: transparent;
+	}
+
+	@include max-screen($large_mobile) {
+		padding-top: 4.5rem;
+		padding-bottom: 2rem;
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		margin-bottom: 6.7rem;
+
+		@include max-screen($large_mobile) {
+			margin-bottom: 3.8rem;
+		}
+	}
+
+	&__title {
+		@include max-screen($large_mobile) {
+			width: 100%;
+
+		  text-align: center;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		margin-left: auto;
+
+		@include max-screen($large_mobile) {
+			position: absolute;
+			z-index: 5;
+			bottom: 0;
+			left: 1.5rem;
+
+			align-items: center;
+			justify-content: space-between;
+			width: calc(100% - 3rem);
+		}
+
+		.owl-prev,
+		.owl-next {
+			display: none;
+		}
+	}
+
+	&__mobile-nav-counter {
+		display: none;
+
+		@include max-screen($large_mobile) {
+			display: inline-block;
+
+			font-size: 1.2rem;
+		}
+	}
+
+	&__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 6.6rem;
+		height: 6.6rem;
+		border: 1px solid #BFBFBF;
+		border-radius: 50%;
+
+		transition-timing-function: ease;
+
+		transition-duration: .2s;
+		transition-property: background-color;
+		background-color: transparent;
+
+		@include max-screen($large_mobile) {
+			width: auto;
+			border: none;
+		}
+
+		&_right {
+			margin-left: 2rem;
+		}
+
+		&:hover,
+		&:focus {
+			cursor: pointer;
+			background-color: #0E0E0E;
+
+			@include max-screen($large_mobile) {
+				background-color: transparent;
+			}
+
+			.icon-arrow {
+				fill: #ffffff;
+
+				@include max-screen($large_mobile) {
+					fill: #FF0400;
+				}
+			}
+		}
+
+		.icon-arrow {
+			width: 1.8rem;
+			height: 1rem;
+
+			transition: .2s ease;
+
+			fill: #BFBFBF;
+
+			@include max-screen($large_mobile) {
+				fill: #0E0E0E;;
+			}
+		}
+
+		&_left {
+			transform: rotate(-180deg);
+		}
+	}
+
+	&__list {
+		display: flex;
+		align-items: flex-start;
+
+		@include max-screen($large_mobile) {
+			padding-bottom: 6.5rem;
+		}
+
+		.owl-stage-outer {
+			overflow: visible;
+		}
+	}
+
+	&__item {
+		position: relative;
+
+		flex-shrink: 0;
+		width: 41rem;
+		margin-right: 5.3rem;
+		padding: 8.2rem 4rem 6.8rem;
+		border: 1px solid #B3B3B3;
+		border-radius: 5px;
+
+		@include max-screen($small_tablet) {
+			width: 29rem;
+		}
+
+		@include max-screen($large_mobile) {
+			width: 100%;
+			margin: 0;
+			padding: 6.5rem 3rem 4.5rem;
+		}
+	}
+
+	&__icon-wrap {
+		position: absolute;
+		top: 0;
+		left: 4rem;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 9rem;
+		height: 9rem;
+		border: 1px solid #B3B3B3;
+		border-radius: 50%;
+
+		transform: translateY(-50%);
+
+		background-color: #ffffff;
+
+		@include max-screen($small_tablet) {
+			background-color: #f3f3f3;
+		}
+
+		@include max-screen($large_mobile) {
+			left: 3rem;
+
+			width: 6.5rem;
+			height: 6.5rem;
+		}
+
+		&::before {
+			content: "";
+
+			position: absolute;
+			top: -1px;
+			left: -1px;
+			z-index: 1;
+
+			width: 110%;
+			height: 50%;
+
+			background-color: #ffffff;
+
+			@include max-screen($small_tablet) {
+				background-color: #f3f3f3;
+			}
+		}
+
+		.icon-commentBlog {
+			position: relative;
+			z-index: 2;
+
+			width: 2.8rem;
+			height: 2.8rem;
+
+			@include max-screen($large_mobile) {
+				width: 2rem;
+				height: 2rem;
+			}
+		}
+	}
+
+	&__item-title {
+		margin-bottom: .6rem;
+	}
+
+	&__comment-text {
+		margin-left: -.3rem;
+		margin-bottom: 2.7rem;
+		padding-bottom: 3.7rem;
+		border-bottom: 1px solid #808080;
+
+		@include max-screen($large_mobile) {
+			padding-bottom: 3rem;
+
+			font-size: 1.2rem;
+			line-height: 1.2;
+		}
+	}
+
+	&__link {
+		display: block;
+		margin-left: -.3rem;
+		margin-bottom: 1.6rem;
+
+		font-weight: 500;
+		color: #FF0400;
+
+		@include max-screen($large_mobile) {
+			font-size: 1.2rem;
+		}
+
+		.arrow {
+			display: inline-block;
+			margin-left: 1rem;
+
+			fill: #FF0400;
+
+			transition-property: width;
+			transition-duration: .2s;
+
+			@include max-screen($small_tablet) {
+				display: none;
+			}
+		}
+
+		&:hover,
+		&:focus {
+			.arrow {
+				width: 1.8rem;
+			}
+		}
+	}
+
+	&__time-wrap {
+		@include max-screen($large_mobile) {
+			font-size: 1.2rem;
+		}
+	}
+}

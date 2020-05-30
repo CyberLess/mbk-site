@@ -21,5 +21,6 @@ import './modules/_sell-popup';
 import './modules/_open-comments';
 import './modules/_article-title';
 import './modules/_questions-mobile-popup';
-import './modules/success-auction';
+import './modules/_success-auction';
 import './modules/_news-tab';
+import './modules/_comments-blog';

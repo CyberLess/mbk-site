@@ -2,10 +2,17 @@ extends ../layouts/base
 
 append vars
 	- title = 'Блог';
+	- subscribeImage = 'book-blog.png'
+	- var additionalClass = 'blog-page';
 
 block content
 	H1.visually-hidden МБК - Блог
 	include ../layouts/database-blog
+	include ../layouts/blog
+	include ../layouts/comments-blog
+	DIV.blog-mobile-wrap
+		include ../layouts/master
+		include ../layouts/subscribe
 
 block footer
 	+footer(class="_white")

@@ -1,0 +1,212 @@
+.categories {
+	&-btn {
+		display: none;
+	}
+
+	&-tag {
+		margin-right: 2rem;
+
+		color: #0e0e0e;
+	}
+
+	&-form {
+		&-title {
+			display: none;
+		}
+
+		&-tags {
+			margin-bottom: 1rem;
+		}
+
+		&-cell {
+			margin-right: 29/1336 * 100%;
+			width: 471/1336 * 100%;
+			margin-bottom: 4rem;
+		}
+
+		&-header {
+			display: none;
+		}
+
+		&-submit {
+			display: none;
+		}
+	}
+
+	@include max-screen($small_tablet) {
+		padding-bottom: 0;
+
+		background-color: #ffffff;
+
+		&-title {
+			display: block;
+			margin-bottom: 5.2rem;
+			padding-right: 5%;
+		}
+
+		&-btn {
+			display: flex;
+			justify-content: center;
+			min-width: 23rem;
+			width: 97%;
+			padding: 1.3rem 1rem 1rem;
+			border: 1px solid #0e0e0e;
+			border-radius: 5px;
+
+			font-family: "Geometria";
+			font-size: 1.6rem;
+			color: #0e0e0e;
+			text-align: center;
+
+			background-color: transparent;
+			cursor: pointer;
+
+			transition: ease 0.2s;
+
+			&:hover,
+			&:focus {
+				border-color: rgba(14, 14, 14, 0.5);
+
+				color: rgba(14, 14, 14, 0.5);
+
+				.questions-header__categories-btn-icon {
+					opacity: 0.5;
+				}
+			}
+		}
+
+		&-btn-icon {
+			width: 1.3rem;
+			margin-right: 1.2rem;
+
+			transition: ease 0.2s;
+		}
+
+		&-btn-text {
+			margin-top: -0.4rem;
+		}
+
+		&-tag {
+			margin-top: 0 !important;
+			margin-right: 0;
+			margin-bottom: 0;
+
+			.tag__text {
+				height: 5.9rem;
+				border-top: none !important;
+
+				font-size: 1.4rem;
+			}
+		}
+
+		&-form {
+			position: fixed;
+			top: 0;
+			left: 0;
+
+			overflow-y: scroll;
+			width: 100vw;
+			height: 100vh;
+			padding: 4.3rem 1rem 3rem;
+
+			background-color: #f3f3f3;
+
+			&-row {
+				justify-content: space-between;
+			}
+
+			&-cell {
+				width: 49%;
+				margin-right: 0;
+			}
+
+			&-title {
+				display: block;
+				max-width: 600px;
+				margin: 0 auto 4rem;
+				padding-left: 1.5rem;
+				padding-right: 5rem;
+			}
+
+			&-header {
+				display: flex;
+				max-width: 600px;
+				margin: 0 auto;
+				padding: 2rem 1.7rem 2.1rem;
+				border: 1px solid rgba(0, 0, 0, 0.1);
+
+				background-color: #ffffff;
+			}
+
+			&-tags {
+				max-width: 600px;
+				margin: 0 auto;
+			}
+
+			&-select-all,
+			&-reset {
+				flex-shrink: 0;
+				border: none;
+
+				font-family: "Geometria";
+				font-size: 1.4rem;
+
+				background-color: transparent;
+				cursor: pointer;
+
+				transition: ease 0.2s;
+
+				&:hover,
+				&:focus {
+					color: #000000;
+				}
+
+				&:active {
+					opacity: 0.6;
+				}
+			}
+
+			&-select-all {
+				margin-right: 3.5rem;
+
+				font-weight: 500;
+				color: #ff0600;
+			}
+
+			&-reset {
+				color: rgba(14, 14, 14, 0.19);
+			}
+
+			&-submit {
+				display: block;
+				width: 100%;
+				max-width: 50rem;
+				margin: 3rem auto 0;
+			}
+		}
+	}
+
+	@include max-screen($large_mobile) {
+		padding-top: 5.1rem;
+
+		&-btn {
+			width: 80%;
+			margin: 0 auto;
+			padding: 0.9rem 1rem 0.7rem;
+
+			font-size: 1.4rem;
+		}
+
+		&-btn-text {
+			margin-top: -0.2rem;
+		}
+
+		&-form {
+			&-cell {
+				width: 100%;
+				margin-right: 0;
+				margin-bottom: 2.4rem;
+			}
+		}
+	}
+}

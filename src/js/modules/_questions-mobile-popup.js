@@ -2,10 +2,10 @@ $(() => {
   const questionAnimationOpen = 'question-animation-open';
 
   const $body = $('body');
-  const $questionsHeader = $('.questions-header');
-  const $catBtn = $('.questions-header__categories-btn');
-  const $questionForm = $('.questions-header__form');
-  const $showAllBtn = $questionForm.find('.questions-header__form-select-all');
+  const $questionsHeader = $('.js-cat-header');
+  const $catBtn = $('.js-cat-categories-btn');
+  const $questionForm = $('.js-cat-form');
+  const $showAllBtn = $questionForm.find('.js-cat-form-select-all');
   const $formCheckbox = $('.tag__input');
 
   const openPopup = () => {

@@ -1,4 +1,4 @@
-+b.SECTION.blog
++b.SECTION(class="blog_"+additionalClass)
 	+e.wrap.wrap
 		+e.filter
 			+e.filter-button.btn__._border._dark.p.js-open-filter.A(href='#')
@@ -13,8 +13,8 @@
 				+e.filter-part._fluid._content
 					+e.filter-list
 						+e.filter-top.flex._justify._vertical
-							+e.filter-select.h6 Выбрать все категории 
-							+e.filter-reset.h6 Сбросить 
+							+e.filter-select.h6 Выбрать все категории
+							+e.filter-reset.h6 Сбросить
 						+e.tags.flex._start
 							+e.tag.tag__.LABEL
 								+e.input.INPUT(type="checkbox" name="cat" value='0')
@@ -221,8 +221,8 @@
 								path(class="stroke" d='M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z')
 			+e.cell._right._gray
 				+e.string._right.flex._justify._vertical
-					+e.title.h4 
-						| Лучшее 
+					+e.title.h4
+						| Лучшее
 						+icon('star', '0 0 26 26')
 					+e.count.h4 15
 				+e.article.article__.A(href='#')

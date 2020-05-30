@@ -10,8 +10,18 @@
 		padding-top: 5.1rem;
 	}
 	@include max-screen($large_mobile) {
-		overflow: visible;
+		overflow: hidden;
 	}
+
+	&_blog-page {
+		padding-left: 1.5rem;
+		background-color: #ffffff;
+
+		.master__tree {
+			margin-left: -227px;
+		}
+	}
+
 	&__wrap {
 		padding-bottom: 14.5rem;
 

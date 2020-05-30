@@ -1,36 +1,36 @@
-+b.SECTION.questions-header
++b.SECTION.questions-header.categories.js-cat-header
 	+e.wrap.wrap
 		+breadcrumbs('Главная', 'Услуги', 'Получить деньги')
 		+e.title.h2 Отвечаем на вопросы
-		+e.A.categories-btn(href="#categories-popup-mobile")
+		+e.A.categories-btn.categories-btn.js-cat-categories-btn(href="#categories-popup-mobile")
 			+e.categories-btn-icon
 				+icon('bailer', '0 0 13 13')
-			+e.SPAN.categories-btn-text Категории
+			+e.SPAN.categories-btn-text.categories-btn-text Категории
 
-		+e.form.form.FORM(id="categories-popup-mobile")
-			+e.form-title.h2 Отвечаем на вопросы
-			+e.form-header
-				+e.BUTTON.form-select-all(type="button") Выбрать все категории
-				+e.BUTTON.form-reset(type="reset") Сбросить
+		+e.form.form.js-cat-form.FORM(id="categories-popup-mobile")
+			+e.form-title.categories-form-title.h2 Отвечаем на вопросы
+			+e.form-header.categories-form-header
+				+e.BUTTON.form-select-all.js-cat-form-select-all.categories-form-select-all(type="button") Выбрать все категории
+				+e.BUTTON.form-reset.categories-form-select-all(type="reset") Сбросить
 
-			+e.form-tags.flex._start
-				+e.tag.tag__._dark-active.LABEL
+			+e.form-tags.categories-form-tags.flex._start
+				+e.tag.categories-tag.tag__._dark-active.LABEL
 					+e.input.INPUT(type="checkbox" name="type" value='Долги')
 					+e.text.SPAN Долги
-				+e.tag.tag__._dark-active.LABEL
+				+e.tag.categories-tag.tag__._dark-active.LABEL
 					+e.input.INPUT(type="checkbox" checked="" name="type" value='Ипотека')
 					+e.text.SPAN Ипотека
-				+e.tag.tag__._dark-active.LABEL
+				+e.tag.categories-tag.tag__._dark-active.LABEL
 					+e.input.INPUT(type="checkbox" name="type" value='Коллекторы')
 					+e.text.SPAN Коллекторы
-				+e.tag.tag__._dark-active.LABEL
+				+e.tag.categories-tag.tag__._dark-active.LABEL
 					+e.input.INPUT(type="checkbox" name="type" value='Юридические тонкости')
 					+e.text.SPAN Юридические тонкости
-				+e.tag.tag__._dark-active.LABEL
+				+e.tag.categories-tag.tag__._dark-active.LABEL
 					+e.input.INPUT(type="checkbox" name="type" value='Инвестиции')
 					+e.text.SPAN Инвестиции
-				+e.tag.tag__._dark-active.LABEL
+				+e.tag.categories-tag.tag__._dark-active.LABEL
 					+e.input.INPUT(type="checkbox" name="type" value='Рефинансирование')
 					+e.text.SPAN Рефинансирование
 
-				+e.BUTTON.form-submit.btn(type="submit") Подобрать
+				+e.BUTTON.form-submit.categories-form-submit.btn(type="submit") Подобрать
