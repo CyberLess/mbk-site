@@ -1,60 +1,61 @@
-.list{
-	&__item{
+.list {
+	&__item {
 		padding-left: 2.5rem;
 		position: relative;
 		line-height: 3.2rem;
 		font-weight: 400;
 
-		&:before{
-			content: '';
+		&:before {
+			content: "";
 			display: block;
 			position: absolute;
 			left: 0;
 			width: 5px;
 			height: 5px;
-			top: .7rem;
+			top: 0.85rem;
 			border-radius: 50%;
 			background-color: $red;
 		}
 	}
 
-	&__line{
-		&:not(:last-child){
+	&__line {
+		&:not(:last-child) {
 			margin-bottom: 1.5rem;
 		}
 
 		@include max-screen($small_tablet) {
-			&:not(:last-child){
+			&:not(:last-child) {
 				margin-bottom: 2.1rem;
 			}
-
 		}
 	}
-}	
-a.list__item{
-	transition: ease .1s;
+}
+a.list__item {
+	transition: ease 0.1s;
 	// line-height: 200%;
 	line-height: 120%;
-    letter-spacing: -0.01rem;
+	letter-spacing: -0.01rem;
 	display: inline-block;
 
-	&:before{
-		transition: ease .1s;
-		background: #DEDEDE;
+	&:before {
+		transition: ease 0.1s;
+		background: #dedede;
 	}
 
-	&:hover{
+	&:hover {
 		color: $red;
 
-		&:before{
+		&:before {
 			background: $red;
 		}
 	}
 
 	@include max-screen($small_tablet) {
+		line-height: 187.5%;
 		color: $dark;
-		&:before{
-			top: 5px;
+		&:before {
+			// top: 5px;
+			top: 10.5px;
 		}
 	}
 }

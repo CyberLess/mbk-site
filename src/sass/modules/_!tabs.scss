@@ -1,42 +1,41 @@
-.tabs{
-	
-	&__content{
+.tabs {
+	&__content {
 		overflow: hidden;
 
-		&-list{
+		&-list {
 			position: relative;
 			top: 0;
 			display: flex;
 			align-items: flex-start;
 		}
 
-		&-item{
+		&-item {
 			min-width: 100%;
 		}
 
 		@include max-screen($large_mobile) {
-			&-list{
+			&-list {
 				left: 0 !important;
 			}
 		}
 	}
 
-	&__nav{
-		&-item{
-			transition: ease .15s;
+	&__nav {
+		&-item {
+			transition: ease 0.15s;
 			cursor: pointer;
 		}
 	}
 
-	&_nolist{
-		.tabs{
-			&__content{
+	&_nolist {
+		.tabs {
+			&__content {
 				overflow: visible;
 
-				&-item{
+				&-item {
 					display: none;
 
-					&.is-active{
+					&.is-active {
 						display: block;
 					}
 				}
@@ -44,37 +43,35 @@
 		}
 	}
 
-	&_default{
-		.tabs{
-			&__content{
-				&-item{
+	&_default {
+		.tabs {
+			&__content {
+				&-item {
 					padding-top: 2.8rem;
-					padding-left: 60/1336*100%;
-					padding-right: 60/1336*100%;
+					padding-left: 60/1336 * 100%;
+					padding-right: 60/1336 * 100%;
 					padding-bottom: 7.6rem;
 					background-color: #fff;
-					
 				}
 			}
-			&__nav{
-				padding-left: 58/1336*100%;
-				padding-right: 58/1336*100%;
-				&-item{
-					color: #B3B3B3;
+			&__nav {
+				padding-left: 58/1336 * 100%;
+				padding-right: 58/1336 * 100%;
+				&-item {
+					color: #b3b3b3;
 					line-height: 260.5%;
 					padding-bottom: 23px;
-					transition: ease .2s;
+					transition: ease 0.2s;
 					position: relative;
 
-					span{
+					span {
 						line-height: 1.2em;
-						transition: border-bottom-color ease .2s;
+						transition: border-bottom-color ease 0.2s;
 						display: inline-block;
-						border-bottom: 1px solid #B3B3B3;
+						border-bottom: 1px solid #b3b3b3;
 					}
-				
 
-					svg{
+					svg {
 						display: none;
 					}
 
@@ -89,8 +86,8 @@
 					// 	background-color: #B3B3B3;
 					// }
 
-					&:before{
-						content: '';
+					&:before {
+						content: "";
 						width: 0;
 						height: 0;
 						border-style: solid;
@@ -99,41 +96,48 @@
 						position: absolute;
 						left: 50%;
 						bottom: 0;
-						margin-left: -17px;	
+						margin-left: -17px;
 						visibility: hidden;
 					}
 
-					&:hover{
-						color: #0E0E0E;
+					&:hover {
+						color: #0e0e0e;
 					}
 
-					&.is-active{
-					
-						color: #0E0E0E;
+					&.is-active {
+						color: #0e0e0e;
 
-						span{
+						span {
 							border-bottom-color: transparent;
 						}
 
-						&:before{
+						&:before {
 							visibility: visible;
+						}
+					}
+				}
+
+				@include max-screen($large_tablet) {
+					&-item {
+						span {
+							border-bottom: none;
 						}
 					}
 				}
 			}
 		}
-	}	
+	}
 
-	&_bottom{
-		.tabs{
-			&__nav{
+	&_bottom {
+		.tabs {
+			&__nav {
 				margin-top: 7.6rem;
 				display: table;
 				width: 100%;
 				table-layout: fixed;
-				border-bottom: 1px solid rgba($dark, .2);
+				border-bottom: 1px solid rgba($dark, 0.2);
 
-				&-item{
+				&-item {
 					display: table-cell;
 					vertical-align: bottom;
 					padding-bottom: 3.1rem;
@@ -144,47 +148,43 @@
 					padding-left: 3rem;
 					padding-right: 3rem;
 
-					
-
-					&:before{
-						content: '';
+					&:before {
+						content: "";
 						background: $red;
 						height: 2px;
 						position: absolute;
 						left: 0;
 						bottom: -1px;
 						width: 100%;
-						transition: ease .2s;
+						transition: ease 0.2s;
 						visibility: hidden;
-						transform: scale(.2,1);
+						transform: scale(0.2, 1);
 						opacity: 0;
 					}
 
-					&:hover{
+					&:hover {
 						color: $dark;
 					}
 
-					&.is-active{
+					&.is-active {
 						color: $dark;
 
-						&:before{
-							transform: scale(1,1);
+						&:before {
+							transform: scale(1, 1);
 							opacity: 1;
 							visibility: visible;
 						}
 					}
 				}
 
-				@include max-screen($small_tablet) {
-
+				@include max-screen($large_tablet) {
 					margin-top: 5.5rem;
 
-					&-item{
+					&-item {
 						padding-left: 1rem;
-						padding-right: 1rem;	
-						padding-bottom: 2rem;					
+						padding-right: 1rem;
+						padding-bottom: 2rem;
 					}
-
 				}
 
 				@include max-screen($large_mobile) {
@@ -192,14 +192,11 @@
 				}
 			}
 
-			&__content{
+			&__content {
 				@include max-screen($large_mobile) {
 					visibility: visible;
 				}
 			}
 		}
 	}
-
-
-
 }

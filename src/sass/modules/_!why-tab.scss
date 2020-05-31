@@ -1,4 +1,4 @@
-.why-tab{
+.why-tab {
 	padding-top: 12rem;
 	position: relative;
 	min-height: 65.2rem;
@@ -21,48 +21,58 @@
 		align-items: flex-end;
 	}
 
-	&__title{
+	&__title {
 		margin-bottom: 7rem;
 
 		@include max-screen($large_mobile) {
-			margin-bottom: 3rem;
+			margin-bottom: 2.3rem;
+			text-align: center;
 		}
 	}
 
-	&__back{
+	&__back {
 		user-select: none;
 		pointer-events: none;
 
-		@include max-screen($large_mobile) {
+		&_mobile {
+			padding-top: 224/290 * 100%;
+			margin-bottom: 33/320 * 100%;
+			margin-left: -15px;
+			margin-right: -15px;
+			position: relative;
 			display: none !important;
 		}
-	}
 
-	&__text{
 		@include max-screen($large_mobile) {
-			font-size: 1.2rem;
+			display: none !important;
 
+			&_mobile {
+				display: block !important;
+			}
 		}
 	}
 
-	&__sub{
+	&__text {
+		@include max-screen($large_mobile) {
+			font-size: 1.2rem;
+		}
+	}
+
+	&__sub {
 		margin-bottom: 2.7rem;
 
 		@include max-screen($large_mobile) {
-			margin-bottom: .9rem;
+			margin-bottom: 0.9rem;
 			font-size: 1.9rem;
 		}
 	}
 
-	&__cell{
-		width: 497/1336*100%;
-
-
+	&__cell {
+		width: 497/1336 * 100%;
 
 		@include max-screen($large_mobile) {
 			width: 100%;
 			margin-right: 0;
-
 		}
 	}
 }

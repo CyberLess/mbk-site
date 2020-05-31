@@ -1,20 +1,19 @@
-.services-tab{
-
-	@include max-screen($small_tablet) {
-		padding-bottom: 3.5rem!important;
+.services-tab {
+	@include max-screen($large_tablet) {
+		padding-bottom: 3.5rem !important;
 	}
 
-	&__title{
+	&__title {
 		min-height: 5.3rem;
-		border-bottom: 1px solid #0E0E0E;
+		border-bottom: 1px solid #0e0e0e;
 		line-height: 110%;
 		margin-bottom: 3.9rem;
 
-		svg{
+		svg {
 			display: none;
 		}
 
-		@include max-screen($small_tablet) {
+		@include max-screen($large_tablet) {
 			padding-left: 15px;
 			padding-right: 15px;
 			min-height: 0;
@@ -27,7 +26,7 @@
 			margin-bottom: 0;
 			font-weight: 400;
 
-			svg{
+			svg {
 				display: block;
 				width: 10px;
 				position: absolute;
@@ -40,126 +39,121 @@
 			}
 		}
 	}
-	
-	&__row{
+
+	&__row {
 		align-items: flex-start;
 	}
 
-	&__content{
-
-		@include max-screen($small_tablet) {
+	&__content {
+		@include max-screen($large_tablet) {
 			display: none;
 			padding-bottom: 4.5rem;
-		}	
+		}
 	}
 
-	&__mobile, &__content-mobile{
+	&__mobile,
+	&__content-mobile {
 		display: none;
 		text-align: center;
 
-		@include max-screen($small_tablet) {
+		@include max-screen($large_tablet) {
 			display: block;
 		}
 	}
 
-	&__cell{
-		width: 278/1216*100%;
-		padding-right: 54/1216*100%;
+	&__cell {
+		width: 278/1216 * 100%;
+		padding-right: 54/1216 * 100%;
 		position: relative;
 
-		&:nth-child(4n+2){
-			width: 330/1216*100%;
+		&:nth-child(4n + 2) {
+			width: 330/1216 * 100%;
 
-			padding-left: 52/1216*100%;
+			padding-left: 52/1216 * 100%;
 
-			&:before{
-				content: '';
+			&:before {
+				content: "";
 				display: block;
 				position: absolute;
 				left: 0;
 				top: 0;
 				width: 1px;
 				height: 100%;
-				background-color: #D3D3D3;
+				background-color: #d3d3d3;
 			}
 		}
 
-		&:nth-child(4n+3){
-			width: 330/1216*100%;
-			padding-left: 52/1216*100%;
+		&:nth-child(4n + 3) {
+			width: 330/1216 * 100%;
+			padding-left: 52/1216 * 100%;
 
-
-			&:before{
-				content: '';
+			&:before {
+				content: "";
 				display: block;
 				position: absolute;
 				left: 0;
 				top: 0;
 				width: 1px;
 				height: 100%;
-				background-color: #D3D3D3;
+				background-color: #d3d3d3;
 			}
 		}
 
-		&:nth-child(4n){
-			width: 275/1216*100%;
-			padding-left: 52/1216*100%;
+		&:nth-child(4n) {
+			width: 275/1216 * 100%;
+			padding-left: 52/1216 * 100%;
 			padding-right: 0;
 		}
 
-		&_border{
-
+		&_border {
 		}
 
-		@include max-screen($small_tablet) {
+		@include max-screen($large_tablet) {
 			width: 100% !important;
 			padding-right: 0 !important;
 			padding-left: 0 !important;
 
-			&:before{
+			&:before {
 				display: none !important;
 			}
 
-			&:not(:last-child){
-				.services-tab__title{
-					border-bottom: 1px solid #C2C2C2;
+			&:not(:last-child) {
+				.services-tab__title {
+					border-bottom: 1px solid #c2c2c2;
 				}
 			}
 		}
-	
 	}
-	&__box{
-		&:not(:last-child){
+	&__box {
+		&:not(:last-child) {
 			margin-bottom: 3.4rem;
 		}
 
-		@include max-screen($small_tablet) {
+		@include max-screen($large_tablet) {
 			padding-left: 15px;
 			padding-right: 15px;
-			&:not(:last-child){
+			&:not(:last-child) {
 				margin-bottom: 4.3rem;
 			}
 		}
 	}
 
-	&__label{
+	&__label {
 		margin-bottom: 9px;
 		line-height: 200%;
-		color: #B3B3B3;
+		color: #b3b3b3;
 		font-weight: 400;
 
-		@include max-screen($small_tablet) {
+		@include max-screen($large_tablet) {
 			font-size: 1.9rem;
 			color: $dark;
 			margin-bottom: 16px;
 		}
 	}
 
-	&__list{
+	&__list {
 		// .list__item{
 		// 	line-height: 107%;
 		// }
-
-
 	}
 }

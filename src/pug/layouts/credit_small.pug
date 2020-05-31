@@ -2,7 +2,7 @@
 	+e.wrap.wrap
 		+e.title.h3.H2 Самые популярные условия
 		+e.form.form.FORM
-			+e.modal
+			+e.modal.js-checkbox-list
 				+e.modal-part._top._fixed
 					+e.modal-head.flex._vertical._center
 						+e.modal-title.h2 Получить деньги
@@ -12,9 +12,9 @@
 					+e.modal-inner
 						+e.modal-part._fixed
 							+e.modal-top.flex._justify._vertical
-								+e.select-all.small.is-medium.text-red
+								+e.select-all.small.is-medium.text-red.js-all
 									| Выбрать все категории 
-								+e.reset.small
+								+e.reset.small.js-reset
 									| Сбросить	
 						+e.modal-part._fluid
 							+e.modal-inner._scroll
@@ -43,8 +43,8 @@
 									+e.tag.tag__._dark-active.LABEL
 										+e.input.INPUT(type="checkbox" name="credit[type]" value='На личные цели')
 										+e.text.SPAN На личные цели
-				+e.modal-part._bottom._fixed.js-close-filter-tags
-					+button(false) Подобрать
+				+e.modal-part._bottom._fixed
+					+button(false)(class="js-close-filter-tags") Подобрать
 			+e.bottom
 				+e.cats.border-button__.js-open-filter-tags
 					+e.SPAN.icon

@@ -9,14 +9,6 @@ import { numberWithSpaces } from "../functions";
 		let $time = $parent.find(".js-time");
 		let $total = $parent.find(".js-total-payment");
 
-		console.log(
-			"test total price",
-			$parent[0],
-			$price[0],
-			$time[0],
-			$total[0]
-		);
-
 		let price = parseInt($price.val().replace(/\s+/g, ""));
 		let time = parseInt($time.val().replace(/\s+/g, ""));
 		let total = numberWithSpaces(parseInt(price / time));
@@ -60,7 +52,10 @@ import { numberWithSpaces } from "../functions";
 
 		// удаляем лишнее
 
-		var $prevAll = $(e.currentTarget).closest(".js-target-form").prevAll();
+		var $prevAll = $(e.currentTarget)
+			.closest(".js-target-form")
+			.addClass("is-moved")
+			.prevAll();
 
 		if ($prevAll.length) {
 			$prevAll.each(function () {
@@ -96,6 +91,8 @@ import { numberWithSpaces } from "../functions";
 		// отправка формы
 		if (current == count) {
 			form.submit();
+
+			return false;
 		}
 
 		// скролл к началу квиза

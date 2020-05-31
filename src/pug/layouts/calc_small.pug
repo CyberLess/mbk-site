@@ -1,0 +1,222 @@
++b.SECTION.quiz
+	+e.inner
+		+e.wrap.wrap
+
+			include info-steps
+
+			+e.FORM.box.form.js-quiz(data-redirect="/subscription_confirm.html" data-from="42")
+				+e.top.flex._vertical._justify
+					+e.title.h4.js-title Выберите сумму и срок кредита
+					+e.text.h6.is-regular 
+						| Шаг 
+						span.js-current-step 1
+						| &nbsp;из 
+						span.js-total-step 
+				+e.row.flex._justify
+					+e.column._left
+						+e.bar.status-bar__.js-total-bar(style="display: none;")
+							+e.inner
+								+e.line
+									+e.content._back.h6
+										| Вероятность одобрения&nbsp;
+										span.strong.js-total-progress
+									+e.done()
+										+e.content._front.h6
+											| Вероятность одобрения&nbsp;
+											span.strong.js-total-progress
+							+e.help.h6
+						+e.slider
+							+e.slide._top.js-hide-bottom.js-slide.js-submit-slide.js-dont-backward.is-active(data-title="Выберите сумму и срок кредита" data-step="1" data-action="/api/quiz/")
+								+e.row.flex._justify._vertical
+									+e.cell
+										+e.field.input__
+											+e.top
+												+e.label.p
+													| Выберите сумму кредита
+											+e.parent.range-input__
+												+e.INPUT.input.js-payment.js-price(type="text" autocomplete="off" name="calc[price]" placeholder="0 ₽" value="300000")
+												+e.char.h6 ₽
+												+e.bottom
+													+e.line
+													+e.path(data-min="150000" data-step="50000" data-max="15000000")
+											+e.info.flex._vertical._justify
+												+e.label.p
+													| 150 тыс.
+												+e.label.p
+													| 15 млн
+									+e.cell
+										+e.field.input__
+											+e.top
+												+e.label.p
+													| Выберите срок кредита
+											+e.parent.range-input__
+												+e.INPUT.input.js-payment.js-time(type="text" autocomplete="off" name="calc[time]" placeholder="0 ₽" value="72")
+												+e.char.h6 мес.
+												+e.bottom
+													+e.line
+													+e.path(data-min="12" data-step="1" data-max="300")
+											+e.info.flex._vertical._justify
+												+e.label.p
+													| 12 мес.
+												+e.label.p
+													| 25 лет
+								+e.row._price.flex._justify._bottom
+									+e.cell._big.css-text-right
+										+e.text.is-regular.h6
+											| Ежемесячный платеж
+									+e.cell._big
+										+e.price.is-bold.h4
+											span.js-total-payment
+											| &nbsp;₽
+								+e.row.flex._justify._vertical
+									+e.cell._big
+										+e.field.input__
+											+e.top
+												+e.label.p
+													| ФИО
+											+e.field
+												+e.INPUT.item._square.h6(type="text" placeholder="Иванов Иван Иванович" name="name")
+									+e.cell._big
+										+e.field.input__
+											+e.top
+												+e.label.p
+													| Ваш телефон
+											+e.field
+												+e.INPUT.item._square.h6(type="text" placeholder="7 903 123 45 65" name="phone")
+								+e.row._nav.flex._justify._vertical
+									+e.cell._info._noscope.css-text-right
+										+e.small.small.text-light
+											| Нажимая на кнопку «Продолжить», вы выражаете 
+											| согласие 
+											a.a(href="#") на обработку ваших персональных данных
+									+e.cell._button._noscope
+										+button(false)(class="js-goto" data-dir="next") Продолжить
+							+e.slide.js-slide.js-hide-bottom#confirm-slide(data-title="Подтвердите телефон" data-step="1" data-action="/api/confirm/" data-progress="10" data-help="+10% за подтверждение телефона")
+								+e.string
+									+e.text._small.p.text-gray
+										| Код подтверждения отправлен вам на номер 
+										span.strong.text-dark +7 (921) 921-21-21
+								+e.phone.phone-confirm__
+									+e.form.flex
+										+e.cell._phone
+											+e.field.input__
+												+e.field
+													+e.INPUT.item._square._dark.h5(type="text" placeholder="XXXXXX" maxlength="6" name="confirm")
+										+e.cell._button
+											+button(false)(class="js-goto" data-dir="next") Продолжить
+									+e.row.flex._vertical._justify
+										+e.column._left
+											+e.string
+												+link(class="_regular _toline") Отправить еще раз
+											+e.string
+												+link(class="_regular _toline") 
+													span Не приходит код 
+													span.css-hide-mobile подтверждения?
+											+e.string
+												+link(class="_regular _toline") Изменить номер
+										+e.column._right
+											+link(class="_tobutton js-goto js-without-submit" data-dir="next") Отказаться от подтверждения
+											+e.text.small
+												| Отказ от подтверждения уменьшает вероятность 
+												| положительного решения, но не является причиной 
+												| отказа от выдачи кредита
+							+e.slide.js-slide(data-title="Заполните анкету" data-step="2" data-progress="6")
+								+e.bold.h6 Подробнее о Вас
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Электронная почта
+										+e.field
+											+e.INPUT.item._square.h6(type="text" placeholder="test@gmail.com" name="email")
+			
+							+e.slide.js-slide(data-step="3" data-progress="6")
+								+e.bold.h6 Паспортные данные
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Серия и номер паспорта
+										+e.field
+											+e.INPUT.item._square.js-passport-mask.h6(type="text" data-rule-required="true" placeholder="4611 513480" name="calc[passport]")
+							+e.slide.js-slide(data-step="3" data-progress="6")
+								+e.bold.h6 Паспортные данные
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Дата выдачи
+										+e.field
+											+e.INPUT.item._square.js-date-mask.h6(type="text" data-rule-required="true" placeholder="15.08.2011" name="calc[date_of_issue]")
+											+e.icon._stroke
+												+icon('calendar', '0 0 24 24')
+							+e.slide.js-slide(data-step="3" data-progress="6")
+								+e.bold.h6 Паспортные данные
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Код подразделения
+										+e.field
+											+e.INPUT.item._square.js-code-mask.h6(type="text" data-rule-required="true" placeholder="500-175" name="calc[unit_code]")
+							+e.slide.js-slide(data-step="3" data-progress="6")
+								+e.bold.h6 Паспортные данные
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Кем выдан
+										+e.field
+											+e.INPUT.item._square.h6(type="text" data-rule-required="true" placeholder="ТП№5 Межрайоного ОУФМС России по МО..." name="calc[issued_by]")
+							+e.slide.js-slide(data-step="3" data-progress="6")
+								+e.bold.h6 Паспортные данные
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Дата рождения
+										+e.field
+											+e.INPUT.item._square.js-date-mask.h6(type="text" data-rule-required="true" placeholder="29.10.1991" name="calc[date_of_birth]")
+							+e.slide.js-slide(data-step="3" data-progress="6")
+								+e.bold.h6 Паспортные данные
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Место выдачи
+										+e.field
+											+e.INPUT.item._square.h6(type="text" data-rule-required="true" placeholder="г. Мытищи" name="calc[place_of_issue]")
+							+e.slide.js-slide(data-step="3" data-progress="6")
+								+e.bold.h6 Паспортные данные
+								+e.cell
+									+e.field.input__
+										+e.top
+											+e.label.p
+												| Адрес регистрации
+										+e.field
+											+e.INPUT.item._square.h6(type="text" data-rule-required="true" placeholder="Москва" name="calc[reg_addr]")
+						+e.bottom.flex._vertical._justify
+							+e.bottom-cell._left
+								+e.status.bar__
+									+e.done.js-bar-done
+								+e.bottom-row.flex._vertical._justify
+									+e.text._counter.small.strong
+										| Вопрос 
+										span.text-red.js-bar-current 5 
+										| &nbsp;из 
+										span.js-bar-total 7
+									+e.gray.small Опрос займет не более 2 минут
+
+							+e.bottom-cell._right.flex._vertical._justify
+								+e.bottom-part._left
+									+e.back.back-button__.js-goto(data-dir="prev")
+										+e.IMG.arrow(src="/app/img/arrow_vector.svg")
+								+e.bottom-part._right
+									+button(false)(class="js-goto" data-dir="next")  Далее
+					+e.column._right
+						+e.avatar
+							+e.avatar-inner
+								+e.IMG.avatar-image.object-fit(src="/img/avatar_big.jpg")
+						+e.user
+							+e.name.h6 Марина Алексеева
+							+e.about.small Ваш персональный менеджер

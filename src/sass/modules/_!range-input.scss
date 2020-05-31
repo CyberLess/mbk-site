@@ -32,7 +32,7 @@
 		pointer-events: none;
 
 		&_fixed {
-			width: auto;
+			width: auto !important;
 			margin-right: 4.4rem;
 		}
 	}
@@ -107,6 +107,9 @@
 		}
 		&__char {
 			width: 7rem;
+			&_fixed {
+				margin-right: 3.1rem;
+			}
 		}
 
 		.ui-slider-handle {

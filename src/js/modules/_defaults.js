@@ -39,7 +39,7 @@
 
 	$(".js-mobile-nav-tab").on("click", (e) => {
 		let ww = $(window).width();
-		if (ww > 768) return false;
+		if (ww > 1024) return false;
 
 		let $tabs = $(e.currentTarget).closest(".tabs");
 		let $submenu = $(e.currentTarget).closest(".header__parts-submenu");
@@ -51,7 +51,7 @@
 
 	$(".js-service-backward").on("click", (e) => {
 		let ww = $(window).width();
-		if (ww > 768) return false;
+		if (ww > 1024) return false;
 
 		let $tabs = $(e.currentTarget).closest(".tabs");
 		let $submenu = $(e.currentTarget).closest(".header__parts-submenu");
@@ -64,7 +64,7 @@
 
 	$(".js-mobile-open-inside").on("click", (e) => {
 		let ww = $(window).width();
-		if (ww > 768) return false;
+		if (ww > 1024) return false;
 
 		let $cell = $(e.currentTarget).parent();
 
@@ -80,7 +80,7 @@
 
 	$(".js-mobile-close-inside").on("click", (e) => {
 		let ww = $(window).width();
-		if (ww > 768) return false;
+		if (ww > 1024) return false;
 
 		let $cell = $(e.currentTarget).closest(".services-tab__cell");
 
@@ -97,11 +97,15 @@
 		let $modal = $(".credit__modal");
 		$modal.addClass("is-active");
 		$("html, body").addClass("js-lock");
+
+		$(".mobile-button").hide();
 	});
 
 	$(".js-close-filter-tags").on("click", (e) => {
 		let $modal = $(".credit__modal");
 		$modal.removeClass("is-active");
 		$("html, body").removeClass("js-lock");
+
+		$(".mobile-button").show();
 	});
 })($);

@@ -3,7 +3,7 @@
 
 		include info-steps
 
-		+e.FORM.box.form.js-quiz(action="")
+		+e.FORM.box.form.js-quiz(action="" data-redirect="/subscription_confirm.html")
 			+e.slider
 				+e.slide.js-slide.is-active
 					+e.top.flex._vertical._justify
@@ -14,14 +14,14 @@
 							span.is-curent-calc 1 
 							| из 
 							span.is-total-calc 4
-					+e.row.flex._justify._vertical
+					+e.row._totop.flex._justify._vertical
 						+e.cell
 							+e.field.input__
 								+e.top
 									+e.label.p
 										| Выберите сумму кредита
 								+e.parent.range-input__
-									+e.INPUT.input(type="text" autocomplete="off" name="calc[price]" placeholder="0 ₽" value="300000")
+									+e.INPUT.input.js-payment.js-price(type="text" autocomplete="off" name="calc[price]" placeholder="0 ₽" value="300000")
 									+e.char.h6 ₽
 									+e.bottom
 										+e.line
@@ -37,7 +37,7 @@
 									+e.label.p
 										| Выберите срок кредита
 								+e.parent.range-input__
-									+e.INPUT.input(type="text" autocomplete="off" name="calc[time]" placeholder="0 ₽" value="72")
+									+e.INPUT.input.js-payment.js-time(type="text" autocomplete="off" name="calc[time]" placeholder="0 ₽" value="72")
 									+e.char.h6 мес.
 									+e.bottom
 										+e.line
@@ -47,13 +47,14 @@
 										| 12 мес.
 									+e.label.p
 										| 25 лет
-					+e.row._price.flex._justify._vertical
+					+e.row._price.flex._justify._bottom
 						+e.cell._big.css-text-right
 							+e.text.is-regular.h6
 								| Ежемесячный платеж
 						+e.cell._big
 							+e.price.is-bold.h4
-								| 3 323 ₽
+								span.js-total-payment
+								| &nbsp;₽
 					+e.row.flex._justify._vertical
 						+e.cell._big
 							+e.field.input__
@@ -78,7 +79,7 @@
 								a.a(href="#") на обработку ваших персональных данных
 						+e.cell._button
 							+button(false)(class="js-goto" data-dir="next") Продолжить
-				+e.slide.js-slide
+				+e.slide.js-slide#confirm-slide(data-progress="10" data-help="+10% за подтверждение телефона" data-action="/api/confirm/")
 					+e.top.flex._vertical._justify
 						+e.title.h4
 							| Подтвердите телефон
@@ -110,11 +111,13 @@
 								+e.string
 									+link(class="_regular _toline") Отправить еще раз
 								+e.string
-									+link(class="_regular _toline") Не приходит код подтверждения?
+									+link(class="_regular _toline") 
+										span Не приходит код 
+										span.css-hide-mobile подтверждения?
 								+e.string
 									+link(class="_regular _toline") Изменить номер
 							+e.column._right
-								+link(class="_tobutton") Отказаться от подтверждения
+								+link(class="_tobutton js-goto js-without-submit") Отказаться от подтверждения
 								+e.text.small
 									| Отказ от подтверждения уменьшает вероятность 
 									br 
@@ -123,7 +126,7 @@
 									| отказа от выдачи кредита
 
 
-				+e.slide.js-slide
+				+e.slide.js-slide.js-dont-backward(data-step="2"  data-progress="26" data-help="+26% за заполнение второго шага анкеты")
 					+e.top.flex._vertical._justify
 						+e.title.h4
 							| Заполните анкету
@@ -138,7 +141,7 @@
 								+e.content._back.h6
 									| Вероятность одобрения&nbsp;
 									span.strong 52%
-								+e.done
+								+e.done(style="width: 52%")
 									+e.content._front.h6
 										| Вероятность одобрения&nbsp;
 										span.strong 52%
@@ -249,15 +252,16 @@
 										| 0
 									+e.label.p
 										| 1 млн.
-						+e.cell._bigtop.css-text-right
+					+e.row.flex._vertical._justify
+						+e.cell._desc._bigtop.css-text-right
 							+e.small.small
 								| Нажимая на кнопку «Продолжить», вы выражаете
 								br
 								| согласие 
 								a.a(href="#") на обработку ваших персональных данных
-						+e.cell._bigtop
+						+e.cell._next._bigtop
 							+button(false)(class="js-goto" data-dir="next") Продолжить
-				+e.slide.js-slide
+				+e.slide.js-slide(data-step="3"  data-progress="14" data-help="+14% за заполнение третьего шага анкеты")
 					+e.top.flex._vertical._justify
 						+e.title.h4
 							| Заполните анкету
@@ -271,11 +275,11 @@
 							+e.line
 								+e.content._back.h6
 									| Вероятность одобрения&nbsp;
-									span.strong 52%
-								+e.done
+									span.strong 78%
+								+e.done(style="width: 78%")
 									+e.content._front.h6
 										| Вероятность одобрения&nbsp;
-										span.strong 52%
+										span.strong 78%
 						+e.help.h6 +14% за заполнение третьего шага анкеты
 					+e.row.flex._vertical._justify
 						+e.label.h6 Паспортные данные
@@ -380,15 +384,16 @@
 										| Домашний телефон
 								+e.field
 									+e.INPUT.item._square.h6(type="text" placeholder="+7 495 955 55 55 " name="home_phone")
-						+e.cell._bigtop.css-text-right
+					+e.row.flex._vertical._justify
+						+e.cell._desc._bigtop.css-text-right
 							+e.small.small
 								| Нажимая на кнопку «Продолжить», вы выражаете
 								br
 								| согласие 
 								a.a(href="#") на обработку ваших персональных данных
-						+e.cell._bigtop
+						+e.cell._next._bigtop
 							+button(false)(class="js-goto" data-dir="next") Продолжить
-				+e.slide.js-slide
+				+e.slide.js-slide(data-step="4"  data-progress="6" data-help="+6% за заполнение четвертого шага анкеты")
 					+e.top.flex._vertical._justify
 						+e.title.h4
 							| Заполните анкету
@@ -402,12 +407,12 @@
 							+e.line
 								+e.content._back.h6
 									| Вероятность одобрения&nbsp;
-									span.strong 52%
-								+e.done
+									span.strong 92%
+								+e.done(style="width:92%")
 									+e.content._front.h6
 										| Вероятность одобрения&nbsp;
-										span.strong 52%
-						+e.help.h6 +26% за заполнение второго шага анкеты
+										span.strong 92%
+						+e.help.h6 +6% за заполнение четвертого шага анкеты
 					+e.row.flex._vertical._justify
 						+e.label.h6 Кредиты в других банках
 						+e.cell._big
@@ -429,7 +434,40 @@
 										option Да
 										option Нет
 						+e.label._big.h6 Отметьте есть ли у Вас собственность?
-						+e.cell._middle
-						+e.cell._middle
-						+e.cell._middle
-						+e.cell._middle
+						+e.cell._middle._tosmall
+							+e.LABEL.checkbox.border-checkbox__
+								+e.INPUT.input(type="checkbox" checked="" name="own" value="Нет собственности")
+								+e.SPAN.text.h6
+									+e.SPAN.check
+										+icon('check')
+									| Нет собственности
+						+e.cell._middle._tosmall
+							+e.LABEL.checkbox.border-checkbox__
+								+e.INPUT.input(type="checkbox" name="own" value="Есть своя собственность")
+								+e.SPAN.text.h6
+									+e.SPAN.check
+										+icon('check')
+									| Есть своя собственность						
+						+e.cell._middle._tosmall
+							+e.LABEL.checkbox.border-checkbox__
+								+e.INPUT.input(type="checkbox" name="own" value="Совместная собственность")
+								+e.SPAN.text.h6
+									+e.SPAN.check
+										+icon('check')
+									| Совместная собственность						
+						+e.cell._middle._tosmall
+							+e.LABEL.checkbox.border-checkbox__
+								+e.INPUT.input(type="checkbox" name="own" value="Долевая собственность")
+								+e.SPAN.text.h6
+									+e.SPAN.check
+										+icon('check')
+									| Долевая собственность
+					+e.row.flex._vertical._justify
+						+e.cell._desc._bigtop.css-text-right
+							+e.small.small
+								| Нажимая на кнопку «Продолжить», вы выражаете
+								br
+								| согласие 
+								a.a(href="#") на обработку ваших персональных данных
+						+e.cell._next._bigtop
+							+button(false)(class="js-goto" data-dir="next") Продолжить

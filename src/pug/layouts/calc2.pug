@@ -1,6 +1,9 @@
 +b.SECTION.quiz
 	+e.inner
 		+e.wrap.wrap
+
+			include info-steps
+
 			+e.FORM.box.form.js-quiz(data-redirect="/subscription_confirm.html" data-from="42")
 				+e.top.flex._vertical._justify
 					+e.title.h4.js-title Выберите сумму и срок кредита
@@ -57,7 +60,7 @@
 													| 12 мес.
 												+e.label.p
 													| 25 лет
-								+e.row._price.flex._justify._vertical
+								+e.row._price.flex._justify._bottom
 									+e.cell._big.css-text-right
 										+e.text.is-regular.h6
 											| Ежемесячный платеж
@@ -106,16 +109,16 @@
 											+e.string
 												+link(class="_regular _toline") Отправить еще раз
 											+e.string
-												+link(class="_regular _toline") Не приходит код подтверждения?
+												+link(class="_regular _toline") 
+													span Не приходит код 
+													span.css-hide-mobile подтверждения?
 											+e.string
 												+link(class="_regular _toline") Изменить номер
 										+e.column._right
 											+link(class="_tobutton js-goto js-without-submit" data-dir="next") Отказаться от подтверждения
 											+e.text.small
 												| Отказ от подтверждения уменьшает вероятность 
-												br 
 												| положительного решения, но не является причиной 
-												br
 												| отказа от выдачи кредита
 							+e.slide.js-slide(data-title="Заполните анкету" data-step="2" data-progress="1")
 								+e.bold.h6 Подробнее о Вас

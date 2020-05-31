@@ -6,11 +6,13 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: #ffffff;
-	@include max-screen($large_mobile) {
-		background-image: url("/img/sert-back-mobile.png") !important;
+	@include max-screen($small_tablet) {
+		background-image: url("/img/sert-back-mobile.png");
 		background-repeat: no-repeat;
 		height: auto;
 		padding-bottom: 31%;
+		background-size: cover;
+		min-height: 320px;
 	}
 	&__breadcrumbs {
 		color: #ffffff;
