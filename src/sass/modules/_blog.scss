@@ -50,7 +50,7 @@
 			&__filter {
 				@include max-screen($small_tablet) {
 					margin-bottom: 0;
-					padding: 1.5rem 3rem;
+					padding: 2.3rem 3rem 1.5rem;
 
 					background-color: #ffffff;
 				}
@@ -69,6 +69,16 @@
 
 				background-color: #ffffff;
 			}
+		}
+	}
+
+	&__main-title {
+		margin-top: 6rem;
+		margin-bottom: 2.6rem;
+
+		@include max-screen($small_tablet) {
+			margin-top: 2.7rem;
+			margin-bottom: 4.8rem;
 		}
 	}
 

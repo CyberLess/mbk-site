@@ -1,0 +1,18 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Блог: статьи на тему «Долги»';
+	- subscribeImage = 'book-blog.png'
+	- var additionalClass = 'blog-page';
+
+block content
+	DIV.wrap
+		H1.blog__main-title.h3 Блог: статьи на тему «Долги»
+	include ../layouts/blog
+	include ../layouts/comments-blog
+	DIV.blog-mobile-wrap
+		include ../layouts/master
+		include ../layouts/subscribe
+
+block footer
+	+footer(class="_white")
