@@ -17,8 +17,16 @@
 		padding-left: 1.5rem;
 		background-color: #ffffff;
 
-		.master__tree {
-			margin-left: -227px;
+		.master {
+			&__tree {
+				margin-left: -227px;
+			}
+
+			&__man {
+				@include max-screen($small_tablet) {
+					margin-right: -50px;
+				}
+			}
 		}
 	}
 
