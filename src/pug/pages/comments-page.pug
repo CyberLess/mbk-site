@@ -1,0 +1,12 @@
+extends ../layouts/base
+
+append vars
+	- title = 'Комментарии';
+
+block content
+	H1.visually-hidden Комментарии
+	+b.DIV.comments-section-wrap
+		include ../layouts/comments
+
+block footer
+	+footer(class="_white")

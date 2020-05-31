@@ -93,3 +93,14 @@
 		}
 	}
 }
+
+.comments-section-wrap {
+	margin-top: -1px;
+	padding-top: 6rem;
+
+	background-color: #ffffff;
+
+	@include max-screen($small_tablet) {
+		padding-top: 3rem;
+	}
+}
