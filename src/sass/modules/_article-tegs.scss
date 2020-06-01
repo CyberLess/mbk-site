@@ -48,3 +48,9 @@
 		}
 	}
 }
+
+.gray-article {
+	@include max-screen($large_mobile) {
+		padding-bottom: 3rem;
+	}
+}

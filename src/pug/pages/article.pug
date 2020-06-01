@@ -2,6 +2,8 @@ extends ../layouts/base
 
 append vars
 		- title = 'Статья';
+		- subscribeImage = 'book-blog.png'
+		- additionalClass = 'article'
 
 block content
 	+b.border-top.js-article
@@ -11,10 +13,10 @@ block content
 		include ../layouts/article-author
 		include ../layouts/article-tegs
 		include ../layouts/comments
-	+b.SECTION.group._top.gray._mobile.is-without-container
+	+b.SECTION.group._top.gray._mobile.is-without-container.gray-article
 		+b.SECTION.white._mobile.radius-5._mobile
 			include ../layouts/blog-with-title
 			include ../layouts/master-white
 			include ../layouts/subscribe
-block footer 
+block footer
 	+footer(class="_white")

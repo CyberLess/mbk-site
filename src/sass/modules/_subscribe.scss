@@ -21,6 +21,14 @@
 		padding-top: 5.1rem;
 	}
 
+	&_main,
+	&_article {
+		@include max-screen($large_mobile) {
+			margin-right: -1.5rem;
+			margin-left: -1.5rem;
+		}
+	}
+
 	&__book {
 		width: 932/713 * 100%;
 		// margin-left: -31.31557%;

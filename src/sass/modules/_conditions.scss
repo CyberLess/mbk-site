@@ -36,6 +36,23 @@
 			padding-bottom: 3rem;
 		}
 
+		& .conditions__wrap {
+			@include max-screen($large_mobile) {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+		& .conditions__title {
+			@include max-screen($large_mobile) {
+				margin-bottom: 2.5rem;
+			}
+		}
+
+		& .gallery-slider__link {
+			height: 4.5rem;
+		}
+
 		& .conditions__slider {
 			min-height: 620px;
 

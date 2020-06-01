@@ -48,7 +48,7 @@
 		border-radius: 0.5rem;
 
 		@include max-screen($large_mobile) {
-			padding: 6.5rem 2.8rem 2.8rem;
+			padding: 6.5rem 2.2rem 2.8rem 2.8rem;
 		}
 
 		&:hover {
@@ -197,7 +197,7 @@
 	}
 
 	&__review {
-		max-width: 21rem;
+		max-width: 26rem;
 		margin-bottom: 4.9rem;
 		font-weight: normal;
 		font-size: 1.8rem;
