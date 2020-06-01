@@ -2,9 +2,12 @@
 	$(".js-mobile-menu").on("click", (e) => {
 		let $this = $(e.currentTarget);
 		let $menu = $(".header__device");
+		let $header = $(".header");
 
 		$this.toggleClass("is-active");
 		$menu.toggleClass("is-active");
+
+		$header.toggleClass("is-mobmenu-open");
 
 		$(".search, .header, .js-search-toggle").removeClass(
 			"is-active is-search-open"

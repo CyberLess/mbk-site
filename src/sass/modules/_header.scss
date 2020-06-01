@@ -16,6 +16,10 @@
 		}
 	}
 
+	&.is-mobmenu-open {
+		z-index: 950;
+	}
+
 	&:not(.is-submenu-open) {
 		.header {
 			&__menu {
