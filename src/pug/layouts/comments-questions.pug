@@ -2,15 +2,6 @@
   +e.wrap.wrap.flex._justify
     +e.cell._left
       include ../layouts/comments-form-questions
-      +b.FORM.comment-form-min.form(action="#")
-        +e.wrap
-          +e.input.input__._border
-            +e.INPUT.item(type="text" placeholder="Введите ваше имя" name="name")
-          +e.textarea.textarea__._min
-            +e.item.TEXTAREA(placeholder="Задать свой вопрос" name="comment-min")
-        +e.button.link.red-link.flex.flex_vertical.BUTTON(type="submit")
-          |Задать вопрос
-
       +e.list.comments-list
         +e.item.comment._open.comment__.SECTION
           +e.content
