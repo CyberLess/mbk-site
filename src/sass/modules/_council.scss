@@ -54,6 +54,18 @@
 		position: relative;
 	}
 
+	&__title-brake-mob {
+		@include min-screen($small_tablet + 1) {
+			display: none;
+		}
+	}
+
+	&__title-brake-desk {
+		@include max-screen($small_tablet) {
+			display: none;
+		}
+	}
+
 	&__avatar {
 		padding-top: 100%;
 		border-radius: 50%;
@@ -295,10 +307,6 @@
 		&__title {
 			font-size: 2.6rem;
 			line-height: 1.1;
-		}
-
-		&__title-brake-mob {
-
 		}
 
 		&__more {

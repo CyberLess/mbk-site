@@ -229,6 +229,12 @@
 		}
 	}
 
+	&__mobile-br {
+		@include max-screen($small_tablet) {
+			display: none;
+		}
+	}
+
 	&__form {
 		margin-top: 7.1rem;
 		padding-right: 5.7rem;

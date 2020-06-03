@@ -21,6 +21,10 @@
 
 		.what-you-get__item {
 			padding: 12.9rem 2.8% 5rem 3.5%;
+
+			@include max-screen($large_mobile) {
+				padding: 8.3rem 9.8% 5rem 9.5%;
+			}
 		}
 	}
 

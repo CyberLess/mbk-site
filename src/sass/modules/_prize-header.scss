@@ -18,6 +18,16 @@
 		}
 	}
 
+	&_free-scoring {
+		.prize-header {
+			&__top-content {
+				@include max-screen($small_tablet) {
+					background-color: transparent;
+				}
+			}
+		}
+	}
+
 	&.white {
 		.prize-header__slogan {
 			background-color: #f3f3f3;
@@ -118,8 +128,8 @@
 
 				&__slogan {
 					@include max-screen($small_tablet) {
-						margin-left: 0;
 						margin-right: auto;
+						margin-left: 0;
 
 						background-color: #f3f3f3 !important;
 					}
@@ -128,8 +138,8 @@
 				&__title {
 					@include max-screen($small_tablet) {
 						width: 90%;
-						margin-left: 0;
 						margin-right: auto;
+						margin-left: 0;
 
 						text-align: left;
 					}
@@ -177,7 +187,7 @@
 
 				&__title {
 					@include max-screen($small_tablet) {
-						margin-bottom: 26.3rem!important;
+						margin-bottom: 26.3rem !important;
 					}
 
 					@include max-screen($large_mobile) {
@@ -318,6 +328,12 @@
 					padding-bottom: 11.9rem;
 				}
 
+				&__slogan {
+					@include min-screen($small_tablet + 1) {
+						background-color: #f3f3f3;
+					}
+				}
+
 				&__title {
 					margin-bottom: 3.1rem;
 
@@ -336,6 +352,10 @@
 
 					@include max-screen($large_tablet) {
 						width: 90%;
+					}
+
+					@include max-screen($small_tablet) {
+						padding-top: 1rem;
 					}
 				}
 
@@ -403,7 +423,8 @@
 
 				&__benefits-list {
 					width: 66%;
-					padding-bottom: 6rem;
+					margin-bottom: 2.6rem;
+					padding-bottom: 6.4rem;
 
 					@include max-screen($large_tablet) {
 						width: 77%;
@@ -464,11 +485,12 @@
 					background-image: url("/img/encumbrances-bg@mobile.webp");
 
 					@include max-screen($small_tablet) {
-						background-position: right bottom -1rem;
+						background-position: center bottom;
+						background-size: 100%;
 					}
 
 					@include max-screen($large_mobile) {
-						background-position: right -3rem bottom -1rem;
+						background-size: 61rem;
 					}
 				}
 
@@ -519,6 +541,7 @@
 
 					@include min-screen($large_desktop + 1) {
 						bottom: -34%;
+						right: -2%;
 					}
 
 					@include max-screen($large_desktop) {
@@ -589,12 +612,12 @@
 
 				&__prize-wrap {
 					@include min-screen($small_tablet + 1) {
-						bottom: 7rem;
 						right: 3.5vw;
+						bottom: 7rem;
 
+						flex-direction: row;
 						width: 31.5vw;
 						height: 31.5vw;
-						flex-direction: row;
 						padding-top: 35rem;
 					}
 
@@ -627,9 +650,9 @@
 					}
 
 					@include max-screen($small_tablet) {
-						bottom: auto;
 						top: 29.5rem;
 						right: 3rem !important;
+						bottom: auto;
 
 						background-color: #ffffff;
 					}
@@ -647,8 +670,8 @@
 
 					.prize-wrap__prize-text {
 						@include min-screen($small_tablet + 1) {
-							margin-left: 3rem;
 							margin-right: -8rem;
+							margin-left: 3rem;
 						}
 					}
 				}
@@ -775,7 +798,7 @@
 					}
 
 					@include max-screen($large_mobile) {
-						margin-bottom: 21rem!important;
+						margin-bottom: 21rem !important;
 					}
 				}
 
@@ -854,9 +877,9 @@
 		@include max-screen($small_tablet) {
 			display: block;
 			width: 25rem;
-			margin-left: auto;
 			margin-right: auto;
 			margin-bottom: 1.6rem;
+			margin-left: auto;
 			padding: .5rem 1rem;
 
 			font-size: 1rem;
@@ -873,8 +896,8 @@
 			max-width: 46.5rem;
 			height: 9.4rem;
 			margin-right: auto;
-			margin-left: auto;
 			margin-bottom: 17.9rem !important;
+			margin-left: auto;
 
 			text-align: center;
 		}
@@ -910,9 +933,9 @@
 
 		@include max-screen($small_desktop) {
 			width: 70%;
-			border-bottom: none;
 			margin-bottom: 0 !important;
 			padding-bottom: 2.6rem !important;
+			border-bottom: none;
 		}
 
 		@include max-screen($large_tablet) {
@@ -959,8 +982,8 @@
 		flex-wrap: wrap;
 
 		@include max-screen($small_tablet) {
-			flex-direction: column;
 			align-items: center;
+			flex-direction: column;
 			margin-left: -2.5rem;
 
 			text-align: center;
@@ -1049,8 +1072,8 @@
 		}
 
 		@include max-screen($small_tablet) {
-			right: 30.5rem;
 			top: 21.3rem;
+			right: 30.5rem;
 
 			width: 17rem;
 			padding: 1.5rem 2.1rem 2.7rem;
@@ -1147,8 +1170,8 @@
 
 		width: 10.2rem;
 		height: 10.2rem;
-		border: .5px solid rgba(14, 14, 14, 0.5);
 		padding-top: 0 !important;
+		border: .5px solid rgba(14, 14, 14, 0.5);
 	}
 
 	&__prize-text {
@@ -1165,6 +1188,10 @@
 		width: 3.7rem;
 		height: 3.7rem;
 
+		@include min-screen($small_tablet + 1) {
+			margin-bottom: 1.5rem;
+		}
+
 		@include max-screen($small_tablet) {
 			width: 1.2rem;
 			height: 1.2rem;
@@ -1178,5 +1205,11 @@
 			stroke: #FF0400;
 			stroke-width: 1.3;
 		}
+	}
+}
+
+.header-break {
+	@include max-screen($small_tablet) {
+		display: none;
 	}
 }
