@@ -167,8 +167,8 @@
 			}
 		}
 
-		&_advertising,
-		&_ad {
+		&_reclame,
+		&_promotion {
 			background-position: right 66% bottom;
 			background-size: cover;
 
@@ -197,12 +197,12 @@
 			}
 		}
 
-		&_advertising {
-			background-image: url("/img/advertising-bg@desktop.webp");
+		&_reclame {
+			background-image: url("/img/reclame-bg@desktop.webp");
 
 			.prize-header {
 				&__bg-image-mobile {
-					background-image: url("/img/advertising-bg@mobile.webp");
+					background-image: url("/img/reclame-bg@mobile.webp");
 				}
 
 				&__benefit-item {
@@ -213,12 +213,12 @@
 			}
 		}
 
-		&_ad {
-			background-image: url("/img/ad-bg@desktop.webp");
+		&_promotion {
+			background-image: url("/img/promotion-bg@desktop.webp");
 
 			.prize-header {
 				&__bg-image-mobile {
-					background-image: url("/img/ad-bg@mobile.webp");
+					background-image: url("/img/promotion-bg@mobile.webp");
 				}
 
 				&__benefits-list {
@@ -522,6 +522,14 @@
 
 				&__price {
 					text-decoration: none;
+				}
+			}
+		}
+
+		&_encumbrances {
+			.prize-header__bg-image-mobile {
+				@include max-screen($small_tablet) {
+					background-position: center bottom -2rem;
 				}
 			}
 		}
