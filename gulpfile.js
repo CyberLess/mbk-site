@@ -12,8 +12,8 @@ let getTask = (task) => {
 // task list
 gulp.task("clean", getTask("clean"));
 gulp.task("sass", getTask("sass"));
-// gulp.task("deploy", getTask("deploy"));
-// gulp.task("open", getTask("open"));
+gulp.task("deploy", getTask("deploy"));
+gulp.task("open", getTask("open"));
 gulp.task("svgSpriteBuild", getTask("svgSpriteBuild"));
 gulp.task("imageCompress", getTask("imageCompress"));
 gulp.task("pageList", getTask("pageList"));
@@ -77,8 +77,8 @@ gulp.task(
 			"vendors"
 		),
 		"pageList",
-		// "deploy",
-		// "open"
+		"deploy",
+		"open"
 	)
 );
 
