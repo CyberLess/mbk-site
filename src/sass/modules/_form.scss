@@ -26,4 +26,29 @@
 			}
 		}
 	}
+
+	&__email {
+		.error {
+			display: none !important;
+			//@include max-screen($small_tablet) {
+			//  text-align: center;
+			//}
+		}
+
+		&.is-error {
+			.input__item {
+				color: #FF0600;
+
+				@include placeholder {
+					color: #FF0600;
+				}
+			}
+		}
+	}
+
+	.checkbox__text {
+		@include max-screen($small_tablet) {
+		  text-align: center;
+		}
+	}
 }
