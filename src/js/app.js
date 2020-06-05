@@ -25,3 +25,4 @@ import "./modules/_questions-mobile-popup";
 import "./modules/_success-auction";
 import "./modules/_news-tab";
 import './modules/_comments-blog';
+import './modules/_textarea';
