@@ -49,12 +49,9 @@
 	}
 
 	.checkbox__text {
-		@include max-screen($small_tablet) {
-			text-align: center;
-		}
 
 		@include max-screen($large_mobile) {
-			text-align: left;
+			text-align: center;
 		}
 	}
 }
