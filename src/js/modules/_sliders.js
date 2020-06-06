@@ -17,7 +17,7 @@ $(() => {
 						nav: true,
 						loop: true,
 						// autoHeight:true,
-						autoplay: true,
+						autoplay: false,
 						dots: false,
 						margin: 30,
 						navText: [
@@ -53,7 +53,7 @@ $(() => {
 						nav: true,
 						loop: true,
 						// autoHeight:true,
-						autoplay: true,
+						autoplay: false,
 						dots: false,
 						margin: 30,
 						navText: [
@@ -92,7 +92,7 @@ $(() => {
 						nav: true,
 						loop: true,
 						// autoHeight:true,
-						autoplay: true,
+						autoplay: false,
 						dots: false,
 						margin: 30,
 						navText: [
@@ -128,7 +128,7 @@ $(() => {
 						nav: true,
 						loop: true,
 						// autoHeight:true,
-						autoplay: true,
+						autoplay: false,
 						dots: false,
 						margin: 30,
 						navText: [
@@ -170,7 +170,7 @@ $(() => {
 						nav: true,
 						loop: true,
 						// autoHeight:true,
-						autoplay: true,
+						autoplay: false,
 						dots: false,
 						margin: 30,
 						navText: [

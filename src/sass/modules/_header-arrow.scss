@@ -1,11 +1,13 @@
 .header-arrow {
 	height: 484px;
 	padding-top: 2.5%;
+	position: relative;
 	padding-bottom: 10%;
 	background-image: url("/img/sert-back.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	color: #ffffff;
+	overflow: hidden;
 	@include max-screen($small_tablet) {
 		background-image: url("/img/sert-back-mobile.png");
 		background-repeat: no-repeat;
@@ -13,6 +15,12 @@
 		padding-bottom: 31%;
 		background-size: cover;
 		min-height: 320px;
+	}
+	@include max-screen($large_mobile) {
+		&_auto {
+			padding-bottom: 6rem;
+			min-height: 0;
+		}
 	}
 	&__breadcrumbs {
 		color: #ffffff;
@@ -22,8 +30,31 @@
 		width: 50%;
 		@include max-screen($large_mobile) {
 			width: 100%;
-			margin-top: 4rem;
+			margin-top: 4.3rem;
 		}
+	}
+
+	&__title {
+		@include max-screen($large_mobile) {
+			width: 70%;
+		}
+	}
+
+	&__bottom {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		bottom: 0;
+		&-row {
+			position: relative;
+		}
+
+		@include max-screen($large_tablet) {
+			display: none;
+		}
+	}
+	&__down {
+		margin-bottom: -5rem;
 	}
 
 	&__desc {
@@ -35,6 +66,7 @@
 			font-size: 1.4rem;
 			line-height: 2rem;
 			margin-top: 1.5rem;
+			width: 85%;
 		}
 	}
 
