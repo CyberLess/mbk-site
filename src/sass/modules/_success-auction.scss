@@ -252,7 +252,7 @@
 
   &__carusel {
     position: relative;
-    right: 54.7rem;
+    right: 54rem;
 
     display: flex;
     padding-top: 3rem;
@@ -260,7 +260,7 @@
     list-style: none;
 
     @include max-screen($small_tablet) {
-      right: 61.5rem;
+      right: 62.5rem;
     }
   }
 
@@ -446,14 +446,19 @@
     }
 
     .icon-button__prize-amount {
+      position: relative;
+
       display: flex;
       flex-wrap: wrap;
+      padding-right: 4rem;
 
       font-size: 1.9rem;
       font-weight: bold;
       color: #FF0600;
 
       @include max-screen($small_tablet) {
+        padding-right: 3rem;
+
         font-size: 1.2rem;
       }
 
@@ -467,7 +472,18 @@
     }
 
     .icon-button__prize-fire-wrap {
-      margin-left: 1rem;
+      position: absolute;
+      right: .6rem;
+      top: -.5rem;
+
+      width: 3rem;
+
+      @include max-screen($small_tablet) {
+        top: -.2rem;
+        right: .6rem;
+
+        width: 1.8rem;
+      }
     }
 
     .icon-button__image-wrapper {
