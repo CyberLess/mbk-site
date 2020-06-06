@@ -222,12 +222,12 @@
 	}
 
 	&__comment-text {
-		margin-left: -.3rem;
-		margin-bottom: 2.7rem;
-		padding-bottom: 3.7rem;
+		margin-bottom: 2.2rem;
+		padding-bottom: 1.7rem;
 		border-bottom: 1px solid #808080;
 
 		@include max-screen($large_mobile) {
+			margin-bottom: 1.5rem;
 			padding-bottom: 3rem;
 
 			font-size: 1.2rem;
@@ -237,13 +237,14 @@
 
 	&__link {
 		display: block;
-		margin-left: -.3rem;
-		margin-bottom: 1.6rem;
+		margin-bottom: 2.3rem;
 
 		font-weight: 500;
 		color: #FF0400;
 
 		@include max-screen($large_mobile) {
+			margin-bottom: 1.8rem;
+
 			font-size: 1.2rem;
 		}
 
@@ -257,7 +258,10 @@
 			transition-duration: .2s;
 
 			@include max-screen($small_tablet) {
-				display: none;
+				top: .1rem;
+				right: .3rem;
+
+				width: 3px;
 			}
 		}
 
@@ -271,7 +275,7 @@
 
 	&__time-wrap {
 		@include max-screen($large_mobile) {
-			font-size: 1.2rem;
+			font-size: 1rem;
 		}
 	}
 }
