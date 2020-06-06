@@ -61,7 +61,7 @@ $(() => {
   let counter = 0;
 
   $form.on('submit', () => {
-    if (counter < 1 && !$form.children().hasClass('error')) {
+    if (counter < 1 && !$form.children().hasClass('is-error')) {
       rotateWheel();
       counter += 1;
     }

@@ -185,7 +185,7 @@
     background-color: #FF0400;
 
     @include max-screen($small_tablet) {
-      top: 2rem;
+      top: 2.2rem;
       left: 52%;
 
       width: .3rem;
@@ -258,6 +258,10 @@
     padding-top: 3rem;
 
     list-style: none;
+
+    @include max-screen($small_tablet) {
+      right: 61.5rem;
+    }
   }
 
   &__item {
@@ -275,7 +279,7 @@
     @include max-screen($small_tablet) {
       width: 16rem;
       height: 22rem;
-      padding: 3.4rem 2.3rem 2rem 1.8rem;
+      padding: 3.4rem 1rem 2rem 1.8rem;
     }
 
     &_opened {
@@ -483,7 +487,7 @@
 }
 
 .icon-button {
-  &_advertising {
+  &_reclame {
     .icon-button__image-wrapper {
       right: 1rem;
       bottom: 0;
@@ -501,7 +505,7 @@
     }
   }
 
-  &_ad {
+  &_promotion {
     .icon-button__image-wrapper {
       right: 0;
       bottom: 0;
