@@ -37,6 +37,8 @@
 
 		&.is-error {
 			.input__item {
+				border-bottom-color: #FF0600;
+
 				color: #FF0600;
 
 				@include placeholder {
