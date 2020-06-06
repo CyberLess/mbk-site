@@ -1,4 +1,4 @@
-.subscribe{
+.subscribe {
 	overflow: hidden;
 
 	padding-top: 17rem;
@@ -32,13 +32,15 @@
 	&__book {
 		width: 932/713 * 100%;
 		// margin-left: -31.31557%;
-		margin-left: -466/713 * 100%;
+		// margin-left: -466/713 * 100%;
+		margin-left: -75.358%;
 		position: absolute;
 		left: 50%;
 		// bottom: 100%;
 		// margin-bottom: -15%;
 		bottom: 100%;
-		margin-bottom: -44/713 * 100%;
+		// margin-bottom: -44/713 * 100%;
+		margin-bottom: -13.171%;
 		user-select: none;
 		pointer-events: none;
 
@@ -56,8 +58,8 @@
 			margin-bottom: 0;
 			margin-top: -115/230 * 100%;
 
-			width: 297/230 * 100%;
-			margin-left: -37/230 * 100%;
+			width: 156.13043%;
+			margin-left: -33.08696%;
 			left: 0;
 		}
 	}
@@ -148,8 +150,8 @@
 			margin-bottom: -38/1336 * 100%;
 			width: 713/1336 * 100%;
 			position: relative;
-			padding-bottom: 113/1336 * 100%;
-			padding-left: 151/1336 * 100%;
+			padding-bottom: 123/1336 * 100%;
+			padding-left: 142/1336 * 100%;
 			padding-right: 151/1336 * 100%;
 
 			&:before {
@@ -246,6 +248,12 @@
 
 		@include max-screen($large_mobile) {
 			margin-top: 2.4rem;
+		}
+	}
+
+	&__text {
+		@include max-screen($large_mobile) {
+			font-size: 1.2rem;
 		}
 	}
 
