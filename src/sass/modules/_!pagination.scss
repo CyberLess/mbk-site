@@ -1,5 +1,5 @@
-.pagination{
-	&__num{
+.pagination {
+	&__num {
 		font-weight: 500;
 		width: 3.1rem;
 		height: 3.1rem;
@@ -8,15 +8,37 @@
 		justify-content: center;
 		margin: 3.5px;
 		border-radius: 50%;
-		transition: ease .15;
+		transition: ease 0.15s;
 
-		&:hover{
+		&:hover {
 			color: $red;
 		}
-		&.is-current{
+		&.is-current {
 			background-color: #454545;
 			color: #fff;
 		}
+	}
 
+	&__nav {
+		width: 1.8rem;
+		height: 1.8rem;
+		fill: $dark;
+		display: flex;
+		cursor: pointer;
+		transition: ease 0.15s;
+		align-items: center;
+		&:hover {
+			fill: $red;
+		}
+		&_prev {
+			margin-right: 2.6rem;
+			svg {
+				transform: rotate(-180deg);
+			}
+		}
+
+		&_next {
+			margin-left: 2.6rem;
+		}
 	}
 }

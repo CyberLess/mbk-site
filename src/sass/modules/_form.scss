@@ -37,12 +37,12 @@
 
 		&.is-error {
 			.input__item {
-				border-bottom-color: #FF0600;
+				border-bottom-color: #ff0600;
 
-				color: #FF0600;
+				color: #ff0600;
 
 				@include placeholder {
-					color: #FF0600;
+					color: #ff0600;
 				}
 			}
 		}
@@ -50,7 +50,11 @@
 
 	.checkbox__text {
 		@include max-screen($small_tablet) {
-		  text-align: center;
+			text-align: center;
+		}
+
+		@include max-screen($large_mobile) {
+			text-align: left;
 		}
 	}
 }

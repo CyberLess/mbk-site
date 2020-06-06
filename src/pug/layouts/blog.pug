@@ -201,7 +201,9 @@
 								path(class="triangle" d='M14.5 4.81v-3l3 3-3 3z')
 								path(class="stroke" d='M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z')
 				+e.bottom.flex._justify._vertical
-					+e.pagination.pagination__
+					+e.pagination.pagination__.flex._vertical
+						+e.nav._prev
+							+icon('arrow', '0 0 18.561 9.6213')
 						+e.list.flex._vertical.p
 							+e.num.A(href='#') 1
 							+e.num.A(href='#') 2
@@ -210,6 +212,8 @@
 							+e.num.A(href='#') 5
 							+e.num.SPAN ...
 							+e.num.A(href='#') 12
+						+e.nav._next
+							+icon('arrow', '0 0 18.561 9.6213')
 					+e.button.btn__._border.p.A(href='#')
 						+e.text Загрузить еще статей
 						+e.icon._arrow
