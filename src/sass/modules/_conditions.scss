@@ -16,9 +16,9 @@
 			margin-right: auto;
 			margin-bottom: 4.5rem;
 
-			font-size: 2.5rem;
+			font-size: 2.6rem;
 			text-align: center;
-			font-weight: 500;
+			font-weight: bold;
 		}
 
 		br {
@@ -58,6 +58,12 @@
 
 			@include max-screen($small_tablet) {
 				min-height: 0;
+			}
+
+			.gallery-slider__item {
+				@include max-screen($small_tablet) {
+					border-color: rgba(196, 196, 196, .3);
+				}
 			}
 		}
 		& .gallery-slider__cell_slider {
