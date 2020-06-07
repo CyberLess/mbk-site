@@ -167,6 +167,12 @@
       height: 1.5rem;
       border-radius: 50%;
     }
+
+    .checkbox__text {
+      @include max-screen($large_mobile) {
+        text-align: center;
+      }
+    }
   }
 
   &__bottom {
