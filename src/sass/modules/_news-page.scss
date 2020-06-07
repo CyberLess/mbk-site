@@ -2,12 +2,7 @@
 	position: relative;
 	padding-top: 8rem;
 	padding-bottom: 9.5rem;
-	z-index: 100;
-
-	@include max-screen($large_tablet) {
-		padding-top: 2.9rem;
-		padding-bottom: 0.3rem;
-	}
+	z-index: 900;
 
 	&__wrap {
 		display: flex;
@@ -20,6 +15,15 @@
 		&.active {
 			display: block;
 		}
+
+		@include max-screen($large_mobile) {
+			.subscribe__sub {
+				max-width: 80%;
+			}
+			.subscribe__text {
+				max-width: 85%;
+			}
+		}
 	}
 
 	&__top {
@@ -27,7 +31,7 @@
 		justify-content: space-between;
 		align-items: baseline;
 
-		@include max-screen($large_tablet) {
+		@include max-screen($large_mobile) {
 			flex-direction: column;
 			justify-content: flex-start;
 			padding-right: 30px;
@@ -37,8 +41,9 @@
 
 	&__title {
 		font-weight: 700;
+		padding-right: 5rem;
 
-		@include max-screen($large_tablet) {
+		@include max-screen($large_mobile) {
 			margin-bottom: 1.5rem;
 			font-size: 2.6rem;
 			line-height: 2.9rem;
@@ -47,9 +52,9 @@
 
 	&__column {
 		&_left {
-			width: 872/1336*100%;
+			width: 872/1336 * 100%;
 
-			@include max-screen($large_tablet) {
+			@include max-screen($large_mobile) {
 				position: fixed;
 				top: 0;
 				right: 0;
@@ -57,7 +62,7 @@
 				width: 1024px;
 				height: 100%;
 				padding: 80px 1.5rem 3rem;
-				background-color: #FFFFFF;
+				background-color: #ffffff;
 				transform: translateX(1050px);
 				transition: transform 0.3s ease;
 
@@ -67,12 +72,20 @@
 					overflow-y: auto;
 				}
 			}
+
+			@include max-screen($large_mobile) {
+				padding-top: 45px;
+			}
 		}
 
 		&_right {
-			width: 288/1336*100%;
+			width: 288/1336 * 100%;
 
 			@include max-screen($large_tablet) {
+				width: 27.55689%;
+			}
+
+			@include max-screen($large_mobile) {
 				width: 100%;
 			}
 		}
@@ -80,9 +93,9 @@
 
 	&__close {
 		display: none;
-		@include max-screen($large_tablet) {
+		@include max-screen($large_mobile) {
 			position: absolute;
-			top: 90px;
+			top: 52px;
 			right: 1.5rem;
 			z-index: 60;
 			display: flex;
@@ -93,22 +106,58 @@
 			& svg {
 				width: 1.5rem;
 				height: 1.5rem;
-				stroke: #FF0400;
+				stroke: #ff0400;
 				stroke-width: 2px;
 			}
 		}
 	}
 
 	&__pagination {
-		@include max-screen($large_tablet) {
+		margin-right: 4rem;
+		margin-top: 3.6rem;
+		@include max-screen($large_mobile) {
 			display: none;
 		}
 	}
 
 	&__button {
-		@include max-screen($large_tablet) {
+		margin-top: 3.6rem;
+		@include max-screen($large_mobile) {
 			width: 100%;
 			margin-top: 3.4rem;
+		}
+	}
+
+	@include max-screen($large_tablet) {
+		.other-articles {
+			width: 100%;
+		}
+
+		.other-articles__item {
+			width: 100%;
+			margin-right: 0;
+			height: auto;
+		}
+
+		.other-articles__link {
+			width: 100%;
+			padding: 0;
+			padding-top: 296/206 * 100%;
+		}
+	}
+
+	@include max-screen($large_mobile) {
+		padding-top: 2.9rem;
+		padding-bottom: 0.3rem;
+
+		.other-articles {
+			width: 288px;
+			margin-top: 0;
+			padding-bottom: 1.5rem;
+		}
+
+		.other-articles__link {
+			padding-top: 423/288 * 100%;
 		}
 	}
 }

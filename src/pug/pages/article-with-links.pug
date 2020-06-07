@@ -1,0 +1,22 @@
+extends ../layouts/base
+
+append vars
+		- title = 'Статья с оглавлением';
+		- subscribeImage = 'book-blog.png'
+		- additionalClass = 'article'
+
+block content
+	+b.border-top.js-article
+		include ../layouts/article-item-with-links
+		+b.mobile-wrapper.wrap
+			include ../layouts/article-estimate
+		include ../layouts/article-author
+		include ../layouts/article-tegs
+		include ../layouts/comments
+	+b.SECTION.group._top.gray._mobile.is-without-container.gray-article
+		+b.SECTION.white._mobile.radius-5._mobile
+			include ../layouts/blog-with-title
+			include ../layouts/master-white
+			include ../layouts/subscribe
+block footer
+	+footer(class="_white")

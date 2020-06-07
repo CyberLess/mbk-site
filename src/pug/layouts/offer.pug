@@ -1,7 +1,8 @@
 +b.SECTION.offer
 	+e.bg
-		+e.video.VIDEO(loop="" muted="" autoplay="" poster="")
-			source(type="video/mp4" src="/video.mp4")
+		+e.bg-image.object-fit.IMG(src="/img/main-bg.jpg")
+		//- +e.video.VIDEO(loop="" muted="" autoplay="" poster="")
+		//- 	source(type="video/mp4" src="/video.mp4")
 	+socials(class="_default")
 	+e.wrap.wrap
 		+e.row.flex._vertical._justify
@@ -18,7 +19,9 @@
 					+e.circle-item
 					+e.circle-item
 				+e.preview
-					+e.iframe.VIDEO(loop="" muted="" autoplay="" poster="")
-						source(type="video/mp4" src="/video.mp4")
-				//- 	+e.IFRAME.iframe(data-keepplaying width="1043" height="587" src="https://www.youtube.com/embed/kgaO45SyaO4?autoplay=1&mute=1&vq=medium&loop=1&playlist=kgaO45SyaO4&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+					//- локально
+					//- +e.iframe.VIDEO(loop="" muted="" autoplay="" poster="")
+					//- 	source(type="video/mp4" src="/video.mp4")
+					//- с ютуба
+					//- 	+e.IFRAME.iframe(data-keepplaying width="1043" height="587" src="https://www.youtube.com/embed/kgaO45SyaO4?autoplay=1&mute=1&vq=medium&loop=1&playlist=kgaO45SyaO4&showinfo=0&controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
 				+e.inner

@@ -17,7 +17,9 @@ block content
 						include ../layouts/select-min
 					include ../layouts/news-list
 					+e.bottom.flex._justify._vertical
-						+e.pagination.pagination__
+						+e.pagination.pagination__.flex._vertical
+							+e.nav._prev
+								+icon('arrow', '0 0 18.561 9.6213')
 							+e.list.flex._vertical.p
 								+e.num.A(href='#') 1
 								+e.num.A(href='#') 2
@@ -26,6 +28,8 @@ block content
 								+e.num.A(href='#') 5
 								+e.num.SPAN ...
 								+e.num.A(href='#') 12
+							+e.nav._next
+								+icon('arrow', '0 0 18.561 9.6213')
 						+e.button.btn__._border.p.A(href='#')
 							+e.text Загрузить еще новостей
 							+e.icon._arrow
