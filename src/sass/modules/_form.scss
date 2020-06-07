@@ -47,11 +47,4 @@
 			}
 		}
 	}
-
-	.checkbox__text {
-
-		@include max-screen($large_mobile) {
-			text-align: center;
-		}
-	}
 }

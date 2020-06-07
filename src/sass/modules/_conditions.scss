@@ -62,7 +62,7 @@
 
 			.gallery-slider__item {
 				@include max-screen($small_tablet) {
-					border-color: rgba(196, 196, 196, .3);
+					border-color: rgba(196, 196, 196, .3) !important;
 				}
 			}
 		}
