@@ -1,64 +1,73 @@
 .news-list {
-  padding-top: 4.5rem;
-  padding-bottom: 3.6rem;
+	padding-top: 4.5rem;
+	// padding-bottom: 3.6rem;
 
-  &__item {
-    margin-bottom: 2.8rem;
-  }
+	&__item {
+		margin-bottom: 2.8rem;
+	}
 
-  &__link {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 4.8rem 3.3rem 5rem 4.6rem;
-    color: $dark !important;
-    border: 1px solid #B3B3B3;
-    transition: all 0.2s;
+	&__link {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		padding: 4.8rem 3.3rem 5rem 4.6rem;
+		color: $dark !important;
+		border: 1px solid #b3b3b3;
+		transition: all 0.2s;
 
-    &:hover {
-      background-color: #FFFFFF;
-      border: 1px solid #FFFFFF;
-    }
-  }
+		&:hover {
+			background-color: #ffffff;
+			border: 1px solid #ffffff;
+		}
+	}
 
-  &__title {
-    max-width: 56.1rem;
-  }
+	&__title {
+		max-width: 56.1rem;
+	}
 
-  &__date {
-    opacity: 0.5;
-  }
+	&__date {
+		opacity: 0.5;
+	}
 
-  @include max-screen($small_tablet - 1) {
-    &__link {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 1.8rem 1.9rem;
-    }
+	@include max-screen($large_tablet) {
+		&__link {
+			padding: 3rem 2rem;
+		}
+		&__date {
+			text-align: right;
+		}
+	}
 
-    &__title {
-      max-width: 100%;
-      margin-bottom: 1.2rem;
-    }
-  }
+	@include max-screen($small_tablet - 1) {
+		&__link {
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 1.8rem 1.9rem;
+		}
 
-  @include max-screen($large_mobile) {
-    padding-top: 2.5rem;
-    padding-bottom: 0;
-    &__title {
-      font-size: 1.4rem;
-      line-height: 2rem;
-    }
+		&__title {
+			max-width: 100%;
+			margin-bottom: 1.2rem;
+		}
+	}
 
-    &__date {
-      font-size: 1rem;
-      line-height: 1.4rem;
-    }
+	@include max-screen($large_mobile) {
+		padding-top: 2.5rem;
+		padding-bottom: 0;
+		&__title {
+			font-size: 1.4rem;
+			line-height: 2rem;
+		}
 
-    &__item {
-      &:last-of-type {
-        margin-bottom: 0;
-      }
-    }
-  }
+		&__date {
+			font-size: 1rem;
+			line-height: 1.4rem;
+		}
+
+		&__item {
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
 }

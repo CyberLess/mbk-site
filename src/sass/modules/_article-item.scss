@@ -155,10 +155,22 @@
 		color: #808080;
 	}
 
+	&__fluid {
+		position: absolute;
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		left: 100%;
+		top: 0;
+		margin-left: 4rem;
+		bottom: 30rem;
+	}
+
 	&__cell {
 		&_left {
 			width: 805/1336 * 100%;
 			padding-bottom: 3.1rem;
+			position: relative;
 
 			& ol {
 				padding-top: 1.5rem;
@@ -177,13 +189,16 @@
 	}
 
 	&__title-link {
-		position: fixed;
+		// position: fixed;
 		// right: 610/1920*100%;
-		margin-left: 80rem;
-		top: 50%;
+		// margin-left: 80rem;
+		// top: 50%;
+		transform-origin: bottom;
+		position: absolute;
 		z-index: 20;
-		display: flex;
+		display: inline-flex;
 		align-items: center;
+		margin-top: 5rem;
 		padding: 2rem 3.8rem;
 		font-weight: 500;
 		font-size: 15px;
@@ -193,9 +208,9 @@
 		background-color: #ffffff;
 		border: 1px solid #0e0e0e;
 		border-radius: 5px;
-		transform: rotate(-90deg);
+		transform: rotate(-90deg) translateY(-50%);
 		transition: all 0.1s ease-out;
-		display: none;
+		// display: none;
 		color: inherit !important;
 
 		&.is-active {
@@ -209,6 +224,7 @@
 		& svg {
 			width: 1.05rem;
 			height: 1rem;
+			flex: 0 0 auto;
 			fill: #0e0e0e;
 			transform: rotate(-90deg);
 			transition: all 0.1s ease;
@@ -291,9 +307,12 @@
 				width: 22%;
 			}
 		}
-		&__title-link {
-			right: 25%;
+		&__fluid {
+			margin-left: 1rem;
 		}
+		// &__title-link {
+		// 	right: 25%;
+		// }
 	}
 
 	@include max-screen($large_tablet) {
@@ -313,6 +332,9 @@
 					display: none;
 				}
 			}
+		}
+		&__fluid {
+			display: none;
 		}
 		&__title-link {
 			right: 0;
