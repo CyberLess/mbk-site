@@ -1,167 +1,168 @@
-.ba{
-	overflow: hidden;
-	position: absolute;
-	left: 0;
-	top: 0;
-	cursor: ew-resize;
-	width: 100%;
-	height: 100%;
+.ba {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  //cursor: ew-resize;
+  width: 100%;
+  height: 100%;
 
-	&:not(.is-moving){
+  &:not(.is-moving) {
 
-		.ba{
-			&__resize{
-				transition: ease .3s;
-			}
-		}
-	}
+    .ba {
+      &__resize {
+        transition: ease .3s;
+      }
+    }
+  }
 
-	&.is-mouseleave{
+  &.is-mouseleave {
 
-		.ba{
+    .ba {
 
-			&__resize{
-				transition: ease .6s;
-			}
+      &__resize {
+        transition: ease .6s;
+      }
 
-			&__handle{
-				transition: left ease .6s;
-			}
+      &__handle {
+        transition: left ease .6s;
+      }
 
-			&__arrow{
-				transition: transform ease .6s;
-			}
-		}
-	}
+      &__arrow {
+        transition: transform ease .6s;
+      }
+    }
+  }
 
-	&.js-animation-play{
-		.ba{
-			&__resize{
-				animation-name: baAnim;
-			}
+  //&.js-animation-play{
+  //	.ba{
+  //		&__resize{
+  //			animation-name: baAnim;
+  //		}
+  //
+  //		&__handle{
+  //			animation-name: baAnimHandle;
+  //		}
+  //		&__arrow{
+  //			animation-name: baAnimArrow;
+  //		}
+  //	}
+  //}
 
-			&__handle{
-				animation-name: baAnimHandle;
-			}
-			&__arrow{
-				animation-name: baAnimArrow;
-			}
-		}
-	}
+  &__handle { /* Thin line seperator */
+    position: absolute;
+    z-index: 500;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 0px;
+    // will-change: left;
+    // transition: linear .1s;
 
-	&__handle { /* Thin line seperator */
-		position:absolute;
-		left: 50%;
-		top:0;
-		bottom:0;
-		z-index: 500;
-		width: 0px;
-		// will-change: left;
-		// transition: linear .1s;
+    animation-duration: 6s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
 
-	    animation-duration: 6s;
-	    animation-timing-function: ease;
-	    animation-iteration-count: infinite;
-
-	}
-
-
-	&__inner{
-	    position: absolute;
-	    top: 50%;
-	    width: 6.9rem;
-	    height: 6.9rem;
-	    margin: -3.45rem 0 0 -3.45rem;
-	    border-radius: 50%;
-	    border: .2rem solid #fff;
-	    display: flex;
-	    align-items: center;
-	    justify-content: center;
-	}
-
-	&__arrow{
-    	display: block;
-    	position: absolute;
-    	left: 50%;
-    	// margin-left: 1.3rem;
-    	margin-top: -.5rem;
-    	top: 50%;
-		transform-origin: 0% 50%;
-		transform: rotate(180deg);
-
-		animation-duration: 6s;
-	    animation-timing-function: ease;
-	    animation-iteration-count: infinite;
-
-		&:before{
-			content: '';
-    		margin-left: 4.75rem;
-    		display: block;
-			width: 0;
-			height: 0;
-			border-style: solid;
-
-			border-width: .5rem 0 .5rem .9rem;
-
-			border-color: transparent transparent transparent #fff;
-		}
-	}
-
-	&__image{
-	    width: 100%;
-	    display:block;
-	    max-width: none;
-	    object-fit: cover;
-	    // width: 103.3rem;
-	    height: 100%;
-	}
-
-	&__resize {
-	    position: absolute;
-	    top:0;
-	    left: 0;
-	    height: 100%;
-	    z-index: 50;
-	    // width: 50%;
-	    width: 50%;
-	    overflow: hidden;
-	    // will-change: width;
-
-	    animation-duration: 6s;
-	    animation-timing-function: ease;
-	    animation-iteration-count: infinite;
-
-	    // transition: linear .1s;
-
-	    // clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
-	    // -webkit-clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
-	}
-
-	@include max-screen($small_tablet) {
-		&.js-animation-play{
-			.ba{
-				&__resize, &__handle, &__arrow{
-					animation-name: none!important;
-				}
-			}
-		}
-
-	}
-
-	@include max-screen($small_tablet) {
-		// pointer-events: none;
+  }
 
 
-		// &__resize{
-		// 	animation-name: baAnim;
-		// }
+  &__inner {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6.9rem;
+    height: 6.9rem;
+    margin: -3.45rem 0 0 -3.45rem;
+    border: .2rem solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 
-		// &__handle{
-		// 	animation-name: baAnimHandle;
-		// }
-		// &__arrow{
-		// 	animation-name: baAnimArrow;
-		// }
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    // margin-left: 1.3rem;
+    display: block;
+    margin-top: -.5rem;
+    transform: rotate(180deg);
+    transform-origin: 0% 50%;
 
-	}
+    animation-duration: 6s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      margin-left: 4.75rem;
+      border-width: .5rem 0 .5rem .9rem;
+
+      border-style: solid;
+
+      border-color: transparent transparent transparent #fff;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    // width: 103.3rem;
+    object-fit: cover;
+  }
+
+  &__resize {
+    position: absolute;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    // width: 50%;
+    width: 50%;
+    height: 100%;
+    // will-change: width;
+
+    animation-duration: 6s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+
+    // transition: linear .1s;
+
+    // clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+    // -webkit-clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+  }
+
+  @include max-screen($small_tablet) {
+    &.js-animation-play {
+      .ba {
+        &__resize, &__handle, &__arrow {
+          animation-name: none !important;
+        }
+      }
+    }
+
+  }
+
+  @include max-screen($small_tablet) {
+    // pointer-events: none;
+
+
+    // &__resize{
+    // 	animation-name: baAnim;
+    // }
+
+    // &__handle{
+    // 	animation-name: baAnimHandle;
+    // }
+    // &__arrow{
+    // 	animation-name: baAnimArrow;
+    // }
+
+  }
 }

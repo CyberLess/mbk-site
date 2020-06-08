@@ -103,6 +103,10 @@
 
 		background-repeat: no-repeat;
 
+		@include min-screen($small_tablet + 1) {
+			overflow: hidden;
+		}
+
 		@include max-screen($small_tablet) {
 			background: none !important;
 		}
@@ -786,6 +790,12 @@
 					@include min-screen($small_tablet + 1) {
 						display: none;
 					}
+				}
+			}
+
+			.prize-wrap__prize-icon-wrap {
+				@include min-screen($small_tablet + 1) {
+					margin-bottom: 0;
 				}
 			}
 		}
