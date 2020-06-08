@@ -156,6 +156,12 @@ $(() => {
 					required: true,
 				},
 
+				address: {
+					required: true
+				},
+				price: {
+					required: true
+				},
 				square: {
 					required: true,
 				},

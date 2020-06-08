@@ -67,7 +67,7 @@ $(() => {
       .attr('tabindex', 0)
       .focus();
 
-    $overlay.fadeIn(ANIMATION_OPEN_TIME).css('z-index', '601');
+    $overlay.fadeIn(ANIMATION_OPEN_TIME).css('z-index', '901');
     $body.css({
       // position: 'absolute',
       // width: bodyOldWidth,
@@ -111,14 +111,16 @@ $(() => {
   };
 
   $sellForm.on('submit', () => {
+    if (!$sellForm.find('.is-error').length > 0) {
       openFirstPopup();
 
-    if (screen.width <= TAB_MIN) {
-      if ($roomsDesignation.first().text().length > MAX_LENGTH_ROOMS_MOB) {
-        cropRoomDesignation(TEMP_ROOMS);
+      if (screen.width <= TAB_MIN) {
+        if ($roomsDesignation.first().text().length > MAX_LENGTH_ROOMS_MOB) {
+          cropRoomDesignation(TEMP_ROOMS);
+        }
+      } else {
+        $roomsDesignation.text(determineEnding(TEMP_ROOMS));
       }
-    } else {
-      $roomsDesignation.text(determineEnding(TEMP_ROOMS));
     }
   });
 
