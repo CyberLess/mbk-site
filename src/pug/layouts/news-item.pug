@@ -3,11 +3,13 @@
 		+breadcrumbs('Главная', 'Услуги', 'Получить деньги')
 		+e.content._news.content._big
 			+e.row.flex._justify.js-title
-				+e.title-link.js-link.A(href="#title")
-					span
-						|Оглавление
-					+icon('burger', '0 0 14 13')
 				+e.cell._left
+					+e.fluid
+						.css-sticky
+							+e.title-link.js-link.A(href="#title")
+								span
+									|Оглавление
+								+icon('burger', '0 0 14 13')
 					+e.white
 						+e.prev-link.h6.A(href="#")
 							|Назад к новостям

@@ -174,12 +174,12 @@
 
 			& ol {
 				padding-top: 1.5rem;
-				padding-bottom: 1.5rem;
+				// padding-bottom: 1.5rem;
 			}
 
 			& ul {
 				padding-top: 1.5rem;
-				padding-bottom: 1.5rem;
+				// padding-bottom: 1.5rem;
 			}
 		}
 
@@ -344,6 +344,11 @@
 		&__white {
 			padding-left: 0;
 			padding-right: 0;
+		}
+		&__content {
+			&_news {
+				padding-top: 2.2rem;
+			}
 		}
 
 		&_gray {
