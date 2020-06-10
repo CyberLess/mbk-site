@@ -3,6 +3,7 @@ import "jquery-mask-plugin";
 $(() => {
 	var selector = [
 		"input[name='phone']",
+		".js-phone-mask",
 		".js-passport-mask",
 		".js-date-mask",
 		".js-code-mask",
@@ -15,6 +16,7 @@ $(() => {
 
 		switch (element) {
 			case "input[name='phone']":
+			case ".js-phone-mask":
 				mask = "+7 000 000 00 00";
 				break;
 			case ".js-passport-mask":
@@ -31,7 +33,7 @@ $(() => {
 		$(item).mask(mask);
 	});
 
-	$("input[name='phone']").keyup(function (e) {
+	$("input[name='phone'], .js-phone-mask").keyup(function (e) {
 		var this_val = $(this).val();
 		var val_length = this_val.length;
 
@@ -157,10 +159,10 @@ $(() => {
 				},
 
 				address: {
-					required: true
+					required: true,
 				},
 				price: {
-					required: true
+					required: true,
 				},
 				square: {
 					required: true,
