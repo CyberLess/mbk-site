@@ -34,8 +34,8 @@
                     th Район
                     th Комнат в кв.
                     th Бюджет
-                tr
-                    +e.item._buyer.TD Покупатель № 23422
+                +e.buyer-row.TR(tabindex="0")
+                    +e.item._buyer.TD(data-buyer="23422") Покупатель № 23422
                     +e.item._district.TD
                         +e.metro-icon.SPAN
                             +icon('metro', '0 0 25 11')
@@ -44,8 +44,8 @@
                         +e.rooms-designation.SPAN комнаты
                     +e.item._budget.TD 4 960 000
                         +e.price-char.SPAN  ₽
-                tr
-                    +e.item._buyer.TD Покупатель № 23423
+                +e.buyer-row.TR(tabindex="0")
+                    +e.item._buyer.TD(data-buyer="23423") Покупатель № 23423
                     +e.item._district.TD
                         +e.metro-icon.SPAN
                             +icon('metro', '0 0 25 11')
@@ -54,8 +54,8 @@
                         +e.rooms-designation.SPAN комнаты
                     +e.item._budget.TD 5 250 000
                         +e.price-char.SPAN  ₽
-                tr
-                    +e.item._buyer.TD Покупатель № 23424
+                +e.buyer-row.TR(tabindex="0")
+                    +e.item._buyer.TD(data-buyer="23424") Покупатель № 23424
                     +e.item._district.TD
                         +e.metro-icon.SPAN
                             +icon('metro', '0 0 25 11')
@@ -64,8 +64,8 @@
                         +e.rooms-designation.SPAN комнаты
                     +e.item._budget.TD 4 950 000
                         +e.price-char.SPAN  ₽
-                tr
-                    +e.item._buyer.TD Покупатель № 23425
+                +e.buyer-row.TR(tabindex="0")
+                    +e.item._buyer.TD(data-buyer="23425") Покупатель № 23425
                     +e.item._district.TD
                         +e.metro-icon.SPAN
                             +icon('metro', '0 0 25 11')
@@ -74,8 +74,8 @@
                         +e.rooms-designation.SPAN комнаты
                     +e.item._budget.TD 4 950 000
                         +e.price-char.SPAN  ₽
-                tr
-                    +e.item._buyer.TD Покупатель № 23426
+                +e.buyer-row.TR(tabindex="0")
+                    +e.item._buyer.TD(data-buyer="23426") Покупатель № 23426
                     +e.item._district.TD
                         +e.metro-icon.SPAN
                             +icon('metro', '0 0 25 11')
@@ -96,7 +96,7 @@
         +icon('close', '0 0 25 25')
 
     +e.FORM.form(action="/")
-        +e.INPUT(type="hidden" name="method[subscribe]" value='1')
+        +e.INPUT(type="hidden" name="buyer" value='no')
         +e.name.input__
             +e.INPUT.item(type="text" placeholder="Ваше имя" name="name")
             +e.icon-wrap

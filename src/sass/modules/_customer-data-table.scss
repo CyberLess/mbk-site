@@ -35,6 +35,15 @@
       font-size: 1.4rem;
     }
   }
+
+  &__buyer-row {
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        color: #FF0600;
+    }
+  }
 }
 
 tr.customer-data-table__head-row {

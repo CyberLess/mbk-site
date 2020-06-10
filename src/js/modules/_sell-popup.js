@@ -13,8 +13,10 @@ $(() => {
   const $contactBuyerBtn = $('.sell-popup__btn');
   const $firstPopup = $('.sell-popup');
   const $secondPopup = $('.sell-order-popup');
+  const $secondBuyerInput = $secondPopup.find('input[name=buyer]');
   const $closeSecondBtn = $('.sell-order-popup__close');
   const $roomsDesignation = $('.customer-data-table__rooms-designation');
+  const $buyerRow = $('.customer-data-table__buyer-row');
   let isFirstOpened = false;
 
   const removeCloseFirstListeners = () => {
@@ -124,6 +126,26 @@ $(() => {
     }
   });
 
+  const setBuyerIdInHidden = ($buyerCellElem) => {
+    if ($buyerCellElem) {
+      const id = $buyerCellElem.attr('data-buyer');
+
+      $secondBuyerInput.val(id);
+    }
+  };
+
+  const onBuyerClick = (evt) => {
+    if ($(evt.currentTarget).hasClass('customer-data-table__buyer-row')) {
+      const $buyerCell = $(evt.currentTarget).find('.customer-data-table__item_buyer');
+
+      setBuyerIdInHidden($buyerCell);
+      $contactBuyerBtn.trigger('click');
+      $(window).trigger('buyerBtn')
+    }
+  };
+
+  $buyerRow.click(onBuyerClick);
+
   $contactBuyerBtn.magnificPopup({
     type: 'inline',
     preloader: false,
@@ -136,6 +158,10 @@ $(() => {
         closeSecondPop($secondPopup)
       }
     }
+  });
+
+  $contactBuyerBtn.click((evt) => {
+
   });
 
   $closeSecondBtn.click(function () {
