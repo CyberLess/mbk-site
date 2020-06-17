@@ -24,10 +24,15 @@
 		let $input = $parent.find("input:checked");
 		let $form = $parent.closest("form");
 		let $email = $form.find(".input_email");
+		let $phone = $form.find(".input_phone");
 		if ($input.val() == "E-mail") {
-			$email.slideDown(300);
+			// $email.slideDown(300);
+			$email.show();
+			$phone.hide();
 		} else {
-			$email.slideUp(300);
+			$email.hide();
+			$phone.show();
+			// $email.slideUp(300);
 		}
 	});
 

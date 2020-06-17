@@ -31,7 +31,7 @@
 
 		&_form {
 			margin-top: -5px;
-			padding-top: 0.4rem;
+			padding-top: 0.4rem !important;
 		}
 
 		&:hover {
@@ -290,9 +290,9 @@
 				height: 0.76rem;
 			}
 		}
-		&__other {
-			padding-left: 1.2rem;
-		}
+		// &__other {
+		// 	padding-left: 1.2rem;
+		// }
 		&__answer {
 			font-size: 10px;
 			margin-left: 11px;

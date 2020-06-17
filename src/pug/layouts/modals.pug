@@ -13,7 +13,7 @@
 						+icon('socialMail')
 					+e.SPAN.text.small E-mail
 				+e.LABEL.item._wa
-					+e.INPUT.input(type="radio" name="social" value="WhatsApp")
+					+e.INPUT.input(type="radio" checked="" name="social" value="WhatsApp")
 					+e.SPAN.icon
 						+icon('socialWa')
 					+e.SPAN.text.small WhatsApp
@@ -29,7 +29,7 @@
 					+e.SPAN.text.small Telegram
 			+e.field.input__._email._default(style="display: none;")
 				+e.INPUT.item(type="text" placeholder="Введите ваш E-mail" name="email")
-			+e.field.input__._default
+			+e.field.input__._phone._default
 				+e.INPUT.item(type="text" placeholder="Введите ваш телефон" name="phone")
 			+e.button.btn.h6.BUTTON
 				+e.text Подписаться
