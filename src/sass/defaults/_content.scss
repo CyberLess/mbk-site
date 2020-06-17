@@ -6,12 +6,6 @@
 	line-height: 120%;
 }
 
-.content ul,
-.content ol {
-	& + p {
-		padding-top: 2rem;
-	}
-}
 .content strong,
 .strong {
 	font-weight: 500 !important;
@@ -201,6 +195,15 @@
 					color: #ff0400;
 				}
 			}
+		}
+	}
+}
+
+@include min-screen($large_mobile + 1) {
+	.content ul,
+	.content ol {
+		& + p {
+			padding-top: 2rem;
 		}
 	}
 }

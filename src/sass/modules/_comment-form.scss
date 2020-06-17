@@ -1,54 +1,94 @@
 .comment-form {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 10.9rem;
-  padding-top: 5.5rem;
-  padding-bottom: 5.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 10.9rem;
+	padding-top: 4.9rem;
+	padding-bottom: 5.5rem;
 
-  &__input {
-    width: 44.3478%;
-  }
+	&_small {
+		padding: 0 !important;
+		margin-bottom: 1.8rem;
 
-  &__button {
-    flex-shrink: 0;
-    margin-left: auto;
-  }
+		.comment-form {
+			&__input {
+				width: 322/661 * 100%;
+			}
+			&__button {
+				width: 268/661 * 100%;
+			}
+		}
+	}
 
-  @include max-screen($large_tablet) {
-    padding-left: 0;
-  }
+	&__input {
+		width: 44.3478%;
+	}
 
-  @include max-screen($large_mobile) {
-    display: none;
-    // flex-direction: column;
-    // &__input {
-    //   order: 1;
-    //   width: 100%;
-    //   .input{
-    //     &__item{
-    //       padding: 1.3rem 2.1rem;
-    //       font-size: 12px;
-    //       border: 1px solid #C2C2C2;
-    //       background-color: #FFFFFF;
-    //     }
-    //   }
-    // }
-    // &__textarea {
-    //   order: 2;
-    // }
-    // &__button {
-    //   order: 3;
-    //   margin-left: 0;
-    // }
-  }
+	&__button {
+		flex-shrink: 0;
+		margin-left: auto;
+	}
+
+	@include max-screen($large_tablet) {
+		padding-left: 0;
+	}
+
+	@include max-screen($large_mobile) {
+		// &:not(.comment-form_small) {
+		// 	display: none;
+		// }
+		// &_small {
+		// .comment-form {
+		padding-top: 3.5rem;
+		padding-bottom: 0;
+		&__input {
+			width: 226/290 * 100% !important;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 2.3rem;
+
+			.input__item {
+				height: 3.6rem;
+				text-align: center;
+				font-size: 1.9rem;
+			}
+		}
+		&__button {
+			width: 100% !important;
+		}
+		&_small {
+			margin-bottom: 1rem;
+		}
+		// }
+		// }
+		// flex-direction: column;
+		// &__input {
+		//   order: 1;
+		//   width: 100%;
+		//   .input{
+		//     &__item{
+		//       padding: 1.3rem 2.1rem;
+		//       font-size: 12px;
+		//       border: 1px solid #C2C2C2;
+		//       background-color: #FFFFFF;
+		//     }
+		//   }
+		// }
+		// &__textarea {
+		//   order: 2;
+		// }
+		// &__button {
+		//   order: 3;
+		//   margin-left: 0;
+		// }
+	}
 }
 
 .comments--questions .comment-form {
-  & .textarea__item {
-    padding-bottom: 7.2rem;
-  }
-  &__button {
-    padding-left: 7rem;
-    padding-right: 7rem;
-  }
+	& .textarea__item {
+		padding-bottom: 7.2rem;
+	}
+	&__button {
+		padding-left: 7rem;
+		padding-right: 7rem;
+	}
 }

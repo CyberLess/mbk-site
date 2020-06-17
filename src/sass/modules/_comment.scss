@@ -1,209 +1,309 @@
 .comment {
-  &__content {
-    position: relative;
-    padding-top: 4.2rem;
-    padding-bottom: 4.2rem;
-    border-bottom: 1px solid rgb(224, 224, 224);
+	&_open {
+		& > .comment {
+			&__other {
+				padding-left: 3.4rem;
+			}
+		}
+	}
 
-    &_no-border {
-      border-bottom: none;
-    }
-  }
+	&.is-form-open {
+		& > .comment {
+			&__answer-area {
+				padding-top: 4.9rem;
+			}
+		}
+	}
 
-  &__head {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.3rem;
-  }
+	&__other {
+		margin-bottom: -1px;
+	}
 
-  &__time {
-    font-size: 1.4rem;
-    line-height: 120%;
-    color: rgb(183, 183, 183);
-  }
+	&__content {
+		position: relative;
+		padding-top: 4.2rem;
+		padding-bottom: 3.1rem;
+		border-bottom: 1px solid rgb(224, 224, 224);
 
-  &__text {
-    width: 83.046%;
-    margin-top: 1.5rem;
-    margin-bottom: 1.3rem;
-    line-height: 140%;
-  }
+		&_no-border {
+			border-bottom: none;
+		}
 
-  &__nav {
-    position: absolute;
-    top: 3.1rem;
-    right: 0px;
-    display: flex;
-  }
+		&_form {
+			margin-top: -5px;
+			padding-top: 0.4rem;
+		}
 
-  &__nav-item {
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    margin-left: 1.8rem;
-    line-height: 4.4rem;
-    transition: all 0.1s ease 0s;
-  }
+		&:hover {
+			.comment {
+				&__nav-item {
+					display: flex !important;
+					// opacity: 1 !important;
+					// visibility: visible !important;
+				}
+			}
+		}
+	}
 
-  &__nav-icon {
-    margin-right: 8px;
+	&__head {
+		display: flex;
+		align-items: center;
+		// margin-bottom: 0.3rem;
+	}
 
-    &_comment {
-      width: 1.4rem;
-      height: 1.4rem;
-      margin-top: 2px;
-      fill: rgb(191, 191, 191);
-    }
+	&__time {
+		font-size: 1.4rem;
+		margin-right: 1.8rem;
+		line-height: 120%;
+		color: rgb(183, 183, 183);
+	}
 
-    &_heart {
-      width: 1.4rem;
-      height: 1.2rem;
-      fill: rgb(255, 6, 0);
-    }
-  }
+	&__text {
+		width: 83.046%;
+		margin-top: 1rem;
+		// margin-bottom: 1.3rem;
+		line-height: 140%;
+	}
 
-  &__button {
-    display: flex;
-    align-items: center;
-    font-family: 'Geometria';
-    font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 140%;
-    padding-right: 0px;
-    cursor: pointer;
-    border: none;
-    background-color: transparent;
+	&__bottom {
+		margin-top: 0.2rem;
+	}
 
-    & svg {
-      width: 0.7rem;
-      height: 1.2rem;
-      margin-left: 1.2rem;
-      fill: rgb(255, 4, 0);
-      stroke: rgb(255, 4, 0);
-      margin-top: 0.4rem;
-    }
+	&__nav {
+		// position: absolute;
+		// top: 3.1rem;
+		// right: 0px;
+		display: flex;
+		min-height: 4.4rem;
+	}
 
-    &_arrow-up {
-      & svg {
-        transform: rotate(180deg);
-      }
-    }
-  }
+	&__nav-item {
+		display: flex;
+		-webkit-box-align: center;
+		align-items: center;
+		margin-left: 1.8rem;
+		line-height: 4.4rem;
+		transition: all 0.1s ease 0s;
+		min-height: 4.4rem;
 
-  &__other {
-    padding-left: 4.8rem;
+		&.is-empty {
+			&:not(.is-clicked) {
+				display: none;
+				// opacity: 0;
+				// visibility: hidden;
+			}
+		}
+	}
 
-    &_hidden {
-      display: none;
-      border-bottom: 1px solid rgb(224, 224, 224);
-    }
-  }
+	&__nav-text {
+		margin-left: 8px;
+	}
 
-  &__avatar {
-    width: 4.2rem;
-    height: 4.2rem;
-    margin-right: 1.7rem;
-    border-radius: 50%;
-    overflow: hidden;
+	&__nav-icon {
+		&_comment {
+			width: 1.4rem;
+			height: 1.4rem;
+			margin-top: 2px;
+			fill: rgb(191, 191, 191);
+		}
 
-    & img {
-      width: 100%;
-      height: 100%;
-    }
-  }
+		&_heart {
+			width: 1.4rem;
+			height: 1.2rem;
+			fill: rgb(255, 6, 0);
+		}
+	}
 
-  &__title-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
+	&__button {
+		display: flex;
+		align-items: center;
+		font-family: "Geometria";
+		font-weight: 500;
+		font-size: 1.6rem;
+		// line-height: 140%;
+		line-height: 1.7rem;
 
-  &__title {
-    display: inline-flex;
-    -webkit-box-align: center;
-    align-items: center;
-    font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 140%;
-  }
+		padding-right: 0px;
+		cursor: pointer;
+		border: none;
+		background-color: transparent;
 
-  &__subtitle {
-    font-size: 1.4rem;
-    line-height: 140%;
-  }
+		&_more {
+			margin-top: 0.6rem;
+			margin-bottom: 1.3rem;
+		}
 
-  &__answer {
-    display: inline-flex;
-    align-items: center;
-    margin-left: 1.7rem;
-    font-weight: 400;
+		& svg {
+			width: 1.6rem;
+			height: 1.6rem;
+			margin-right: 1.8rem;
+			fill: rgb(255, 4, 0);
+			// stroke: rgb(255, 4, 0);
+			// margin-top: 0.4rem;
+		}
+	}
 
-    & svg {
-      width: 1.4rem;
-      height: 1.4rem;
-      margin-right: 0.9rem;
-      fill: none;
-      stroke: rgb(14, 14, 14);
-    }
-  }
+	&__other {
+		// padding-left: 4.8rem;
 
-  .comment__nav-item:hover .comment__nav-icon {
-    fill: rgb(14, 14, 14);
-  }
+		&_hidden {
+			display: none;
+			border-bottom: 1px solid rgb(224, 224, 224);
+		}
+	}
 
-  @include max-screen($large_mobile) {
+	&__avatar {
+		width: 4.2rem;
+		height: 4.2rem;
+		margin-right: 1.7rem;
+		border-radius: 50%;
+		overflow: hidden;
+		margin-bottom: 0.6rem;
+
+		& img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__title-wrapper {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 0.6rem;
+	}
+
+	&__title {
+		display: inline-flex;
+		-webkit-box-align: center;
+		align-items: center;
+		font-weight: 500;
+		font-size: 1.8rem;
+		line-height: 140%;
+	}
+
+	&__subtitle {
+		font-size: 1.4rem;
+		line-height: 140%;
+	}
+
+	&__answer {
+		display: inline-flex;
+		align-items: center;
+		margin-left: 1.7rem;
+		font-weight: 400;
+
+		& svg {
+			width: 1.4rem;
+			height: 1.4rem;
+			margin-right: 0.9rem;
+			fill: none;
+			stroke: rgb(14, 14, 14);
+		}
+	}
+
+	.comment__nav-item:hover .comment__nav-icon {
+		fill: rgb(14, 14, 14);
+	}
+
+	@include max-screen($large_mobile) {
+		&_open {
+			& > .comment {
+				&__other {
+					padding-left: 12px;
+				}
+			}
+		}
+
+		&.is-form-open {
+			& > .comment {
+				&__answer-area {
+					// padding-top: 5px;
+				}
+			}
+		}
+
 		&__content {
-      padding-top: 3.2rem;
-      padding-bottom: 3rem;
-    }
-    &__title {
-      font-size: 12px;
-    }
-    &__time {
-      font-size: 10px;
-    }
-    &__text {
-      width: 100%;
-      font-size: 12px;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-    }
-    &__button {
-      font-size: 12px;
-    }
-    &__nav {
-      top: auto;
-      bottom: 2.5rem;
-    }
-    &__nav-item {
-      font-size: 10px;
-      line-height: 27px;
-      margin-left: 1.2rem;
-    }
-    &__nav-icon {
-      margin-right: 8px;
-  
-      &_comment {
-        width: 0.85rem;
-        height: 0.85rem;
-      }
-  
-      &_heart {
-        width: 0.87rem;
-        height: 0.76rem;
-      }
-    }
-    &__other {
-      padding-left: 1.2rem;
-    }
-    &__answer {
-      font-size: 10px;
-      & svg {
-        width: 10px;
-        height: 10px;
-      }
-    }
-    &__subtitle {
-      font-size: 10px;
-    }
+			padding-top: 3.2rem;
+			padding-bottom: 2.3rem;
+			// 	padding-bottom: 3rem;
+		}
+		&__bottom {
+			&-cell {
+				&_left {
+					align-items: center;
+				}
+			}
+		}
+		&__avatar {
+			width: 37px;
+			height: 37px;
+			margin-right: 11px;
+		}
+		&__title {
+			font-size: 12px;
+		}
+		&__time {
+			font-size: 10px;
+			margin-right: 16px;
+		}
+		&__text {
+			width: 100%;
+			font-size: 12px;
+			margin-top: 1rem;
+			margin-bottom: 4px;
+		}
+		&__button {
+			font-size: 10px;
+			&_more {
+				margin-bottom: 0;
+			}
+			svg {
+				width: 1.2rem;
+				height: 1.2rem;
+				margin-right: 0.9rem;
+			}
+		}
+		&__nav {
+			top: auto;
+			bottom: 2.5rem;
+			min-height: 2.7rem;
+		}
+		&__nav-text {
+			margin-left: 6px;
+		}
+		&__nav-item {
+			font-size: 10px;
+			line-height: 2.7rem;
+			margin-left: 1.2rem;
+			min-height: 2.7rem;
+		}
+		&__nav-icon {
+			// margin-right: 8px;
+
+			&_comment {
+				width: 0.85rem;
+				height: 0.85rem;
+			}
+
+			&_heart {
+				width: 0.87rem;
+				height: 0.76rem;
+			}
+		}
+		&__other {
+			padding-left: 1.2rem;
+		}
+		&__answer {
+			font-size: 10px;
+			margin-left: 11px;
+			& svg {
+				width: 10px;
+				height: 10px;
+				margin-right: 5px;
+			}
+		}
+		&__subtitle {
+			font-size: 10px;
+		}
 	}
 }

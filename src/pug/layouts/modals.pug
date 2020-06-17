@@ -1,3 +1,42 @@
 +b.modals._video.mfp-hide#video
 	+e.video
 		+e.IFRAME.iframe(width="1047" height="589" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
++b.modals._share.mfp-hide#share
+	+e.box
+		+e.box-title.h5 Куда отправить материал?
+		+e.FORM.form.form(action="/")
+			+e.INPUT(type="hidden" name="method[share]" value='1')
+			+e.social.social-switcher__.js-social-switcher.flex._justify
+				+e.LABEL.item._mail
+					+e.INPUT.input(type="radio" name="social" value="E-mail")
+					+e.SPAN.icon
+						+icon('socialMail')
+					+e.SPAN.text.small E-mail
+				+e.LABEL.item._wa
+					+e.INPUT.input(type="radio" name="social" value="WhatsApp")
+					+e.SPAN.icon
+						+icon('socialWa')
+					+e.SPAN.text.small WhatsApp
+				+e.LABEL.item._vi
+					+e.INPUT.input(type="radio" name="social" value="Viber")
+					+e.SPAN.icon
+						+icon('socialVi')
+					+e.SPAN.text.small Viber
+				+e.LABEL.item._tg
+					+e.INPUT.input(type="radio" name="social" value="Telegram")
+					+e.SPAN.icon
+						+icon('socialTg')
+					+e.SPAN.text.small Telegram
+			+e.field.input__._email._default(style="display: none;")
+				+e.INPUT.item(type="text" placeholder="Введите ваш E-mail" name="email")
+			+e.field.input__._default
+				+e.INPUT.item(type="text" placeholder="Введите ваш телефон" name="phone")
+			+e.button.btn.h6.BUTTON
+				+e.text Подписаться
+			+e.LABEL.access.access.checkbox__
+				+e.INPUT.input(type='checkbox' name='access' checked="")
+				+e.SPAN.text
+					+e.check
+						+icon('check', '0 0 9 7')
+					| Я согласен с условиями
+					| передачи данных
