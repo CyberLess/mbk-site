@@ -2,11 +2,25 @@
 	position: relative;
 	width: 100%;
 	max-width: 1920px;
+	margin: 0 auto;
 
 	@include max-screen($small_tablet) {
 		padding-bottom: 2rem;
 
 		background-color: #f3f3f3;
+	}
+
+	&_bg-white {
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 50%;
+			width: calc(100vw - 6.6rem);
+			height: calc(100% + 3px);
+			transform: translateX(-50%);
+			background-color: #fff;
+		}
 	}
 
 	&_history,
@@ -558,8 +572,8 @@
 					width: 74%;
 
 					@include min-screen($large_desktop + 1) {
-						bottom: -34%;
 						right: -2%;
+						bottom: -34%;
 					}
 
 					@include max-screen($large_desktop) {
