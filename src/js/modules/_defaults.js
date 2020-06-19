@@ -18,6 +18,24 @@
 		).trigger("click");
 	});
 
+	$(".js-social-switcher input").on("change", (e) => {
+		let $this = $(e.currentTarget);
+		let $parent = $this.closest(".js-social-switcher");
+		let $input = $parent.find("input:checked");
+		let $form = $parent.closest("form");
+		let $email = $form.find(".input_email");
+		let $phone = $form.find(".input_phone");
+		if ($input.val() == "E-mail") {
+			// $email.slideDown(300);
+			$email.show();
+			$phone.hide();
+		} else {
+			$email.hide();
+			$phone.show();
+			// $email.slideUp(300);
+		}
+	});
+
 	$(".js-close-mobile-menu").on("click", (e) => {
 		$(".js-mobile-menu").trigger("click");
 	});

@@ -1,0 +1,187 @@
+.social-switcher {
+	border-bottom: 1px solid #b3b3b3;
+	&__icon {
+		display: block;
+		margin: auto;
+		height: 2.5rem;
+		margin-bottom: 1.1rem;
+		text-align: center;
+		svg {
+			display: inline-block;
+			width: 2.4rem;
+		}
+	}
+	&__text {
+		line-height: 140%;
+		display: block;
+		padding-bottom: 1.8rem;
+		color: #8d8d8d;
+		position: relative;
+		transition: ease 0.2s;
+
+		&:before {
+			content: "";
+			display: block;
+			width: 100%;
+			position: absolute;
+			left: 0;
+			height: 3px;
+			bottom: -1px;
+			transition: ease 0.25s;
+			transform: scale(0, 1);
+		}
+	}
+
+	&__input {
+		display: none;
+		&:checked {
+			& ~ .social-switcher {
+				&__text {
+					&:before {
+						transform: scale(1, 1);
+					}
+				}
+			}
+		}
+	}
+
+	&__item {
+		cursor: pointer;
+
+		&_mail {
+			.social-switcher {
+				&__text {
+					&:before {
+						background-color: #ff0400;
+					}
+				}
+				&__input {
+					&:checked {
+						& ~ .social-switcher {
+							&__text {
+								color: #ff0400;
+							}
+						}
+					}
+				}
+				&__icon {
+					fill: #ff0400;
+
+					svg {
+						width: 2.6rem;
+					}
+				}
+			}
+
+			&:hover {
+				.social-switcher {
+					&__text {
+						color: #ff0400;
+					}
+				}
+			}
+		}
+
+		&_wa {
+			.social-switcher {
+				&__text {
+					&:before {
+						background-color: #00c364;
+					}
+				}
+				&__input {
+					&:checked {
+						& ~ .social-switcher {
+							&__text {
+								color: #00c364;
+							}
+						}
+					}
+				}
+				&__icon {
+					fill: #00c364;
+
+					svg {
+						width: 2.4rem;
+					}
+				}
+			}
+
+			&:hover {
+				.social-switcher {
+					&__text {
+						color: #00c364;
+					}
+				}
+			}
+		}
+
+		&_vi {
+			.social-switcher {
+				&__text {
+					&:before {
+						background-color: #665cac;
+					}
+				}
+				&__input {
+					&:checked {
+						& ~ .social-switcher {
+							&__text {
+								color: #665cac;
+							}
+						}
+					}
+				}
+				&__icon {
+					fill: #665cac;
+
+					svg {
+						width: 2.5rem;
+					}
+				}
+			}
+
+			&:hover {
+				.social-switcher {
+					&__text {
+						color: #665cac;
+					}
+				}
+			}
+		}
+
+		&_tg {
+			.social-switcher {
+				&__text {
+					&:before {
+						background-color: #1e96c8;
+					}
+				}
+				&__input {
+					&:checked {
+						& ~ .social-switcher {
+							&__text {
+								color: #1e96c8;
+							}
+						}
+					}
+				}
+				&__icon {
+					fill: #1e96c8;
+
+					svg {
+						width: 2.4rem;
+					}
+				}
+			}
+
+			&:hover {
+				.social-switcher {
+					&__text {
+						color: #1e96c8;
+					}
+				}
+			}
+		}
+	}
+}

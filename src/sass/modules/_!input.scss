@@ -84,12 +84,12 @@
 		}
 	}
 
-	&_normal {
-		margin-bottom: 2.6rem;
+	&_default {
+		margin-bottom: 3.6rem;
 		.input {
 			&__item {
-				height: 7.4rem;
-				font-size: 2.4rem;
+				height: 3.9rem;
+				font-size: 1.8rem;
 			}
 		}
 	}
@@ -114,27 +114,17 @@
 		}
 	}
 
-	&_normal{
-		margin-bottom: 2.6rem;
-		.input{
-			&__item{
-				height: 7.4rem;
-				font-size: 2.4rem;
-			}
-		}
-	}
-
-	&_medium{
+	&_medium {
 		margin-bottom: 0;
-		.input{
-			&__item{
+		.input {
+			&__item {
 				height: 6.4rem;
 				font-size: 2.4rem;
 			}
 		}
 	}
 
-	&_big{
+	&_big {
 		margin-bottom: 3rem;
 		.input {
 			&__item {
@@ -263,17 +253,16 @@
 			}
 		}
 
-		&_normal{
+		&_normal {
 			margin-bottom: 3.1rem;
-			.input{
-				&__item{
+			.input {
+				&__item {
 					height: 3.8rem;
 
 					font-weight: bold;
 					font-size: 1.9rem;
 				}
 			}
-
 		}
 
 		&_border {

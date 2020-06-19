@@ -1,6 +1,14 @@
 .comments {
 	background-color: rgb(255, 255, 255);
 	padding-bottom: 6.5rem;
+	&-list {
+		&_border {
+			border-top: 1px solid #e0e0e0;
+		}
+	}
+	&__clone-form {
+		display: none;
+	}
 
 	&__wrap {
 		// padding-left: 0px;
