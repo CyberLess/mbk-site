@@ -71,6 +71,21 @@
 		}
 	}
 
+	&__text {
+		a.info-steps__link {
+			background-image: linear-gradient(to bottom, transparent 49%, #FF0600 49%);
+			background-size: 0 1px;
+			background-repeat: no-repeat;
+			background-position: 0 95%;
+			transition: background-size .2s;
+
+			&:hover,
+			&:focus {
+				background-size: 100% 1px;
+			}
+		}
+	}
+
 	@include max-screen($large_tablet) {
 		&__row {
 			padding-left: 5.5rem;

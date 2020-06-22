@@ -178,6 +178,10 @@ $(() => {
 					onfocusout: false,
 				},
 			},
+
+			messages: {
+				auctionEmail: 'Некорекктный e-mail'
+			}
 		});
 	});
 });

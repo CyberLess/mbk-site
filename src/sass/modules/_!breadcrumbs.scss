@@ -23,6 +23,12 @@
 	&__link{
 		display: inline-block;
 		vertical-align: middle;
+		transition: .2s ease;
+
+		&:hover,
+		&:focus {
+			color: #FF0600;
+		}
 	}
 
 	@include max-screen($large_mobile) {

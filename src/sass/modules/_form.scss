@@ -27,12 +27,24 @@
 		}
 	}
 
+	&__access {
+		.checkbox__text {
+			opacity: .5;
+		}
+
+		.checkbox__input:checked ~ {
+			.checkbox__text {
+				opacity: 1;
+			}
+		}
+	}
+
 	&__email {
 		.error {
-			display: none !important;
-			//@include max-screen($small_tablet) {
+			@include max-screen($small_tablet) {
 			//  text-align: center;
-			//}
+				display: none !important;
+			}
 		}
 
 		&.is-error {

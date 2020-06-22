@@ -25,6 +25,14 @@
     @include max-screen($large_tablet) {
       margin-bottom: 2.9rem;
     }
+
+    .news-aside__link {
+      color: #0e0e0e;
+
+      &_active {
+        color: #FF0600;;
+      }
+    }
   }
 
   &__link {
@@ -32,7 +40,7 @@
     margin-bottom: 2.3rem;
     line-height: 3rem;
     opacity: 0.3;
-    transition: all 0.2s;
+    transition: 0.2s ease;
 
     &:hover {
       opacity: 1;

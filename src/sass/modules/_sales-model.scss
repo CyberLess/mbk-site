@@ -130,6 +130,12 @@
 		background-repeat: no-repeat;
 		background-position: 0 0.4rem;
 
+		@include min-screen($large_desktop + 1) {
+			@include max-screen($hd_plus) {
+				margin-bottom: 4rem;
+			}
+		}
+
 		@include max-screen($large_tablet) {
 			position: static;
 			margin: -5% auto 0;

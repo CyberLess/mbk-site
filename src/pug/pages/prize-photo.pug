@@ -10,8 +10,9 @@ append vars
     - var startPrice = '3 000 ₽'
 
 block header
-    +b.HEADER.prize-header._bg-white
-        include ../layouts/prize-header
+    +e.DIV.bg-white-wrap
+        +b.HEADER.prize-header
+            include ../layouts/prize-header
 
 block content
 

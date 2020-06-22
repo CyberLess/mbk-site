@@ -95,7 +95,7 @@
 	&__title {
 		padding: 4.4rem 5.3rem 3rem;
 		margin-bottom: 4.4rem;
-		border: 1px solid #0e0e0e;
+		border: 1px solid rgba(14, 14, 14, 0.3);
 		border-radius: 5px;
 
 		& h2 {
@@ -141,6 +141,12 @@
 
 		& p {
 			font-size: 2.4rem;
+		}
+
+		.red-link {
+			&::before {
+				bottom: -1px;
+			}
 		}
 	}
 
@@ -193,20 +199,21 @@
 		// right: 610/1920*100%;
 		// margin-left: 80rem;
 		// top: 50%;
+		flex-shrink: 0;
 		transform-origin: bottom;
 		position: absolute;
 		z-index: 20;
 		display: inline-flex;
 		align-items: center;
 		margin-top: 5rem;
-		padding: 2rem 3.8rem;
+		padding: 2rem 3.9rem;
 		font-weight: 500;
 		font-size: 15px;
 		line-height: 140%;
 		letter-spacing: 0.055em;
 		text-transform: uppercase;
 		background-color: #ffffff;
-		border: 1px solid #0e0e0e;
+		border: 1px solid rgba(14, 14, 14, 0.3);
 		border-radius: 5px;
 		transform: rotate(-90deg) translateY(-50%);
 		transition: all 0.1s ease-out;

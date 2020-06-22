@@ -11,16 +11,18 @@
 	}
 
 	&_bg-white {
-		&::before {
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 50%;
-			width: calc(100vw - 6.6rem);
-			height: calc(100% + 3px);
-			transform: translateX(-50%);
-			background-color: #fff;
-		}
+		background-color: #ffffff;
+
+		//&::before {
+		//	content: "";
+		//	position: absolute;
+		//	top: 0;
+		//	left: 50%;
+		//	width: calc(100vw - 6.6rem);
+		//	height: calc(100% + 3px);
+		//	transform: translateX(-50%);
+		//	background-color: #fff;
+		//}
 	}
 
 	&_history,
@@ -127,13 +129,13 @@
 
 		&_consultation,
 		&_consultation-expert {
-			background-image: url("/img/alexandr-bodin@desktop.webp");
+			background-image: url("/img/alexandr-bodin@desktop.jpg");
 			background-position: center center;
 			background-size: cover;
 
 			.prize-header {
 				&__bg-image-mobile {
-					background-image: url("/img/alexandr-bodin@mobile.webp");
+					background-image: url("/img/alexandr-bodin@mobile.jpg");
 
 					@include max-screen($small_tablet) {
 						background-position: right bottom;
@@ -216,11 +218,11 @@
 		}
 
 		&_reclame {
-			background-image: url("/img/reclame-bg@desktop.webp");
+			background-image: url("/img/reclame-bg@desktop.png");
 
 			.prize-header {
 				&__bg-image-mobile {
-					background-image: url("/img/reclame-bg@mobile.webp");
+					background-image: url("/img/reclame-bg@mobile.png");
 				}
 
 				&__benefit-item {
@@ -232,11 +234,11 @@
 		}
 
 		&_promotion {
-			background-image: url("/img/promotion-bg@desktop.webp");
+			background-image: url("/img/promotion-bg@desktop.png");
 
 			.prize-header {
 				&__bg-image-mobile {
-					background-image: url("/img/promotion-bg@mobile.webp");
+					background-image: url("/img/promotion-bg@mobile.png");
 				}
 
 				&__benefits-list {
@@ -250,7 +252,7 @@
 		}
 
 		&_cleaning {
-			background-image: url("/img/clean-bg@desktop.webp");
+			background-image: url("/img/clean-bg@desktop.png");
 			background-position: bottom -1.5rem left -6rem;
 			background-size: cover;
 
@@ -264,7 +266,7 @@
 
 			.prize-header {
 				&__bg-image-mobile {
-					background-image: url("/img/clean-bg@mobile.webp");
+					background-image: url("/img/clean-bg@mobile.png");
 					background-position: center bottom;
 
 					@include max-screen($small_tablet) {
@@ -319,7 +321,7 @@
 		}
 
 		&_docs {
-			background-image: url("/img/docs-bg@desktop.webp");
+			background-image: url("/img/docs-bg@desktop.png");
 			background-position: right bottom;
 			background-size: cover, contain;
 
@@ -334,7 +336,7 @@
 
 			.prize-header {
 				&__bg-image-mobile {
-					background-image: url("/img/docs-bg@mobile.webp");
+					background-image: url("/img/docs-bg@mobile.png");
 					background-position: right 15px bottom;
 
 					@include max-screen($small_tablet) {
@@ -428,7 +430,7 @@
 		}
 
 		&_photo {
-			background-image: url("/img/photo-bg@desktop.webp");
+			background-image: url("/img/photo-bg@desktop.jpg");
 			background-position: center bottom;
 			background-size: cover;
 
@@ -438,7 +440,7 @@
 
 			.prize-header {
 				&__bg-image-mobile {
-					background-image: url("/img/photo-bg@mobile.webp");
+					background-image: url("/img/photo-bg@mobile.jpg");
 				}
 
 				&__title {
@@ -462,7 +464,7 @@
 		}
 
 		&_relocation {
-			background-image: url("/img/relocation-bg@desktop.webp");
+			background-image: url("/img/relocation-bg@desktop.jpg");
 			background-position: center bottom;
 			background-size: cover;
 
@@ -472,7 +474,7 @@
 
 			.prize-header {
 				&__bg-image-mobile {
-					background-image: url("/img/relocation-bg@mobile.webp");
+					background-image: url("/img/relocation-bg@mobile.jpg");
 				}
 
 				&__content-wrap {
@@ -496,7 +498,7 @@
 
 		&_encumbrances,
 		&_month-credit {
-			background-image: url("/img/encumbrances-bg@desktop.webp");
+			background-image: url("/img/encumbrances-bg@desktop.jpg");
 			background-position: center bottom;
 			background-size: cover;
 
@@ -506,7 +508,7 @@
 
 			.prize-header {
 				&__bg-image-mobile {
-					background-image: url("/img/encumbrances-bg@mobile.webp");
+					background-image: url("/img/encumbrances-bg@mobile.jpg");
 
 					@include max-screen($small_tablet) {
 						background-position: center bottom;
@@ -740,7 +742,7 @@
 				}
 
 				&__bg-image-mobile {
-					background-image: url("/img/history-bg@mobile.webp");
+					background-image: url("/img/history-bg@mobile.png");
 
 					@include max-screen($small_tablet) {
 						height: 46.8rem;
@@ -782,7 +784,7 @@
 				}
 
 				&__bg-image-mobile {
-					background-image: url("/img/banking-terms-bg@mobile.webp");
+					background-image: url("/img/banking-terms-bg@mobile.png");
 
 					@include max-screen($small_tablet) {
 						height: 47.8rem;
@@ -849,7 +851,7 @@
 				}
 
 				&__bg-image-mobile {
-					background-image: url("/img/free-scoring-bg@mobile.webp");
+					background-image: url("/img/free-scoring-bg@mobile.png");
 
 					@include max-screen($small_tablet) {
 						height: 42.8rem;
