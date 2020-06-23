@@ -2,6 +2,25 @@
 	z-index: 900;
 	position: relative;
 
+	&.sticky {
+		position: sticky;
+		top: 0;
+		left: 0;
+		border-bottom: 1px solid rgba(14, 14, 14, 0.1);
+
+		@include min-screen($small_desktop) {
+			//left: 3.3rem;
+		}
+
+		&-hidden {
+			transform: translateY(-100%);
+		}
+
+		&-transition {
+			transition: all .6s ease-out;
+		}
+	}
+
 	&.is-search-open {
 		.header {
 			&__menu {

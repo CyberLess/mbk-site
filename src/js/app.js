@@ -30,3 +30,4 @@ import "./modules/_textarea";
 import "./modules/_open-faq";
 import "./modules/_scroll";
 import "./modules/_sertificates";
+import "./modules/_stiky-header";
