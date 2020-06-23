@@ -13,7 +13,9 @@
 			});
 
 			if (scrolled < scrollPrev) {
-				$header.removeClass('sticky-hidden');
+				if (!window.itsTitleScroll) {
+					$header.removeClass('sticky-hidden');
+				}
 			} else {
 				$header.addClass('sticky sticky-hidden');
 			}
