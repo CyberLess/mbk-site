@@ -1,17 +1,11 @@
 (() => {
-	const $container = $('.container');
 	const $header = $('.header');
-	const headerStartWidth = $header.width();
 	let scrollPrev = 0;
 
 	$(window).scroll(function() {
 		const scrolled = $(window).scrollTop();
 
 		if (scrolled > $header.outerHeight()) {
-			$header.css({
-				width: `${headerStartWidth}`
-			});
-
 			if (scrolled < scrollPrev && !window.itsTitleScroll) {
 				$header.removeClass('sticky-hidden');
 			} else {

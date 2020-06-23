@@ -101,7 +101,9 @@ import { numberWithSpaces } from '../functions';
 
 	const $sliderHandle = $('.ui-slider-handle');
 	const onHandleMouseDown = ($elem) => {
-		$elem.css('transform', 'scale(1.3)');
+		$elem.css({
+			transform: 'scale(1.3)'
+		});
 	};
 	const onHandleMouseUp = ($elem) => {
 		$elem.css('transform', '');
