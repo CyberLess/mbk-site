@@ -12,10 +12,8 @@
 				width: `${headerStartWidth}`
 			});
 
-			if (scrolled < scrollPrev) {
-				if (!window.itsTitleScroll) {
-					$header.removeClass('sticky-hidden');
-				}
+			if (scrolled < scrollPrev && !window.itsTitleScroll) {
+				$header.removeClass('sticky-hidden');
 			} else {
 				$header.addClass('sticky sticky-hidden');
 			}
