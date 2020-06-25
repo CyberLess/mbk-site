@@ -12,7 +12,7 @@
 				$header.addClass('sticky sticky-hidden');
 			}
 
-			if (scrolled > $header.outerHeight() + 10) {
+			if (scrolled > $header.outerHeight() + 50) {
 				$header.addClass('sticky-transition');
 			}
 

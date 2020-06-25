@@ -7,7 +7,7 @@
 	padding-left: 2.5rem;
 	padding-right: 2.3rem;
 	display: block;
-	transition: ease .5s;
+	transition: ease .2s;
 
 	&__icon {
 		position: absolute;
@@ -29,13 +29,13 @@
 			fill: transparent;
 			stroke: #0e0e0e;
 			stroke-width: 2;
-			transition: ease 0.5s;
+			transition: ease 0.2s;
 		}
 	}
 
 	&__arrow {
 		position: absolute;
-		right: 1.3rem;
+		right: 0;
 		top: 0;
 		display: flex;
 		align-items: center;
@@ -44,7 +44,7 @@
 		fill: $dark;
 		overflow: hidden;
 		height: 100%;
-		transition: ease 0.3s;
+		transition: ease 0.2s;
 
 		svg {
 			width: 18px;

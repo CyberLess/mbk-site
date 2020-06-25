@@ -9,23 +9,6 @@
     $('.comments-blog__of-pages').text(itemsQuantity);
   };
 
-  const setGoNextBtn = (evt) => {
-    if (evt.item.index > 0) {
-      $visibleLeftBtn.addClass('comments-blog__btn_is-next');
-    } else {
-      $visibleLeftBtn.removeClass('comments-blog__btn_is-next');
-    }
-
-    console.log(evt.item.index + 3 < $('.comments-blog__item').length)
-    console.log(evt.item.index + 3)
-    console.log($('.comments-blog__item').length)
-    if (evt.item.index + 2 < $('.comments-blog__item').length) {
-      $visibleRightBtn.addClass('comments-blog__btn_is-next');
-    } else {
-      $visibleRightBtn.removeClass('comments-blog__btn_is-next');
-    }
-  };
-
   const setCurrentPage = (evt) => {
     $('.comments-blog__current-page').text(evt.item.index + 1);
     $('.comments-blog__of-pages').text(evt.item.count);
@@ -35,6 +18,7 @@
     dots: false,
     dotsEach: false,
     nav: true,
+    navText: ['<svg class="icon-arrow" fill="none" version="1.1" viewBox="0 0 18.561 9.6213" xmlns="http://www.w3.org/2000/svg"><g shape-rendering="auto"><path d="m13.75 0v4.0605h-13.75v1.5h13.75v4.0605l4.8105-4.8105z" /></g></svg>', '<svg class="icon-arrow" fill="none" version="1.1" viewBox="0 0 18.561 9.6213" xmlns="http://www.w3.org/2000/svg"><g shape-rendering="auto"><path d="m13.75 0v4.0605h-13.75v1.5h13.75v4.0605l4.8105-4.8105z" /></g></svg>'],
     navContainer: '.comments-blog__nav',
     responsive: {
       0: {
@@ -61,6 +45,5 @@
   });
 
   $sliderList.on('changed.owl.carousel', setCurrentPage);
-  $sliderList.on('changed.owl.carousel', setGoNextBtn);
   setStartItemsQuantity();
 })();
