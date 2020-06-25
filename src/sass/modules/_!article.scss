@@ -1,28 +1,28 @@
-.article{
+.article {
 	display: block;
 
-	&:hover{
-		.article{
-			&__name{
+	&:hover {
+		.article {
+			&__name {
 				color: $red;
 			}
-			&__preview{
-				img{
+			&__preview {
+				img {
 					transform: scale(1.15);
 				}
 			}
 		}
 	}
-	
-	&__preview{
+
+	&__preview {
 		padding-top: 21.2rem;
 		border-radius: 5px;
 		overflow: hidden;
 		position: relative;
 		margin-bottom: 1rem;
 
-		img{
-			transition: ease .2s;
+		img {
+			transition: ease 0.2s;
 		}
 
 		@include max-screen($small_tablet) {
@@ -30,88 +30,92 @@
 		}
 
 		@include max-screen($large_mobile) {
-			padding-top: 130/231*100%;
+			padding-top: 130/231 * 100%;
 		}
 	}
 
-	&__name{
-		transition: ease .2s;
+	&__name {
+		transition: ease 0.2s;
 		@include max-screen($large_mobile) {
 			font-size: 1.4rem;
 		}
 	}
 
-	&__nav{
-
-		&-item{
+	&__nav {
+		&-item {
 			display: flex;
 			align-items: center;
 			line-height: 4.4rem;
 			margin-bottom: 5px;
+			margin-top: 5px;
 
-			&_gray{
+			&_gray {
 				color: #808080;
 
-				svg{
+				svg {
 					fill: #808080;
 				}
 			}
 
-			&:not(:last-child){
+			&:not(:last-child) {
 				margin-right: 2rem;
 			}
 		}
 
-		&-icon{
-			margin-right: .8rem;
-			
-			&_clock{
+		&-icon {
+			margin-right: 0.8rem;
+			display: block;
+
+			&_clock {
 				width: 1.2rem;
 				height: 1.2rem;
 				margin-right: 1.2rem;
-
 			}
 
-			&_watch{
+			&_watch {
 				width: 2.1rem;
 				height: 1.3rem;
-				fill: #BFBFBF;
+				fill: #bfbfbf;
 			}
-			&_heart{
+			&_heart {
 				width: 1.4rem;
 				height: 1.3rem;
 				fill: $red;
-				margin-top: 2px;
+				// margin-top: 2px;
 			}
-			&_comment{
+			&_comment {
 				width: 1.4rem;
 				height: 1.4rem;
-				fill: #BFBFBF;
-				margin-top: 4px;
+				fill: #bfbfbf;
+				// margin-top: 4px;
 			}
 		}
 
+		&-link {
+			line-height: 1.2em;
+		}
+
 		@include max-screen($small_tablet) {
-			&-item{
+			&-item {
 				font-size: 12px;
 				line-height: 2.4rem;
-				&:not(:last-child){
+				&:not(:last-child) {
 					margin-right: 1.5rem;
 				}
 			}
 
-			&-icon{
+			&-icon {
 				margin-top: 0;
-				&_watch{
+				&_watch {
 					width: 14px;
 				}
-				&_heart{
+				&_heart {
 					width: 12px;
 				}
-				&_comment{
+				&_comment {
 					width: 12px;
 				}
-				&_clock{
+				&_clock {
 					width: 12px;
 					margin-top: -2px;
 				}
@@ -119,24 +123,24 @@
 		}
 
 		@include max-screen($large_mobile) {
-			&-item{
+			&-item {
 				font-size: 10px;
 			}
 
-			&-icon{
-				&_watch{
+			&-icon {
+				&_watch {
 					width: 12px;
 					margin-top: 3px;
 				}
-				&_heart{
+				&_heart {
 					width: 9px;
 					margin-top: 3px;
 				}
-				&_comment{
+				&_comment {
 					width: 9px;
 					margin-top: 3px;
 				}
-				&_clock{
+				&_clock {
 					width: 8px;
 					margin-top: 3px;
 				}
