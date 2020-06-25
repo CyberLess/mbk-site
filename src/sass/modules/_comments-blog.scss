@@ -28,7 +28,7 @@
 		@include max-screen($large_mobile) {
 			width: 100%;
 
-		  text-align: center;
+			text-align: center;
 		}
 	}
 
@@ -69,12 +69,12 @@
 		justify-content: center;
 		width: 6.6rem;
 		height: 6.6rem;
-		border: 1px solid #BFBFBF;
+		border: 1px solid #bfbfbf;
 		border-radius: 50%;
 
 		transition-timing-function: ease;
 
-		transition-duration: .2s;
+		transition-duration: 0.2s;
 		transition-property: background-color;
 		background-color: transparent;
 
@@ -90,8 +90,8 @@
 		&:hover,
 		&:focus {
 			cursor: pointer;
-			background-color: #0E0E0E;
-			opacity: .5;
+			background-color: #0e0e0e;
+			opacity: 0.5;
 
 			@include max-screen($large_mobile) {
 				background-color: transparent;
@@ -101,7 +101,7 @@
 				fill: #ffffff;
 
 				@include max-screen($large_mobile) {
-					fill: #FF0400;
+					fill: #ff0400;
 				}
 			}
 		}
@@ -110,12 +110,12 @@
 			width: 1.8rem;
 			height: 1rem;
 
-			transition: .2s ease;
+			transition: 0.2s ease;
 
-			fill: #BFBFBF;
+			fill: #bfbfbf;
 
 			@include max-screen($large_mobile) {
-				fill: #0E0E0E;;
+				fill: #0e0e0e;
 			}
 		}
 
@@ -157,7 +157,7 @@
 		width: 41rem;
 		margin-right: 5.3rem;
 		padding: 8.2rem 4rem 6.8rem;
-		border: 1px solid #B3B3B3;
+		border: 1px solid #b3b3b3;
 		border-radius: 5px;
 
 		@include max-screen($small_tablet) {
@@ -181,7 +181,7 @@
 		justify-content: center;
 		width: 9rem;
 		height: 9rem;
-		border: 1px solid #B3B3B3;
+		border: 1px solid #b3b3b3;
 		border-radius: 50%;
 
 		transform: translateY(-50%);
@@ -232,7 +232,7 @@
 	}
 
 	&__item-title {
-		margin-bottom: .6rem;
+		margin-bottom: 0.6rem;
 	}
 
 	&__comment-text {
@@ -256,7 +256,7 @@
 		font-size: 1.8rem;
 		line-height: 1.4;
 		font-weight: 500;
-		color: #FF0400;
+		color: #ff0400;
 
 		@include max-screen($large_mobile) {
 			margin-bottom: 1.8rem;
@@ -265,17 +265,17 @@
 		}
 
 		.arrow {
-			display: inline-block;
+			display: inline-flex;
 			margin-left: 1rem;
 
-			fill: #FF0400;
+			fill: #ff0400;
 
 			transition-property: width;
-			transition-duration: .2s;
+			transition-duration: 0.2s;
 
 			@include max-screen($small_tablet) {
-				top: .1rem;
-				right: .3rem;
+				top: 0.1rem;
+				right: 0.3rem;
 
 				width: 3px;
 			}
