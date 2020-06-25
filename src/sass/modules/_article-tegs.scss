@@ -1,5 +1,5 @@
 .article-tegs {
-	background-color: #FFFFFF;
+	background-color: #ffffff;
 
 	&__wrap {
 		padding-left: 10.8rem;
@@ -13,7 +13,7 @@
 		font-size: 1.8rem;
 		line-height: 140%;
 		color: #000000;
-		background-color:  #F3F3F3;
+		background-color: #f3f3f3;
 		border-radius: 5px;
 		transition: all 0.1s ease;
 
@@ -22,8 +22,8 @@
 		}
 
 		&:hover {
-			color: #FFFFFF;
-			background-color: #FF0400;
+			color: #ffffff;
+			background-color: #000;
 		}
 	}
 
@@ -35,7 +35,7 @@
 	}
 
 	@include max-screen($large_mobile) {
-		background-color: #F3F3F3;
+		background-color: #f3f3f3;
 		&__wrap {
 			padding: 0 1.5rem 3rem;
 		}
@@ -44,7 +44,7 @@
 			margin-right: 0.8rem;
 			margin-bottom: 0.8rem;
 			font-size: 10px;
-			border: 1px solid rgba($color: #0E0E0E, $alpha: 0.3);
+			border: 1px solid rgba($color: #0e0e0e, $alpha: 0.3);
 		}
 	}
 }
