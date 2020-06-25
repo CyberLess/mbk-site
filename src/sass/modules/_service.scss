@@ -212,9 +212,32 @@
 		background: #ffffff;
 		border-radius: 5px;
 		overflow: hidden;
+		transition: .3s ease;
 
-		&:hover {
+		&:hover,
+		&:focus {
+			transform: translateY(-.5rem);
 			box-shadow: 0px 4px 150px rgba(0, 0, 0, 0.15);
+
+			.link {
+				color: #FF0600;
+			}
+
+			.arrow {
+				stroke: #FF0600;
+				fill: #FF0600;
+				margin-right: 0;
+				width: 1.8rem;
+			}
+
+			.triangle {
+				stroke: #FF0600;
+				transition: all .3s;
+			}
+
+			.stroke {
+				fill: #FF0600;
+			}
 		}
 
 		&_shadow {

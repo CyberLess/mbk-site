@@ -4,6 +4,23 @@
 
 	&__accordion {
 		margin-top: -1px;
+
+		.accordion__top {
+			transition: .2s ease;
+
+			.icon-down {
+				transition: .2s ease;
+			}
+
+			&:hover,
+			&:focus {
+				color: #FF0600;
+
+				.icon-down {
+					stroke: #FF0600;
+				}
+			}
+		}
 	}
 
 	@include max-screen($large_mobile) {

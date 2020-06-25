@@ -216,6 +216,12 @@ a {
 	@include max-screen($large_tablet) {
 		margin: 0;
 	}
+
+	&__bg-white-wrap {
+		@include min-screen(1921px) {
+			background-color: #ffffff;
+		}
+	}
 }
 
 .inline {

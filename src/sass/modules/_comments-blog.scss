@@ -91,6 +91,7 @@
 		&:focus {
 			cursor: pointer;
 			background-color: #0E0E0E;
+			opacity: .5;
 
 			@include max-screen($large_mobile) {
 				background-color: transparent;
@@ -115,6 +116,19 @@
 
 			@include max-screen($large_mobile) {
 				fill: #0E0E0E;;
+			}
+		}
+
+		&_is-next {
+			border-color: #0e0e0e;
+
+			.icon-arrow {
+				fill: #0e0e0e;
+			}
+
+			&:hover,
+			&:focus {
+				opacity: 1;
 			}
 		}
 

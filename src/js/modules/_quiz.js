@@ -98,8 +98,11 @@ import { numberWithSpaces } from "../functions";
 		// скролл к началу квиза
 		// if(isMobile){
 		// var offset = isMobile ? 0 : 60
-		var top = $(".js-target-form").offset().top;
+		var top = window.oldJsFormScrollTop;
 		window.scrollTo(0, top);
+		$('html, body').animate({
+			scrollTop: 0
+		}, 400);
 		// }
 
 		// общий прогресс бар
@@ -207,4 +210,8 @@ import { numberWithSpaces } from "../functions";
 			$quiz.find(".quiz__bottom").addClass("is-visible");
 		}
 	});
+
+	$(window).on('scroll', function () {
+		window.oldJsFormScrollTop =$(document).scrollTop() - $('.js-target-form').offset().top;
+	})
 })($);

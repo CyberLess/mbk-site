@@ -91,7 +91,7 @@
 				&__button{
 					background-color: rgb(187, 187, 187);
 					color: transparent;
-					
+
 				}
 			}
 		}
@@ -155,8 +155,11 @@
 			height: 100%;
 			z-index: 10;
 			background: rgba(#000, .65);
+			transition-property: opacity;
+			transition-duration: .3s;
+			transition-timing-function: ease;
 		}
-		
+
 		&-inner{
 			padding-left: 33/335*100%;
 			padding-right: 33/335*100%;
@@ -166,7 +169,7 @@
 			position: relative;
 			z-index: 15;
 
-			
+
 		}
 
 		&-content{
@@ -221,7 +224,7 @@
 				span{
 					&:before{
 						transform: scale(1,1);
-					}					
+					}
 				}
 
 			}
@@ -265,7 +268,7 @@
 
 	&__text{
 		font-weight: 400;
-		
+
 		display: inline;
 
 		@include max-screen($large_mobile) {
@@ -300,6 +303,17 @@
 			align-items: flex-end;
 			justify-content: space-between;
 			margin-bottom: 9px;
+		}
+	}
+
+	.video__play {
+		transition-property: background-color;
+		transition-duration: .3s;
+		transition-timing-function: ease;
+
+		&:hover,
+		&:focus {
+			background-color: rgba(255, 255, 255, 0.3);
 		}
 	}
 }

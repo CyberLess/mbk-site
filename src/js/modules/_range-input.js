@@ -29,13 +29,13 @@ import { numberWithSpaces } from '../functions';
 
 			let width = 100 / (subMax / subCur)
 
-			line.width(width + "%")						
+			line.width(width + "%")
 		}
 
 		var update_input = function(set = false) {
 
 			let val = Number(input.val().replace(/\s/g, '').match(/[+-]?([0-9]*[.])?[0-9]+/g));
-			
+
 			if (val > maximum)
 				val = maximum
 
@@ -58,7 +58,7 @@ import { numberWithSpaces } from '../functions';
 			else{
 				input.val(val).trigger('change')
 			}
-		
+
 		}
 
 
@@ -78,13 +78,13 @@ import { numberWithSpaces } from '../functions';
 			min: minimum,
 			max: maximum,
 			step: step,
-			value: value,	
+			value: value,
 			create: function() {
 				char = item.attr('data-char') ? item.attr('data-char') : '';
 				input.val(numberWithSpaces($(this).slider( "value" )) + " " + char).trigger('change')
 				minimum = Number(item.attr('data-min'))
 				maximum = Number(item.attr('data-max'))
-				update_line(Number(item.slider( "value" )), minimum, maximum)									
+				update_line(Number(item.slider( "value" )), minimum, maximum)
 			},
 			slide: function( event, ui ) {
 				char = item.attr('data-char') ? item.attr('data-char') : '';
@@ -92,10 +92,27 @@ import { numberWithSpaces } from '../functions';
 
 				minimum = Number(item.attr('data-min'))
 				maximum = Number(item.attr('data-max'))
-				update_line(Number(ui.value), minimum, maximum)			
+				update_line(Number(ui.value), minimum, maximum)
 
 			}
 		});
 
-	})
+	});
+
+	const $sliderHandle = $('.ui-slider-handle');
+	const onHandleMouseDown = ($elem) => {
+		$elem.css({
+			transform: 'scale(1.3)'
+		});
+	};
+	const onHandleMouseUp = ($elem) => {
+		$elem.css('transform', '');
+	};
+
+	$sliderHandle.on('mousedown touchstart', function () {
+		onHandleMouseDown($(this));
+	});
+	$sliderHandle.on('mouseup touchend', function () {
+		onHandleMouseUp($(this));
+	});
 })($)

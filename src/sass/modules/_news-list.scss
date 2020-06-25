@@ -18,11 +18,25 @@
 		&:hover {
 			background-color: #ffffff;
 			border: 1px solid #ffffff;
+
+			.news-list__title {
+				span {
+					background-size: 100% 5px;
+				}
+			}
 		}
 	}
 
 	&__title {
 		max-width: 56.1rem;
+
+		span {
+			background-image: linear-gradient(to bottom, transparent 49%, #FF0600 49%);
+			background-size: 0 5px;
+			background-repeat: no-repeat;
+			background-position: 0 89%;
+			transition: background-size .5s;
+		}
 	}
 
 	&__date {

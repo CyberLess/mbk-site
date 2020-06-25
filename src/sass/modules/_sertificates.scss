@@ -3,8 +3,22 @@
 
 	&__container {
 		&-photo {
+			display: block;
+			transition: .6s;
+
 			@include max-screen($large_tablet) {
 				margin: auto;
+			}
+
+			&:hover,
+			&:focus {
+				transform: translateY(-.5rem);
+				box-shadow: 0 .5rem 4rem 0 rgba(0, 0, 0, 0.2);
+
+				.sertificates__cert-photo {
+					filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
+					-webkit-filter: grayscale(0%);
+				}
 			}
 		}
 	}
@@ -61,6 +75,11 @@
 		}
 	}
 	&__cert-photo {
+		filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale"); /* Firefox 10+, Firefox on Android */
+		filter: gray; /* IE6-9 */
+		-webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+		transition: 1s;
+
 		@include max-screen($large_tablet) {
 			width: 100%;
 			max-height: 283px;

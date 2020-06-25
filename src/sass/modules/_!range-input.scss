@@ -82,6 +82,8 @@
 		z-index: 2;
 		cursor: default;
 		touch-action: none;
+
+		transition: transform .2s ease;
 	}
 
 	@include min-screen($large_tablet + 1) {

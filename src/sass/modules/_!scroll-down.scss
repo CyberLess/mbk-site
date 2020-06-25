@@ -5,6 +5,17 @@
 	background: #f3f3f3;
 	border-radius: 50%;
 
+	svg {
+		transition: .2s ease;
+	}
+
+	&:hover,
+	&:focus {
+		svg {
+			fill: #FF0600;
+		}
+	}
+
 	&__inside {
 		padding-top: 50%;
 		position: relative;

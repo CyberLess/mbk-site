@@ -9,6 +9,23 @@
     $('.comments-blog__of-pages').text(itemsQuantity);
   };
 
+  const setGoNextBtn = (evt) => {
+    if (evt.item.index > 0) {
+      $visibleLeftBtn.addClass('comments-blog__btn_is-next');
+    } else {
+      $visibleLeftBtn.removeClass('comments-blog__btn_is-next');
+    }
+
+    console.log(evt.item.index + 3 < $('.comments-blog__item').length)
+    console.log(evt.item.index + 3)
+    console.log($('.comments-blog__item').length)
+    if (evt.item.index + 2 < $('.comments-blog__item').length) {
+      $visibleRightBtn.addClass('comments-blog__btn_is-next');
+    } else {
+      $visibleRightBtn.removeClass('comments-blog__btn_is-next');
+    }
+  };
+
   const setCurrentPage = (evt) => {
     $('.comments-blog__current-page').text(evt.item.index + 1);
     $('.comments-blog__of-pages').text(evt.item.count);
@@ -44,5 +61,6 @@
   });
 
   $sliderList.on('changed.owl.carousel', setCurrentPage);
+  $sliderList.on('changed.owl.carousel', setGoNextBtn);
   setStartItemsQuantity();
 })();
