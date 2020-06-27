@@ -38,6 +38,8 @@
 	&__content {
 		//min-width: 574/1336 * 100%;
 		width: 47.4%;
+		height: auto;
+		flex-shrink: 0;
 		min-height: 24.3rem;
 		margin-left: auto;
 		padding: 5.2rem 4.5rem 3.7rem;
@@ -98,20 +100,52 @@
 
 	@include max-screen($large_tablet) {
 		padding-top: 5.1rem;
+
+		&__content {
+			width: 45%;
+		}
+
+		@include min-screen($large_mobile) {
+			&__about {
+				margin-top: 5rem;
+				margin-bottom: 5rem;
+			}
+
+			&__avatar {
+				width: 15rem;
+				height: 15rem;
+			}
+
+			&__description {
+				font-size: 1.4rem;
+			}
+
+			&__item-link {
+				font-size: 1.4rem;
+			}
+		}
+	}
+
+	@include max-screen($small_tablet) {
 		&__wrap {
 			flex-direction: column;
 			height: auto;
 		}
+
 		&__content {
+			width: 100%;
 			margin-left: 0;
 		}
-		&__about {
-			margin-bottom: 5rem;
+
+		&__avatar {
+			width: 24rem;
+			height: 24rem;
 		}
 	}
 
 	@include max-screen($large_mobile) {
 		padding-bottom: 0;
+
 		&__wrap {
 			padding: 3.8rem 1.5rem 2rem;
 		}
@@ -142,7 +176,7 @@
 			font-size: 12px;
 			padding-right: 12px;
 			& .link__arrow {
-				margin-top: -7px;
+				//margin-top: -7px;
 				margin-right: 0;
 			}
 			&.link:hover .link__arrow {

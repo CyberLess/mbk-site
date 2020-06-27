@@ -27,6 +27,15 @@
 		margin-left: -26/1336 * 100%;
 		margin-right: -26/1336 * 100%;
 
+		&.is-inline {
+			.service__item {
+				&:hover,
+				&:focus {
+					transform: translateY(0);
+				}
+			}
+		}
+
 		@include min-screen($large_tablet + 1) {
 			&.is-inline {
 				.service {
@@ -214,10 +223,23 @@
 		overflow: hidden;
 		transition: .3s ease;
 
+		.service__name {
+			display: inline;
+			background-image: linear-gradient(to bottom, transparent 49%, #FF0600 49%);
+			background-size: 0 5px;
+			background-repeat: no-repeat;
+			background-position: 0 89%;
+			transition: background-size .5s;
+		}
+
 		&:hover,
 		&:focus {
 			transform: translateY(-.5rem);
 			box-shadow: 0 12px 40px rgba(0,0,0,.08);
+
+			.service__name {
+				background-size: 100% 5px;
+			}
 
 			.link {
 				color: #FF0600;

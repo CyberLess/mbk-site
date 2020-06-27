@@ -28,6 +28,7 @@
 	}
 
 	&__title {
+		margin-right: 3rem;
 		max-width: 56.1rem;
 
 		span {
@@ -40,6 +41,7 @@
 	}
 
 	&__date {
+		flex-shrink: 0;
 		opacity: 0.5;
 	}
 

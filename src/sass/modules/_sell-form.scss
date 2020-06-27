@@ -141,11 +141,15 @@
 			}
 		}
 
-		.selectric-scroll li {
-			padding: 0 5.5rem;
+		.selectric-scroll {
+			overflow-x: hidden;
 
-			&::before {
-				left: 1rem;
+			li {
+				padding: 0 5.5rem;
+
+				&::before {
+					left: 1rem;
+				}
 			}
 		}
 	}

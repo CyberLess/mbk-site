@@ -2,6 +2,12 @@
 	z-index: 900;
 	position: relative;
 
+	@include max-screen($large_tablet) {
+		position: sticky;
+		top: 0;
+		border-bottom: 1px solid rgba(14, 14, 14, 0.1);
+	}
+
 	&.sticky {
 		position: sticky;
 		top: 0;

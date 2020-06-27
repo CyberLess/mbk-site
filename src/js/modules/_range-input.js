@@ -102,11 +102,11 @@ import { numberWithSpaces } from '../functions';
 	const $sliderHandle = $('.ui-slider-handle');
 	const onHandleMouseDown = ($elem) => {
 		$elem.css({
-			transform: 'scale(1.3)'
+			borderWidth: '0.4rem'
 		});
 	};
 	const onHandleMouseUp = ($elem) => {
-		$elem.css('transform', '');
+		$elem.css('borderWidth', '');
 	};
 
 	$sliderHandle.on('mousedown touchstart', function () {

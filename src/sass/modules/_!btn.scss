@@ -17,19 +17,21 @@
 		background: transparent;
 		border: 1px solid $red;
 		color: $red;
+		transition: ease .15s;
 
-		&:hover {
-			color: #fff;
+		&.btn:hover {
+			color: #000;
 			border-color: #000;
+			background-color: transparent;
 
 			.btn {
 				&__icon {
 					.triangle {
-						stroke: #fff;
+						stroke: #000;
 					}
 
 					.stroke {
-						fill: #fff;
+						fill: #000;
 						// stroke: none;
 					}
 				}
@@ -44,6 +46,7 @@
 	}
 
 	&:hover {
+		color: #fff;
 		// background-color: #000;
 		background-color: #ec221e;
 
@@ -64,6 +67,7 @@
 
 	&__icon {
 		// margin-left: 12px;
+		transition: .15s;
 
 		&_cats {
 			width: 13px;

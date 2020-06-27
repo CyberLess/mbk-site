@@ -132,7 +132,12 @@
 		align-items: flex-start;
 
 		@include max-screen($large_mobile) {
+			align-items: stretch;
 			padding-bottom: 6.5rem;
+
+			.owl-stage {
+				display: flex;
+			}
 		}
 
 		.owl-stage-outer {
@@ -152,6 +157,7 @@
 
 		@include max-screen($small_tablet) {
 			width: 29rem;
+			height: 100%;
 		}
 
 		@include max-screen($large_mobile) {
