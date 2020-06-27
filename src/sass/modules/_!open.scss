@@ -16,15 +16,16 @@
 		height: 0;
 		border-style: solid;
 		border-width: 9.5px 0 9.5px 11px;
-		border-color: transparent transparent transparent $red;	
-		transition: ease .1s;	
+		border-color: transparent transparent transparent $red;
+		transition: ease .2s;
 	}
 
 	&:hover{
-		background-color: #DADADA;
+		background-color: #FF0600;
+		border-color: #FF0600;
 
 		&:before{
-			border-color: transparent transparent transparent #fff;	
+			border-color: transparent transparent transparent #fff;
 		}
 	}
 

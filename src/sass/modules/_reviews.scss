@@ -308,12 +308,20 @@
 
 	.video__play {
 		transition-property: background-color;
-		transition-duration: .3s;
+		transition-duration: .2s;
 		transition-timing-function: ease;
+
+		&::before {
+			transition: .2s ease;
+		}
 
 		&:hover,
 		&:focus {
-			background-color: rgba(255, 255, 255, 0.3);
+			background-color: #ffffff;
+
+			&::before {
+				border-color: transparent transparent transparent #0e0e0e;
+			}
 		}
 	}
 }
