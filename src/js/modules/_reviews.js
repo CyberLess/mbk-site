@@ -47,12 +47,12 @@
 							$item.find('.reviews__video').prepend($picture)
 							$item.find('.reviews__video').attr('data-youtube', response[i].youtube)
 
-							$item.removeClass('is-loading')								
+							$item.removeClass('is-loading')
 						}, 1500)
 
 					}else{
 
-						$reviews.trigger('add.owl.carousel', 
+						$reviews.trigger('add.owl.carousel',
 							[`
 								<div class="reviews__row flex flex_vertical" id="${response[i].id}">
 			                        <div class="reviews__cell reviews__cell_video">
@@ -102,14 +102,15 @@
 		    },
 
 		    769 : {
-		    	nav: false,
-		    	touchDrag: false
+		    	touchDrag: false,
+					navText: ['<svg class="icon-arrow" fill="none" version="1.1" viewBox="0 0 18.561 9.6213" xmlns="http://www.w3.org/2000/svg"><g shape-rendering="auto"><path d="m13.75 0v4.0605h-13.75v1.5h13.75v4.0605l4.8105-4.8105z" /></g></svg>', '<svg class="icon-arrow" fill="none" version="1.1" viewBox="0 0 18.561 9.6213" xmlns="http://www.w3.org/2000/svg"><g shape-rendering="auto"><path d="m13.75 0v4.0605h-13.75v1.5h13.75v4.0605l4.8105-4.8105z" /></g></svg>'],
+					navContainer: '.reviews__nav-arrows',
 		    }
 		}
 	}).on('changed.owl.carousel', e => {
 
 		let carousel = e.relatedTarget;
-		let slideIndex = (carousel.relative(carousel.current()));	
+		let slideIndex = (carousel.relative(carousel.current()));
 
 		let total = carousel.items().length - 1;
 
@@ -125,7 +126,7 @@
 			.removeClass('reviews__item_active')
 			.eq(slideIndex)
 			.addClass('reviews__item_active')
-			
+
 	})
 
 	$('.reviews__item').on('click', e => {
@@ -137,7 +138,7 @@
 			$reviews.trigger('to.owl.carousel', [ind, 0])
 		}else{
 
-			$reviews.trigger('add.owl.carousel', 
+			$reviews.trigger('add.owl.carousel',
 				[`
 					<div class="reviews__row flex flex_vertical is-loading" id="${id.replace('#', '')}">
                         <div class="reviews__cell reviews__cell_video">

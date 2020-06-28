@@ -1,7 +1,5 @@
 (() => {
-  const $sliderList = $('.owl-carousel');
-  const $visibleLeftBtn = $('.comments-blog__btn_left');
-  const $visibleRightBtn = $('.comments-blog__btn_right');
+  const $sliderList = $('.comments-blog__list');
 
   const setStartItemsQuantity = () => {
     const itemsQuantity = $('.comments-blog__item').length;
@@ -34,14 +32,6 @@
       }
     }
 
-  });
-
-  $visibleLeftBtn.click(() => {
-    $('.owl-prev').trigger('click');
-  });
-
-  $visibleRightBtn.click(() => {
-    $('.owl-next').trigger('click');
   });
 
   $sliderList.on('changed.owl.carousel', setCurrentPage);

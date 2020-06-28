@@ -12,4 +12,11 @@
 	@include max-screen($large_tablet) {
 		display: none;
 	}
+
+	&_main {
+		margin-top: 49.5rem;
+		z-index: 900;
+
+		margin-right: 78/1920 * 100%;
+	}
 }

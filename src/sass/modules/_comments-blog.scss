@@ -48,72 +48,7 @@
 		}
 
 		button {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: 6.6rem;
-			height: 6.6rem;
-			border: 1px solid #0e0e0e;
-			border-radius: 50%;
-
-			transition-timing-function: ease;
-
-			transition-duration: 0.2s;
-			transition-property: background-color;
-			background-color: transparent;
-
-			@include max-screen($large_mobile) {
-				width: auto;
-				border: none;
-			}
-
-			&.owl-next {
-				margin-left: 2rem;
-			}
-
-			&:hover {
-				cursor: pointer;
-				background-color: #0e0e0e;
-
-				@include max-screen($large_mobile) {
-					background-color: transparent;
-				}
-
-				.icon-arrow {
-					fill: #ffffff;
-
-					@include max-screen($large_mobile) {
-						fill: #ff0400;
-					}
-				}
-			}
-
-			.icon-arrow {
-				width: 1.8rem;
-				height: 1rem;
-
-				transition: 0.2s ease;
-
-				fill: #0e0e0e;
-
-				@include max-screen($large_mobile) {
-					fill: #0e0e0e;
-				}
-			}
-
-			&.owl-prev {
-				transform: rotate(-180deg);
-			}
-
-			&.disabled,
-			&.disabled:hover {
-				border-color: #bfbfbf;
-				background-color: transparent;
-
-				.icon-arrow {
-					fill: #bfbfbf;
-				}
-			}
+			@extend .slider-round-nav-button;
 		}
 	}
 
@@ -288,6 +223,75 @@
 	&__time-wrap {
 		@include max-screen($large_mobile) {
 			font-size: 1rem;
+		}
+	}
+}
+
+.slider-round-nav-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 6.6rem;
+	height: 6.6rem;
+	border: 1px solid #0e0e0e;
+	border-radius: 50%;
+
+	transition-timing-function: ease;
+
+	transition-duration: 0.2s;
+	transition-property: background-color;
+	background-color: transparent;
+
+	@include max-screen($large_mobile) {
+		width: auto;
+		border: none;
+	}
+
+	&.owl-next {
+		margin-left: 2rem;
+	}
+
+	&:hover {
+		cursor: pointer;
+		background-color: #0e0e0e;
+
+		@include max-screen($large_mobile) {
+			background-color: transparent;
+		}
+
+		.icon-arrow {
+			fill: #ffffff;
+
+			@include max-screen($large_mobile) {
+				fill: #ff0400;
+			}
+		}
+	}
+
+	.icon-arrow {
+		width: 1.8rem;
+		height: 1rem;
+
+		transition: 0.2s ease;
+
+		fill: #0e0e0e;
+
+		@include max-screen($large_mobile) {
+			fill: #0e0e0e;
+		}
+	}
+
+	&.owl-prev {
+		transform: rotate(-180deg);
+	}
+
+	&.disabled,
+	&.disabled:hover {
+		border-color: #bfbfbf;
+		background-color: transparent;
+
+		.icon-arrow {
+			fill: #bfbfbf;
 		}
 	}
 }

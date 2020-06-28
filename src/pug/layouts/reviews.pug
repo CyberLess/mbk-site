@@ -1,7 +1,10 @@
 +b.SECTION.reviews
 	+e.mobile-bg.IMG(src="/img/tree2.png")
 	+e.wrap.wrap
-		+e.title.h3.H2 Клиенты МБК и их история
+		+e.top-wrap
+			+e.title.h3.H2 Клиенты МБК и их история
+			+e.DIV.nav-arrows
+
 		+e.slider.owl-carousel(data-action="/reviews.json")
 			+e.row.flex._vertical#review-0
 				+e.cell._video
@@ -33,7 +36,7 @@
 					+e.top
 						+e.name.h4
 							span Вера Зорькина
-						+e.who.h6 
+						+e.who.h6
 							span Клиент МБК, 46 лет
 					+e.text.h6
 						| Обратилась в компанию МБК совершенно случайно. Купила квартиру в новостройке и получилось так, что денег на ремонт не было достаточно.
@@ -52,9 +55,9 @@
 						+e.play
 				+e.cell._content
 					+e.top
-						+e.name.h4 
+						+e.name.h4
 							span Ольга Цветочная
-						+e.who.h6 
+						+e.who.h6
 							span Клиент МБК, 46 лет
 					+e.text.h6
 						| Обратилась в компанию МБК совершенно случайно. Купила квартиру в новостройке и получилось так, что денег на ремонт не было достаточно.
@@ -68,7 +71,7 @@
 							| Обратиться в мбк
 		+e.counter
 			+e.SPAN.conter-current 1
-			|  / 
+			|  /
 			+e.SPAN.counter-total n
 		+e.list.flex
 			+e.item._active(data-review="#review-0")
@@ -85,7 +88,7 @@
 				+e.item-inner
 					+e.item-content
 						+e.item-name.h6
-							span Вера 
+							span Вера
 							span Зорькина
 						+e.item-status.h6
 							| Клиент МБК
@@ -108,5 +111,5 @@
 						+e.item-status.h6
 							| Клиент МБК
 		+e.bottom
-			+e.A.link.h6.red-link._arrow(href="#") 
+			+e.A.link.h6.red-link._arrow(href="#")
 				| Больше отзывов

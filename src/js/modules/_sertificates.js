@@ -1,5 +1,5 @@
 (() => {
-	const $list = $('.sertificates__list-cert');
+	const $list = $('.sertificates__list-cert_top');
 
 	$list.magnificPopup({
 		delegate: 'a',

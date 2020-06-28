@@ -49,11 +49,20 @@
 		}
 	}
 
-	&__title{
+	&__top-wrap {
+		display: flex;
+		width: 100%;
 		margin-bottom: 6rem;
+		align-items: center;
 
 		@include max-screen($large_tablet) {
 			margin-bottom: 4rem;
+		}
+	}
+
+	&__title{
+		@include min-screen($small_tablet + 1) {
+			width: 85%;
 		}
 
 		@include max-screen($large_mobile) {
@@ -61,6 +70,21 @@
 			text-align: center;
 			padding-left: 15%;
 			padding-right: 15%;
+		}
+	}
+
+	&__nav-arrows {
+		display: flex;
+		flex-shrink: 0;
+		margin-left: auto;
+
+		@include max-screen($small_tablet) {
+			display: none;
+		}
+
+		.owl-prev,
+		.owl-next, {
+			@extend .slider-round-nav-button;
 		}
 	}
 
