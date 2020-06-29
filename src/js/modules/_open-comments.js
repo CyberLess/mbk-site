@@ -65,8 +65,14 @@
 		let $copyForm = $cloneForm.clone();
 
 		if ($container.find(".js-clone-form").length) {
-			$container.find(".js-clone-form").remove();
+			$container.find(".js-clone-form").slideUp(500, function () {
+				$container.prevAll('.comment__content').css({
+					borderBottom: ''
+				});
+				$(this).remove();
+			});
 			$container.removeClass("is-form-open");
+
 			// $comment
 			// 	.find(">.comment__content")
 			// 	.removeClass("comment__content_no-border");
@@ -81,7 +87,12 @@
 			// 		.addClass("comment__content_no-border");
 			// }
 
+			$container.prevAll('.comment__content').css({
+				borderBottom: 'none'
+			});
+			$copyForm.hide();
 			$container.append($copyForm);
+			$container.find($copyForm).slideDown(500);
 
 			// if ($comment.is(":last-child")) {
 			// 	$container
