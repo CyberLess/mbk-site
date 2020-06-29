@@ -163,9 +163,11 @@
     }
 
     .checkbox__check {
+      top: 50%;
       width: 1.5rem;
       height: 1.5rem;
       border-radius: 50%;
+      transform: translateY(-50%);
     }
 
     .checkbox__text {

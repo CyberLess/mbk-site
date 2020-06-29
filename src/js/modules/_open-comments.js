@@ -22,13 +22,32 @@
 		}
 
 		if (!$count.length) {
-			$this.append(`<span class="comment__nav-text">${count}</span>`);
+			const elem = `<span class="comment__nav-text" style="position: absolute; top: 50%; right: 0; opacity: 0; transform: translateY(-50%)">${count}</span>`;
+
+			const $apendedElem = $this.append(elem).find('.comment__nav-text');
+			const width = $apendedElem.width();
+
+			$this.animate({
+				paddingRight: `${width + 8}px`
+			}, 300, function () {
+				$apendedElem.animate({
+					opacity: 1
+				});
+			});
 		} else {
 			$count.text(count);
 		}
 
 		if (!count) {
-			$this.addClass("is-empty").find(".comment__nav-text").remove();
+			const $apendedElem = $this.find('.comment__nav-text');
+			$apendedElem.css('opacity', '0');
+
+			$this.animate({
+				paddingRight: 0
+			}, 300, function () {
+				$(this).addClass("is-empty");
+				$apendedElem.remove();
+			});
 		} else {
 			$this.removeClass("is-empty");
 		}

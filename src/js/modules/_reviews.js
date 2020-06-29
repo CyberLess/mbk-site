@@ -5,7 +5,6 @@
 	let stop = false;
 	let old_count = 0;
 
-
 	if(!$reviews.length)
 		return false;
 
@@ -24,6 +23,7 @@
 			dataType: 'json',
 			success: response => {
 				loading = false;
+				console.log(response)
 
 				for (var i in response) {
 					let $item = $("#"+response[i].id);

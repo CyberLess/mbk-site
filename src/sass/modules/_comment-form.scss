@@ -5,6 +5,14 @@
 	padding-top: 4.9rem;
 	padding-bottom: 5.5rem;
 
+	&__title {
+		margin-bottom: 5rem;
+
+		@include max-screen($large_mobile) {
+			margin-bottom: 3rem;
+		}
+	}
+
 	&_small {
 		padding: 0 !important;
 		margin-bottom: 1.8rem;
