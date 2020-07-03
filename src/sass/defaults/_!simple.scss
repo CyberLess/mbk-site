@@ -407,3 +407,39 @@ svg {
 	position: sticky;
 	top: 10rem;
 }
+
+.js-gallery-background {
+	// visibility: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+
+	will-change: opacity;
+
+	&.is-visible {
+		z-index: 3;
+	}
+
+	&.is-next {
+		z-index: 2;
+	}
+
+	&.is-done {
+		// filter: blur(10px);
+		opacity: 0;
+		transition: ease 2s;
+	}
+
+	// @include min-screen($large_tablet + 1) {
+	&.is-active {
+		// visibility: visible;
+
+		img {
+			transform-origin: 100% 100%;
+			animation: scaleUp 10s linear 1 forwards;
+		}
+	}
+	// }
+}

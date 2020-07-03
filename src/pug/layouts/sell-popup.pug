@@ -24,7 +24,9 @@
                     +e.arrow-icon
                         +icon('arrow_2', '0 0 23 10')
 
-                +e.btn.btn.A(href="#sell-order-popup") Связаться с покупателем
+                +e.btn.btn__.A(href="#sell-order-popup")
+                    +e.SPAN.circle
+                    +e.SPAN.text Связаться с покупателем
 
     +e.wrap_bottom
         +e.container
@@ -105,7 +107,8 @@
             +e.INPUT.item(type="text" placeholder="Телефон" name="name")
             +e.icon-wrap
                 +icon('popup-phone', '0 0 24 24')
-        +e.button.btn.h6.BUTTON(type="submit" data-mfp-src="#sell-order-popup")
+        +e.button.btn__.h6.BUTTON(type="submit" data-mfp-src="#sell-order-popup")
+            +e.SPAN.circle
             +e.text Оставить заявку
         +e.LABEL.access.access.checkbox__
             +e.INPUT.input(type='checkbox' name='access' checked="")

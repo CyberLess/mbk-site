@@ -86,7 +86,7 @@ $(() => {
 			$(".js-submenu").removeClass("is-active");
 			$(".header__mobile").removeClass("is-visible");
 
-			// $('html, body').addClass('js-lock')
+			// $("html, body").addClass("js-lock");
 
 			if (eventIn != "click") {
 				$submenu.addClass(`header__panel_visible ${panelItemClass}`);

@@ -1,158 +1,165 @@
 @keyframes circleScale {
-    from {
-    	transform: scale(1);
-    	opacity: 0;
-    }
-    20%, 50%{
-    	opacity: 1;
-    }
-    to {
-    	transform: scale(2.5);
-    	opacity: 0;
+	from {
+		transform: scale(1);
+		opacity: 0;
+	}
+	20%,
+	50% {
+		opacity: 1;
+	}
+	to {
+		transform: scale(2.5);
+		opacity: 0;
 	}
 }
 @keyframes toBottom {
-    100% {
-        transform: translateY(0);
-    }
+	100% {
+		transform: translateY(0);
+	}
 }
-
+@keyframes scaleUp {
+	from {
+		transform: scale(1);
+	}
+	to {
+		transform: scale(1.1);
+	}
+}
 @keyframes fadeOut {
-    from {
-        opacity: 0;
-    }
+	from {
+		opacity: 0;
+	}
 
-    to {
-        opacity: 1;
-    }
+	to {
+		opacity: 1;
+	}
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 1;
-    }
+	from {
+		opacity: 1;
+	}
 
-    to {
-        opacity: 0;
-    }
+	to {
+		opacity: 0;
+	}
 }
-
 
 @keyframes portfolioInSmall {
-    to {
-        transform: scale(2.6) translate(0%, 0%);
-    }
-
+	to {
+		transform: scale(2.6) translate(0%, 0%);
+	}
 }
 @keyframes portfolioIn {
-    to {
-        transform: scale(2.6) translate(50%, 50%);
-    }
-
+	to {
+		transform: scale(2.6) translate(50%, 50%);
+	}
 }
 @keyframes portfolioOut {
-    // from{
-    //     transform: scale(2.6) translate(50%, 50%);
-    // }
-    to {
-        transform: scale(.5) translate(0%, 0%);
-    }
-
+	// from{
+	//     transform: scale(2.6) translate(50%, 50%);
+	// }
+	to {
+		transform: scale(0.5) translate(0%, 0%);
+	}
 }
 @keyframes portfolioOutSmall {
-
-    to {
-        transform: scale(1) translate(50%, 50%);
-    }
-
+	to {
+		transform: scale(1) translate(50%, 50%);
+	}
 }
 @keyframes portfolioOutFade {
-    to {
-        opacity: 0;
-    }
+	to {
+		opacity: 0;
+	}
 }
 @keyframes baAnim {
-    from {
-        width: 50%;
-    }
-    25%{
-        width: 25%;
-    }
-    50%{
-        width: 50%;
-    }
-    75%{
-        width: 75%;
-    }
-    to {
-        width: 50%;
-    }
+	from {
+		width: 50%;
+	}
+	25% {
+		width: 25%;
+	}
+	50% {
+		width: 50%;
+	}
+	75% {
+		width: 75%;
+	}
+	to {
+		width: 50%;
+	}
 }
 
 @keyframes baAnimHandle {
-    from {
-        left: 50%;
-    }
-    25%{
-        left: 25%;
-    }
-    50%{
-        left: 50%;
-    }
-    75%{
-        left: 75%;
-    }
-    to {
-        left: 50%;
-    }
+	from {
+		left: 50%;
+	}
+	25% {
+		left: 25%;
+	}
+	50% {
+		left: 50%;
+	}
+	75% {
+		left: 75%;
+	}
+	to {
+		left: 50%;
+	}
 }
 
 @keyframes baAnimArrow {
-    from {
-        transform: rotate(180deg)
-    }
-    25%{
-        transform: rotate(180deg)
-    }
-    50%{
-        transform: rotate(0deg)
-    }
-    75%{
-        transform: rotate(0deg)
-    }
-    to {
-        transform: rotate(180deg)
-    }
+	from {
+		transform: rotate(180deg);
+	}
+	25% {
+		transform: rotate(180deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	75% {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(180deg);
+	}
 }
 @keyframes autoplay {
-    // from {
-    //     stroke-dashoffset: 1000;
-    // }
-    to {
-        stroke-dashoffset: 0;
-    }
+	// from {
+	//     stroke-dashoffset: 1000;
+	// }
+	to {
+		stroke-dashoffset: 0;
+	}
 }
 
 @keyframes left_to_right {
-    from {
+	from {
 		left: -50%;
-    }
-    to {
-		left: 150%
-    }
+	}
+	to {
+		left: 150%;
+	}
 }
 @keyframes right_to_left {
-    from {
+	from {
 		right: -50%;
-    }
-    to {
-		right: 150%
-    }
+	}
+	to {
+		right: 150%;
+	}
 }
 
-
 @keyframes fade {
-	0%   { opacity:1; }
-	50%  { opacity:0.2; }
-	100% { opacity:1; }
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.2;
+	}
+	100% {
+		opacity: 1;
+	}
 }

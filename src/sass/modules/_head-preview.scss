@@ -16,12 +16,13 @@
 		top: 0;
 		width: 100%;
 		height: 100%;
+		overflow: hidden;
 
-		&-img {
-			&_mobile {
-				display: none;
-			}
-		}
+		// &-img {
+		// 	&_mobile {
+		// 		display: none;
+		// 	}
+		// }
 	}
 
 	&__breadcrumbs {
@@ -79,6 +80,9 @@
 				padding-bottom: 2.9rem;
 			}
 			&__bg {
+				&-inner {
+					object-position: 70%;
+				}
 				&-img {
 					&_desktop {
 						display: none;

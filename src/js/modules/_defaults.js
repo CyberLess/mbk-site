@@ -1,4 +1,24 @@
+var buttonInit;
+
 (() => {
+	buttonInit = function (e) {
+		var x = e.pageX;
+		var y = e.pageY;
+		var offset = $(this).offset();
+		// console.log(offset.left - x, offset.top - y)
+
+		$(this)
+			.addClass("is-initialized")
+			.find(".btn__circle")
+			.css({
+				left: Math.abs(offset.left - x) + "px",
+				top: Math.abs(offset.top - y) + "px",
+				// 'transform': 'translate('+Math.abs(offset.left - x)+'px,'+Math.abs(offset.top - y)+'px)'
+			});
+	};
+
+	$(".btn").on("mousemove", buttonInit);
+
 	$(".js-mobile-menu").on("click", (e) => {
 		let $this = $(e.currentTarget);
 		let $menu = $(".header__device");
@@ -130,3 +150,5 @@
 		$(".mobile-button").show();
 	});
 })($);
+
+export { buttonInit };

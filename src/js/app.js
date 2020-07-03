@@ -31,3 +31,6 @@ import "./modules/_open-faq";
 import "./modules/_scroll";
 import "./modules/_sertificates";
 import "./modules/_stiky-header";
+
+import { background } from "./modules/_background";
+background.init();

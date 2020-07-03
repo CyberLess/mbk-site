@@ -38,8 +38,9 @@
 								+e.input.INPUT(type="checkbox" name="cat" value='7')
 								+e.text.SPAN Налоги
 				+e.filter-part._static._bottom
-					+e.filter-button.btn.h6.js-close-filter.A(href='#')
-						| Подобрать
+					+e.filter-button.btn__.h6.js-close-filter.A(href='#')
+						+e.SPAN.circle
+						+e.SPAN.text Подобрать
 		+e.mobile
 			+e.mobile-nav.flex._justify
 				+e.mobile-label.is-active(data-selector=".blog__cell_right") Лучшее
