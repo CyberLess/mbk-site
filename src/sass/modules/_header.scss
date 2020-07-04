@@ -23,7 +23,7 @@
 		}
 
 		&-transition {
-			transition: all .3s cubic-bezier(.45,.05,.55,.95);
+			transition: all 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
 		}
 	}
 
@@ -44,6 +44,14 @@
 	&.is-mobmenu-open {
 		z-index: 950;
 	}
+
+	// &.is-submenu-open {
+	// 	.header {
+	// 		&__bottom {
+	// 			border-bottom: 1px solid #f2f2f2;
+	// 		}
+	// 	}
+	// }
 
 	&:not(.is-submenu-open) {
 		.header {
@@ -277,7 +285,7 @@
 		align-items: center;
 		position: relative;
 
-		@include max-screen($small_tablet) {
+		@include max-screen($large_tablet) {
 			// display: none;
 			top: 100%;
 			height: auto;
@@ -381,8 +389,8 @@
 	&__panel {
 		position: absolute;
 		left: 0;
-		top: 100%;
-		// height: 100%;
+		top: 0;
+		height: 100vh;
 		width: 100%;
 		// padding-top: 8.5rem;
 
@@ -401,9 +409,18 @@
 		}
 
 		&-row {
+			// position: absolute;
+			// left: 0;
+			// top: 0;
+			// right: 0;
+			// bottom: 0;
 			position: relative;
+			height: 100%;
 
+			padding-bottom: 5rem;
 			z-index: 5;
+
+			overflow-y: auto;
 		}
 
 		&_visible {
@@ -411,17 +428,18 @@
 			animation-name: fadeOut;
 			animation-duration: 0.5s;
 
-			&.css-another {
-				.header__panel-row {
-					background: #f5f7fa;
-				}
-			}
+			// &.css-another {
+			// 	.header__panel-row {
+			// 		background: #f5f7fa;
+			// 	}
+			// }
 		}
 
 		&-bg {
 			position: fixed;
 			left: 3.3rem;
 			right: 3.3rem;
+			z-index: -1;
 			top: 0;
 			height: 100%;
 			// width: 100%;

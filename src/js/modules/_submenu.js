@@ -4,14 +4,28 @@ var submenu_close;
 
 $(() => {
 	var $submenu = $(".header__panel");
+	var $header = $(".header");
+	var windowPostion = 0;
 	var currentOut = false;
 
 	if (!$submenu.length) return false;
+
+	var submenu_resize = () => {
+		$submenu.css({
+			"padding-top": $header.outerHeight() - 1,
+		});
+	};
 
 	submenu_close = () => {
 		$(".js-submenu").removeClass("is-active");
 		$("html, body").removeClass("js-lock");
 		$(".header").removeClass("is-submenu-open");
+
+		$("body").removeAttr("style");
+
+		console.log("submenu close");
+
+		// window.scroll(0, windowPostion);
 
 		$submenu
 			.addClass("is-hide")
@@ -29,6 +43,8 @@ $(() => {
 
 	$(window).on("load resize", () => {
 		let ww = $(window).width();
+
+		submenu_resize();
 
 		if (ww <= 1024) {
 			$(".js-mobile-submenu").each((i, el) => {
@@ -74,6 +90,12 @@ $(() => {
 		$this.on(eventIn, (e) => {
 			currentOut = false;
 
+			e.preventDefault();
+
+			// windowPostion = window.scrollY;
+
+			// console.log("windowPostion", windowPostion);
+
 			let panelItemClass = "";
 
 			if ($submenu.hasClass("header__panel_visible")) {
@@ -87,6 +109,13 @@ $(() => {
 			$(".header__mobile").removeClass("is-visible");
 
 			// $("html, body").addClass("js-lock");
+			$("body").css("overflow-y", "hidden");
+
+			submenu_resize();
+
+			// document.documentElement.scrollTop = 5000;
+
+			// window.scrollTo(0, windowPostion);
 
 			if (eventIn != "click") {
 				$submenu.addClass(`header__panel_visible ${panelItemClass}`);

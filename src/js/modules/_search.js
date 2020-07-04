@@ -1,39 +1,38 @@
-import {submenu_close} from './_submenu';
+import { submenu_close } from "./_submenu";
 
 (() => {
+	let $search = $(".search");
+	let $header = $(".header");
 
-	let $search = $('.search');
-	let $header = $('.header');
+	if (!$search.length) return false;
 
-	if(!$search.length)
-		return false;
+	$(".js-search-open").on("click", (e) => {
+		submenu_close();
 
-	$('.js-search-open').on('click', e => {
+		$search.addClass("is-active");
 
-		submenu_close()
+		$header.addClass("is-search-open");
 
-		$search.addClass('is-active')
+		$("body").css("overflow-y", "hidden");
 
-		$header.addClass('is-search-open')
+		$(".js-mobile-menu, .header__device").removeClass("is-active");
+	});
 
-		$('.js-mobile-menu, .header__device').removeClass('is-active')
+	$(".js-search-close").on("click", (e) => {
+		$search.removeClass("is-active");
 
-	})
+		$header.removeClass("is-search-open");
 
-	$('.js-search-close').on('click', e => {
-		$search.removeClass('is-active')
+		$("body").removeAttr("style");
 
-		$header.removeClass('is-search-open')
+		$(".js-search-toggle").removeClass("is-active");
+	});
 
-		$('.js-search-toggle').removeClass('is-active')
-	})
+	$(".js-search-toggle").on("click", (e) => {
+		$(e.currentTarget).toggleClass("is-active");
+		$search.toggleClass("is-active");
+		$header.toggleClass("is-search-open");
 
-	$('.js-search-toggle').on('click', e => {
-		$(e.currentTarget).toggleClass('is-active')
-		$search.toggleClass('is-active')
-		$header.toggleClass('is-search-open')
-
-		$('.js-mobile-menu, .header__device').removeClass('is-active')
-	})
-
-})($)
+		$(".js-mobile-menu, .header__device").removeClass("is-active");
+	});
+})($);

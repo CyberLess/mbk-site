@@ -365,6 +365,24 @@ svg {
 	// }
 }
 
+.css-gray-scrollbar {
+	/* width */
+	&::-webkit-scrollbar {
+		width: 6px;
+	}
+
+	/* Track */
+	&::-webkit-scrollbar-track {
+		background: #f3f3f3;
+		// background: transparent;
+	}
+
+	/* Handle */
+	&::-webkit-scrollbar-thumb {
+		background: $red;
+	}
+}
+
 .css-show-mobile {
 	display: none;
 	@include max-screen($large_mobile) {
