@@ -83,7 +83,12 @@
 		cursor: default;
 		touch-action: none;
 
-		transition: border-width .2s ease;
+		transition: border-width 0.25s ease;
+
+		&.ui-state-active,
+		&.ui-state-hover {
+			border-width: 0.4rem;
+		}
 	}
 
 	@include min-screen($large_tablet + 1) {

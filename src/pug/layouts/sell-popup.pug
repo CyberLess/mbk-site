@@ -86,7 +86,9 @@
                         +e.rooms-designation.SPAN комнаты
                     +e.item._budget.TD 4 550 000
                         +e.price-char.SPAN  ₽
-            +e.show-more.btn.blog__button.btn_border.p.A(href="#") Показать еще варианты
+            +e.show-more.btn__.blog__button.btn_border.p.A(href="#")
+                +e.SPAN.circle
+                +e.SPAN.text Показать еще варианты
                 +e.arrow.SVG(viewBox="0 0 18.560659 9.6213207" width="20" height="15")
                     path(class="triangle" d='M14.5 4.81v-3l3 3-3 3z')
                     path(class="stroke" d='M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z')
@@ -104,7 +106,7 @@
             +e.icon-wrap
                 +icon('popup-user', '0 0 24 24')
         +e.phone.input__
-            +e.INPUT.item(type="text" placeholder="Телефон" name="name")
+            +e.INPUT.item(type="text" placeholder="Телефон" name="phone")
             +e.icon-wrap
                 +icon('popup-phone', '0 0 24 24')
         +e.button.btn__.h6.BUTTON(type="submit" data-mfp-src="#sell-order-popup")

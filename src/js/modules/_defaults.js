@@ -19,6 +19,24 @@ var buttonInit;
 
 	$(".btn").on("mousemove", buttonInit);
 
+	$(".js-more-tags").on("click", (e) => {
+		e.preventDefault();
+		let $this = $(e.currentTarget),
+			$form = $this.closest("form"),
+			$items = $form.find(".tag[hidden]"),
+			label = $this.data("label"),
+			labelClose = $this.data("close");
+
+		$items.toggleClass("is-visible");
+		$this.toggleClass("is-active");
+
+		if ($this.hasClass("is-active")) {
+			$this.find(".link__text").text(labelClose);
+		} else {
+			$this.find(".link__text").text(label);
+		}
+	});
+
 	$(".js-mobile-menu").on("click", (e) => {
 		let $this = $(e.currentTarget);
 		let $menu = $(".header__device");

@@ -1,6 +1,16 @@
 +b.SECTION.offer
 	+e.bg
-		+e.bg-image.object-fit.IMG(src="/img/main-bg.jpg")
+		+e.bg-image.js-gallery-background.is-active.is-visible
+			+e.IMG.bg-inner.object-fit(src="/img/offer_1.jpg")
+		+e.bg-image.js-gallery-background
+			+e.IMG.bg-inner.object-fit(src="/img/offer_2.jpg")
+		+e.bg-image.js-gallery-background
+			+e.IMG.bg-inner.object-fit(src="/img/offer.jpg")
+
+	//- +e.bg
+	//- 	+e.bg-image.object-fit.IMG(src="/img/main-bg.jpg")
+
+
 		//- +e.video.VIDEO(loop="" muted="" autoplay="" poster="")
 		//- 	source(type="video/mp4" src="/video.mp4")
 	+b.fluid._main

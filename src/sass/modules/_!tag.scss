@@ -3,6 +3,10 @@
 	margin-bottom: 1rem;
 	user-select: none;
 
+	&.is-visible {
+		display: block !important;
+	}
+
 	&__input {
 		display: none;
 
@@ -106,6 +110,16 @@
 						border-color: $dark;
 						color: #fff;
 					}
+				}
+			}
+		}
+	}
+
+	@media not all and (min-resolution: 0.001dpcm) {
+		@supports (-webkit-appearance: none) {
+			.tag {
+				&__text {
+					padding: 0.8rem 2.8rem 0.6rem;
 				}
 			}
 		}

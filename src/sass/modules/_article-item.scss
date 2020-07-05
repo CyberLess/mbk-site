@@ -453,6 +453,7 @@
 		}
 		&__content {
 			border: none;
+			padding-top: 1rem;
 			p,
 			li {
 				font-size: 12px;
@@ -573,7 +574,8 @@
 		}
 		&__cell {
 			&_left {
-				padding-bottom: 2.9rem;
+				// padding-bottom: 2.9rem;
+				padding-bottom: 0;
 			}
 		}
 		&__accent {

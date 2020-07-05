@@ -3,8 +3,11 @@
 
 	&__container {
 		&-photo {
+			width: 100%;
 			display: block;
-			transition: .4s;
+			transition: 0.3s;
+			position: relative;
+			padding-top: 372/258 * 100%;
 
 			@include max-screen($large_tablet) {
 				margin: auto;
@@ -13,23 +16,34 @@
 			&:hover,
 			&:focus {
 				@include min-screen($large_mobile) {
-					transform: translateY(-.5rem);
-					box-shadow: 0 .5rem 4rem 0 rgba(0, 0, 0, 0.1);
+					transform: translateY(-0.5rem);
+					box-shadow: 0 0.5rem 4rem 0 rgba(0, 0, 0, 0.1);
 				}
 
 				.sertificates__cert-photo {
-					filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
+					filter: url("data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg'&gt;&lt;filter id='grayscale'&gt;&lt;feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
 					-webkit-filter: grayscale(0%);
 				}
 			}
 		}
 	}
 
-	&__wrap {
-		@include max-screen($small_tablet) {
-			padding: 0;
-		}
+	.owl-item {
+		padding-left: 0;
+		padding-right: 0;
+		float: none;
 	}
+
+	.owl-stage {
+		display: flex;
+		align-items: center;
+	}
+
+	// &__wrap {
+	// 	@include max-screen($small_tablet) {
+	// 		padding: 0;
+	// 	}
+	// }
 
 	@include max-screen($small_tablet) {
 		padding-top: 4.8rem;
@@ -59,41 +73,93 @@
 		display: flex;
 		flex-wrap: wrap;
 		margin-top: 8rem;
-		margin-left: -9.9rem;
+		// margin-left: -9.9rem;
+		margin-left: -99/1336 * 100%;
+
 		margin-bottom: 2rem;
-		@include max-screen($small_desktop) {
-			margin-left: 0;
-		}
+		// @include max-screen($small_desktop) {
+		// 	margin-left: 0;
+		// }
 		@include max-screen($large_tablet) {
 			margin-top: 2.5rem;
-			padding-bottom: 5.4rem;
-			padding-left: 15px;
+			// padding-bottom: 5.4rem;
+			// padding-left: 15px;
+			margin-left: -15/960 * 100%;
+			margin-right: -15/960 * 100%;
 			margin-bottom: 4.5rem;
+		}
+
+		@include max-screen($large_mobile) {
+			padding-bottom: 5.4rem;
 		}
 	}
 	&__item-cert {
-		margin-left: 9.8rem;
-		margin-bottom: 9.9rem;
+		// margin-left: 9.8rem;
+		// margin-bottom: 9.9rem;
+		margin-left: 98/1435 * 100%;
+		margin-bottom: 99/1435 * 100%;
+		width: 258/1435 * 100%;
+
+		&_horizontal {
+			width: 380/1435 * 100%;
+
+			.sertificates {
+				&__container {
+					&-photo {
+						padding-top: 269/380 * 100%;
+					}
+				}
+			}
+		}
+		// position: relative;
+
 		@include max-screen($large_tablet) {
+			// margin-bottom: 0;
+			// margin-left: 0;
+			// min-height: 283px;
+			// align-items: center;
+			// display: flex;
+			margin-left: 15/990 * 100%;
+			margin-right: 15/990 * 100%;
+			width: 160/990 * 100%;
+
+			&_horizontal {
+				width: 300/990 * 100%;
+			}
+		}
+
+		@include max-screen($small_tablet) {
+			width: 217.5/990 * 100%;
+
+			&_horizontal {
+				width: 300/990 * 100%;
+			}
+		}
+
+		@include max-screen($large_mobile) {
+			width: 197px;
+			margin-left: auto;
+			margin-right: auto;
 			margin-bottom: 0;
-			margin-left: 0;
-			min-height: 283px;
-			align-items: center;
-			display: flex;
+			&_horizontal {
+				width: 275px;
+			}
 		}
 	}
 	&__cert-photo {
-		filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale"); /* Firefox 10+, Firefox on Android */
+		filter: url("data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg'&gt;&lt;filter id='grayscale'&gt;&lt;feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale"); /* Firefox 10+, Firefox on Android */
 		filter: gray; /* IE6-9 */
-		-webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+		-webkit-filter: grayscale(
+			100%
+		); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
 		transition: 1s;
 
-		@include max-screen($large_tablet) {
-			width: 100%;
-			max-height: 283px;
-			margin: 0 auto;
-			object-fit: contain;
-		}
+		// @include max-screen($large_tablet) {
+		// 	width: 100%;
+		// 	max-height: 283px;
+		// 	margin: 0 auto;
+		// 	object-fit: contain;
+		// }
 	}
 
 	&__counter {
@@ -110,7 +176,7 @@
 		&-total {
 			color: #797979;
 		}
-		@include max-screen($large_tablet) {
+		@include max-screen($large_mobile) {
 			display: block;
 		}
 	}

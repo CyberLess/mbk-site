@@ -221,44 +221,48 @@
 		background: #ffffff;
 		border-radius: 5px;
 		overflow: hidden;
-		transition: .3s ease;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
 
 		.service__name {
 			display: inline;
-			background-image: linear-gradient(to bottom, transparent 49%, #FF0600 49%);
+			background-image: linear-gradient(
+				to bottom,
+				transparent 49%,
+				#ff0600 49%
+			);
 			background-size: 0 5px;
 			background-repeat: no-repeat;
 			background-position: 0 89%;
-			transition: background-size .5s;
+			transition: background-size 0.5s;
 		}
 
 		&:hover,
 		&:focus {
-			transform: translateY(-.5rem);
-			box-shadow: 0 12px 40px rgba(0,0,0,.08);
+			transform: translateY(-0.5rem);
+			box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
 
 			.service__name {
 				background-size: 100% 5px;
 			}
 
 			.link {
-				color: #FF0600;
+				color: #ff0600;
 			}
 
 			.arrow {
-				stroke: #FF0600;
-				fill: #FF0600;
+				stroke: #ff0600;
+				fill: #ff0600;
 				margin-right: 0;
 				width: 1.8rem;
 			}
 
 			.triangle {
-				stroke: #FF0600;
-				transition: all .3s;
+				stroke: #ff0600;
+				transition: all 0.3s;
 			}
 
 			.stroke {
-				fill: #FF0600;
+				fill: #ff0600;
 			}
 		}
 
@@ -357,9 +361,14 @@
 		svg {
 			position: absolute;
 			left: 0;
-			top: 0;
-			margin-top: 0.5rem;
+			top: 50%;
+			// margin-top: 0.5rem;
 			width: 1.3rem;
+			height: 1.3rem;
+			margin-top: -0.65rem;
+
+			&.icon-burger {
+			}
 		}
 
 		&.is-active {

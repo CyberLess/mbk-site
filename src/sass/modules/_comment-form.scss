@@ -29,6 +29,10 @@
 
 	&__input {
 		width: 44.3478%;
+
+		&:before {
+			bottom: 2px;
+		}
 	}
 
 	&__button {
@@ -52,7 +56,11 @@
 			width: 226/290 * 100% !important;
 			margin-left: auto;
 			margin-right: auto;
+			text-align: center;
 			margin-bottom: 2.3rem;
+			&:before {
+				bottom: 0;
+			}
 
 			.input__item {
 				height: 3.6rem;

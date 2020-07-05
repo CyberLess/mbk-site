@@ -111,4 +111,8 @@
 	@include max-screen($small_tablet) {
 		padding-top: 3rem;
 	}
+
+	// @include max-screen($large_mobile) {
+	// 	padding-top: 1rem;
+	// }
 }

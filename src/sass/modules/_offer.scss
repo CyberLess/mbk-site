@@ -36,6 +36,7 @@
 	}
 
 	&__bg {
+		overflow: hidden;
 		&:before {
 			content: "";
 			display: block;

@@ -1,5 +1,7 @@
 import "jquery-mask-plugin";
 
+var formInit;
+
 $(() => {
 	var selector = [
 		"input[name='phone']",
@@ -42,17 +44,6 @@ $(() => {
 		}
 	});
 
-	$(".input__item")
-		.on("focus", (e) => {
-			let $input = $(e.target);
-			$input.parent().addClass("is-focus");
-		})
-		.on("blur change", (e) => {
-			let $input = $(e.target);
-
-			if ($input.val() == "") $input.parent().removeClass("is-focus");
-		});
-
 	$.validator.addMethod(
 		"checkConfirmCode",
 		function (value, element) {
@@ -84,104 +75,136 @@ $(() => {
 		"Указан неверный код или истек его срок"
 	);
 
-	$("form").each((i, el) => {
-		var $form = $(el);
+	formInit = (el = false) => {
+		var $formItems = el ? el : $("form:not(.js-init)");
 
-		$form.validate({
-			highlight: (element, errorClass, validClass) => {
-				$(element)
-					.parent()
-					.addClass("is-error")
-					.removeClass("is-valid");
-			},
-			unhighlight: (element, errorClass, validClass) => {
-				$(element)
-					.parent()
-					.removeClass("is-error")
-					.addClass("is-valid");
-			},
-			submitHandler: (form) => {
-				var data = $(form).serialize();
+		$formItems
+			.find(".input__item, .textarea__item")
+			.on("focus", (e) => {
+				let $input = $(e.target);
+				$input.parent().addClass("is-focus");
+			})
+			.on("blur change", (e) => {
+				let $input = $(e.target);
 
-				var action = $(form).attr("action")
-					? $(form).attr("action")
-					: "/app/api/";
+				if ($input.val() == "") $input.parent().removeClass("is-focus");
+			});
 
-				$.ajax({
-					type: "POST",
-					url: action,
-					data: data,
-					success: function (data) {
-						$(form)[0].reset();
+		$formItems.each((i, el) => {
+			var $form = $(el);
+
+			$form.addClass("js-init").validate({
+				highlight: (element, errorClass, validClass) => {
+					$(element)
+						.parent()
+						.addClass("is-error")
+						.removeClass("is-valid");
+				},
+				unhighlight: (element, errorClass, validClass) => {
+					$(element)
+						.parent()
+						.removeClass("is-error")
+						.addClass("is-valid");
+				},
+				submitHandler: (form) => {
+					var data = $(form).serialize();
+
+					var action = $(form).attr("action")
+						? $(form).attr("action")
+						: "/app/api/";
+
+					$.ajax({
+						type: "POST",
+						url: action,
+						data: data,
+						success: function (data) {
+							$(form)[0].reset();
+						},
+					});
+
+					if ($(form).attr("data-redirect")) {
+						window.location = $(form).data("redirect");
+					}
+				},
+				ignore: "input:hidden",
+				onkeyup: function (element) {
+					var element_id = $(element).attr("name");
+
+					if (
+						typeof this.settings.rules[element_id] !== "undefined"
+					) {
+						if (this.settings.rules[element_id].onkeyup !== false) {
+							jQuery.validator.defaults.onkeyup.apply(
+								this,
+								arguments
+							);
+						}
+					}
+				},
+				onfocusout: function (element) {
+					var element_id = $(element).attr("name");
+
+					if (
+						typeof this.settings.rules[element_id] !== "undefined"
+					) {
+						if (
+							this.settings.rules[element_id].onfocusout !== false
+						) {
+							jQuery.validator.defaults.onfocusout.apply(
+								this,
+								arguments
+							);
+						}
+					}
+				},
+				rules: {
+					phone: {
+						required: true,
+						minlength: 10,
 					},
-				});
+					email: {
+						required: true,
+						email: true,
+					},
+					name: {
+						required: true,
+					},
+					comment: {
+						required: true,
+					},
+					"comment-min": {
+						required: true,
+					},
 
-				if ($(form).attr("data-redirect")) {
-					window.location = $(form).data("redirect");
-				}
-			},
-			ignore: "input:hidden",
-			onkeyup: function (element) {
-				var element_id = $(element).attr("name");
+					address: {
+						required: true,
+					},
+					price: {
+						required: true,
+					},
+					square: {
+						required: true,
+					},
+					auctionEmail: {
+						required: true,
+						email: true,
+					},
 
-				if (typeof this.settings.rules[element_id] !== "undefined") {
-					if (this.settings.rules[element_id].onkeyup !== false) {
-						jQuery.validator.defaults.onkeyup.apply(
-							this,
-							arguments
-						);
-					}
-				}
-			},
-			onfocusout: function (element) {
-				var element_id = $(element).attr("name");
-
-				if (typeof this.settings.rules[element_id] !== "undefined") {
-					if (this.settings.rules[element_id].onfocusout !== false) {
-						jQuery.validator.defaults.onfocusout.apply(
-							this,
-							arguments
-						);
-					}
-				}
-			},
-			rules: {
-				phone: {
-					required: true,
-					minlength: 10,
-				},
-				email: {
-					required: true,
-					email: true,
-				},
-				name: {
-					required: true,
+					confirm: {
+						checkConfirmCode: true,
+						onkeyup: false,
+						onfocusout: false,
+					},
 				},
 
-				address: {
-					required: true,
+				messages: {
+					auctionEmail: "Некорекктный e-mail",
 				},
-				price: {
-					required: true,
-				},
-				square: {
-					required: true,
-				},
-				auctionEmail: {
-					required: true,
-					email: true,
-				},
-
-				confirm: {
-					checkConfirmCode: true,
-					onkeyup: false,
-					onfocusout: false,
-				},
-			},
-
-			messages: {
-				auctionEmail: 'Некорекктный e-mail'
-			}
+			});
 		});
-	});
+	};
+
+	formInit();
 });
+
+export { formInit };

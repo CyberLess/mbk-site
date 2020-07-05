@@ -89,6 +89,13 @@
 	}
 
 	@include max-screen($large_mobile) {
+		&__arrow {
+			margin-top: -3px;
+			width: 12px;
+			svg {
+				width: 12px;
+			}
+		}
 		&_toline {
 			height: 6.8rem;
 			width: 100%;

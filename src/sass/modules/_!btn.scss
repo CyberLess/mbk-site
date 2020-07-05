@@ -44,17 +44,49 @@
 		color: $red;
 		transition: ease 0.25s;
 
+		.btn {
+			&__circle {
+				background: $red;
+				width: 48rem;
+				height: 48rem;
+				margin: -24rem 0 0 -24rem;
+			}
+
+			&__arrow {
+				margin-left: 1.2rem;
+				position: relative;
+				z-index: 15;
+
+				.triangle {
+					stroke: $red;
+					transition: ease 0.15s;
+				}
+
+				.stroke {
+					fill: $red;
+					transition: ease 0.15s;
+
+					// stroke: none;
+				}
+			}
+		}
+
 		&.btn:hover {
 			// color: #000;
 			// border-color: #000;
 			// background-color: transparent;
 
 			// border: transparent;
-			background: $red;
+
+			// background: $red;
 			color: #fff;
 
 			.btn {
-				&__icon {
+				&__circle {
+					transform: scale(1);
+				}
+				&__icon,
+				&__arrow {
 					.triangle {
 						// stroke: #000;
 						stroke: #fff;

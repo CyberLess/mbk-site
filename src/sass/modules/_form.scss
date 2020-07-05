@@ -29,7 +29,7 @@
 
 	&__access {
 		.checkbox__text {
-			opacity: .5;
+			opacity: 0.5;
 		}
 
 		.checkbox__input:checked ~ {
@@ -42,21 +42,21 @@
 	&__email {
 		.error {
 			@include max-screen($small_tablet) {
-			//  text-align: center;
+				//  text-align: center;
 				display: none !important;
 			}
 		}
 
-		&.is-error {
-			.input__item {
-				border-bottom-color: #ff0600;
+		// &.is-error {
+		// 	.input__item {
+		// 		border-bottom-color: #ff0600;
 
-				color: #ff0600;
+		// 		color: #ff0600;
 
-				@include placeholder {
-					color: #ff0600;
-				}
-			}
-		}
+		// 		@include placeholder {
+		// 			color: #ff0600;
+		// 		}
+		// 	}
+		// }
 	}
 }

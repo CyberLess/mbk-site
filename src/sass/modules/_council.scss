@@ -264,7 +264,7 @@
 				color: #fff;
 
 				&__arrow {
-					width: 4px;
+					// width: 4px;
 					.triangle {
 						stroke: #fff !important;
 					}
@@ -272,10 +272,10 @@
 					.stroke {
 						fill: #fff !important;
 					}
-					svg {
-						width: 13px;
-						margin-top: -3px;
-					}
+					// svg {
+					// 	width: 13px;
+					// 	margin-top: -3px;
+					// }
 				}
 
 				&:hover {
@@ -389,9 +389,9 @@
 			.council__link {
 				font-size: 1rem;
 				color: $dark;
-				& svg {
-					margin-top: -0.4rem;
-				}
+				// & svg {
+				// 	margin-top: -0.4rem;
+				// }
 				.link {
 					color: $dark;
 

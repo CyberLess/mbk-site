@@ -83,6 +83,10 @@ a {
 	color: inherit;
 }
 
+[hidden] {
+	display: none;
+}
+
 .is-without-container {
 	margin: 0 -3.3rem;
 	padding: 0 3.3rem;
@@ -460,4 +464,8 @@ svg {
 		}
 	}
 	// }
+}
+
+.icon-heartNew {
+	animation: heartbeat 1.5s infinite;
 }

@@ -1,3 +1,6 @@
+import { formInit } from "./_form";
+import { buttonInit } from "./_defaults";
+
 (() => {
 	let $comment = $(".comment_open");
 
@@ -24,30 +27,38 @@
 		if (!$count.length) {
 			const elem = `<span class="comment__nav-text" style="position: absolute; top: 50%; right: 0; opacity: 0; transform: translateY(-50%)">${count}</span>`;
 
-			const $apendedElem = $this.append(elem).find('.comment__nav-text');
+			const $apendedElem = $this.append(elem).find(".comment__nav-text");
 			const width = $apendedElem.width();
 
-			$this.animate({
-				paddingRight: `${width + 8}px`
-			}, 300, function () {
-				$apendedElem.animate({
-					opacity: 1
-				});
-			});
+			$this.animate(
+				{
+					paddingRight: `${width + 8}px`,
+				},
+				300,
+				function () {
+					$apendedElem.animate({
+						opacity: 1,
+					});
+				}
+			);
 		} else {
 			$count.text(count);
 		}
 
 		if (!count) {
-			const $apendedElem = $this.find('.comment__nav-text');
-			$apendedElem.css('opacity', '0');
+			const $apendedElem = $this.find(".comment__nav-text");
+			$apendedElem.css("opacity", "0");
 
-			$this.animate({
-				paddingRight: 0
-			}, 300, function () {
-				$(this).addClass("is-empty");
-				$apendedElem.remove();
-			});
+			$this.animate(
+				{
+					paddingRight: 0,
+				},
+				300,
+				function () {
+					$(this).addClass("is-empty");
+					$apendedElem.remove();
+				}
+			);
 		} else {
 			$this.removeClass("is-empty");
 		}
@@ -66,8 +77,8 @@
 
 		if ($container.find(".js-clone-form").length) {
 			$container.find(".js-clone-form").slideUp(500, function () {
-				$container.prevAll('.comment__content').css({
-					borderBottom: ''
+				$container.prevAll(".comment__content").css({
+					borderBottom: "",
 				});
 				$(this).remove();
 			});
@@ -87,12 +98,16 @@
 			// 		.addClass("comment__content_no-border");
 			// }
 
-			$container.prevAll('.comment__content').css({
-				borderBottom: 'none'
+			$container.prevAll(".comment__content").css({
+				borderBottom: "none",
 			});
 			$copyForm.hide();
 			$container.append($copyForm);
 			$container.find($copyForm).slideDown(500);
+
+			formInit($copyForm.find("form"));
+
+			$copyForm.find(".btn").on("mousemove", buttonInit);
 
 			// if ($comment.is(":last-child")) {
 			// 	$container
