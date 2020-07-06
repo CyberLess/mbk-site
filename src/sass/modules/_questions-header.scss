@@ -50,9 +50,14 @@
 
 		background-color: #ffffff;
 
+		.border-button,
+		.credit__form {
+			margin-bottom: 0;
+		}
+
 		&__title {
 			display: block;
-			margin-bottom: 5.2rem;
+			margin-bottom: 3.1rem;
 			padding-right: 5%;
 		}
 

@@ -37,9 +37,13 @@
 			}
 		});
 		$toggle.on("click", (e) => {
+			$(cont).addClass("is-active");
+			$("body").css("overflow-y", "hidden");
 			$(".article-item__title-wrapper").addClass("opened");
 		});
 		$(".js-title-close").on("click", (e) => {
+			$(cont).removeClass("is-active");
+			$("body").removeAttr("style");
 			$(".article-item__title-wrapper").removeClass("opened");
 		});
 	}

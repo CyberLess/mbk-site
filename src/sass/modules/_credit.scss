@@ -2,6 +2,10 @@
 	padding-top: 4.5rem;
 	padding-bottom: 6.4rem;
 
+	&_noscope {
+		padding: 0 !important;
+	}
+
 	&_simple {
 		padding-top: 12rem;
 		padding-bottom: 0;
@@ -204,6 +208,9 @@
 
 		&__form {
 			margin-bottom: 2.1rem;
+			&-tags {
+				margin-bottom: 0;
+			}
 			&-cell {
 				width: 100%;
 				margin-right: 0;

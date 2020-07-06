@@ -56,8 +56,6 @@
 			+e.cell._left
 				+e.padding
 					+e.title-wrapper
-						+e.toggle.js-toggle-title.BUTTON(type="button" aria-title="открыть оглавление")
-							+icon('burger', '0 0 14 13')
 						+e.close.js-title-close.BUTTON(type="button" aria-title="закрыть оглавление")
 							+icon('close', '0 0 18 18')
 						+b.article-item__title(id="title")
@@ -77,12 +75,14 @@
 										|Рекомендации юристов
 			+e.row.flex._justify.js-title
 
-				+e.cell._left
+				+e.cell._left._withmenu
 					+e.fluid
 						.css-sticky
 							+e.title-link.js-link.A(href="#title")
 								span
 									|Оглавление
+								+icon('burger', '0 0 14 13')
+							+e.toggle.js-toggle-title.BUTTON(type="button" aria-title="открыть оглавление")
 								+icon('burger', '0 0 14 13')
 					+e.padding
 						h2(id="section-1") С какими рисками сталкиваются должники МФО?

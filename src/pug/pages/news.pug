@@ -6,12 +6,12 @@ block content
 	+b.fluid
 		+socials(class="_default _white")
 	include ../layouts/header-arrow-dark
-	+b.SECTION.news-page#news-page
+	+b.SECTION.news-page.js-news-page#news-page
 		+e.wrap.wrap
 			+e.column._left
 				+e.close.js-news-close.BUTTON(type="button" aria-title="закрыть")
 							+icon('close', '0 0 18 18')
-				+e.content.active(id="new")
+				+e.content.active.js-tab-content(id="new")
 					+e.top
 						+e.H2.title.h4 Свежие новости рынка финансов
 						include ../layouts/year-select
@@ -37,7 +37,7 @@ block content
 									path(class="triangle" d='M14.5 4.81v-3l3 3-3 3z')
 									path(class="stroke" d='M14.764 4.864l-.193.23-.61-.133.539-.15m0 0v-3l3 3-3 3zM.007 4.151h13.79v1.542H.007z')
 
-				+e.content(id="subscribe")
+				+e.content.js-tab-content(id="subscribe")
 					include ../layouts/subscribe-min
 
 			+e.column._right

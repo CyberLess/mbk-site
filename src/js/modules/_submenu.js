@@ -109,7 +109,7 @@ $(() => {
 			$(".header__mobile").removeClass("is-visible");
 
 			// $("html, body").addClass("js-lock");
-			$("body").css("overflow-y", "hidden");
+			$("body").css("overflow", "hidden");
 
 			submenu_resize();
 

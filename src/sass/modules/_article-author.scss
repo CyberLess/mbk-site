@@ -7,6 +7,7 @@
 		height: 35.6rem;
 		padding: 5.6rem 8.5rem 5.6rem 10.8rem;
 		background-color: #f3f3f3;
+		align-items: flex-start;
 	}
 
 	&__about {
@@ -174,7 +175,10 @@
 
 		&__link {
 			font-size: 12px;
-			padding-right: 12px;
+			padding-right: 0px;
+			.arrow {
+				display: none;
+			}
 			& .link__arrow {
 				//margin-top: -7px;
 				margin-right: 0;

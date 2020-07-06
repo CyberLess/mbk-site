@@ -355,8 +355,9 @@
 
 		@include max-screen($large_mobile) {
 			position: absolute;
-			right: 24%;
+			right: 24% !important;
 			top: 50%;
+			width: 4px !important;
 			margin-top: -4px;
 			transition: inherit;
 		}

@@ -8,22 +8,24 @@
 		border-bottom: 1px solid rgba(14, 14, 14, 0.1);
 	}
 
-	&.sticky {
-		position: sticky;
-		top: 0;
-		z-index: 901;
-		border-bottom: 1px solid rgba(14, 14, 14, 0.1);
+	@include min-screen($large_tablet + 1) {
+		&.sticky {
+			position: sticky;
+			top: 0;
+			z-index: 901;
+			border-bottom: 1px solid rgba(14, 14, 14, 0.1);
 
-		@include min-screen($small_desktop) {
-			//left: 3.3rem;
-		}
+			@include min-screen($small_desktop) {
+				//left: 3.3rem;
+			}
 
-		&-hidden {
-			transform: translateY(-100%);
-		}
+			&-hidden {
+				transform: translateY(-100%);
+			}
 
-		&-transition {
-			transition: all 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+			&-transition {
+				transition: all 0.3s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+			}
 		}
 	}
 

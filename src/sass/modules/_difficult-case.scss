@@ -229,7 +229,7 @@
 
 		@include max-screen($large_mobile) {
 			display: inline;
-			padding-right: 2rem;
+			padding-right: 3rem;
 			font-size: 1.4rem;
 		}
 	}
@@ -243,5 +243,9 @@
 		width: 4px;
 		margin-top: -0.5rem;
 		transition: 0.3s ease;
+
+		@include max-screen($large_mobile) {
+			margin-top: -4px;
+		}
 	}
 }

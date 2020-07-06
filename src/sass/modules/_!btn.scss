@@ -39,9 +39,10 @@
 	}
 
 	&_border {
+		color: $red;
 		background: transparent;
 		border: 1px solid $red;
-		color: $red;
+
 		transition: ease 0.25s;
 
 		.btn {
@@ -135,6 +136,12 @@
 
 		&:hover {
 			background-color: #000;
+		}
+
+		&_border {
+			&:hover {
+				background-color: $red;
+			}
 		}
 
 		.btn {

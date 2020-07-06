@@ -13,7 +13,7 @@ import { submenu_close } from "./_submenu";
 
 		$header.addClass("is-search-open");
 
-		$("body").css("overflow-y", "hidden");
+		$("body").css("overflow", "hidden");
 
 		$(".js-mobile-menu, .header__device").removeClass("is-active");
 	});

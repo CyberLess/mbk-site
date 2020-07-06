@@ -1,4 +1,4 @@
-.reviews{
+.reviews {
 	padding-top: 12rem;
 	padding-bottom: 9rem;
 
@@ -13,7 +13,7 @@
 		padding-bottom: 4.2rem;
 	}
 
-	&__mobile-bg{
+	&__mobile-bg {
 		display: none;
 		position: absolute;
 		right: 0;
@@ -23,13 +23,13 @@
 		}
 	}
 
-	&__slider{
+	&__slider {
 		@include max-screen($small_tablet) {
 			padding-bottom: 43px;
 		}
 	}
 
-	&__counter{
+	&__counter {
 		position: absolute;
 		left: 0;
 		width: 100%;
@@ -40,7 +40,7 @@
 		font-weight: 500;
 		display: none;
 
-		&-total{
+		&-total {
 			color: #797979;
 		}
 
@@ -58,9 +58,12 @@
 		@include max-screen($large_tablet) {
 			margin-bottom: 4rem;
 		}
+		@include max-screen($large_mobile) {
+			margin-bottom: 0;
+		}
 	}
 
-	&__title{
+	&__title {
 		@include min-screen($small_tablet + 1) {
 			width: 85%;
 		}
@@ -83,39 +86,41 @@
 		}
 
 		.owl-prev,
-		.owl-next, {
+		.owl-next {
 			@extend .slider-round-nav-button;
 		}
 	}
 
-	&__apply{
+	&__apply {
 		margin-top: 10px;
 		margin-bottom: 10px;
 		display: inline-block;
 	}
 
-	&__button{
+	&__button {
 		margin-right: 3.6rem;
 	}
 
-	&__row{
-		&.is-loading{
+	&__row {
+		&.is-loading {
 			pointer-events: none;
 
-			.reviews{
-				&__video{
+			.reviews {
+				&__video {
 					background-color: rgb(187, 187, 187);
 				}
 
-				&__name span, &__who span, &__text, &__apply{
+				&__name span,
+				&__who span,
+				&__text,
+				&__apply {
 					background-color: rgb(187, 187, 187);
 					color: transparent;
 				}
 
-				&__button{
+				&__button {
 					background-color: rgb(187, 187, 187);
 					color: transparent;
-
 				}
 			}
 		}
@@ -123,11 +128,9 @@
 		@include max-screen($large_tablet) {
 			align-items: flex-start;
 		}
-
-
 	}
 
-	&__list{
+	&__list {
 		// margin-left: -1px;
 		// margin-right: -1px;
 		margin-top: 8rem;
@@ -142,7 +145,7 @@
 		}
 	}
 
-	&__bottom{
+	&__bottom {
 		text-align: center;
 
 		@include max-screen($small_tablet) {
@@ -150,27 +153,26 @@
 		}
 	}
 
-	&__item{
+	&__item {
 		position: relative;
-		width: 335/1338*100%;
+		width: 335/1338 * 100%;
 		// margin: 1/1338*100%;
 		color: #fff;
-	    margin: -1px 0 0 -1px;
+		margin: -1px 0 0 -1px;
 		cursor: pointer;
 		border: 1px solid #fff;
 		overflow: hidden;
 
-		&:nth-child(4n+1){
+		&:nth-child(4n + 1) {
 			border-radius: 5px 0px 0px 5px;
 		}
 
-		&:nth-child(4n){
+		&:nth-child(4n) {
 			border-radius: 0px 5px 5px 0px;
-
 		}
 
-		&:before{
-			content: '';
+		&:before {
+			content: "";
 			display: block;
 			position: absolute;
 			left: 0;
@@ -178,25 +180,23 @@
 			width: 100%;
 			height: 100%;
 			z-index: 10;
-			background: rgba(#000, .65);
+			background: rgba(#000, 0.65);
 			transition-property: opacity;
-			transition-duration: .3s;
+			transition-duration: 0.3s;
 			transition-timing-function: ease;
 		}
 
-		&-inner{
-			padding-left: 33/335*100%;
-			padding-right: 33/335*100%;
-			padding-top: 45/335*100%;
-			padding-bottom: 31/335*100%;
+		&-inner {
+			padding-left: 33/335 * 100%;
+			padding-right: 33/335 * 100%;
+			padding-top: 45/335 * 100%;
+			padding-bottom: 31/335 * 100%;
 
 			position: relative;
 			z-index: 15;
-
-
 		}
 
-		&-content{
+		&-content {
 			min-height: 13rem;
 			display: flex;
 			flex-wrap: wrap;
@@ -204,20 +204,20 @@
 			justify-content: space-between;
 		}
 
-		&-name{
+		&-name {
 			width: 50%;
 			margin-bottom: 2rem;
 			display: flex;
 			flex-direction: column;
 			flex-wrap: wrap;
-		    align-items: flex-start;
+			align-items: flex-start;
 
-			span{
+			span {
 				display: inline-block;
 				position: relative;
 
-				&:before{
-					content: '';
+				&:before {
+					content: "";
 					display: block;
 					z-index: -1;
 					position: absolute;
@@ -225,47 +225,46 @@
 					bottom: 3px;
 					width: 100%;
 					height: 3px;
-					transition: ease .2s;
-					transform: scale(0,1);
+					transition: ease 0.2s;
+					transform: scale(0, 1);
 					transform-origin: 0% 50%;
 					background-color: $red;
 				}
 			}
 		}
 
-		&-status{
+		&-status {
 			font-weight: 400;
 		}
 
-		&_active{
-			&:before{
-				opacity: .15;
+		&_active {
+			&:before {
+				opacity: 0.15;
 			}
 		}
 
-		&:hover{
-			.reviews__item-name{
-				span{
-					&:before{
-						transform: scale(1,1);
+		&:hover {
+			.reviews__item-name {
+				span {
+					&:before {
+						transform: scale(1, 1);
 					}
 				}
-
 			}
 		}
 	}
 
-	&__cell{
-		&_video{
-			width: 667/1336*100%;
-			margin-right: 60/1336*100%;
+	&__cell {
+		&_video {
+			width: 667/1336 * 100%;
+			margin-right: 60/1336 * 100%;
 		}
 
-		&_content{
-			width: 586/1336*100%;
+		&_content {
+			width: 586/1336 * 100%;
 		}
 		@include max-screen($large_tablet) {
-			&_video{
+			&_video {
 				margin-top: 8px;
 			}
 		}
@@ -273,16 +272,16 @@
 		@include max-screen($large_mobile) {
 			width: 100%;
 			margin-right: 0;
-			&_video{
+			&_video {
 				margin-bottom: 2.5rem;
+				margin-top: 0;
 			}
 		}
 	}
 
-	&__name{
+	&__name {
 		font-weight: bold;
 		margin-bottom: 3px;
-
 
 		@include max-screen($large_mobile) {
 			font-size: 1.9rem;
@@ -290,7 +289,7 @@
 		}
 	}
 
-	&__text{
+	&__text {
 		font-weight: 400;
 
 		display: inline;
@@ -300,7 +299,7 @@
 		}
 	}
 
-	&__nav{
+	&__nav {
 		margin-top: 4.3rem;
 
 		@include max-screen($large_mobile) {
@@ -308,7 +307,7 @@
 		}
 	}
 
-	&__who{
+	&__who {
 		font-weight: 400;
 		color: #808080;
 		margin-bottom: 2.5rem;
@@ -317,11 +316,9 @@
 			margin-bottom: 0;
 			font-size: 1rem;
 		}
-
-
 	}
 
-	&__top{
+	&__top {
 		@include max-screen($large_mobile) {
 			display: flex;
 			align-items: flex-end;
@@ -332,11 +329,11 @@
 
 	.video__play {
 		transition-property: background-color;
-		transition-duration: .2s;
+		transition-duration: 0.2s;
 		transition-timing-function: ease;
 
 		&::before {
-			transition: .2s ease;
+			transition: 0.2s ease;
 		}
 
 		&:hover,

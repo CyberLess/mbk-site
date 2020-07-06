@@ -158,6 +158,8 @@ var buttonInit;
 		$("html, body").addClass("js-lock");
 
 		$(".mobile-button").hide();
+
+		$(e.currentTarget).closest("section").addClass("is-filter-open");
 	});
 
 	$(".js-close-filter-tags").on("click", (e) => {
@@ -166,6 +168,8 @@ var buttonInit;
 		$("html, body").removeClass("js-lock");
 
 		$(".mobile-button").show();
+
+		$(e.currentTarget).closest("section").removeClass("is-filter-open");
 	});
 })($);
 

@@ -42,8 +42,8 @@
 	&__email {
 		.error {
 			@include max-screen($small_tablet) {
-				//  text-align: center;
-				display: none !important;
+				text-align: center;
+				// 		display: none !important;
 			}
 		}
 

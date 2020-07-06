@@ -63,12 +63,16 @@
 				height: 100%;
 				padding: 80px 1.5rem 3rem;
 				background-color: #ffffff;
-				transform: translateX(1050px);
-				transition: transform 0.3s ease;
+				opacity: 0;
+				visibility: hidden;
+				// transform: translateX(1050px);
+				transition: opacity 0.2s ease, visibility 0.2s ease;
 
 				&.active {
 					width: 100%;
-					transform: translateX(0);
+					opacity: 1;
+					visibility: visible;
+					// transform: translateX(0);
 					overflow-y: auto;
 				}
 			}
